@@ -1,0 +1,60 @@
+name: sync-signals
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-signals
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync overseas builder signals and AI Radar feed
+        run: npm run sync:signals
+
+      - name: Run contract tests
+        run: npx vitest run
+
+      - name: Commit and push updated signal snapshots
+        id: commit
+        run: |
+          if git diff --quiet -- public/data/ src/data/translation-cache.json && [ -z "$(git ls-files --others --exclude-standard -- public/data/ src/data/translation-cache.json)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "변경된 시그널이 없어 커밋을 생략합니다."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/ src/data/translation-cache.json
+          git commit -m "chore(signals): sync overseas builders and AI Radar feed [skip ci]"
+          git pull --rebase --autostash origin main || true
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Ping IndexNow when updated
+        if: steps.commit.outputs.changed == 'true' && vars.NEXT_PUBLIC_SITE_URL != ''
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY || 'bench-indexnow-9f4c2a8e7b1d6e3a' }}
+        run: npm run ping:indexnow

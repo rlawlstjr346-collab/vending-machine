@@ -1,0 +1,64 @@
+{
+  "syncedAt": "2026-11-23T14:54:16.721Z",
+  "counts": {
+    "aiRadar": 100,
+    "builderTotal": 88,
+    "bySource": {
+      "trustmrr": 16,
+      "show_hn": 34,
+      "product_hunt": 22,
+      "uneed": 16
+    },
+    "verifiedRevenueCount": 16,
+    "treatmentsSeed": 40
+  },
+  "sources": [
+    {
+      "id": "ai_radar",
+      "label": "AI Radar (GitHub Raw)",
+      "status": 200,
+      "count": 100,
+      "cached304": false,
+      "note": "joined planning(100) + live(100)"
+    },
+    {
+      "id": "show_hn",
+      "label": "Show HN Algolia API",
+      "status": 200,
+      "count": 34,
+      "cached304": false,
+      "note": "34 live Show HN items"
+    },
+    {
+      "id": "product_hunt",
+      "label": "Product Hunt Atom Feed",
+      "status": 200,
+      "count": 22,
+      "cached304": false,
+      "note": "22 Product Hunt Atom entries"
+    },
+    {
+      "id": "trustmrr",
+      "label": "TrustMRR SSR",
+      "status": 200,
+      "count": 16,
+      "cached304": false,
+      "note": "16 TrustMRR verified startups"
+    },
+    {
+      "id": "uneed",
+      "label": "Uneed SSR",
+      "status": 200,
+      "count": 16,
+      "cached304": false,
+      "note": "16 Uneed daily launches"
+    },
+    {
+      "id": "x_oembed",
+      "label": "X oEmbed Adapter",
+      "status": 200,
+      "count": 0,
+      "note": "0 X URLs enriched"
+    }
+  ]
+}

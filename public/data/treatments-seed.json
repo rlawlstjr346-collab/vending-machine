@@ -1,0 +1,2847 @@
+{
+  "version": 1,
+  "syncedAt": "2026-11-23T14:54:16.721Z",
+  "count": 40,
+  "items": [
+    {
+      "id": "tr-kream-co-stan-yixuli",
+      "slug": "tr-kream-co-stan-yixuli",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Stan 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Stan(검증 매출 $3,569,654 (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Stan 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-tmrr-ea18d005ac",
+        "name": "Stan",
+        "url": "https://trustmrr.com/startup/stan",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $3,569,654 (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Stan은 실제 검증 매출(검증 매출 $3,569,654 (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Stan: Stan enables people to make living and work for themselves. Vitalii Dodonov (검증 매출 $3,569,654 (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-4559e9686ee9",
+        "titleKo": "AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123899406550528422",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게 이어지고 있어요.)"
+      },
+      "twistSummaryKo": "해외 SaaS의 가격·스펙 비교 구조를 국내 리셀 사이즈별 프리미엄 추적 보드로 재해석. 원형 서비스 Stan의 강점(Stan enables people to make living and work for themselves. Vitalii Dodonov)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "착샷 이미지나 모델 코드 입력 시 해외 리셀가와 국내 실거래가 스프레드를 한 표로 매칭하는 가격 격차 레이더",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Stan (검증 매출 $3,569,654 (TrustMRR))",
+          "builderId": "builder-tmrr-ea18d005ac",
+          "builderName": "Stan"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Stan 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-kream-co-stan-yixuli",
+          "builderId": "builder-tmrr-ea18d005ac",
+          "builderName": "Stan"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 0
+    },
+    {
+      "id": "tr-film-pre-an-e-ink-frame-1brwoz",
+      "slug": "tr-film-pre-an-e-ink-frame-1brwoz",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × An e-ink frame that 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 An e-ink frame that(HN 2391 pts · 댓글 267)의 '시각 탐색·가격 매칭' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 An e-ink frame that 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-hn-49711544",
+        "name": "An e-ink frame that",
+        "url": "https://github.com/arnegiacomo/fugleramme",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 2391 pts · 댓글 267",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "An e-ink frame that은 Show HN에서 HN 2391 pts · 댓글 267 반응을 확보한 해외 프로덕트입니다. An e-ink frame that: An e-ink frame that hears birds and draws them as 1800s illustrations 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Hacker News 개발자·창업자 커뮤니티에서 2391점·댓글 267개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-f377c4ca71b9",
+        "titleKo": "한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26663",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "트리트먼트 텍스트를 6컷 핵심 시퀀스 보드와 촬영 체크리스트로 바로 치환하는 경량 스튜디오. 원형 서비스 An e-ink frame that의 강점(An e-ink frame that hears birds and draws them as 1800s illustrations)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 스틸컷 업로드 시 유사 구도·렌즈 화각과 대략적 프로덕션 난이도를 함께 비교해 주는 샷 매칭 패널",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "An e-ink frame that (HN 2391 pts · 댓글 267)",
+          "builderId": "builder-hn-49711544",
+          "builderName": "An e-ink frame that"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × An e-ink frame that 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-film-pre-an-e-ink-frame-1brwoz",
+          "builderId": "builder-hn-49711544",
+          "builderName": "An e-ink frame that"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 1
+    },
+    {
+      "id": "tr-photo-lo-plango-sg3tdr",
+      "slug": "tr-photo-lo-plango-sg3tdr",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Plango 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Plango(PH 최신 런칭 #1)의 '드롭·커뮤니티 검증' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Plango 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-ph-c2b44c28b0",
+        "name": "Plango",
+        "url": "https://www.producthunt.com/products/plango",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #1",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Plango은 Product Hunt에서 PH 최신 런칭 #1 반응을 확보한 해외 프로덕트입니다. Plango: Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다. 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-429df4a4cf4d",
+        "titleKo": "Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123862344422088794",
+        "platformId": "x",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "해외 비주얼 비교 툴의 A/B 셀렉트 구조를 룩북 컨택트 시트와 컬러 팔레트 검수 도구로 전환. 원형 서비스 Plango의 강점(Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다.)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 시즌 룩북 후보 10컷을 핵심 팬·바이어에게 비공개 투표 링크로 배포해 메인 썸네일과 주력 착장을 사전 검증하는 룩북 폴",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Plango (PH 최신 런칭 #1)",
+          "builderId": "builder-ph-c2b44c28b0",
+          "builderName": "Plango"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Plango 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-photo-lo-plango-sg3tdr",
+          "builderId": "builder-ph-c2b44c28b0",
+          "builderName": "Plango"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 2
+    },
+    {
+      "id": "tr-music-sa-stramik-k0xecp",
+      "slug": "tr-music-sa-stramik-k0xecp",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Stramik 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Stramik(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Stramik 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-uneed-86164d2393",
+        "name": "Stramik",
+        "url": "https://www.uneed.best/tool/stramik",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Stramik은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Stramik: Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-bf0fb1f9d854",
+        "titleKo": "EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…",
+        "canonicalUrl": "https://github.com/EL4CTEO/fast-anything",
+        "platformId": "github",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "GitHub 급상승 2550",
+        "bottleneckSolvedKo": "'EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…'(github)의 'GitHub 급상승 2550' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Claude 개발 생태계에서 'EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…' 구현 방식과 실전 적용 사례가 공개됐어요. 특히)"
+      },
+      "twistSummaryKo": "레퍼런스 곡의 분위기 키워드를 입력하면 호환되는 리듬·악기 레이어 조합안을 제안하는 웨지. 원형 서비스 Stramik의 강점(Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "미발매 비트·샘플 팩 프리뷰 15초 스니펫을 리스너·래퍼에게 공개해 저장률 상위 루프만 정식 팩으로 묶는 드롭 검증 보드",
+        "Claude 기반 'GitHub 급상승 2550' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Stramik (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-86164d2393",
+          "builderName": "Stramik"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Stramik 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-music-sa-stramik-k0xecp",
+          "builderId": "builder-uneed-86164d2393",
+          "builderName": "Stramik"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 3
+    },
+    {
+      "id": "tr-culture--postiz-17x8br",
+      "slug": "tr-culture--postiz-17x8br",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Postiz 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Postiz(검증 매출 $458,757 (TrustMRR))의 '드롭·커뮤니티 검증' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Postiz 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-tmrr-f9df0c188c",
+        "name": "Postiz",
+        "url": "https://trustmrr.com/startup/postiz",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $458,757 (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Postiz은 실제 검증 매출(검증 매출 $458,757 (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Postiz: Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (검증 매출 $458,757 (TrustMRR)) 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-429df4a4cf4d",
+        "titleKo": "Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123862344422088794",
+        "platformId": "x",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "해외 검증 디렉터리·랭킹 메커니즘을 '이번 주 종료 임박 팝업·전시' 필터 중심 로컬 지도로 재구성. 원형 서비스 Postiz의 강점(Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 오픈 팝업·전시의 실방문자 한 줄 검증 태그(웨이팅 실제 시간·포토존 밀도)를 실시간 집계하는 로컬 현장 검증 피드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Postiz (검증 매출 $458,757 (TrustMRR))",
+          "builderId": "builder-tmrr-f9df0c188c",
+          "builderName": "Postiz"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Postiz 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-culture--postiz-17x8br",
+          "builderId": "builder-tmrr-f9df0c188c",
+          "builderName": "Postiz"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 4
+    },
+    {
+      "id": "tr-kream-co-hackerbooks-14mmwv",
+      "slug": "tr-kream-co-hackerbooks-14mmwv",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × HackerBooks 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 HackerBooks(HN 1870 pts · 댓글 308)의 '캔버스·비교 보드' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 HackerBooks 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-hn-50326821",
+        "name": "HackerBooks",
+        "url": "https://hackerbooks.org",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1870 pts · 댓글 308",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "HackerBooks은 Show HN에서 HN 1870 pts · 댓글 308 반응을 확보한 해외 프로덕트입니다. HackerBooks: HackerTube, 하지만 HN에서 언급된 도서의 경우 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1870점·댓글 308개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-4559e9686ee9",
+        "titleKo": "AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123899406550528422",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게 이어지고 있어요.)"
+      },
+      "twistSummaryKo": "커뮤니티 착샷과 실제 거래가 변동선을 한 줄 타임라인에 묶는 구매 결정 도구. 원형 서비스 HackerBooks의 강점(HackerTube, 하지만 HN에서 언급된 도서의 경우)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "관심 스니커즈·아우터 3~4종의 실거래 추이·소재·코디 컷을 한 화면에 병렬 고정해 최종 1픽을 고르는 비교 시트",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "HackerBooks (HN 1870 pts · 댓글 308)",
+          "builderId": "builder-hn-50326821",
+          "builderName": "HackerBooks"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × HackerBooks 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-kream-co-hackerbooks-14mmwv",
+          "builderId": "builder-hn-50326821",
+          "builderName": "HackerBooks"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 5
+    },
+    {
+      "id": "tr-film-pre-tesla-self-dri-tel859",
+      "slug": "tr-film-pre-tesla-self-dri-tel859",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Tesla Self-Driving V15 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Tesla Self-Driving V15(PH 최신 런칭 #2)의 '캔버스·비교 보드' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar '구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Tesla Self-Driving V15 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-ph-d29185cf3f",
+        "name": "Tesla Self-Driving V15",
+        "url": "https://www.producthunt.com/products/tesla",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #2",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "Tesla Self-Driving V15은 Product Hunt에서 PH 최신 런칭 #2 반응을 확보한 해외 프로덕트입니다. Tesla Self-Driving V15: End-to-End 주행 네트워크 모든 부분 업그레이드 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-aef89ca60299",
+        "titleKo": "구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26717",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 '구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "해외 워크플로 도구의 프레임 단위 주석 메커니즘을 촬영 직전 샷 리스트·조명 노트 생성기로 전환. 원형 서비스 Tesla Self-Driving V15의 강점(End-to-End 주행 네트워크 모든 부분 업그레이드)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "시퀀스별 레퍼런스 스틸·조명 도면·대사 톤을 1px 그리드 캔버스에 나란히 배치해 감독과 촬영감독이 합의하는 프리비즈 보드",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Tesla Self-Driving V15 (PH 최신 런칭 #2)",
+          "builderId": "builder-ph-d29185cf3f",
+          "builderName": "Tesla Self-Driving V15"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Tesla Self-Driving V15 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-film-pre-tesla-self-dri-tel859",
+          "builderId": "builder-ph-d29185cf3f",
+          "builderName": "Tesla Self-Driving V15"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 6
+    },
+    {
+      "id": "tr-photo-lo-bugstack-1pj598",
+      "slug": "tr-photo-lo-bugstack-1pj598",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Bugstack 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Bugstack(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Bugstack 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-uneed-7c0b630334",
+        "name": "Bugstack",
+        "url": "https://www.uneed.best/tool/bugstack",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Bugstack은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Bugstack: Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-1afd59f3ce5f",
+        "titleKo": "Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…",
+        "canonicalUrl": "https://x.com/GoogleDeepMind/status/2123826572385833119",
+        "platformId": "x",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@GoogleDeepMind가 X에서 직접 공유한 'Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…' 업데이트예요. 실사용)"
+      },
+      "twistSummaryKo": "클라이언트 피드백을 사진 위 좌표 핀과 한 줄 수정 지시서로 압축하는 공유 룩북. 원형 서비스 Bugstack의 강점(Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 시즌 룩북 후보 10컷을 핵심 팬·바이어에게 비공개 투표 링크로 배포해 메인 썸네일과 주력 착장을 사전 검증하는 룩북 폴",
+        "Gemini 4 Neon 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Bugstack (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-7c0b630334",
+          "builderName": "Bugstack"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Bugstack 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-photo-lo-bugstack-1pj598",
+          "builderId": "builder-uneed-7c0b630334",
+          "builderName": "Bugstack"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 7
+    },
+    {
+      "id": "tr-music-sa-stealth-ventur-14hvbr",
+      "slug": "tr-music-sa-stealth-ventur-14hvbr",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Stealth Venture 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Stealth Venture(검증 매출 $9.7k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'GLM-5.4: 첫 번째 루프 변환기를 사용한 일반화된 코딩을 향하여' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Stealth Venture 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-tmrr-05934ef637",
+        "name": "Stealth Venture",
+        "url": "https://trustmrr.com/startup/stealth-venture-73",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $9.7k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Stealth Venture은 실제 검증 매출(검증 매출 $9.7k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Stealth Venture: 엔터테인먼트 (검증 매출 $9.7k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-829dc8d5ecc7",
+        "titleKo": "GLM-5.4: 첫 번째 루프 변환기를 사용한 일반화된 코딩을 향하여",
+        "canonicalUrl": "https://z.ai/blog/glm-5.4",
+        "platformId": "hacker-news",
+        "signalType": "dev_workflow",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
+        "bottleneckSolvedKo": "'GLM-5.4: 첫 번째 루프 변환기를 사용한 일반화된 코딩을 향하여'(hacker-news)의 '개발자 워크플로 자동화·에이전트 통합 생산성' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (GLM-5.4가 나왔고 루프형 트랜스포머입니다. z.ai/blog/glm-5.4 링크된 페이지: 첫 번째 루프 변환기를 사용하여 일반화된 코딩을 향하여 — ()"
+      },
+      "twistSummaryKo": "레퍼런스 곡의 분위기 키워드를 입력하면 호환되는 리듬·악기 레이어 조합안을 제안하는 웨지. 원형 서비스 Stealth Venture의 강점(엔터테인먼트)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 트랙의 에너지·질감 지표를 분석해 유사 톤의 샘플 팩과 라이선스 비용 체급을 나란히 비교하는 매처",
+        "Hacker News 기반 '개발자 워크플로 자동화·에이전트 통합 생산성' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Stealth Venture (검증 매출 $9.7k (TrustMRR))",
+          "builderId": "builder-tmrr-05934ef637",
+          "builderName": "Stealth Venture"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Stealth Venture 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-music-sa-stealth-ventur-14hvbr",
+          "builderId": "builder-tmrr-05934ef637",
+          "builderName": "Stealth Venture"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 8
+    },
+    {
+      "id": "tr-culture--elevators-15tt4a",
+      "slug": "tr-culture--elevators-15tt4a",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Elevators 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Elevators(HN 1680 pts · 댓글 415)의 '시각 탐색·가격 매칭' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Elevators 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-hn-49124218",
+        "name": "Elevators",
+        "url": "https://john.fun/elevators",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1680 pts · 댓글 415",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Elevators은 Show HN에서 HN 1680 pts · 댓글 415 반응을 확보한 해외 프로덕트입니다. Elevators: 엘리베이터 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1680점·댓글 415개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-429df4a4cf4d",
+        "titleKo": "Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123862344422088794",
+        "platformId": "x",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "개인 취향 태그(바이닐, 건축, 독립출판) 기준으로 큐레이터별 컬처 맵을 포크·조합하는 도구. 원형 서비스 Elevators의 강점(엘리베이터)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "팝업·전시 포스터 이미지 하나로 입장료·예약 난이도·인근 유사 취향 공간을 자동 매칭하는 탐색 카드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Elevators (HN 1680 pts · 댓글 415)",
+          "builderId": "builder-hn-49124218",
+          "builderName": "Elevators"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Elevators 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-culture--elevators-15tt4a",
+          "builderId": "builder-hn-49124218",
+          "builderName": "Elevators"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 9
+    },
+    {
+      "id": "tr-kream-co-replit-mission-1jegfk",
+      "slug": "tr-kream-co-replit-mission-1jegfk",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Replit Missions 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Replit Missions(PH 최신 런칭 #3)의 '드롭·커뮤니티 검증' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Replit Missions 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-ph-a5453c7565",
+        "name": "Replit Missions",
+        "url": "https://www.producthunt.com/products/replit",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #3",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Replit Missions은 Product Hunt에서 PH 최신 런칭 #3 반응을 확보한 해외 프로덕트입니다. Replit Missions: Set a budget, coordinate teams of AI agents, 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-c0de4f7aecd1",
+        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
+      },
+      "twistSummaryKo": "스크린샷 한 장으로 발매가 대비 현재 호가와 유사 매물 체급을 즉시 대조하는 탐색 웨지. 원형 서비스 Replit Missions의 강점(Set a budget, coordinate teams of AI agents,)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "출시 예정 협업 드롭의 커뮤니티 체감 수요 투표와 예상 리셀 밴드를 발매 48시간 전에 집계하는 드롭 수요 검증 보드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Replit Missions (PH 최신 런칭 #3)",
+          "builderId": "builder-ph-a5453c7565",
+          "builderName": "Replit Missions"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Replit Missions 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-kream-co-replit-mission-1jegfk",
+          "builderId": "builder-ph-a5453c7565",
+          "builderName": "Replit Missions"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 10
+    },
+    {
+      "id": "tr-film-pre-feedsortr-1muft1",
+      "slug": "tr-film-pre-feedsortr-1muft1",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Feedsortr 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Feedsortr(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar 'higurashi-ai/Haru-4B 오픈 모델 공개' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Feedsortr 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-uneed-2fc264748e",
+        "name": "Feedsortr",
+        "url": "https://www.uneed.best/tool/feedsortr",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Feedsortr은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Feedsortr: Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-d8e3cc90b026",
+        "titleKo": "higurashi-ai/Haru-4B 오픈 모델 공개",
+        "canonicalUrl": "https://huggingface.co/higurashi-ai/Haru-4B",
+        "platformId": "huggingface",
+        "signalType": "new_product",
+        "productDomain": "video-audio-media",
+        "benchmarkPoint": "Hugging Face — 4B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'higurashi-ai/Haru-4B 오픈 모델 공개'(huggingface)의 'Hugging Face — 4B 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Hugging Face 모델 저장소 'higurashi-ai/Haru-4B'. 태그: safetensors, haru, 음성, 전이중, 음성-음성, 오디오-오디오, en, es, pt, de, fr, zh, ja, )"
+      },
+      "twistSummaryKo": "트리트먼트 텍스트를 6컷 핵심 시퀀스 보드와 촬영 체크리스트로 바로 치환하는 경량 스튜디오. 원형 서비스 Feedsortr의 강점(Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "독립영화·단편 시놉시스와 6컷 프리비즈 시트를 비공개 링크로 돌려 제작 동료의 씬별 몰입도 피드백을 집계하는 사전 검증 보드",
+        "Hugging Face 기반 'Hugging Face — 4B 기반 성능·효율 지표' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Feedsortr (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-2fc264748e",
+          "builderName": "Feedsortr"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Feedsortr 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-film-pre-feedsortr-1muft1",
+          "builderId": "builder-uneed-2fc264748e",
+          "builderName": "Feedsortr"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 11
+    },
+    {
+      "id": "tr-photo-lo-landy-ai-wddqix",
+      "slug": "tr-photo-lo-landy-ai-wddqix",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Landy AI 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Landy AI(검증 매출 $7.9k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Landy AI 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-tmrr-a38c926745",
+        "name": "Landy AI",
+        "url": "https://trustmrr.com/startup/landy",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $7.9k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Landy AI은 실제 검증 매출(검증 매출 $7.9k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Landy AI: 인공지능 (검증 매출 $7.9k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-c0de4f7aecd1",
+        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
+      },
+      "twistSummaryKo": "해외 비주얼 비교 툴의 A/B 셀렉트 구조를 룩북 컨택트 시트와 컬러 팔레트 검수 도구로 전환. 원형 서비스 Landy AI의 강점(인공지능)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 룩북 이미지에서 색상 팔레트·조명 대비와 유사 브랜드 레퍼런스 톤을 자동 대조하는 스타일 매처",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Landy AI (검증 매출 $7.9k (TrustMRR))",
+          "builderId": "builder-tmrr-a38c926745",
+          "builderName": "Landy AI"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Landy AI 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-photo-lo-landy-ai-wddqix",
+          "builderId": "builder-tmrr-a38c926745",
+          "builderName": "Landy AI"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 12
+    },
+    {
+      "id": "tr-music-sa-homebrew-6-0-0-1tov3c",
+      "slug": "tr-music-sa-homebrew-6-0-0-1tov3c",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Homebrew 6.0.0 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Homebrew 6.0.0(HN 1481 pts · 댓글 363)의 '캔버스·비교 보드' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Homebrew 6.0.0 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-hn-48490024",
+        "name": "Homebrew 6.0.0",
+        "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1481 pts · 댓글 363",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "Homebrew 6.0.0은 Show HN에서 HN 1481 pts · 댓글 363 반응을 확보한 해외 프로덕트입니다. Homebrew 6.0.0: 홈브루 6.0.0 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1481점·댓글 363개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-a4fd3b33d971",
+        "titleKo": "erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…",
+        "canonicalUrl": "https://github.com/erkamyaman/safe-anything",
+        "platformId": "github",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "GitHub 급상승 317",
+        "bottleneckSolvedKo": "'erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…'(github)의 'GitHub 급상승 317' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (다른 사람보다 먼저 구멍을 찾아보세요. 빠른 100% Rust 취약점 스캐너: XSS, SQL 주입, 유출된 비밀, 종속성 CVE 및 AI 에이전트 설정. 공개 직후 스타 317개를 빠르게 넘겼어요.)"
+      },
+      "twistSummaryKo": "해외 크리에이터 유틸리티의 구간 북마크 구조를 BPM·키·질감별 4마디 샘플 크레이트로 전환. 원형 서비스 Homebrew 6.0.0의 강점(홈브루 6.0.0)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "후보 비트 버전 A/B와 레퍼런스 트랙의 파형·구간 메모를 한 보드에 병렬 배치해 편곡 방향을 확정하는 트랙 비교 시트",
+        "Claude 기반 'GitHub 급상승 317' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Homebrew 6.0.0 (HN 1481 pts · 댓글 363)",
+          "builderId": "builder-hn-48490024",
+          "builderName": "Homebrew 6.0.0"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Homebrew 6.0.0 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-music-sa-homebrew-6-0-0-1tov3c",
+          "builderId": "builder-hn-48490024",
+          "builderName": "Homebrew 6.0.0"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 13
+    },
+    {
+      "id": "tr-culture--snowly-tcbutd",
+      "slug": "tr-culture--snowly-tcbutd",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Snowly 방식의 로컬 큐레이션 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Snowly(PH 최신 런칭 #4)의 '지도·로컬 큐레이션' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Snowly 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-ph-98fe4249c3",
+        "name": "Snowly",
+        "url": "https://www.producthunt.com/products/snowly-2",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #4",
+        "verifiedRevenue": false,
+        "mechanism": "geo-curation",
+        "mechanismLabel": "지도·로컬 큐레이션",
+        "overseasProofKo": "Snowly은 Product Hunt에서 PH 최신 런칭 #4 반응을 확보한 해외 프로덕트입니다. Snowly: 친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오. 핵심 흥행 동력은 '지도·로컬 큐레이션' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-c0de4f7aecd1",
+        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
+      },
+      "twistSummaryKo": "URL이나 캡처 이미지 몇 장을 던지면 운영시간·웨이팅 팁·도보 동선 카드로 정규화하는 아카이브 웨지. 원형 서비스 Snowly의 강점(친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "이번 주 종료 임박 팝업·전시·독립서점을 도보 15분 클러스터와 취향 태그로 자동 묶어주는 반나절 동선 큐레이터",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Snowly (PH 최신 런칭 #4)",
+          "builderId": "builder-ph-98fe4249c3",
+          "builderName": "Snowly"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Snowly 방식의 로컬 큐레이션 워크벤치",
+          "treatmentId": "tr-culture--snowly-tcbutd",
+          "builderId": "builder-ph-98fe4249c3",
+          "builderName": "Snowly"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 14
+    },
+    {
+      "id": "tr-kream-co-displaymath-1wz48h",
+      "slug": "tr-kream-co-displaymath-1wz48h",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Displaymath 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Displaymath(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Displaymath 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-uneed-937ac12340",
+        "name": "Displaymath",
+        "url": "https://www.uneed.best/tool/displaymath",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Displaymath은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Displaymath: Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-4559e9686ee9",
+        "titleKo": "AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123899406550528422",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게 이어지고 있어요.)"
+      },
+      "twistSummaryKo": "커뮤니티 착샷과 실제 거래가 변동선을 한 줄 타임라인에 묶는 구매 결정 도구. 원형 서비스 Displaymath의 강점(Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "출시 예정 협업 드롭의 커뮤니티 체감 수요 투표와 예상 리셀 밴드를 발매 48시간 전에 집계하는 드롭 수요 검증 보드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Displaymath (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-937ac12340",
+          "builderName": "Displaymath"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Displaymath 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-kream-co-displaymath-1wz48h",
+          "builderId": "builder-uneed-937ac12340",
+          "builderName": "Displaymath"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 15
+    },
+    {
+      "id": "tr-film-pre-appzoku-1jhrn6",
+      "slug": "tr-film-pre-appzoku-1jhrn6",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × AppZoku 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 AppZoku(검증 매출 $4.8k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 AppZoku 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-tmrr-505d4f892a",
+        "name": "AppZoku",
+        "url": "https://trustmrr.com/startup/appzoku",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $4.8k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "AppZoku은 실제 검증 매출(검증 매출 $4.8k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. AppZoku: 인공지능 (검증 매출 $4.8k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-f377c4ca71b9",
+        "titleKo": "한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26663",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "트리트먼트 텍스트를 6컷 핵심 시퀀스 보드와 촬영 체크리스트로 바로 치환하는 경량 스튜디오. 원형 서비스 AppZoku의 강점(인공지능)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 스틸컷 업로드 시 유사 구도·렌즈 화각과 대략적 프로덕션 난이도를 함께 비교해 주는 샷 매칭 패널",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "AppZoku (검증 매출 $4.8k (TrustMRR))",
+          "builderId": "builder-tmrr-505d4f892a",
+          "builderName": "AppZoku"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × AppZoku 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-film-pre-appzoku-1jhrn6",
+          "builderId": "builder-tmrr-505d4f892a",
+          "builderName": "AppZoku"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 16
+    },
+    {
+      "id": "tr-photo-lo-18-words-1jh4iq",
+      "slug": "tr-photo-lo-18-words-1jh4iq",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × 18 Words 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 18 Words(HN 1160 pts · 댓글 366)의 '시각 탐색·가격 매칭' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'Show GN: 나라니 - 계약서를 읽고 상대에게 보낼 조건 제안을 준비하는 도구' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 18 Words 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-hn-48845049",
+        "name": "18 Words",
+        "url": "https://18words.com/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1160 pts · 댓글 366",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "18 Words은 Show HN에서 HN 1160 pts · 댓글 366 반응을 확보한 해외 프로덕트입니다. 18 Words: 18 Words 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1160점·댓글 366개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-9e2e68ce49ae",
+        "titleKo": "Show GN: 나라니 - 계약서를 읽고 상대에게 보낼 조건 제안을 준비하는 도구",
+        "canonicalUrl": "https://news.hada.io/topic?id=37699",
+        "platformId": "geeknews",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Show GN: 나라니 - 계약서를 읽고 상대에게 보낼 조건 제안을 준비하는 도구'(geeknews)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (계약서를 올리면 내 AI가 먼저 읽고 확인할 조항과 빠진 조건을 찾아 줍니다. 말을 꺼내기 어려운 조건은 ‘납품 후 5일 안에 검수를 마치는 걸로 정해도 될까요?’처럼 상대에게 보낼 제안으로 다듬어 줍니다.)"
+      },
+      "twistSummaryKo": "해외 비주얼 비교 툴의 A/B 셀렉트 구조를 룩북 컨택트 시트와 컬러 팔레트 검수 도구로 전환. 원형 서비스 18 Words의 강점(18 Words)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 룩북 이미지에서 색상 팔레트·조명 대비와 유사 브랜드 레퍼런스 톤을 자동 대조하는 스타일 매처",
+        "GeekNews 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "18 Words (HN 1160 pts · 댓글 366)",
+          "builderId": "builder-hn-48845049",
+          "builderName": "18 Words"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × 18 Words 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-photo-lo-18-words-1jh4iq",
+          "builderId": "builder-hn-48845049",
+          "builderName": "18 Words"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 17
+    },
+    {
+      "id": "tr-music-sa-modem-1ho3gz",
+      "slug": "tr-music-sa-modem-1ho3gz",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Modem 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Modem(PH 최신 런칭 #5)의 '캔버스·비교 보드' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Modem 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-ph-5027604526",
+        "name": "Modem",
+        "url": "https://www.producthunt.com/products/modem",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #5",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "Modem은 Product Hunt에서 PH 최신 런칭 #5 반응을 확보한 해외 프로덕트입니다. Modem: 모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다. 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-f377c4ca71b9",
+        "titleKo": "한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26663",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "해외 크리에이터 유틸리티의 구간 북마크 구조를 BPM·키·질감별 4마디 샘플 크레이트로 전환. 원형 서비스 Modem의 강점(모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "후보 비트 버전 A/B와 레퍼런스 트랙의 파형·구간 메모를 한 보드에 병렬 배치해 편곡 방향을 확정하는 트랙 비교 시트",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Modem (PH 최신 런칭 #5)",
+          "builderId": "builder-ph-5027604526",
+          "builderName": "Modem"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Modem 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-music-sa-modem-1ho3gz",
+          "builderId": "builder-ph-5027604526",
+          "builderName": "Modem"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 18
+    },
+    {
+      "id": "tr-culture--easytools-1rx55c",
+      "slug": "tr-culture--easytools-1rx55c",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Easytools 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Easytools(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Easytools 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-uneed-8db61818b5",
+        "name": "Easytools",
+        "url": "https://www.uneed.best/tool/easytools",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Easytools은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Easytools: Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-4559e9686ee9",
+        "titleKo": "AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123899406550528422",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게 이어지고 있어요.)"
+      },
+      "twistSummaryKo": "해외 검증 디렉터리·랭킹 메커니즘을 '이번 주 종료 임박 팝업·전시' 필터 중심 로컬 지도로 재구성. 원형 서비스 Easytools의 강점(Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 오픈 팝업·전시의 실방문자 한 줄 검증 태그(웨이팅 실제 시간·포토존 밀도)를 실시간 집계하는 로컬 현장 검증 피드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Easytools (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-8db61818b5",
+          "builderName": "Easytools"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Easytools 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-culture--easytools-1rx55c",
+          "builderId": "builder-uneed-8db61818b5",
+          "builderName": "Easytools"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 19
+    },
+    {
+      "id": "tr-kream-co-hidden-busines-2el2la",
+      "slug": "tr-kream-co-hidden-busines-2el2la",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Hidden Business 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Hidden Business(검증 매출 $4.5k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Hidden Business 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-tmrr-b6d8b471ab",
+        "name": "Hidden Business",
+        "url": "https://trustmrr.com/startup/hidden-business-90",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $4.5k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Hidden Business은 실제 검증 매출(검증 매출 $4.5k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Hidden Business: TrustMRR에 상장된 검증된 수익 SaaS 스타트업($4.5k) (검증 매출 $4.5k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "스크린샷 한 장으로 발매가 대비 현재 호가와 유사 매물 체급을 즉시 대조하는 탐색 웨지. 원형 서비스 Hidden Business의 강점(TrustMRR에 상장된 검증된 수익 SaaS 스타트업($4.5k))을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "착샷 이미지나 모델 코드 입력 시 해외 리셀가와 국내 실거래가 스프레드를 한 표로 매칭하는 가격 격차 레이더",
+        "Anthropic 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Hidden Business (검증 매출 $4.5k (TrustMRR))",
+          "builderId": "builder-tmrr-b6d8b471ab",
+          "builderName": "Hidden Business"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Hidden Business 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-kream-co-hidden-busines-2el2la",
+          "builderId": "builder-tmrr-b6d8b471ab",
+          "builderName": "Hidden Business"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 20
+    },
+    {
+      "id": "tr-film-pre-performative-u-rsgk9a",
+      "slug": "tr-film-pre-performative-u-rsgk9a",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Performative-UI 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Performative-UI(HN 1181 pts · 댓글 213)의 '시각 탐색·가격 매칭' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar '구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Performative-UI 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-hn-48445554",
+        "name": "Performative-UI",
+        "url": "https://vorpus.github.io/performativeUI/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1181 pts · 댓글 213",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Performative-UI은 Show HN에서 HN 1181 pts · 댓글 213 반응을 확보한 해외 프로덕트입니다. Performative-UI: 디자인 비유의 반응 구성 요소 라이브러리 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1181점·댓글 213개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-aef89ca60299",
+        "titleKo": "구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26717",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 '구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "레퍼런스 영상 구간에서 카메라 무빙·색온도·구도 태그를 뽑아 즉시 콘티 시트로 묶는 웨지. 원형 서비스 Performative-UI의 강점(디자인 비유의 반응 구성 요소 라이브러리)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 스틸컷 업로드 시 유사 구도·렌즈 화각과 대략적 프로덕션 난이도를 함께 비교해 주는 샷 매칭 패널",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Performative-UI (HN 1181 pts · 댓글 213)",
+          "builderId": "builder-hn-48445554",
+          "builderName": "Performative-UI"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Performative-UI 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-film-pre-performative-u-rsgk9a",
+          "builderId": "builder-hn-48445554",
+          "builderName": "Performative-UI"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 21
+    },
+    {
+      "id": "tr-photo-lo-journalistic-t-dwuwoq",
+      "slug": "tr-photo-lo-journalistic-t-dwuwoq",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Journalistic Tech 방식의 로컬 큐레이션 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Journalistic Tech(PH 최신 런칭 #6)의 '지도·로컬 큐레이션' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Journalistic Tech 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-ph-7d1ea8febd",
+        "name": "Journalistic Tech",
+        "url": "https://www.producthunt.com/products/journalistic-tech",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #6",
+        "verifiedRevenue": false,
+        "mechanism": "geo-curation",
+        "mechanismLabel": "지도·로컬 큐레이션",
+        "overseasProofKo": "Journalistic Tech은 Product Hunt에서 PH 최신 런칭 #6 반응을 확보한 해외 프로덕트입니다. Journalistic Tech: HackerNoon에 게시되는 비동기 인터뷰 핵심 흥행 동력은 '지도·로컬 큐레이션' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "클라이언트 피드백을 사진 위 좌표 핀과 한 줄 수정 지시서로 압축하는 공유 룩북. 원형 서비스 Journalistic Tech의 강점(HackerNoon에 게시되는 비동기 인터뷰)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "자연광 시간대·배경 텍스처 기준으로 야외 룩북 스팟과 실내 렌탈 스튜디오를 반경별로 필터링하는 촬영지 큐레이터",
+        "Anthropic 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Journalistic Tech (PH 최신 런칭 #6)",
+          "builderId": "builder-ph-7d1ea8febd",
+          "builderName": "Journalistic Tech"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Journalistic Tech 방식의 로컬 큐레이션 워크벤치",
+          "treatmentId": "tr-photo-lo-journalistic-t-dwuwoq",
+          "builderId": "builder-ph-7d1ea8febd",
+          "builderName": "Journalistic Tech"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 22
+    },
+    {
+      "id": "tr-music-sa-sniffpup-cn5aio",
+      "slug": "tr-music-sa-sniffpup-cn5aio",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Sniffpup 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Sniffpup(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'n8n@2.48.8 — 개발자 도구·오픈소스 공개' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Sniffpup 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-uneed-b73fcb9b06",
+        "name": "Sniffpup",
+        "url": "https://www.uneed.best/tool/sniffpup",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Sniffpup은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Sniffpup: Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-0df06a1b18f9",
+        "titleKo": "n8n@2.48.8 — 개발자 도구·오픈소스 공개",
+        "canonicalUrl": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.8",
+        "platformId": "github",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "새 정식 버전 릴리스",
+        "bottleneckSolvedKo": "'n8n@2.48.8 — 개발자 도구·오픈소스 공개'(github)의 '새 정식 버전 릴리스' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (GitHub 개발 생태계에서 'n8n@2.48.8 — 개발자 도구·오픈소스 공개' 구현 방식과 실전 적용 사례가 공개됐어요.)"
+      },
+      "twistSummaryKo": "해외 크리에이터 유틸리티의 구간 북마크 구조를 BPM·키·질감별 4마디 샘플 크레이트로 전환. 원형 서비스 Sniffpup의 강점(Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "미발매 비트·샘플 팩 프리뷰 15초 스니펫을 리스너·래퍼에게 공개해 저장률 상위 루프만 정식 팩으로 묶는 드롭 검증 보드",
+        "GitHub 기반 '새 정식 버전 릴리스' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Sniffpup (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-b73fcb9b06",
+          "builderName": "Sniffpup"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Sniffpup 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-music-sa-sniffpup-cn5aio",
+          "builderId": "builder-uneed-b73fcb9b06",
+          "builderName": "Sniffpup"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 23
+    },
+    {
+      "id": "tr-culture--coralflavor-1o2b0f",
+      "slug": "tr-culture--coralflavor-1o2b0f",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Coralflavor 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Coralflavor(검증 매출 $4.1k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Coralflavor 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-tmrr-29c628905c",
+        "name": "Coralflavor",
+        "url": "https://trustmrr.com/startup/coralflavor",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $4.1k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Coralflavor은 실제 검증 매출(검증 매출 $4.1k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Coralflavor: 인공지능 (검증 매출 $4.1k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "해외 검증 디렉터리·랭킹 메커니즘을 '이번 주 종료 임박 팝업·전시' 필터 중심 로컬 지도로 재구성. 원형 서비스 Coralflavor의 강점(인공지능)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "팝업·전시 포스터 이미지 하나로 입장료·예약 난이도·인근 유사 취향 공간을 자동 매칭하는 탐색 카드",
+        "Anthropic 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Coralflavor (검증 매출 $4.1k (TrustMRR))",
+          "builderId": "builder-tmrr-29c628905c",
+          "builderName": "Coralflavor"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Coralflavor 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-culture--coralflavor-1o2b0f",
+          "builderId": "builder-tmrr-29c628905c",
+          "builderName": "Coralflavor"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 24
+    },
+    {
+      "id": "tr-kream-co-bento-raz46c",
+      "slug": "tr-kream-co-bento-raz46c",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Bento 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Bento(HN 1033 pts · 댓글 239)의 '캔버스·비교 보드' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Bento 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-hn-49008211",
+        "name": "Bento",
+        "url": "https://bento.page/slides/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1033 pts · 댓글 239",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "Bento은 Show HN에서 HN 1033 pts · 댓글 239 반응을 확보한 해외 프로덕트입니다. Bento: 하나의 HTML 파일에 전체 PowerPoint(편집+보기+데이터+협업) 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Hacker News 개발자·창업자 커뮤니티에서 1033점·댓글 239개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "해외 SaaS의 가격·스펙 비교 구조를 국내 리셀 사이즈별 프리미엄 추적 보드로 재해석. 원형 서비스 Bento의 강점(하나의 HTML 파일에 전체 PowerPoint(편집+보기+데이터+협업))을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "관심 스니커즈·아우터 3~4종의 실거래 추이·소재·코디 컷을 한 화면에 병렬 고정해 최종 1픽을 고르는 비교 시트",
+        "Anthropic 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Bento (HN 1033 pts · 댓글 239)",
+          "builderId": "builder-hn-49008211",
+          "builderName": "Bento"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Bento 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-kream-co-bento-raz46c",
+          "builderId": "builder-hn-49008211",
+          "builderName": "Bento"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 25
+    },
+    {
+      "id": "tr-film-pre-open-source-so-wicbpf",
+      "slug": "tr-film-pre-open-source-so-wicbpf",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Open Source Solana Wallet 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Open Source Solana Wallet(PH 최신 런칭 #7)의 '드롭·커뮤니티 검증' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar 'higurashi-ai/Haru-4B 오픈 모델 공개' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Open Source Solana Wallet 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-ph-f3714508eb",
+        "name": "Open Source Solana Wallet",
+        "url": "https://www.producthunt.com/products/open-source-solana-wallet",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #7",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Open Source Solana Wallet은 Product Hunt에서 PH 최신 런칭 #7 반응을 확보한 해외 프로덕트입니다. Open Source Solana Wallet: 나만의 키, 나만의 네트워크 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-d8e3cc90b026",
+        "titleKo": "higurashi-ai/Haru-4B 오픈 모델 공개",
+        "canonicalUrl": "https://huggingface.co/higurashi-ai/Haru-4B",
+        "platformId": "huggingface",
+        "signalType": "new_product",
+        "productDomain": "video-audio-media",
+        "benchmarkPoint": "Hugging Face — 4B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'higurashi-ai/Haru-4B 오픈 모델 공개'(huggingface)의 'Hugging Face — 4B 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Hugging Face 모델 저장소 'higurashi-ai/Haru-4B'. 태그: safetensors, haru, 음성, 전이중, 음성-음성, 오디오-오디오, en, es, pt, de, fr, zh, ja, )"
+      },
+      "twistSummaryKo": "해외 워크플로 도구의 프레임 단위 주석 메커니즘을 촬영 직전 샷 리스트·조명 노트 생성기로 전환. 원형 서비스 Open Source Solana Wallet의 강점(나만의 키, 나만의 네트워크)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "독립영화·단편 시놉시스와 6컷 프리비즈 시트를 비공개 링크로 돌려 제작 동료의 씬별 몰입도 피드백을 집계하는 사전 검증 보드",
+        "Hugging Face 기반 'Hugging Face — 4B 기반 성능·효율 지표' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Open Source Solana Wallet (PH 최신 런칭 #7)",
+          "builderId": "builder-ph-f3714508eb",
+          "builderName": "Open Source Solana Wallet"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Open Source Solana Wallet 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-film-pre-open-source-so-wicbpf",
+          "builderId": "builder-ph-f3714508eb",
+          "builderName": "Open Source Solana Wallet"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 26
+    },
+    {
+      "id": "tr-photo-lo-plango-119uml",
+      "slug": "tr-photo-lo-plango-119uml",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Plango 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Plango(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar '공상과학 환경(LORA)' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Plango 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-uneed-646e667478",
+        "name": "Plango",
+        "url": "https://www.uneed.best/tool/plango",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Plango은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Plango: Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-1f95a6b182da",
+        "titleKo": "공상과학 환경(LORA)",
+        "canonicalUrl": "https://civitai.com/models/105945",
+        "platformId": "civitai",
+        "signalType": "new_product",
+        "productDomain": "image-design-studio",
+        "benchmarkPoint": "시각 생성 품질·일관성·편집 제어력",
+        "bottleneckSolvedKo": "'공상과학 환경(LORA)'(civitai)의 '시각 생성 품질·일관성·편집 제어력' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Civitai에 '공상과학 환경(LORA)' 이미지·디자인 모델/워크플로가 올라와 시각 제작 파이프라인에 바로 시험해 볼 수 있어요.)"
+      },
+      "twistSummaryKo": "업로드한 테스트 컷들의 노출·색온도·크롭 일관성을 자동 진단해 B컷을 걸러내는 웨지. 원형 서비스 Plango의 강점(Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 시즌 룩북 후보 10컷을 핵심 팬·바이어에게 비공개 투표 링크로 배포해 메인 썸네일과 주력 착장을 사전 검증하는 룩북 폴",
+        "Civitai 기반 '시각 생성 품질·일관성·편집 제어력' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Plango (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-646e667478",
+          "builderName": "Plango"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Plango 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-photo-lo-plango-119uml",
+          "builderId": "builder-uneed-646e667478",
+          "builderName": "Plango"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 27
+    },
+    {
+      "id": "tr-music-sa-prepi-v6mzus",
+      "slug": "tr-music-sa-prepi-v6mzus",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × prepi 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 prepi(검증 매출 $3k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'shnfatih-hash/devlet-arsivleri-soykutugu: 전자 정부 가계 정보 + T.R. 대통령 국가 기록…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 prepi 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-tmrr-1f1bf4c4f3",
+        "name": "prepi",
+        "url": "https://trustmrr.com/startup/prepi",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $3k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "prepi은 실제 검증 매출(검증 매출 $3k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. prepi: 건강 및 피트니스 (검증 매출 $3k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-4beca2f49fef",
+        "titleKo": "shnfatih-hash/devlet-arsivleri-soykutugu: 전자 정부 가계 정보 + T.R. 대통령 국가 기록…",
+        "canonicalUrl": "https://github.com/shnfatih-hash/devlet-arsivleri-soykutugu",
+        "platformId": "github",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "GitHub 급상승 135",
+        "bottleneckSolvedKo": "'shnfatih-hash/devlet-arsivleri-soykutugu: 전자 정부 가계 정보 + T.R. 대통령 국가 기록…'(github)의 'GitHub 급상승 135' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (전자 정부 부모-최고 조상 정보 + T.R. 1500년대까지 대통령 국가 기록 보관소(Ottoman & Republic)를 통한 1:1 증명을 통한 계보 및 마을 역사 연구 스킬(Google Antigravity /)"
+      },
+      "twistSummaryKo": "레퍼런스 곡의 분위기 키워드를 입력하면 호환되는 리듬·악기 레이어 조합안을 제안하는 웨지. 원형 서비스 prepi의 강점(건강 및 피트니스)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 트랙의 에너지·질감 지표를 분석해 유사 톤의 샘플 팩과 라이선스 비용 체급을 나란히 비교하는 매처",
+        "Claude 기반 'GitHub 급상승 135' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "prepi (검증 매출 $3k (TrustMRR))",
+          "builderId": "builder-tmrr-1f1bf4c4f3",
+          "builderName": "prepi"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × prepi 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-music-sa-prepi-v6mzus",
+          "builderId": "builder-tmrr-1f1bf4c4f3",
+          "builderName": "prepi"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 28
+    },
+    {
+      "id": "tr-culture--simcity-but-wi-e5hick",
+      "slug": "tr-culture--simcity-but-wi-e5hick",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × SimCity, but with Permits 방식의 로컬 큐레이션 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 SimCity, but with Permits(HN 941 pts · 댓글 428)의 '지도·로컬 큐레이션' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 SimCity, but with Permits 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-hn-50170593",
+        "name": "SimCity, but with Permits",
+        "url": "https://permit.petercai.com/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 941 pts · 댓글 428",
+        "verifiedRevenue": false,
+        "mechanism": "geo-curation",
+        "mechanismLabel": "지도·로컬 큐레이션",
+        "overseasProofKo": "SimCity, but with Permits은 Show HN에서 HN 941 pts · 댓글 428 반응을 확보한 해외 프로덕트입니다. SimCity, but with Permits: SimCity, 하지만 허가가 있음 핵심 흥행 동력은 '지도·로컬 큐레이션' 구조로, Hacker News 개발자·창업자 커뮤니티에서 941점·댓글 428개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…'(x)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+      },
+      "twistSummaryKo": "개인 취향 태그(바이닐, 건축, 독립출판) 기준으로 큐레이터별 컬처 맵을 포크·조합하는 도구. 원형 서비스 SimCity, but with Permits의 강점(SimCity, 하지만 허가가 있음)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "이번 주 종료 임박 팝업·전시·독립서점을 도보 15분 클러스터와 취향 태그로 자동 묶어주는 반나절 동선 큐레이터",
+        "Anthropic 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "SimCity, but with Permits (HN 941 pts · 댓글 428)",
+          "builderId": "builder-hn-50170593",
+          "builderName": "SimCity, but with Permits"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × SimCity, but with Permits 방식의 로컬 큐레이션 워크벤치",
+          "treatmentId": "tr-culture--simcity-but-wi-e5hick",
+          "builderId": "builder-hn-50170593",
+          "builderName": "SimCity, but with Permits"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 29
+    },
+    {
+      "id": "tr-kream-co-hydrilla-9hxfil",
+      "slug": "tr-kream-co-hydrilla-9hxfil",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Hydrilla 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Hydrilla(PH 최신 런칭 #8)의 '시각 탐색·가격 매칭' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Hydrilla 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-ph-cbab95fe5c",
+        "name": "Hydrilla",
+        "url": "https://www.producthunt.com/products/hydrilla",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #8",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Hydrilla은 Product Hunt에서 PH 최신 런칭 #8 반응을 확보한 해외 프로덕트입니다. Hydrilla: AI로 바로 제작 가능한 3D 자산 생성 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-1455302e2aaa",
+        "titleKo": "GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해",
+        "canonicalUrl": "https://news.hada.io/topic?id=37712",
+        "platformId": "geeknews",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "GeekNews — 750B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해'(geeknews)의 'GeekNews — 750B 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (GLM-5.4는 공유 레이어를 반복 실행하는 첫 플래그십 Loop Transformer 모델로, Z.ai는 750B 규모에서 2T~3T 파라미터 모델에 견줄 지능 수준에 도달했다고 밝힘 반복 구조는 파라미터를 늘리지)"
+      },
+      "twistSummaryKo": "해외 SaaS의 가격·스펙 비교 구조를 국내 리셀 사이즈별 프리미엄 추적 보드로 재해석. 원형 서비스 Hydrilla의 강점(AI로 바로 제작 가능한 3D 자산 생성)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "착샷 이미지나 모델 코드 입력 시 해외 리셀가와 국내 실거래가 스프레드를 한 표로 매칭하는 가격 격차 레이더",
+        "GeekNews 기반 'GeekNews — 750B 기반 성능·효율 지표' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Hydrilla (PH 최신 런칭 #8)",
+          "builderId": "builder-ph-cbab95fe5c",
+          "builderName": "Hydrilla"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Hydrilla 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-kream-co-hydrilla-9hxfil",
+          "builderId": "builder-ph-cbab95fe5c",
+          "builderName": "Hydrilla"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 30
+    },
+    {
+      "id": "tr-film-pre-werk-1oqjwy",
+      "slug": "tr-film-pre-werk-1oqjwy",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Werk 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Werk(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar 'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Werk 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-uneed-d41a9e8626",
+        "name": "Werk",
+        "url": "https://www.uneed.best/tool/werk",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Werk은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Werk: Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-d2d7387aabed",
+        "titleKo": "ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26782",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "트리트먼트 텍스트를 6컷 핵심 시퀀스 보드와 촬영 체크리스트로 바로 치환하는 경량 스튜디오. 원형 서비스 Werk의 강점(Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "독립영화·단편 시놉시스와 6컷 프리비즈 시트를 비공개 링크로 돌려 제작 동료의 씬별 몰입도 피드백을 집계하는 사전 검증 보드",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Werk (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-d41a9e8626",
+          "builderName": "Werk"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Werk 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-film-pre-werk-1oqjwy",
+          "builderId": "builder-uneed-d41a9e8626",
+          "builderName": "Werk"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 31
+    },
+    {
+      "id": "tr-photo-lo-videobgremover-oy7tzn",
+      "slug": "tr-photo-lo-videobgremover-oy7tzn",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × VideoBGRemover 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 VideoBGRemover(검증 매출 $1.5k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 VideoBGRemover 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "10일 · 2인 스튜디오 실전 파일럿",
+      "sampleA": {
+        "builderId": "builder-tmrr-28903ce238",
+        "name": "VideoBGRemover",
+        "url": "https://trustmrr.com/startup/hidden-business-108",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $1.5k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "VideoBGRemover은 실제 검증 매출(검증 매출 $1.5k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. VideoBGRemover: 인공지능 (검증 매출 $1.5k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-1455302e2aaa",
+        "titleKo": "GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해",
+        "canonicalUrl": "https://news.hada.io/topic?id=37712",
+        "platformId": "geeknews",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "GeekNews — 750B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해'(geeknews)의 'GeekNews — 750B 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (GLM-5.4는 공유 레이어를 반복 실행하는 첫 플래그십 Loop Transformer 모델로, Z.ai는 750B 규모에서 2T~3T 파라미터 모델에 견줄 지능 수준에 도달했다고 밝힘 반복 구조는 파라미터를 늘리지)"
+      },
+      "twistSummaryKo": "클라이언트 피드백을 사진 위 좌표 핀과 한 줄 수정 지시서로 압축하는 공유 룩북. 원형 서비스 VideoBGRemover의 강점(인공지능)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 룩북 이미지에서 색상 팔레트·조명 대비와 유사 브랜드 레퍼런스 톤을 자동 대조하는 스타일 매처",
+        "GeekNews 기반 'GeekNews — 750B 기반 성능·효율 지표' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "VideoBGRemover (검증 매출 $1.5k (TrustMRR))",
+          "builderId": "builder-tmrr-28903ce238",
+          "builderName": "VideoBGRemover"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × VideoBGRemover 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-photo-lo-videobgremover-oy7tzn",
+          "builderId": "builder-tmrr-28903ce238",
+          "builderName": "VideoBGRemover"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 32
+    },
+    {
+      "id": "tr-music-sa-open-source-en-1pkf96",
+      "slug": "tr-music-sa-open-source-en-1pkf96",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Open-source engine running Gemma 방식의 캔버스·비교 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Open-source engine running Gemma(HN 919 pts · 댓글 342)의 '캔버스·비교 보드' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar '로컬 LLM으로 배우는 RAG 구축' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Open-source engine running Gemma 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-hn-49098510",
+        "name": "Open-source engine running Gemma",
+        "url": "https://github.com/drumih/turbo-fieldfare",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 919 pts · 댓글 342",
+        "verifiedRevenue": false,
+        "mechanism": "canvas-compare",
+        "mechanismLabel": "캔버스·비교 보드",
+        "overseasProofKo": "Open-source engine running Gemma은 Show HN에서 HN 919 pts · 댓글 342 반응을 확보한 해외 프로덕트입니다. Open-source engine running Gemma: M 시리즈 Mac에서 2GB RAM으로 Gemma 4 26B를 실행하는 오픈 소스 엔진 핵심 흥행 동력은 '캔버스·비교 보드' 구조로, Hacker News 개발자·창업자 커뮤니티에서 919점·댓글 342개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-1dc7b9cf2c9f",
+        "titleKo": "로컬 LLM으로 배우는 RAG 구축",
+        "canonicalUrl": "https://zenn.dev/beijiro/books/local-llm-rag-book",
+        "platformId": "zenn",
+        "signalType": "dev_workflow",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
+        "bottleneckSolvedKo": "'로컬 LLM으로 배우는 RAG 구축'(zenn)의 '개발자 워크플로 자동화·에이전트 통합 생산성' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Ollama 개발 생태계에서 '로컬 LLM으로 배우는 RAG 구축' 구현 방식과 실전 적용 사례가 공개됐어요.)"
+      },
+      "twistSummaryKo": "흩어진 보이스메모와 데모 구간을 프로젝트별 트랙 시트로 묶어 공동 작업자에게 넘기는 도구. 원형 서비스 Open-source engine running Gemma의 강점(M 시리즈 Mac에서 2GB RAM으로 Gemma 4 26B를 실행하는 오픈 소스 엔진)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "후보 비트 버전 A/B와 레퍼런스 트랙의 파형·구간 메모를 한 보드에 병렬 배치해 편곡 방향을 확정하는 트랙 비교 시트",
+        "Ollama 기반 '개발자 워크플로 자동화·에이전트 통합 생산성' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Open-source engine running Gemma (HN 919 pts · 댓글 342)",
+          "builderId": "builder-hn-49098510",
+          "builderName": "Open-source engine running Gemma"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Open-source engine running Gemma 방식의 캔버스·비교 워크벤치",
+          "treatmentId": "tr-music-sa-open-source-en-1pkf96",
+          "builderId": "builder-hn-49098510",
+          "builderName": "Open-source engine running Gemma"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 33
+    },
+    {
+      "id": "tr-culture--spikely-1ccubo",
+      "slug": "tr-culture--spikely-1ccubo",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Spikely 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Spikely(PH 최신 런칭 #9)의 '드롭·커뮤니티 검증' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar 'ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Spikely 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-ph-6dc11014a9",
+        "name": "Spikely",
+        "url": "https://www.producthunt.com/products/spikely",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #9",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Spikely은 Product Hunt에서 PH 최신 런칭 #9 반응을 확보한 해외 프로덕트입니다. Spikely: iPhone, Mac 및 Apple Watch용 시작 지표 알림 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-dd5a2ef4d10f",
+        "titleKo": "ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory",
+        "canonicalUrl": "https://openai.com/ja-JP/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "platformId": "hatena-bookmark",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory'(hatena-bookmark)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory 에이전트를 활용한 개발의 놀라운 속도로 기존의 성능 엔지니어링 기술로는 대응할 수 없게 되었습니다. 이 속도에 대응하기 위해 우리는 )"
+      },
+      "twistSummaryKo": "URL이나 캡처 이미지 몇 장을 던지면 운영시간·웨이팅 팁·도보 동선 카드로 정규화하는 아카이브 웨지. 원형 서비스 Spikely의 강점(iPhone, Mac 및 Apple Watch용 시작 지표 알림)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 오픈 팝업·전시의 실방문자 한 줄 검증 태그(웨이팅 실제 시간·포토존 밀도)를 실시간 집계하는 로컬 현장 검증 피드",
+        "OpenAI 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Spikely (PH 최신 런칭 #9)",
+          "builderId": "builder-ph-6dc11014a9",
+          "builderName": "Spikely"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Spikely 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-culture--spikely-1ccubo",
+          "builderId": "builder-ph-6dc11014a9",
+          "builderName": "Spikely"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 34
+    },
+    {
+      "id": "tr-kream-co-bragly-fhwblm",
+      "slug": "tr-kream-co-bragly-fhwblm",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "kream-commerce",
+      "domainLabel": "KREAM·커머스",
+      "customTopic": null,
+      "title": "KREAM·커머스 × Bragly 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Bragly(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 KREAM·커머스 현장에 맞게 압축하고, AI Radar 'Windows Server 2016에서 Active Directory 마이그레이션 및 업그레이드 고려 사항' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 한정판 스니커즈·드롭 매물 링크나 키워드 1개를 넣으면, 3초 안에 Bragly 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "4일 · 주말 해커톤 검증형 웨지",
+      "sampleA": {
+        "builderId": "builder-uneed-9c989f3752",
+        "name": "Bragly",
+        "url": "https://www.uneed.best/tool/bragly",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Bragly은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Bragly: Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-7b5c1ae292d0",
+        "titleKo": "Windows Server 2016에서 Active Directory 마이그레이션 및 업그레이드 고려 사항",
+        "canonicalUrl": "https://jpwinsup.github.io/blog/2026/08/05/ActiveDirectory/PromotionAndDemotion/windows-server-2016-ad-migration-considerations",
+        "platformId": "hatena-bookmark",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "'Windows Server 2016에서 Active Directory 마이그레이션 및 업그레이드 고려 사항'(hatena-bookmark)의 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 역량을 접목하면, 소규모 TF가 한정판 스니커즈·드롭 매물 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Windows Server 2016에서 Active Directory 마이그레이션 및 업그레이드 고려 사항 이 문서는 Microsoft 직원이 발표했습니다. Windows Server 2016은 2027년 1월 12)"
+      },
+      "twistSummaryKo": "스크린샷 한 장으로 발매가 대비 현재 호가와 유사 매물 체급을 즉시 대조하는 탐색 웨지. 원형 서비스 Bragly의 강점(Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 한정판 드롭 참여자, 리셀러, 빈티지 셀렉트숍 운영자가 매일 반복하는 '매수·리셀 타이밍을 판별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "출시 예정 협업 드롭의 커뮤니티 체감 수요 투표와 예상 리셀 밴드를 발매 48시간 전에 집계하는 드롭 수요 검증 보드",
+        "Hatena Bookmark IT 기반 '글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응' 파이프라인을 붙여 한정판 스니커즈·드롭 매물 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 한정판 스니커즈·드롭 매물 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 실거래 시세·착샷 비교 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "직접 결제·에스크로 정산 및 물류 검수 센터 운영 기능 제외 (외부 거래 링크 아웃링크 처리)",
+        "판매자 입점 백오피스·재고 ERP 및 복잡한 등급제 멤버십 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "신규 드롭 발매일 기준 24시간 내 시세·매물 비교 완료율 42% 이상",
+        "관심 모델 알림 등록 후 외부 거래 페이지 클릭 전환율(CTR) 18% 이상",
+        "주간 재방문율(W1 Retention) 35% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Bragly (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-9c989f3752",
+          "builderName": "Bragly"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "KREAM·커머스 × Bragly 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-kream-co-bragly-fhwblm",
+          "builderId": "builder-uneed-9c989f3752",
+          "builderName": "Bragly"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 35
+    },
+    {
+      "id": "tr-film-pre-ace-pitcher-wnigvl",
+      "slug": "tr-film-pre-ace-pitcher-wnigvl",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "film-previs",
+      "domainLabel": "영화·프리비주얼",
+      "customTopic": null,
+      "title": "영화·프리비주얼 × Ace Pitcher 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Ace Pitcher(검증 매출 $1.5k (TrustMRR))의 '시각 탐색·가격 매칭' 구조를 영화·프리비주얼 현장에 맞게 압축하고, AI Radar 'Wan2.2 14B 정액 폭발 로라' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 씬·샷 리스트 링크나 키워드 1개를 넣으면, 3초 안에 Ace Pitcher 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "7일 · 초기 스타트업 1차 MVP",
+      "sampleA": {
+        "builderId": "builder-tmrr-e42f81dcf2",
+        "name": "Ace Pitcher",
+        "url": "https://trustmrr.com/startup/ace-pitcher",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $1.5k (TrustMRR)",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Ace Pitcher은 실제 검증 매출(검증 매출 $1.5k (TrustMRR))로 지불 의사가 입증된 해외 프로덕트입니다. Ace Pitcher: 건강 및 피트니스 (검증 매출 $1.5k (TrustMRR)) 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, 결제 데이터(Stripe)로 실제 수익이 검증된 해외 마이크로 SaaS로, 명확한 유료 지불 의사가 확인된 구조입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-a5bb3a77d0f1",
+        "titleKo": "Wan2.2 14B 정액 폭발 로라",
+        "canonicalUrl": "https://huggingface.co/spaces/johnnysnowblind/wan2-2-fp8da-aoti-preview-2c-finishing",
+        "platformId": "huggingface",
+        "signalType": "new_product",
+        "productDomain": "video-audio-media",
+        "benchmarkPoint": "Hugging Face — 14B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'Wan2.2 14B 정액 폭발 로라'(huggingface)의 'Hugging Face — 14B 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 레퍼런스 씬·샷 리스트 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (Hugging Face에서 'Wan2.2 14B 정액 폭발 로라' 멀티모달 영상·음성 활용법이 공개돼 제작 자동화 가능성을 넓혔어요. 특히 14B 수치가 핵심 포인트로 꼽혀요.)"
+      },
+      "twistSummaryKo": "해외 워크플로 도구의 프레임 단위 주석 메커니즘을 촬영 직전 샷 리스트·조명 노트 생성기로 전환. 원형 서비스 Ace Pitcher의 강점(건강 및 피트니스)을 그대로 복제하지 않고, 독립영화 감독, 광고 PD, 영상 프리비주얼 디자이너가 매일 반복하는 '프리프로덕션 콘티와 샷 구성을 확정' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 스틸컷 업로드 시 유사 구도·렌즈 화각과 대략적 프로덕션 난이도를 함께 비교해 주는 샷 매칭 패널",
+        "Hugging Face 기반 'Hugging Face — 14B 기반 성능·효율 지표' 파이프라인을 붙여 레퍼런스 씬·샷 리스트 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 씬·샷 리스트 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 타임코드 콘티·샷 브리프 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "브라우저 내 풀 NLE 타임라인 편집기·4K 영상 인코딩 서버 구축 제외",
+        "스튜디오 회계 정산·촬영 장비 대여 마켓플레이스 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "트리트먼트 1건당 콘티·샷 시트 초안 완성 소요 시간 70% 단축 (10분 이내)",
+        "생성된 샷 보드 PDF/링크 팀 공유율 55% 이상",
+        "월 2회 이상 새 프로젝트 보드를 생성하는 활성 제작자 비율 30% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Ace Pitcher (검증 매출 $1.5k (TrustMRR))",
+          "builderId": "builder-tmrr-e42f81dcf2",
+          "builderName": "Ace Pitcher"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "영화·프리비주얼 × Ace Pitcher 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-film-pre-ace-pitcher-wnigvl",
+          "builderId": "builder-tmrr-e42f81dcf2",
+          "builderName": "Ace Pitcher"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 36
+    },
+    {
+      "id": "tr-photo-lo-getting-glm-5--xeonh8",
+      "slug": "tr-photo-lo-getting-glm-5--xeonh8",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "photo-lookbook",
+      "domainLabel": "사진·룩북",
+      "customTopic": null,
+      "title": "사진·룩북 × Getting GLM 5.2 running 방식의 시각·시세 매칭 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Getting GLM 5.2 running(HN 937 pts · 댓글 240)의 '시각 탐색·가격 매칭' 구조를 사진·룩북 현장에 맞게 압축하고, AI Radar 'Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 시즌 룩북·레퍼런스 컷 링크나 키워드 1개를 넣으면, 3초 안에 Getting GLM 5.2 running 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "2주 · 소규모 TF 베타 런칭",
+      "sampleA": {
+        "builderId": "builder-hn-48842459",
+        "name": "Getting GLM 5.2 running",
+        "url": "https://github.com/JustVugg/colibri",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 937 pts · 댓글 240",
+        "verifiedRevenue": false,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색·가격 매칭",
+        "overseasProofKo": "Getting GLM 5.2 running은 Show HN에서 HN 937 pts · 댓글 240 반응을 확보한 해외 프로덕트입니다. Getting GLM 5.2 running: 느린 컴퓨터에서 GLM 5.2 실행하기 핵심 흥행 동력은 '시각 탐색·가격 매칭' 구조로, Hacker News 개발자·창업자 커뮤니티에서 937점·댓글 240개로 실사용 효용이 검증된 신생 프로젝트입니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-e5712e69a009",
+        "titleKo": "Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인",
+        "canonicalUrl": "https://news.hada.io/topic?id=37703",
+        "platformId": "geeknews",
+        "signalType": "model_release",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "오픈소스 공개 소식",
+        "bottleneckSolvedKo": "'Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인'(geeknews)의 '오픈소스 공개 소식' 역량을 접목하면, 소규모 TF가 시즌 룩북·레퍼런스 컷 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (이 두 가지를 줄여 보려고 Claude Code와 Codex용 오픈소스 플러그인 Heirloom을 만들었습니다. 5만 원부터 무료 배송이 되도록 바꿨다면 Heirloom이 변경 전후 코드를 별도 Git worktre)"
+      },
+      "twistSummaryKo": "클라이언트 피드백을 사진 위 좌표 핀과 한 줄 수정 지시서로 압축하는 공유 룩북. 원형 서비스 Getting GLM 5.2 running의 강점(느린 컴퓨터에서 GLM 5.2 실행하기)을 그대로 복제하지 않고, 패션 브랜드 디렉터, 상업 포토그래퍼, 스타일리스트가 매일 반복하는 '촬영 톤앤매너와 최종 A컷을 선별' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "레퍼런스 룩북 이미지에서 색상 팔레트·조명 대비와 유사 브랜드 레퍼런스 톤을 자동 대조하는 스타일 매처",
+        "Claude Code 기반 '오픈소스 공개 소식' 파이프라인을 붙여 시즌 룩북·레퍼런스 컷 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 시즌 룩북·레퍼런스 컷 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 무드보드·색감 컨택트 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "RAW 파일 풀 보정 엔진(Lightroom 대체) 및 대규모 테라바이트 클라우드 스토리지 제외",
+        "스튜디오 예약·모델 캐스팅 에이전시 중개 결제 기능 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "컨택트 시트 업로드 후 클라이언트 최종 A컷 확정까지 소요 시간 50% 단축",
+        "공유 링크를 통한 외부 디렉터 코멘트 참여율 60% 이상",
+        "유료 팀 시트 전환 의향(내보내기/워터마크 해제 클릭) 12% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Getting GLM 5.2 running (HN 937 pts · 댓글 240)",
+          "builderId": "builder-hn-48842459",
+          "builderName": "Getting GLM 5.2 running"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "사진·룩북 × Getting GLM 5.2 running 방식의 시각·시세 매칭 워크벤치",
+          "treatmentId": "tr-photo-lo-getting-glm-5--xeonh8",
+          "builderId": "builder-hn-48842459",
+          "builderName": "Getting GLM 5.2 running"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 37
+    },
+    {
+      "id": "tr-music-sa-gauth-personal-4p6393",
+      "slug": "tr-music-sa-gauth-personal-4p6393",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "music-sampling",
+      "domainLabel": "음악·샘플링",
+      "customTopic": null,
+      "title": "음악·샘플링 × Gauth Personal Study Agent 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Gauth Personal Study Agent(PH 최신 런칭 #10)의 '드롭·커뮤니티 검증' 구조를 음악·샘플링 현장에 맞게 압축하고, AI Radar 'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 레퍼런스 루프·샘플 구간 링크나 키워드 1개를 넣으면, 3초 안에 Gauth Personal Study Agent 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-ph-8edf310cbf",
+        "name": "Gauth Personal Study Agent",
+        "url": "https://www.producthunt.com/products/gauth-ai-course",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #10",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Gauth Personal Study Agent은 Product Hunt에서 PH 최신 런칭 #10 반응을 확보한 해외 프로덕트입니다. Gauth Personal Study Agent: 당신이 어디서 어려움을 겪었는지 기억하는 AI 학습 에이전트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Product Hunt 최신 피드에 등재된 글로벌 신규 프로덕트로, 첫 진입 가치 제안이 선명하게 압축되어 있습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-d2d7387aabed",
+        "titleKo": "ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26782",
+        "platformId": "arxiv",
+        "signalType": "research_breakthrough",
+        "productDomain": "ai-research-model",
+        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
+        "bottleneckSolvedKo": "'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템'(arxiv)의 '모델 효율·추론 성능·오픈 벤치마크 진전' 역량을 접목하면, 소규모 TF가 레퍼런스 루프·샘플 구간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (arXiv가 'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+      },
+      "twistSummaryKo": "해외 크리에이터 유틸리티의 구간 북마크 구조를 BPM·키·질감별 4마디 샘플 크레이트로 전환. 원형 서비스 Gauth Personal Study Agent의 강점(당신이 어디서 어려움을 겪었는지 기억하는 AI 학습 에이전트)을 그대로 복제하지 않고, 인디 프로듀서, 비트메이커, 음악 감독, A&R가 매일 반복하는 '트랙 레퍼런스를 분해하고 샘플 조합을 스케치' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "미발매 비트·샘플 팩 프리뷰 15초 스니펫을 리스너·래퍼에게 공개해 저장률 상위 루프만 정식 팩으로 묶는 드롭 검증 보드",
+        "arXiv 기반 '모델 효율·추론 성능·오픈 벤치마크 진전' 파이프라인을 붙여 레퍼런스 루프·샘플 구간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 레퍼런스 루프·샘플 구간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 BPM·키 매칭 샘플 보드 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "웹 기반 풀 DAW 멀티트랙 믹서·VST 플러그인 호스팅 기능 제외",
+        "음원 저작권 신탁 정산 및 스트리밍 유통(DSP 배급) 파이프라인 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "세션당 레퍼런스 구간 태깅 및 호환 샘플 조합 생성 수 5건 이상",
+        "DAW 투입용 마커/브리프 내보내기 실행률 38% 이상",
+        "프로듀서 간 샘플 보드 링크 공유율 28% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Gauth Personal Study Agent (PH 최신 런칭 #10)",
+          "builderId": "builder-ph-8edf310cbf",
+          "builderName": "Gauth Personal Study Agent"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "음악·샘플링 × Gauth Personal Study Agent 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-music-sa-gauth-personal-4p6393",
+          "builderId": "builder-ph-8edf310cbf",
+          "builderName": "Gauth Personal Study Agent"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 38
+    },
+    {
+      "id": "tr-culture--caroush-1req8g",
+      "slug": "tr-culture--caroush-1req8g",
+      "createdAt": "2026-11-23T14:54:16.710Z",
+      "updatedAt": "2026-11-23T14:54:16.710Z",
+      "domainSlug": "culture-map",
+      "domainLabel": "컬처 맵·아카이브",
+      "customTopic": null,
+      "title": "컬처 맵·아카이브 × Caroush 방식의 드롭·검증 워크벤치",
+      "oneLineHook": "해외 검증 프로덕트 Caroush(Uneed 데일리 런칭)의 '드롭·커뮤니티 검증' 구조를 컬처 맵·아카이브 현장에 맞게 압축하고, AI Radar '그렇다, Lean 코드 1,700만 줄은 정말 많다' 기술로 수작업 병목을 없앤 2주 이내 TF용 마이크로 서비스",
+      "firstThreeSecondsUx": "회원가입 없이 첫 화면에 로컬 팝업·전시·취향 공간 링크나 키워드 1개를 넣으면, 3초 안에 Caroush 스타일의 구조화 비교 시트와 실행 체크리스트가 우측 지면에 즉시 펼쳐지는 단일 뷰",
+      "buildCadence": "5일 · 2인 직장인 TF 웨지",
+      "sampleA": {
+        "builderId": "builder-uneed-01a62ab2da",
+        "name": "Caroush",
+        "url": "https://www.uneed.best/tool/caroush",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "verifiedRevenue": false,
+        "mechanism": "drop-validation",
+        "mechanismLabel": "드롭·커뮤니티 검증",
+        "overseasProofKo": "Caroush은 Uneed에서 Uneed 데일리 런칭 반응을 확보한 해외 프로덕트입니다. Caroush: Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 핵심 흥행 동력은 '드롭·커뮤니티 검증' 구조로, Uneed 일일 런칭 보드에서 상위권 주목을 받은 인디 웹·앱 프로덕트로, 단일 기능 집중도가 높습니다."
+      },
+      "sampleA2": null,
+      "sampleB": {
+        "radarId": "live-6660e0f9fbe5",
+        "titleKo": "그렇다, Lean 코드 1,700만 줄은 정말 많다",
+        "canonicalUrl": "https://news.hada.io/topic?id=37710",
+        "platformId": "geeknews",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "GeekNews — 1,700만 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "'그렇다, Lean 코드 1,700만 줄은 정말 많다'(geeknews)의 'GeekNews — 1,700만 기반 성능·효율 지표' 역량을 접목하면, 소규모 TF가 로컬 팝업·전시·취향 공간 데이터를 수작업으로 분류·정규화하던 초기 구현 병목을 API/오픈소스 파이프라인으로 대체할 수 있습니다. (최근 리만 가설 증명에 붙은 Lean 코드 1,700만 줄이라는 수치가 얼마나 큰지 살펴보기 위해, 온라인의 두 Lean 코드 모음을 비교함 Mathlib의 유명 정리 모음에서 Lean 코드가 연결된 259개는 모두)"
+      },
+      "twistSummaryKo": "URL이나 캡처 이미지 몇 장을 던지면 운영시간·웨이팅 팁·도보 동선 카드로 정규화하는 아카이브 웨지. 원형 서비스 Caroush의 강점(Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트)을 그대로 복제하지 않고, 로컬 에디터, 팝업 마케터, 전시·공간 큐레이터, 주말 탐색자가 매일 반복하는 '로컬 공간 아카이브와 반나절 동선을 설계' 순간에만 집중하도록 범위를 절반 이하로 도려냈습니다.",
+      "mvpFeatures": [
+        "신규 오픈 팝업·전시의 실방문자 한 줄 검증 태그(웨이팅 실제 시간·포토존 밀도)를 실시간 집계하는 로컬 현장 검증 피드",
+        "GeekNews 기반 'GeekNews — 1,700만 기반 성능·효율 지표' 파이프라인을 붙여 로컬 팝업·전시·취향 공간 항목별 핵심 판단 근거 3줄과 추천 우선순위를 자동 태깅하는 경량 분석 엔진",
+        "선별한 로컬 팝업·전시·취향 공간 비교 결과를 로그인 없이 1클릭 공유 URL과 마크다운/PDF 시트로 내보내 팀·커뮤니티 피드백을 즉시 수렴하는 동선 큐레이션 컬처 시트 퍼블리셔"
+      ],
+      "scopeCutoff": [
+        "자체 지도 타일 렌더링 엔진 개발 및 실시간 턴바이턴 내비게이션 제외 (외부 지도 딥링크 연동)",
+        "매장 POS 연동 실시간 테이블 예약·티켓 발권 결제 시스템 제외",
+        "초기 2주 MVP에서 자체 대형 파운데이션 모델 학습 및 다중 권한 엔터프라이즈 어드민 제외"
+      ],
+      "targetKpis": [
+        "지도/리스트 진입 후 3개 이상 공간 저장 및 동선 시트 생성률 34% 이상",
+        "카카오맵·네이버지도·구글맵 외부 길찾기 딥링크 클릭률 26% 이상",
+        "주말 전(목·금) 재방문 활성 비율 40% 이상"
+      ],
+      "lineage": [
+        {
+          "step": "A",
+          "label": "원본 해외 근거 A",
+          "title": "Caroush (Uneed 데일리 런칭)",
+          "builderId": "builder-uneed-01a62ab2da",
+          "builderName": "Caroush"
+        },
+        {
+          "step": "B",
+          "label": "1차 기획 B",
+          "title": "컬처 맵·아카이브 × Caroush 방식의 드롭·검증 워크벤치",
+          "treatmentId": "tr-culture--caroush-1req8g",
+          "builderId": "builder-uneed-01a62ab2da",
+          "builderName": "Caroush"
+        }
+      ],
+      "synthesisMode": "deterministic",
+      "parentTreatmentId": null,
+      "variantIndex": 39
+    }
+  ]
+}
