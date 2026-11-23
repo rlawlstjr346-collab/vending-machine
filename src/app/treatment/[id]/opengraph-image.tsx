@@ -13,10 +13,10 @@ export default async function TreatmentOpenGraphImage({
   const { id } = await params;
   const treatment = loadSeedTreatments().find((t) => t.id === id);
 
-  const title = treatment?.title || "BENCH. Treatment Sheet";
+  const title = treatment?.title || "BENCH. Product Idea";
   const domain = treatment?.domainLabel || "BENCH.";
   const sampleA = treatment
-    ? `${treatment.sampleA.name} (${treatment.sampleA.tractionLabel})`
+    ? `${treatment.sampleA.name} (${treatment.sampleA.shortMetricLabel})`
     : "Overseas Builder Signal";
   const sampleB = treatment?.sampleB.titleKo || "AI Radar Signal";
 
@@ -26,8 +26,8 @@ export default async function TreatmentOpenGraphImage({
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#FAFAFA",
-          color: "#111111",
+          backgroundColor: "#F6F3EC",
+          color: "#1E1C19",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -36,15 +36,14 @@ export default async function TreatmentOpenGraphImage({
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", fontSize: 28, fontWeight: 800, letterSpacing: "0.08em" }}>
-            BENCH.
-          </div>
+          <div style={{ display: "flex", fontSize: 30, fontWeight: 800 }}>BENCH.</div>
           <div
             style={{
               display: "flex",
-              backgroundColor: "#111111",
-              color: "#FFFFFF",
-              padding: "8px 18px",
+              backgroundColor: "#23201C",
+              color: "#FFFCF7",
+              borderRadius: "9999px",
+              padding: "8px 20px",
               fontSize: 18,
               fontWeight: 700,
             }}
@@ -57,24 +56,22 @@ export default async function TreatmentOpenGraphImage({
           <div style={{ display: "flex", fontSize: 42, fontWeight: 800, lineHeight: 1.25 }}>
             {title}
           </div>
-          <div style={{ display: "flex", fontSize: 20, color: "#374151" }}>{`A: ${sampleA}`}</div>
-          <div style={{ display: "flex", fontSize: 20, color: "#4B5563" }}>{`B: ${sampleB}`}</div>
+          <div style={{ display: "flex", fontSize: 20, color: "#3D3831" }}>{sampleA}</div>
+          <div style={{ display: "flex", fontSize: 20, color: "#6E675C" }}>{sampleB}</div>
         </div>
 
         <div
           style={{
-            borderTop: "1px solid #E5E7EB",
+            borderTop: "1px solid #E7E0D3",
             paddingTop: "20px",
             display: "flex",
             justifyContent: "space-between",
             fontSize: 18,
-            color: "#4B5563",
+            color: "#6E675C",
           }}
         >
-          <span style={{ display: "flex" }}>{treatment?.buildCadence || "2-Week TF Wedge"}</span>
-          <span style={{ display: "flex", color: "#111111", fontWeight: 700 }}>
-            BENCH. TREATMENT SHEET
-          </span>
+          <span style={{ display: "flex" }}>{treatment?.buildCadence || "3~7일 MVP"}</span>
+          <span style={{ display: "flex", color: "#23201C", fontWeight: 700 }}>BENCH.</span>
         </div>
       </div>
     ),

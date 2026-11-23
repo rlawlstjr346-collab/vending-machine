@@ -1,9 +1,10 @@
 export type DomainSlug =
-  | "kream-commerce"
-  | "film-previs"
-  | "photo-lookbook"
-  | "music-sampling"
-  | "culture-map";
+  | "brand-commerce"
+  | "cinema-video"
+  | "photo-visual"
+  | "music-audio"
+  | "local-archive"
+  | "creator-tool";
 
 export type MechanismId =
   | "visual-price-match"
@@ -86,7 +87,6 @@ export interface TreatmentLineageNode {
   treatmentId?: string;
   builderId?: string;
   builderName?: string;
-  snapshot?: Omit<Treatment, "lineageHistory">;
 }
 
 export interface TreatmentSampleA {
@@ -95,6 +95,7 @@ export interface TreatmentSampleA {
   url: string;
   sourceLabel: string;
   tractionLabel: string;
+  shortMetricLabel: string;
   verifiedRevenue: boolean;
   mechanism: MechanismId;
   mechanismLabel: string;
@@ -129,6 +130,7 @@ export interface Treatment {
   updatedAt: string;
   domainSlug: DomainSlug;
   domainLabel: string;
+  domainColor: string;
   customTopic?: string | null;
   title: string;
   oneLineHook: string;

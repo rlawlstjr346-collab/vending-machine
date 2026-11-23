@@ -22,16 +22,16 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
   const anthropicKey = process.env.ANTHROPIC_API_KEY?.trim();
   if (!geminiKey && !anthropicKey) return base;
 
-  const prompt = `당신은 한국 초기 스타트업·직장인 TF 전문 서비스 기획자입니다.
-아래 초안 기획 트리트먼트를 더 날카롭고 구체적인 한국어 실무 문장으로 다듬어 JSON 객체만 반환하세요.
-금지: 과장 수식어, 이모지, "준비 중", "Coming Soon", 원시 "==" 기호.
-필수 JSON 키: {"title": string, "oneLineHook": string, "firstThreeSecondsUx": string, "twistSummaryKo": string, "mvpFeatures": [string, string, string]}
+  const prompt = `당신은 초기 스타트업과 사이드 프로젝트 메이커를 돕는 프로덕트 기획자입니다.
+아래 기획 초안을 첫 방문자가 제목만 읽어도 화면이 바로 그려지는 자연스러운 한국어로 다듬어 JSON 객체만 반환하세요.
+금지: 과장 수식어, 이모지, 원시 "==" 기호, 어려운 개발 용어 남발.
+필수 JSON 키: {"title": string, "oneLineHook": string, "firstThreeSecondsUx": string, "mvpFeatures": [string, string, string]}
 
 초안:
-- 도메인: ${base.domainLabel}${base.customTopic ? ` (맞춤 주제: ${base.customTopic})` : ""}
-- 해외 근거(A): ${base.sampleA.name} (${base.sampleA.tractionLabel}) — ${base.sampleA.overseasProofKo}
-- AI 기술(B): ${base.sampleB.titleKo} — ${base.sampleB.bottleneckSolvedKo}
-- 기존 3기능: ${JSON.stringify(base.mvpFeatures)}`;
+- 분야: ${base.domainLabel}${base.customTopic ? ` (맞춤 주제: ${base.customTopic})` : ""}
+- 해외 사례: ${base.sampleA.name} (${base.sampleA.shortMetricLabel}) — ${base.sampleA.overseasProofKo}
+- AI 기술: ${base.sampleB.titleKo} — ${base.sampleB.bottleneckSolvedKo}
+- 핵심 기능 3가지: ${JSON.stringify(base.mvpFeatures)}`;
 
   try {
     if (geminiKey) {
@@ -60,7 +60,6 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
             title: sanitizeEditorialText(parsed.title),
             oneLineHook: sanitizeEditorialText(parsed.oneLineHook || base.oneLineHook),
             firstThreeSecondsUx: sanitizeEditorialText(parsed.firstThreeSecondsUx || base.firstThreeSecondsUx),
-            twistSummaryKo: sanitizeEditorialText(parsed.twistSummaryKo || base.twistSummaryKo),
             mvpFeatures: [
               sanitizeEditorialText(parsed.mvpFeatures[0]),
               sanitizeEditorialText(parsed.mvpFeatures[1]),
@@ -103,7 +102,6 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
               title: sanitizeEditorialText(parsed.title),
               oneLineHook: sanitizeEditorialText(parsed.oneLineHook || base.oneLineHook),
               firstThreeSecondsUx: sanitizeEditorialText(parsed.firstThreeSecondsUx || base.firstThreeSecondsUx),
-              twistSummaryKo: sanitizeEditorialText(parsed.twistSummaryKo || base.twistSummaryKo),
               mvpFeatures: [
                 sanitizeEditorialText(parsed.mvpFeatures[0]),
                 sanitizeEditorialText(parsed.mvpFeatures[1]),

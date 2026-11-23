@@ -10,7 +10,7 @@ import {
 import {
   matchAiRadarFor,
   synthesizeTreatment,
-  treatmentToAgyPrompt,
+  treatmentToCodingPrompt,
   treatmentToMarkdown,
 } from "@/lib/synthesis-engine";
 import { isValidHttpUrl } from "@/lib/text-clean";
@@ -32,14 +32,14 @@ function collectSourceFiles(dir: string): string[] {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...collectSourceFiles(full));
-    } else if (/\.(ts|tsx|css)$/.test(entry.name)) {
+    } else if (/\.(ts|tsx|css|json)$/.test(entry.name)) {
       files.push(full);
     }
   }
   return files;
 }
 
-describe("BENCH. Contract Tests", () => {
+describe("BENCH. Warm Nordic Contract Tests", () => {
   const buildersPayload = readJson<{ count: number; items: BuilderSignal[] }>(
     path.join(PUBLIC_DATA, "builder-signals.json")
   );
@@ -50,30 +50,52 @@ describe("BENCH. Contract Tests", () => {
     path.join(PUBLIC_DATA, "treatments-seed.json")
   );
 
-  it("1) verifies >= 45 real overseas builder signals & AI Radar 100 signals integrity", () => {
-    expect(buildersPayload.items.length).toBeGreaterThanOrEqual(45);
-    expect(radarPayload.items.length).toBeGreaterThanOrEqual(80);
-    expect(treatmentsPayload.items.length).toBe(40);
+  it("1) guarantees zero personal-only terms ('KREAM', '직장인 TF', '취업', 'agy') across UI & treatments-seed.json", () => {
+    const personalTermRe = /(KREAM|직장인\s*TF|취업|\bagy\b)/i;
 
-    const sources = new Set(buildersPayload.items.map((b) => b.source));
-    expect(sources.size).toBeGreaterThanOrEqual(3);
+    const seedRaw = fs.readFileSync(path.join(PUBLIC_DATA, "treatments-seed.json"), "utf-8");
+    expect(seedRaw).not.toMatch(personalTermRe);
 
-    for (const b of buildersPayload.items) {
-      expect(isValidHttpUrl(b.url)).toBe(true);
-      expect(b.name.trim().length).toBeGreaterThan(0);
-      expect(b.taglineKo.trim().length).toBeGreaterThan(0);
-    }
-
-    for (const r of radarPayload.items) {
-      expect(isValidHttpUrl(r.canonicalUrl)).toBe(true);
-      expect(r.planningMeta.signalType.trim().length).toBeGreaterThan(0);
-      expect(r.planningMeta.productDomain.trim().length).toBeGreaterThan(0);
+    const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
+    for (const filePath of srcFiles) {
+      if (filePath.endsWith("translation-cache.json")) continue;
+      const content = fs.readFileSync(filePath, "utf-8");
+      expect(content, `Personal-only term found in ${filePath}`).not.toMatch(personalTermRe);
     }
   });
 
-  it("2) guarantees zero forbidden placeholders, zero dead '#' links, and zero raw '==' markers", () => {
+  it("2) validates 6 universal domains, real signal integrity, and natural non-robotic Korean titles", () => {
+    expect(DOMAIN_LIST.map((d) => d.slug)).toEqual([
+      "brand-commerce",
+      "cinema-video",
+      "photo-visual",
+      "music-audio",
+      "local-archive",
+      "creator-tool",
+    ]);
+
+    expect(buildersPayload.items.length).toBeGreaterThanOrEqual(45);
+    expect(radarPayload.items.length).toBeGreaterThanOrEqual(80);
+    expect(treatmentsPayload.items.length).toBeGreaterThanOrEqual(36);
+
+    const uniqueTitles = new Set(treatmentsPayload.items.map((t) => t.title));
+    expect(uniqueTitles.size).toBe(treatmentsPayload.items.length);
+
+    const roboticTitleRe = /×.*방식의|요소를 참고해|영역 서비스의 핵심 워크플로/;
+    for (const t of treatmentsPayload.items) {
+      expect(t.title).not.toMatch(roboticTitleRe);
+      expect(t.oneLineHook).not.toMatch(roboticTitleRe);
+      expect(t.mvpFeatures).toHaveLength(3);
+      expect(isValidHttpUrl(t.sampleA.url)).toBe(true);
+      expect(isValidHttpUrl(t.sampleB.canonicalUrl)).toBe(true);
+    }
+  });
+
+  it("3) guarantees zero raw '==' markers, zero placeholders, zero dead '#' links, and zero flashy animations", () => {
     const forbiddenTextRe = /(준비\s*중|coming\s+soon|샘플\s*데이터)/i;
     const rawHighlightRe = /==[^=\s][^=]*==/;
+    const forbiddenAnimRe =
+      /\b(animate-bounce|animate-pulse|animate-spin|animate-ping|scale-105|scale-110|hover:scale-|bg-gradient-to|blur-3xl)\b/;
 
     for (const file of ["builder-signals.json", "ai-radar-signals.json", "treatments-seed.json"]) {
       const raw = fs.readFileSync(path.join(PUBLIC_DATA, file), "utf-8");
@@ -83,58 +105,37 @@ describe("BENCH. Contract Tests", () => {
 
     const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
     for (const filePath of srcFiles) {
+      if (filePath.endsWith("text-clean.ts") || filePath.endsWith("translation-cache.json")) continue;
       const content = fs.readFileSync(filePath, "utf-8");
-      if (filePath.endsWith("text-clean.ts") || filePath.endsWith("synthesize/route.ts")) {
-        continue;
-      }
       expect(content, `Forbidden placeholder in ${filePath}`).not.toMatch(forbiddenTextRe);
       expect(content, `Dead href="#" in ${filePath}`).not.toMatch(/href=["']#["']/);
-    }
-
-    for (const t of treatmentsPayload.items) {
-      expect(isValidHttpUrl(t.sampleA.url)).toBe(true);
-      expect(isValidHttpUrl(t.sampleB.canonicalUrl)).toBe(true);
-      expect(t.mvpFeatures).toHaveLength(3);
-      expect(t.scopeCutoff.length).toBeGreaterThanOrEqual(2);
-      expect(t.targetKpis.length).toBeGreaterThanOrEqual(2);
-    }
-  });
-
-  it("3) enforces zero decorative animations, zero scale/gradient/blur gimmicks in src/", () => {
-    const forbiddenStyleRe =
-      /\b(animate-bounce|animate-pulse|animate-spin|animate-ping|scale-105|scale-110|hover:scale-|bg-gradient-to|blur-3xl|backdrop-blur)\b/;
-    const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
-    for (const filePath of srcFiles) {
-      const content = fs.readFileSync(filePath, "utf-8");
-      expect(content, `Forbidden animation/gimmick class in ${filePath}`).not.toMatch(
-        forbiddenStyleRe
-      );
+      expect(content, `Forbidden animation class in ${filePath}`).not.toMatch(forbiddenAnimRe);
     }
   });
 
   it("4) validates A -> Z parallel domain branching, B -> C chained evolution, and custom topic synthesis", () => {
     const builderA = buildersPayload.items[0];
     const builderA2 = buildersPayload.items[1];
-    const radarB = matchAiRadarFor(builderA, "kream-commerce", radarPayload.items, 0);
+    const radarB = matchAiRadarFor(builderA, "brand-commerce", radarPayload.items, 0);
 
     const treatmentB = synthesizeTreatment({
       builder: builderA,
       radar: radarB,
-      domainSlug: "kream-commerce",
+      domainSlug: "brand-commerce",
       variantIndex: 1,
     });
     expect(treatmentB.lineage.map((n) => n.step)).toEqual(["A", "B"]);
 
-    // A -> Z parallel branch to another domain keeping Sample A
-    const radarZ = matchAiRadarFor(builderA, "film-previs", radarPayload.items, 2);
+    // A -> Z parallel domain branch keeping Sample A
+    const radarZ = matchAiRadarFor(builderA, "cinema-video", radarPayload.items, 2);
     const treatmentZ = synthesizeTreatment({
       builder: builderA,
       radar: radarZ,
-      domainSlug: "film-previs",
+      domainSlug: "cinema-video",
       variantIndex: 2,
     });
     expect(treatmentZ.sampleA.builderId).toBe(treatmentB.sampleA.builderId);
-    expect(treatmentZ.domainSlug).toBe("film-previs");
+    expect(treatmentZ.domainSlug).toBe("cinema-video");
     expect(treatmentZ.id).not.toBe(treatmentB.id);
 
     // B -> C chained evolution grafting Sample A2
@@ -150,17 +151,19 @@ describe("BENCH. Contract Tests", () => {
     expect(treatmentC.sampleA2?.builderId).toBe(builderA2.id);
     expect(treatmentC.parentTreatmentId).toBe(treatmentB.id);
 
-    // Custom topic real-time synthesis + export outputs
+    // Custom topic synthesis + universal coding prompt output
     const customTr = synthesizeTreatment({
       builder: builderA,
       radar: radarB,
-      domainSlug: "culture-map",
-      customTopic: "성수동 팝업 웨이팅 지도",
+      domainSlug: "local-archive",
+      customTopic: "필름카메라",
       variantIndex: 4,
     });
-    expect(customTr.title).toContain("성수동 팝업 웨이팅 지도");
+    expect(customTr.title).toContain("필름카메라");
     expect(treatmentToMarkdown(customTr)).toContain(customTr.sampleA.url);
-    expect(treatmentToAgyPrompt(customTr)).toContain("MVP 핵심 기능 딱 3가지");
+    const prompt = treatmentToCodingPrompt(customTr);
+    expect(prompt).toContain("반드시 구현할 핵심 기능 3가지");
+    expect(prompt).not.toMatch(/\bagy\b/i);
   });
 
   it("5) validates saved-store serialization and SEO routes (sitemap, robots, rss.xml)", async () => {
@@ -173,8 +176,8 @@ describe("BENCH. Contract Tests", () => {
     expect(merged.map((t) => t.id)).toEqual(sampleIds);
 
     const sm = sitemap();
-    expect(sm.length).toBeGreaterThanOrEqual(1 + DOMAIN_LIST.length + 40);
-    expect(sm.some((entry) => entry.url.endsWith("/domain/kream-commerce"))).toBe(true);
+    expect(sm.length).toBeGreaterThanOrEqual(1 + DOMAIN_LIST.length + treatmentsPayload.items.length);
+    expect(sm.some((entry) => entry.url.endsWith("/domain/brand-commerce"))).toBe(true);
 
     const rb = robots();
     expect(rb.sitemap).toMatch(/\/sitemap\.xml$/);

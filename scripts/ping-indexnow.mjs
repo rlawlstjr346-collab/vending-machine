@@ -14,11 +14,12 @@ const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bench-workbench.v
 const INDEXNOW_KEY = (process.env.INDEXNOW_KEY || "bench-indexnow-9f4c2a8e7b1d6e3a").trim();
 
 const DOMAINS = [
-  "kream-commerce",
-  "film-previs",
-  "photo-lookbook",
-  "music-sampling",
-  "culture-map",
+  "brand-commerce",
+  "cinema-video",
+  "photo-visual",
+  "music-audio",
+  "local-archive",
+  "creator-tool",
 ];
 
 function collectUrls() {

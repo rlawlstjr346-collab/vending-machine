@@ -9,8 +9,8 @@ import { WorkbenchClient } from "@/components/WorkbenchClient";
 
 function WorkbenchFallback() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#FAFAFA] text-xs font-medium text-[#4B5563]">
-      BENCH. 워크벤치를 불러오는 중입니다.
+    <div className="flex min-h-screen items-center justify-center bg-[#F6F3EC] text-[14px] font-medium text-[#6E675C]">
+      기획 레이더를 불러오는 중입니다.
     </div>
   );
 }

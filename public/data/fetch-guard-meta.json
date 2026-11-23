@@ -4,20 +4,20 @@
     "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/data/planning-feed.json": {
       "etag": "W/\"8a3a8b12fd716bc64c220e284669de8dea6c22bc44eee2cc2e8c6f692a025405\"",
       "lastModified": null,
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:00.299Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-23T15:26:07.049Z"
     },
     "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json": {
       "etag": "W/\"4be7564713bab202aa4351823eaffb3ab0066deb5b6a201a55ebe63fc067dfbe\"",
       "lastModified": null,
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:02.475Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-23T15:26:09.168Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=40": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:03.298Z"
+      "lastCheckedAt": "2026-11-23T15:26:09.814Z"
     },
     "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>1779893640&hitsPerPage=40": {
       "etag": null,
@@ -26,22 +26,22 @@
       "lastCheckedAt": "2026-11-23T14:54:04.664Z"
     },
     "https://www.producthunt.com/feed": {
-      "etag": "W/\"e15745f02804ad0533112bb0e22537b4\"",
-      "lastModified": "Mon, 23 Nov 2026 14:52:45 GMT",
+      "etag": "W/\"a8b5a1e33d3fa3c67e2533efa3fbc495\"",
+      "lastModified": "Mon, 23 Nov 2026 15:25:29 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:04.711Z"
+      "lastCheckedAt": "2026-11-23T15:26:11.715Z"
     },
     "https://trustmrr.com": {
-      "etag": "W/\"7xoneo1zp612qpn\"",
+      "etag": "W/\"w9xxtj497y12qhs\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:05.193Z"
+      "lastCheckedAt": "2026-11-23T15:26:12.366Z"
     },
     "https://www.uneed.best": {
       "etag": null,
-      "lastModified": "Mon, 23 Nov 2026 14:49:47 GMT",
+      "lastModified": "Mon, 23 Nov 2026 15:18:21 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-23T14:54:05.798Z"
+      "lastCheckedAt": "2026-11-23T15:26:13.030Z"
     },
     "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24349)%0A%5B%231%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24406)%0A%5B%232%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%20A%20react%20component%20library%20of%20design%20tropes%0A%5B%235%5D%2018%20Words%0A%5B%236%5D%20An%20entire%20PowerPoint%20in%20one%20HTML%20file%20(edit%2Bview%2Bdata%2Bcollab)%0A%5B%237%5D%20SimCity%2C%20but%20with%20Permits": {
       "etag": null,
@@ -78,7 +78,25 @@
       "lastModified": null,
       "lastStatus": 200,
       "lastCheckedAt": "2026-11-23T14:54:16.709Z"
+    },
+    "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>1779895566&hitsPerPage=40": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-23T15:26:11.671Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Revenue%0A%5B%231%5D%20Fintech%0A%5B%232%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%2018%20Words%0A%5B%235%5D%20Turn%20any%20screen%20into%20a%20sign.%20The%20URL%20is%20the%20app%0A%5B%236%5D%20Are%20You%20in%20the%20Weights%3F%0A%5B%237%5D%20Massively%20Multiplayer%20Online%20Rave": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-23T15:26:14.503Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Omi%20can%20build%20anything.%20Now%20it%20finds%20your%20next%20100%20customers%0A%5B%231%5D%20Set%20a%20budget%2C%20coordinate%20teams%20of%20AI%20agents%2C%0A%5B%232%5D%20One%20key%20for%20everything%20you%20do%20with%20text": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-23T15:26:16.210Z"
     }
   },
-  "updatedAt": "2026-11-23T14:54:16.723Z"
+  "updatedAt": "2026-11-23T15:26:16.221Z"
 }
