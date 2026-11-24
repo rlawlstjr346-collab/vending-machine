@@ -44,6 +44,151 @@ const AI_RADAR_PLANNING_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/data/planning-feed.json";
 const AI_RADAR_LIVE_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json";
+const AI_RADAR_MAX_SIGNALS = 220;
+const LOCAL_AI_RADAR_PUBLIC_DIR =
+  process.env.AI_RADAR_LOCAL_PUBLIC_DIR || "/home/rlawlstjr346/ai-radar/web/public";
+
+const PRIORITY_CHINESE_PLATFORMS = new Set([
+  "v2ex",
+  "v2ex-ai",
+  "v2ex-cn",
+  "v2ex-create",
+  "juejin",
+  "juejin-ai",
+  "juejin-cn",
+  "qbitai",
+  "qbit-ai",
+  "liangziwei",
+  "jiqizhixin",
+  "synced",
+  "synced-ai",
+  "synced-review",
+  "syncedreview",
+  "36kr-ai",
+  "36kr",
+  "36kr-cn",
+  "36kr-news",
+  "36krai",
+]);
+
+const RADAR_PLATFORM_LABEL_MAP = {
+  v2ex: "V2EX · 인디빌더",
+  "v2ex-ai": "V2EX · 인디빌더",
+  "v2ex-cn": "V2EX · 인디빌더",
+  "v2ex-create": "V2EX · 인디빌더",
+  juejin: "Juejin · 굴진",
+  "juejin-ai": "Juejin · 굴진",
+  "juejin-cn": "Juejin · 굴진",
+  qbitai: "QbitAI · 양자위",
+  "qbit-ai": "QbitAI · 양자위",
+  liangziwei: "QbitAI · 양자위",
+  jiqizhixin: "Synced · 기기지심",
+  synced: "Synced · 기기지심",
+  "synced-ai": "Synced · 기기지심",
+  "synced-review": "Synced · 기기지심",
+  syncedreview: "Synced · 기기지심",
+  "36kr-ai": "36Kr AI",
+  "36kr": "36Kr AI",
+  "36kr-cn": "36Kr AI",
+  "36kr-news": "36Kr AI",
+  "36krai": "36Kr AI",
+  weibo: "웨이보 (Weibo)",
+  xiaohongshu: "샤오홍슈 (小红书)",
+  xhs: "샤오홍슈 (小红书)",
+  rednote: "샤오홍슈 (小红书)",
+  bilibili: "비리비리 (Bilibili)",
+  bili: "비리비리 (Bilibili)",
+  zhihu: "즈후 (知乎)",
+  ithome: "ITHome (IT之家)",
+  modelscope: "모델스코프 (ModelScope)",
+  gitee: "Gitee",
+  wechat: "위챗 (WeChat)",
+  weixin: "위챗 (WeChat)",
+  douyin: "도우인 (Douyin)",
+  baidu: "바이두 (Baidu)",
+  csdn: "CSDN",
+  oschina: "OSChina",
+  sspai: "소수파 (少数派)",
+  huxiu: "후슈 (虎嗅)",
+  geekpark: "지커공원 (极客公园)",
+  x: "X",
+  twitter: "X",
+  github: "GitHub",
+  "github-trending": "GitHub",
+  huggingface: "Hugging Face",
+  hf: "Hugging Face",
+  arxiv: "arXiv",
+  hn: "Hacker News",
+  hackernews: "Hacker News",
+  "hacker-news": "Hacker News",
+  reddit: "Reddit",
+  openai: "OpenAI",
+  anthropic: "Anthropic",
+  google: "Google AI",
+  deepmind: "Google DeepMind",
+  "google-deepmind": "Google DeepMind",
+  meta: "Meta AI",
+  nvidia: "NVIDIA",
+  microsoft: "Microsoft AI",
+  "microsoft-research": "Microsoft Research",
+  "the-verge-ai": "The Verge AI",
+  "the-verge": "The Verge",
+  techcrunch: "TechCrunch",
+  "techcrunch-ai": "TechCrunch AI",
+  "mit-tech-review": "MIT Tech Review",
+  "mit-tr-korea": "MIT TR Korea",
+  venturebeat: "VentureBeat",
+  wired: "WIRED",
+  "ars-technica": "Ars Technica",
+  "the-information": "The Information",
+  "simon-willison": "Simon Willison",
+  producthunt: "Product Hunt",
+  "product-hunt": "Product Hunt",
+  youtube: "YouTube",
+  threads: "Threads",
+  bluesky: "Bluesky",
+  geeknews: "GeekNews",
+  aitimes: "AI타임스",
+  "pytorch-kr": "PyTorch KR",
+  "ai-korea-community": "AI Korea",
+  gpters: "GPTers",
+  "itmedia-aiplus": "ITmedia AI+",
+  "hatena-bookmark": "Hatena Bookmark",
+  qiita: "Qiita",
+  zenn: "Zenn",
+  "latent-space": "Latent Space",
+  "one-useful-thing": "One Useful Thing",
+  interconnects: "Interconnects",
+  "ahead-of-ai": "Ahead of AI",
+  "import-ai": "Import AI",
+};
+
+function formatRadarPlatformLabel(platformId, canonicalUrl) {
+  const raw = stripHighlightMarkers(String(platformId || "")).trim();
+  if (!raw || raw.toLowerCase() === "ai-radar" || raw.toLowerCase() === "unknown") {
+    try {
+      const host = new URL(canonicalUrl || "").hostname.replace(/^www\./i, "");
+      const core = host.split(".")[0] || host;
+      return core ? core.charAt(0).toUpperCase() + core.slice(1) : "AI Radar";
+    } catch {
+      return "AI Radar";
+    }
+  }
+  const lower = raw.toLowerCase();
+  const hyphenNorm = lower.replace(/[_\s]+/g, "-");
+  const compactNorm = lower.replace(/[-_\s]+/g, "");
+  if (RADAR_PLATFORM_LABEL_MAP[lower]) return RADAR_PLATFORM_LABEL_MAP[lower];
+  if (RADAR_PLATFORM_LABEL_MAP[hyphenNorm]) return RADAR_PLATFORM_LABEL_MAP[hyphenNorm];
+  if (RADAR_PLATFORM_LABEL_MAP[compactNorm]) return RADAR_PLATFORM_LABEL_MAP[compactNorm];
+  if (/^[a-z0-9_-]+$/.test(raw)) {
+    return raw
+      .split(/[-_]+/)
+      .filter(Boolean)
+      .map((part) => (part.length <= 2 ? part.toUpperCase() : part[0].toUpperCase() + part.slice(1)))
+      .join(" ");
+  }
+  return raw;
+}
 const SHOW_HN_LATEST_URL =
   "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=45&page=0";
 const SHOW_HN_LATEST_P2_URL =
@@ -891,35 +1036,176 @@ async function runPool(items, concurrency, fn) {
 
 // ── 1) AI Radar ──────────────────────────────────────────────────────────────
 
+function extractRadarArray(payload) {
+  if (Array.isArray(payload)) return payload;
+  if (!payload || typeof payload !== "object") return [];
+  if (Array.isArray(payload.signals)) return payload.signals;
+  if (Array.isArray(payload.items)) return payload.items;
+  if (Array.isArray(payload.data)) return payload.data;
+  return [];
+}
+
+function maxFeedTimestamp(items) {
+  let best = 0;
+  for (const it of items) {
+    if (!it || typeof it !== "object") continue;
+    const t = Math.max(
+      Date.parse(it.fetched_at || it.fetchedAt || "") || 0,
+      Date.parse(it.published_at || it.publishedAt || "") || 0
+    );
+    if (t > best) best = t;
+  }
+  return best;
+}
+
+function radarSignalTs(sig) {
+  const pub = Date.parse(sig.publishedAt || "");
+  if (Number.isFinite(pub)) return pub;
+  const fetched = Date.parse(sig.fetchedAt || "");
+  return Number.isFinite(fetched) ? fetched : 0;
+}
+
+function compareRadarSignalFreshness(a, b) {
+  const dt = radarSignalTs(b) - radarSignalTs(a);
+  if (dt !== 0) return dt;
+  return (b.importanceScore || 0) - (a.importanceScore || 0);
+}
+
+function selectBalancedRadarSignals(signals, maxCount = AI_RADAR_MAX_SIGNALS) {
+  const deduped = [];
+  const seenIds = new Set();
+  const seenUrls = new Set();
+
+  for (const s of signals) {
+    if (!s || !isValidHttpUrl(s.canonicalUrl)) continue;
+    const normUrl = s.canonicalUrl.toLowerCase().replace(/\/+$/, "");
+    if (seenIds.has(s.id) || seenUrls.has(normUrl)) continue;
+    seenIds.add(s.id);
+    seenUrls.add(normUrl);
+    deduped.push({
+      ...s,
+      platformLabel: formatRadarPlatformLabel(s.platformId, s.canonicalUrl),
+    });
+  }
+
+  if (deduped.length <= maxCount) {
+    return deduped.sort(compareRadarSignalFreshness);
+  }
+
+  const buckets = new Map();
+  for (const sig of deduped) {
+    const pid = String(sig.platformId || "ai-radar").toLowerCase().trim() || "ai-radar";
+    if (!buckets.has(pid)) buckets.set(pid, []);
+    buckets.get(pid).push(sig);
+  }
+  for (const list of buckets.values()) {
+    list.sort(compareRadarSignalFreshness);
+  }
+
+  const platformKeys = Array.from(buckets.keys()).sort((a, b) => {
+    const aCn = PRIORITY_CHINESE_PLATFORMS.has(a) ? 1 : 0;
+    const bCn = PRIORITY_CHINESE_PLATFORMS.has(b) ? 1 : 0;
+    if (aCn !== bCn) return bCn - aCn;
+    return compareRadarSignalFreshness(buckets.get(a)[0], buckets.get(b)[0]);
+  });
+
+  const baseMinQuota = Math.max(2, Math.min(6, Math.floor(maxCount / Math.max(platformKeys.length, 1))));
+  const quotaFor = (pid) =>
+    PRIORITY_CHINESE_PLATFORMS.has(pid) ? Math.max(baseMinQuota, 8) : baseMinQuota;
+  const maxQuota = Math.max(baseMinQuota, 8);
+
+  const selected = [];
+  const selectedIds = new Set();
+
+  for (let round = 0; round < maxQuota && selected.length < maxCount; round += 1) {
+    for (const pid of platformKeys) {
+      if (selected.length >= maxCount) break;
+      if (round >= quotaFor(pid)) continue;
+      const candidate = buckets.get(pid)[round];
+      if (!candidate || selectedIds.has(candidate.id)) continue;
+      selected.push(candidate);
+      selectedIds.add(candidate.id);
+    }
+  }
+
+  if (selected.length < maxCount) {
+    const remainder = deduped
+      .filter((s) => !selectedIds.has(s.id))
+      .sort(compareRadarSignalFreshness);
+    for (const sig of remainder) {
+      if (selected.length >= maxCount) break;
+      selected.push(sig);
+      selectedIds.add(sig.id);
+    }
+  }
+
+  return selected.sort(compareRadarSignalFreshness);
+}
+
 async function syncAiRadar(guard, existingItems, mediaCache) {
   const planRes = await guard.fetchText(AI_RADAR_PLANNING_URL, {
     accept: "application/json",
-    bypass304: existingItems.length === 0,
+    bypass304: true,
   });
   const liveRes = await guard.fetchText(AI_RADAR_LIVE_URL, {
     accept: "application/json",
-    bypass304: existingItems.length === 0,
+    bypass304: true,
   });
 
-  if (planRes.cached304 && liveRes.cached304 && existingItems.length > 0) {
-    return { items: existingItems, status: 304, cached304: true, note: "ETag 304 cached" };
-  }
-
-  let planData = null;
-  let liveData = null;
+  let remotePlanData = null;
+  let remoteLiveData = null;
   if (planRes.text) {
-    try { planData = JSON.parse(planRes.text); } catch {}
+    try { remotePlanData = JSON.parse(planRes.text); } catch {}
   }
   if (liveRes.text) {
-    try { liveData = JSON.parse(liveRes.text); } catch {}
-  }
-  if (!planData && existingItems.length > 0) {
-    return { items: existingItems, status: planRes.status, note: planRes.skippedReason || "cached snapshot" };
+    try { remoteLiveData = JSON.parse(liveRes.text); } catch {}
   }
 
+  // Safely merge read-only local ~/ai-radar/web/public feeds when running locally
+  // (Vercel/CI environments strictly use remote GitHub Raw URLs only).
+  let localPlanData = null;
+  let localLiveData = null;
+  const allowLocalFallback = !process.env.VERCEL && !process.env.CI;
+  if (allowLocalFallback) {
+    const localPlanPath = path.join(LOCAL_AI_RADAR_PUBLIC_DIR, "data", "planning-feed.json");
+    const localLivePath = path.join(LOCAL_AI_RADAR_PUBLIC_DIR, "live-feed.json");
+    localPlanData = readJson(localPlanPath, null);
+    localLiveData = readJson(localLivePath, null);
+  }
+
+  const remotePlanItems = extractRadarArray(remotePlanData);
+  const remoteLiveItems = extractRadarArray(remoteLiveData);
+  const localPlanItems = extractRadarArray(localPlanData);
+  const localLiveItems = extractRadarArray(localLiveData);
+
+  if (
+    remotePlanItems.length === 0 &&
+    remoteLiveItems.length === 0 &&
+    localPlanItems.length === 0 &&
+    localLiveItems.length === 0 &&
+    existingItems.length > 0
+  ) {
+    return {
+      items: selectBalancedRadarSignals(existingItems, AI_RADAR_MAX_SIGNALS),
+      status: planRes.status || 200,
+      note: planRes.skippedReason || "cached snapshot",
+    };
+  }
+
+  const remoteMaxTs = Math.max(maxFeedTimestamp(remotePlanItems), maxFeedTimestamp(remoteLiveItems));
+  const localMaxTs = Math.max(maxFeedTimestamp(localPlanItems), maxFeedTimestamp(localLiveItems));
+  const localIsNewer = localMaxTs > remoteMaxTs;
+
   const liveById = new Map();
-  for (const it of liveData?.items || []) {
-    if (it && it.id) liveById.set(it.id, it);
+  const liveOrder = localIsNewer
+    ? [localLiveItems, remoteLiveItems]
+    : [remoteLiveItems, localLiveItems];
+  for (const batch of liveOrder) {
+    for (const it of batch) {
+      if (it && it.id && !liveById.has(it.id)) {
+        liveById.set(it.id, it);
+      }
+    }
   }
 
   const joined = [];
@@ -933,11 +1219,18 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
     const normUrl = canonicalUrl.toLowerCase().replace(/\/+$/, "");
     const id = String(sig.id || full.id || `radar-${shortHash(canonicalUrl)}`);
     if (seenIds.has(id) || seenUrls.has(normUrl)) return;
-    const titleKo = stripHighlightMarkers(sig.title_ko || full.title_ko || sig.original_title || full.original_title || sig.title || full.title || "");
+    const titleKo = stripHighlightMarkers(
+      sig.title_ko || full.title_ko || sig.original_title || full.original_title || sig.title || full.title || ""
+    );
     if (!titleKo || titleKo.length < 2) return;
 
     seenIds.add(id);
     seenUrls.add(normUrl);
+
+    const platformId = String(
+      sig.platform_id || full.platform_id || sig.source_platform || full.source_platform || "ai-radar"
+    ).trim();
+    const platformLabel = formatRadarPlatformLabel(platformId, canonicalUrl);
 
     const pm = sig.planning_meta || full.planning_meta || {};
     const ut = full.utility_tip || sig.utility_tip || null;
@@ -955,7 +1248,8 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
       id,
       titleKo,
       originalTitle: stripHighlightMarkers(sig.original_title || full.original_title || titleKo),
-      platformId: String(sig.platform_id || full.platform_id || sig.source_platform || "ai-radar"),
+      platformId,
+      platformLabel,
       authorHandle: sig.author_handle || full.author_handle || null,
       category: String(sig.category || full.category || "industry"),
       lifecycleStatus: String(sig.lifecycle_status || full.lifecycle_status || "hot"),
@@ -978,33 +1272,56 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
       planningMeta: {
         signalType: String(pm.signal_type || "new_product"),
         productDomain: String(pm.product_domain || sig.category || "ai-business-infra"),
-        benchmarkPoint: stripHighlightMarkers(pm.benchmark_point || "핵심 성능·워크플로 개선"),
+        benchmarkPoint: stripHighlightMarkers(pm.benchmark_point || `${platformLabel} 핵심 성능·워크플로 개선`),
         actionableIdea: stripHighlightMarkers(pm.actionable_idea || ""),
       },
       entities: Array.isArray(sig.entities || full.entities)
-        ? (sig.entities || full.entities).map((e) => (typeof e === "string" ? e : String(e?.name || ""))).filter(Boolean)
+        ? (sig.entities || full.entities)
+            .map((e) => stripHighlightMarkers(typeof e === "string" ? e : String(e?.name || "")))
+            .filter(Boolean)
         : [],
       thumbnailUrl: verifiedThumb,
     });
   };
 
-  for (const sig of planData?.signals || []) {
-    if (!sig) continue;
-    const full = (sig.id ? liveById.get(sig.id) : null) || {};
-    await pushRadarRecord(sig, full);
+  const feedBatches = localIsNewer
+    ? [localPlanItems, localLiveItems, remotePlanItems, remoteLiveItems]
+    : [remotePlanItems, remoteLiveItems, localPlanItems, localLiveItems];
+
+  for (const batch of feedBatches) {
+    for (const sig of batch) {
+      if (!sig) continue;
+      const full = (sig.id ? liveById.get(sig.id) : null) || sig;
+      await pushRadarRecord(sig, full);
+    }
   }
 
-  // Also absorb any live-feed-only signals (e.g., future Chinese platforms added to live-feed.json)
-  for (const liveIt of liveData?.items || []) {
-    if (!liveIt) continue;
-    await pushRadarRecord(liveIt, liveIt);
+  // Merge preserved existing signals (deduped, refreshed labels) so the pool expands up to 220
+  // while per-platform minimum quota guarantees all active sources (incl. 5 Chinese platforms).
+  for (const prev of existingItems || []) {
+    if (!prev || !isValidHttpUrl(prev.canonicalUrl)) continue;
+    const normUrl = prev.canonicalUrl.toLowerCase().replace(/\/+$/, "");
+    if (seenIds.has(prev.id) || seenUrls.has(normUrl)) continue;
+    seenIds.add(prev.id);
+    seenUrls.add(normUrl);
+    joined.push({
+      ...prev,
+      titleKo: stripHighlightMarkers(prev.titleKo),
+      originalTitle: stripHighlightMarkers(prev.originalTitle || prev.titleKo),
+      platformLabel: formatRadarPlatformLabel(prev.platformId, prev.canonicalUrl),
+      highlightSummary: stripHighlightMarkers(prev.highlightSummary || prev.titleKo),
+      whatKo: stripHighlightMarkers(prev.whatKo || prev.highlightSummary || prev.titleKo),
+      whyKo: stripHighlightMarkers(prev.whyKo || ""),
+    });
   }
+
+  const balanced = selectBalancedRadarSignals(joined, AI_RADAR_MAX_SIGNALS);
 
   return {
-    items: joined,
-    status: planRes.status || 200,
+    items: balanced,
+    status: planRes.status || liveRes.status || 200,
     cached304: false,
-    note: `joined planning(${planData?.signals?.length || 0}) + live(${liveById.size}), thumbs(${verifiedThumbCount})`,
+    note: `merged remote(${remotePlanItems.length}/${remoteLiveItems.length}) + local(${localPlanItems.length}/${localLiveItems.length}) -> balanced ${balanced.length}/${AI_RADAR_MAX_SIGNALS}, thumbs(${verifiedThumbCount})`,
   };
 }
 
@@ -2047,6 +2364,9 @@ function hydratePairingToTreatment({
           titleKo: radar.titleKo,
           canonicalUrl: radar.canonicalUrl,
           platformId: radar.platformId,
+          platformLabel:
+            radar.platformLabel ||
+            formatRadarPlatformLabel(radar.platformId, radar.canonicalUrl),
           sourceType: "ai_radar",
           cultureVerticalLabel: null,
           signalType: radar.planningMeta.signalType,

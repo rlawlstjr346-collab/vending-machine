@@ -13,7 +13,9 @@ import {
 } from "@/lib/dispenser-deck";
 import { DOMAIN_LIST } from "@/lib/domains";
 import {
+  AI_RADAR_MAX_SIGNALS,
   formatRadarPlatformLabel,
+  mergeAndBalanceRadarSignals,
   normalizeAiRadarFeed,
 } from "@/lib/radar-adapter";
 import {
@@ -504,7 +506,7 @@ describe("DISPENSER. Production Release Contract Tests", () => {
     expect(bili.platformLabel).toBe("비리비리 (Bilibili)");
     expect(futureSrc.platformLabel).toBe("Unknown Future Source");
     expect(formatRadarPlatformLabel("weibo")).toBe("웨이보 (Weibo)");
-    expect(formatRadarPlatformLabel("qbitai")).toBe("량쯔웨이 (量子位)");
+    expect(formatRadarPlatformLabel("qbitai")).toBe("QbitAI · 양자위");
 
     const builderA = buildersPayload.items[0];
     for (const sig of normalized) {
@@ -518,6 +520,141 @@ describe("DISPENSER. Production Release Contract Tests", () => {
       expect(tr.sampleB.platformLabel).toBe(sig.platformLabel);
       expect(tr.fusionStoryKo.length).toBeGreaterThan(80);
       expect(tr.mvpFeatures).toHaveLength(3);
+    }
+  });
+
+  it("12) validates AI Radar 5 Chinese sources (v2ex, juejin, qbitai, synced/jiqizhixin, 36kr-ai) schema normalization, quota-preserving 220 cap, synthesis, and synced presence", () => {
+    expect(AI_RADAR_MAX_SIGNALS).toBe(220);
+
+    // Exact label mappings & variant keys for all 5 Chinese sources
+    expect(formatRadarPlatformLabel("v2ex")).toBe("V2EX · 인디빌더");
+    expect(formatRadarPlatformLabel("v2ex-ai")).toBe("V2EX · 인디빌더");
+    expect(formatRadarPlatformLabel("juejin")).toBe("Juejin · 굴진");
+    expect(formatRadarPlatformLabel("qbitai")).toBe("QbitAI · 양자위");
+    expect(formatRadarPlatformLabel("qbit-ai")).toBe("QbitAI · 양자위");
+    expect(formatRadarPlatformLabel("jiqizhixin")).toBe("Synced · 기기지심");
+    expect(formatRadarPlatformLabel("synced")).toBe("Synced · 기기지심");
+    expect(formatRadarPlatformLabel("36kr-ai")).toBe("36Kr AI");
+    expect(formatRadarPlatformLabel("36kr")).toBe("36Kr AI");
+
+    // Simulate > 220 incoming signals where the 5 Chinese sources sit beyond index 100 in live-feed
+    const bulkPlanningSignals = Array.from({ length: 240 }, (_, i) => ({
+      id: `bulk-en-${i}`,
+      title_ko: `글로벌 AI 인프라 업데이트 신호 ${i + 1}`,
+      original_title: `Global AI Infra Update Signal ${i + 1}`,
+      platform_id: i % 2 === 0 ? "openai" : "anthropic",
+      category: "industry",
+      canonical_url: `https://example-ai-news.dev/articles/${i}`,
+      published_at: new Date(Date.now() - i * 60_000).toISOString(),
+      importance_score: 25,
+      highlight_summary: `글로벌 AI 워크플로 자동화 벤치마크 변화 ${i + 1}`,
+    }));
+
+    const cnFiveLiveItems = [
+      {
+        id: "cn-v2ex-live",
+        title_ko: "Pure Swift 기반 macOS 메뉴바 AI 에이전트 공간 분석 오픈소스 도구",
+        original_title: "[开源自荐] Peek：纯 Swift 原生 macOS 菜单栏工具",
+        platform_id: "v2ex",
+        category: "dev",
+        canonical_url: "https://v2ex.com/t/1259404",
+        published_at: new Date(Date.now() - 3600_000 * 5).toISOString(),
+        importance_score: 28.25,
+        what_ko: "로컬 맥 환경에서 AI 에이전트 디스크·하드웨어 점유를 실시간 추적하는 인디빌더 프로젝트입니다.",
+      },
+      {
+        id: "cn-juejin-live",
+        title_ko: "코드 모드 토큰 절감 36회 실측: 대용량 작업 84% 절감 분석",
+        original_title: "Code Mode 省不省 Token？实测 36 次",
+        platform_id: "juejin",
+        category: "dev",
+        canonical_url: "https://juejin.cn/post/7711297298265800730",
+        published_at: new Date(Date.now() - 3600_000 * 6).toISOString(),
+        importance_score: 27.28,
+        what_ko: "에이전트 툴 호출 방식에 따른 실제 토큰 비용 편차를 36회 벤치마크로 공개했습니다.",
+      },
+      {
+        id: "cn-qbitai-live",
+        title_ko: "Ant OceanBase, 호수-창고 통합 AI 데이터 플랫폼 OceanLake 오픈소스 공개",
+        original_title: "蚂蚁OceanBase发布湖库一体AI数据平台OceanLake",
+        platform_id: "qbitai",
+        category: "industry",
+        canonical_url: "https://qbitai.com/2026/11/512330.html",
+        published_at: new Date(Date.now() - 3600_000 * 7).toISOString(),
+        importance_score: 28.9,
+        what_ko: "실시간 벡터·정형 데이터 파이프라인을 하나로 통합한 AI 데이터 엔진을 오픈소스로 풀었습니다.",
+      },
+      {
+        id: "cn-synced-live",
+        title_ko: "DeepSeek 및 FlashAttention 프로덕션 AI 커널 최초 형식 검증 달성",
+        original_title: "全球首次，DeepSeek与FlashAttention生产级AI算子获得形式化验证",
+        platform_id: "jiqizhixin",
+        category: "research",
+        canonical_url: "https://syncedreview.com/2026/11/deepseek-flashattention-verify",
+        published_at: new Date(Date.now() - 3600_000 * 8).toISOString(),
+        importance_score: 24.32,
+        what_ko: "고속 어텐션 연산 커널의 수치 안정성을 수학적으로 검증한 연구 성과가 발표됐습니다.",
+      },
+      {
+        id: "cn-36kr-live",
+        title_ko: "GPT·Claude·Gemini 동일 무대 추론 벤치마크 최신 성적표 공개",
+        original_title: "GPT、Claude、Gemini同台竞技，最新成绩来了",
+        platform_id: "36kr-ai",
+        category: "industry",
+        canonical_url: "https://36kr.com/p/4083223643542401",
+        published_at: new Date(Date.now() - 3600_000 * 9).toISOString(),
+        importance_score: 28.79,
+        what_ko: "주요 프런티어 모델의 실전 코딩·문서 작업 정확도와 비용 효율을 정밀 비교했습니다.",
+      },
+    ];
+
+    const balanced = normalizeAiRadarFeed(
+      { signals: bulkPlanningSignals },
+      { items: cnFiveLiveItems }
+    );
+    expect(balanced).toHaveLength(220);
+
+    // Every single one of the 5 Chinese sources must survive the 220 cap via platform quota
+    const expectedMap: Record<string, string> = {
+      v2ex: "V2EX · 인디빌더",
+      juejin: "Juejin · 굴진",
+      qbitai: "QbitAI · 양자위",
+      jiqizhixin: "Synced · 기기지심",
+      "36kr-ai": "36Kr AI",
+    };
+
+    const builderA = buildersPayload.items[0];
+    for (const [pid, expectedLabel] of Object.entries(expectedMap)) {
+      const sig = balanced.find((s) => s.platformId === pid);
+      expect(sig, `Chinese source '${pid}' must survive balanced 220 quota`).toBeDefined();
+      expect(sig!.platformLabel).toBe(expectedLabel);
+
+      const tr = synthesizeTreatment({
+        builder: builderA,
+        radar: sig!,
+        track: "tech",
+        domainSlug: inferDomainSlugForPair(builderA, sig!),
+      });
+      expect(tr.title.endsWith("?")).toBe(true);
+      expect(tr.sampleB.platformLabel).toBe(expectedLabel);
+      expect(tr.fusionStoryKo.length).toBeGreaterThan(80);
+      expect(tr.mvpFeatures).toHaveLength(3);
+    }
+
+    // Merging with duplicate URLs must stay deduped and capped at 220
+    const reMerged = mergeAndBalanceRadarSignals(balanced, balanced, AI_RADAR_MAX_SIGNALS);
+    expect(reMerged).toHaveLength(220);
+    const uniqueUrls = new Set(reMerged.map((r) => r.canonicalUrl.toLowerCase().replace(/\/+$/, "")));
+    expect(uniqueUrls.size).toBe(220);
+
+    // Verify live synced public/data/ai-radar-signals.json reflects the 5 Chinese sources
+    expect(radarPayload.items.length).toBeLessThanOrEqual(220);
+    for (const [pid, expectedLabel] of Object.entries(expectedMap)) {
+      const syncedItems = radarPayload.items.filter((r) => r.platformId === pid);
+      expect(syncedItems.length, `Synced ai-radar-signals.json must include '${pid}'`).toBeGreaterThanOrEqual(1);
+      for (const item of syncedItems) {
+        expect(item.platformLabel).toBe(expectedLabel);
+      }
     }
   });
 });

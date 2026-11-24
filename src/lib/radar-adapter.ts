@@ -1,25 +1,68 @@
 import { isValidHttpUrl, sanitizeEditorialText, slugifyAscii } from "./text-clean";
 import type { AiRadarSignal, AiRadarUtilityTip } from "./types";
 
+export const AI_RADAR_MAX_SIGNALS = 220;
+
+const PRIORITY_CHINESE_PLATFORMS = new Set([
+  "v2ex",
+  "v2ex-ai",
+  "v2ex-cn",
+  "v2ex-create",
+  "juejin",
+  "juejin-ai",
+  "juejin-cn",
+  "qbitai",
+  "qbit-ai",
+  "liangziwei",
+  "jiqizhixin",
+  "synced",
+  "synced-ai",
+  "synced-review",
+  "syncedreview",
+  "36kr-ai",
+  "36kr",
+  "36kr-cn",
+  "36kr-news",
+  "36krai",
+]);
+
 /**
  * Known global & Chinese platform Korean/editorial badge labels.
  * Unknown future platform_id values are NOT filtered out; they are
  * automatically formatted via formatRadarPlatformLabel().
  */
 const PLATFORM_LABEL_MAP: Record<string, string> = {
-  // Chinese AI / Tech / Social Platforms
+  // AI Radar 5 Core Chinese Sources (exact platform_ids + variant keys)
+  v2ex: "V2EX · 인디빌더",
+  "v2ex-ai": "V2EX · 인디빌더",
+  "v2ex-cn": "V2EX · 인디빌더",
+  "v2ex-create": "V2EX · 인디빌더",
+  juejin: "Juejin · 굴진",
+  "juejin-ai": "Juejin · 굴진",
+  "juejin-cn": "Juejin · 굴진",
+  qbitai: "QbitAI · 양자위",
+  "qbit-ai": "QbitAI · 양자위",
+  liangziwei: "QbitAI · 양자위",
+  jiqizhixin: "Synced · 기기지심",
+  synced: "Synced · 기기지심",
+  "synced-ai": "Synced · 기기지심",
+  "synced-review": "Synced · 기기지심",
+  syncedreview: "Synced · 기기지심",
+  "36kr-ai": "36Kr AI",
+  "36kr": "36Kr AI",
+  "36kr-cn": "36Kr AI",
+  "36kr-news": "36Kr AI",
+  "36krai": "36Kr AI",
+
+  // Other Chinese AI / Tech / Social Platforms
   weibo: "웨이보 (Weibo)",
   xiaohongshu: "샤오홍슈 (小红书)",
   xhs: "샤오홍슈 (小红书)",
   rednote: "샤오홍슈 (小红书)",
   bilibili: "비리비리 (Bilibili)",
   bili: "비리비리 (Bilibili)",
-  "36kr": "36Kr (36氪)",
   zhihu: "즈후 (知乎)",
   ithome: "ITHome (IT之家)",
-  qbitai: "량쯔웨이 (量子位)",
-  jiqizhixin: "지치즈신 (机器之心)",
-  synced: "지치즈신 (机器之心)",
   modelscope: "모델스코프 (ModelScope)",
   gitee: "Gitee",
   wechat: "위챗 (WeChat)",
@@ -27,14 +70,12 @@ const PLATFORM_LABEL_MAP: Record<string, string> = {
   douyin: "도우인 (Douyin)",
   baidu: "바이두 (Baidu)",
   csdn: "CSDN",
-  juejin: "줴진 (掘金)",
   oschina: "OSChina",
-  v2ex: "V2EX",
   sspai: "소수파 (少数派)",
   huxiu: "후슈 (虎嗅)",
   geekpark: "지커공원 (极客公园)",
 
-  // Global AI / Tech / Research / Community Platforms
+  // Global / KR / JP AI / Tech / Research / Community Platforms
   x: "X",
   twitter: "X",
   github: "GitHub",
@@ -54,10 +95,13 @@ const PLATFORM_LABEL_MAP: Record<string, string> = {
   meta: "Meta AI",
   nvidia: "NVIDIA",
   microsoft: "Microsoft AI",
+  "microsoft-research": "Microsoft Research",
   "the-verge-ai": "The Verge AI",
   "the-verge": "The Verge",
   techcrunch: "TechCrunch",
+  "techcrunch-ai": "TechCrunch AI",
   "mit-tech-review": "MIT Tech Review",
+  "mit-tr-korea": "MIT TR Korea",
   venturebeat: "VentureBeat",
   wired: "WIRED",
   "ars-technica": "Ars Technica",
@@ -68,6 +112,20 @@ const PLATFORM_LABEL_MAP: Record<string, string> = {
   youtube: "YouTube",
   threads: "Threads",
   bluesky: "Bluesky",
+  geeknews: "GeekNews",
+  aitimes: "AI타임스",
+  "pytorch-kr": "PyTorch KR",
+  "ai-korea-community": "AI Korea",
+  gpters: "GPTers",
+  "itmedia-aiplus": "ITmedia AI+",
+  "hatena-bookmark": "Hatena Bookmark",
+  qiita: "Qiita",
+  zenn: "Zenn",
+  "latent-space": "Latent Space",
+  "one-useful-thing": "One Useful Thing",
+  interconnects: "Interconnects",
+  "ahead-of-ai": "Ahead of AI",
+  "import-ai": "Import AI",
 };
 
 function quickHash(input: string): string {
@@ -367,6 +425,118 @@ function extractFeedArray(payload: unknown): unknown[] {
   return [];
 }
 
+function signalTimestampMs(sig: AiRadarSignal): number {
+  const pub = Date.parse(sig.publishedAt || "");
+  if (Number.isFinite(pub)) return pub;
+  const fetched = Date.parse(sig.fetchedAt || "");
+  return Number.isFinite(fetched) ? fetched : 0;
+}
+
+function compareRadarFreshness(a: AiRadarSignal, b: AiRadarSignal): number {
+  const dt = signalTimestampMs(b) - signalTimestampMs(a);
+  if (dt !== 0) return dt;
+  return (b.importanceScore || 0) - (a.importanceScore || 0);
+}
+
+/**
+ * Deduplicates by id & canonicalUrl and selects up to `maxCount` (default 220)
+ * signals while enforcing a per-platform minimum quota so active platforms —
+ * especially the 5 Chinese AI/builder sources (V2EX, Juejin, QbitAI, Synced,
+ * 36Kr AI) — are never crowded out by high-volume feeds.
+ */
+export function selectBalancedRadarSignals(
+  signals: AiRadarSignal[],
+  maxCount = AI_RADAR_MAX_SIGNALS
+): AiRadarSignal[] {
+  const deduped: AiRadarSignal[] = [];
+  const seenIds = new Set<string>();
+  const seenUrls = new Set<string>();
+
+  for (const raw of signals) {
+    if (!raw || !isValidHttpUrl(raw.canonicalUrl)) continue;
+    const normUrl = raw.canonicalUrl.toLowerCase().replace(/\/+$/, "");
+    if (seenIds.has(raw.id) || seenUrls.has(normUrl)) continue;
+    seenIds.add(raw.id);
+    seenUrls.add(normUrl);
+    deduped.push({
+      ...raw,
+      platformLabel: formatRadarPlatformLabel(raw.platformId, raw.canonicalUrl),
+    });
+  }
+
+  if (deduped.length <= maxCount) {
+    return deduped;
+  }
+
+  const buckets = new Map<string, AiRadarSignal[]>();
+  for (const sig of deduped) {
+    const pid = (sig.platformId || "ai-radar").toLowerCase().trim() || "ai-radar";
+    const list = buckets.get(pid);
+    if (list) list.push(sig);
+    else buckets.set(pid, [sig]);
+  }
+
+  for (const list of buckets.values()) {
+    list.sort(compareRadarFreshness);
+  }
+
+  const platformKeys = Array.from(buckets.keys()).sort((a, b) => {
+    const aCn = PRIORITY_CHINESE_PLATFORMS.has(a) ? 1 : 0;
+    const bCn = PRIORITY_CHINESE_PLATFORMS.has(b) ? 1 : 0;
+    if (aCn !== bCn) return bCn - aCn;
+    const aTop = buckets.get(a)?.[0];
+    const bTop = buckets.get(b)?.[0];
+    if (aTop && bTop) return compareRadarFreshness(aTop, bTop);
+    return a.localeCompare(b);
+  });
+
+  const baseMinQuota = Math.max(2, Math.min(6, Math.floor(maxCount / Math.max(platformKeys.length, 1))));
+  const quotaFor = (pid: string) =>
+    PRIORITY_CHINESE_PLATFORMS.has(pid) ? Math.max(baseMinQuota, 8) : baseMinQuota;
+  const maxQuota = Math.max(baseMinQuota, 8);
+
+  const selected: AiRadarSignal[] = [];
+  const selectedIds = new Set<string>();
+
+  // Pass 1: Round-robin minimum quota per active platform_id
+  for (let round = 0; round < maxQuota && selected.length < maxCount; round += 1) {
+    for (const pid of platformKeys) {
+      if (selected.length >= maxCount) break;
+      if (round >= quotaFor(pid)) continue;
+      const candidate = buckets.get(pid)?.[round];
+      if (!candidate || selectedIds.has(candidate.id)) continue;
+      selected.push(candidate);
+      selectedIds.add(candidate.id);
+    }
+  }
+
+  // Pass 2: Fill remaining capacity up to maxCount by recency & importance
+  if (selected.length < maxCount) {
+    const remainder = deduped
+      .filter((s) => !selectedIds.has(s.id))
+      .sort(compareRadarFreshness);
+    for (const sig of remainder) {
+      if (selected.length >= maxCount) break;
+      selected.push(sig);
+      selectedIds.add(sig.id);
+    }
+  }
+
+  return selected.sort(compareRadarFreshness);
+}
+
+/**
+ * Merges fresh primary signals with preserved secondary snapshots (deduped by id & URL)
+ * and enforces the balanced 220-signal quota cap.
+ */
+export function mergeAndBalanceRadarSignals(
+  primary: AiRadarSignal[],
+  secondary: AiRadarSignal[] = [],
+  maxCount = AI_RADAR_MAX_SIGNALS
+): AiRadarSignal[] {
+  return selectBalancedRadarSignals([...primary, ...secondary], maxCount);
+}
+
 /**
  * Merges planning-feed.json + live-feed.json + existing local snapshots without any
  * hardcoded platform or category restrictions, so future Chinese/global AI Radar sources
@@ -375,7 +545,8 @@ function extractFeedArray(payload: unknown): unknown[] {
 export function normalizeAiRadarFeed(
   planningPayload: unknown,
   livePayload?: unknown,
-  existingSignals: AiRadarSignal[] = []
+  existingSignals: AiRadarSignal[] = [],
+  maxCount = AI_RADAR_MAX_SIGNALS
 ): AiRadarSignal[] {
   const existingById = new Map(existingSignals.map((s) => [s.id, s]));
   const liveItems = extractFeedArray(livePayload);
@@ -419,11 +590,8 @@ export function normalizeAiRadarFeed(
 
   // 3) Preserve existing snapshots if remote returned partial or empty
   if (out.length === 0 && existingSignals.length > 0) {
-    return existingSignals.map((s) => ({
-      ...s,
-      platformLabel: s.platformLabel || formatRadarPlatformLabel(s.platformId, s.canonicalUrl),
-    }));
+    return selectBalancedRadarSignals(existingSignals, maxCount);
   }
 
-  return out;
+  return selectBalancedRadarSignals(out, maxCount);
 }

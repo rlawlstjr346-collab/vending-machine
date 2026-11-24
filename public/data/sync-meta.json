@@ -1,14 +1,14 @@
 {
-  "syncedAt": "2026-11-24T03:20:35.309Z",
+  "syncedAt": "2026-11-24T04:25:28.338Z",
   "counts": {
-    "aiRadar": 100,
+    "aiRadar": 153,
     "cultureTotal": 151,
     "cultureDomains": 19,
-    "builderTotal": 182,
+    "builderTotal": 185,
     "bySource": {
       "github_trending": 50,
       "trustmrr": 22,
-      "show_hn": 68,
+      "show_hn": 71,
       "product_hunt": 20,
       "uneed": 22
     },
@@ -34,7 +34,7 @@
       "Kottke.org": 8
     },
     "verifiedRevenueCount": 22,
-    "verifiedMediaCount": 80,
+    "verifiedMediaCount": 86,
     "verifiedCultureMediaCount": 125,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
@@ -46,10 +46,10 @@
     {
       "id": "ai_radar",
       "label": "AI Radar (GitHub Raw)",
-      "status": 304,
-      "count": 100,
-      "cached304": true,
-      "note": "ETag 304 cached"
+      "status": 200,
+      "count": 153,
+      "cached304": false,
+      "note": "merged remote(100/100) + local(100/100) -> balanced 153/220, thumbs(7)"
     },
     {
       "id": "github_trending",
@@ -71,7 +71,7 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 68,
+      "count": 71,
       "cached304": false,
       "note": "68 live Show HN items"
     },
@@ -110,8 +110,8 @@
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 80,
-      "note": "15 newly enriched via OG/README"
+      "count": 86,
+      "note": "6 newly enriched via OG/README"
     },
     {
       "id": "culture_dazed",
@@ -236,10 +236,10 @@
     {
       "id": "culture_stereogum",
       "label": "Stereogum (음악 · 인디 문화)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_dezeen",

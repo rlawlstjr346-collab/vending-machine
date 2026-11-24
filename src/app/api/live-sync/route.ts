@@ -6,7 +6,11 @@ import {
   loadSyncMeta,
 } from "@/lib/data-loader";
 import { MECHANISM_MAP } from "@/lib/domains";
-import { normalizeAiRadarFeed } from "@/lib/radar-adapter";
+import {
+  AI_RADAR_MAX_SIGNALS,
+  mergeAndBalanceRadarSignals,
+  normalizeAiRadarFeed,
+} from "@/lib/radar-adapter";
 import { buildTechDigestKo, classifyMechanism } from "@/lib/synthesis-engine";
 import { isValidHttpUrl, sanitizeEditorialText, slugifyAscii } from "@/lib/text-clean";
 import type { AiRadarSignal, BuilderSignal } from "@/lib/types";
@@ -29,7 +33,11 @@ export async function GET() {
   const localCultures = loadCultureSignals();
   const syncMeta = loadSyncMeta();
 
-  let mergedRadars: AiRadarSignal[] = normalizeAiRadarFeed(null, null, localRadars);
+  let mergedRadars: AiRadarSignal[] = mergeAndBalanceRadarSignals(
+    localRadars,
+    [],
+    AI_RADAR_MAX_SIGNALS
+  );
   let mergedBuilders: BuilderSignal[] = [...localBuilders];
   let liveRadarFetched = false;
   let liveShowHnAdded = 0;
@@ -52,16 +60,20 @@ export async function GET() {
     const liveJson = liveRes.ok ? await liveRes.json().catch(() => null) : null;
 
     if (planJson || liveJson) {
-      const normalized = normalizeAiRadarFeed(planJson, liveJson, localRadars);
+      const normalized = normalizeAiRadarFeed(
+        planJson,
+        liveJson,
+        localRadars,
+        AI_RADAR_MAX_SIGNALS
+      );
       if (normalized.length > 0) {
-        // Merge newly arrived remote signals with any preserved local signals
-        const seenUrls = new Set(
-          normalized.map((r) => r.canonicalUrl.toLowerCase().replace(/\/+$/, ""))
+        // Merge remote planning + live signals with preserved local snapshot using
+        // the balanced 220-signal per-platform quota selector (zero URL dupes).
+        mergedRadars = mergeAndBalanceRadarSignals(
+          normalized,
+          localRadars,
+          AI_RADAR_MAX_SIGNALS
         );
-        const preservedLocal = localRadars.filter(
-          (r) => !seenUrls.has(r.canonicalUrl.toLowerCase().replace(/\/+$/, ""))
-        );
-        mergedRadars = [...normalized, ...preservedLocal];
         liveRadarFetched = true;
       }
     }
