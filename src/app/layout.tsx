@@ -7,11 +7,11 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "BENCH. — 해외 신상 프로덕트 × AI 기술 비주얼 기획 덱",
-    template: "%s | BENCH.",
+    default: "DISPENSER — 글로벌 오픈소스 × 실시간 AI 이슈 기획 디스펜서",
+    template: "%s | DISPENSER",
   },
   description:
-    "Show HN, Product Hunt, TrustMRR, Uneed의 해외 검증 프로덕트와 AI Radar 최신 기술 시그널을 1화면 1카드 비주얼 블루프린트로 탐색하는 서비스 기획 덱.",
+    "GitHub 급상승 오픈소스, Reddit, Show HN, Product Hunt, TrustMRR, Uneed의 실물 기술과 AI Radar 실시간 이슈를 결합해 바로 만들 수 있는 웹 서비스 기획안을 한 장씩 배출하는 DISPENSER.",
   alternates: {
     canonical: siteUrl,
     types: {
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: siteUrl,
-    siteName: "BENCH.",
-    title: "BENCH. — 해외 신상 프로덕트 × AI 기술 비주얼 기획 덱",
+    siteName: "DISPENSER",
+    title: "DISPENSER — 글로벌 오픈소스 × 실시간 AI 이슈 기획 디스펜서",
     description:
-      "해외에서 반응이 검증된 서비스 아이디어와 최신 AI 기술을 조합해 1주일 안에 만들 수 있는 웹 서비스 화면과 기획안을 한 장씩 탐색하세요.",
+      "실제 시연 영상과 오픈소스 기술, 최신 AI 이슈를 교차 조합해 1주일 안에 구현할 웹 서비스 기획안을 무작위로 탐색하세요.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BENCH. — 해외 신상 프로덕트 × AI 기술 비주얼 기획 덱",
+    title: "DISPENSER — 글로벌 오픈소스 × 실시간 AI 이슈 기획 디스펜서",
     description:
-      "해외 검증 프로덕트와 AI Radar 최신 기술로 실행 가능한 웹 서비스 기획안을 1장씩 바로 탐색하세요.",
+      "GitHub 오픈소스·해외 신상 프로덕트와 AI Radar 실시간 이슈로 실행 가능한 웹 기획안을 한 장씩 탐색하세요.",
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || undefined,

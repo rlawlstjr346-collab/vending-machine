@@ -4,86 +4,17 @@ interface IconProps {
   className?: string;
 }
 
-export function BenchLogo({ className = "h-6 w-auto" }: IconProps) {
+export function DispenserLogo({ className = "" }: IconProps) {
   return (
-    <span className={`inline-flex items-baseline gap-1 select-none ${className}`}>
-      <span className="font-sans text-[21px] font-extrabold tracking-[-0.03em] text-[#0F172A] leading-none">
-        BENCH
+    <span className={`inline-flex items-center gap-2 select-none ${className}`}>
+      <span className="font-sans text-[19px] font-extrabold tracking-[0.06em] text-[#0F172A] leading-none sm:text-[21px]">
+        DISPENSER
       </span>
       <span
         className="inline-block h-2 w-2 rounded-full bg-[#2563EB]"
         aria-hidden="true"
       />
     </span>
-  );
-}
-
-export function WorkbenchIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <rect x="2" y="2.5" width="12" height="11" rx="2" stroke="currentColor" strokeWidth="1.5" />
-      <line x1="6.5" y1="2.5" x2="6.5" y2="13.5" stroke="currentColor" strokeWidth="1.5" />
-      <line x1="6.5" y1="7.5" x2="14" y2="7.5" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-export function RadarIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="8" cy="8" r="2.25" stroke="currentColor" strokeWidth="1.5" />
-      <line x1="8" y1="8" x2="12.25" y2="3.75" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-export function ChipIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <rect x="4" y="4" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M6.5 1.75V4M9.5 1.75V4M6.5 12V14.25M9.5 12V14.25M1.75 6.5H4M1.75 9.5H4M12 6.5H14.25M12 9.5H14.25" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-export function BookmarkIcon({ className = "w-4 h-4", filled = false }: IconProps & { filled?: boolean }) {
-  return (
-    <svg viewBox="0 0 16 16" fill={filled ? "currentColor" : "none"} className={className} aria-hidden="true">
-      <path d="M3.5 2.5H12.5V13.75L8 10.6L3.5 13.75V2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-export function ShuffleIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <path d="M2 4.5H5L10.5 11.5H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M2 11.5H5L10.5 4.5H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M12 2.5L14 4.5L12 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M12 9.5L14 11.5L12 13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-export function BranchIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <circle cx="4" cy="3.5" r="1.75" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="4" cy="12.5" r="1.75" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="12" cy="8" r="1.75" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M4 5.25V10.75M4 5.25C4 7.5 6.5 8 10.25 8" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-export function LayersIcon({ className = "w-4 h-4" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <path d="M8 2L14 5.5L8 9L2 5.5L8 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M2 8.75L8 12.25L14 8.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M2 11.75L8 15L14 11.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }
 
@@ -114,7 +45,7 @@ export function ExternalLinkIcon({ className = "w-3.5 h-3.5" }: IconProps) {
   );
 }
 
-export function ArrowLeftIcon({ className = "w-3.5 h-3.5" }: IconProps) {
+export function ArrowLeftIcon({ className = "w-4 h-4" }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
       <line x1="13.5" y1="8" x2="3" y2="8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -123,7 +54,7 @@ export function ArrowLeftIcon({ className = "w-3.5 h-3.5" }: IconProps) {
   );
 }
 
-export function ArrowRightIcon({ className = "w-3.5 h-3.5" }: IconProps) {
+export function ArrowRightIcon({ className = "w-4 h-4" }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
       <line x1="2.5" y1="8" x2="13" y2="8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -132,11 +63,11 @@ export function ArrowRightIcon({ className = "w-3.5 h-3.5" }: IconProps) {
   );
 }
 
-export function RefreshIcon({ className = "w-3.5 h-3.5" }: IconProps) {
+export function RefreshIcon({ className = "w-4 h-4" }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <path d="M13 8A5 5 0 1 1 11.5 4.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M11.5 2V5H8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M13 8A5 5 0 1 1 11.5 4.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M11.5 2V5H8.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

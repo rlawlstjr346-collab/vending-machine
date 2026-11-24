@@ -19,7 +19,7 @@ export async function GET() {
     .map((t) => {
       const link = `${siteUrl}/treatment/${t.id}`;
       const pubDate = new Date(t.createdAt).toUTCString();
-      const desc = `${t.oneLineHook} | 해외 사례: ${t.sampleA.name} (${t.sampleA.shortMetricLabel}) | AI 기술: ${t.sampleB.titleKo}`;
+      const desc = `${t.oneLineHook} | 원본 기술: ${t.sampleA.name} (${t.sampleA.shortMetricLabel}) | AI 이슈: ${t.sampleB.titleKo}`;
       return `    <item>
       <title>${escapeXml(t.title)}</title>
       <link>${escapeXml(link)}</link>
@@ -34,10 +34,10 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BENCH. — 해외 신상 프로덕트 × AI 기술 기획 레이더</title>
+    <title>DISPENSER — 글로벌 오픈소스 × 실시간 AI 이슈 기획 디스펜서</title>
     <link>${escapeXml(siteUrl)}</link>
     <atom:link href="${escapeXml(`${siteUrl}/rss.xml`)}" rel="self" type="application/rss+xml" />
-    <description>해외 검증 프로덕트와 최신 AI 기술을 조합한 실행 가능한 웹 서비스 기획안 피드</description>
+    <description>GitHub 오픈소스, 해외 신상 프로덕트와 최신 AI 이슈를 결합한 실행 가능한 웹 서비스 기획안 피드</description>
     <language>ko</language>
     <lastBuildDate>${buildDate}</lastBuildDate>
 ${itemsXml}

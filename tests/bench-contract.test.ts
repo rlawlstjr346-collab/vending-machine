@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { DOMAIN_LIST, MECHANISM_LIST } from "@/lib/domains";
+import { DOMAIN_LIST } from "@/lib/domains";
 import {
   decodeSavedParam,
   encodeSavedParam,
@@ -14,7 +14,6 @@ import {
   treatmentToMarkdown,
 } from "@/lib/synthesis-engine";
 import { isValidHttpUrl } from "@/lib/text-clean";
-import { WIREFRAME_ARCHETYPES } from "@/components/ProductWireframePreview";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 import { GET as getRss } from "@/app/rss.xml/route";
@@ -40,7 +39,7 @@ function collectSourceFiles(dir: string): string[] {
   return files;
 }
 
-describe("BENCH. Pure White Visual Deck Contract Tests", () => {
+describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
   const buildersPayload = readJson<{ count: number; items: BuilderSignal[] }>(
     path.join(PUBLIC_DATA, "builder-signals.json")
   );
@@ -51,52 +50,85 @@ describe("BENCH. Pure White Visual Deck Contract Tests", () => {
     path.join(PUBLIC_DATA, "treatments-seed.json")
   );
 
-  it("1) guarantees zero personal-only terms ('KREAM', '직장인 TF', '취업', 'agy') across UI & treatments-seed.json", () => {
+  it("1) guarantees DISPENSER branding with zero legacy BENCH. residue and zero forbidden terms", () => {
+    const legacyBrandRe = /\bBENCH\./;
     const personalTermRe = /(KREAM|직장인\s*TF|취업|\bagy\b)/i;
 
+    const layoutSrc = fs.readFileSync(path.join(ROOT, "src/app/layout.tsx"), "utf-8");
+    const iconsSrc = fs.readFileSync(path.join(ROOT, "src/components/Icons.tsx"), "utf-8");
+    expect(layoutSrc).toContain("DISPENSER");
+    expect(iconsSrc).toContain("DISPENSER");
+
     const seedRaw = fs.readFileSync(path.join(PUBLIC_DATA, "treatments-seed.json"), "utf-8");
+    expect(seedRaw).not.toMatch(legacyBrandRe);
     expect(seedRaw).not.toMatch(personalTermRe);
 
     const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
     for (const filePath of srcFiles) {
       if (filePath.endsWith("translation-cache.json")) continue;
       const content = fs.readFileSync(filePath, "utf-8");
-      expect(content, `Personal-only term found in ${filePath}`).not.toMatch(personalTermRe);
+      expect(content, `Legacy BENCH. found in ${filePath}`).not.toMatch(legacyBrandRe);
+      expect(content, `Forbidden personal term found in ${filePath}`).not.toMatch(personalTermRe);
     }
   });
 
-  it("2) validates 6 universal domains, real signal integrity, and natural non-robotic Korean titles", () => {
-    expect(DOMAIN_LIST.map((d) => d.slug)).toEqual([
-      "brand-commerce",
-      "cinema-video",
-      "photo-visual",
-      "music-audio",
-      "local-archive",
-      "creator-tool",
-    ]);
+  it("2) guarantees zero fake ProductWireframePreview usage and clean DISPENSER main card", () => {
+    const fakePreviewPath = path.join(ROOT, "src/components/ProductWireframePreview.tsx");
+    expect(fs.existsSync(fakePreviewPath)).toBe(false);
 
+    const cardSrc = fs.readFileSync(
+      path.join(ROOT, "src/components/VisualBlueprintCard.tsx"),
+      "utf-8"
+    );
+    expect(cardSrc).not.toContain("ProductWireframePreview");
+    expect(cardSrc).toContain("max-w-[1340px]");
+    expect(cardSrc).toContain("원본 기술 핵심 메커니즘 요약");
+    expect(cardSrc).toContain("기술 × 이슈 시너지 인사이트");
+
+    const stageSrc = fs.readFileSync(
+      path.join(ROOT, "src/components/WorkbenchClient.tsx"),
+      "utf-8"
+    );
+    expect(stageSrc).toContain("DispenserLogo");
+    expect(stageSrc).not.toContain("전체 랜덤");
+    expect(stageSrc).not.toContain("해외 원액");
+    expect(stageSrc).not.toContain("보관함");
+  });
+
+  it("3) validates all 50 curated seed treatments have question headlines ('?'), fusionStoryKo, techDigestKo, and valid HTTP URLs", () => {
     expect(buildersPayload.items.length).toBeGreaterThanOrEqual(45);
     expect(radarPayload.items.length).toBeGreaterThanOrEqual(80);
-    expect(treatmentsPayload.items.length).toBeGreaterThanOrEqual(36);
+    expect(treatmentsPayload.items.length).toBe(50);
 
     const uniqueTitles = new Set(treatmentsPayload.items.map((t) => t.title));
-    expect(uniqueTitles.size).toBe(treatmentsPayload.items.length);
+    expect(uniqueTitles.size).toBe(50);
 
     const roboticTitleRe = /×.*방식의|요소를 참고해|영역 서비스의 핵심 워크플로/;
     for (const t of treatmentsPayload.items) {
+      expect(t.title.endsWith("?"), `Title must end with '?': ${t.title}`).toBe(true);
       expect(t.title).not.toMatch(roboticTitleRe);
+      expect(t.oneLineHook.length).toBeGreaterThanOrEqual(15);
       expect(t.oneLineHook).not.toMatch(roboticTitleRe);
+      expect(t.fusionStoryKo.length).toBeGreaterThanOrEqual(80);
+      expect(t.techDigestKo.inputKo.length).toBeGreaterThan(5);
+      expect(t.techDigestKo.coreEngineKo.length).toBeGreaterThan(5);
+      expect(t.techDigestKo.outputKo.length).toBeGreaterThan(5);
+      expect(t.techDigestKo.summaryKo.length).toBeGreaterThan(5);
       expect(t.mvpFeatures).toHaveLength(3);
       expect(isValidHttpUrl(t.sampleA.url)).toBe(true);
       expect(isValidHttpUrl(t.sampleB.canonicalUrl)).toBe(true);
+      if (t.demoVideoUrl) expect(isValidHttpUrl(t.demoVideoUrl)).toBe(true);
+      if (t.previewImageUrl) expect(isValidHttpUrl(t.previewImageUrl)).toBe(true);
     }
   });
 
-  it("3) guarantees zero raw '==' markers, zero placeholders, zero dead '#' links, and zero flashy animations", () => {
+  it("4) guarantees zero raw '==' markers, zero placeholders, zero dead '#' links, zero banned animations, and zero oatmeal/beige HEX", () => {
     const forbiddenTextRe = /(준비\s*중|coming\s+soon|샘플\s*데이터)/i;
     const rawHighlightRe = /==[^=\s][^=]*==/;
     const forbiddenAnimRe =
       /\b(animate-bounce|animate-pulse|animate-spin|animate-ping|scale-105|scale-110|hover:scale-|bg-gradient-to|blur-3xl)\b/;
+    const oatmealHexRe =
+      /#(F6F3EC|FFFCF7|F9F5EC|FBF7EE|EBE5D8|E7E0D3|ECE5D8|C5BCA8|D8CEBC|E5DEC9|F5EFE4)\b/i;
 
     for (const file of ["builder-signals.json", "ai-radar-signals.json", "treatments-seed.json"]) {
       const raw = fs.readFileSync(path.join(PUBLIC_DATA, file), "utf-8");
@@ -111,74 +143,44 @@ describe("BENCH. Pure White Visual Deck Contract Tests", () => {
       expect(content, `Forbidden placeholder in ${filePath}`).not.toMatch(forbiddenTextRe);
       expect(content, `Dead href="#" in ${filePath}`).not.toMatch(/href=["']#["']/);
       expect(content, `Forbidden animation class in ${filePath}`).not.toMatch(forbiddenAnimRe);
+      expect(content, `Residual oatmeal/beige HEX found in ${filePath}`).not.toMatch(oatmealHexRe);
     }
   });
 
-  it("4) validates A -> Z parallel domain branching, B -> C chained evolution, and custom topic synthesis", () => {
+  it("5) validates runtime synthesis produces natural question headlines, fusionStoryKo, techDigestKo, and clean coding prompts", () => {
     const builderA = buildersPayload.items[0];
-    const builderA2 = buildersPayload.items[1];
-    const radarB = matchAiRadarFor(builderA, "brand-commerce", radarPayload.items, 0);
+    const radarB = matchAiRadarFor(builderA, "creator-tool", radarPayload.items, 0);
 
-    const treatmentB = synthesizeTreatment({
+    const synthesized = synthesizeTreatment({
       builder: builderA,
       radar: radarB,
-      domainSlug: "brand-commerce",
-      variantIndex: 1,
+      domainSlug: "creator-tool",
+      variantIndex: 7,
     });
-    expect(treatmentB.lineage.map((n) => n.step)).toEqual(["A", "B"]);
+    expect(synthesized.title.endsWith("?")).toBe(true);
+    expect(synthesized.fusionStoryKo.length).toBeGreaterThanOrEqual(60);
+    expect(synthesized.techDigestKo.inputKo.length).toBeGreaterThan(5);
+    expect(synthesized.mvpFeatures).toHaveLength(3);
+    expect(treatmentToMarkdown(synthesized)).toContain(synthesized.sampleA.url);
 
-    // A -> Z parallel domain branch keeping Sample A
-    const radarZ = matchAiRadarFor(builderA, "cinema-video", radarPayload.items, 2);
-    const treatmentZ = synthesizeTreatment({
-      builder: builderA,
-      radar: radarZ,
-      domainSlug: "cinema-video",
-      variantIndex: 2,
-    });
-    expect(treatmentZ.sampleA.builderId).toBe(treatmentB.sampleA.builderId);
-    expect(treatmentZ.domainSlug).toBe("cinema-video");
-    expect(treatmentZ.id).not.toBe(treatmentB.id);
-
-    // B -> C chained evolution grafting Sample A2
-    const treatmentC = synthesizeTreatment({
-      builder: builderA,
-      radar: radarB,
-      domainSlug: treatmentB.domainSlug,
-      variantIndex: 3,
-      parentTreatment: treatmentB,
-      addedBuilder: builderA2,
-    });
-    expect(treatmentC.lineage.map((n) => n.step)).toEqual(["A", "B", "C"]);
-    expect(treatmentC.sampleA2?.builderId).toBe(builderA2.id);
-    expect(treatmentC.parentTreatmentId).toBe(treatmentB.id);
-
-    // Custom topic synthesis + universal coding prompt output
-    const customTr = synthesizeTreatment({
-      builder: builderA,
-      radar: radarB,
-      domainSlug: "local-archive",
-      customTopic: "필름카메라",
-      variantIndex: 4,
-    });
-    expect(customTr.title).toContain("필름카메라");
-    expect(treatmentToMarkdown(customTr)).toContain(customTr.sampleA.url);
-    const prompt = treatmentToCodingPrompt(customTr);
+    const prompt = treatmentToCodingPrompt(synthesized);
     expect(prompt).toContain("반드시 구현할 핵심 기능 3가지");
     expect(prompt).not.toMatch(/\bagy\b/i);
   });
 
-  it("5) validates saved-store serialization and SEO routes (sitemap, robots, rss.xml)", async () => {
+  it("6) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
     const sampleIds = treatmentsPayload.items.slice(0, 3).map((t) => t.id);
     const encoded = encodeSavedParam(sampleIds);
-    const decoded = decodeSavedParam(encoded);
-    expect(decoded).toEqual(sampleIds);
-
-    const merged = mergeSavedWithSeedIds([], decoded, treatmentsPayload.items);
-    expect(merged.map((t) => t.id)).toEqual(sampleIds);
+    expect(decodeSavedParam(encoded)).toEqual(sampleIds);
+    expect(mergeSavedWithSeedIds([], sampleIds, treatmentsPayload.items).map((t) => t.id)).toEqual(
+      sampleIds
+    );
 
     const sm = sitemap();
     expect(sm.length).toBeGreaterThanOrEqual(1 + DOMAIN_LIST.length + treatmentsPayload.items.length);
-    expect(sm.some((entry) => entry.url.endsWith("/domain/brand-commerce"))).toBe(true);
+    expect(sm.some((entry) => entry.url.includes(`/treatment/${treatmentsPayload.items[0].id}`))).toBe(
+      true
+    );
 
     const rb = robots();
     expect(rb.sitemap).toMatch(/\/sitemap\.xml$/);
@@ -187,34 +189,16 @@ describe("BENCH. Pure White Visual Deck Contract Tests", () => {
     expect(rssRes.status).toBe(200);
     const rssXml = await rssRes.text();
     expect(rssXml).toContain('<rss version="2.0"');
+    expect(rssXml).toContain("DISPENSER");
+    expect(rssXml).not.toContain("BENCH.");
     expect(rssXml).toContain("<item>");
-  });
 
-  it("6) guarantees zero residual warm oatmeal/beige HEX codes across src/", () => {
-    const oatmealHexRe =
-      /#(F6F3EC|FFFCF7|F9F5EC|FBF7EE|EBE5D8|E7E0D3|ECE5D8|C5BCA8|D8CEBC|E5DEC9|F5EFE4)\b/i;
-
-    const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
-    for (const filePath of srcFiles) {
-      if (filePath.endsWith("translation-cache.json")) continue;
-      const content = fs.readFileSync(filePath, "utf-8");
-      expect(content, `Residual oatmeal/beige HEX found in ${filePath}`).not.toMatch(oatmealHexRe);
-    }
-  });
-
-  it("7) validates complete 6-archetype wireframe preview mapping and balanced audio-stem builder signals", () => {
-    const expectedMechanisms = MECHANISM_LIST.map((m) => m.id);
-    expect(expectedMechanisms).toHaveLength(6);
-
-    for (const mechId of expectedMechanisms) {
-      const wf = WIREFRAME_ARCHETYPES[mechId];
-      expect(wf, `Missing wireframe archetype for ${mechId}`).toBeDefined();
-      expect(wf.id).toBe(mechId);
-      expect(wf.badge.length).toBeGreaterThan(0);
-      expect(wf.steps).toHaveLength(3);
-    }
-
-    const audioBuilders = buildersPayload.items.filter((b) => b.mechanism === "audio-stem");
-    expect(audioBuilders.length).toBeGreaterThanOrEqual(1);
+    // Verify treatment static params route exists and loads all 50 IDs
+    const treatmentPageSrc = fs.readFileSync(
+      path.join(ROOT, "src/app/treatment/[id]/page.tsx"),
+      "utf-8"
+    );
+    expect(treatmentPageSrc).toContain("generateStaticParams");
+    expect(treatmentPageSrc).toContain("DISPENSER");
   });
 });

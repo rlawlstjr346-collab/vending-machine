@@ -1,44 +1,74 @@
 #!/usr/bin/env node
 /**
- * BENCH. Real-Data Signal Synchronization Pipeline
- * - AI Radar (planning-feed.json + live-feed.json joined by id, raw `==` stripped)
- * - Overseas 0-won builder sources: Show HN Algolia, Product Hunt Atom, TrustMRR SSR, Uneed SSR, X oEmbed
- * - IP-ban 0% shield: standard User-Agent, ETag/If-Modified-Since (304 cache),
- *   per-domain 1500~2500ms jitter, 429/403 Circuit Breaker cooldown
- * - 0-won Korean translation with persistent cache (src/data/translation-cache.json)
- * - Generates 40 distinct, human-crafted Korean seed treatments from src/data/concept-blueprints.json
+ * DISPENSER Real-Data Signal & Demo Media Synchronization Pipeline
+ *
+ * Sources:
+ *  1) AI Radar (planning-feed.json + live-feed.json joined by id, with thumbnail_url)
+ *  2) GitHub Trending Recent Open-Source Repos (Search API + README demo video/GIF/image extraction)
+ *  3) Reddit Public JSON Feeds (r/SideProject, r/LocalLLaMA)
+ *  4) Show HN (Algolia latest + top)
+ *  5) Product Hunt (Atom feed)
+ *  6) TrustMRR (SSR HTML verified revenue startups)
+ *  7) Uneed (SSR HTML daily launches)
+ *
+ * Media & Pairing:
+ *  - Extracts real .mp4 / .webm / .gif / high-res preview images from GitHub README,
+ *    OpenGraph (og:video / og:image), Reddit previews, and AI Radar thumbnail_url
+ *  - Verifies candidate URLs via HTTP HEAD/GET (200/206 + video/* or image/* content-type)
+ *  - Generates 3-step Korean technical digest (techDigestKo) for every builder
+ *  - When GEMINI_API_KEY is set, pairs live builders x AI Radar issues via Gemini 2.5 Flash
+ *  - Otherwise hydrates curated 50 seeds (src/data/curated-seeds.json) with freshest live URLs & media
  */
 
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { pairSignalsWithGemini } from "./lib/gemini-pairer.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DATA = path.join(ROOT, "public", "data");
 const SRC_DATA = path.join(ROOT, "src", "data");
 const GUARD_META_PATH = path.join(PUBLIC_DATA, "fetch-guard-meta.json");
+const MEDIA_CACHE_PATH = path.join(PUBLIC_DATA, "media-cache.json");
 const TRANSLATION_CACHE_PATH = path.join(SRC_DATA, "translation-cache.json");
 const BLUEPRINTS_PATH = path.join(SRC_DATA, "concept-blueprints.json");
+const CURATED_SEEDS_PATH = path.join(SRC_DATA, "curated-seeds.json");
 
 const USER_AGENT =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+const REDDIT_USER_AGENT = "DISPENSER-SignalSync/1.0 (https://dispenser-deck.vercel.app)";
 
 const AI_RADAR_PLANNING_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/data/planning-feed.json";
 const AI_RADAR_LIVE_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json";
 const SHOW_HN_LATEST_URL =
-  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=40";
+  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=35";
 const SIX_MONTHS_AGO_UNIX = Math.floor((Date.now() - 180 * 24 * 60 * 60 * 1000) / 1000);
 const SHOW_HN_TOP_URL =
-  `https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>${SIX_MONTHS_AGO_UNIX}&hitsPerPage=40`;
+  `https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>${SIX_MONTHS_AGO_UNIX}&hitsPerPage=35`;
 const PRODUCT_HUNT_FEED_URL = "https://www.producthunt.com/feed";
 const TRUSTMRR_URL = "https://trustmrr.com";
 const UNEED_URL = "https://www.uneed.best";
 
+function isoDaysAgo(days) {
+  return new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+const GITHUB_SEARCH_QUERIES = [
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(75)} stars:>80 topic:ai`)}&sort=stars&order=desc&per_page=18`,
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(90)} stars:>60 (agent OR video OR audio OR browser OR automation OR cli)`)}&sort=stars&order=desc&per_page=18`,
+];
+
+const REDDIT_FEEDS = [
+  { sub: "SideProject", url: "https://www.reddit.com/r/SideProject/hot.json?limit=25" },
+  { sub: "LocalLLaMA", url: "https://www.reddit.com/r/LocalLLaMA/hot.json?limit=25" },
+];
+
 const COOLDOWN_MS = 6 * 60 * 60 * 1000;
+const MEDIA_CACHE_TTL_MS = 72 * 60 * 60 * 1000;
 const hostLastRequestAt = new Map();
 
 function ensureDir(dir) {
@@ -63,10 +93,10 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function waitDomainJitter(url) {
+async function waitDomainJitter(url, minMs = 1500, spreadMs = 1000) {
   const host = new URL(url).hostname;
   const last = hostLastRequestAt.get(host) || 0;
-  const jitter = 1500 + Math.floor(Math.random() * 1000);
+  const jitter = minMs + Math.floor(Math.random() * spreadMs);
   const elapsed = Date.now() - last;
   if (last > 0 && elapsed < jitter) {
     await sleep(jitter - elapsed);
@@ -155,7 +185,17 @@ class FetchGuard {
     writeJson(this.metaPath, this.meta);
   }
 
-  async fetchText(url, { accept = "*/*", bypass304 = false } = {}) {
+  isCoolingDown(url) {
+    try {
+      const host = new URL(url).hostname;
+      const hostState = this.meta.hosts[host] || {};
+      return Boolean(hostState.cooldownUntil && Date.now() < Date.parse(hostState.cooldownUntil));
+    } catch {
+      return false;
+    }
+  }
+
+  async fetchText(url, { accept = "*/*", bypass304 = false, userAgent = USER_AGENT, extraHeaders = {} } = {}) {
     const host = new URL(url).hostname;
     const hostState = this.meta.hosts[host] || {};
     if (hostState.cooldownUntil && Date.now() < Date.parse(hostState.cooldownUntil)) {
@@ -171,9 +211,10 @@ class FetchGuard {
 
     const urlState = this.meta.urls[url] || {};
     const headers = {
-      "User-Agent": USER_AGENT,
+      "User-Agent": userAgent,
       Accept: accept,
       "Accept-Language": "en-US,en;q=0.9,ko;q=0.7",
+      ...extraHeaders,
     };
     if (!bypass304 && urlState.etag) headers["If-None-Match"] = urlState.etag;
     if (!bypass304 && urlState.lastModified) headers["If-Modified-Since"] = urlState.lastModified;
@@ -275,7 +316,7 @@ const MECHANISM_RULES = [
     keywords: [
       "video", "clip", "timestamp", "transcript", "meeting", "record", "capture", "note",
       "bookmark", "archive", "history", "timeline", "log", "summary", "youtube", "podcast",
-      "watch", "read", "doc", "pdf", "knowledge", "memory",
+      "watch", "read", "doc", "pdf", "knowledge", "memory", "rag", "ocr",
     ],
   },
   {
@@ -296,7 +337,7 @@ const MECHANISM_RULES = [
     keywords: [
       "canvas", "board", "editor", "studio", "whiteboard", "slide", "deck", "layout", "ui",
       "ux", "figma", "diagram", "flow", "template", "builder", "workspace", "review",
-      "feedback", "diff", "grid", "portfolio", "landing",
+      "feedback", "diff", "grid", "portfolio", "landing", "browser",
     ],
   },
   {
@@ -319,7 +360,7 @@ const MECHANISM_RULES = [
     keywords: [
       "launch", "drop", "waitlist", "vote", "rank", "leaderboard", "community", "verify",
       "verified", "trust", "social", "newsletter", "submit", "poll", "beta", "indie",
-      "maker", "startup", "founder", "growth", "seo", "agent", "cli", "open source",
+      "maker", "startup", "founder", "growth", "seo", "agent", "cli", "open source", "llm", "mcp",
     ],
   },
 ];
@@ -348,6 +389,50 @@ function classifyMechanism(text, source, tractionType) {
   return best;
 }
 
+function buildTechDigestForBuilder(builder) {
+  const cleanKo = stripHighlightMarkers(builder.taglineKo || builder.summaryKo || builder.name);
+  const mech = MECHANISM_BY_ID[builder.mechanism] || MECHANISM_RULES[0];
+  const templates = {
+    "visual-price-match": {
+      inputKo: "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+      coreEngineKo: `${builder.name}의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출`,
+      outputKo: "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+    },
+    "timestamp-archive": {
+      inputKo: "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+      coreEngineKo: `${builder.name} 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱`,
+      outputKo: "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+    },
+    "geo-curation": {
+      inputKo: "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+      coreEngineKo: `${builder.name}의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행`,
+      outputKo: "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+    },
+    "canvas-compare": {
+      inputKo: "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+      coreEngineKo: `${builder.name} 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화`,
+      outputKo: "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+    },
+    "audio-stem": {
+      inputKo: "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+      coreEngineKo: `${builder.name} 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제`,
+      outputKo: "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+    },
+    "drop-validation": {
+      inputKo: "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+      coreEngineKo: `${builder.name}의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동`,
+      outputKo: "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+    },
+  };
+  const tpl = templates[builder.mechanism] || templates["drop-validation"];
+  return {
+    inputKo: tpl.inputKo,
+    coreEngineKo: tpl.coreEngineKo,
+    outputKo: tpl.outputKo,
+    summaryKo: stripHighlightMarkers(`${cleanKo} (${mech.shortLabel} 구조)`).slice(0, 140),
+  };
+}
+
 function parseDollarValue(token) {
   if (!token) return null;
   const clean = token.replace(/[$,\s]/g, "").toLowerCase();
@@ -360,6 +445,13 @@ function parseDollarValue(token) {
 }
 
 function formatShortMetric(builder) {
+  if (builder.source === "github_trending") {
+    const m = builder.tractionLabel.match(/★\s*[\d,.]+[kKmM]?/);
+    return m ? `GitHub ${m[0]}` : "GitHub 급상승";
+  }
+  if (builder.source === "reddit") {
+    return builder.tractionLabel || "Reddit 화제";
+  }
   if (builder.source === "trustmrr") {
     const m = builder.tractionLabel.match(/\$[\d.,]+[kKmM]?(?:\/mo)?/);
     return m ? `TrustMRR ${m[0]}` : "TrustMRR 검증 매출";
@@ -374,7 +466,179 @@ function formatShortMetric(builder) {
   return builder.tractionLabel;
 }
 
-async function syncAiRadar(guard, existingItems) {
+// ── Media Extraction & Verification ──────────────────────────────────────────
+
+const BAD_MEDIA_PATTERNS = [
+  /shields\.io/i,
+  /img\.shields\.io/i,
+  /badge\.svg/i,
+  /badges\//i,
+  /star-history\.com/i,
+  /api\.star-history/i,
+  /opencollective\.com/i,
+  /buymeacoffee/i,
+  /ko-fi\.com/i,
+  /codecov\.io/i,
+  /travis-ci/i,
+  /github\.com\/[^/]+\/[^/]+\/workflows/i,
+  /github\.com\/[^/]+\/[^/]+\/actions/i,
+  /avatars\.githubusercontent\.com/i,
+  /gravatar\.com/i,
+  /favicon/i,
+  /\.svg(\?|$)/i,
+  /discord\.gg/i,
+  /contrib\.rocks/i,
+  /vercel\.com\/button/i,
+  /netlify\.com\/img\/deploy/i,
+  /hits\.seeyoufarm/i,
+  /komarev\.com/i,
+  /visitor-badge/i,
+];
+
+function isJunkMediaUrl(url) {
+  if (!isValidHttpUrl(url)) return true;
+  return BAD_MEDIA_PATTERNS.some((re) => re.test(url));
+}
+
+function resolveGithubAssetUrl(rawUrl, owner, repo, branch) {
+  if (!rawUrl) return null;
+  let cleaned = decodeHtml(rawUrl.trim().replace(/^<|>$/g, "").split(/\s+/)[0]);
+  if (!cleaned || cleaned.startsWith("data:") || cleaned.startsWith("#")) return null;
+  if (cleaned.startsWith("//")) cleaned = `https:${cleaned}`;
+  if (!/^https?:\/\//i.test(cleaned)) {
+    const rel = cleaned.replace(/^\.?\//, "");
+    return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${rel}`;
+  }
+  // Convert github.com/owner/repo/blob/branch/path -> raw.githubusercontent.com
+  const blobM = cleaned.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+)$/i);
+  if (blobM) {
+    return `https://raw.githubusercontent.com/${blobM[1]}/${blobM[2]}/${blobM[3]}/${blobM[4]}`;
+  }
+  return cleaned;
+}
+
+function extractMediaFromReadme(markdown, owner, repo, branch) {
+  const videoCandidates = [];
+  const gifCandidates = [];
+  const imageCandidates = [];
+  const seen = new Set();
+
+  const pushCandidate = (raw) => {
+    const resolved = resolveGithubAssetUrl(raw, owner, repo, branch);
+    if (!resolved || seen.has(resolved) || isJunkMediaUrl(resolved)) return;
+    seen.add(resolved);
+    if (/\.(mp4|webm)(\?|$)/i.test(resolved) || /github\.com\/user-attachments\/assets\//i.test(resolved)) {
+      videoCandidates.push(resolved);
+    } else if (/\.gif(\?|$)/i.test(resolved)) {
+      gifCandidates.push(resolved);
+    } else if (/\.(png|jpe?g|webp|avif)(\?|$)/i.test(resolved) || /user-images\.githubusercontent\.com/i.test(resolved)) {
+      imageCandidates.push(resolved);
+    }
+  };
+
+  // Direct GitHub video/attachment URLs on standalone lines or <video src>
+  const videoRe = /(?:https?:\/\/[^\s"'<>)]+\.(?:mp4|webm)(?:\?[^\s"'<>)]*)?|https?:\/\/github\.com\/user-attachments\/assets\/[a-zA-Z0-9-]+)/gi;
+  let m;
+  while ((m = videoRe.exec(markdown)) !== null) pushCandidate(m[0]);
+
+  // HTML <video><source src=...> or <img src=...>
+  const htmlSrcRe = /<(?:video|source|img)[^>]+src=["']([^"']+)["']/gi;
+  while ((m = htmlSrcRe.exec(markdown)) !== null) pushCandidate(m[1]);
+
+  // Markdown images ![alt](url)
+  const mdImgRe = /!\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
+  while ((m = mdImgRe.exec(markdown)) !== null) pushCandidate(m[1]);
+
+  return { videoCandidates, gifCandidates, imageCandidates };
+}
+
+function extractOpenGraphMedia(html, baseUrl) {
+  const videos = [];
+  const images = [];
+  const metaRe = /<meta\s+[^>]*(?:property|name)=["'](og:video(?::secure_url|:url)?|og:image(?::secure_url|:url)?|twitter:image(?::src)?)["'][^>]*content=["']([^"']+)["'][^>]*>/gi;
+  const metaRevRe = /<meta\s+[^>]*content=["']([^"']+)["'][^>]*(?:property|name)=["'](og:video(?::secure_url|:url)?|og:image(?::secure_url|:url)?|twitter:image(?::src)?)["'][^>]*>/gi;
+
+  const add = (prop, rawVal) => {
+    try {
+      const resolved = new URL(decodeHtml(rawVal.trim()), baseUrl).toString();
+      if (isJunkMediaUrl(resolved)) return;
+      if (prop.toLowerCase().includes("video")) {
+        if (/\.(mp4|webm)(\?|$)/i.test(resolved)) videos.push(resolved);
+      } else {
+        images.push(resolved);
+      }
+    } catch {}
+  };
+
+  let m;
+  while ((m = metaRe.exec(html)) !== null) add(m[1], m[2]);
+  while ((m = metaRevRe.exec(html)) !== null) add(m[2], m[1]);
+  return { videos, images };
+}
+
+async function verifyMediaUrl(url, mediaCache) {
+  if (!isValidHttpUrl(url) || isJunkMediaUrl(url)) return null;
+  const cached = mediaCache[url];
+  if (cached && cached.checkedAt && Date.now() - Date.parse(cached.checkedAt) < MEDIA_CACHE_TTL_MS) {
+    return cached.ok ? { url: cached.finalUrl || url, kind: cached.kind } : null;
+  }
+
+  const probe = async (method) => {
+    const headers = {
+      "User-Agent": USER_AGENT,
+      Accept: "video/*,image/*;q=0.9,*/*;q=0.5",
+    };
+    if (method === "GET") headers.Range = "bytes=0-1023";
+    return fetch(url, {
+      method,
+      headers,
+      redirect: "follow",
+      signal: AbortSignal.timeout(7000),
+    });
+  };
+
+  try {
+    let res = await probe("HEAD");
+    if (res.status === 405 || res.status === 403 || res.status === 400) {
+      res = await probe("GET");
+    }
+    const okStatus = res.status === 200 || res.status === 206;
+    const ct = (res.headers.get("content-type") || "").toLowerCase();
+    const cl = Number(res.headers.get("content-length") || 0);
+    // Cancel body stream quickly if GET
+    try { await res.body?.cancel(); } catch {}
+
+    let kind = null;
+    if (okStatus) {
+      if (ct.startsWith("video/")) kind = "video";
+      else if (ct.startsWith("image/") && !ct.includes("svg") && !ct.includes("x-icon") && (cl === 0 || cl >= 2500)) {
+        kind = ct.includes("gif") ? "gif" : "image";
+      }
+    }
+
+    mediaCache[url] = {
+      ok: Boolean(kind),
+      kind,
+      status: res.status,
+      contentType: ct,
+      finalUrl: res.url || url,
+      checkedAt: new Date().toISOString(),
+    };
+    return kind ? { url: res.url || url, kind } : null;
+  } catch {
+    mediaCache[url] = {
+      ok: false,
+      kind: null,
+      status: 0,
+      checkedAt: new Date().toISOString(),
+    };
+    return null;
+  }
+}
+
+// ── 1) AI Radar ──────────────────────────────────────────────────────────────
+
+async function syncAiRadar(guard, existingItems, mediaCache) {
   const planRes = await guard.fetchText(AI_RADAR_PLANNING_URL, {
     accept: "application/json",
     bypass304: existingItems.length === 0,
@@ -406,11 +670,23 @@ async function syncAiRadar(guard, existingItems) {
   }
 
   const joined = [];
+  let verifiedThumbCount = 0;
+
   for (const sig of planData?.signals || []) {
     if (!sig?.id || !isValidHttpUrl(sig.canonical_url)) continue;
     const full = liveById.get(sig.id) || {};
     const pm = sig.planning_meta || full.planning_meta || {};
     const ut = full.utility_tip || null;
+    const rawThumb = full.thumbnail_url || sig.thumbnail_url || full.image_url || null;
+    let verifiedThumb = null;
+    if (rawThumb && isValidHttpUrl(rawThumb) && verifiedThumbCount < 35) {
+      const checked = await verifyMediaUrl(rawThumb, mediaCache);
+      if (checked && checked.kind !== "video") {
+        verifiedThumb = checked.url;
+        verifiedThumbCount += 1;
+      }
+    }
+
     joined.push({
       id: String(sig.id),
       titleKo: stripHighlightMarkers(sig.title_ko || full.title_ko || sig.original_title),
@@ -444,6 +720,7 @@ async function syncAiRadar(guard, existingItems) {
       entities: Array.isArray(sig.entities)
         ? sig.entities.map((e) => (typeof e === "string" ? e : String(e?.name || ""))).filter(Boolean)
         : [],
+      thumbnailUrl: verifiedThumb,
     });
   }
 
@@ -451,9 +728,256 @@ async function syncAiRadar(guard, existingItems) {
     items: joined,
     status: planRes.status || 200,
     cached304: false,
-    note: `joined planning(${planData?.signals?.length || 0}) + live(${liveById.size})`,
+    note: `joined planning(${planData?.signals?.length || 0}) + live(${liveById.size}), thumbs(${verifiedThumbCount})`,
   };
 }
+
+// ── 2) GitHub Recent Trending Open-Source Repos + README Demo Media ──────────
+
+async function syncGithubTrending(guard, existingBySource, mediaCache) {
+  const repos = [];
+  const seenFullName = new Set();
+  let lastStatus = 200;
+
+  for (const qUrl of GITHUB_SEARCH_QUERIES) {
+    const res = await guard.fetchText(qUrl, {
+      accept: "application/vnd.github+json",
+      bypass304: existingBySource.length === 0,
+      extraHeaders: { "X-GitHub-Api-Version": "2022-11-28" },
+    });
+    lastStatus = res.status || lastStatus;
+    if (!res.ok || !res.text) continue;
+    try {
+      const data = JSON.parse(res.text);
+      for (const item of data?.items || []) {
+        if (!item?.full_name || !item?.html_url || seenFullName.has(item.full_name)) continue;
+        if (item.fork || item.archived) continue;
+        if (!item.description || item.description.trim().length < 10) continue;
+        seenFullName.add(item.full_name);
+        repos.push(item);
+      }
+    } catch {}
+  }
+
+  if (repos.length === 0 && existingBySource.length > 0) {
+    return { items: existingBySource, status: lastStatus, cached304: false, note: "fallback cache" };
+  }
+
+  const out = [];
+  const nowIso = new Date().toISOString();
+  const topRepos = repos
+    .sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0))
+    .slice(0, 26);
+
+  for (const repo of topRepos) {
+    const [owner, repoName] = repo.full_name.split("/");
+    const branch = repo.default_branch || "main";
+    const stars = Number(repo.stargazers_count || 0);
+    const starsFmt = stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : String(stars);
+    const desc = stripHighlightMarkers(repo.description || "");
+    const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 6) : [];
+    const mechId = classifyMechanism(`${repoName} ${desc} ${topics.join(" ")}`, "github_trending", "stars");
+
+    let demoVideoUrl = null;
+    let previewImageUrl = null;
+    let mediaSourceLabel = null;
+
+    // Fetch raw README.md to extract real demo .mp4/.webm/.gif/screenshot
+    const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repoName}/${branch}/README.md`;
+    const readmeRes = await guard.fetchText(readmeUrl, { accept: "text/plain", bypass304: true });
+    if (readmeRes.ok && readmeRes.text) {
+      const { videoCandidates, gifCandidates, imageCandidates } = extractMediaFromReadme(
+        readmeRes.text,
+        owner,
+        repoName,
+        branch
+      );
+
+      for (const vUrl of videoCandidates.slice(0, 3)) {
+        const ok = await verifyMediaUrl(vUrl, mediaCache);
+        if (ok && ok.kind === "video") {
+          demoVideoUrl = ok.url;
+          mediaSourceLabel = "원본 기술 시연 영상";
+          break;
+        }
+        if (ok && (ok.kind === "gif" || ok.kind === "image") && !previewImageUrl) {
+          previewImageUrl = ok.url;
+          mediaSourceLabel = ok.kind === "gif" ? "원본 기술 시연 GIF" : "오픈소스 실물 화면";
+        }
+      }
+
+      if (!previewImageUrl) {
+        for (const gUrl of gifCandidates.slice(0, 3)) {
+          const ok = await verifyMediaUrl(gUrl, mediaCache);
+          if (ok && (ok.kind === "gif" || ok.kind === "image")) {
+            previewImageUrl = ok.url;
+            mediaSourceLabel = ok.kind === "gif" ? "원본 기술 시연 GIF" : "오픈소스 실물 화면";
+            break;
+          }
+        }
+      }
+
+      if (!previewImageUrl) {
+        for (const iUrl of imageCandidates.slice(0, 4)) {
+          const ok = await verifyMediaUrl(iUrl, mediaCache);
+          if (ok && (ok.kind === "image" || ok.kind === "gif")) {
+            previewImageUrl = ok.url;
+            mediaSourceLabel = "오픈소스 실물 화면";
+            break;
+          }
+        }
+      }
+    }
+
+    out.push({
+      id: `builder-gh-${shortHash(repo.full_name)}`,
+      name: repoName,
+      slug: slugify(`gh-${repoName}-${shortHash(repo.full_name).slice(0, 5)}`),
+      source: "github_trending",
+      sourceLabel: "GitHub",
+      url: repo.html_url,
+      discussionUrl: repo.homepage && isValidHttpUrl(repo.homepage) ? repo.homepage : repo.html_url,
+      taglineEn: desc.slice(0, 220),
+      taglineKo: desc.slice(0, 220),
+      summaryKo: desc.slice(0, 220),
+      painPointKo: `최근 GitHub에서 빠르게 ★${starsFmt} 스타를 모으며 주목받는 오픈소스 프로젝트(${repo.full_name})입니다.`,
+      tractionLabel: `GitHub ★${starsFmt}`,
+      tractionValue: Math.min(40000, stars * 5),
+      tractionType: "stars",
+      mrrUsd: null,
+      mechanism: mechId,
+      mechanismLabel: MECHANISM_BY_ID[mechId].label,
+      tags: ["github", "open-source", ...topics].slice(0, 6),
+      publishedAt: String(repo.created_at || nowIso),
+      fetchedAt: nowIso,
+      verifiedRevenue: false,
+      demoVideoUrl,
+      previewImageUrl,
+      mediaSourceLabel,
+    });
+  }
+
+  return {
+    items: out.length > 0 ? out : existingBySource,
+    status: lastStatus,
+    cached304: false,
+    note: `${out.length} GitHub repos (${out.filter((x) => x.demoVideoUrl || x.previewImageUrl).length} with verified media)`,
+  };
+}
+
+// ── 3) Reddit (r/SideProject, r/LocalLLaMA) ──────────────────────────────────
+
+async function syncReddit(guard, existingBySource, mediaCache) {
+  const out = [];
+  const seen = new Set();
+  const nowIso = new Date().toISOString();
+  let lastStatus = 200;
+
+  for (const feed of REDDIT_FEEDS) {
+    const res = await guard.fetchText(feed.url, {
+      accept: "application/json",
+      bypass304: existingBySource.length === 0,
+      userAgent: REDDIT_USER_AGENT,
+    });
+    lastStatus = res.status || lastStatus;
+    if (!res.ok || !res.text) continue;
+    try {
+      const data = JSON.parse(res.text);
+      const children = data?.data?.children || [];
+      for (const child of children) {
+        const p = child?.data;
+        if (!p || p.stickied || p.over_18 || !p.title) continue;
+        const ups = Number(p.ups || p.score || 0);
+        if (ups < 8) continue;
+
+        const discussionUrl = `https://www.reddit.com${p.permalink}`;
+        const externalUrl =
+          p.url_overridden_by_dest &&
+          isValidHttpUrl(p.url_overridden_by_dest) &&
+          !/i\.redd\.it|v\.redd\.it|reddit\.com\/gallery/i.test(p.url_overridden_by_dest)
+            ? p.url_overridden_by_dest
+            : discussionUrl;
+
+        const dedupKey = externalUrl.toLowerCase().replace(/\/+$/, "");
+        if (seen.has(dedupKey)) continue;
+        seen.add(dedupKey);
+
+        const rawTitle = stripHighlightMarkers(p.title);
+        const selftext = stripHighlightMarkers(p.selftext || "").slice(0, 220);
+        const nameMatch = rawTitle.split(/\s+[–—:-]\s+|\s*\|\s*/);
+        const name =
+          nameMatch.length >= 2 && nameMatch[0].length <= 36
+            ? nameMatch[0].trim()
+            : rawTitle.split(/\s+/).slice(0, 4).join(" ");
+        const tagline = rawTitle.slice(0, 200);
+        const mechId = classifyMechanism(`${rawTitle} ${selftext}`, "reddit", "upvotes");
+
+        let demoVideoUrl = null;
+        let previewImageUrl = null;
+        let mediaSourceLabel = null;
+
+        const redditVideo = p.media?.reddit_video?.fallback_url || p.secure_media?.reddit_video?.fallback_url;
+        if (redditVideo && isValidHttpUrl(redditVideo)) {
+          const ok = await verifyMediaUrl(redditVideo, mediaCache);
+          if (ok && ok.kind === "video") {
+            demoVideoUrl = ok.url;
+            mediaSourceLabel = "커뮤니티 시연 영상";
+          }
+        }
+
+        const previewRaw = p.preview?.images?.[0]?.source?.url
+          ? decodeHtml(p.preview.images[0].source.url)
+          : p.url_overridden_by_dest && /\.(png|jpe?g|gif|webp)(\?|$)/i.test(p.url_overridden_by_dest)
+            ? p.url_overridden_by_dest
+            : null;
+        if (!previewImageUrl && previewRaw && isValidHttpUrl(previewRaw)) {
+          const ok = await verifyMediaUrl(previewRaw, mediaCache);
+          if (ok && (ok.kind === "image" || ok.kind === "gif")) {
+            previewImageUrl = ok.url;
+            mediaSourceLabel = ok.kind === "gif" ? "커뮤니티 시연 GIF" : "프로덕트 실물 화면";
+          }
+        }
+
+        out.push({
+          id: `builder-reddit-${p.id || shortHash(discussionUrl)}`,
+          name: name.slice(0, 48),
+          slug: slugify(`reddit-${feed.sub}-${p.id || shortHash(discussionUrl)}`),
+          source: "reddit",
+          sourceLabel: `r/${feed.sub}`,
+          url: externalUrl,
+          discussionUrl,
+          taglineEn: tagline,
+          taglineKo: tagline,
+          summaryKo: tagline,
+          painPointKo: `Reddit r/${feed.sub}에서 추천 ${ups}개와 댓글 ${p.num_comments || 0}개로 주목받은 커뮤니티 실전 프로젝트입니다.`,
+          tractionLabel: `r/${feed.sub} ▲${ups}`,
+          tractionValue: ups * 8 + Number(p.num_comments || 0) * 3,
+          tractionType: "upvotes",
+          mrrUsd: null,
+          mechanism: mechId,
+          mechanismLabel: MECHANISM_BY_ID[mechId].label,
+          tags: ["reddit", feed.sub.toLowerCase()],
+          publishedAt: p.created_utc ? new Date(p.created_utc * 1000).toISOString() : nowIso,
+          fetchedAt: nowIso,
+          verifiedRevenue: false,
+          demoVideoUrl,
+          previewImageUrl,
+          mediaSourceLabel,
+        });
+        if (out.length >= 20) break;
+      }
+    } catch {}
+  }
+
+  return {
+    items: out.length > 0 ? out : existingBySource,
+    status: lastStatus,
+    cached304: false,
+    note: `${out.length} Reddit builder posts`,
+  };
+}
+
+// ── 4) Show HN ───────────────────────────────────────────────────────────────
 
 function parseShowHnTitle(rawTitle) {
   const cleaned = stripHighlightMarkers(rawTitle).replace(/^Show\s+HN\s*[:–—-]\s*/i, "").trim();
@@ -530,8 +1054,11 @@ async function syncShowHn(guard, existingBySource) {
       publishedAt: String(h.created_at || nowIso),
       fetchedAt: nowIso,
       verifiedRevenue: false,
+      demoVideoUrl: null,
+      previewImageUrl: null,
+      mediaSourceLabel: null,
     });
-    if (out.length >= 34) break;
+    if (out.length >= 28) break;
   }
 
   return {
@@ -541,6 +1068,8 @@ async function syncShowHn(guard, existingBySource) {
     note: `${out.length} live Show HN items`,
   };
 }
+
+// ── 5) Product Hunt ──────────────────────────────────────────────────────────
 
 async function syncProductHunt(guard, existingBySource) {
   const res = await guard.fetchText(PRODUCT_HUNT_FEED_URL, {
@@ -602,8 +1131,11 @@ async function syncProductHunt(guard, existingBySource) {
       publishedAt: pubM ? pubM[1].trim() : nowIso,
       fetchedAt: nowIso,
       verifiedRevenue: false,
+      demoVideoUrl: null,
+      previewImageUrl: null,
+      mediaSourceLabel: null,
     });
-    if (out.length >= 22) break;
+    if (out.length >= 20) break;
   }
 
   return {
@@ -613,6 +1145,8 @@ async function syncProductHunt(guard, existingBySource) {
     note: `${out.length} Product Hunt entries`,
   };
 }
+
+// ── 6) TrustMRR ──────────────────────────────────────────────────────────────
 
 async function syncTrustMrr(guard, existingBySource) {
   const res = await guard.fetchText(TRUSTMRR_URL, {
@@ -694,6 +1228,9 @@ async function syncTrustMrr(guard, existingBySource) {
       publishedAt: nowIso,
       fetchedAt: nowIso,
       verifiedRevenue: true,
+      demoVideoUrl: null,
+      previewImageUrl: null,
+      mediaSourceLabel: null,
     });
     if (out.length >= 16) break;
   }
@@ -705,6 +1242,8 @@ async function syncTrustMrr(guard, existingBySource) {
     note: `${out.length} TrustMRR verified startups`,
   };
 }
+
+// ── 7) Uneed ─────────────────────────────────────────────────────────────────
 
 async function syncUneed(guard, existingBySource) {
   const res = await guard.fetchText(UNEED_URL, {
@@ -778,6 +1317,9 @@ async function syncUneed(guard, existingBySource) {
       publishedAt: nowIso,
       fetchedAt: nowIso,
       verifiedRevenue: false,
+      demoVideoUrl: null,
+      previewImageUrl: null,
+      mediaSourceLabel: null,
     });
     if (out.length >= 16) break;
   }
@@ -790,28 +1332,93 @@ async function syncUneed(guard, existingBySource) {
   };
 }
 
-async function enrichXLinks(builders, guard) {
-  const xRe = /^https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/([A-Za-z0-9_]{1,20})\/status\/(\d+)/i;
-  let enriched = 0;
+// ── OpenGraph / GitHub README Media Enrichment for Non-GitHub Builders ───────
+
+async function enrichBuilderOpenGraphMedia(builders, guard, mediaCache) {
+  let inspected = 0;
+  let foundCount = 0;
+  const MAX_INSPECT = 28;
+
   for (const b of builders) {
-    if (enriched >= 3) break;
-    if (!xRe.test(b.url)) continue;
-    const oembedUrl = `https://publish.twitter.com/oembed?url=${encodeURIComponent(b.url)}&omit_script=true`;
-    const res = await guard.fetchText(oembedUrl, { accept: "application/json", bypass304: true });
-    if (!res.ok || !res.text) continue;
-    try {
-      const data = JSON.parse(res.text);
-      const pMatch = (data.html || "").match(/<p[^>]*>([\s\S]*?)<\/p>/i);
-      const txt = stripHighlightMarkers(stripTags(pMatch ? pMatch[1] : data.html || "")).slice(0, 180);
-      if (txt) {
-        b.taglineEn = txt;
-        b.tags = Array.from(new Set([...b.tags, "x-oembed"]));
-        enriched += 1;
+    if (b.demoVideoUrl || b.previewImageUrl) continue;
+    if (inspected >= MAX_INSPECT) break;
+    if (!isValidHttpUrl(b.url)) continue;
+
+    // If a Show HN / Reddit item links directly to a GitHub repo, inspect its README!
+    const ghMatch = b.url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/?#]+)/i);
+    if (ghMatch) {
+      inspected += 1;
+      const [, owner, rawRepo] = ghMatch;
+      const repoName = rawRepo.replace(/\.git$/i, "");
+      for (const branch of ["main", "master"]) {
+        const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repoName}/${branch}/README.md`;
+        const rRes = await guard.fetchText(readmeUrl, { accept: "text/plain", bypass304: true });
+        if (rRes.ok && rRes.text) {
+          const { videoCandidates, gifCandidates, imageCandidates } = extractMediaFromReadme(
+            rRes.text,
+            owner,
+            repoName,
+            branch
+          );
+          for (const v of videoCandidates.slice(0, 2)) {
+            const ok = await verifyMediaUrl(v, mediaCache);
+            if (ok && ok.kind === "video") {
+              b.demoVideoUrl = ok.url;
+              b.mediaSourceLabel = "원본 기술 시연 영상";
+              break;
+            }
+          }
+          for (const img of [...gifCandidates.slice(0, 2), ...imageCandidates.slice(0, 3)]) {
+            const ok = await verifyMediaUrl(img, mediaCache);
+            if (ok && (ok.kind === "gif" || ok.kind === "image")) {
+              b.previewImageUrl = ok.url;
+              b.mediaSourceLabel = b.mediaSourceLabel || (ok.kind === "gif" ? "원본 기술 시연 GIF" : "오픈소스 실물 화면");
+              break;
+            }
+          }
+          if (b.demoVideoUrl || b.previewImageUrl) foundCount += 1;
+          break;
+        }
       }
-    } catch {}
+      continue;
+    }
+
+    // Skip reddit self-links and producthunt redirect pages that block bots
+    if (/reddit\.com|news\.ycombinator\.com/i.test(b.url)) continue;
+    if (guard.isCoolingDown(b.url)) continue;
+
+    inspected += 1;
+    const htmlRes = await guard.fetchText(b.url, {
+      accept: "text/html,application/xhtml+xml",
+      bypass304: true,
+    });
+    if (!htmlRes.ok || !htmlRes.text) continue;
+
+    const headSlice = htmlRes.text.slice(0, 45000);
+    const { videos, images } = extractOpenGraphMedia(headSlice, b.url);
+
+    for (const v of videos.slice(0, 2)) {
+      const ok = await verifyMediaUrl(v, mediaCache);
+      if (ok && ok.kind === "video") {
+        b.demoVideoUrl = ok.url;
+        b.mediaSourceLabel = "원본 기술 시연 영상";
+        break;
+      }
+    }
+    for (const img of images.slice(0, 2)) {
+      const ok = await verifyMediaUrl(img, mediaCache);
+      if (ok && (ok.kind === "gif" || ok.kind === "image")) {
+        b.previewImageUrl = ok.url;
+        b.mediaSourceLabel = b.mediaSourceLabel || (ok.kind === "gif" ? "프로덕트 시연 GIF" : "프로덕트 실물 화면");
+        break;
+      }
+    }
+    if (b.demoVideoUrl || b.previewImageUrl) foundCount += 1;
   }
-  return enriched;
+  return foundCount;
 }
+
+// ── Seed Construction (Gemini Flash > Curated 50 Seeds > Deterministic) ──────
 
 const CADENCES = [
   "3~5일 MVP",
@@ -830,178 +1437,174 @@ function fnv1a(seed) {
   return Math.abs(h >>> 0);
 }
 
-function matchRadar(builder, domain, radars, offset) {
-  const tokens = new Set(
-    `${builder.name} ${builder.taglineEn} ${builder.tags.join(" ")}`
-      .toLowerCase()
-      .split(/[^a-z0-9가-힣]+/)
-      .filter((t) => t.length >= 3)
+function hydratePairingToTreatment({
+  pairing,
+  builder,
+  radar,
+  domain,
+  index,
+  synthesisMode,
+  nowIso,
+}) {
+  const mechId = builder.mechanism || "drop-validation";
+  const mech = MECHANISM_BY_ID[mechId] || MECHANISM_RULES[0];
+  const hash = fnv1a(`${domain.slug}|${builder.id}|${radar.id}|${pairing.title}|${index}`);
+  const id = `tr-${slugify(domain.slug).slice(0, 8)}-${slugify(builder.name).slice(0, 14)}-${hash.toString(36).slice(0, 6)}`;
+  const cleanTitle = stripHighlightMarkers(pairing.title);
+  const title = cleanTitle.endsWith("?") ? cleanTitle : `${cleanTitle}?`;
+
+  const demoVideoUrl = builder.demoVideoUrl || null;
+  const previewImageUrl = builder.previewImageUrl || radar.thumbnailUrl || null;
+  const mediaSourceLabel = demoVideoUrl
+    ? builder.mediaSourceLabel || "원본 기술 시연 영상"
+    : builder.previewImageUrl
+      ? builder.mediaSourceLabel || "프로덕트 실물 화면"
+      : radar.thumbnailUrl
+        ? "이슈 기사 이미지"
+        : null;
+
+  const techDigestKo = pairing.techDigestKo?.inputKo
+    ? {
+        inputKo: stripHighlightMarkers(pairing.techDigestKo.inputKo),
+        coreEngineKo: stripHighlightMarkers(pairing.techDigestKo.coreEngineKo),
+        outputKo: stripHighlightMarkers(pairing.techDigestKo.outputKo),
+        summaryKo: stripHighlightMarkers(pairing.techDigestKo.summaryKo),
+      }
+    : builder.techDigestKo || buildTechDigestForBuilder(builder);
+
+  const builderSummaryKo = stripHighlightMarkers(
+    pairing.builderSummaryKo || builder.taglineKo || builder.summaryKo
   );
-  const scored = radars.map((r) => {
-    let score = Math.min(35, r.importanceScore || 10);
-    if (domain.affinityCategories.includes(r.category)) score += 18;
-    if (domain.affinityDomains.includes(r.planningMeta.productDomain)) score += 16;
-    if (r.planningMeta.signalType === "open_source_trend") score += 7;
-    if (r.planningMeta.signalType === "dev_workflow") score += 6;
-    if (r.planningMeta.signalType === "new_product") score += 5;
-    const rText = `${r.titleKo} ${r.originalTitle} ${r.planningMeta.benchmarkPoint} ${r.entities.join(" ")}`.toLowerCase();
-    let overlap = 0;
-    for (const tok of tokens) if (rText.includes(tok)) overlap += 1;
-    score += Math.min(18, overlap * 6);
-    return { signal: r, score };
-  });
-  scored.sort((a, b) => b.score - a.score);
-  const pool = Math.min(14, scored.length);
-  return scored[((offset % pool) + pool) % pool].signal;
+  const radarSummaryKo = stripHighlightMarkers(
+    pairing.radarSummaryKo || radar.whatKo || radar.highlightSummary
+  );
+
+  return {
+    id,
+    slug: id,
+    createdAt: nowIso,
+    updatedAt: nowIso,
+    domainSlug: domain.slug,
+    domainLabel: domain.label,
+    domainColor: domain.color,
+    customTopic: null,
+    title,
+    oneLineHook: stripHighlightMarkers(pairing.oneLineHook),
+    firstThreeSecondsUx: stripHighlightMarkers(
+      pairing.firstThreeSecondsUx || `회원가입 없이 첫 화면에서 바로 체험할 수 있습니다. ${pairing.oneLineHook}`
+    ),
+    fusionStoryKo: stripHighlightMarkers(pairing.fusionStoryKo),
+    buildCadence: stripHighlightMarkers(pairing.buildCadence) || CADENCES[hash % CADENCES.length],
+    demoVideoUrl,
+    previewImageUrl,
+    mediaSourceLabel,
+    techDigestKo,
+    sampleA: {
+      builderId: builder.id,
+      name: builder.name,
+      url: builder.url,
+      source: builder.source,
+      sourceLabel: builder.sourceLabel,
+      tractionLabel: builder.tractionLabel,
+      shortMetricLabel: formatShortMetric(builder),
+      verifiedRevenue: builder.verifiedRevenue,
+      mechanism: mechId,
+      mechanismLabel: mech.label,
+      summaryKo: builderSummaryKo,
+      overseasProofKo: stripHighlightMarkers(
+        `${builder.name}은 ${builder.sourceLabel}(${formatShortMetric(builder)})에서 주목받은 프로젝트입니다. ${builderSummaryKo}`
+      ),
+    },
+    sampleA2: null,
+    sampleB: {
+      radarId: radar.id,
+      titleKo: radar.titleKo,
+      canonicalUrl: radar.canonicalUrl,
+      platformId: radar.platformId,
+      signalType: radar.planningMeta.signalType,
+      productDomain: radar.planningMeta.productDomain,
+      summaryKo: radarSummaryKo,
+      benchmarkPoint: radar.planningMeta.benchmarkPoint,
+      bottleneckSolvedKo: stripHighlightMarkers(
+        `${radar.titleKo} 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. ${radarSummaryKo}`
+      ),
+    },
+    twistSummaryKo: stripHighlightMarkers(pairing.oneLineHook),
+    mvpFeatures: pairing.mvpFeatures.slice(0, 3).map((f) => stripHighlightMarkers(f)),
+    scopeCutoff: pairing.scopeCutoff
+      ? [stripHighlightMarkers(pairing.scopeCutoff), ...(domain.cutoffs || []).slice(0, 1)]
+      : domain.cutoffs || ["초기 버전에서는 회원가입과 복잡한 결제 대시보드를 제외합니다."],
+    targetKpis: domain.kpis || ["첫 방문 1분 내 핵심 기능 완료율"],
+    lineage: [
+      {
+        step: "A",
+        label: "원본",
+        title: builder.name,
+        builderId: builder.id,
+        builderName: builder.name,
+      },
+      {
+        step: "B",
+        label: "1차 기획",
+        title,
+        treatmentId: id,
+        builderId: builder.id,
+        builderName: builder.name,
+      },
+    ],
+    synthesisMode,
+    parentTreatmentId: null,
+    variantIndex: index,
+  };
 }
 
-function buildHumanSeedTreatments(builders, radars) {
+function buildFallbackTreatments(builders, radars, domains) {
   const config = readJson(BLUEPRINTS_PATH, { domains: [], blueprints: {} });
-  const domains = config.domains || [];
   const blueprintsMap = config.blueprints || {};
-
-  // Flatten all 40 distinct human-crafted blueprints interleaved across the 6 domains
-  const perDomainLists = domains.map((domain) => {
+  const nowIso = new Date().toISOString();
+  const slots = [];
+  for (const domain of domains) {
     const mechMap = blueprintsMap[domain.slug] || {};
-    const list = [];
     for (const mechId of Object.keys(mechMap)) {
       for (const bp of mechMap[mechId] || []) {
-        list.push({ domain, mechId, bp });
-      }
-    }
-    return list;
-  });
-
-  const interleavedSlots = [];
-  let more = true;
-  while (more) {
-    more = false;
-    for (const list of perDomainLists) {
-      if (list.length > 0) {
-        interleavedSlots.push(list.shift());
-        more = true;
+        slots.push({ domain, mechId, bp });
       }
     }
   }
 
-  // Sort builders with source diversity (TrustMRR, Show HN, Product Hunt, Uneed)
-  const sortedBuilders = [...builders].sort((a, b) => {
-    const revDiff = Number(b.verifiedRevenue) - Number(a.verifiedRevenue);
-    if (revDiff !== 0) return revDiff;
-    return b.tractionValue - a.tractionValue;
-  });
-  const bySource = new Map();
-  for (const b of sortedBuilders) {
-    const arr = bySource.get(b.source) || [];
-    arr.push(b);
-    bySource.set(b.source, arr);
-  }
-  const sourceOrder = ["trustmrr", "show_hn", "product_hunt", "uneed", "x_oembed"];
-  const diverseBuilders = [];
-  let added = true;
-  while (added && diverseBuilders.length < sortedBuilders.length) {
-    added = false;
-    for (const src of sourceOrder) {
-      const arr = bySource.get(src);
-      if (arr && arr.length > 0) {
-        diverseBuilders.push(arr.shift());
-        added = true;
-      }
-    }
-  }
+  const out = [];
+  for (let i = 0; i < Math.min(50, Math.max(slots.length, 50)); i += 1) {
+    const slot = slots[i % slots.length];
+    const builder = builders[i % builders.length];
+    const radar = radars[(i * 3) % radars.length];
+    const rawTitle = stripHighlightMarkers(slot.bp.title).replace(/[.!]+$/, "");
+    const qTitle = rawTitle.endsWith("?") ? rawTitle : `${rawTitle} 웹을 만들어본다면?`;
+    const story = `${builder.name}(${formatShortMetric(builder)})이 입증한 '${stripHighlightMarkers(builder.taglineKo || builder.summaryKo)}' 구조에 최근 AI Radar에서 화제인 '${radar.titleKo}' 흐름을 결합했습니다. 예전에는 수작업과 무거운 설정이 필요했던 작업을 최신 모델·오픈소스 파이프라인으로 덜어내어, 방문자가 로그인 없이 첫 화면에서 바로 결과를 확인할 수 있게 압축했습니다. 1차 버전은 핵심 워크플로 3가지만 빠르게 검증해 1주일 안에 배포합니다.`;
 
-  const nowIso = new Date().toISOString();
-  const usedBuilderIds = new Set();
-  const treatments = [];
-
-  for (let i = 0; i < interleavedSlots.length; i += 1) {
-    const { domain, mechId, bp } = interleavedSlots[i];
-
-    // Pick best unused overseas builder matching this mechanism (or next diverse unused builder)
-    let builder =
-      diverseBuilders.find((b) => b.mechanism === mechId && !usedBuilderIds.has(b.id)) ||
-      diverseBuilders.find((b) => !usedBuilderIds.has(b.id)) ||
-      diverseBuilders[i % diverseBuilders.length];
-    usedBuilderIds.add(builder.id);
-
-    const radar = matchRadar(builder, domain, radars, i);
-    const mech = MECHANISM_BY_ID[mechId] || MECHANISM_RULES[0];
-    const hash = fnv1a(`${domain.slug}|${builder.id}|${bp.title}|${i}`);
-    const id = `tr-${slugify(domain.slug).slice(0, 8)}-${slugify(builder.name).slice(0, 14)}-${hash.toString(36).slice(0, 6)}`;
-    const techName = radar.entities[0] || radar.platformId;
-    const cleanTagline = stripHighlightMarkers(builder.taglineKo || builder.summaryKo);
-    const overseasProofKo = builder.verifiedRevenue
-      ? `${builder.name}은 ${builder.tractionLabel}의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '${cleanTagline}'라는 단순한 한 가지 문제에 집중해, ${mech.simpleActionKo}으로 유료 사용자를 빠르게 모았습니다.`
-      : `${builder.name}은 ${builder.sourceLabel}에서 ${builder.tractionLabel}의 호응을 얻은 해외 신상 프로덕트입니다. '${cleanTagline}' 경험을 무거운 가입 절차 없이 열어주고, ${mech.simpleActionKo}으로 초기 팬을 끌어모았습니다.`;
-
-    treatments.push({
-      id,
-      slug: id,
-      createdAt: nowIso,
-      updatedAt: nowIso,
-      domainSlug: domain.slug,
-      domainLabel: domain.label,
-      domainColor: domain.color,
-      customTopic: null,
-      title: stripHighlightMarkers(bp.title),
-      oneLineHook: stripHighlightMarkers(bp.hook),
-      firstThreeSecondsUx: stripHighlightMarkers(
-        `회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. ${bp.hook}`
-      ),
-      buildCadence: CADENCES[hash % CADENCES.length],
-      sampleA: {
-        builderId: builder.id,
-        name: builder.name,
-        url: builder.url,
-        sourceLabel: builder.sourceLabel,
-        tractionLabel: builder.tractionLabel,
-        shortMetricLabel: formatShortMetric(builder),
-        verifiedRevenue: builder.verifiedRevenue,
-        mechanism: mechId,
-        mechanismLabel: mech.label,
-        overseasProofKo: stripHighlightMarkers(overseasProofKo),
-      },
-      sampleA2: null,
-      sampleB: {
-        radarId: radar.id,
-        titleKo: radar.titleKo,
-        canonicalUrl: radar.canonicalUrl,
-        platformId: radar.platformId,
-        signalType: radar.planningMeta.signalType,
-        productDomain: radar.planningMeta.productDomain,
-        benchmarkPoint: radar.planningMeta.benchmarkPoint,
-        bottleneckSolvedKo: stripHighlightMarkers(
-          `최근 화제가 된 ${techName} 계열 소식('${radar.titleKo}')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (${radar.whatKo.slice(0, 120)})`
-        ),
-      },
-      twistSummaryKo: stripHighlightMarkers(bp.hook),
-      mvpFeatures: bp.features.map((f) => stripHighlightMarkers(f)),
-      scopeCutoff: domain.cutoffs,
-      targetKpis: domain.kpis,
-      lineage: [
-        {
-          step: "A",
-          label: "원본",
-          title: builder.name,
-          builderId: builder.id,
-          builderName: builder.name,
+    out.push(
+      hydratePairingToTreatment({
+        pairing: {
+          title: qTitle,
+          oneLineHook: slot.bp.hook,
+          firstThreeSecondsUx: `회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. ${slot.bp.hook}`,
+          fusionStoryKo: story,
+          builderSummaryKo: builder.taglineKo || builder.summaryKo,
+          radarSummaryKo: radar.whatKo || radar.highlightSummary,
+          techDigestKo: builder.techDigestKo,
+          mvpFeatures: slot.bp.features,
+          scopeCutoff: slot.domain.cutoffs?.[0] || "초기 버전에서는 회원가입과 복잡한 관리자 기능을 제외합니다.",
+          buildCadence: CADENCES[i % CADENCES.length],
         },
-        {
-          step: "B",
-          label: "1차 기획",
-          title: stripHighlightMarkers(bp.title),
-          treatmentId: id,
-          builderId: builder.id,
-          builderName: builder.name,
-        },
-      ],
-      synthesisMode: "deterministic",
-      parentTreatmentId: null,
-      variantIndex: i,
-    });
+        builder,
+        radar,
+        domain: slot.domain,
+        index: i,
+        synthesisMode: "deterministic",
+        nowIso,
+      })
+    );
   }
-
-  return treatments;
+  return out;
 }
 
 async function main() {
@@ -1009,39 +1612,74 @@ async function main() {
   ensureDir(SRC_DATA);
 
   const guard = new FetchGuard(GUARD_META_PATH);
+  const mediaCache = readJson(MEDIA_CACHE_PATH, {});
   const translationCache = readJson(TRANSLATION_CACHE_PATH, {});
 
   const prevRadar = readJson(path.join(PUBLIC_DATA, "ai-radar-signals.json"), { items: [] }).items || [];
   const prevBuilders = readJson(path.join(PUBLIC_DATA, "builder-signals.json"), { items: [] }).items || [];
   const prevBySource = (src) => prevBuilders.filter((b) => b.source === src);
 
-  console.log("[BENCH sync] 1/5 Fetching AI Radar planning-feed + live-feed...");
-  const radarResult = await syncAiRadar(guard, prevRadar);
+  console.log("[DISPENSER sync] 1/7 Fetching AI Radar planning-feed + live-feed (with thumbnails)...");
+  const radarResult = await syncAiRadar(guard, prevRadar, mediaCache);
 
-  console.log("[BENCH sync] 2/5 Fetching Show HN Algolia API...");
+  console.log("[DISPENSER sync] 2/7 Fetching GitHub recent trending open-source repos + README media...");
+  const githubResult = await syncGithubTrending(guard, prevBySource("github_trending"), mediaCache);
+
+  console.log("[DISPENSER sync] 3/7 Fetching Reddit r/SideProject + r/LocalLLaMA...");
+  const redditResult = await syncReddit(guard, prevBySource("reddit"), mediaCache);
+
+  console.log("[DISPENSER sync] 4/7 Fetching Show HN Algolia API...");
   const showHnResult = await syncShowHn(guard, prevBySource("show_hn"));
 
-  console.log("[BENCH sync] 3/5 Fetching Product Hunt Atom feed...");
+  console.log("[DISPENSER sync] 5/7 Fetching Product Hunt Atom feed...");
   const phResult = await syncProductHunt(guard, prevBySource("product_hunt"));
 
-  console.log("[BENCH sync] 4/5 Fetching TrustMRR SSR HTML...");
+  console.log("[DISPENSER sync] 6/7 Fetching TrustMRR SSR HTML...");
   const trustResult = await syncTrustMrr(guard, prevBySource("trustmrr"));
 
-  console.log("[BENCH sync] 5/5 Fetching Uneed SSR HTML...");
+  console.log("[DISPENSER sync] 7/7 Fetching Uneed SSR HTML...");
   const uneedResult = await syncUneed(guard, prevBySource("uneed"));
 
+  // Preserve previously verified media URLs if URL matches
+  const prevMediaByUrl = new Map();
+  for (const pb of prevBuilders) {
+    if (pb.demoVideoUrl || pb.previewImageUrl) {
+      prevMediaByUrl.set(pb.url.toLowerCase().replace(/\/+$/, ""), {
+        demoVideoUrl: pb.demoVideoUrl || null,
+        previewImageUrl: pb.previewImageUrl || null,
+        mediaSourceLabel: pb.mediaSourceLabel || null,
+      });
+    }
+  }
+
   const mergedMap = new Map();
-  for (const list of [trustResult.items, showHnResult.items, phResult.items, uneedResult.items]) {
+  for (const list of [
+    githubResult.items,
+    trustResult.items,
+    redditResult.items,
+    showHnResult.items,
+    phResult.items,
+    uneedResult.items,
+  ]) {
     for (const item of list) {
       const key = item.url.toLowerCase().replace(/\/+$/, "");
-      if (!mergedMap.has(key)) mergedMap.set(key, item);
+      if (!mergedMap.has(key)) {
+        const prevM = prevMediaByUrl.get(key);
+        if (prevM && !item.demoVideoUrl && !item.previewImageUrl) {
+          item.demoVideoUrl = prevM.demoVideoUrl;
+          item.previewImageUrl = prevM.previewImageUrl;
+          item.mediaSourceLabel = prevM.mediaSourceLabel;
+        }
+        mergedMap.set(key, item);
+      }
     }
   }
   const builders = Array.from(mergedMap.values());
 
-  const xEnriched = await enrichXLinks(builders, guard);
+  console.log("[DISPENSER sync] Enriching OpenGraph / README demo media for top builders...");
+  const ogMediaFound = await enrichBuilderOpenGraphMedia(builders, guard, mediaCache);
 
-  console.log(`[BENCH sync] Translating ${builders.length} overseas builder taglines (cached)...`);
+  console.log(`[DISPENSER sync] Translating ${builders.length} builder taglines (cached)...`);
   await translateBatchToKo(
     builders.map((b) => b.taglineEn),
     translationCache,
@@ -1059,14 +1697,90 @@ async function main() {
     );
     b.mechanism = mechId;
     b.mechanismLabel = MECHANISM_BY_ID[mechId]?.label || b.mechanismLabel;
+    b.techDigestKo = buildTechDigestForBuilder(b);
   }
 
-  const treatments = buildHumanSeedTreatments(builders, radarResult.items);
+  const domains = readJson(BLUEPRINTS_PATH, { domains: [] }).domains || [];
+  const domainBySlug = Object.fromEntries(domains.map((d) => [d.slug, d]));
+  const builderById = new Map(builders.map((b) => [b.id, b]));
+  const radarById = new Map(radarResult.items.map((r) => [r.id, r]));
+  const nowIso = new Date().toISOString();
+
+  let treatments = [];
+
+  // Mode 1: Gemini 2.5 Flash Smart Pairer when GEMINI_API_KEY is present
+  const geminiPairings = await pairSignalsWithGemini({
+    builders,
+    radars: radarResult.items,
+    targetTotal: 50,
+  });
+
+  if (geminiPairings && geminiPairings.length >= 10) {
+    console.log(`[DISPENSER sync] Gemini Flash generated ${geminiPairings.length} smart pairings!`);
+    treatments = geminiPairings.map((p, idx) =>
+      hydratePairingToTreatment({
+        pairing: p,
+        builder: builderById.get(p.builderId) || builders[idx % builders.length],
+        radar: radarById.get(p.radarId) || radarResult.items[idx % radarResult.items.length],
+        domain: domainBySlug[p.domainSlug] || domains[idx % domains.length],
+        index: idx,
+        synthesisMode: "llm-gemini",
+        nowIso,
+      })
+    );
+  }
+
+  // Mode 2: Curated 50 human-planner seeds hydrated with freshest live signals & verified media
+  if (treatments.length < 50 && fs.existsSync(CURATED_SEEDS_PATH)) {
+    const curatedData = readJson(CURATED_SEEDS_PATH, { items: [] });
+    const curatedItems = Array.isArray(curatedData.items) ? curatedData.items : [];
+    const seenTitles = new Set(treatments.map((t) => t.title));
+    console.log(`[DISPENSER sync] Hydrating ${curatedItems.length} curated planner seeds with live media...`);
+
+    for (let i = 0; i < curatedItems.length && treatments.length < 50; i += 1) {
+      const c = curatedItems[i];
+      if (!c?.title || seenTitles.has(c.title)) continue;
+      const builder =
+        builderById.get(c.builderId) ||
+        builders.find((b) => b.name.toLowerCase() === String(c.builderName || "").toLowerCase()) ||
+        builders[i % builders.length];
+      const radar =
+        radarById.get(c.radarId) ||
+        radarResult.items[i % radarResult.items.length];
+      const domain = domainBySlug[c.domainSlug] || domains[i % domains.length];
+
+      seenTitles.add(c.title);
+      treatments.push(
+        hydratePairingToTreatment({
+          pairing: c,
+          builder,
+          radar,
+          domain,
+          index: treatments.length,
+          synthesisMode: "curated",
+          nowIso,
+        })
+      );
+    }
+  }
+
+  // Mode 3: Deterministic fallback if curated seeds don't exist yet
+  if (treatments.length < 50) {
+    const fallback = buildFallbackTreatments(builders, radarResult.items, domains);
+    const seenTitles = new Set(treatments.map((t) => t.title));
+    for (const item of fallback) {
+      if (treatments.length >= 50) break;
+      if (seenTitles.has(item.title)) continue;
+      seenTitles.add(item.title);
+      treatments.push(item);
+    }
+  }
 
   const bySource = {};
   for (const b of builders) bySource[b.source] = (bySource[b.source] || 0) + 1;
+  const verifiedMediaCount = builders.filter((b) => b.demoVideoUrl || b.previewImageUrl).length;
 
-  const syncedAt = new Date().toISOString();
+  const syncedAt = nowIso;
   const syncMeta = {
     syncedAt,
     counts: {
@@ -1074,31 +1788,35 @@ async function main() {
       builderTotal: builders.length,
       bySource,
       verifiedRevenueCount: builders.filter((b) => b.verifiedRevenue).length,
+      verifiedMediaCount,
       treatmentsSeed: treatments.length,
     },
     sources: [
       { id: "ai_radar", label: "AI Radar (GitHub Raw)", status: radarResult.status, count: radarResult.items.length, cached304: Boolean(radarResult.cached304), note: radarResult.note },
+      { id: "github_trending", label: "GitHub Trending Open Source", status: githubResult.status, count: bySource.github_trending || 0, cached304: Boolean(githubResult.cached304), note: githubResult.note },
+      { id: "reddit", label: "Reddit (SideProject · LocalLLaMA)", status: redditResult.status, count: bySource.reddit || 0, cached304: Boolean(redditResult.cached304), note: redditResult.note },
       { id: "show_hn", label: "Show HN Algolia API", status: showHnResult.status, count: bySource.show_hn || 0, cached304: Boolean(showHnResult.cached304), note: showHnResult.note },
       { id: "product_hunt", label: "Product Hunt Atom Feed", status: phResult.status, count: bySource.product_hunt || 0, cached304: Boolean(phResult.cached304), note: phResult.note },
       { id: "trustmrr", label: "TrustMRR SSR", status: trustResult.status, count: bySource.trustmrr || 0, cached304: Boolean(trustResult.cached304), note: trustResult.note },
       { id: "uneed", label: "Uneed SSR", status: uneedResult.status, count: bySource.uneed || 0, cached304: Boolean(uneedResult.cached304), note: uneedResult.note },
-      { id: "x_oembed", label: "X oEmbed Adapter", status: 200, count: xEnriched, note: `${xEnriched} X URLs enriched` },
+      { id: "media_verifier", label: "Demo Video & OG Media Verifier", status: 200, count: verifiedMediaCount, note: `${ogMediaFound} newly enriched via OG/README` },
     ],
   };
 
   writeJson(TRANSLATION_CACHE_PATH, translationCache);
-  writeJson(path.join(PUBLIC_DATA, "ai-radar-signals.json"), { version: 1, syncedAt, count: radarResult.items.length, items: radarResult.items });
-  writeJson(path.join(PUBLIC_DATA, "builder-signals.json"), { version: 1, syncedAt, count: builders.length, items: builders });
-  writeJson(path.join(PUBLIC_DATA, "treatments-seed.json"), { version: 1, syncedAt, count: treatments.length, items: treatments });
+  writeJson(MEDIA_CACHE_PATH, mediaCache);
+  writeJson(path.join(PUBLIC_DATA, "ai-radar-signals.json"), { version: 2, syncedAt, count: radarResult.items.length, items: radarResult.items });
+  writeJson(path.join(PUBLIC_DATA, "builder-signals.json"), { version: 2, syncedAt, count: builders.length, items: builders });
+  writeJson(path.join(PUBLIC_DATA, "treatments-seed.json"), { version: 2, syncedAt, count: treatments.length, items: treatments });
   writeJson(path.join(PUBLIC_DATA, "sync-meta.json"), syncMeta);
   guard.save();
 
-  console.log("[BENCH sync] Done:", JSON.stringify(syncMeta.counts));
+  console.log("[DISPENSER sync] Done:", JSON.stringify(syncMeta.counts));
   if (builders.length < 45) process.exit(1);
   if (radarResult.items.length < 80) process.exit(1);
 }
 
 main().catch((err) => {
-  console.error("[BENCH sync] Fatal error:", err);
+  console.error("[DISPENSER sync] Fatal error:", err);
   process.exit(1);
 });

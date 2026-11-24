@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
 import { loadAiRadarSignals, loadBuilderSignals } from "@/lib/data-loader";
 import { DOMAIN_LIST, isValidDomainSlug } from "@/lib/domains";
-import { matchAiRadarFor, synthesizeTreatment } from "@/lib/synthesis-engine";
+import {
+  ensureQuestionHeadline,
+  matchAiRadarFor,
+  synthesizeTreatment,
+} from "@/lib/synthesis-engine";
 import { sanitizeEditorialText } from "@/lib/text-clean";
 import { fetchXOembedSignal, isXPostUrl } from "@/lib/x-oembed";
 import type { BuilderSignal, DomainSlug, Treatment } from "@/lib/types";
@@ -22,20 +26,19 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
   const anthropicKey = process.env.ANTHROPIC_API_KEY?.trim();
   if (!geminiKey && !anthropicKey) return base;
 
-  const prompt = `당신은 초기 스타트업과 사이드 프로젝트 메이커를 돕는 프로덕트 기획자입니다.
-아래 기획 초안을 첫 방문자가 제목만 읽어도 화면이 바로 그려지는 자연스러운 한국어로 다듬어 JSON 객체만 반환하세요.
-금지: 과장 수식어, 이모지, 원시 "==" 기호, 어려운 개발 용어 남발.
-필수 JSON 키: {"title": string, "oneLineHook": string, "firstThreeSecondsUx": string, "mvpFeatures": [string, string, string]}
+  const prompt = `당신은 글로벌 오픈소스와 최신 AI 이슈를 결합해 기발한 웹 서비스를 설계하는 수석 프로덕트 기획자입니다.
+아래 초안을 호기심을 자극하는 질문형 제목("~한다면?" / "~한 서비스를 만들어본다면?")과 3~4문장의 밀도 높은 결합 스토리로 다듬어 JSON 객체만 반환하세요.
+금지: 과장 수식어, 이모지, 원시 "==" 기호, 기계식 짜깁기 문장.
+필수 JSON 키: {"title": string, "oneLineHook": string, "fusionStoryKo": string, "firstThreeSecondsUx": string, "mvpFeatures": [string, string, string]}
 
 초안:
-- 분야: ${base.domainLabel}${base.customTopic ? ` (맞춤 주제: ${base.customTopic})` : ""}
-- 해외 사례: ${base.sampleA.name} (${base.sampleA.shortMetricLabel}) — ${base.sampleA.overseasProofKo}
-- AI 기술: ${base.sampleB.titleKo} — ${base.sampleB.bottleneckSolvedKo}
+- 원본 기술: ${base.sampleA.name} (${base.sampleA.shortMetricLabel}) — ${base.sampleA.summaryKo}
+- 실시간 AI 이슈: ${base.sampleB.titleKo} — ${base.sampleB.summaryKo}
 - 핵심 기능 3가지: ${JSON.stringify(base.mvpFeatures)}`;
 
   try {
     if (geminiKey) {
-      const model = process.env.BENCH_GEMINI_MODEL || "gemini-2.5-flash";
+      const model = process.env.DISPENSER_GEMINI_MODEL || "gemini-2.5-flash";
       const res = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(geminiKey)}`,
         {
@@ -43,7 +46,7 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: { responseMimeType: "application/json", temperature: 0.35 },
+            generationConfig: { responseMimeType: "application/json", temperature: 0.45 },
           }),
           signal: AbortSignal.timeout(12000),
         }
@@ -57,9 +60,12 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
         if (parsed.title && Array.isArray(parsed.mvpFeatures) && parsed.mvpFeatures.length === 3) {
           return {
             ...base,
-            title: sanitizeEditorialText(parsed.title),
+            title: ensureQuestionHeadline(parsed.title),
             oneLineHook: sanitizeEditorialText(parsed.oneLineHook || base.oneLineHook),
-            firstThreeSecondsUx: sanitizeEditorialText(parsed.firstThreeSecondsUx || base.firstThreeSecondsUx),
+            fusionStoryKo: sanitizeEditorialText(parsed.fusionStoryKo || base.fusionStoryKo),
+            firstThreeSecondsUx: sanitizeEditorialText(
+              parsed.firstThreeSecondsUx || base.firstThreeSecondsUx
+            ),
             mvpFeatures: [
               sanitizeEditorialText(parsed.mvpFeatures[0]),
               sanitizeEditorialText(parsed.mvpFeatures[1]),
@@ -72,7 +78,7 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
     }
 
     if (anthropicKey) {
-      const model = process.env.BENCH_ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
+      const model = process.env.DISPENSER_ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
         headers: {
@@ -99,9 +105,12 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
           if (parsed.title && Array.isArray(parsed.mvpFeatures) && parsed.mvpFeatures.length === 3) {
             return {
               ...base,
-              title: sanitizeEditorialText(parsed.title),
+              title: ensureQuestionHeadline(parsed.title),
               oneLineHook: sanitizeEditorialText(parsed.oneLineHook || base.oneLineHook),
-              firstThreeSecondsUx: sanitizeEditorialText(parsed.firstThreeSecondsUx || base.firstThreeSecondsUx),
+              fusionStoryKo: sanitizeEditorialText(parsed.fusionStoryKo || base.fusionStoryKo),
+              firstThreeSecondsUx: sanitizeEditorialText(
+                parsed.firstThreeSecondsUx || base.firstThreeSecondsUx
+              ),
               mvpFeatures: [
                 sanitizeEditorialText(parsed.mvpFeatures[0]),
                 sanitizeEditorialText(parsed.mvpFeatures[1]),

@@ -13,12 +13,12 @@ export default async function TreatmentOpenGraphImage({
   const { id } = await params;
   const treatment = loadSeedTreatments().find((t) => t.id === id);
 
-  const title = treatment?.title || "BENCH. Product Idea";
-  const domain = treatment?.domainLabel || "BENCH.";
+  const title = treatment?.title || "DISPENSER Product Idea";
+  const cadence = treatment?.buildCadence || "5~7일 MVP";
   const sampleA = treatment
     ? `${treatment.sampleA.name} (${treatment.sampleA.shortMetricLabel})`
-    : "Overseas Builder Signal";
-  const sampleB = treatment?.sampleB.titleKo || "AI Radar Signal";
+    : "Global Open-Source Signal";
+  const sampleB = treatment?.sampleB.titleKo || "Live AI Radar Signal";
 
   return new ImageResponse(
     (
@@ -36,8 +36,8 @@ export default async function TreatmentOpenGraphImage({
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: 30, fontWeight: 800 }}>
-            <span>BENCH</span>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: 30, fontWeight: 800, letterSpacing: "0.05em" }}>
+            <span>DISPENSER</span>
             <span
               style={{
                 width: "10px",
@@ -59,7 +59,7 @@ export default async function TreatmentOpenGraphImage({
               fontWeight: 700,
             }}
           >
-            {domain}
+            {cadence}
           </div>
         </div>
 
@@ -73,7 +73,7 @@ export default async function TreatmentOpenGraphImage({
 
         <div
           style={{
-            borderTop: "1px solid #E5E7EB",
+            borderTop: "1px solid #E2E8F0",
             paddingTop: "20px",
             display: "flex",
             justifyContent: "space-between",
@@ -81,8 +81,8 @@ export default async function TreatmentOpenGraphImage({
             color: "#64748B",
           }}
         >
-          <span style={{ display: "flex" }}>{treatment?.buildCadence || "3~7일 MVP"}</span>
-          <span style={{ display: "flex", color: "#0F172A", fontWeight: 700 }}>BENCH.</span>
+          <span style={{ display: "flex" }}>Global Open Source × Live AI Issue</span>
+          <span style={{ display: "flex", color: "#0F172A", fontWeight: 800 }}>DISPENSER</span>
         </div>
       </div>
     ),

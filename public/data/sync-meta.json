@@ -1,64 +1,82 @@
 {
-  "syncedAt": "2026-11-24T00:40:42.718Z",
+  "syncedAt": "2026-11-24T01:39:24.895Z",
   "counts": {
     "aiRadar": 100,
-    "builderTotal": 88,
+    "builderTotal": 106,
     "bySource": {
+      "github_trending": 26,
       "trustmrr": 16,
-      "show_hn": 34,
-      "product_hunt": 22,
+      "show_hn": 28,
+      "product_hunt": 20,
       "uneed": 16
     },
     "verifiedRevenueCount": 16,
-    "treatmentsSeed": 40
+    "verifiedMediaCount": 59,
+    "treatmentsSeed": 50
   },
   "sources": [
     {
       "id": "ai_radar",
       "label": "AI Radar (GitHub Raw)",
-      "status": 0,
+      "status": 304,
       "count": 100,
+      "cached304": true,
+      "note": "ETag 304 cached"
+    },
+    {
+      "id": "github_trending",
+      "label": "GitHub Trending Open Source",
+      "status": 200,
+      "count": 26,
       "cached304": false,
-      "note": "fetch failed"
+      "note": "26 GitHub repos (23 with verified media)"
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit (SideProject · LocalLLaMA)",
+      "status": 429,
+      "count": 0,
+      "cached304": false,
+      "note": "0 Reddit builder posts"
     },
     {
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 34,
+      "count": 28,
       "cached304": false,
-      "note": "0 live Show HN items"
+      "note": "28 live Show HN items"
     },
     {
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
-      "status": 0,
-      "count": 22,
+      "status": 200,
+      "count": 20,
       "cached304": false,
-      "note": "fetch failed"
+      "note": "20 Product Hunt entries"
     },
     {
       "id": "trustmrr",
       "label": "TrustMRR SSR",
-      "status": 0,
+      "status": 200,
       "count": 16,
       "cached304": false,
-      "note": "fetch failed"
+      "note": "16 TrustMRR verified startups"
     },
     {
       "id": "uneed",
       "label": "Uneed SSR",
-      "status": 0,
+      "status": 200,
       "count": 16,
       "cached304": false,
-      "note": "fetch failed"
+      "note": "16 Uneed daily launches"
     },
     {
-      "id": "x_oembed",
-      "label": "X oEmbed Adapter",
+      "id": "media_verifier",
+      "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 0,
-      "note": "0 X URLs enriched"
+      "count": 59,
+      "note": "13 newly enriched via OG/README"
     }
   ]
 }

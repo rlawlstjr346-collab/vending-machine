@@ -1,8 +1,1111 @@
 {
-  "version": 1,
-  "syncedAt": "2026-11-24T00:40:42.718Z",
-  "count": 88,
+  "version": 2,
+  "syncedAt": "2026-11-24T01:39:24.895Z",
+  "count": 106,
   "items": [
+    {
+      "id": "builder-gh-7358315620",
+      "name": "magpie",
+      "slug": "gh-magpie-73583",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/yetone/magpie",
+      "discussionUrl": "https://usemagpie.ai",
+      "taglineEn": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "taglineKo": "모든 에이전트의 모델입니다. 한 곳. 메뉴 표시줄에서 DeepSeek의 Codex, Kimi의 Claude Code.",
+      "summaryKo": "magpie: 모든 에이전트의 모델입니다. 한 곳. 메뉴 표시줄에서 DeepSeek의 Codex, Kimi의 Claude Code.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★40.5k 스타를 모으며 주목받는 오픈소스 프로젝트(yetone/magpie)입니다.",
+      "tractionLabel": "GitHub ★40.5k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "claude-code",
+        "codex",
+        "deepseek",
+        "gemini-cli"
+      ],
+      "publishedAt": "2026-09-23T16:22:35Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/yetone/magpie/main/site/public/img/icon-256.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "magpie의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "모든 에이전트의 모델입니다. 한 곳. 메뉴 표시줄에서 DeepSeek의 Codex, Kimi의 Claude Code. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-48ab9530b4",
+      "name": "Filee",
+      "slug": "gh-filee-48ab9",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/KnifeLemon/Filee",
+      "discussionUrl": "https://filee.sh",
+      "taglineEn": "Free, open-source file converter. Convert 263 formats offline by drag & drop — images, PDF, Word, Excel, PowerPoint, HWP/HWPX, video, audio, e-books and archives. No upload, no Office needed.",
+      "taglineKo": "무료 오픈 소스 파일 변환기. 이미지, PDF, Word, Excel, PowerPoint, HWP/HWPX, 비디오, 오디오, 전자책, 아카이브 등 263개 형식을 드래그 앤 드롭으로 오프라인으로 변환하세요. 업로드도 필요 없고 Office도 필요하지 않습니다.",
+      "summaryKo": "Filee: 무료 오픈 소스 파일 변환기. 이미지, PDF, Word, Excel, PowerPoint, HWP/HWPX, 비디오, 오디오, 전자책, 아카이브 등 263개 형식을 드래그 앤 드롭으로 오프라인으로 변환하세요. 업로드도 필요 없고 Office도 필요하지 않습니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★30.3k 스타를 모으며 주목받는 오픈소스 프로젝트(KnifeLemon/Filee)입니다.",
+      "tractionLabel": "GitHub ★30.3k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "audio-converter",
+        "avalonia",
+        "batch-conversion",
+        "converter"
+      ],
+      "publishedAt": "2026-09-29T20:05:15Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/KnifeLemon/Filee/main/docs/media/banner-en.jpg",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "Filee 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "무료 오픈 소스 파일 변환기. 이미지, PDF, Word, Excel, PowerPoint, HWP/HWPX, 비디오, 오디오, 전자책, 아카이브 등 263개 형식을 드래그 앤 드롭으로 오프라인으로 변환하세요. 업로드도 필요 없고 Office도 필요하"
+      }
+    },
+    {
+      "id": "builder-gh-0909693c33",
+      "name": "anatomy",
+      "slug": "gh-anatomy-09096",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/wheresryan22/anatomy",
+      "discussionUrl": "https://skills.wheresryan.sh/anatomy",
+      "taglineEn": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
+      "taglineKo": "실제 기계와 복잡한 시스템에 대한 상세한 대화형 등각 투영 일러스트레이션을 생성하는 에이전트 기술입니다. 선택적 WebGL 셰이더 및 3D 효과를 사용하여 세련된 SVG를 생성합니다.",
+      "summaryKo": "anatomy: 실제 기계와 복잡한 시스템에 대한 상세한 대화형 등각 투영 일러스트레이션을 생성하는 에이전트 기술입니다. 선택적 WebGL 셰이더 및 3D 효과를 사용하여 세련된 SVG를 생성합니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★28.9k 스타를 모으며 주목받는 오픈소스 프로젝트(wheresryan22/anatomy)입니다.",
+      "tractionLabel": "GitHub ★28.9k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skill",
+        "open-source",
+        "svg",
+        "vizualization"
+      ],
+      "publishedAt": "2026-10-08T10:12:49Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/wheresryan22/anatomy/main/.github/assets/raptor-engine-firing.webp",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "anatomy 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "실제 기계와 복잡한 시스템에 대한 상세한 대화형 등각 투영 일러스트레이션을 생성하는 에이전트 기술입니다. 선택적 WebGL 셰이더 및 3D 효과를 사용하여 세련된 SVG를 생성합니다. (음성·오디오 정리 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-c8a932cf77",
+      "name": "jev-ultrafast",
+      "slug": "gh-jev-ultrafast-c8a93",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "discussionUrl": "https://browser-use.com",
+      "taglineEn": "Fastest and cheapest web agent",
+      "taglineKo": "가장 빠르고 저렴한 웹 에이전트",
+      "summaryKo": "jev-ultrafast: 가장 빠르고 저렴한 웹 에이전트",
+      "painPointKo": "최근 GitHub에서 빠르게 ★24.7k 스타를 모으며 주목받는 오픈소스 프로젝트(browser-use/jev-ultrafast)입니다.",
+      "tractionLabel": "GitHub ★24.7k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source"
+      ],
+      "publishedAt": "2026-09-16T21:30:12Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/docs/demo.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "jev-ultrafast의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "가장 빠르고 저렴한 웹 에이전트 (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-ee9e919afb",
+      "name": "dsh-superagent-prototype",
+      "slug": "gh-dsh-superagent-prototype-ee9e9",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "discussionUrl": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "taglineEn": "Towards a More Autonomous Agent System",
+      "taglineKo": "보다 자율적인 에이전트 시스템을 향하여",
+      "summaryKo": "dsh-superagent-prototype: 보다 자율적인 에이전트 시스템을 향하여",
+      "painPointKo": "최근 GitHub에서 빠르게 ★24.4k 스타를 모으며 주목받는 오픈소스 프로젝트(deepseek-ai/dsh-superagent-prototype)입니다.",
+      "tractionLabel": "GitHub ★24.4k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
+      "tags": [
+        "github",
+        "open-source"
+      ],
+      "publishedAt": "2026-10-31T09:32:46Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "dsh-superagent-prototype 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "보다 자율적인 에이전트 시스템을 향하여 (음성·오디오 정리 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-47441e46b9",
+      "name": "elephant-goldfish-model",
+      "slug": "gh-elephant-goldfish-model-47441",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/google/elephant-goldfish-model",
+      "discussionUrl": "https://egm.dev",
+      "taglineEn": "Open-source plugin for designing and reviewing software with agents",
+      "taglineKo": "에이전트를 사용하여 소프트웨어를 설계하고 검토하기 위한 오픈 소스 플러그인",
+      "summaryKo": "elephant-goldfish-model: 에이전트를 사용하여 소프트웨어를 설계하고 검토하기 위한 오픈 소스 플러그인",
+      "painPointKo": "최근 GitHub에서 빠르게 ★22.4k 스타를 모으며 주목받는 오픈소스 프로젝트(google/elephant-goldfish-model)입니다.",
+      "tractionLabel": "GitHub ★22.4k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skills",
+        "ai-agents",
+        "antigravity",
+        "claude-code"
+      ],
+      "publishedAt": "2026-09-13T16:31:06Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/5912894/698718516-93c799a2-10a3-4266-af02-eb79dd33a9a2.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011908Z&X-Amz-Expires=300&X-Amz-Signature=2d647c039611d4dfa9a38702b748e88146ca86e8418011c581bf68253cc3f2a3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+      "previewImageUrl": null,
+      "mediaSourceLabel": "원본 기술 시연 영상",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "elephant-goldfish-model의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "에이전트를 사용하여 소프트웨어를 설계하고 검토하기 위한 오픈 소스 플러그인 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-c8a902128b",
+      "name": "lemo-opuscar",
+      "slug": "gh-lemo-opuscar-c8a90",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/lemomo-ai/lemo-opuscar",
+      "discussionUrl": "https://lemomo-ai.github.io/lemo-opuscar/",
+      "taglineEn": "A toolbox of film styles made in code for Claude Code: 99 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具",
+      "taglineKo": "Claude Code: 99를 위한 코드로 제작된 영화 스타일 도구 상자로 바로 사용할 수 있습니다. 각 스타일은 비디오 모델 없이 Claude Opus 5.5의 코드로 완전히 제작된 데모 영상과 스타일 프롬프트로 구성됩니다. 레모모로. · 一套用代码做 Images 风格工具",
+      "summaryKo": "lemo-opuscar: Claude Code: 99를 위한 코드로 제작된 영화 스타일 도구 상자로 바로 사용할 수 있습니다. 각 스타일은 비디오 모델 없이 Claude Opus 5.5의 코드로 완전히 제작된 데모 영상과 스타일 프롬프트로 구성됩니다. 레모모로. · 一套用代码做 Images 风格工具",
+      "painPointKo": "최근 GitHub에서 빠르게 ★20.3k 스타를 모으며 주목받는 오픈소스 프로젝트(lemomo-ai/lemo-opuscar)입니다.",
+      "tractionLabel": "GitHub ★20.3k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skills",
+        "ai-agents",
+        "ai-short-film",
+        "ai-video"
+      ],
+      "publishedAt": "2026-09-26T10:10:41Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cover-en.webp",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "lemo-opuscar 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "Claude Code: 99를 위한 코드로 제작된 영화 스타일 도구 상자로 바로 사용할 수 있습니다. 각 스타일은 비디오 모델 없이 Claude Opus 5.5의 코드로 완전히 제작된 데모 영상과 스타일 프롬프트로 구성됩니다. 레모모로. · 一套用代码"
+      }
+    },
+    {
+      "id": "builder-gh-1f7cf4e8bc",
+      "name": "filmcraft",
+      "slug": "gh-filmcraft-1f7cf",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/storytold/filmcraft",
+      "discussionUrl": "https://getartcraft.com/apps/filmcraft",
+      "taglineEn": "FilmCraft: An open-source, nonlinear video editor written from scratch in pure Rust",
+      "taglineKo": "FilmCraft: An open-source, nonlinear video editor written from scratch in pure Rust",
+      "summaryKo": "filmcraft: FilmCraft: An open-source, nonlinear video editor written from scratch in pure Rust",
+      "painPointKo": "최근 GitHub에서 빠르게 ★18.9k 스타를 모으며 주목받는 오픈소스 프로젝트(storytold/filmcraft)입니다.",
+      "tractionLabel": "GitHub ★18.9k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "canvas-compare",
+      "mechanismLabel": "나란히 비교 보드",
+      "tags": [
+        "github",
+        "open-source",
+        "art",
+        "rust",
+        "video",
+        "video-editing"
+      ],
+      "publishedAt": "2026-09-30T13:41:20Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.filmcraft.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "filmcraft 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "FilmCraft: An open-source, nonlinear video editor written from scratch in pure Rust (A·B 비교 보드 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-14b42e6496",
+      "name": "solidcraft",
+      "slug": "gh-solidcraft-14b42",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/tangency-labs/solidcraft",
+      "discussionUrl": "https://solidcraft.io",
+      "taglineEn": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+      "taglineKo": "SolidCraft: 순수 Rust로 구축된 오픈 소스 파라메트릭 3D CAD 애플리케이션입니다. MCP를 통한 데스크톱, 웹 및 자동화.",
+      "summaryKo": "solidcraft: SolidCraft: 순수 Rust로 구축된 오픈 소스 파라메트릭 3D CAD 애플리케이션입니다. MCP를 통한 데스크톱, 웹 및 자동화.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★17.9k 스타를 모으며 주목받는 오픈소스 프로젝트(tangency-labs/solidcraft)입니다.",
+      "tractionLabel": "GitHub ★17.9k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "3d-modeling",
+        "brep",
+        "cad",
+        "egui"
+      ],
+      "publishedAt": "2026-10-07T18:57:48Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/docs/screenshots/demo.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "solidcraft의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "SolidCraft: 순수 Rust로 구축된 오픈 소스 파라메트릭 3D CAD 애플리케이션입니다. MCP를 통한 데스크톱, 웹 및 자동화. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-dc3ddfe730",
+      "name": "ARTEX",
+      "slug": "gh-artex-dc3dd",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/BaaRai/ARTEX",
+      "discussionUrl": "https://github.com/BaaRai/ARTEX",
+      "taglineEn": "ARTEX - AI autonomous penetration testing system (English translation; upstream: Autumn-27/ARTEX, AGPL-3.0)",
+      "taglineKo": "ARTEX - AI 자율 침투 테스트 시스템(영어 번역, 업스트림: Autumn-27/ARTEX, AGPL-3.0)",
+      "summaryKo": "ARTEX: ARTEX - AI 자율 침투 테스트 시스템(영어 번역, 업스트림: Autumn-27/ARTEX, AGPL-3.0)",
+      "painPointKo": "최근 GitHub에서 빠르게 ★17.8k 스타를 모으며 주목받는 오픈소스 프로젝트(BaaRai/ARTEX)입니다.",
+      "tractionLabel": "GitHub ★17.8k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
+      "tags": [
+        "github",
+        "open-source",
+        "ai",
+        "ai-agents",
+        "autonomous-agents",
+        "bug-bounty"
+      ],
+      "publishedAt": "2026-10-08T21:14:39Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/BaaRai/ARTEX/main/screenshots/tasks.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "ARTEX 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "ARTEX - AI 자율 침투 테스트 시스템(영어 번역, 업스트림: Autumn-27/ARTEX, AGPL-3.0) (음성·오디오 정리 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-4d793e1102",
+      "name": "awesome-opus5-5-videos",
+      "slug": "gh-awesome-opus5-5-videos-4d793",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+      "discussionUrl": "https://skillry.dev/ai-videos/opus-5-5",
+      "taglineEn": "A growing collection of viral videos made with Claude Opus 5.5 and the prompts behind them. Watch each original next to a live remake on Skillry. Updated regularly.",
+      "taglineKo": "Claude Opus 5.5로 제작된 점점 늘어나는 바이럴 비디오 컬렉션과 그 이면의 프롬프트. Skillry의 라이브 리메이크 옆에서 각 원본을 시청하세요. 정기적으로 업데이트됩니다.",
+      "summaryKo": "awesome-opus5-5-videos: Claude Opus 5.5로 제작된 점점 늘어나는 바이럴 비디오 컬렉션과 그 이면의 프롬프트. Skillry의 라이브 리메이크 옆에서 각 원본을 시청하세요. 정기적으로 업데이트됩니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★16.3k 스타를 모으며 주목받는 오픈소스 프로젝트(yihui-dev/awesome-opus5-5-videos)입니다.",
+      "tractionLabel": "GitHub ★16.3k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "ai-video",
+        "awesome",
+        "awesome-list",
+        "claude"
+      ],
+      "publishedAt": "2026-09-27T06:19:36Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "awesome-opus5-5-videos 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "Claude Opus 5.5로 제작된 점점 늘어나는 바이럴 비디오 컬렉션과 그 이면의 프롬프트. Skillry의 라이브 리메이크 옆에서 각 원본을 시청하세요. 정기적으로 업데이트됩니다. (핵심 구간 저장 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-450f908fd9",
+      "name": "rea-video",
+      "slug": "gh-rea-video-450f9",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/JuneYaooo/rea-video",
+      "discussionUrl": "https://www.reavideo.ai/",
+      "taglineEn": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI 生成的还是代码做的，再告诉你怎么复刻；拆解结果按 VIDEO.md 格式输出。",
+      "taglineKo": "촬영, AI 생성 또는 코딩 등 모든 비디오를 장면별로 리버스 엔지니어링하고 리메이크하는 방법을 알아보세요. 공개 VIDEO.md 형식의 분석입니다.",
+      "summaryKo": "rea-video: 촬영, AI 생성 또는 코딩 등 모든 비디오를 장면별로 리버스 엔지니어링하고 리메이크하는 방법을 알아보세요. 공개 VIDEO.md 형식의 분석입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★12.7k 스타를 모으며 주목받는 오픈소스 프로젝트(JuneYaooo/rea-video)입니다.",
+      "tractionLabel": "GitHub ★12.7k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skills",
+        "ai-video",
+        "aigc-detection",
+        "claude-code"
+      ],
+      "publishedAt": "2026-10-29T16:15:01Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/docs/cases/demo.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "rea-video 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "촬영, AI 생성 또는 코딩 등 모든 비디오를 장면별로 리버스 엔지니어링하고 리메이크하는 방법을 알아보세요. 공개 VIDEO.md 형식의 분석입니다. (핵심 구간 저장 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-68aabaadec",
+      "name": "learnharness",
+      "slug": "gh-learnharness-68aab",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/amosblomqvist/learnharness",
+      "discussionUrl": "https://github.com/amosblomqvist/learnharness",
+      "taglineEn": "Agent harness for learning difficult things.",
+      "taglineKo": "어려운 것을 배우기 위한 에이전트 하네스.",
+      "summaryKo": "learnharness: 어려운 것을 배우기 위한 에이전트 하네스.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★11.6k 스타를 모으며 주목받는 오픈소스 프로젝트(amosblomqvist/learnharness)입니다.",
+      "tractionLabel": "GitHub ★11.6k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source"
+      ],
+      "publishedAt": "2026-10-16T19:35:33Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/docs/assets/lh_banner_light.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "learnharness의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "어려운 것을 배우기 위한 에이전트 하네스. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-84a0c5cac8",
+      "name": "agent_skills",
+      "slug": "gh-agent-skills-84a0c",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/janestreet/agent_skills",
+      "discussionUrl": "https://github.com/janestreet/agent_skills",
+      "taglineEn": "Agent skills",
+      "taglineKo": "에이전트 스킬",
+      "summaryKo": "agent_skills: 에이전트 스킬",
+      "painPointKo": "최근 GitHub에서 빠르게 ★11.4k 스타를 모으며 주목받는 오픈소스 프로젝트(janestreet/agent_skills)입니다.",
+      "tractionLabel": "GitHub ★11.4k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source"
+      ],
+      "publishedAt": "2026-11-03T16:50:21Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "agent_skills의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "에이전트 스킬 (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-c3c271988d",
+      "name": "AIHOT",
+      "slug": "gh-aihot-c3c27",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "discussionUrl": "https://aihot.news",
+      "taglineEn": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+      "taglineKo": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+      "summaryKo": "AIHOT: 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+      "painPointKo": "최근 GitHub에서 빠르게 ★11.3k 스타를 모으며 주목받는 오픈소스 프로젝트(KKKKhazix/AIHOT)입니다.",
+      "tractionLabel": "GitHub ★11.3k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "ai",
+        "chinese",
+        "content-curation",
+        "daily-digest"
+      ],
+      "publishedAt": "2026-09-28T23:40:05Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/docs/assets/banner-light.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "AIHOT의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。 (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-6b247360c3",
+      "name": "m3e-canvas",
+      "slug": "gh-m3e-canvas-6b247",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/lnkiai/m3e-canvas",
+      "discussionUrl": "https://lnkiai.github.io/m3e-canvas/",
+      "taglineEn": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+      "taglineKo": "Material 3 브라우저의 표현형 화면을 스케치하고 이를 바이브 코딩 프롬프트로 전환합니다.",
+      "summaryKo": "m3e-canvas: Material 3 브라우저의 표현형 화면을 스케치하고 이를 바이브 코딩 프롬프트로 전환합니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★10.8k 스타를 모으며 주목받는 오픈소스 프로젝트(lnkiai/m3e-canvas)입니다.",
+      "tractionLabel": "GitHub ★10.8k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "canvas-compare",
+      "mechanismLabel": "나란히 비교 보드",
+      "tags": [
+        "github",
+        "open-source",
+        "design-tool",
+        "material-3-expressive",
+        "material-design",
+        "material3"
+      ],
+      "publishedAt": "2026-09-02T04:36:34Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/docs/readme/demo.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "m3e-canvas 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "Material 3 브라우저의 표현형 화면을 스케치하고 이를 바이브 코딩 프롬프트로 전환합니다. (A·B 비교 보드 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-f41992f48d",
+      "name": "spotifast",
+      "slug": "gh-spotifast-f4199",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/crmne/spotifast",
+      "discussionUrl": "https://spotifast.rocks/",
+      "taglineEn": "Spotify, native and fast. One lightweight Rust app for your whole library, local playback, and Spotify Connect on Linux, macOS, and Windows.",
+      "taglineKo": "기본적이고 빠른 Spotify. Linux, macOS, Windows에서 전체 라이브러리, 로컬 재생, Spotify Connect를 위한 하나의 경량 Rust 앱입니다.",
+      "summaryKo": "spotifast: 기본적이고 빠른 Spotify. Linux, macOS, Windows에서 전체 라이브러리, 로컬 재생, Spotify Connect를 위한 하나의 경량 Rust 앱입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★10.7k 스타를 모으며 주목받는 오픈소스 프로젝트(crmne/spotifast)입니다.",
+      "tractionLabel": "GitHub ★10.7k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "audio",
+        "cross-platform",
+        "desktop-app",
+        "egui"
+      ],
+      "publishedAt": "2026-08-27T12:46:32Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/106617/662354478-a5f669ce-b3b7-4f8e-9933-976a78876c7e.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011931Z&X-Amz-Expires=300&X-Amz-Signature=f6790818e318604316f854c836d659382d3d181cbac372f65880e5e09ce22bbf&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+      "previewImageUrl": "https://raw.githubusercontent.com/crmne/spotifast/main/docs/assets/images/winamp.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "spotifast의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "기본적이고 빠른 Spotify. Linux, macOS, Windows에서 전체 라이브러리, 로컬 재생, Spotify Connect를 위한 하나의 경량 Rust 앱입니다. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-2f88b9b56c",
+      "name": "ffmpeg-skill",
+      "slug": "gh-ffmpeg-skill-2f88b",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "discussionUrl": "https://www.npmjs.com/package/ffmpeg-skill",
+      "taglineEn": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "taglineKo": "코딩 에이전트를 위한 로컬 비디오 편집기: Claude Code, Cursor 및 Codex를 위한 기계 판독 가능 계약 및 MCP 서버가 포함된 42개의 FFmpeg 도구. 컷, 캡션, 리프레임, 음량, 플랫폼 내보내기. 클라우드도, API 키도 없습니다.",
+      "summaryKo": "ffmpeg-skill: 코딩 에이전트를 위한 로컬 비디오 편집기: Claude Code, Cursor 및 Codex를 위한 기계 판독 가능 계약 및 MCP 서버가 포함된 42개의 FFmpeg 도구. 컷, 캡션, 리프레임, 음량, 플랫폼 내보내기. 클라우드도, API 키도 없습니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★10.2k 스타를 모으며 주목받는 오픈소스 프로젝트(kajisho5/ffmpeg-skill)입니다.",
+      "tractionLabel": "GitHub ★10.2k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skills",
+        "ai-agents",
+        "audio-processing",
+        "captions"
+      ],
+      "publishedAt": "2026-09-03T14:33:38Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/kajisho5/ffmpeg-skill/main/docs/demos/captions_pop_karaoke.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "ffmpeg-skill 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "코딩 에이전트를 위한 로컬 비디오 편집기: Claude Code, Cursor 및 Codex를 위한 기계 판독 가능 계약 및 MCP 서버가 포함된 42개의 FFmpeg 도구. 컷, 캡션, 리프레임, 음량, 플랫폼 내보내기. 클라우드도, API 키도 없"
+      }
+    },
+    {
+      "id": "builder-gh-0eb455e03a",
+      "name": "universal-modder",
+      "slug": "gh-universal-modder-0eb45",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/rehan-remade/universal-modder",
+      "discussionUrl": "https://github.com/rehan-remade/universal-modder",
+      "taglineEn": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+      "taglineKo": "어떤 게임에서든 클로드를 포인트로 삼으세요. Claude Code가 소유한 거의 모든 PC 게임(정찰, 리버스 엔지니어링, 허위 생성 아트/3D/오디오, 게임 내 테스트, 쇼케이스 비디오)을 수정할 수 있는 기술, 도구 및 잘못된 MCP입니다.",
+      "summaryKo": "universal-modder: 어떤 게임에서든 클로드를 포인트로 삼으세요. Claude Code가 소유한 거의 모든 PC 게임(정찰, 리버스 엔지니어링, 허위 생성 아트/3D/오디오, 게임 내 테스트, 쇼케이스 비디오)을 수정할 수 있는 기술, 도구 및 잘못된 MCP입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★9.9k 스타를 모으며 주목받는 오픈소스 프로젝트(rehan-remade/universal-modder)입니다.",
+      "tractionLabel": "GitHub ★9.9k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
+      "tags": [
+        "github",
+        "open-source",
+        "age-of-empires",
+        "claude-code",
+        "claude-code-plugin",
+        "fal"
+      ],
+      "publishedAt": "2026-09-30T05:00:35Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/docs/media/mods-teaser.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "universal-modder 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "어떤 게임에서든 클로드를 포인트로 삼으세요. Claude Code가 소유한 거의 모든 PC 게임(정찰, 리버스 엔지니어링, 허위 생성 아트/3D/오디오, 게임 내 테스트, 쇼케이스 비디오)을 수정할 수 있는 기술, 도구 및 잘못된 MCP입니다. (음성"
+      }
+    },
+    {
+      "id": "builder-gh-03eaf9e920",
+      "name": "Mika",
+      "slug": "gh-mika-03eaf",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/wangzan101/Mika",
+      "discussionUrl": "https://mikaphone.com",
+      "taglineEn": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+      "taglineKo": "앱과 웹을 작동하여 작업을 완료하는 Android용 온디바이스 AI 에이전트입니다.",
+      "summaryKo": "Mika: 앱과 웹을 작동하여 작업을 완료하는 Android용 온디바이스 AI 에이전트입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★9.8k 스타를 모으며 주목받는 오픈소스 프로젝트(wangzan101/Mika)입니다.",
+      "tractionLabel": "GitHub ★9.8k",
+      "tractionValue": 40000,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "accessibility",
+        "ai-agent",
+        "android",
+        "automation"
+      ],
+      "publishedAt": "2026-10-29T14:34:07Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/wangzan101/Mika/main/docs/media/wechat-send-side.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "Mika의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "앱과 웹을 작동하여 작업을 완료하는 Android용 온디바이스 AI 에이전트입니다. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-15ad407301",
+      "name": "ui",
+      "slug": "gh-ui-15ad4",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/vercel-labs/ui",
+      "discussionUrl": "https://ui-sdk.dev",
+      "taglineEn": "A library of behaviors for agents to build the next generation of user interfaces.",
+      "taglineKo": "차세대 사용자 인터페이스를 구축하기 위한 에이전트의 동작 라이브러리입니다.",
+      "summaryKo": "ui: 차세대 사용자 인터페이스를 구축하기 위한 에이전트의 동작 라이브러리입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★6.8k 스타를 모으며 주목받는 오픈소스 프로젝트(vercel-labs/ui)입니다.",
+      "tractionLabel": "GitHub ★6.8k",
+      "tractionValue": 34145,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "accessibility",
+        "agent",
+        "agents",
+        "ai"
+      ],
+      "publishedAt": "2026-10-26T17:39:27Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "ui의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "차세대 사용자 인터페이스를 구축하기 위한 에이전트의 동작 라이브러리입니다. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-1de3ad8191",
+      "name": "andee",
+      "slug": "gh-andee-1de3a",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/kuafuai/andee",
+      "discussionUrl": "https://heyandee.com",
+      "taglineEn": "Andee lives on your phone or Mac and uses any app like you do—no integrations, no root, any model; memory and passwords never leave your device | Andee 住进你的手机或 Mac，像你一样操作任何 App——无需集成、无需 Root、支持任意模型，记忆和密码绝不离开设备。",
+      "taglineKo": "Andee는 귀하의 휴대폰이나 Mac에서 생활하며 귀하와 마찬가지로 모든 앱을 사용합니다. 통합, 루트, 모델이 없습니다. 메모리와 비밀번호는 기기 외부로 유출되지 않습니다 | Andee는 Mac, image你一样操作任何 앱——无需集成, 无需 Root, 支持任意模型, 记忆 and 密码绝不离开设备。",
+      "summaryKo": "andee: Andee는 귀하의 휴대폰이나 Mac에서 생활하며 귀하와 마찬가지로 모든 앱을 사용합니다. 통합, 루트, 모델이 없습니다. 메모리와 비밀번호는 기기 외부로 유출되지 않습니다 | Andee는 Mac, image你一样操作任何 앱——无需集成, 无需 Root, 支持任意模型, 记忆 and 密码绝不离开设备。",
+      "painPointKo": "최근 GitHub에서 빠르게 ★6.2k 스타를 모으며 주목받는 오픈소스 프로젝트(kuafuai/andee)입니다.",
+      "tractionLabel": "GitHub ★6.2k",
+      "tractionValue": 30930,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "timestamp-archive",
+      "mechanismLabel": "구간 채집 · 아카이빙",
+      "tags": [
+        "github",
+        "open-source",
+        "agent",
+        "ai",
+        "ai-agents",
+        "android-automation"
+      ],
+      "publishedAt": "2026-09-17T13:20:59Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/139328168/710340968-b092ec8d-d9ad-4f6b-9f5f-4312f5f1cedf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011942Z&X-Amz-Expires=300&X-Amz-Signature=1e38d043407454f10e8c25e15cf276ee82880dd221e0dfa7ac497e9973ada1c3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+      "previewImageUrl": "https://raw.githubusercontent.com/kuafuai/andee/main/images/cover.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "andee 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "Andee는 귀하의 휴대폰이나 Mac에서 생활하며 귀하와 마찬가지로 모든 앱을 사용합니다. 통합, 루트, 모델이 없습니다. 메모리와 비밀번호는 기기 외부로 유출되지 않습니다 | Andee는 Mac, image你一样操作任何 앱——无需集成, 无需 Root"
+      }
+    },
+    {
+      "id": "builder-gh-4219bb7710",
+      "name": "MROffice",
+      "slug": "gh-mroffice-4219b",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/XinaTian/MROffice",
+      "discussionUrl": "https://mroffice.ai",
+      "taglineEn": "MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint f",
+      "taglineKo": "MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint f",
+      "summaryKo": "MROffice: MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint f",
+      "painPointKo": "최근 GitHub에서 빠르게 ★2.8k 스타를 모으며 주목받는 오픈소스 프로젝트(XinaTian/MROffice)입니다.",
+      "tractionLabel": "GitHub ★2.8k",
+      "tractionValue": 14180,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "canvas-compare",
+      "mechanismLabel": "나란히 비교 보드",
+      "tags": [
+        "github",
+        "open-source",
+        "ai",
+        "ai-agent",
+        "claude-code",
+        "codex"
+      ],
+      "publishedAt": "2026-11-10T17:54:07Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": "https://demo.mroffice.ai/media/mr-office-demo.mp4",
+      "previewImageUrl": "https://raw.githubusercontent.com/XinaTian/MROffice/main/docs/media/mr-office-demo.webp",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "MROffice 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code"
+      }
+    },
+    {
+      "id": "builder-gh-b868c4a944",
+      "name": "solid-glass",
+      "slug": "gh-solid-glass-b868c",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/deeplethe/solid-glass",
+      "discussionUrl": "https://deeplethe.github.io/solid-glass",
+      "taglineEn": "A design system for AI applications. Material, physical, tactile, technical.",
+      "taglineKo": "AI 애플리케이션을 위한 디자인 시스템. 물질적, 물리적, 촉각적, 기술적.",
+      "summaryKo": "solid-glass: AI 애플리케이션을 위한 디자인 시스템. 물질적, 물리적, 촉각적, 기술적.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★2.4k 스타를 모으며 주목받는 오픈소스 프로젝트(deeplethe/solid-glass)입니다.",
+      "tractionLabel": "GitHub ★2.4k",
+      "tractionValue": 12110,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-ui",
+        "ai",
+        "ai-agents",
+        "chat-ui"
+      ],
+      "publishedAt": "2026-10-12T09:19:02Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/deeplethe/solid-glass/main/docs/banner-5.webp",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "solid-glass 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "AI 애플리케이션을 위한 디자인 시스템. 물질적, 물리적, 촉각적, 기술적. (음성·오디오 정리 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-a097503177",
+      "name": "new-term-radar",
+      "slug": "gh-new-term-radar-a0975",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/zhuyansen/new-term-radar",
+      "discussionUrl": "https://agentskillshub.top/skill/zhuyansen/new-term-radar/",
+      "taglineEn": "Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them.",
+      "taglineKo": "새로운 AI 용어에 대한 일일 레이더: 키워드 도구가 나열하기 전에 X, Hugging Face, GitHub 및 사이트맵에 포착된 새로운 모델, 제품 및 저장소의 이름입니다.",
+      "summaryKo": "new-term-radar: 새로운 AI 용어에 대한 일일 레이더: 키워드 도구가 나열하기 전에 X, Hugging Face, GitHub 및 사이트맵에 포착된 새로운 모델, 제품 및 저장소의 이름입니다.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★2.2k 스타를 모으며 주목받는 오픈소스 프로젝트(zhuyansen/new-term-radar)입니다.",
+      "tractionLabel": "GitHub ★2.2k",
+      "tractionValue": 11080,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "agent-skills",
+        "ai",
+        "aisa",
+        "claude-code"
+      ],
+      "publishedAt": "2026-10-12T07:11:01Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/zhuyansen/new-term-radar/main/docs/radar.en.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "new-term-radar의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "새로운 AI 용어에 대한 일일 레이더: 키워드 도구가 나열하기 전에 X, Hugging Face, GitHub 및 사이트맵에 포착된 새로운 모델, 제품 및 저장소의 이름입니다. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-gh-829fa6d897",
+      "name": "ai-engineering-interview-questions-company-wise",
+      "slug": "gh-ai-engineering-interview-questions-company-wi",
+      "source": "github_trending",
+      "sourceLabel": "GitHub",
+      "url": "https://github.com/pallavi-shekhar/ai-engineering-interview-questions-company-wise",
+      "discussionUrl": "https://outcomeschool.com/program/ai-and-machine-learning",
+      "taglineEn": "Your Cheat Sheet For AI Engineering Interviews at Top AI Companies - Questions and Answers.",
+      "taglineKo": "최고의 AI 기업의 AI 엔지니어링 인터뷰에 대한 치트 시트 - 질문과 답변.",
+      "summaryKo": "ai-engineering-interview-questions-company-wise: 최고의 AI 기업의 AI 엔지니어링 인터뷰에 대한 치트 시트 - 질문과 답변.",
+      "painPointKo": "최근 GitHub에서 빠르게 ★2.1k 스타를 모으며 주목받는 오픈소스 프로젝트(pallavi-shekhar/ai-engineering-interview-questions-company-wise)입니다.",
+      "tractionLabel": "GitHub ★2.1k",
+      "tractionValue": 10545,
+      "tractionType": "stars",
+      "mrrUsd": null,
+      "mechanism": "geo-curation",
+      "mechanismLabel": "취향 지도 · 큐레이션",
+      "tags": [
+        "github",
+        "open-source",
+        "ai",
+        "ai-engineering",
+        "ai-engineering-interview",
+        "ai-interview"
+      ],
+      "publishedAt": "2026-09-19T04:14:43Z",
+      "fetchedAt": "2026-11-24T01:37:58.957Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/pallavi-shekhar/ai-engineering-interview-questions-company-wise/main/assets/banner.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "ai-engineering-interview-questions-company-wise의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "최고의 AI 기업의 AI 엔지니어링 인터뷰에 대한 치트 시트 - 질문과 답변. (취향 지도 묶기 구조)"
+      }
+    },
+    {
+      "id": "builder-tmrr-24e93bd162",
+      "name": "StoreRadar",
+      "slug": "tmrr-storeradar",
+      "source": "trustmrr",
+      "sourceLabel": "TrustMRR",
+      "url": "https://trustmrr.com/startup/storeradar",
+      "discussionUrl": "https://trustmrr.com/startup/storeradar",
+      "taglineEn": "Marketing",
+      "taglineKo": "마케팅",
+      "summaryKo": "StoreRadar: 마케팅 (검증 매출 $3.6k (TrustMRR))",
+      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
+      "tractionLabel": "검증 매출 $3.6k (TrustMRR)",
+      "tractionValue": 3600,
+      "tractionType": "mrr",
+      "mrrUsd": 3600,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "trustmrr",
+        "verified-revenue"
+      ],
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/storeradar/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "StoreRadar의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "마케팅 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-tmrr-3918c2422e",
+      "name": "DocPhoto: passport photo maker",
+      "slug": "tmrr-docphoto-passport-photo-maker",
+      "source": "trustmrr",
+      "sourceLabel": "TrustMRR",
+      "url": "https://trustmrr.com/startup/docphoto",
+      "discussionUrl": "https://trustmrr.com/startup/docphoto",
+      "taglineEn": "Mobile Apps",
+      "taglineKo": "모바일 앱",
+      "summaryKo": "DocPhoto: passport photo maker: 모바일 앱 (검증 매출 $1.2k (TrustMRR))",
+      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
+      "tractionLabel": "검증 매출 $1.2k (TrustMRR)",
+      "tractionValue": 1200,
+      "tractionType": "mrr",
+      "mrrUsd": 1200,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "trustmrr",
+        "verified-revenue"
+      ],
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/docphoto/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "DocPhoto: passport photo maker의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "모바일 앱 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-tmrr-dc575370cc",
+      "name": "BankConv",
+      "slug": "tmrr-bankconv",
+      "source": "trustmrr",
+      "sourceLabel": "TrustMRR",
+      "url": "https://trustmrr.com/startup/bankconv",
+      "discussionUrl": "https://trustmrr.com/startup/bankconv",
+      "taglineEn": "Fintech",
+      "taglineKo": "핀테크",
+      "summaryKo": "BankConv: 핀테크 (검증 매출 $1.1k (TrustMRR))",
+      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
+      "tractionLabel": "검증 매출 $1.1k (TrustMRR)",
+      "tractionValue": 1100,
+      "tractionType": "mrr",
+      "mrrUsd": 1100,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "trustmrr",
+        "verified-revenue"
+      ],
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/bankconv/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "BankConv의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "핀테크 (시각·시세 비교 구조)"
+      }
+    },
     {
       "id": "builder-tmrr-d92d991a05",
       "name": "TransClipper",
@@ -13,21 +1116,30 @@
       "discussionUrl": "https://trustmrr.com/startup/transclipper",
       "taglineEn": "Content Creation",
       "taglineKo": "콘텐츠 제작",
-      "summaryKo": "TransClipper: 콘텐츠 제작 (검증 매출 $357 (TrustMRR))",
+      "summaryKo": "TransClipper: 콘텐츠 제작 (검증 매출 $308 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $357 (TrustMRR)",
-      "tractionValue": 357,
+      "tractionLabel": "검증 매출 $308 (TrustMRR)",
+      "tractionValue": 308,
       "tractionType": "mrr",
-      "mrrUsd": 357,
+      "mrrUsd": 308,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/transclipper/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "TransClipper의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "콘텐츠 제작 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-b7a201e715",
@@ -39,21 +1151,30 @@
       "discussionUrl": "https://trustmrr.com/startup/vidgens",
       "taglineEn": "Artificial Intelligence",
       "taglineKo": "인공지능",
-      "summaryKo": "VIDGENS: 인공지능 (검증 매출 $115 (TrustMRR))",
+      "summaryKo": "VIDGENS: 인공지능 (검증 매출 $120 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $115 (TrustMRR)",
-      "tractionValue": 115,
+      "tractionLabel": "검증 매출 $120 (TrustMRR)",
+      "tractionValue": 120,
       "tractionType": "mrr",
-      "mrrUsd": 115,
+      "mrrUsd": 120,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/vidgens/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "VIDGENS의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "인공지능 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-0f730e600e",
@@ -65,21 +1186,30 @@
       "discussionUrl": "https://trustmrr.com/startup/blind-buzzer",
       "taglineEn": "Mobile Apps",
       "taglineKo": "모바일 앱",
-      "summaryKo": "Blind Buzzer: 모바일 앱 (검증 매출 $200 (TrustMRR))",
+      "summaryKo": "Blind Buzzer: 모바일 앱 (검증 매출 $196 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $200 (TrustMRR)",
-      "tractionValue": 200,
+      "tractionLabel": "검증 매출 $196 (TrustMRR)",
+      "tractionValue": 196,
       "tractionType": "mrr",
-      "mrrUsd": 200,
+      "mrrUsd": 196,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/blind-buzzer/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Blind Buzzer의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "모바일 앱 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-a38c926745",
@@ -91,21 +1221,30 @@
       "discussionUrl": "https://trustmrr.com/startup/landy",
       "taglineEn": "Artificial Intelligence",
       "taglineKo": "인공지능",
-      "summaryKo": "Landy AI: 인공지능 (검증 매출 $7.9k (TrustMRR))",
+      "summaryKo": "Landy AI: 인공지능 (검증 매출 $7.8k (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $7.9k (TrustMRR)",
-      "tractionValue": 7900,
+      "tractionLabel": "검증 매출 $7.8k (TrustMRR)",
+      "tractionValue": 7800,
       "tractionType": "mrr",
-      "mrrUsd": 7900,
+      "mrrUsd": 7800,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/landy/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Landy AI의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "인공지능 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-ada1f77ec7",
@@ -129,9 +1268,18 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/whispa/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Whispa의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "모바일 앱 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-1f1bf4c4f3",
@@ -155,35 +1303,18 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
-    },
-    {
-      "id": "builder-tmrr-28903ce238",
-      "name": "VideoBGRemover",
-      "slug": "tmrr-videobgremover",
-      "source": "trustmrr",
-      "sourceLabel": "TrustMRR",
-      "url": "https://trustmrr.com/startup/hidden-business-108",
-      "discussionUrl": "https://trustmrr.com/startup/hidden-business-108",
-      "taglineEn": "Artificial Intelligence",
-      "taglineKo": "인공지능",
-      "summaryKo": "VideoBGRemover: 인공지능 (검증 매출 $1.5k (TrustMRR))",
-      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $1.5k (TrustMRR)",
-      "tractionValue": 1500,
-      "tractionType": "mrr",
-      "mrrUsd": 1500,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "trustmrr",
-        "verified-revenue"
-      ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/prepi/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "prepi의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "건강 및 피트니스 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-29c628905c",
@@ -207,61 +1338,18 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
-    },
-    {
-      "id": "builder-tmrr-505d4f892a",
-      "name": "AppZoku",
-      "slug": "tmrr-appzoku",
-      "source": "trustmrr",
-      "sourceLabel": "TrustMRR",
-      "url": "https://trustmrr.com/startup/appzoku",
-      "discussionUrl": "https://trustmrr.com/startup/appzoku",
-      "taglineEn": "Artificial Intelligence",
-      "taglineKo": "인공지능",
-      "summaryKo": "AppZoku: 인공지능 (검증 매출 $4.8k (TrustMRR))",
-      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $4.8k (TrustMRR)",
-      "tractionValue": 4800,
-      "tractionType": "mrr",
-      "mrrUsd": 4800,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "trustmrr",
-        "verified-revenue"
-      ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
-    },
-    {
-      "id": "builder-tmrr-b6d8b471ab",
-      "name": "Hidden Business",
-      "slug": "tmrr-hidden-business",
-      "source": "trustmrr",
-      "sourceLabel": "TrustMRR",
-      "url": "https://trustmrr.com/startup/hidden-business-90",
-      "discussionUrl": "https://trustmrr.com/startup/hidden-business-90",
-      "taglineEn": "Revenue",
-      "taglineKo": "수익",
-      "summaryKo": "Hidden Business: 수익 (검증 매출 $4.5k (TrustMRR))",
-      "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $4.5k (TrustMRR)",
-      "tractionValue": 4500,
-      "tractionType": "mrr",
-      "mrrUsd": 4500,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "trustmrr",
-        "verified-revenue"
-      ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/coralflavor/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Coralflavor의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "인공지능 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-e42f81dcf2",
@@ -273,47 +1361,65 @@
       "discussionUrl": "https://trustmrr.com/startup/ace-pitcher",
       "taglineEn": "Health & Fitness",
       "taglineKo": "건강 및 피트니스",
-      "summaryKo": "Ace Pitcher: 건강 및 피트니스 (검증 매출 $1.5k (TrustMRR))",
+      "summaryKo": "Ace Pitcher: 건강 및 피트니스 (검증 매출 $1.6k (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $1.5k (TrustMRR)",
-      "tractionValue": 1500,
+      "tractionLabel": "검증 매출 $1.6k (TrustMRR)",
+      "tractionValue": 1600,
       "tractionType": "mrr",
-      "mrrUsd": 1500,
+      "mrrUsd": 1600,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/ace-pitcher/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Ace Pitcher의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "건강 및 피트니스 (시각·시세 비교 구조)"
+      }
     },
     {
-      "id": "builder-tmrr-05934ef637",
-      "name": "Stealth Venture",
-      "slug": "tmrr-stealth-venture",
+      "id": "builder-tmrr-505d4f892a",
+      "name": "AppZoku",
+      "slug": "tmrr-appzoku",
       "source": "trustmrr",
       "sourceLabel": "TrustMRR",
-      "url": "https://trustmrr.com/startup/stealth-venture-73",
-      "discussionUrl": "https://trustmrr.com/startup/stealth-venture-73",
-      "taglineEn": "Entertainment",
-      "taglineKo": "엔터테인먼트",
-      "summaryKo": "Stealth Venture: 엔터테인먼트 (검증 매출 $9.7k (TrustMRR))",
+      "url": "https://trustmrr.com/startup/appzoku",
+      "discussionUrl": "https://trustmrr.com/startup/appzoku",
+      "taglineEn": "Artificial Intelligence",
+      "taglineKo": "인공지능",
+      "summaryKo": "AppZoku: 인공지능 (검증 매출 $4.9k (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $9.7k (TrustMRR)",
-      "tractionValue": 9700,
+      "tractionLabel": "검증 매출 $4.9k (TrustMRR)",
+      "tractionValue": 4900,
       "tractionType": "mrr",
-      "mrrUsd": 9700,
+      "mrrUsd": 4900,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/appzoku/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "AppZoku의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "인공지능 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-0ce58c6219",
@@ -325,47 +1431,65 @@
       "discussionUrl": "https://trustmrr.com/startup/high-value-ios-app",
       "taglineEn": "Revenue",
       "taglineKo": "수익",
-      "summaryKo": "Stealth Venture: 수익 (검증 매출 $349 (TrustMRR))",
+      "summaryKo": "Stealth Venture: 수익 (검증 매출 $344 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $349 (TrustMRR)",
-      "tractionValue": 349,
+      "tractionLabel": "검증 매출 $344 (TrustMRR)",
+      "tractionValue": 344,
       "tractionType": "mrr",
-      "mrrUsd": 349,
+      "mrrUsd": 344,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/high-value-ios-app/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Stealth Venture의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "수익 (시각·시세 비교 구조)"
+      }
     },
     {
-      "id": "builder-tmrr-3f36230537",
-      "name": "Receeto",
-      "slug": "tmrr-receeto",
+      "id": "builder-tmrr-05934ef637",
+      "name": "Stealth Venture",
+      "slug": "tmrr-stealth-venture",
       "source": "trustmrr",
       "sourceLabel": "TrustMRR",
-      "url": "https://trustmrr.com/startup/receeto",
-      "discussionUrl": "https://trustmrr.com/startup/receeto",
-      "taglineEn": "Fintech",
-      "taglineKo": "핀테크",
-      "summaryKo": "Receeto: 핀테크 (검증 매출 $406 (TrustMRR))",
+      "url": "https://trustmrr.com/startup/stealth-venture-73",
+      "discussionUrl": "https://trustmrr.com/startup/stealth-venture-73",
+      "taglineEn": "Entertainment",
+      "taglineKo": "엔터테인먼트",
+      "summaryKo": "Stealth Venture: 엔터테인먼트 (검증 매출 $9.6k (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $406 (TrustMRR)",
-      "tractionValue": 406,
+      "tractionLabel": "검증 매출 $9.6k (TrustMRR)",
+      "tractionValue": 9600,
       "tractionType": "mrr",
-      "mrrUsd": 406,
+      "mrrUsd": 9600,
       "mechanism": "visual-price-match",
       "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/stealth-venture-73/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Stealth Venture의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "엔터테인먼트 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-ea18d005ac",
@@ -389,9 +1513,18 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/stan/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Stan의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "Stan enables people to make living and work for themselves. Vitalii Dodonov (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-tmrr-f9df0c188c",
@@ -403,21 +1536,30 @@
       "discussionUrl": "https://trustmrr.com/startup/postiz",
       "taglineEn": "Postiz is the ultimate agentic social media scheduler tool Nevo David",
       "taglineKo": "Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David",
-      "summaryKo": "Postiz: Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (검증 매출 $458,757 (TrustMRR))",
+      "summaryKo": "Postiz: Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (검증 매출 $459,946 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $458,757 (TrustMRR)",
+      "tractionLabel": "검증 매출 $459,946 (TrustMRR)",
       "tractionValue": 50000,
       "tractionType": "mrr",
-      "mrrUsd": 458757,
+      "mrrUsd": 459946,
       "mechanism": "drop-validation",
       "mechanismLabel": "공개 투표 · 수요 검증",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-23T15:26:12.366Z",
-      "fetchedAt": "2026-11-23T15:26:12.366Z",
-      "verifiedRevenue": true
+      "publishedAt": "2026-11-24T01:38:53.420Z",
+      "fetchedAt": "2026-11-24T01:38:53.420Z",
+      "verifiedRevenue": true,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://trustmrr.com/startup/postiz/opengraph-image?034a9e04a0b0b83d",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Postiz의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-hn-49711544",
@@ -442,8 +1584,17 @@
         "validated"
       ],
       "publishedAt": "2026-09-15T12:31:10Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/arnegiacomo/fugleramme/main/docs/assets/redraw.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "An e-ink frame that 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "An e-ink frame that hears birds and draws them as 1800s illustrations (음성·오디오 정리 구조)"
+      }
     },
     {
       "id": "builder-hn-50326821",
@@ -468,8 +1619,17 @@
         "validated"
       ],
       "publishedAt": "2026-11-01T15:58:28Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "HackerBooks의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "HackerTube, 하지만 HN에서 언급된 도서의 경우 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49124218",
@@ -494,8 +1654,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-31T15:17:28Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://john.fun/metadata/elevator/twitter-card.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Elevators의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "엘리베이터 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48490024",
@@ -520,8 +1689,17 @@
         "validated"
       ],
       "publishedAt": "2026-06-11T13:24:29Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://brew.sh/assets/img/homebrew-social-card.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Homebrew 6.0.0의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "홈브루 6.0.0 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48445554",
@@ -546,8 +1724,17 @@
         "validated"
       ],
       "publishedAt": "2026-06-08T14:05:16Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://performative-ui.cncl.co/og.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Performative-UI의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "디자인 비유의 반응 구성 요소 라이브러리 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48845049",
@@ -572,8 +1759,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-09T12:48:52Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://18words.com/og-image.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "18 Words의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "18개 단어 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49008211",
@@ -598,8 +1794,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-22T15:19:23Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Bento의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "하나의 HTML 파일에 전체 PowerPoint(편집+보기+데이터+협업) (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-50170593",
@@ -624,8 +1829,17 @@
         "validated"
       ],
       "publishedAt": "2026-10-20T18:29:09Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://permit.petercai.com/marketing/og.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "SimCity, but with Permits의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "SimCity, 하지만 허가가 있음 (취향 지도 묶기 구조)"
+      }
     },
     {
       "id": "builder-hn-48842459",
@@ -650,8 +1864,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-09T08:05:04Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/JustVugg/colibri/main/docs/media/sparse.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Getting GLM 5.2 running의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "느린 컴퓨터에서 GLM 5.2 실행하기 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49098510",
@@ -676,8 +1899,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-29T15:05:43Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/drumih/turbo-fieldfare/main/docs/assets/turbofieldfare-logo-rounded.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Open-source engine running Gemma의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "M 시리즈 Mac에서 2GB RAM으로 Gemma 4 26B를 실행하는 오픈 소스 엔진 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49823738",
@@ -702,8 +1934,17 @@
         "validated"
       ],
       "publishedAt": "2026-09-23T22:53:28Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://bastardica.mitpit.com/scr2.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Make cursed fonts like의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "Times New Bastard처럼 저주받은 글꼴 만들기 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48673671",
@@ -728,8 +1969,17 @@
         "validated"
       ],
       "publishedAt": "2026-06-25T14:08:55Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://hackernewstrends.com/opengraph-image",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "흩어진 장소·이벤트 링크, 지역 정보, 또는 취향 키워드",
+        "coreEngineKo": "I made Google Trends의 위치·일정 태깅 구조로 조건별 필터링과 우선순위 정렬을 자동 실행",
+        "outputKo": "방문 동선과 마감 일정을 한눈에 파악해 바로 실행할 수 있는 큐레이션 보드",
+        "summaryKo": "18년간의 댓글을 색인화하여 Google Trends for Hacker News를 만들었습니다. (취향 지도 묶기 구조)"
+      }
     },
     {
       "id": "builder-hn-50470488",
@@ -754,8 +2004,17 @@
         "validated"
       ],
       "publishedAt": "2026-11-12T17:02:42Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/simpsoka/zigzag/main/packaging/macos/AppIcon-dark.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "My $300 embroidery machine 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "300달러짜리 자수 기계에 구독이 필요해서 나만의 앱을 만들었습니다. (A·B 비교 보드 구조)"
+      }
     },
     {
       "id": "builder-hn-49994443",
@@ -780,8 +2039,17 @@
         "validated"
       ],
       "publishedAt": "2026-10-07T15:44:21Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://bigwords.page/og.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Bigwords.page의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "Turn any screen into a sign. The URL is the app (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48529990",
@@ -806,8 +2074,17 @@
         "validated"
       ],
       "publishedAt": "2026-06-14T17:25:38Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://raw.githubusercontent.com/tamnd/kage/main/docs/static/demo.gif",
+      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Kage의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "오프라인 보기를 위해 모든 웹사이트를 단일 바이너리로 섀도우 처리합니다. (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49461817",
@@ -832,8 +2109,17 @@
         "validated"
       ],
       "publishedAt": "2026-08-27T08:59:49Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "The load-bearing vocabulary of의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "클로드의 부담스러운 어휘 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49637385",
@@ -858,8 +2144,17 @@
         "validated"
       ],
       "publishedAt": "2026-09-10T01:58:00Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "What if the speed의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "빛의 속도가 5km/h라면 어떨까요? (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-50224916",
@@ -884,8 +2179,17 @@
         "validated"
       ],
       "publishedAt": "2026-10-24T20:30:31Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Steal My Bitcoin의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "내 비트코인을 훔쳐보세요 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49170165",
@@ -910,8 +2214,17 @@
         "validated"
       ],
       "publishedAt": "2026-08-04T15:16:22Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://toneyalexander.github.io/inclusive-color-space/img/preview.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Simple algorithm and color의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "다양한 피부톤을 구현하는 간단한 알고리즘과 색공간 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-49373456",
@@ -936,8 +2249,17 @@
         "validated"
       ],
       "publishedAt": "2026-08-20T12:04:38Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://simedw.com/2026/08/20/midi-autocomplete/images/rolltab_phone.jpg",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "I trained a 125M의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "기기에서 피아노를 자동 완성하기 위해 125M 모델을 훈련했습니다. (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-50077020",
@@ -962,8 +2284,17 @@
         "validated"
       ],
       "publishedAt": "2026-10-13T19:11:48Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://guitoro.com/brand/guitoro-social-acoustic.jpg",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "Guitoro, a virtual guitar 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "키보드로 치는 가상 기타 Guitoro (A·B 비교 보드 구조)"
+      }
     },
     {
       "id": "builder-hn-49246804",
@@ -988,8 +2319,17 @@
         "validated"
       ],
       "publishedAt": "2026-08-10T17:22:07Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://cactuscompute.com/opengraph-image?9df76a35fe8276e2",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Needle2의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "휴대폰, 웨어러블, 스마트 홈 및 로봇을 위한 14MB 에이전트 LLM (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-hn-48496539",
@@ -1014,8 +2354,17 @@
         "validated"
       ],
       "publishedAt": "2026-06-11T21:17:30Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://fablepool.com/og.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "복수의 시안 이미지, 웹 화면, 또는 아이디어 초안",
+        "coreEngineKo": "FablePool 스타일의 단일 캔버스 정렬·실시간 편집 인터페이스로 차이를 시각화",
+        "outputKo": "즉각적인 피드백과 최종 선택을 끝내는 공유 가능한 인터랙티브 비교 보드",
+        "summaryKo": "메시지 뒤에 자금을 모으고 Fable은 이를 공개적으로 구축합니다. (A·B 비교 보드 구조)"
+      }
     },
     {
       "id": "builder-hn-50428907",
@@ -1040,8 +2389,17 @@
         "validated"
       ],
       "publishedAt": "2026-11-09T17:51:31Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://www.watched.earth/og-default.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Every satellite that passed의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "이번주 어느 곳이든 지나간 모든 위성과 그 사진들 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-50346755",
@@ -1066,8 +2424,17 @@
         "validated"
       ],
       "publishedAt": "2026-11-03T01:18:09Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "긴 영상 URL, 문서 파일, 회의록 또는 산발적인 웹 기록",
+        "coreEngineKo": "HackerTV 방식의 구간 분할·핵심 추출 파이프라인으로 중요 지점만 자동 인덱싱",
+        "outputKo": "원하는 순간으로 즉시 점프하고 재활용할 수 있는 구조화 타임라인 아카이브",
+        "summaryKo": "24시간 TV 채널로 HN이 가장 많이 추천하는 유튜브 영상 (핵심 구간 저장 구조)"
+      }
     },
     {
       "id": "builder-hn-49021270",
@@ -1092,8 +2459,17 @@
         "validated"
       ],
       "publishedAt": "2026-07-23T13:29:24Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "Physically accurate black hole 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "물리적으로 정확한 블랙홀을 방에 넣을 수 있다 (음성·오디오 정리 구조)"
+      }
     },
     {
       "id": "builder-hn-50346981",
@@ -1118,8 +2494,17 @@
         "validated"
       ],
       "publishedAt": "2026-11-03T01:53:34Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Hacker Times, a New의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "뉴욕타임스에서 영감을 받은 Hacker News 버전인 Hacker Times (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-hn-48591348",
@@ -1130,8 +2515,8 @@
       "url": "https://www.intheweights.com/",
       "discussionUrl": "https://news.ycombinator.com/item?id=48591348",
       "taglineEn": "Are You in the Weights?",
-      "taglineKo": "Are You in the Weights?",
-      "summaryKo": "Are You in the: Are You in the Weights?",
+      "taglineKo": "당신은 웨이트 트레이닝을 하고 있나요?",
+      "summaryKo": "Are You in the: 당신은 웨이트 트레이닝을 하고 있나요?",
       "painPointKo": "Hacker News에서 471점과 댓글 247개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
       "tractionLabel": "HN 471 pts · 댓글 247",
       "tractionValue": 5451,
@@ -1144,176 +2529,29 @@
         "validated"
       ],
       "publishedAt": "2026-06-18T20:49:03Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.687Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": "https://intheweights.com/og-tappin.png",
+      "mediaSourceLabel": "프로덕트 실물 화면",
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Are You in the의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "당신은 웨이트 트레이닝을 하고 있나요? (시각·시세 비교 구조)"
+      }
     },
     {
-      "id": "builder-hn-48645437",
-      "name": "TikZ Editor",
-      "slug": "tikz-editor-48645437",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://tikz.dev/editor/",
-      "discussionUrl": "https://news.ycombinator.com/item?id=48645437",
-      "taglineEn": "WYSIWYG editor for figures in LaTeX",
-      "taglineKo": "LaTeX의 그림을 위한 WYSIWYG 편집기",
-      "summaryKo": "TikZ Editor: LaTeX의 그림을 위한 WYSIWYG 편집기",
-      "painPointKo": "Hacker News에서 451점과 댓글 74개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 451 pts · 댓글 74",
-      "tractionValue": 4732,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-06-23T14:24:21Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-hn-50443812",
-      "name": "Get your coding agent",
-      "slug": "get-your-coding-agent-50443812",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance",
-      "discussionUrl": "https://news.ycombinator.com/item?id=50443812",
-      "taglineEn": "Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-      "taglineKo": "코딩 에이전트를 2019년 JavaScript에서 최신 웹 기본 요소로 전환하세요.",
-      "summaryKo": "Get your coding agent: 코딩 에이전트를 2019년 JavaScript에서 최신 웹 기본 요소로 전환하세요.",
-      "painPointKo": "Hacker News에서 449점과 댓글 146개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 449 pts · 댓글 146",
-      "tractionValue": 4928,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-11-10T18:01:15Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-hn-49693971",
-      "name": "I made a flight",
-      "slug": "i-made-a-flight-49693971",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://inflightsimulator.com",
-      "discussionUrl": "https://news.ycombinator.com/item?id=49693971",
-      "taglineEn": "I made a flight simulator, except you're just a passenger",
-      "taglineKo": "비행 시뮬레이터를 만들었는데 넌 그냥 승객일 뿐이야",
-      "summaryKo": "I made a flight: 비행 시뮬레이터를 만들었는데 넌 그냥 승객일 뿐이야",
-      "painPointKo": "Hacker News에서 446점과 댓글 205개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 446 pts · 댓글 205",
-      "tractionValue": 5075,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-09-14T09:08:56Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-hn-48304260",
-      "name": "Hallucinate",
-      "slug": "hallucinate-48304260",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://hallucinate.site",
-      "discussionUrl": "https://news.ycombinator.com/item?id=48304260",
-      "taglineEn": "Massively Multiplayer Online Rave",
-      "taglineKo": "Massively Multiplayer Online Rave",
-      "summaryKo": "Hallucinate: Massively Multiplayer Online Rave",
-      "painPointKo": "Hacker News에서 442점과 댓글 201개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 442 pts · 댓글 201",
-      "tractionValue": 5023,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-05-28T03:50:01Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-hn-48616304",
-      "name": "Chess-Inspired Roguelike",
-      "slug": "chess-inspired-roguelike-48616304",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://princechazz.com",
-      "discussionUrl": "https://news.ycombinator.com/item?id=48616304",
-      "taglineEn": "Chess-Inspired Roguelike",
-      "taglineKo": "체스에서 영감을 받은 로그라이크",
-      "summaryKo": "Chess-Inspired Roguelike: 체스에서 영감을 받은 로그라이크",
-      "painPointKo": "Hacker News에서 433점과 댓글 149개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 433 pts · 댓글 149",
-      "tractionValue": 4777,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-06-21T06:50:31Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-hn-49090607",
-      "name": "I was tired of",
-      "slug": "i-was-tired-of-49090607",
-      "source": "show_hn",
-      "sourceLabel": "Show HN",
-      "url": "https://github.com/twalichiewicz/HNewhere",
-      "discussionUrl": "https://news.ycombinator.com/item?id=49090607",
-      "taglineEn": "I was tired of opening 2 tabs for every HN link, so I made a userscript",
-      "taglineKo": "HN 링크마다 탭 2개를 여는 것이 지겨워서 사용자 스크립트를 만들었습니다.",
-      "summaryKo": "I was tired of: HN 링크마다 탭 2개를 여는 것이 지겨워서 사용자 스크립트를 만들었습니다.",
-      "painPointKo": "Hacker News에서 433점과 댓글 126개를 받으며 실사용 효용을 인정받은 프로젝트입니다.",
-      "tractionLabel": "HN 433 pts · 댓글 126",
-      "tractionValue": 4708,
-      "tractionType": "points",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "show-hn",
-        "validated"
-      ],
-      "publishedAt": "2026-07-28T22:09:06Z",
-      "fetchedAt": "2026-11-23T15:26:11.671Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-866a00e4f2",
-      "name": "Chat with Work",
-      "slug": "chat-with-work-866a00",
+      "id": "builder-ph-545a09a6b3",
+      "name": "naturefunding.org",
+      "slug": "naturefunding-org-545a09",
       "source": "product_hunt",
       "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/chat-with-work",
-      "discussionUrl": "https://www.producthunt.com/products/chat-with-work",
-      "taglineEn": "AI bots in Europe. They work. You decide.",
-      "taglineKo": "유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.",
-      "summaryKo": "Chat with Work: 유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.",
+      "url": "https://www.producthunt.com/products/naturefunding-org",
+      "discussionUrl": "https://www.producthunt.com/products/naturefunding-org",
+      "taglineEn": "Grants for nature projects, checked against funder pages",
+      "taglineKo": "자연 프로젝트에 대한 보조금, 자금 지원 페이지와 비교 확인",
+      "summaryKo": "naturefunding.org: 자연 프로젝트에 대한 보조금, 자금 지원 페이지와 비교 확인",
       "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
       "tractionLabel": "PH 최신 런칭 #1",
       "tractionValue": 220,
@@ -1325,9 +2563,18 @@
         "product-hunt",
         "launch"
       ],
-      "publishedAt": "2026-11-21T01:06:12-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-18T19:48:42-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "naturefunding.org의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "자연 프로젝트에 대한 보조금, 자금 지원 페이지와 비교 확인 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-ph-8edf310cbf",
@@ -1352,34 +2599,52 @@
         "launch"
       ],
       "publishedAt": "2026-11-20T09:12:34-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Gauth Personal Study Agent의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "당신이 어디서 어려움을 겪었는지 기억하는 AI 학습 에이전트 (반응·수요 검증 구조)"
+      }
     },
     {
-      "id": "builder-ph-c2b44c28b0",
-      "name": "Plango",
-      "slug": "plango-c2b44c",
+      "id": "builder-ph-a62b863606",
+      "name": "Inkling 2 Mini",
+      "slug": "inkling-2-mini-a62b86",
       "source": "product_hunt",
       "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/plango",
-      "discussionUrl": "https://www.producthunt.com/products/plango",
-      "taglineEn": "Plango lets your AI agents work all night - safely",
-      "taglineKo": "Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다.",
-      "summaryKo": "Plango: Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다.",
+      "url": "https://www.producthunt.com/products/tinker-2",
+      "discussionUrl": "https://www.producthunt.com/products/tinker-2",
+      "taglineEn": "26B looped model for coding on your laptop",
+      "taglineKo": "노트북 코딩을 위한 26B 루프 모델",
+      "summaryKo": "Inkling 2 Mini: 노트북 코딩을 위한 26B 루프 모델",
       "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
       "tractionLabel": "PH 최신 런칭 #3",
       "tractionValue": 208,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
       ],
-      "publishedAt": "2026-11-22T09:08:26-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-22T19:37:24-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Inkling 2 Mini의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "노트북 코딩을 위한 26B 루프 모델 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-ph-7d1ea8febd",
@@ -1404,20 +2669,29 @@
         "launch"
       ],
       "publishedAt": "2026-11-16T11:28:27-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Journalistic Tech의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "HackerNoon에 게시되는 비동기 인터뷰 (시각·시세 비교 구조)"
+      }
     },
     {
-      "id": "builder-ph-17349a0e8c",
-      "name": "LeanTake",
-      "slug": "leantake-17349a",
+      "id": "builder-ph-75603f46e9",
+      "name": "Orpheus",
+      "slug": "orpheus-75603f",
       "source": "product_hunt",
       "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/leantake",
-      "discussionUrl": "https://www.producthunt.com/products/leantake",
-      "taglineEn": "4.1 MB native Mac screen recorder — zero export wait",
-      "taglineKo": "4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음",
-      "summaryKo": "LeanTake: 4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음",
+      "url": "https://www.producthunt.com/products/orpheus-2",
+      "discussionUrl": "https://www.producthunt.com/products/orpheus-2",
+      "taglineEn": "Run all your Claude subscriptions from one place",
+      "taglineKo": "한 곳에서 모든 Claude 구독을 실행하세요",
+      "summaryKo": "Orpheus: 한 곳에서 모든 Claude 구독을 실행하세요",
       "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
       "tractionLabel": "PH 최신 런칭 #5",
       "tractionValue": 196,
@@ -1429,165 +2703,18 @@
         "product-hunt",
         "launch"
       ],
-      "publishedAt": "2026-11-22T04:14:55-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-5c55766292",
-      "name": "Letter Visitors",
-      "slug": "letter-visitors-5c5576",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/visitors",
-      "discussionUrl": "https://www.producthunt.com/products/visitors",
-      "taglineEn": "See website visitors on your website itself",
-      "taglineKo": "웹사이트 자체에서 웹사이트 방문자를 확인하세요.",
-      "summaryKo": "Letter Visitors: 웹사이트 자체에서 웹사이트 방문자를 확인하세요.",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #6",
-      "tractionValue": 190,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-21T23:39:42-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-5027604526",
-      "name": "Modem",
-      "slug": "modem-502760",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/modem",
-      "discussionUrl": "https://www.producthunt.com/products/modem",
-      "taglineEn": "Find, fix, and follow up on every customer concern",
-      "taglineKo": "모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.",
-      "summaryKo": "Modem: 모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #7",
-      "tractionValue": 184,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-08-17T12:08:59-07:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-70f5abd7ae",
-      "name": "Kopyo",
-      "slug": "kopyo-70f5ab",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/kopyo",
-      "discussionUrl": "https://www.producthunt.com/products/kopyo",
-      "taglineEn": "The Mac clipboard manager that remembers everything",
-      "taglineKo": "모든 것을 기억하는 Mac 클립보드 관리자",
-      "summaryKo": "Kopyo: 모든 것을 기억하는 Mac 클립보드 관리자",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #8",
-      "tractionValue": 178,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T07:35:04-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-28c041a051",
-      "name": "Omi Work",
-      "slug": "omi-work-28c041",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/omi-work",
-      "discussionUrl": "https://www.producthunt.com/products/omi-work",
-      "taglineEn": "Omi can build anything. Now it finds your next 100 customers",
-      "taglineKo": "Omi can build anything. Now it finds your next 100 customers",
-      "summaryKo": "Omi Work: Omi can build anything. Now it finds your next 100 customers",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #9",
-      "tractionValue": 172,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T00:35:25-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-545a09a6b3",
-      "name": "naturefunding.org",
-      "slug": "naturefunding-org-545a09",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/naturefunding-org",
-      "discussionUrl": "https://www.producthunt.com/products/naturefunding-org",
-      "taglineEn": "Grants for nature projects, checked against funder pages",
-      "taglineKo": "자연 프로젝트에 대한 보조금, 자금 지원 페이지와 비교 확인",
-      "summaryKo": "naturefunding.org: 자연 프로젝트에 대한 보조금, 자금 지원 페이지와 비교 확인",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #10",
-      "tractionValue": 166,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-18T19:48:42-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-d29185cf3f",
-      "name": "Tesla Self-Driving V15",
-      "slug": "tesla-self-driving-v15-d29185",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/tesla",
-      "discussionUrl": "https://www.producthunt.com/products/tesla",
-      "taglineEn": "Upgrading every part of the end-to-end driving network",
-      "taglineKo": "End-to-End 주행 네트워크 모든 부분 업그레이드",
-      "summaryKo": "Tesla Self-Driving V15: End-to-End 주행 네트워크 모든 부분 업그레이드",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #11",
-      "tractionValue": 160,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-21T18:23:40-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-14T09:41:01-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Orpheus의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "한 곳에서 모든 Claude 구독을 실행하세요 (시각·시세 비교 구조)"
+      }
     },
     {
       "id": "builder-ph-051a990e3f",
@@ -1601,8 +2728,8 @@
       "taglineKo": "영어로 말하는 개들 (진짜)",
       "summaryKo": "Dog Translator SuperTranslator: 영어로 말하는 개들 (진짜)",
       "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #12",
-      "tractionValue": 154,
+      "tractionLabel": "PH 최신 런칭 #6",
+      "tractionValue": 190,
       "tractionType": "launch",
       "mrrUsd": null,
       "mechanism": "audio-stem",
@@ -1612,242 +2739,17 @@
         "launch"
       ],
       "publishedAt": "2026-11-05T06:56:09-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-11f567c93a",
-      "name": "MAI Image 2.7",
-      "slug": "mai-image-2-7-11f567",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/mai-image-2-3",
-      "discussionUrl": "https://www.producthunt.com/products/mai-image-2-3",
-      "taglineEn": "Microsoft's image model with precise edits and Canvas",
-      "taglineKo": "정확한 편집과 Canvas를 갖춘 마이크로소프트의 이미지 모델",
-      "summaryKo": "MAI Image 2.7: 정확한 편집과 Canvas를 갖춘 마이크로소프트의 이미지 모델",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #13",
-      "tractionValue": 148,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-17T10:42:27-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-a62b863606",
-      "name": "Inkling 2 Mini",
-      "slug": "inkling-2-mini-a62b86",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/tinker-2",
-      "discussionUrl": "https://www.producthunt.com/products/tinker-2",
-      "taglineEn": "26B looped model for coding on your laptop",
-      "taglineKo": "노트북 코딩을 위한 26B 루프 모델",
-      "summaryKo": "Inkling 2 Mini: 노트북 코딩을 위한 26B 루프 모델",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #14",
-      "tractionValue": 142,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T19:37:24-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-98fe4249c3",
-      "name": "Snowly",
-      "slug": "snowly-98fe42",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/snowly-2",
-      "discussionUrl": "https://www.producthunt.com/products/snowly-2",
-      "taglineEn": "Plan ski trips with friends. Remember every run.",
-      "taglineKo": "친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.",
-      "summaryKo": "Snowly: 친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #15",
-      "tractionValue": 136,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-17T18:11:19-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-a5453c7565",
-      "name": "Replit Missions",
-      "slug": "replit-missions-a5453c",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/replit",
-      "discussionUrl": "https://www.producthunt.com/products/replit",
-      "taglineEn": "Set a budget, coordinate teams of AI agents,",
-      "taglineKo": "예산을 설정하고, AI 에이전트 팀을 조정하고,",
-      "summaryKo": "Replit Missions: 예산을 설정하고, AI 에이전트 팀을 조정하고,",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #16",
-      "tractionValue": 130,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T09:13:25-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-4fde267c06",
-      "name": "Jot",
-      "slug": "jot-4fde26",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/jot-15",
-      "discussionUrl": "https://www.producthunt.com/products/jot-15",
-      "taglineEn": "One key for everything you do with text",
-      "taglineKo": "텍스트로 수행하는 모든 작업을 위한 하나의 키",
-      "summaryKo": "Jot: 텍스트로 수행하는 모든 작업을 위한 하나의 키",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #17",
-      "tractionValue": 124,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-21T01:34:42-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-f3714508eb",
-      "name": "Open Source Solana Wallet",
-      "slug": "open-source-solana-wallet-f37145",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/open-source-solana-wallet",
-      "discussionUrl": "https://www.producthunt.com/products/open-source-solana-wallet",
-      "taglineEn": "Your own keys, your very own network",
-      "taglineKo": "나만의 키, 나만의 네트워크",
-      "summaryKo": "Open Source Solana Wallet: 나만의 키, 나만의 네트워크",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #18",
-      "tractionValue": 118,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T14:44:38-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-49f7733717",
-      "name": "Strict",
-      "slug": "strict-49f773",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/strict",
-      "discussionUrl": "https://www.producthunt.com/products/strict",
-      "taglineEn": "Run GitHub Actions on any spare Mac or Linux machine",
-      "taglineKo": "예비 Mac 또는 Linux 시스템에서 GitHub Actions 실행",
-      "summaryKo": "Strict: 예비 Mac 또는 Linux 시스템에서 GitHub Actions 실행",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #19",
-      "tractionValue": 112,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-22T15:04:09-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-6dc11014a9",
-      "name": "Spikely",
-      "slug": "spikely-6dc110",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/spikely",
-      "discussionUrl": "https://www.producthunt.com/products/spikely",
-      "taglineEn": "Startup Metric Alerts for iPhone, Mac and Apple Watch",
-      "taglineKo": "iPhone, Mac 및 Apple Watch용 시작 지표 알림",
-      "summaryKo": "Spikely: iPhone, Mac 및 Apple Watch용 시작 지표 알림",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #20",
-      "tractionValue": 106,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-21T02:04:50-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-ph-d692e4730a",
-      "name": "Motionflare",
-      "slug": "motionflare-d692e4",
-      "source": "product_hunt",
-      "sourceLabel": "Product Hunt",
-      "url": "https://www.producthunt.com/products/motionflare",
-      "discussionUrl": "https://www.producthunt.com/products/motionflare",
-      "taglineEn": "Turn your website into a stunning launch video in minutes",
-      "taglineKo": "귀하의 웹사이트를 몇 분 만에 멋진 출시 비디오로 바꿔보세요",
-      "summaryKo": "Motionflare: 귀하의 웹사이트를 몇 분 만에 멋진 출시 비디오로 바꿔보세요",
-      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #21",
-      "tractionValue": 100,
-      "tractionType": "launch",
-      "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
-      "tags": [
-        "product-hunt",
-        "launch"
-      ],
-      "publishedAt": "2026-11-14T01:50:44-08:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "Dog Translator SuperTranslator 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "영어로 말하는 개들 (진짜) (음성·오디오 정리 구조)"
+      }
     },
     {
       "id": "builder-ph-cbab95fe5c",
@@ -1861,8 +2763,8 @@
       "taglineKo": "AI로 바로 제작 가능한 3D 자산 생성",
       "summaryKo": "Hydrilla: AI로 바로 제작 가능한 3D 자산 생성",
       "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
-      "tractionLabel": "PH 최신 런칭 #22",
-      "tractionValue": 94,
+      "tractionLabel": "PH 최신 런칭 #7",
+      "tractionValue": 184,
       "tractionType": "launch",
       "mrrUsd": null,
       "mechanism": "visual-price-match",
@@ -1872,34 +2774,472 @@
         "launch"
       ],
       "publishedAt": "2026-03-12T09:31:13-07:00",
-      "fetchedAt": "2026-11-23T15:26:11.715Z",
-      "verifiedRevenue": false
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Hydrilla의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "AI로 바로 제작 가능한 3D 자산 생성 (시각·시세 비교 구조)"
+      }
     },
     {
-      "id": "builder-uneed-86164d2393",
-      "name": "Stramik",
-      "slug": "uneed-stramik",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/stramik",
-      "discussionUrl": "https://www.uneed.best/tool/stramik",
-      "taglineEn": "Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Stramik: Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
+      "id": "builder-ph-935e36f9d9",
+      "name": "Ashwa",
+      "slug": "ashwa-935e36",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/ashwa",
+      "discussionUrl": "https://www.producthunt.com/products/ashwa",
+      "taglineEn": "Your AI companion that never forgets what you say",
+      "taglineKo": "당신의 말을 절대 잊지 않는 AI 동반자",
+      "summaryKo": "Ashwa: 당신의 말을 절대 잊지 않는 AI 동반자",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #8",
+      "tractionValue": 178,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T12:25:10-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Ashwa의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "당신의 말을 절대 잊지 않는 AI 동반자 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-17349a0e8c",
+      "name": "LeanTake",
+      "slug": "leantake-17349a",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/leantake",
+      "discussionUrl": "https://www.producthunt.com/products/leantake",
+      "taglineEn": "4.1 MB native Mac screen recorder — zero export wait",
+      "taglineKo": "4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음",
+      "summaryKo": "LeanTake: 4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #9",
       "tractionValue": 172,
-      "tractionType": "rank",
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T04:14:55-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "LeanTake의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-866a00e4f2",
+      "name": "Chat with Work",
+      "slug": "chat-with-work-866a00",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/chat-with-work",
+      "discussionUrl": "https://www.producthunt.com/products/chat-with-work",
+      "taglineEn": "AI bots in Europe. They work. You decide.",
+      "taglineKo": "유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.",
+      "summaryKo": "Chat with Work: 유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #10",
+      "tractionValue": 166,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-21T01:06:12-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Chat with Work의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다. (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-4fde267c06",
+      "name": "Jot",
+      "slug": "jot-4fde26",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/jot-15",
+      "discussionUrl": "https://www.producthunt.com/products/jot-15",
+      "taglineEn": "One key for everything you do with text",
+      "taglineKo": "텍스트로 수행하는 모든 작업을 위한 하나의 키",
+      "summaryKo": "Jot: 텍스트로 수행하는 모든 작업을 위한 하나의 키",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #11",
+      "tractionValue": 160,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-21T01:34:42-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Jot의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "텍스트로 수행하는 모든 작업을 위한 하나의 키 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-70f5abd7ae",
+      "name": "Kopyo",
+      "slug": "kopyo-70f5ab",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/kopyo",
+      "discussionUrl": "https://www.producthunt.com/products/kopyo",
+      "taglineEn": "The Mac clipboard manager that remembers everything",
+      "taglineKo": "모든 것을 기억하는 Mac 클립보드 관리자",
+      "summaryKo": "Kopyo: 모든 것을 기억하는 Mac 클립보드 관리자",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #12",
+      "tractionValue": 154,
+      "tractionType": "launch",
       "mrrUsd": null,
       "mechanism": "drop-validation",
       "mechanismLabel": "공개 투표 · 수요 검증",
       "tags": [
-        "uneed",
-        "daily-launch"
+        "product-hunt",
+        "launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-22T07:35:04-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Kopyo의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "모든 것을 기억하는 Mac 클립보드 관리자 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-607efd1333",
+      "name": "FigmaMCP",
+      "slug": "figmamcp-607efd",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/figmamcp",
+      "discussionUrl": "https://www.producthunt.com/products/figmamcp",
+      "taglineEn": "Let Claude Code or Codex edit your open Figma file",
+      "taglineKo": "Claude Code 또는 Codex가 열려 있는 Figma 파일을 편집하도록 하세요",
+      "summaryKo": "FigmaMCP: Claude Code 또는 Codex가 열려 있는 Figma 파일을 편집하도록 하세요",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #13",
+      "tractionValue": 148,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T15:28:02-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "FigmaMCP의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Claude Code 또는 Codex가 열려 있는 Figma 파일을 편집하도록 하세요 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-5027604526",
+      "name": "Modem",
+      "slug": "modem-502760",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/modem",
+      "discussionUrl": "https://www.producthunt.com/products/modem",
+      "taglineEn": "Find, fix, and follow up on every customer concern",
+      "taglineKo": "모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.",
+      "summaryKo": "Modem: 모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #14",
+      "tractionValue": 142,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-08-17T12:08:59-07:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Modem의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다. (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-49f7733717",
+      "name": "Strict",
+      "slug": "strict-49f773",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/strict",
+      "discussionUrl": "https://www.producthunt.com/products/strict",
+      "taglineEn": "Run GitHub Actions on any spare Mac or Linux machine",
+      "taglineKo": "예비 Mac 또는 Linux 시스템에서 GitHub Actions 실행",
+      "summaryKo": "Strict: 예비 Mac 또는 Linux 시스템에서 GitHub Actions 실행",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #15",
+      "tractionValue": 136,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T15:04:09-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Strict의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "예비 Mac 또는 Linux 시스템에서 GitHub Actions 실행 (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-5c55766292",
+      "name": "Letter Visitors",
+      "slug": "letter-visitors-5c5576",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/visitors",
+      "discussionUrl": "https://www.producthunt.com/products/visitors",
+      "taglineEn": "See website visitors on your website itself",
+      "taglineKo": "웹사이트 자체에서 웹사이트 방문자를 확인하세요.",
+      "summaryKo": "Letter Visitors: 웹사이트 자체에서 웹사이트 방문자를 확인하세요.",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #16",
+      "tractionValue": 130,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-21T23:39:42-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Letter Visitors의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "웹사이트 자체에서 웹사이트 방문자를 확인하세요. (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-a5453c7565",
+      "name": "Replit Missions",
+      "slug": "replit-missions-a5453c",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/replit",
+      "discussionUrl": "https://www.producthunt.com/products/replit",
+      "taglineEn": "Set a budget, coordinate teams of AI agents,",
+      "taglineKo": "예산을 설정하고, AI 에이전트 팀을 조정하고,",
+      "summaryKo": "Replit Missions: 예산을 설정하고, AI 에이전트 팀을 조정하고,",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #17",
+      "tractionValue": 124,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T09:13:25-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Replit Missions의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "예산을 설정하고, AI 에이전트 팀을 조정하고, (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-6dc11014a9",
+      "name": "Spikely",
+      "slug": "spikely-6dc110",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/spikely",
+      "discussionUrl": "https://www.producthunt.com/products/spikely",
+      "taglineEn": "Startup Metric Alerts for iPhone, Mac and Apple Watch",
+      "taglineKo": "iPhone, Mac 및 Apple Watch용 시작 지표 알림",
+      "summaryKo": "Spikely: iPhone, Mac 및 Apple Watch용 시작 지표 알림",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #18",
+      "tractionValue": 118,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-21T02:04:50-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Spikely의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "iPhone, Mac 및 Apple Watch용 시작 지표 알림 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-98fe4249c3",
+      "name": "Snowly",
+      "slug": "snowly-98fe42",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/snowly-2",
+      "discussionUrl": "https://www.producthunt.com/products/snowly-2",
+      "taglineEn": "Plan ski trips with friends. Remember every run.",
+      "taglineKo": "친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.",
+      "summaryKo": "Snowly: 친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #19",
+      "tractionValue": 112,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-17T18:11:19-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
+        "coreEngineKo": "Snowly의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
+        "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
+        "summaryKo": "친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오. (시각·시세 비교 구조)"
+      }
+    },
+    {
+      "id": "builder-ph-337ea51ff3",
+      "name": "Branchery",
+      "slug": "branchery-337ea5",
+      "source": "product_hunt",
+      "sourceLabel": "Product Hunt",
+      "url": "https://www.producthunt.com/products/branchery",
+      "discussionUrl": "https://www.producthunt.com/products/branchery",
+      "taglineEn": "Branchery, a Git client for Mac",
+      "taglineKo": "Mac용 Git 클라이언트 Branchery",
+      "summaryKo": "Branchery: Mac용 Git 클라이언트 Branchery",
+      "painPointKo": "Product Hunt 최신 피드에 공개된 신상 서비스로, 한 가지 핵심 경험을 단순하게 풀어냈습니다.",
+      "tractionLabel": "PH 최신 런칭 #20",
+      "tractionValue": 106,
+      "tractionType": "launch",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "product-hunt",
+        "launch"
+      ],
+      "publishedAt": "2026-11-22T13:29:23-08:00",
+      "fetchedAt": "2026-11-24T01:38:52.953Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Branchery의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Mac용 Git 클라이언트 Branchery (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-uneed-7c0b630334",
@@ -1914,6 +3254,41 @@
       "summaryKo": "Bugstack: Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 172,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Bugstack의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-86164d2393",
+      "name": "Stramik",
+      "slug": "uneed-stramik",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/stramik",
+      "discussionUrl": "https://www.uneed.best/tool/stramik",
+      "taglineEn": "Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Stramik: Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 164,
       "tractionType": "rank",
       "mrrUsd": null,
@@ -1923,9 +3298,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Stramik의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-uneed-2fc264748e",
@@ -1949,9 +3333,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "짧은 음성 메모, 오디오 트랙, 또는 팟캐스트·영상 사운드",
+        "coreEngineKo": "Feedsortr 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
+        "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
+        "summaryKo": "Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (음성·오디오 정리 구조)"
+      }
     },
     {
       "id": "builder-uneed-937ac12340",
@@ -1975,21 +3368,30 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Displaymath의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
-      "id": "builder-uneed-9c989f3752",
-      "name": "Bragly",
-      "slug": "uneed-bragly",
+      "id": "builder-uneed-514b99ba9c",
+      "name": "Orka Chat",
+      "slug": "uneed-orka-chat",
       "source": "uneed",
       "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/bragly",
-      "discussionUrl": "https://www.uneed.best/tool/bragly",
-      "taglineEn": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Bragly: Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "url": "https://www.uneed.best/tool/orka-chat",
+      "discussionUrl": "https://www.uneed.best/tool/orka-chat",
+      "taglineEn": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Orka Chat: Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 140,
@@ -2001,35 +3403,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-b73fcb9b06",
-      "name": "Sniffpup",
-      "slug": "uneed-sniffpup",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/sniffpup",
-      "discussionUrl": "https://www.uneed.best/tool/sniffpup",
-      "taglineEn": "Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Sniffpup: Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 132,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Orka Chat의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-uneed-646e667478",
@@ -2044,6 +3429,41 @@
       "summaryKo": "Plango: Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 132,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Plango의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-b73fcb9b06",
+      "name": "Sniffpup",
+      "slug": "uneed-sniffpup",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/sniffpup",
+      "discussionUrl": "https://www.uneed.best/tool/sniffpup",
+      "taglineEn": "Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Sniffpup: Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 124,
       "tractionType": "rank",
       "mrrUsd": null,
@@ -2053,21 +3473,30 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Sniffpup의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
-      "id": "builder-uneed-d41a9e8626",
-      "name": "Werk",
-      "slug": "uneed-werk",
+      "id": "builder-uneed-a2169d3638",
+      "name": "Dailytube",
+      "slug": "uneed-dailytube",
       "source": "uneed",
       "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/werk",
-      "discussionUrl": "https://www.uneed.best/tool/werk",
-      "taglineEn": "Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Werk: Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "url": "https://www.uneed.best/tool/dailytube",
+      "discussionUrl": "https://www.uneed.best/tool/dailytube",
+      "taglineEn": "Dailytube — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Dailytube — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Dailytube: Dailytube — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 116,
@@ -2079,113 +3508,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-8db61818b5",
-      "name": "Easytools",
-      "slug": "uneed-easytools",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/easytools",
-      "discussionUrl": "https://www.uneed.best/tool/easytools",
-      "taglineEn": "Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Easytools: Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 108,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-01a62ab2da",
-      "name": "Caroush",
-      "slug": "uneed-caroush",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/caroush",
-      "discussionUrl": "https://www.uneed.best/tool/caroush",
-      "taglineEn": "Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Caroush: Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 100,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-58696c78c4",
-      "name": "Botroost",
-      "slug": "uneed-botroost",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/botroost",
-      "discussionUrl": "https://www.uneed.best/tool/botroost",
-      "taglineEn": "Botroost — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Botroost — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Botroost: Botroost — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 92,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-ffbc54bc5e",
-      "name": "Tellbit",
-      "slug": "uneed-tellbit",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/tellbit",
-      "discussionUrl": "https://www.uneed.best/tool/tellbit",
-      "taglineEn": "Tellbit — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Tellbit — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Tellbit: Tellbit — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 84,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Dailytube의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Dailytube — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-uneed-2de53e1a8a",
@@ -2200,7 +3534,7 @@
       "summaryKo": "Fernand: Fernand — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 76,
+      "tractionValue": 108,
       "tractionType": "rank",
       "mrrUsd": null,
       "mechanism": "drop-validation",
@@ -2209,35 +3543,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
-    },
-    {
-      "id": "builder-uneed-c35208cc4c",
-      "name": "Wismo",
-      "slug": "uneed-wismo",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/wismo",
-      "discussionUrl": "https://www.uneed.best/tool/wismo",
-      "taglineEn": "Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Wismo: Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 68,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Fernand의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Fernand — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
       "id": "builder-uneed-0f783a4a94",
@@ -2252,6 +3569,181 @@
       "summaryKo": "Crawlbeast: Crawlbeast — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 100,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Crawlbeast의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Crawlbeast — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-01a62ab2da",
+      "name": "Caroush",
+      "slug": "uneed-caroush",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/caroush",
+      "discussionUrl": "https://www.uneed.best/tool/caroush",
+      "taglineEn": "Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Caroush: Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 92,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Caroush의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-d41a9e8626",
+      "name": "Werk",
+      "slug": "uneed-werk",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/werk",
+      "discussionUrl": "https://www.uneed.best/tool/werk",
+      "taglineEn": "Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Werk: Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 84,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Werk의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-9c989f3752",
+      "name": "Bragly",
+      "slug": "uneed-bragly",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/bragly",
+      "discussionUrl": "https://www.uneed.best/tool/bragly",
+      "taglineEn": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Bragly: Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 76,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Bragly의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-3441f44a3d",
+      "name": "Flowhush",
+      "slug": "uneed-flowhush",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/flowhush",
+      "discussionUrl": "https://www.uneed.best/tool/flowhush",
+      "taglineEn": "Flowhush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Flowhush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Flowhush: Flowhush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 68,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Flowhush의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Flowhush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-c35208cc4c",
+      "name": "Wismo",
+      "slug": "uneed-wismo",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/wismo",
+      "discussionUrl": "https://www.uneed.best/tool/wismo",
+      "taglineEn": "Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Wismo: Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 60,
       "tractionType": "rank",
       "mrrUsd": null,
@@ -2261,21 +3753,30 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Wismo의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Wismo — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     },
     {
-      "id": "builder-uneed-87763fe388",
-      "name": "Tradestaq",
-      "slug": "uneed-tradestaq",
+      "id": "builder-uneed-912c7bcd8c",
+      "name": "Baypoint Ai Ebay Seller Tools",
+      "slug": "uneed-baypoint-ai-ebay-seller-tools",
       "source": "uneed",
       "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/tradestaq",
-      "discussionUrl": "https://www.uneed.best/tool/tradestaq",
-      "taglineEn": "Tradestaq — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Tradestaq — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Tradestaq: Tradestaq — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "url": "https://www.uneed.best/tool/baypoint-ai-ebay-seller-tools",
+      "discussionUrl": "https://www.uneed.best/tool/baypoint-ai-ebay-seller-tools",
+      "taglineEn": "Baypoint Ai Ebay Seller Tools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Baypoint Ai Ebay Seller Tools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Baypoint Ai Ebay Seller Tools: Baypoint Ai Ebay Seller Tools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 52,
@@ -2287,9 +3788,18 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-23T15:26:13.030Z",
-      "fetchedAt": "2026-11-23T15:26:13.030Z",
-      "verifiedRevenue": false
+      "publishedAt": "2026-11-24T01:38:54.184Z",
+      "fetchedAt": "2026-11-24T01:38:54.184Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Baypoint Ai Ebay Seller Tools의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Baypoint Ai Ebay Seller Tools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Ping IndexNow (Global + Naver Search Advisor) with updated BENCH. URLs.
+ * Ping IndexNow (Global + Naver Search Advisor) with updated DISPENSER URLs.
  */
 
 import fs from "node:fs";
@@ -10,8 +10,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bench-workbench.vercel.app").replace(/\/+$/, "");
-const INDEXNOW_KEY = (process.env.INDEXNOW_KEY || "bench-indexnow-9f4c2a8e7b1d6e3a").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://dispenser-deck.vercel.app").replace(/\/+$/, "");
+const INDEXNOW_KEY = (process.env.INDEXNOW_KEY || "dispenser-indexnow-9f4c2a8e7b1d6e3a").trim();
 
 const DOMAINS = [
   "brand-commerce",
@@ -44,7 +44,7 @@ async function pingEndpoint(endpoint, payload) {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
-        "User-Agent": "BENCH-IndexNow/1.0",
+        "User-Agent": "DISPENSER-IndexNow/1.0",
       },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(10000),

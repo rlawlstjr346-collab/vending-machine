@@ -38,6 +38,7 @@ export function loadSyncMeta(): SyncMeta {
       builderTotal: 0,
       bySource: {},
       verifiedRevenueCount: 0,
+      verifiedMediaCount: 0,
       treatmentsSeed: 0,
     },
     sources: [],
@@ -45,6 +46,6 @@ export function loadSyncMeta(): SyncMeta {
 }
 
 export function getSiteUrl(): string {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://bench-workbench.vercel.app";
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://dispenser-deck.vercel.app";
   return raw.replace(/\/+$/, "");
 }

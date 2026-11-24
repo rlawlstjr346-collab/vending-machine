@@ -15,11 +15,20 @@ export type MechanismId =
   | "drop-validation";
 
 export type BuilderSourceId =
+  | "github_trending"
+  | "reddit"
   | "show_hn"
   | "product_hunt"
   | "trustmrr"
   | "uneed"
   | "x_oembed";
+
+export interface TechDigestKo {
+  inputKo: string;
+  coreEngineKo: string;
+  outputKo: string;
+  summaryKo: string;
+}
 
 export interface BuilderSignal {
   id: string;
@@ -35,7 +44,7 @@ export interface BuilderSignal {
   painPointKo: string;
   tractionLabel: string;
   tractionValue: number;
-  tractionType: "mrr" | "points" | "launch" | "rank";
+  tractionType: "mrr" | "points" | "launch" | "rank" | "stars" | "upvotes";
   mrrUsd?: number | null;
   mechanism: MechanismId;
   mechanismLabel: string;
@@ -43,6 +52,10 @@ export interface BuilderSignal {
   publishedAt: string;
   fetchedAt: string;
   verifiedRevenue: boolean;
+  demoVideoUrl?: string | null;
+  previewImageUrl?: string | null;
+  mediaSourceLabel?: string | null;
+  techDigestKo?: TechDigestKo;
 }
 
 export interface AiRadarPlanningMeta {
@@ -78,6 +91,7 @@ export interface AiRadarSignal {
   utilityTip?: AiRadarUtilityTip | null;
   planningMeta: AiRadarPlanningMeta;
   entities: string[];
+  thumbnailUrl?: string | null;
 }
 
 export interface TreatmentLineageNode {
@@ -93,12 +107,14 @@ export interface TreatmentSampleA {
   builderId: string;
   name: string;
   url: string;
+  source: BuilderSourceId;
   sourceLabel: string;
   tractionLabel: string;
   shortMetricLabel: string;
   verifiedRevenue: boolean;
   mechanism: MechanismId;
   mechanismLabel: string;
+  summaryKo: string;
   overseasProofKo: string;
 }
 
@@ -119,6 +135,7 @@ export interface TreatmentSampleB {
   platformId: string;
   signalType: string;
   productDomain: string;
+  summaryKo: string;
   benchmarkPoint: string;
   bottleneckSolvedKo: string;
 }
@@ -135,7 +152,12 @@ export interface Treatment {
   title: string;
   oneLineHook: string;
   firstThreeSecondsUx: string;
+  fusionStoryKo: string;
   buildCadence: string;
+  demoVideoUrl?: string | null;
+  previewImageUrl?: string | null;
+  mediaSourceLabel?: string | null;
+  techDigestKo: TechDigestKo;
   sampleA: TreatmentSampleA;
   sampleA2?: TreatmentSampleA2 | null;
   sampleB: TreatmentSampleB;
@@ -144,7 +166,7 @@ export interface Treatment {
   scopeCutoff: string[];
   targetKpis: string[];
   lineage: TreatmentLineageNode[];
-  synthesisMode: "deterministic" | "llm-gemini" | "llm-anthropic";
+  synthesisMode: "curated" | "deterministic" | "llm-gemini" | "llm-anthropic";
   parentTreatmentId?: string | null;
   variantIndex?: number;
 }
@@ -156,6 +178,7 @@ export interface SyncMeta {
     builderTotal: number;
     bySource: Record<string, number>;
     verifiedRevenueCount: number;
+    verifiedMediaCount?: number;
     treatmentsSeed: number;
   };
   sources: Array<{
