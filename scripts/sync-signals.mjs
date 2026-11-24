@@ -45,10 +45,12 @@ const AI_RADAR_PLANNING_URL =
 const AI_RADAR_LIVE_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json";
 const SHOW_HN_LATEST_URL =
-  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=35";
+  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=45&page=0";
+const SHOW_HN_LATEST_P2_URL =
+  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=45&page=1";
 const SIX_MONTHS_AGO_UNIX = Math.floor((Date.now() - 180 * 24 * 60 * 60 * 1000) / 1000);
 const SHOW_HN_TOP_URL =
-  `https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>${SIX_MONTHS_AGO_UNIX}&hitsPerPage=35`;
+  `https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>12,created_at_i>${SIX_MONTHS_AGO_UNIX}&hitsPerPage=45`;
 const PRODUCT_HUNT_FEED_URL = "https://www.producthunt.com/feed";
 const TRUSTMRR_URL = "https://trustmrr.com";
 const UNEED_URL = "https://www.uneed.best";
@@ -58,13 +60,17 @@ function isoDaysAgo(days) {
 }
 
 const GITHUB_SEARCH_QUERIES = [
-  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(75)} stars:>80 topic:ai`)}&sort=stars&order=desc&per_page=18`,
-  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(90)} stars:>60 (agent OR video OR audio OR browser OR automation OR cli)`)}&sort=stars&order=desc&per_page=18`,
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(75)} stars:>70 topic:ai`)}&sort=stars&order=desc&per_page=25`,
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(90)} stars:>50 (agent OR video OR audio OR browser OR automation OR cli)`)}&sort=stars&order=desc&per_page=25`,
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(120)} stars:>50 (topic:developer-tools OR topic:design OR topic:canvas OR topic:self-hosted)`)}&sort=stars&order=desc&per_page=25`,
+  `https://api.github.com/search/repositories?q=${encodeURIComponent(`created:>${isoDaysAgo(150)} stars:>60 (topic:local-first OR topic:creative-coding OR topic:webgl OR topic:mcp)`)}&sort=stars&order=desc&per_page=25`,
 ];
 
 const REDDIT_FEEDS = [
   { sub: "SideProject", url: "https://www.reddit.com/r/SideProject/hot.json?limit=25" },
   { sub: "LocalLLaMA", url: "https://www.reddit.com/r/LocalLLaMA/hot.json?limit=25" },
+  { sub: "InternetIsBeautiful", url: "https://www.reddit.com/r/InternetIsBeautiful/hot.json?limit=25" },
+  { sub: "selfhosted", url: "https://www.reddit.com/r/selfhosted/hot.json?limit=25" },
 ];
 
 const CULTURE_FEEDS = [
@@ -917,14 +923,25 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
   }
 
   const joined = [];
+  const seenIds = new Set();
+  const seenUrls = new Set();
   let verifiedThumbCount = 0;
 
-  for (const sig of planData?.signals || []) {
-    if (!sig?.id || !isValidHttpUrl(sig.canonical_url)) continue;
-    const full = liveById.get(sig.id) || {};
+  const pushRadarRecord = async (sig, full) => {
+    const canonicalUrl = String(sig.canonical_url || full.canonical_url || sig.url || full.url || "").trim();
+    if (!isValidHttpUrl(canonicalUrl)) return;
+    const normUrl = canonicalUrl.toLowerCase().replace(/\/+$/, "");
+    const id = String(sig.id || full.id || `radar-${shortHash(canonicalUrl)}`);
+    if (seenIds.has(id) || seenUrls.has(normUrl)) return;
+    const titleKo = stripHighlightMarkers(sig.title_ko || full.title_ko || sig.original_title || full.original_title || sig.title || full.title || "");
+    if (!titleKo || titleKo.length < 2) return;
+
+    seenIds.add(id);
+    seenUrls.add(normUrl);
+
     const pm = sig.planning_meta || full.planning_meta || {};
-    const ut = full.utility_tip || null;
-    const rawThumb = full.thumbnail_url || sig.thumbnail_url || full.image_url || null;
+    const ut = full.utility_tip || sig.utility_tip || null;
+    const rawThumb = full.thumbnail_url || sig.thumbnail_url || full.image_url || sig.image_url || null;
     let verifiedThumb = null;
     if (rawThumb && isValidHttpUrl(rawThumb) && verifiedThumbCount < 35) {
       const checked = await verifyMediaUrl(rawThumb, mediaCache);
@@ -935,22 +952,22 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
     }
 
     joined.push({
-      id: String(sig.id),
-      titleKo: stripHighlightMarkers(sig.title_ko || full.title_ko || sig.original_title),
-      originalTitle: stripHighlightMarkers(sig.original_title || sig.title_ko),
-      platformId: String(sig.platform_id || full.platform_id || "ai-radar"),
+      id,
+      titleKo,
+      originalTitle: stripHighlightMarkers(sig.original_title || full.original_title || titleKo),
+      platformId: String(sig.platform_id || full.platform_id || sig.source_platform || "ai-radar"),
       authorHandle: sig.author_handle || full.author_handle || null,
       category: String(sig.category || full.category || "industry"),
       lifecycleStatus: String(sig.lifecycle_status || full.lifecycle_status || "hot"),
-      canonicalUrl: String(sig.canonical_url),
-      publishedAt: String(sig.published_at || sig.fetched_at || new Date().toISOString()),
-      fetchedAt: String(sig.fetched_at || new Date().toISOString()),
+      canonicalUrl,
+      publishedAt: String(sig.published_at || full.published_at || sig.fetched_at || new Date().toISOString()),
+      fetchedAt: String(sig.fetched_at || full.fetched_at || new Date().toISOString()),
       importanceScore: Number(sig.importance_score || full.importance_score || 10),
       sourceCount: Number(sig.source_count || full.source_count || 1),
       benefitTag: sig.benefit_tag ? stripHighlightMarkers(sig.benefit_tag) : null,
-      highlightSummary: stripHighlightMarkers(sig.highlight_summary || full.highlight_summary || ""),
-      whatKo: stripHighlightMarkers(full.what_ko || sig.highlight_summary || ""),
-      whyKo: stripHighlightMarkers(full.why_ko || ""),
+      highlightSummary: stripHighlightMarkers(sig.highlight_summary || full.highlight_summary || full.what_ko || titleKo),
+      whatKo: stripHighlightMarkers(full.what_ko || sig.what_ko || sig.highlight_summary || titleKo),
+      whyKo: stripHighlightMarkers(full.why_ko || sig.why_ko || ""),
       utilityTip: ut
         ? {
             whenNeeded: stripHighlightMarkers(ut.when_needed || ""),
@@ -960,15 +977,27 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
         : null,
       planningMeta: {
         signalType: String(pm.signal_type || "new_product"),
-        productDomain: String(pm.product_domain || "ai-business-infra"),
+        productDomain: String(pm.product_domain || sig.category || "ai-business-infra"),
         benchmarkPoint: stripHighlightMarkers(pm.benchmark_point || "핵심 성능·워크플로 개선"),
         actionableIdea: stripHighlightMarkers(pm.actionable_idea || ""),
       },
-      entities: Array.isArray(sig.entities)
-        ? sig.entities.map((e) => (typeof e === "string" ? e : String(e?.name || ""))).filter(Boolean)
+      entities: Array.isArray(sig.entities || full.entities)
+        ? (sig.entities || full.entities).map((e) => (typeof e === "string" ? e : String(e?.name || ""))).filter(Boolean)
         : [],
       thumbnailUrl: verifiedThumb,
     });
+  };
+
+  for (const sig of planData?.signals || []) {
+    if (!sig) continue;
+    const full = (sig.id ? liveById.get(sig.id) : null) || {};
+    await pushRadarRecord(sig, full);
+  }
+
+  // Also absorb any live-feed-only signals (e.g., future Chinese platforms added to live-feed.json)
+  for (const liveIt of liveData?.items || []) {
+    if (!liveIt) continue;
+    await pushRadarRecord(liveIt, liveIt);
   }
 
   return {
@@ -1244,7 +1273,7 @@ async function syncGithubTrending(guard, existingBySource, mediaCache) {
   for (const qUrl of GITHUB_SEARCH_QUERIES) {
     const res = await guard.fetchText(qUrl, {
       accept: "application/vnd.github+json",
-      bypass304: existingBySource.length === 0,
+      bypass304: existingBySource.length < 45,
       extraHeaders: { "X-GitHub-Api-Version": "2022-11-28" },
     });
     lastStatus = res.status || lastStatus;
@@ -1269,8 +1298,9 @@ async function syncGithubTrending(guard, existingBySource, mediaCache) {
   const nowIso = new Date().toISOString();
   const topRepos = repos
     .sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0))
-    .slice(0, 26);
+    .slice(0, 52);
 
+  let readmeChecked = 0;
   for (const repo of topRepos) {
     const [owner, repoName] = repo.full_name.split("/");
     const branch = repo.default_branch || "main";
@@ -1285,7 +1315,11 @@ async function syncGithubTrending(guard, existingBySource, mediaCache) {
     let mediaSourceLabel = null;
 
     const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repoName}/${branch}/README.md`;
-    const readmeRes = await guard.fetchText(readmeUrl, { accept: "text/plain", bypass304: true });
+    const readmeRes =
+      readmeChecked < 28
+        ? await guard.fetchText(readmeUrl, { accept: "text/plain", bypass304: true })
+        : { ok: false, text: null };
+    if (readmeChecked < 28) readmeChecked += 1;
     if (readmeRes.ok && readmeRes.text) {
       const { videoCandidates, gifCandidates, imageCandidates } = extractMediaFromReadme(
         readmeRes.text,
@@ -1377,7 +1411,7 @@ async function syncReddit(guard, existingBySource, mediaCache) {
   for (const feed of REDDIT_FEEDS) {
     const res = await guard.fetchText(feed.url, {
       accept: "application/json",
-      bypass304: existingBySource.length === 0,
+      bypass304: existingBySource.length < 30,
       userAgent: REDDIT_USER_AGENT,
     });
     lastStatus = res.status || lastStatus;
@@ -1465,7 +1499,7 @@ async function syncReddit(guard, existingBySource, mediaCache) {
           previewImageUrl,
           mediaSourceLabel,
         });
-        if (out.length >= 20) break;
+        if (out.length >= 36) break;
       }
     } catch {}
   }
@@ -1493,19 +1527,23 @@ function parseShowHnTitle(rawTitle) {
 async function syncShowHn(guard, existingBySource) {
   const latestRes = await guard.fetchText(SHOW_HN_LATEST_URL, {
     accept: "application/json",
-    bypass304: existingBySource.length === 0,
+    bypass304: existingBySource.length < 50,
+  });
+  const latestP2Res = await guard.fetchText(SHOW_HN_LATEST_P2_URL, {
+    accept: "application/json",
+    bypass304: existingBySource.length < 50,
   });
   const topRes = await guard.fetchText(SHOW_HN_TOP_URL, {
     accept: "application/json",
-    bypass304: existingBySource.length === 0,
+    bypass304: existingBySource.length < 50,
   });
 
-  if (latestRes.cached304 && topRes.cached304 && existingBySource.length > 0) {
+  if (latestRes.cached304 && latestP2Res.cached304 && topRes.cached304 && existingBySource.length >= 50) {
     return { items: existingBySource, status: 304, cached304: true, note: "304 cached" };
   }
 
   const hits = [];
-  for (const res of [topRes, latestRes]) {
+  for (const res of [topRes, latestRes, latestP2Res]) {
     if (!res.text) continue;
     try {
       const data = JSON.parse(res.text);
@@ -1559,7 +1597,7 @@ async function syncShowHn(guard, existingBySource) {
       previewImageUrl: null,
       mediaSourceLabel: null,
     });
-    if (out.length >= 28) break;
+    if (out.length >= 68) break;
   }
 
   return {
@@ -1636,7 +1674,7 @@ async function syncProductHunt(guard, existingBySource) {
       previewImageUrl: null,
       mediaSourceLabel: null,
     });
-    if (out.length >= 20) break;
+    if (out.length >= 24) break;
   }
 
   return {
@@ -1733,7 +1771,7 @@ async function syncTrustMrr(guard, existingBySource) {
       previewImageUrl: null,
       mediaSourceLabel: null,
     });
-    if (out.length >= 16) break;
+    if (out.length >= 22) break;
   }
 
   return {
@@ -1822,7 +1860,7 @@ async function syncUneed(guard, existingBySource) {
       previewImageUrl: null,
       mediaSourceLabel: null,
     });
-    if (out.length >= 16) break;
+    if (out.length >= 22) break;
   }
 
   return {
@@ -2213,6 +2251,7 @@ async function main() {
     showHnResult.items,
     phResult.items,
     uneedResult.items,
+    prevBuilders,
   ]) {
     for (const item of list) {
       const key = item.url.toLowerCase().replace(/\/+$/, "");
@@ -2225,7 +2264,9 @@ async function main() {
         }
         mergedMap.set(key, item);
       }
+      if (mergedMap.size >= 240) break;
     }
+    if (mergedMap.size >= 240) break;
   }
   const builders = Array.from(mergedMap.values());
   const cultures = cultureResult.items;

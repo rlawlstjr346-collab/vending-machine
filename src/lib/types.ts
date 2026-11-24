@@ -86,6 +86,7 @@ export interface AiRadarSignal {
   titleKo: string;
   originalTitle: string;
   platformId: string;
+  platformLabel?: string;
   authorHandle?: string | null;
   category: string;
   lifecycleStatus: string;
@@ -163,6 +164,7 @@ export interface TreatmentSampleB {
   titleKo: string;
   canonicalUrl: string;
   platformId: string;
+  platformLabel?: string;
   sourceType?: "ai_radar" | "culture";
   cultureVerticalLabel?: string | null;
   signalType: string;

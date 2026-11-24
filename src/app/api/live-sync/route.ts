@@ -6,18 +6,20 @@ import {
   loadSyncMeta,
 } from "@/lib/data-loader";
 import { MECHANISM_MAP } from "@/lib/domains";
+import { normalizeAiRadarFeed } from "@/lib/radar-adapter";
 import { buildTechDigestKo, classifyMechanism } from "@/lib/synthesis-engine";
 import { isValidHttpUrl, sanitizeEditorialText, slugifyAscii } from "@/lib/text-clean";
 import type { AiRadarSignal, BuilderSignal } from "@/lib/types";
 
-export const revalidate = 600;
+// Reflects remote rlawlstjr346-collab/ai-radar updates within 3 minutes
+export const revalidate = 180;
 
 const AI_RADAR_PLANNING_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/data/planning-feed.json";
 const AI_RADAR_LIVE_URL =
   "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json";
 const SHOW_HN_LIVE_URL =
-  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=15";
+  "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=20";
 const UA =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
@@ -27,76 +29,39 @@ export async function GET() {
   const localCultures = loadCultureSignals();
   const syncMeta = loadSyncMeta();
 
-  let mergedRadars: AiRadarSignal[] = [...localRadars];
+  let mergedRadars: AiRadarSignal[] = normalizeAiRadarFeed(null, null, localRadars);
   let mergedBuilders: BuilderSignal[] = [...localBuilders];
   let liveRadarFetched = false;
   let liveShowHnAdded = 0;
 
   try {
     const [planRes, liveRes] = await Promise.all([
-      fetch(AI_RADAR_PLANNING_URL, { headers: { "User-Agent": UA }, next: { revalidate: 600 } }),
-      fetch(AI_RADAR_LIVE_URL, { headers: { "User-Agent": UA }, next: { revalidate: 600 } }),
+      fetch(AI_RADAR_PLANNING_URL, {
+        headers: { "User-Agent": UA },
+        next: { revalidate: 180 },
+        signal: AbortSignal.timeout(8000),
+      }),
+      fetch(AI_RADAR_LIVE_URL, {
+        headers: { "User-Agent": UA },
+        next: { revalidate: 180 },
+        signal: AbortSignal.timeout(8000),
+      }),
     ]);
 
-    const liveById = new Map<string, Record<string, unknown>>();
-    if (liveRes.ok) {
-      const liveJson = (await liveRes.json()) as { items?: Array<Record<string, unknown>> };
-      for (const it of liveJson.items || []) {
-        if (it?.id) liveById.set(String(it.id), it);
-      }
-    }
+    const planJson = planRes.ok ? await planRes.json().catch(() => null) : null;
+    const liveJson = liveRes.ok ? await liveRes.json().catch(() => null) : null;
 
-    if (planRes.ok) {
-      const data = (await planRes.json()) as { signals?: Array<Record<string, unknown>> };
-      if (Array.isArray(data.signals) && data.signals.length > 0) {
-        const localById = new Map(localRadars.map((r) => [r.id, r]));
-        mergedRadars = data.signals
-          .filter((s) => typeof s.id === "string" && isValidHttpUrl(String(s.canonical_url || "")))
-          .map((s) => {
-            const id = String(s.id);
-            const existing = localById.get(id);
-            const full = liveById.get(id) || {};
-            const pm = (s.planning_meta as Record<string, string> | undefined) || {};
-            const rawThumb =
-              (typeof full.thumbnail_url === "string" && isValidHttpUrl(full.thumbnail_url)
-                ? full.thumbnail_url
-                : null) ||
-              existing?.thumbnailUrl ||
-              null;
-
-            return {
-              id,
-              titleKo: sanitizeEditorialText(String(s.title_ko || s.original_title || "")),
-              originalTitle: sanitizeEditorialText(String(s.original_title || s.title_ko || "")),
-              platformId: String(s.platform_id || "ai-radar"),
-              authorHandle: s.author_handle ? String(s.author_handle) : null,
-              category: String(s.category || "industry"),
-              lifecycleStatus: String(s.lifecycle_status || "hot"),
-              canonicalUrl: String(s.canonical_url),
-              publishedAt: String(s.published_at || new Date().toISOString()),
-              fetchedAt: String(s.fetched_at || new Date().toISOString()),
-              importanceScore: Number(s.importance_score || 10),
-              sourceCount: Number(s.source_count || 1),
-              benefitTag: s.benefit_tag ? sanitizeEditorialText(String(s.benefit_tag)) : null,
-              highlightSummary: sanitizeEditorialText(String(s.highlight_summary || "")),
-              whatKo:
-                sanitizeEditorialText(String(full.what_ko || "")) ||
-                existing?.whatKo ||
-                sanitizeEditorialText(String(s.highlight_summary || "")),
-              whyKo: sanitizeEditorialText(String(full.why_ko || "")) || existing?.whyKo || "",
-              utilityTip: existing?.utilityTip || null,
-              planningMeta: {
-                signalType: String(pm.signal_type || "new_product"),
-                productDomain: String(pm.product_domain || "ai-business-infra"),
-                benchmarkPoint: sanitizeEditorialText(pm.benchmark_point || "핵심 워크플로 개선"),
-                actionableIdea: sanitizeEditorialText(pm.actionable_idea || ""),
-              },
-              entities: Array.isArray(s.entities)
-                ? s.entities.map((e) => String(e)).filter(Boolean)
-                : [],
-              thumbnailUrl: rawThumb,
-            };
-          });
+    if (planJson || liveJson) {
+      const normalized = normalizeAiRadarFeed(planJson, liveJson, localRadars);
+      if (normalized.length > 0) {
+        // Merge newly arrived remote signals with any preserved local signals
+        const seenUrls = new Set(
+          normalized.map((r) => r.canonicalUrl.toLowerCase().replace(/\/+$/, ""))
+        );
+        const preservedLocal = localRadars.filter(
+          (r) => !seenUrls.has(r.canonicalUrl.toLowerCase().replace(/\/+$/, ""))
+        );
+        mergedRadars = [...normalized, ...preservedLocal];
         liveRadarFetched = true;
       }
     }
@@ -107,7 +72,8 @@ export async function GET() {
   try {
     const res = await fetch(SHOW_HN_LIVE_URL, {
       headers: { "User-Agent": UA },
-      next: { revalidate: 600 },
+      next: { revalidate: 180 },
+      signal: AbortSignal.timeout(7000),
     });
     if (res.ok) {
       const data = (await res.json()) as { hits?: Array<Record<string, unknown>> };

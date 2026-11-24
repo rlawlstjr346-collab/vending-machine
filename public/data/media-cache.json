@@ -1622,5 +1622,237 @@
     "contentType": "image/jpeg",
     "finalUrl": "https://pdr-assets.b-cdn.net//collections/monument-to-the-vanquished-peasants/vnderweysungderm00drer_0102-edit-thumb.jpg",
     "checkedAt": "2026-11-24T02:42:33.766Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F23%2Fkfc-spain-offers-fried-chicken-gta-6-replacement-disc-000.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F23%2Fkfc-spain-offers-fried-chicken-gta-6-replacement-disc-000.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-24T03:17:58.870Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F23%2Fa24-elizabeth-holmes-you-can-see-everything-documentary-crosses-100-million-usd-mark-global-box-office-000.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F23%2Fa24-elizabeth-holmes-you-can-see-everything-documentary-crosses-100-million-usd-mark-global-box-office-000.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-24T03:17:59.010Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/connection-loneliness-four-experimental-bio-typography-works-hiroshi-imaeda-penetrate-designboom-700-500x400-22b08q85r850.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/connection-loneliness-four-experimental-bio-typography-works-hiroshi-imaeda-penetrate-designboom-700-500x400-22b08q85r850.jpg",
+    "checkedAt": "2026-11-24T03:18:01.456Z"
+  },
+  "https://raw.githubusercontent.com/openfilm/openfilm/main/docs/openfilm.webp": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/webp",
+    "finalUrl": "https://raw.githubusercontent.com/openfilm/openfilm/main/docs/openfilm.webp",
+    "checkedAt": "2026-11-24T03:18:48.148Z"
+  },
+  "https://raw.githubusercontent.com/zai-org/ZCode/main/public/logo/icons/1024x1024.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/zai-org/ZCode/main/public/logo/icons/1024x1024.png",
+    "checkedAt": "2026-11-24T03:18:49.935Z"
+  },
+  "https://raw.githubusercontent.com/erkamyaman/rust-anything/main/docs/assets/prettier.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/erkamyaman/rust-anything/main/docs/assets/prettier.gif",
+    "checkedAt": "2026-11-24T03:18:51.428Z"
+  },
+  "https://raw.githubusercontent.com/microsoft/TokenEconomizer/main/docs/assets/teaser.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/microsoft/TokenEconomizer/main/docs/assets/teaser.gif",
+    "checkedAt": "2026-11-24T03:18:53.456Z"
+  },
+  "https://raw.githubusercontent.com/kaankiziltug/logo-design-skill/main/docs/images/tiles/kiln.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/kaankiziltug/logo-design-skill/main/docs/images/tiles/kiln.png",
+    "checkedAt": "2026-11-24T03:18:57.443Z"
+  },
+  "https://raw.githubusercontent.com/alchaincyf/huashu-art-motion/main/assets/showcase/mario-claude.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/alchaincyf/huashu-art-motion/main/assets/showcase/mario-claude.gif",
+    "checkedAt": "2026-11-24T03:18:59.730Z"
+  },
+  "https://raw.githubusercontent.com/datalab-to/indra/main/assets/datalab-logo.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/datalab-to/indra/main/assets/datalab-logo.png",
+    "checkedAt": "2026-11-24T03:19:17.882Z"
+  },
+  "https://raw.githubusercontent.com/Tejashmakwana/motionmaxxing/main/docs/media/hero.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/Tejashmakwana/motionmaxxing/main/docs/media/hero.gif",
+    "checkedAt": "2026-11-24T03:19:19.942Z"
+  },
+  "https://raw.githubusercontent.com/strands-labs/strands-decider/main/docs/assets/strands-decider-logo.png": {
+    "ok": false,
+    "kind": null,
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/strands-labs/strands-decider/main/docs/assets/strands-decider-logo.png",
+    "checkedAt": "2026-11-24T03:19:23.927Z"
+  },
+  "https://raw.githubusercontent.com/amitshekhariitbhu/ai-system-design/main/assets/banner.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/amitshekhariitbhu/ai-system-design/main/assets/banner.png",
+    "checkedAt": "2026-11-24T03:19:26.196Z"
+  },
+  "https://raw.githubusercontent.com/thesysdev/open-intelligent-ui/main/docs/openui-chatgpt-comparison.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://raw.githubusercontent.com/thesysdev/open-intelligent-ui/main/docs/openui-chatgpt-comparison.jpg",
+    "checkedAt": "2026-11-24T03:19:28.258Z"
+  },
+  "https://github.com/user-attachments/assets/b1f2dbc6-21b7-4222-a0fb-dacfe1650797": {
+    "ok": false,
+    "kind": null,
+    "status": 206,
+    "contentType": "image/gif",
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/13518252/655448211-b1f2dbc6-21b7-4222-a0fb-dacfe1650797.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T031930Z&X-Amz-Expires=300&X-Amz-Signature=97e84dae28785b7da90aeaba8e3e3412e9af6eb0c18ebbc91361bdbedd145383&X-Amz-SignedHeaders=host&response-content-type=image%2Fgif",
+    "checkedAt": "2026-11-24T03:19:31.414Z"
+  },
+  "https://raw.githubusercontent.com/TypeLLM/TypeLLM/main/evals/jevbench/assets/accuracy-promo-svg.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/TypeLLM/TypeLLM/main/evals/jevbench/assets/accuracy-promo-svg.png",
+    "checkedAt": "2026-11-24T03:19:31.683Z"
+  },
+  "https://raw.githubusercontent.com/flohoeller/affectui/main/.github/assets/banner-light.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/flohoeller/affectui/main/.github/assets/banner-light.png",
+    "checkedAt": "2026-11-24T03:19:32.633Z"
+  },
+  "https://github.com/user-attachments/assets/6a53ac45-4c89-48fd-a7b4-2e6788a5294a": {
+    "ok": false,
+    "kind": null,
+    "status": 206,
+    "contentType": "image/png",
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/131369648/692443740-6a53ac45-4c89-48fd-a7b4-2e6788a5294a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T031934Z&X-Amz-Expires=300&X-Amz-Signature=131737fb2424a05bfa59e0d9d86797aae683b7a844600d52de025aab567383be&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng",
+    "checkedAt": "2026-11-24T03:19:36.171Z"
+  },
+  "https://github.com/user-attachments/assets/a698df0d-9fc6-48c2-a824-086736eb2e72": {
+    "ok": false,
+    "kind": null,
+    "status": 206,
+    "contentType": "image/png",
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/131369648/690204460-a698df0d-9fc6-48c2-a824-086736eb2e72.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T031936Z&X-Amz-Expires=300&X-Amz-Signature=d471e3187209b3e10e78102a279f124cbc81b829bafd9d707580efb3c949faa0&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng",
+    "checkedAt": "2026-11-24T03:19:37.687Z"
+  },
+  "https://raw.githubusercontent.com/hevnsnt/CVEngine/master/docs/images/cvengine-tour-1.4.gif": {
+    "ok": false,
+    "kind": null,
+    "status": 200,
+    "contentType": "application/octet-stream",
+    "finalUrl": "https://raw.githubusercontent.com/hevnsnt/CVEngine/master/docs/images/cvengine-tour-1.4.gif",
+    "checkedAt": "2026-11-24T03:19:42.679Z"
+  },
+  "https://raw.githubusercontent.com/hevnsnt/CVEngine/master/docs/images/cvengine-logo.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/hevnsnt/CVEngine/master/docs/images/cvengine-logo.png",
+    "checkedAt": "2026-11-24T03:19:42.926Z"
+  },
+  "https://i.postimg.cc/qRKzR7jV/IMG-0949.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://i.postimg.cc/qRKzR7jV/IMG-0949.jpg",
+    "checkedAt": "2026-11-24T03:19:45.645Z"
+  },
+  "https://raw.githubusercontent.com/devagrawal09/jev-review/main/docs/dashboard.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/devagrawal09/jev-review/main/docs/dashboard.png",
+    "checkedAt": "2026-11-24T03:19:46.106Z"
+  },
+  "https://raw.githubusercontent.com/huaxialucaicaizi/ai-startup-skills/main/assets/promo/cover.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://raw.githubusercontent.com/huaxialucaicaizi/ai-startup-skills/main/assets/promo/cover.jpg",
+    "checkedAt": "2026-11-24T03:19:48.494Z"
+  },
+  "https://raw.githubusercontent.com/StashDock/StashDock/main/assets/readme/ai-sidebar.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/StashDock/StashDock/main/assets/readme/ai-sidebar.gif",
+    "checkedAt": "2026-11-24T03:19:50.331Z"
+  },
+  "https://raw.githubusercontent.com/abacusai/abacusai-bot/main/docs/media/demo-product.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/abacusai/abacusai-bot/main/docs/media/demo-product.gif",
+    "checkedAt": "2026-11-24T03:19:55.124Z"
+  },
+  "https://trustmrr.com/startup/superfruits/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/superfruits/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-24T03:19:56.034Z"
+  },
+  "https://trustmrr.com/startup/1lookup/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/1lookup/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-24T03:19:57.262Z"
+  },
+  "https://trustmrr.com/startup/kl23iod2mdka/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/kl23iod2mdka/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-24T03:20:00.852Z"
   }
 }

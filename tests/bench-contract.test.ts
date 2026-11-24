@@ -6,7 +6,16 @@ import {
   buildHighlightSegments,
   buildSynergyHighlightRules,
 } from "@/components/HighlightText";
+import {
+  createEmptyDeckMemory,
+  drawNextDynamicCard,
+  type DispenserDeckMemory,
+} from "@/lib/dispenser-deck";
 import { DOMAIN_LIST } from "@/lib/domains";
+import {
+  formatRadarPlatformLabel,
+  normalizeAiRadarFeed,
+} from "@/lib/radar-adapter";
 import {
   DISCOVER_HUBS,
   getDiscoverHub,
@@ -14,6 +23,7 @@ import {
 } from "@/lib/seo-keywords";
 import { getSiteUrl } from "@/lib/site-url";
 import {
+  inferDomainSlugForPair,
   matchAiRadarFor,
   matchCultureFor,
   synthesizeTreatment,
@@ -334,5 +344,180 @@ describe("DISPENSER. Production Release Contract Tests", () => {
     expect(rssXml).toContain("DISPENSER.");
     expect(rssXml).not.toContain("BENCH.");
     expect((rssXml.match(/<item>/g) || []).length).toBe(treatmentsPayload.items.length);
+  });
+
+  it("9) proves dynamic N x M semantic uniqueness: 1 Builder A paired with 10 distinct issues (5 tech + 5 culture) yields 10 unique question headlines & fusion stories with zero template recycling", () => {
+    expect(buildersPayload.items.length).toBeGreaterThanOrEqual(150);
+    expect(culturePayload.items.length).toBeGreaterThanOrEqual(100);
+
+    const builderA = buildersPayload.items[0];
+    const fiveRadars = radarPayload.items.slice(0, 5);
+    const fiveCultures = culturePayload.items.slice(0, 5);
+    expect(fiveRadars).toHaveLength(5);
+    expect(fiveCultures).toHaveLength(5);
+
+    const titles = new Set<string>();
+    const stories = new Set<string>();
+    const hooks = new Set<string>();
+    const roboticRe = /×.*방식의|요소를 참고해|영역 서비스의 핵심 워크플로|와\s+.+를\s+결합한\s+서비스/;
+
+    for (let i = 0; i < 5; i += 1) {
+      const trTech = synthesizeTreatment({
+        builder: builderA,
+        radar: fiveRadars[i],
+        track: "tech",
+        domainSlug: inferDomainSlugForPair(builderA, fiveRadars[i]),
+        variantIndex: i,
+      });
+      expect(trTech.title.endsWith("?")).toBe(true);
+      expect(trTech.title).not.toMatch(roboticRe);
+      expect(trTech.fusionStoryKo).not.toMatch(roboticRe);
+      expect((trTech.highlightPhrases || []).length).toBeGreaterThanOrEqual(1);
+      titles.add(trTech.title);
+      stories.add(trTech.fusionStoryKo);
+      hooks.add(trTech.oneLineHook);
+
+      const trCulture = synthesizeTreatment({
+        builder: builderA,
+        radar: fiveRadars[i],
+        culture: fiveCultures[i],
+        track: "culture",
+        domainSlug: fiveCultures[i].domainSlug,
+        variantIndex: i,
+      });
+      expect(trCulture.title.endsWith("?")).toBe(true);
+      expect(trCulture.title).not.toMatch(roboticRe);
+      expect(trCulture.fusionStoryKo).not.toMatch(roboticRe);
+      expect((trCulture.highlightPhrases || []).length).toBeGreaterThanOrEqual(1);
+      titles.add(trCulture.title);
+      stories.add(trCulture.fusionStoryKo);
+      hooks.add(trCulture.oneLineHook);
+    }
+
+    expect(titles.size).toBe(10);
+    expect(stories.size).toBe(10);
+    expect(hooks.size).toBe(10);
+  });
+
+  it("10) proves 80 consecutive dynamic dispenser draws enforce zero pair duplicates, zero 20-card window repeats, and strict 1:1 tech/culture alternation", () => {
+    let memory: DispenserDeckMemory = createEmptyDeckMemory();
+    const seenPairs = new Set<string>();
+    const builderHistory: string[] = [];
+    const issueHistory: string[] = [];
+    const trackHistory: string[] = [];
+
+    for (let step = 0; step < 80; step += 1) {
+      const drawn = drawNextDynamicCard({
+        builders: buildersPayload.items,
+        radars: radarPayload.items,
+        cultures: culturePayload.items,
+        memory,
+      });
+      memory = drawn.memory;
+
+      // 0 exact (A x B) pair duplicates across all 80 draws
+      expect(seenPairs.has(drawn.pairKey), `Duplicate pair at step ${step}: ${drawn.pairKey}`).toBe(
+        false
+      );
+      seenPairs.add(drawn.pairKey);
+
+      // 0 identical builder or identical issue within the preceding 20-card sliding window
+      const prev20Builders = builderHistory.slice(-20);
+      const prev20Issues = issueHistory.slice(-20);
+      expect(
+        prev20Builders.includes(drawn.builderKey),
+        `Builder repeated within 20-card window at step ${step}: ${drawn.builderKey}`
+      ).toBe(false);
+      expect(
+        prev20Issues.includes(drawn.issueKey),
+        `Issue repeated within 20-card window at step ${step}: ${drawn.issueKey}`
+      ).toBe(false);
+
+      builderHistory.push(drawn.builderKey);
+      issueHistory.push(drawn.issueKey);
+      trackHistory.push(drawn.track);
+
+      // Strict 1:1 tech <-> culture alternation
+      if (step > 0) {
+        expect(drawn.track).not.toBe(trackHistory[step - 1]);
+      }
+    }
+
+    expect(seenPairs.size).toBe(80);
+    expect(trackHistory.filter((t) => t === "tech").length).toBe(40);
+    expect(trackHistory.filter((t) => t === "culture").length).toBe(40);
+  });
+
+  it("11) proves AI Radar schema-flexible adapter absorbs future Chinese & unknown platforms with zero code edits", () => {
+    const futurePlanningPayload = {
+      signals: [
+        {
+          id: "cn-xhs-001",
+          title_ko: "샤오홍슈에서 폭증 중인 AI 포토카드 보정 워크플로",
+          original_title: "小红书爆火AI小卡修图工作流",
+          platform_id: "xiaohongshu",
+          category: "cn_creator",
+          canonical_url: "https://www.xiaohongshu.com/explore/67890abcdef",
+          highlight_summary: "중국 크리에이터들이 로컬 이미지 모델로 즉석 보정 템플릿을 공유하고 있습니다.",
+          planning_meta: {
+            signal_type: "creator_trend",
+            product_domain: "visual-creator",
+            benchmark_point: "원클릭 스타일 프리셋",
+          },
+          entities: ["Xiaohongshu", "Flux"],
+        },
+        {
+          id: "cn-bili-002",
+          title_ko: "비리비리 개발자 채널의 실시간 AI 더빙 자막 파이프라인",
+          original_title: "B站实时AI配音字幕开源项目",
+          platform_id: "bilibili",
+          category: "cn_video",
+          canonical_url: "https://www.bilibili.com/video/BV1xx411c7mD",
+          highlight_summary: "긴 테크 영상을 30초 만에 다국어 더빙·요약하는 오픈소스 데모가 화제입니다.",
+          entities: ["Bilibili"],
+        },
+      ],
+    };
+
+    const futureLivePayload = {
+      items: [
+        {
+          id: "future-src-003",
+          titleKo: "미지의 차세대 소스에서 포착된 로컬 브라우저 에이전트 표준",
+          platformId: "unknown_future_source",
+          category: "future_protocol",
+          canonicalUrl: "https://future-source.dev/posts/local-browser-agent",
+          whatKo: "신규 에이전트 통신 규격으로 설치 없이 브라우저 탭을 자동화하는 실험이 공개됐습니다.",
+          thumbnailUrl: "https://future-source.dev/og/agent.png",
+        },
+      ],
+    };
+
+    const normalized = normalizeAiRadarFeed(futurePlanningPayload, futureLivePayload);
+    expect(normalized).toHaveLength(3);
+
+    const xhs = normalized.find((s) => s.id === "cn-xhs-001")!;
+    const bili = normalized.find((s) => s.id === "cn-bili-002")!;
+    const futureSrc = normalized.find((s) => s.id === "future-src-003")!;
+
+    expect(xhs.platformLabel).toBe("샤오홍슈 (小红书)");
+    expect(bili.platformLabel).toBe("비리비리 (Bilibili)");
+    expect(futureSrc.platformLabel).toBe("Unknown Future Source");
+    expect(formatRadarPlatformLabel("weibo")).toBe("웨이보 (Weibo)");
+    expect(formatRadarPlatformLabel("qbitai")).toBe("량쯔웨이 (量子位)");
+
+    const builderA = buildersPayload.items[0];
+    for (const sig of normalized) {
+      const tr = synthesizeTreatment({
+        builder: builderA,
+        radar: sig,
+        track: "tech",
+        domainSlug: inferDomainSlugForPair(builderA, sig),
+      });
+      expect(tr.title.endsWith("?")).toBe(true);
+      expect(tr.sampleB.platformLabel).toBe(sig.platformLabel);
+      expect(tr.fusionStoryKo.length).toBeGreaterThan(80);
+      expect(tr.mvpFeatures).toHaveLength(3);
+    }
   });
 });

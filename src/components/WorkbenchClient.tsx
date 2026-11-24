@@ -2,27 +2,30 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { DOMAIN_LIST, MECHANISM_LIST } from "@/lib/domains";
 import {
-  matchAiRadarFor,
-  matchCultureFor,
-  synthesizeTreatment,
-} from "@/lib/synthesis-engine";
+  createEmptyDeckMemory,
+  drawNextDynamicCard,
+  loadDeckMemory,
+  mergeUniqueBuilders,
+  mergeUniqueCultures,
+  mergeUniqueRadars,
+  saveDeckMemory,
+  type DispenserDeckMemory,
+} from "@/lib/dispenser-deck";
+import { inferDomainSlugForPair, synthesizeTreatment } from "@/lib/synthesis-engine";
 import type {
   AiRadarSignal,
   BuilderSignal,
   CultureSignal,
-  DomainSlug,
-  MechanismId,
   SyncMeta,
   Treatment,
-  TreatmentTrack,
 } from "@/lib/types";
 import { DispenserLogo } from "./Icons";
 import { TreatmentModal } from "./TreatmentModal";
 import { VisualBlueprintCard } from "./VisualBlueprintCard";
 
 interface WorkbenchClientProps {
+  /** Used ONLY for explicit `/?treatment=<id>` deep-link lookup, never played sequentially on `/`. */
   initialTreatments: Treatment[];
   initialBuilders: BuilderSignal[];
   initialRadars: AiRadarSignal[];
@@ -31,38 +34,25 @@ interface WorkbenchClientProps {
 }
 
 /**
- * Strictly 1:1 interleaved deck (tech -> culture -> tech -> culture)
- * while keeping SSR hydration 100% deterministic.
+ * Deterministic SSR-only first paint card so hydration matches 100%,
+ * immediately replaced on client mount with a true crypto-random N x M card.
  */
-function buildInterleavedDeck(items: Treatment[], salt = 0): Treatment[] {
-  if (items.length <= 1) return [...items];
-
-  const techItems = items.filter((t) => t.track !== "culture");
-  const cultureItems = items.filter((t) => t.track === "culture");
-
-  if (techItems.length === 0 || cultureItems.length === 0) {
-    const offset = Math.abs(salt) % items.length;
-    return [...items.slice(offset), ...items.slice(0, offset)];
-  }
-
-  const tOff = Math.abs(salt) % techItems.length;
-  const cOff = Math.abs(salt) % cultureItems.length;
-  const rotTech = [...techItems.slice(tOff), ...techItems.slice(0, tOff)];
-  const rotCulture = [...cultureItems.slice(cOff), ...cultureItems.slice(0, cOff)];
-
-  const ordered: Treatment[] = [];
-  const startWithCulture = salt % 2 === 1;
-  const maxLen = Math.max(rotTech.length, rotCulture.length);
-  for (let i = 0; i < maxLen; i += 1) {
-    if (startWithCulture) {
-      if (i < rotCulture.length) ordered.push(rotCulture[i]);
-      if (i < rotTech.length) ordered.push(rotTech[i]);
-    } else {
-      if (i < rotTech.length) ordered.push(rotTech[i]);
-      if (i < rotCulture.length) ordered.push(rotCulture[i]);
-    }
-  }
-  return ordered;
+function buildDeterministicSsrCard(
+  builders: BuilderSignal[],
+  radars: AiRadarSignal[],
+  cultures: CultureSignal[]
+): Treatment | null {
+  const b = builders[0];
+  const r = radars[0];
+  if (!b || !r) return null;
+  return synthesizeTreatment({
+    builder: b,
+    radar: r,
+    culture: cultures[0] || null,
+    track: "tech",
+    domainSlug: inferDomainSlugForPair(b, r),
+    variantIndex: 0,
+  });
 }
 
 export function WorkbenchClient({
@@ -73,38 +63,114 @@ export function WorkbenchClient({
   initialSyncMeta,
 }: WorkbenchClientProps) {
   const searchParams = useSearchParams();
+  const requestedTreatmentId = searchParams.get("treatment");
+
   const [builders, setBuilders] = useState<BuilderSignal[]>(initialBuilders);
   const [radars, setRadars] = useState<AiRadarSignal[]>(initialRadars);
   const [cultures, setCultures] = useState<CultureSignal[]>(initialCultures);
   const [syncedAt, setSyncedAt] = useState<string>(initialSyncMeta.syncedAt);
 
+  const buildersRef = useRef<BuilderSignal[]>(initialBuilders);
+  const radarsRef = useRef<AiRadarSignal[]>(initialRadars);
+  const culturesRef = useRef<CultureSignal[]>(initialCultures);
+  const memoryRef = useRef<DispenserDeckMemory>(createEmptyDeckMemory());
+  const drawCountRef = useRef<number>(0);
+  const conduitCursorRef = useRef<number>(0);
+  const conduitInFlightRef = useRef<boolean>(false);
+
   const [deck, setDeck] = useState<Treatment[]>(() => {
-    const base = buildInterleavedDeck(initialTreatments, 0);
-    const reqId = searchParams.get("treatment");
-    if (reqId) {
-      const found = initialTreatments.find((t) => t.id === reqId);
-      if (found) {
-        return [found, ...base.filter((item) => item.id !== found.id)];
-      }
+    if (requestedTreatmentId) {
+      const found = initialTreatments.find((t) => t.id === requestedTreatmentId);
+      if (found) return [found];
     }
-    return base;
+    const ssrCard = buildDeterministicSsrCard(initialBuilders, initialRadars, initialCultures);
+    return ssrCard ? [ssrCard] : initialTreatments.slice(0, 1);
   });
 
   const [deckIndex, setDeckIndex] = useState<number>(0);
   const [modalTreatment, setModalTreatment] = useState<Treatment | null>(() => {
-    const reqId = searchParams.get("treatment");
-    if (reqId) {
-      const found = initialTreatments.find((t) => t.id === reqId);
+    if (requestedTreatmentId) {
+      const found = initialTreatments.find((t) => t.id === requestedTreatmentId);
       if (found) return found;
     }
     return null;
   });
 
-  const synthCursorRef = useRef<number>(initialTreatments.length + 1);
   const lastWheelAtRef = useRef<number>(0);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
-  // Silent live-sync refresh on mount so collected counts & pool stay fresh
+  useEffect(() => {
+    buildersRef.current = builders;
+  }, [builders]);
+
+  useEffect(() => {
+    radarsRef.current = radars;
+  }, [radars]);
+
+  useEffect(() => {
+    culturesRef.current = cultures;
+  }, [cultures]);
+
+  // Background pool expansion via /api/live-conduit as user explores deeper
+  const triggerLiveConduit = useCallback(() => {
+    if (conduitInFlightRef.current) return;
+    conduitInFlightRef.current = true;
+    const cursor = conduitCursorRef.current;
+    conduitCursorRef.current += 1;
+
+    fetch(`/api/live-conduit?cursor=${cursor}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then(
+        (
+          data: {
+            builders?: BuilderSignal[];
+            cultures?: CultureSignal[];
+          } | null
+        ) => {
+          if (!data) return;
+          if (Array.isArray(data.builders) && data.builders.length > 0) {
+            setBuilders((prev) => {
+              const merged = mergeUniqueBuilders(prev, data.builders || []);
+              buildersRef.current = merged;
+              return merged;
+            });
+          }
+          if (Array.isArray(data.cultures) && data.cultures.length > 0) {
+            setCultures((prev) => {
+              const merged = mergeUniqueCultures(prev, data.cultures || []);
+              culturesRef.current = merged;
+              return merged;
+            });
+          }
+        }
+      )
+      .catch(() => {})
+      .finally(() => {
+        conduitInFlightRef.current = false;
+      });
+  }, []);
+
+  // On client mount: load sliding-cooldown memory & immediately dispense a fresh crypto-random N x M card
+  useEffect(() => {
+    const loadedMemory = loadDeckMemory();
+    memoryRef.current = loadedMemory;
+
+    if (!requestedTreatmentId && buildersRef.current.length > 0) {
+      const drawn = drawNextDynamicCard({
+        builders: buildersRef.current,
+        radars: radarsRef.current,
+        cultures: culturesRef.current,
+        memory: loadedMemory,
+      });
+      memoryRef.current = drawn.memory;
+      saveDeckMemory(drawn.memory);
+      drawCountRef.current = 1;
+      setDeck([drawn.treatment]);
+      setDeckIndex(0);
+    }
+  }, [requestedTreatmentId]);
+
+  // Silent live-sync refresh on mount (3-min revalidated AI Radar + Show HN auto-absorption)
   useEffect(() => {
     let active = true;
     fetch("/api/live-sync")
@@ -120,13 +186,25 @@ export function WorkbenchClient({
         ) => {
           if (!active || !data) return;
           if (Array.isArray(data.builders) && data.builders.length > 0) {
-            setBuilders(data.builders);
+            setBuilders((prev) => {
+              const merged = mergeUniqueBuilders(prev, data.builders || []);
+              buildersRef.current = merged;
+              return merged;
+            });
           }
           if (Array.isArray(data.aiRadars) && data.aiRadars.length > 0) {
-            setRadars(data.aiRadars);
+            setRadars((prev) => {
+              const merged = mergeUniqueRadars(prev, data.aiRadars || []);
+              radarsRef.current = merged;
+              return merged;
+            });
           }
           if (Array.isArray(data.cultures) && data.cultures.length > 0) {
-            setCultures(data.cultures);
+            setCultures((prev) => {
+              const merged = mergeUniqueCultures(prev, data.cultures || []);
+              culturesRef.current = merged;
+              return merged;
+            });
           }
           if (data.syncedAt) setSyncedAt(data.syncedAt);
         }
@@ -137,69 +215,25 @@ export function WorkbenchClient({
     };
   }, []);
 
-  const currentTreatment = deck[deckIndex] || deck[0] || initialTreatments[0];
+  const currentTreatment = deck[deckIndex] || deck[0];
 
-  /**
-   * Infinite runtime synthesis strictly alternating 1:1 (tech <-> culture)
-   * across AI Radar and Global Culture signals even after hundreds of Space presses.
-   */
-  const synthesizeInfiniteCard = useCallback(
-    (existingDeck: Treatment[], prevCard?: Treatment | null): Treatment => {
-      const seenIds = new Set(existingDeck.map((t) => t.id));
-      const prevDom = prevCard?.domainSlug;
-      const prevMech = prevCard?.sampleA.mechanism;
-      const nextTrack: TreatmentTrack =
-        cultures.length > 0 && prevCard?.track !== "culture" ? "culture" : "tech";
+  const drawFreshCard = useCallback((): Treatment => {
+    const drawn = drawNextDynamicCard({
+      builders: buildersRef.current,
+      radars: radarsRef.current,
+      cultures: culturesRef.current,
+      memory: memoryRef.current,
+    });
+    memoryRef.current = drawn.memory;
+    saveDeckMemory(drawn.memory);
+    drawCountRef.current += 1;
 
-      for (let attempt = 0; attempt < 24; attempt += 1) {
-        const step = synthCursorRef.current;
-        synthCursorRef.current += 1;
-
-        const domPool = DOMAIN_LIST.filter((d) => d.slug !== prevDom);
-        const domainSlug: DomainSlug =
-          domPool[step % domPool.length]?.slug || DOMAIN_LIST[step % DOMAIN_LIST.length].slug;
-
-        const mechPool = MECHANISM_LIST.filter((m) => m.id !== prevMech);
-        const targetMech: MechanismId =
-          mechPool[step % mechPool.length]?.id || MECHANISM_LIST[step % MECHANISM_LIST.length].id;
-
-        const builder = builders[(step * 11 + attempt * 5) % builders.length] || builders[0];
-        const radar = matchAiRadarFor(builder, domainSlug, radars, step + attempt);
-        const culture =
-          nextTrack === "culture"
-            ? matchCultureFor(builder, domainSlug, cultures, step + attempt)
-            : null;
-
-        const candidate = synthesizeTreatment({
-          builder,
-          radar,
-          culture,
-          track: culture ? "culture" : "tech",
-          domainSlug: culture ? culture.domainSlug : domainSlug,
-          variantIndex: step,
-          mechanismOverride: targetMech,
-        });
-
-        if (!seenIds.has(candidate.id)) return candidate;
-      }
-
-      const step = synthCursorRef.current++;
-      const fallbackDomain = DOMAIN_LIST[step % DOMAIN_LIST.length].slug;
-      const builder = builders[step % builders.length];
-      const radar = matchAiRadarFor(builder, fallbackDomain, radars, step);
-      const culture =
-        nextTrack === "culture" ? matchCultureFor(builder, fallbackDomain, cultures, step) : null;
-      return synthesizeTreatment({
-        builder,
-        radar,
-        culture,
-        track: culture ? "culture" : "tech",
-        domainSlug: culture ? culture.domainSlug : fallbackDomain,
-        variantIndex: step,
-      });
-    },
-    [builders, radars, cultures]
-  );
+    // Stream fresh external builders & culture signals in background every 6 flips
+    if (drawCountRef.current % 6 === 0) {
+      triggerLiveConduit();
+    }
+    return drawn.treatment;
+  }, [triggerLiveConduit]);
 
   const handleNextCard = useCallback(() => {
     setDeck((prevDeck) => {
@@ -207,23 +241,22 @@ export function WorkbenchClient({
         setDeckIndex(deckIndex + 1);
         return prevDeck;
       }
-      const fresh = synthesizeInfiniteCard(prevDeck, prevDeck[deckIndex]);
+      const fresh = drawFreshCard();
       setDeckIndex(prevDeck.length);
       return [...prevDeck, fresh];
     });
-  }, [deckIndex, synthesizeInfiniteCard]);
+  }, [deckIndex, drawFreshCard]);
 
   const handlePrevCard = useCallback(() => {
     setDeckIndex((idx) => (idx > 0 ? idx - 1 : 0));
   }, []);
 
   const handleShuffleDeck = useCallback(() => {
-    const salt = Math.floor(Math.random() * Math.max(1, initialTreatments.length));
-    const freshDeck = buildInterleavedDeck(initialTreatments, salt + synthCursorRef.current++);
-    setDeck(freshDeck);
+    const fresh = drawFreshCard();
+    setDeck([fresh]);
     setDeckIndex(0);
     setModalTreatment(null);
-  }, [initialTreatments]);
+  }, [drawFreshCard]);
 
   // Keyboard navigation: Space / ArrowRight / ArrowDown -> Next, ArrowLeft / ArrowUp -> Prev
   useEffect(() => {
@@ -307,7 +340,7 @@ export function WorkbenchClient({
           <button
             type="button"
             onClick={handleShuffleDeck}
-            aria-label="DISPENSER 새 랜덤 순서로 섞기"
+            aria-label="DISPENSER 새 랜덤 조합 뽑기"
             className="cursor-pointer"
           >
             <DispenserLogo />

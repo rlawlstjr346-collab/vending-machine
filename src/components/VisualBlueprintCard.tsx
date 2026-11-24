@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { formatRadarPlatformLabel } from "@/lib/radar-adapter";
 import type { Treatment } from "@/lib/types";
 import {
   buildSynergyHighlightRules,
@@ -297,7 +298,13 @@ export function VisualBlueprintCard({
                 <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
                 {treatment.track === "culture"
                   ? `글로벌 컬처 · ${treatment.sampleB.cultureVerticalLabel || treatment.sampleB.platformId}`
-                  : `AI Radar 이슈 · ${treatment.sampleB.platformId}`}
+                  : `AI Radar 이슈 · ${
+                      treatment.sampleB.platformLabel ||
+                      formatRadarPlatformLabel(
+                        treatment.sampleB.platformId,
+                        treatment.sampleB.canonicalUrl
+                      )
+                    }`}
               </span>
             </div>
 
