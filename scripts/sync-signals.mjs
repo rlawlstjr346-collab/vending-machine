@@ -306,7 +306,9 @@ const MECHANISM_RULES = [
     simpleActionKo: "짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식",
     keywords: [
       "audio", "music", "voice", "sound", "speech", "tts", "stt", "stem", "beat", "song",
-      "midi", "synth", "radio", "podcast", "whisper", "transcribe", "speak",
+      "midi", "synth", "radio", "podcast", "whisper", "transcribe", "speak", "hear", "hears",
+      "listen", "talk", "talking", "translator", "feed", "media", "stream", "broadcast",
+      "channel", "call", "mic", "playlist", "narrat", "dub", "clipper",
     ],
   },
   {
@@ -330,7 +332,10 @@ function classifyMechanism(text, source, tractionType) {
   for (const m of MECHANISM_RULES) {
     let score = 0;
     for (const kw of m.keywords) {
-      if (hay.includes(kw)) score += kw.length >= 6 ? 3 : 2;
+      if (hay.includes(kw)) {
+        score += kw.length >= 6 ? 3 : 2;
+        if (m.id === "audio-stem") score += 2;
+      }
     }
     if (source === "trustmrr" && m.id === "visual-price-match") score += 2;
     if (source === "uneed" && m.id === "drop-validation") score += 1;
@@ -1047,6 +1052,13 @@ async function main() {
     const ko = getTranslated(b.taglineEn, translationCache);
     b.taglineKo = ko;
     b.summaryKo = b.source === "trustmrr" ? `${b.name}: ${ko} (${b.tractionLabel})` : `${b.name}: ${ko}`;
+    const mechId = classifyMechanism(
+      `${b.name} ${b.taglineEn || ""} ${b.taglineKo || ""} ${(b.tags || []).join(" ")}`,
+      b.source,
+      b.tractionType
+    );
+    b.mechanism = mechId;
+    b.mechanismLabel = MECHANISM_BY_ID[mechId]?.label || b.mechanismLabel;
   }
 
   const treatments = buildHumanSeedTreatments(builders, radarResult.items);

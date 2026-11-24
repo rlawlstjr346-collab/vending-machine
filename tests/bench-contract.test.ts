@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { DOMAIN_LIST } from "@/lib/domains";
+import { DOMAIN_LIST, MECHANISM_LIST } from "@/lib/domains";
 import {
   decodeSavedParam,
   encodeSavedParam,
@@ -14,6 +14,7 @@ import {
   treatmentToMarkdown,
 } from "@/lib/synthesis-engine";
 import { isValidHttpUrl } from "@/lib/text-clean";
+import { WIREFRAME_ARCHETYPES } from "@/components/ProductWireframePreview";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 import { GET as getRss } from "@/app/rss.xml/route";
@@ -39,7 +40,7 @@ function collectSourceFiles(dir: string): string[] {
   return files;
 }
 
-describe("BENCH. Warm Nordic Contract Tests", () => {
+describe("BENCH. Pure White Visual Deck Contract Tests", () => {
   const buildersPayload = readJson<{ count: number; items: BuilderSignal[] }>(
     path.join(PUBLIC_DATA, "builder-signals.json")
   );
@@ -187,5 +188,33 @@ describe("BENCH. Warm Nordic Contract Tests", () => {
     const rssXml = await rssRes.text();
     expect(rssXml).toContain('<rss version="2.0"');
     expect(rssXml).toContain("<item>");
+  });
+
+  it("6) guarantees zero residual warm oatmeal/beige HEX codes across src/", () => {
+    const oatmealHexRe =
+      /#(F6F3EC|FFFCF7|F9F5EC|FBF7EE|EBE5D8|E7E0D3|ECE5D8|C5BCA8|D8CEBC|E5DEC9|F5EFE4)\b/i;
+
+    const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
+    for (const filePath of srcFiles) {
+      if (filePath.endsWith("translation-cache.json")) continue;
+      const content = fs.readFileSync(filePath, "utf-8");
+      expect(content, `Residual oatmeal/beige HEX found in ${filePath}`).not.toMatch(oatmealHexRe);
+    }
+  });
+
+  it("7) validates complete 6-archetype wireframe preview mapping and balanced audio-stem builder signals", () => {
+    const expectedMechanisms = MECHANISM_LIST.map((m) => m.id);
+    expect(expectedMechanisms).toHaveLength(6);
+
+    for (const mechId of expectedMechanisms) {
+      const wf = WIREFRAME_ARCHETYPES[mechId];
+      expect(wf, `Missing wireframe archetype for ${mechId}`).toBeDefined();
+      expect(wf.id).toBe(mechId);
+      expect(wf.badge.length).toBeGreaterThan(0);
+      expect(wf.steps).toHaveLength(3);
+    }
+
+    const audioBuilders = buildersPayload.items.filter((b) => b.mechanism === "audio-stem");
+    expect(audioBuilders.length).toBeGreaterThanOrEqual(1);
   });
 });

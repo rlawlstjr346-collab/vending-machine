@@ -1,31 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --nordic-canvas: #f6f3ec;
-  --nordic-paper: #fffcf7;
-  --nordic-lead: #fbf7ee;
-  --nordic-inset: #f9f5ec;
-  --nordic-pill: #ebe5d8;
-  --nordic-border: #e7e0d3;
-  --nordic-border-inset: #ece5d8;
-  --nordic-title: #1e1c19;
-  --nordic-body: #3d3831;
-  --nordic-meta: #6e675c;
-  --nordic-cta: #23201c;
-  --nordic-cta-hover: #36322c;
+  --studio-canvas: #f7f8fa;
+  --studio-surface: #ffffff;
+  --studio-inset: #f8fafc;
+  --studio-border: #e5e7eb;
+  --studio-border-inset: #e2e8f0;
+  --studio-title: #0f172a;
+  --studio-body: #1e293b;
+  --studio-muted: #475569;
+  --studio-caption: #64748b;
+  --studio-cta: #0f172a;
+  --studio-cta-hover: #1e293b;
 }
 
 html {
   font-size: 16px;
-  background-color: var(--nordic-canvas);
-  color: var(--nordic-title);
+  background-color: var(--studio-canvas);
+  color: var(--studio-title);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--nordic-canvas);
-  color: var(--nordic-title);
+  background-color: var(--studio-canvas);
+  color: var(--studio-title);
   font-family:
     "Pretendard Variable",
     "Pretendard",
@@ -36,10 +35,21 @@ body {
     "Inter",
     "Segoe UI",
     sans-serif;
+  letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   word-break: keep-all;
   overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+label {
+  word-break: keep-all;
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -48,30 +58,33 @@ a {
 }
 
 ::selection {
-  background-color: #ebe5d8;
-  color: #1e1c19;
+  background-color: #dbeafe;
+  color: #0f172a;
 }
 
 .tnum {
   font-variant-numeric: tabular-nums;
 }
 
-.nordic-card {
-  background-color: var(--nordic-paper);
-  border: 1px solid var(--nordic-border);
+.studio-card {
+  background-color: var(--studio-surface);
+  border: 1px solid var(--studio-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.05);
+}
+
+.studio-card-flat {
+  background-color: var(--studio-surface);
+  border: 1px solid var(--studio-border);
   border-radius: 16px;
 }
 
-.nordic-card:hover {
-  border-color: #d6cbb8;
+.studio-card-flat:hover {
+  border-color: #cbd5e1;
 }
 
-.nordic-lead-card {
-  background-color: var(--nordic-lead);
-  border: 1px solid #e3dac8;
+.studio-inset {
+  background-color: var(--studio-inset);
+  border: 1px solid var(--studio-border-inset);
   border-radius: 16px;
-}
-
-.nordic-lead-card:hover {
-  border-color: #cfc3ad;
 }

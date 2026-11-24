@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-11-23T15:26:16.219Z",
+  "syncedAt": "2026-11-24T00:40:42.718Z",
   "count": 88,
   "items": [
     {
@@ -435,8 +435,8 @@
       "tractionValue": 24711,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "visual-price-match",
-      "mechanismLabel": "시각 탐색 · 가격 매칭",
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
       "tags": [
         "show-hn",
         "validated"
@@ -461,8 +461,8 @@
       "tractionValue": 19624,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -513,8 +513,8 @@
       "tractionValue": 15899,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -591,8 +591,8 @@
       "tractionValue": 11047,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -669,8 +669,8 @@
       "tractionValue": 10216,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -695,8 +695,8 @@
       "tractionValue": 8998,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -903,8 +903,8 @@
       "tractionValue": 6567,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -929,8 +929,8 @@
       "tractionValue": 6331,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "timestamp-archive",
-      "mechanismLabel": "구간 채집 · 아카이빙",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -1085,8 +1085,8 @@
       "tractionValue": 5349,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "geo-curation",
-      "mechanismLabel": "취향 지도 · 큐레이션",
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
       "tags": [
         "show-hn",
         "validated"
@@ -1215,8 +1215,8 @@
       "tractionValue": 5075,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "geo-curation",
-      "mechanismLabel": "취향 지도 · 큐레이션",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -1241,8 +1241,8 @@
       "tractionValue": 5023,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "geo-curation",
-      "mechanismLabel": "취향 지도 · 큐레이션",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -1293,8 +1293,8 @@
       "tractionValue": 4708,
       "tractionType": "points",
       "mrrUsd": null,
-      "mechanism": "timestamp-archive",
-      "mechanismLabel": "구간 채집 · 아카이빙",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "show-hn",
         "validated"
@@ -1319,8 +1319,8 @@
       "tractionValue": 220,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1397,8 +1397,8 @@
       "tractionValue": 202,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "geo-curation",
-      "mechanismLabel": "취향 지도 · 큐레이션",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1423,8 +1423,8 @@
       "tractionValue": 196,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "timestamp-archive",
-      "mechanismLabel": "구간 채집 · 아카이빙",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1449,8 +1449,8 @@
       "tractionValue": 190,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1475,8 +1475,8 @@
       "tractionValue": 184,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1501,8 +1501,8 @@
       "tractionValue": 178,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
       "tags": [
         "product-hunt",
         "launch"
@@ -1527,8 +1527,8 @@
       "tractionValue": 172,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1553,8 +1553,8 @@
       "tractionValue": 166,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1579,8 +1579,8 @@
       "tractionValue": 160,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1605,8 +1605,8 @@
       "tractionValue": 154,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
       "tags": [
         "product-hunt",
         "launch"
@@ -1631,8 +1631,8 @@
       "tractionValue": 148,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1657,8 +1657,8 @@
       "tractionValue": 142,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1683,8 +1683,8 @@
       "tractionValue": 136,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "geo-curation",
-      "mechanismLabel": "취향 지도 · 큐레이션",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1735,8 +1735,8 @@
       "tractionValue": 124,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1787,8 +1787,8 @@
       "tractionValue": 112,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "canvas-compare",
-      "mechanismLabel": "나란히 비교 보드",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1839,8 +1839,8 @@
       "tractionValue": 100,
       "tractionType": "launch",
       "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
+      "mechanism": "visual-price-match",
+      "mechanismLabel": "시각 탐색 · 가격 매칭",
       "tags": [
         "product-hunt",
         "launch"
@@ -1943,8 +1943,8 @@
       "tractionValue": 156,
       "tractionType": "rank",
       "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
+      "mechanism": "audio-stem",
+      "mechanismLabel": "음성 · 사운드 정리",
       "tags": [
         "uneed",
         "daily-launch"

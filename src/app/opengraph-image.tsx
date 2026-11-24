@@ -11,13 +11,13 @@ export default function OpenGraphImage() {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#F6F3EC",
-          color: "#1E1C19",
+          backgroundColor: "#F7F8FA",
+          color: "#0F172A",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "64px",
-          border: "1px solid #E7E0D3",
+          border: "1px solid #E5E7EB",
           fontFamily: "sans-serif",
         }}
       >
@@ -29,7 +29,7 @@ export default function OpenGraphImage() {
                 width: "12px",
                 height: "12px",
                 borderRadius: "9999px",
-                backgroundColor: "#C85A32",
+                backgroundColor: "#2563EB",
                 display: "flex",
               }}
             />
@@ -38,10 +38,10 @@ export default function OpenGraphImage() {
             style={{
               display: "flex",
               fontSize: 18,
-              color: "#6E675C",
-              border: "1px solid #E7E0D3",
+              color: "#475569",
+              border: "1px solid #E5E7EB",
               borderRadius: "9999px",
-              backgroundColor: "#FFFCF7",
+              backgroundColor: "#FFFFFF",
               padding: "8px 18px",
             }}
           >
@@ -51,9 +51,9 @@ export default function OpenGraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div style={{ display: "flex", fontSize: 52, fontWeight: 800, lineHeight: 1.2 }}>
-            Warm Nordic Product Planning Radar
+            Visual Product Blueprint Deck
           </div>
-          <div style={{ display: "flex", fontSize: 28, fontWeight: 600, color: "#3D3831" }}>
+          <div style={{ display: "flex", fontSize: 28, fontWeight: 600, color: "#475569" }}>
             Show HN / Product Hunt / TrustMRR / Uneed x AI Radar 100
           </div>
         </div>
@@ -62,16 +62,16 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            borderTop: "1px solid #E7E0D3",
+            borderTop: "1px solid #E5E7EB",
             paddingTop: "24px",
             fontSize: 18,
-            color: "#6E675C",
+            color: "#64748B",
           }}
         >
           <span style={{ display: "flex" }}>
             Brand Commerce · Cinema · Photo · Music · Local Archive · Creator Tool
           </span>
-          <span style={{ display: "flex", color: "#23201C", fontWeight: 700 }}>BENCH.</span>
+          <span style={{ display: "flex", color: "#0F172A", fontWeight: 700 }}>BENCH.</span>
         </div>
       </div>
     ),

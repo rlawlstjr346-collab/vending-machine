@@ -61,81 +61,81 @@ export default async function TreatmentPage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#F6F3EC] text-[#1E1C19]">
+    <div className="min-h-screen bg-[#F7F8FA] text-[#0F172A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="border-b border-[#E7E0D3] bg-[#F6F3EC]">
-        <div className="mx-auto flex max-w-[780px] items-center justify-between px-5 py-5 sm:px-8">
+      <header className="border-b border-[#E5E7EB] bg-[#FFFFFF]">
+        <div className="mx-auto flex h-16 max-w-[820px] items-center justify-between px-5 sm:px-8">
           <Link href="/" aria-label="BENCH 홈">
             <BenchLogo />
           </Link>
           <div className="flex items-center gap-2 text-[13.5px] font-semibold">
             <Link
               href={`/domain/${treatment.domainSlug}`}
-              className="rounded-full border border-[#E7E0D3] bg-[#FFFCF7] px-3.5 py-1.5 text-[#3D3831] hover:border-[#23201C]"
+              className="rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3.5 py-1.5 text-[#1E293B] hover:border-[#0F172A]"
             >
               {treatment.domainLabel}
             </Link>
             <Link
               href={`/?treatment=${encodeURIComponent(treatment.id)}`}
-              className="rounded-full bg-[#23201C] px-4 py-1.5 text-[#FFFCF7] hover:bg-[#36322C]"
+              className="rounded-full bg-[#0F172A] px-4 py-1.5 text-[#FFFFFF] hover:bg-[#1E293B]"
             >
-              레이더에서 가지치기
+              덱에서 가지치기
             </Link>
           </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-[780px] px-5 py-8 sm:px-8 sm:py-10">
-        <article className="rounded-[22px] border border-[#E7E0D3] bg-[#FFFCF7] p-6 sm:p-9 space-y-6">
+      <main className="mx-auto max-w-[820px] px-5 py-8 sm:px-8 sm:py-10">
+        <article className="studio-card space-y-6 p-6 sm:p-9">
           <div className="flex flex-wrap items-center gap-2 text-[13px]">
             <span
               className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-semibold"
               style={{
-                backgroundColor: domain?.softBg || "#F5EFE4",
-                color: domain?.color || "#C85A32",
+                backgroundColor: domain?.softBg || "#EFF6FF",
+                color: domain?.color || "#2563EB",
               }}
             >
               <span
                 className="h-2 w-2 rounded-full"
-                style={{ backgroundColor: domain?.color || "#C85A32" }}
+                style={{ backgroundColor: domain?.color || "#2563EB" }}
               />
               {treatment.domainLabel}
             </span>
-            <span className="rounded-full border border-[#E7E0D3] bg-[#F9F5EC] px-3 py-1 font-medium text-[#3D3831]">
+            <span className="rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-3 py-1 font-medium text-[#475569]">
               {treatment.buildCadence}
             </span>
-            <span className="tnum text-[#6E675C]">
+            <span className="tnum text-[#64748B]">
               {treatment.sampleA.name} · {treatment.sampleA.shortMetricLabel}
             </span>
           </div>
 
           <div>
-            <h1 className="text-[24px] font-bold leading-[1.36] tracking-[-0.02em] text-[#1E1C19] sm:text-[28px]">
+            <h1 className="text-[24px] font-bold leading-[1.35] tracking-[-0.025em] text-[#0F172A] sm:text-[28px]">
               {treatment.title}
             </h1>
-            <p className="mt-3 text-[16px] leading-[1.68] text-[#3D3831]">
+            <p className="mt-3 text-[16px] leading-[1.75] text-[#475569]">
               {treatment.firstThreeSecondsUx}
             </p>
           </div>
 
           <div className="space-y-4">
-            <section className="rounded-xl border border-[#ECE5D8] bg-[#F9F5EC] p-5">
+            <section className="studio-inset p-5">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h2 className="text-[14px] font-bold text-[#C85A32]">
+                <h2 className="text-[14px] font-bold text-[#EA580C]">
                   벤치마킹한 해외 서비스
                 </h2>
-                <span className="tnum text-[13px] font-semibold text-[#3D3831]">
+                <span className="tnum text-[13px] font-semibold text-[#1E293B]">
                   {treatment.sampleA.shortMetricLabel}
                 </span>
               </div>
-              <div className="mt-2 text-[16px] font-bold text-[#1E1C19]">
+              <div className="mt-2 text-[16px] font-bold text-[#0F172A]">
                 {treatment.sampleA.name}
               </div>
-              <p className="mt-1.5 text-[15px] leading-[1.68] text-[#3D3831]">
+              <p className="mt-1.5 text-[15px] leading-[1.75] text-[#475569]">
                 {treatment.sampleA.overseasProofKo}
               </p>
               <div className="mt-3">
@@ -143,39 +143,39 @@ export default async function TreatmentPage({ params }: PageProps) {
                   href={treatment.sampleA.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[#C85A32] hover:underline"
+                  className="text-[14px] font-semibold text-[#EA580C] hover:underline"
                 >
                   해외 원본 사이트 열기 ↗
                 </a>
               </div>
             </section>
 
-            <section className="rounded-xl border border-[#ECE5D8] bg-[#F9F5EC] p-5">
-              <h2 className="text-[14px] font-bold text-[#3F6A52]">
+            <section className="studio-inset p-5">
+              <h2 className="text-[14px] font-bold text-[#059669]">
                 이렇게 만듭니다 · 핵심 기능 3가지
               </h2>
-              <ul className="mt-3 space-y-2.5 text-[15.5px] leading-[1.66] text-[#1E1C19]">
+              <ul className="mt-3 space-y-2.5 text-[15.5px] leading-[1.7] text-[#0F172A]">
                 {treatment.mvpFeatures.map((feat, idx) => (
                   <li key={idx} className="flex gap-2.5">
-                    <span className="tnum mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#EBE5D8] text-[12px] font-bold">
+                    <span className="tnum mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E2E8F0] text-[12px] font-bold text-[#0F172A]">
                       {idx + 1}
                     </span>
                     <span>{feat}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 border-t border-[#E7E0D3] pt-3 text-[14px] leading-[1.6] text-[#6E675C]">
-                <strong className="text-[#3D3831]">처음 만들 때 과감히 뺄 기능: </strong>
+              <p className="mt-4 border-t border-[#E2E8F0] pt-3 text-[14px] leading-[1.7] text-[#64748B]">
+                <strong className="text-[#1E293B]">처음 만들 때 과감히 뺄 기능: </strong>
                 {treatment.scopeCutoff[0]}
               </p>
             </section>
 
-            <section className="rounded-xl border border-[#ECE5D8] bg-[#F9F5EC] p-5">
-              <h2 className="text-[14px] font-bold text-[#3B6380]">결합할 최신 AI 기술</h2>
-              <div className="mt-2 text-[15.5px] font-bold text-[#1E1C19]">
+            <section className="studio-inset p-5">
+              <h2 className="text-[14px] font-bold text-[#2563EB]">결합할 최신 AI 기술</h2>
+              <div className="mt-2 text-[15.5px] font-bold text-[#0F172A]">
                 {treatment.sampleB.titleKo}
               </div>
-              <p className="mt-1.5 text-[15px] leading-[1.68] text-[#3D3831]">
+              <p className="mt-1.5 text-[15px] leading-[1.75] text-[#475569]">
                 {treatment.sampleB.bottleneckSolvedKo}
               </p>
               <div className="mt-3">
@@ -183,7 +183,7 @@ export default async function TreatmentPage({ params }: PageProps) {
                   href={treatment.sampleB.canonicalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[#3B6380] hover:underline"
+                  className="text-[14px] font-semibold text-[#2563EB] hover:underline"
                 >
                   기술 원문 보기 ↗
                 </a>
@@ -194,30 +194,29 @@ export default async function TreatmentPage({ params }: PageProps) {
           <div className="flex flex-col gap-2.5 pt-2">
             <Link
               href={`/?treatment=${encodeURIComponent(treatment.id)}`}
-              className="inline-flex w-full items-center justify-center rounded-2xl bg-[#23201C] px-5 py-4 text-[15.5px] font-bold text-[#FFFCF7] hover:bg-[#36322C]"
+              className="inline-flex w-full items-center justify-center rounded-2xl bg-[#0F172A] px-5 py-4 text-[15.5px] font-bold text-[#FFFFFF] hover:bg-[#1E293B]"
             >
-              워크벤치에서 프롬프트 복사 · 다른 아이디어로 가지치기
+              덱에서 프롬프트 복사 · 다른 아이디어로 가지치기
             </Link>
             <a
               href={treatment.sampleA.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center rounded-2xl border border-[#D8CEBC] bg-[#FFFCF7] px-5 py-3.5 text-[15px] font-semibold text-[#1E1C19] hover:bg-[#F6F3EC]"
+              className="inline-flex w-full items-center justify-center rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] px-5 py-3.5 text-[15px] font-semibold text-[#0F172A] hover:bg-[#F8FAFC]"
             >
               벤치마킹한 해외 원본 서비스 직접 써보기 ↗
             </a>
           </div>
         </article>
 
-        {/* Related */}
         <section className="mt-10">
           <div className="flex items-center justify-between">
-            <h2 className="text-[16px] font-bold text-[#1E1C19]">
+            <h2 className="text-[16px] font-bold text-[#0F172A]">
               같은 분야({treatment.domainLabel})의 다른 아이디어
             </h2>
             <Link
               href={`/domain/${treatment.domainSlug}`}
-              className="text-[13.5px] font-semibold text-[#6E675C] hover:text-[#1E1C19]"
+              className="text-[13.5px] font-semibold text-[#64748B] hover:text-[#0F172A]"
             >
               전체 보기 →
             </Link>
@@ -227,15 +226,15 @@ export default async function TreatmentPage({ params }: PageProps) {
               <Link
                 key={item.id}
                 href={`/treatment/${item.id}`}
-                className="nordic-card block p-5"
+                className="studio-card-flat block p-5"
               >
-                <div className="text-[13px] font-medium text-[#6E675C]">
+                <div className="text-[13px] font-medium text-[#64748B]">
                   {item.sampleA.name} · {item.sampleA.shortMetricLabel}
                 </div>
-                <div className="mt-1.5 text-[16.5px] font-bold leading-snug text-[#1E1C19]">
+                <div className="mt-1.5 text-[16.5px] font-bold leading-snug text-[#0F172A]">
                   {item.title}
                 </div>
-                <p className="mt-1.5 line-clamp-2 text-[14.5px] leading-[1.6] text-[#4A443C]">
+                <p className="mt-1.5 line-clamp-2 text-[14.5px] leading-[1.65] text-[#475569]">
                   {item.oneLineHook}
                 </p>
               </Link>

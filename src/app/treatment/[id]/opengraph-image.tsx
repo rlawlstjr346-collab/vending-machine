@@ -26,8 +26,8 @@ export default async function TreatmentOpenGraphImage({
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#F6F3EC",
-          color: "#1E1C19",
+          backgroundColor: "#F7F8FA",
+          color: "#0F172A",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -36,12 +36,23 @@ export default async function TreatmentOpenGraphImage({
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", fontSize: 30, fontWeight: 800 }}>BENCH.</div>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: 30, fontWeight: 800 }}>
+            <span>BENCH</span>
+            <span
+              style={{
+                width: "10px",
+                height: "10px",
+                borderRadius: "9999px",
+                backgroundColor: "#2563EB",
+                display: "flex",
+              }}
+            />
+          </div>
           <div
             style={{
               display: "flex",
-              backgroundColor: "#23201C",
-              color: "#FFFCF7",
+              backgroundColor: "#0F172A",
+              color: "#FFFFFF",
               borderRadius: "9999px",
               padding: "8px 20px",
               fontSize: 18,
@@ -56,22 +67,22 @@ export default async function TreatmentOpenGraphImage({
           <div style={{ display: "flex", fontSize: 42, fontWeight: 800, lineHeight: 1.25 }}>
             {title}
           </div>
-          <div style={{ display: "flex", fontSize: 20, color: "#3D3831" }}>{sampleA}</div>
-          <div style={{ display: "flex", fontSize: 20, color: "#6E675C" }}>{sampleB}</div>
+          <div style={{ display: "flex", fontSize: 20, color: "#1E293B" }}>{sampleA}</div>
+          <div style={{ display: "flex", fontSize: 20, color: "#64748B" }}>{sampleB}</div>
         </div>
 
         <div
           style={{
-            borderTop: "1px solid #E7E0D3",
+            borderTop: "1px solid #E5E7EB",
             paddingTop: "20px",
             display: "flex",
             justifyContent: "space-between",
             fontSize: 18,
-            color: "#6E675C",
+            color: "#64748B",
           }}
         >
           <span style={{ display: "flex" }}>{treatment?.buildCadence || "3~7일 MVP"}</span>
-          <span style={{ display: "flex", color: "#23201C", fontWeight: 700 }}>BENCH.</span>
+          <span style={{ display: "flex", color: "#0F172A", fontWeight: 700 }}>BENCH.</span>
         </div>
       </div>
     ),

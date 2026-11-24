@@ -76,14 +76,14 @@ export default async function DomainHubPage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#F6F3EC] text-[#1E1C19]">
+    <div className="min-h-screen bg-[#F7F8FA] text-[#0F172A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="border-b border-[#E7E0D3] bg-[#F6F3EC]">
-        <div className="mx-auto flex max-w-[920px] flex-wrap items-center justify-between gap-3 px-5 py-5 sm:px-8">
+      <header className="border-b border-[#E5E7EB] bg-[#FFFFFF]">
+        <div className="mx-auto flex min-h-16 max-w-[960px] flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8">
           <Link href="/" aria-label="BENCH 홈">
             <BenchLogo />
           </Link>
@@ -94,8 +94,8 @@ export default async function DomainHubPage({ params }: PageProps) {
                 href={`/domain/${d.slug}`}
                 className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-medium ${
                   d.slug === slug
-                    ? "bg-[#23201C] font-semibold text-[#FFFCF7]"
-                    : "border border-[#E7E0D3] bg-[#FFFCF7] text-[#3D3831] hover:border-[#23201C]"
+                    ? "bg-[#0F172A] font-semibold text-[#FFFFFF]"
+                    : "border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]"
                 }`}
               >
                 <span
@@ -109,8 +109,8 @@ export default async function DomainHubPage({ params }: PageProps) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[920px] px-5 py-8 sm:px-8 sm:py-10 space-y-8">
-        <section className="rounded-[20px] border border-[#E7E0D3] bg-[#FFFCF7] p-7">
+      <main className="mx-auto max-w-[960px] space-y-8 px-5 py-8 sm:px-8 sm:py-10">
+        <section className="studio-card p-7">
           <span
             className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[13px] font-semibold"
             style={{ backgroundColor: domain.softBg, color: domain.color }}
@@ -121,24 +121,24 @@ export default async function DomainHubPage({ params }: PageProps) {
             />
             {domain.label}
           </span>
-          <h1 className="mt-3 text-[26px] font-bold tracking-tight text-[#1E1C19] sm:text-[30px]">
+          <h1 className="mt-3 text-[26px] font-bold tracking-[-0.025em] text-[#0F172A] sm:text-[30px]">
             {domain.label} 서비스 기획 아이디어
           </h1>
-          <p className="mt-2 text-[15.5px] leading-[1.68] text-[#3D3831]">
+          <p className="mt-2 text-[15.5px] leading-[1.75] text-[#475569]">
             {domain.description}
           </p>
           <div className="mt-5">
             <Link
               href={`/?domain=${domain.slug}`}
-              className="inline-flex items-center rounded-full bg-[#23201C] px-4 py-2 text-[14px] font-semibold text-[#FFFCF7] hover:bg-[#36322C]"
+              className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-2 text-[14px] font-semibold text-[#FFFFFF] hover:bg-[#1E293B]"
             >
-              이 분야로 레이더 열기 →
+              이 분야로 비주얼 덱 열기 →
             </Link>
           </div>
         </section>
 
         <section>
-          <h2 className="text-[16px] font-bold text-[#1E1C19]">
+          <h2 className="text-[16px] font-bold text-[#0F172A]">
             추천 기획안 ({treatments.length}선)
           </h2>
           <div className="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-2">
@@ -146,20 +146,20 @@ export default async function DomainHubPage({ params }: PageProps) {
               <Link
                 key={t.id}
                 href={`/treatment/${t.id}`}
-                className="nordic-card flex flex-col justify-between gap-3 p-5"
+                className="studio-card-flat flex flex-col justify-between gap-3 p-5"
               >
                 <div>
-                  <div className="text-[13px] font-medium text-[#6E675C]">
+                  <div className="text-[13px] font-medium text-[#64748B]">
                     {t.sampleA.name} · {t.sampleA.shortMetricLabel}
                   </div>
-                  <h3 className="mt-1.5 text-[17.5px] font-bold leading-snug text-[#1E1C19]">
+                  <h3 className="mt-1.5 text-[17.5px] font-bold leading-snug text-[#0F172A]">
                     {t.title}
                   </h3>
-                  <p className="mt-1.5 line-clamp-2 text-[14.5px] leading-[1.65] text-[#4A443C]">
+                  <p className="mt-1.5 line-clamp-2 text-[14.5px] leading-[1.68] text-[#475569]">
                     {t.oneLineHook}
                   </p>
                 </div>
-                <div className="text-right text-[13px] font-semibold text-[#6E675C]">
+                <div className="text-right text-[13px] font-semibold text-[#64748B]">
                   자세히 보기 →
                 </div>
               </Link>
@@ -168,42 +168,42 @@ export default async function DomainHubPage({ params }: PageProps) {
         </section>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          <section className="nordic-card p-6">
-            <h2 className="text-[15px] font-bold text-[#C85A32]">참고 해외 신상 서비스</h2>
-            <ul className="mt-3 divide-y divide-[#ECE5D8]">
+          <section className="studio-card-flat p-6">
+            <h2 className="text-[15px] font-bold text-[#EA580C]">참고 해외 신상 서비스</h2>
+            <ul className="mt-3 divide-y divide-[#E2E8F0]">
               {builders.map((b) => (
                 <li key={b.id} className="py-3">
                   <a
                     href={b.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[14.5px] font-bold text-[#1E1C19] hover:underline"
+                    className="text-[14.5px] font-bold text-[#0F172A] hover:underline"
                   >
                     {b.name} ↗
                   </a>
-                  <span className="ml-2 text-[12.5px] text-[#6E675C]">
+                  <span className="ml-2 text-[12.5px] text-[#64748B]">
                     {formatShortMetric(b)}
                   </span>
-                  <p className="mt-1 text-[13.5px] text-[#4A443C]">{b.taglineKo}</p>
+                  <p className="mt-1 text-[13.5px] text-[#475569]">{b.taglineKo}</p>
                 </li>
               ))}
             </ul>
           </section>
 
-          <section className="nordic-card p-6">
-            <h2 className="text-[15px] font-bold text-[#3B6380]">연동된 최신 AI 기술</h2>
-            <ul className="mt-3 divide-y divide-[#ECE5D8]">
+          <section className="studio-card-flat p-6">
+            <h2 className="text-[15px] font-bold text-[#2563EB]">연동된 최신 AI 기술</h2>
+            <ul className="mt-3 divide-y divide-[#E2E8F0]">
               {radars.map((r) => (
                 <li key={r.id} className="py-3">
                   <a
                     href={r.canonicalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[14.5px] font-bold text-[#1E1C19] hover:underline"
+                    className="text-[14.5px] font-bold text-[#0F172A] hover:underline"
                   >
                     {r.titleKo} ↗
                   </a>
-                  <p className="mt-1 text-[13.5px] text-[#4A443C]">
+                  <p className="mt-1 text-[13.5px] text-[#475569]">
                     {r.planningMeta.benchmarkPoint}
                   </p>
                 </li>

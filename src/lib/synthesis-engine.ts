@@ -46,6 +46,7 @@ export function classifyMechanism(
     for (const kw of mech.keywords) {
       if (hay.includes(kw)) {
         score += kw.length >= 6 ? 3 : 2;
+        if (mech.id === "audio-stem") score += 2;
       }
     }
     if (source === "trustmrr" && mech.id === "visual-price-match") score += 2;
@@ -202,6 +203,7 @@ export interface SynthesizeOptions {
   variantIndex?: number;
   parentTreatment?: Treatment | null;
   addedBuilder?: BuilderSignal | null;
+  mechanismOverride?: MechanismId | null;
   nowIso?: string;
 }
 
@@ -214,13 +216,15 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
     variantIndex = 0,
     parentTreatment = null,
     addedBuilder = null,
+    mechanismOverride = null,
     nowIso = new Date().toISOString(),
   } = options;
 
   const domain = DOMAIN_MAP[domainSlug];
-  const mech = MECHANISM_MAP[builder.mechanism];
+  const effectiveMechanism: MechanismId = mechanismOverride || builder.mechanism;
+  const mech = MECHANISM_MAP[effectiveMechanism];
   const cleanTopic = customTopic ? sanitizeEditorialText(customTopic) : null;
-  const seedKey = `${builder.id}|${radar.id}|${domainSlug}|${cleanTopic || ""}|${addedBuilder?.id || ""}|${variantIndex}`;
+  const seedKey = `${builder.id}|${radar.id}|${domainSlug}|${effectiveMechanism}|${cleanTopic || ""}|${addedBuilder?.id || ""}|${variantIndex}`;
   const hash = deterministicHash(seedKey);
 
   const isEvolution = Boolean(parentTreatment && addedBuilder);
@@ -231,8 +235,10 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
 
   const cadence = CADENCE_OPTIONS[hash % CADENCE_OPTIONS.length];
 
-  // Pick a vivid human-written concept blueprint for (domainSlug, mechanism)
-  const pool = CONCEPT_BLUEPRINTS[domainSlug][builder.mechanism] || CONCEPT_BLUEPRINTS[domainSlug]["drop-validation"];
+  // Pick a vivid human-written concept blueprint for (domainSlug, effectiveMechanism)
+  const pool =
+    CONCEPT_BLUEPRINTS[domainSlug][effectiveMechanism] ||
+    CONCEPT_BLUEPRINTS[domainSlug]["drop-validation"];
   const blueprint = pool[Math.abs(variantIndex + hash) % pool.length];
 
   let title: string;
@@ -273,7 +279,7 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
       ),
     };
   } else if (cleanTopic) {
-    const custom = buildCustomTopicConcept(cleanTopic, builder, builder.mechanism, variantIndex);
+    const custom = buildCustomTopicConcept(cleanTopic, builder, effectiveMechanism, variantIndex);
     title = custom.title;
     oneLineHook = custom.hook;
     firstThreeSecondsUx = custom.hook;
@@ -353,9 +359,9 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
       tractionLabel: builder.tractionLabel,
       shortMetricLabel: formatShortMetric(builder),
       verifiedRevenue: builder.verifiedRevenue,
-      mechanism: builder.mechanism,
+      mechanism: effectiveMechanism,
       mechanismLabel: mech.label,
-      overseasProofKo: buildOverseasProofKo(builder),
+      overseasProofKo: buildOverseasProofKo({ ...builder, mechanism: effectiveMechanism }),
     },
     sampleA2,
     sampleB: {

@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "syncedAt": "2026-11-23T15:26:16.219Z",
+  "syncedAt": "2026-11-24T00:40:42.718Z",
   "count": 40,
   "items": [
     {
       "id": "tr-brand-co-stan-ges08s",
       "slug": "tr-brand-co-stan-ges08s",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "착장 사진 한 장으로 빈티지 대체품과 중고 시세를 찾아주는 디깅 웹",
       "oneLineHook": "마음에 든 코디 사진이나 상품 링크를 올리면, 비슷한 실루엣의 빈티지·브랜드 대체품과 최근 거래가 범위를 한눈에 비교해 줍니다.",
@@ -75,40 +75,40 @@
       "variantIndex": 0
     },
     {
-      "id": "tr-cinema-v-an-e-ink-frame-1uhlpr",
-      "slug": "tr-cinema-v-an-e-ink-frame-1uhlpr",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-chat-with-work-1y0wu1",
+      "slug": "tr-cinema-v-chat-with-work-1y0wu1",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "레퍼런스 스틸컷 한 장으로 비슷한 구도와 조명 세팅을 찾아주는 샷 보드",
       "oneLineHook": "촬영하고 싶은 분위기의 영화 스틸컷을 올리면 화면 비율, 조명 방향, 렌즈 느낌을 분석해 비슷한 레퍼런스 컷과 촬영 메모를 정리해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 촬영하고 싶은 분위기의 영화 스틸컷을 올리면 화면 비율, 조명 방향, 렌즈 느낌을 분석해 비슷한 레퍼런스 컷과 촬영 메모를 정리해 줍니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-hn-49711544",
-        "name": "An e-ink frame that",
-        "url": "https://github.com/arnegiacomo/fugleramme",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 2391 pts · 댓글 267",
-        "shortMetricLabel": "Show HN 2391점 인기",
+        "builderId": "builder-ph-866a00e4f2",
+        "name": "Chat with Work",
+        "url": "https://www.producthunt.com/products/chat-with-work",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #1",
+        "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "An e-ink frame that은 Show HN에서 HN 2391 pts · 댓글 267의 호응을 얻은 해외 신상 프로덕트입니다. 'An e-ink frame that hears birds and draws them as 1800s illustrations' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Chat with Work은 Product Hunt에서 PH 최신 런칭 #1의 호응을 얻은 해외 신상 프로덕트입니다. '유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-aef89ca60299",
-        "titleKo": "구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합",
-        "canonicalUrl": "https://arxiv.org/abs/2611.26717",
+        "radarId": "live-d2d7387aabed",
+        "titleKo": "ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템",
+        "canonicalUrl": "https://arxiv.org/abs/2611.26782",
         "platformId": "arxiv",
         "signalType": "research_breakthrough",
         "productDomain": "ai-research-model",
         "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
-        "bottleneckSolvedKo": "최근 화제가 된 arXiv 계열 소식('구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (arXiv가 '구축을 통한 일관성: CTI 지식 그래프와 일관성 검증의 형식적 한계 통합' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+        "bottleneckSolvedKo": "최근 화제가 된 arXiv 계열 소식('ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (arXiv가 'ChatAtom: 분자 동역학 시뮬레이션 및 시각화를 위한 다중 에이전트 LLM 시스템' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
       },
       "twistSummaryKo": "촬영하고 싶은 분위기의 영화 스틸컷을 올리면 화면 비율, 조명 방향, 렌즈 느낌을 분석해 비슷한 레퍼런스 컷과 촬영 메모를 정리해 줍니다.",
       "mvpFeatures": [
@@ -128,17 +128,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "An e-ink frame that",
-          "builderId": "builder-hn-49711544",
-          "builderName": "An e-ink frame that"
+          "title": "Chat with Work",
+          "builderId": "builder-ph-866a00e4f2",
+          "builderName": "Chat with Work"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "레퍼런스 스틸컷 한 장으로 비슷한 구도와 조명 세팅을 찾아주는 샷 보드",
-          "treatmentId": "tr-cinema-v-an-e-ink-frame-1uhlpr",
-          "builderId": "builder-hn-49711544",
-          "builderName": "An e-ink frame that"
+          "treatmentId": "tr-cinema-v-chat-with-work-1y0wu1",
+          "builderId": "builder-ph-866a00e4f2",
+          "builderName": "Chat with Work"
         }
       ],
       "synthesisMode": "deterministic",
@@ -146,40 +146,40 @@
       "variantIndex": 1
     },
     {
-      "id": "tr-photo-vi-stealth-ventur-qsi8ce",
-      "slug": "tr-photo-vi-stealth-ventur-qsi8ce",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-hackerbooks-ny7mhc",
+      "slug": "tr-photo-vi-hackerbooks-ny7mhc",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "레퍼런스 사진의 색감 팔레트와 필름 톤을 뽑아주는 무드보드 스튜디오",
       "oneLineHook": "마음에 드는 화보나 사진 3장을 올리면 대표 컬러 5개, 명암 대비, 어울리는 조명 키워드를 추출해 통일감 있는 촬영 무드보드를 만들어 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 마음에 드는 화보나 사진 3장을 올리면 대표 컬러 5개, 명암 대비, 어울리는 조명 키워드를 추출해 통일감 있는 촬영 무드보드를 만들어 줍니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-tmrr-05934ef637",
-        "name": "Stealth Venture",
-        "url": "https://trustmrr.com/startup/stealth-venture-73",
-        "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $9.7k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $9.7k",
-        "verifiedRevenue": true,
+        "builderId": "builder-hn-50326821",
+        "name": "HackerBooks",
+        "url": "https://hackerbooks.org",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1870 pts · 댓글 308",
+        "shortMetricLabel": "Show HN 1870점 인기",
+        "verifiedRevenue": false,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "Stealth Venture은 검증 매출 $9.7k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '엔터테인먼트'라는 단순한 한 가지 문제에 집중해, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 유료 사용자를 빠르게 모았습니다."
+        "overseasProofKo": "HackerBooks은 Show HN에서 HN 1870 pts · 댓글 308의 호응을 얻은 해외 신상 프로덕트입니다. 'HackerTube, 하지만 HN에서 언급된 도서의 경우' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-c0de4f7aecd1",
-        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
-        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "radarId": "live-429df4a4cf4d",
+        "titleKo": "Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123862344422088794",
         "platformId": "x",
-        "signalType": "builder_signal",
+        "signalType": "new_product",
         "productDomain": "builder-community-signal",
         "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
+        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 업데이트예요. 실사용 데모와 빌더 스레)"
       },
       "twistSummaryKo": "마음에 드는 화보나 사진 3장을 올리면 대표 컬러 5개, 명암 대비, 어울리는 조명 키워드를 추출해 통일감 있는 촬영 무드보드를 만들어 줍니다.",
       "mvpFeatures": [
@@ -199,17 +199,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Stealth Venture",
-          "builderId": "builder-tmrr-05934ef637",
-          "builderName": "Stealth Venture"
+          "title": "HackerBooks",
+          "builderId": "builder-hn-50326821",
+          "builderName": "HackerBooks"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "레퍼런스 사진의 색감 팔레트와 필름 톤을 뽑아주는 무드보드 스튜디오",
-          "treatmentId": "tr-photo-vi-stealth-ventur-qsi8ce",
-          "builderId": "builder-tmrr-05934ef637",
-          "builderName": "Stealth Venture"
+          "treatmentId": "tr-photo-vi-hackerbooks-ny7mhc",
+          "builderId": "builder-hn-50326821",
+          "builderName": "HackerBooks"
         }
       ],
       "synthesisMode": "deterministic",
@@ -217,29 +217,29 @@
       "variantIndex": 2
     },
     {
-      "id": "tr-music-au-elevators-ozg4ww",
-      "slug": "tr-music-au-elevators-ozg4ww",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-stealth-ventur-1uyp9v",
+      "slug": "tr-music-au-stealth-ventur-1uyp9v",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "레퍼런스 곡의 분위기와 BPM에 맞는 사운드 팩·신스 톤을 매칭해 주는 디깅 보드",
       "oneLineHook": "작업 중인 곡의 레퍼런스 링크나 무드 키워드를 넣으면 비슷한 질감의 드럼·신스 방향과 무료·유료 샘플 팩 후보를 비교해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 작업 중인 곡의 레퍼런스 링크나 무드 키워드를 넣으면 비슷한 질감의 드럼·신스 방향과 무료·유료 샘플 팩 후보를 비교해 줍니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-hn-49124218",
-        "name": "Elevators",
-        "url": "https://john.fun/elevators",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 1680 pts · 댓글 415",
-        "shortMetricLabel": "Show HN 1680점 인기",
-        "verifiedRevenue": false,
+        "builderId": "builder-tmrr-05934ef637",
+        "name": "Stealth Venture",
+        "url": "https://trustmrr.com/startup/stealth-venture-73",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $9.7k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $9.7k",
+        "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "Elevators은 Show HN에서 HN 1680 pts · 댓글 415의 호응을 얻은 해외 신상 프로덕트입니다. '엘리베이터' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Stealth Venture은 검증 매출 $9.7k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '엔터테인먼트'라는 단순한 한 가지 문제에 집중해, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -270,17 +270,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Elevators",
-          "builderId": "builder-hn-49124218",
-          "builderName": "Elevators"
+          "title": "Stealth Venture",
+          "builderId": "builder-tmrr-05934ef637",
+          "builderName": "Stealth Venture"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "레퍼런스 곡의 분위기와 BPM에 맞는 사운드 팩·신스 톤을 매칭해 주는 디깅 보드",
-          "treatmentId": "tr-music-au-elevators-ozg4ww",
-          "builderId": "builder-hn-49124218",
-          "builderName": "Elevators"
+          "treatmentId": "tr-music-au-stealth-ventur-1uyp9v",
+          "builderId": "builder-tmrr-05934ef637",
+          "builderName": "Stealth Venture"
         }
       ],
       "synthesisMode": "deterministic",
@@ -288,40 +288,40 @@
       "variantIndex": 3
     },
     {
-      "id": "tr-local-ar-landy-ai-1xungi",
-      "slug": "tr-local-ar-landy-ai-1xungi",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-elevators-15cq6j",
+      "slug": "tr-local-ar-elevators-15cq6j",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "전시·팝업 포스터 사진 한 장으로 일정·입장료·비슷한 공간을 정리하는 컬처 노트",
       "oneLineHook": "인스타그램에서 캡처한 전시 포스터를 올리면 기간, 위치, 관람료와 함께 걸어서 갈 만한 비슷한 취향의 카페·서점을 묶어줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 인스타그램에서 캡처한 전시 포스터를 올리면 기간, 위치, 관람료와 함께 걸어서 갈 만한 비슷한 취향의 카페·서점을 묶어줍니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-tmrr-a38c926745",
-        "name": "Landy AI",
-        "url": "https://trustmrr.com/startup/landy",
-        "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $7.9k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $7.9k",
-        "verifiedRevenue": true,
+        "builderId": "builder-hn-49124218",
+        "name": "Elevators",
+        "url": "https://john.fun/elevators",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1680 pts · 댓글 415",
+        "shortMetricLabel": "Show HN 1680점 인기",
+        "verifiedRevenue": false,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "Landy AI은 검증 매출 $7.9k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '인공지능'라는 단순한 한 가지 문제에 집중해, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 유료 사용자를 빠르게 모았습니다."
+        "overseasProofKo": "Elevators은 Show HN에서 HN 1680 pts · 댓글 415의 호응을 얻은 해외 신상 프로덕트입니다. '엘리베이터' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-b99d5f09a022",
-        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
-        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "radarId": "live-4559e9686ee9",
+        "titleKo": "AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123899406550528422",
         "platformId": "x",
         "signalType": "builder_signal",
         "productDomain": "builder-community-signal",
         "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "최근 화제가 된 Anthropic 계열 소식('지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
+        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'AI가 과학자들이 신경퇴행성 질환을 이해하고 치료하기 위한 새로운 단서를 발견하도록 돕는 방법' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게 이어지고 있어요.)"
       },
       "twistSummaryKo": "인스타그램에서 캡처한 전시 포스터를 올리면 기간, 위치, 관람료와 함께 걸어서 갈 만한 비슷한 취향의 카페·서점을 묶어줍니다.",
       "mvpFeatures": [
@@ -341,17 +341,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Landy AI",
-          "builderId": "builder-tmrr-a38c926745",
-          "builderName": "Landy AI"
+          "title": "Elevators",
+          "builderId": "builder-hn-49124218",
+          "builderName": "Elevators"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "전시·팝업 포스터 사진 한 장으로 일정·입장료·비슷한 공간을 정리하는 컬처 노트",
-          "treatmentId": "tr-local-ar-landy-ai-1xungi",
-          "builderId": "builder-tmrr-a38c926745",
-          "builderName": "Landy AI"
+          "treatmentId": "tr-local-ar-elevators-15cq6j",
+          "builderId": "builder-hn-49124218",
+          "builderName": "Elevators"
         }
       ],
       "synthesisMode": "deterministic",
@@ -359,29 +359,29 @@
       "variantIndex": 4
     },
     {
-      "id": "tr-creator--appzoku-55nqgu",
-      "slug": "tr-creator--appzoku-55nqgu",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--landy-ai-irdx60",
+      "slug": "tr-creator--landy-ai-irdx60",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "해외 SaaS 요금제와 무료 대안을 내 사용량 기준으로 비교해 주는 구독 계산기",
       "oneLineHook": "매달 빠져나가는 AI·디자인 툴 구독료를 정리하고, 내 실제 사용량에 맞는 더 가벼운 대안과 월 절감액을 한눈에 보여줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 매달 빠져나가는 AI·디자인 툴 구독료를 정리하고, 내 실제 사용량에 맞는 더 가벼운 대안과 월 절감액을 한눈에 보여줍니다.",
-      "buildCadence": "3~5일 MVP",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-tmrr-505d4f892a",
-        "name": "AppZoku",
-        "url": "https://trustmrr.com/startup/appzoku",
+        "builderId": "builder-tmrr-a38c926745",
+        "name": "Landy AI",
+        "url": "https://trustmrr.com/startup/landy",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $4.8k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $4.8k",
+        "tractionLabel": "검증 매출 $7.9k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $7.9k",
         "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "AppZoku은 검증 매출 $4.8k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '인공지능'라는 단순한 한 가지 문제에 집중해, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 유료 사용자를 빠르게 모았습니다."
+        "overseasProofKo": "Landy AI은 검증 매출 $7.9k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '인공지능'라는 단순한 한 가지 문제에 집중해, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -412,17 +412,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "AppZoku",
-          "builderId": "builder-tmrr-505d4f892a",
-          "builderName": "AppZoku"
+          "title": "Landy AI",
+          "builderId": "builder-tmrr-a38c926745",
+          "builderName": "Landy AI"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "해외 SaaS 요금제와 무료 대안을 내 사용량 기준으로 비교해 주는 구독 계산기",
-          "treatmentId": "tr-creator--appzoku-55nqgu",
-          "builderId": "builder-tmrr-505d4f892a",
-          "builderName": "AppZoku"
+          "treatmentId": "tr-creator--landy-ai-irdx60",
+          "builderId": "builder-tmrr-a38c926745",
+          "builderName": "Landy AI"
         }
       ],
       "synthesisMode": "deterministic",
@@ -430,29 +430,29 @@
       "variantIndex": 5
     },
     {
-      "id": "tr-brand-co-18-words-1ukp8d",
-      "slug": "tr-brand-co-18-words-1ukp8d",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-homebrew-6-0-0-1u1kmb",
+      "slug": "tr-brand-co-homebrew-6-0-0-1u1kmb",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "해외 편집숍 가격과 국내 체감가를 3초 만에 대조하는 직구 비교 시트",
       "oneLineHook": "사고 싶은 브랜드 제품명만 입력하면 해외 편집숍 가격, 배송·관세 포함 체감가, 국내 실거래가를 깔끔한 한 줄 표로 정리해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 사고 싶은 브랜드 제품명만 입력하면 해외 편집숍 가격, 배송·관세 포함 체감가, 국내 실거래가를 깔끔한 한 줄 표로 정리해 줍니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-hn-48845049",
-        "name": "18 Words",
-        "url": "https://18words.com/",
+        "builderId": "builder-hn-48490024",
+        "name": "Homebrew 6.0.0",
+        "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 1160 pts · 댓글 366",
-        "shortMetricLabel": "Show HN 1160점 인기",
+        "tractionLabel": "HN 1481 pts · 댓글 363",
+        "shortMetricLabel": "Show HN 1481점 인기",
         "verifiedRevenue": false,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
-        "overseasProofKo": "18 Words은 Show HN에서 HN 1160 pts · 댓글 366의 호응을 얻은 해외 신상 프로덕트입니다. '18개 단어' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Homebrew 6.0.0은 Show HN에서 HN 1481 pts · 댓글 363의 호응을 얻은 해외 신상 프로덕트입니다. '홈브루 6.0.0' 경험을 무거운 가입 절차 없이 열어주고, 사진이나 링크 하나만 넣으면 비슷한 대안과 가격·스펙을 한눈에 대조해 주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -483,17 +483,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "18 Words",
-          "builderId": "builder-hn-48845049",
-          "builderName": "18 Words"
+          "title": "Homebrew 6.0.0",
+          "builderId": "builder-hn-48490024",
+          "builderName": "Homebrew 6.0.0"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "해외 편집숍 가격과 국내 체감가를 3초 만에 대조하는 직구 비교 시트",
-          "treatmentId": "tr-brand-co-18-words-1ukp8d",
-          "builderId": "builder-hn-48845049",
-          "builderName": "18 Words"
+          "treatmentId": "tr-brand-co-homebrew-6-0-0-1u1kmb",
+          "builderId": "builder-hn-48490024",
+          "builderName": "Homebrew 6.0.0"
         }
       ],
       "synthesisMode": "deterministic",
@@ -501,29 +501,29 @@
       "variantIndex": 6
     },
     {
-      "id": "tr-cinema-v-leantake-jizwkz",
-      "slug": "tr-cinema-v-leantake-jizwkz",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-hackertv-cp8n19",
+      "slug": "tr-cinema-v-hackertv-cp8n19",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "레퍼런스 영상 링크만 넣으면 조명·구도 콘티를 정리해 주는 촬영 보드",
       "oneLineHook": "뮤직비디오나 광고 링크를 붙여 넣으면 인상적인 장면의 타임코드와 카메라 움직임 메모를 컷별 콘티 카드 형태로 뽑아줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 뮤직비디오나 광고 링크를 붙여 넣으면 인상적인 장면의 타임코드와 카메라 움직임 메모를 컷별 콘티 카드 형태로 뽑아줍니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-ph-17349a0e8c",
-        "name": "LeanTake",
-        "url": "https://www.producthunt.com/products/leantake",
-        "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #5",
-        "shortMetricLabel": "Product Hunt 신상",
+        "builderId": "builder-hn-50346755",
+        "name": "HackerTV",
+        "url": "https://hackertv.org",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 491 pts · 댓글 84",
+        "shortMetricLabel": "Show HN 491점 인기",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "LeanTake은 Product Hunt에서 PH 최신 런칭 #5의 호응을 얻은 해외 신상 프로덕트입니다. '4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "HackerTV은 Show HN에서 HN 491 pts · 댓글 84의 호응을 얻은 해외 신상 프로덕트입니다. '24시간 TV 채널로 HN이 가장 많이 추천하는 유튜브 영상' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -554,17 +554,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "LeanTake",
-          "builderId": "builder-ph-17349a0e8c",
-          "builderName": "LeanTake"
+          "title": "HackerTV",
+          "builderId": "builder-hn-50346755",
+          "builderName": "HackerTV"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "레퍼런스 영상 링크만 넣으면 조명·구도 콘티를 정리해 주는 촬영 보드",
-          "treatmentId": "tr-cinema-v-leantake-jizwkz",
-          "builderId": "builder-ph-17349a0e8c",
-          "builderName": "LeanTake"
+          "treatmentId": "tr-cinema-v-hackertv-cp8n19",
+          "builderId": "builder-hn-50346755",
+          "builderName": "HackerTV"
         }
       ],
       "synthesisMode": "deterministic",
@@ -572,40 +572,40 @@
       "variantIndex": 7
     },
     {
-      "id": "tr-photo-vi-i-trained-a-12-181hnb",
-      "slug": "tr-photo-vi-i-trained-a-12-181hnb",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-an-e-ink-frame-1ehm6r",
+      "slug": "tr-photo-vi-an-e-ink-frame-1ehm6r",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "런웨이·룩북 영상에서 베스트 착장 프레임만 뽑아 모으는 컨택트 시트",
       "oneLineHook": "길게 이어지는 패션 필름이나 브이로그에서 포즈와 색감이 좋은 순간만 골라 촬영 참고용 컨택트 시트로 차곡차곡 저장합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 길게 이어지는 패션 필름이나 브이로그에서 포즈와 색감이 좋은 순간만 골라 촬영 참고용 컨택트 시트로 차곡차곡 저장합니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-hn-49373456",
-        "name": "I trained a 125M",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "builderId": "builder-hn-49711544",
+        "name": "An e-ink frame that",
+        "url": "https://github.com/arnegiacomo/fugleramme",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 598 pts · 댓글 117",
-        "shortMetricLabel": "Show HN 598점 인기",
+        "tractionLabel": "HN 2391 pts · 댓글 267",
+        "shortMetricLabel": "Show HN 2391점 인기",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "I trained a 125M은 Show HN에서 HN 598 pts · 댓글 117의 호응을 얻은 해외 신상 프로덕트입니다. '기기에서 피아노를 자동 완성하기 위해 125M 모델을 훈련했습니다.' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "An e-ink frame that은 Show HN에서 HN 2391 pts · 댓글 267의 호응을 얻은 해외 신상 프로덕트입니다. 'An e-ink frame that hears birds and draws them as 1800s illustrations' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-1455302e2aaa",
-        "titleKo": "GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해",
-        "canonicalUrl": "https://news.hada.io/topic?id=37712",
-        "platformId": "geeknews",
+        "radarId": "live-1f95a6b182da",
+        "titleKo": "공상과학 환경(LORA)",
+        "canonicalUrl": "https://civitai.com/models/105945",
+        "platformId": "civitai",
         "signalType": "new_product",
-        "productDomain": "builder-community-signal",
-        "benchmarkPoint": "GeekNews — 750B 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 GeekNews 계열 소식('GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (GLM-5.4는 공유 레이어를 반복 실행하는 첫 플래그십 Loop Transformer 모델로, Z.ai는 750B 규모에서 2T~3T 파라미터 모델에 견줄 지능 수준에 도달했다고 밝힘 반복 구조는 파라미터를 늘리지)"
+        "productDomain": "image-design-studio",
+        "benchmarkPoint": "시각 생성 품질·일관성·편집 제어력",
+        "bottleneckSolvedKo": "최근 화제가 된 Civitai 계열 소식('공상과학 환경(LORA)')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Civitai에 '공상과학 환경(LORA)' 이미지·디자인 모델/워크플로가 올라와 시각 제작 파이프라인에 바로 시험해 볼 수 있어요.)"
       },
       "twistSummaryKo": "길게 이어지는 패션 필름이나 브이로그에서 포즈와 색감이 좋은 순간만 골라 촬영 참고용 컨택트 시트로 차곡차곡 저장합니다.",
       "mvpFeatures": [
@@ -625,17 +625,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "I trained a 125M",
-          "builderId": "builder-hn-49373456",
-          "builderName": "I trained a 125M"
+          "title": "An e-ink frame that",
+          "builderId": "builder-hn-49711544",
+          "builderName": "An e-ink frame that"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "런웨이·룩북 영상에서 베스트 착장 프레임만 뽑아 모으는 컨택트 시트",
-          "treatmentId": "tr-photo-vi-i-trained-a-12-181hnb",
-          "builderId": "builder-hn-49373456",
-          "builderName": "I trained a 125M"
+          "treatmentId": "tr-photo-vi-an-e-ink-frame-1ehm6r",
+          "builderId": "builder-hn-49711544",
+          "builderName": "An e-ink frame that"
         }
       ],
       "synthesisMode": "deterministic",
@@ -643,29 +643,29 @@
       "variantIndex": 8
     },
     {
-      "id": "tr-music-au-hackertv-1prk7s",
-      "slug": "tr-music-au-hackertv-1prk7s",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-stramik-ahd5bk",
+      "slug": "tr-music-au-stramik-ahd5bk",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "유튜브·데모 트랙의 4마디 루프 구간만 콕 집어 모아두는 샘플 크레이트",
       "oneLineHook": "디깅하다 발견한 멋진 드럼 브레이크나 코드 진행 구간을 시작·끝 초와 BPM 메모와 함께 깔끔한 카드 형태로 모아둡니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 디깅하다 발견한 멋진 드럼 브레이크나 코드 진행 구간을 시작·끝 초와 BPM 메모와 함께 깔끔한 카드 형태로 모아둡니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-50346755",
-        "name": "HackerTV",
-        "url": "https://hackertv.org",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 491 pts · 댓글 84",
-        "shortMetricLabel": "Show HN 491점 인기",
+        "builderId": "builder-uneed-86164d2393",
+        "name": "Stramik",
+        "url": "https://www.uneed.best/tool/stramik",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "HackerTV은 Show HN에서 HN 491 pts · 댓글 84의 호응을 얻은 해외 신상 프로덕트입니다. '24시간 TV 채널로 HN이 가장 많이 추천하는 유튜브 영상' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Stramik은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -696,17 +696,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "HackerTV",
-          "builderId": "builder-hn-50346755",
-          "builderName": "HackerTV"
+          "title": "Stramik",
+          "builderId": "builder-uneed-86164d2393",
+          "builderName": "Stramik"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "유튜브·데모 트랙의 4마디 루프 구간만 콕 집어 모아두는 샘플 크레이트",
-          "treatmentId": "tr-music-au-hackertv-1prk7s",
-          "builderId": "builder-hn-50346755",
-          "builderName": "HackerTV"
+          "treatmentId": "tr-music-au-stramik-ahd5bk",
+          "builderId": "builder-uneed-86164d2393",
+          "builderName": "Stramik"
         }
       ],
       "synthesisMode": "deterministic",
@@ -714,40 +714,40 @@
       "variantIndex": 9
     },
     {
-      "id": "tr-local-ar-i-was-tired-of-wt2m6c",
-      "slug": "tr-local-ar-i-was-tired-of-wt2m6c",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-postiz-19n7gd",
+      "slug": "tr-local-ar-postiz-19n7gd",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "공간 투어·전시 도슨트 영상에서 꼭 볼 포인트만 뽑아두는 관람 아카이브",
       "oneLineHook": "전시나 건축 공간 리뷰 영상에서 대표 작품 설명과 포토 스팟이 나오는 순간만 정리해 방문 전 1분 관람 가이드를 만듭니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 전시나 건축 공간 리뷰 영상에서 대표 작품 설명과 포토 스팟이 나오는 순간만 정리해 방문 전 1분 관람 가이드를 만듭니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-hn-49090607",
-        "name": "I was tired of",
-        "url": "https://github.com/twalichiewicz/HNewhere",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 433 pts · 댓글 126",
-        "shortMetricLabel": "Show HN 433점 인기",
-        "verifiedRevenue": false,
+        "builderId": "builder-tmrr-f9df0c188c",
+        "name": "Postiz",
+        "url": "https://trustmrr.com/startup/postiz",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $458,757 (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $458,757",
+        "verifiedRevenue": true,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "I was tired of은 Show HN에서 HN 433 pts · 댓글 126의 호응을 얻은 해외 신상 프로덕트입니다. 'HN 링크마다 탭 2개를 여는 것이 지겨워서 사용자 스크립트를 만들었습니다.' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Postiz은 검증 매출 $458,757 (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. 'Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David'라는 단순한 한 가지 문제에 집중해, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-e5712e69a009",
-        "titleKo": "Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인",
-        "canonicalUrl": "https://news.hada.io/topic?id=37703",
+        "radarId": "live-6660e0f9fbe5",
+        "titleKo": "그렇다, Lean 코드 1,700만 줄은 정말 많다",
+        "canonicalUrl": "https://news.hada.io/topic?id=37710",
         "platformId": "geeknews",
-        "signalType": "model_release",
+        "signalType": "new_product",
         "productDomain": "builder-community-signal",
-        "benchmarkPoint": "오픈소스 공개 소식",
-        "bottleneckSolvedKo": "최근 화제가 된 Claude Code 계열 소식('Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (이 두 가지를 줄여 보려고 Claude Code와 Codex용 오픈소스 플러그인 Heirloom을 만들었습니다. 5만 원부터 무료 배송이 되도록 바꿨다면 Heirloom이 변경 전후 코드를 별도 Git worktre)"
+        "benchmarkPoint": "GeekNews — 1,700만 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "최근 화제가 된 GeekNews 계열 소식('그렇다, Lean 코드 1,700만 줄은 정말 많다')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (최근 리만 가설 증명에 붙은 Lean 코드 1,700만 줄이라는 수치가 얼마나 큰지 살펴보기 위해, 온라인의 두 Lean 코드 모음을 비교함 Mathlib의 유명 정리 모음에서 Lean 코드가 연결된 259개는 모두)"
       },
       "twistSummaryKo": "전시나 건축 공간 리뷰 영상에서 대표 작품 설명과 포토 스팟이 나오는 순간만 정리해 방문 전 1분 관람 가이드를 만듭니다.",
       "mvpFeatures": [
@@ -767,17 +767,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "I was tired of",
-          "builderId": "builder-hn-49090607",
-          "builderName": "I was tired of"
+          "title": "Postiz",
+          "builderId": "builder-tmrr-f9df0c188c",
+          "builderName": "Postiz"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "공간 투어·전시 도슨트 영상에서 꼭 볼 포인트만 뽑아두는 관람 아카이브",
-          "treatmentId": "tr-local-ar-i-was-tired-of-wt2m6c",
-          "builderId": "builder-hn-49090607",
-          "builderName": "I was tired of"
+          "treatmentId": "tr-local-ar-postiz-19n7gd",
+          "builderId": "builder-tmrr-f9df0c188c",
+          "builderName": "Postiz"
         }
       ],
       "synthesisMode": "deterministic",
@@ -785,40 +785,40 @@
       "variantIndex": 10
     },
     {
-      "id": "tr-creator--chat-with-work-1ejaxz",
-      "slug": "tr-creator--chat-with-work-1ejaxz",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--gauth-personal-1yyjwb",
+      "slug": "tr-creator--gauth-personal-1yyjwb",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "긴 해외 강의·인터뷰 링크에서 실무에 바로 쓸 핵심 3포인트만 뽑는 리서치 노트",
       "oneLineHook": "1시간짜리 해외 빌더 인터뷰나 데모 영상 링크를 넣으면 핵심 인사이트 3줄과 다시 볼 타임스탬프만 깔끔한 카드로 모아줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 1시간짜리 해외 빌더 인터뷰나 데모 영상 링크를 넣으면 핵심 인사이트 3줄과 다시 볼 타임스탬프만 깔끔한 카드로 모아줍니다.",
       "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-866a00e4f2",
-        "name": "Chat with Work",
-        "url": "https://www.producthunt.com/products/chat-with-work",
+        "builderId": "builder-ph-8edf310cbf",
+        "name": "Gauth Personal Study Agent",
+        "url": "https://www.producthunt.com/products/gauth-ai-course",
         "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #1",
+        "tractionLabel": "PH 최신 런칭 #2",
         "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "Chat with Work은 Product Hunt에서 PH 최신 런칭 #1의 호응을 얻은 해외 신상 프로덕트입니다. '유럽의 AI 봇. 그들은 일합니다. 당신이 결정합니다.' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Gauth Personal Study Agent은 Product Hunt에서 PH 최신 런칭 #2의 호응을 얻은 해외 신상 프로덕트입니다. '당신이 어디서 어려움을 겪었는지 기억하는 AI 학습 에이전트' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-a2aa301b862f",
-        "titleKo": "150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사",
-        "canonicalUrl": "https://zenn.dev/zeroos_fidwell/articles/740af3294b95a4",
+        "radarId": "live-fbde2d0c5469",
+        "titleKo": "최소한의 코드(OpenAI API와 NumPy만 사용)로 클래식 RAG 구축하기",
+        "canonicalUrl": "https://zenn.dev/salesanalytics/articles/693f58e829040b",
         "platformId": "zenn",
         "signalType": "dev_workflow",
         "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "Zenn — 150만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 Zenn 계열 소식('150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Zenn 개발 생태계에서 '150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사' 구현 방식과 실전 적용 사례가 공개됐어요. 특히 150만 수치가)"
+        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
+        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('최소한의 코드(OpenAI API와 NumPy만 사용)로 클래식 RAG 구축하기')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (OpenAI 개발 생태계에서 '최소한의 코드(OpenAI API와 NumPy만 사용)로 클래식 RAG 구축하기' 구현 방식과 실전 적용 사례가 공개됐어요.)"
       },
       "twistSummaryKo": "1시간짜리 해외 빌더 인터뷰나 데모 영상 링크를 넣으면 핵심 인사이트 3줄과 다시 볼 타임스탬프만 깔끔한 카드로 모아줍니다.",
       "mvpFeatures": [
@@ -838,17 +838,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Chat with Work",
-          "builderId": "builder-ph-866a00e4f2",
-          "builderName": "Chat with Work"
+          "title": "Gauth Personal Study Agent",
+          "builderId": "builder-ph-8edf310cbf",
+          "builderName": "Gauth Personal Study Agent"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "긴 해외 강의·인터뷰 링크에서 실무에 바로 쓸 핵심 3포인트만 뽑는 리서치 노트",
-          "treatmentId": "tr-creator--chat-with-work-1ejaxz",
-          "builderId": "builder-ph-866a00e4f2",
-          "builderName": "Chat with Work"
+          "treatmentId": "tr-creator--gauth-personal-1yyjwb",
+          "builderId": "builder-ph-8edf310cbf",
+          "builderName": "Gauth Personal Study Agent"
         }
       ],
       "synthesisMode": "deterministic",
@@ -856,29 +856,29 @@
       "variantIndex": 11
     },
     {
-      "id": "tr-brand-co-stramik-9k33fx",
-      "slug": "tr-brand-co-stramik-9k33fx",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-bugstack-12he4e",
+      "slug": "tr-brand-co-bugstack-12he4e",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "착샷 리뷰 영상에서 사이즈 팁과 실물 디테일 구간만 모아보는 쇼핑 노트",
       "oneLineHook": "20분짜리 리뷰 영상을 다 보지 않아도, 핏·사이즈 추천·소재 디테일이 나오는 초 단위 구간만 정리해 구매 결정을 도와줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 20분짜리 리뷰 영상을 다 보지 않아도, 핏·사이즈 추천·소재 디테일이 나오는 초 단위 구간만 정리해 구매 결정을 도와줍니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-uneed-86164d2393",
-        "name": "Stramik",
-        "url": "https://www.uneed.best/tool/stramik",
+        "builderId": "builder-uneed-7c0b630334",
+        "name": "Bugstack",
+        "url": "https://www.uneed.best/tool/bugstack",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "Stramik은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Stramik — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Bugstack은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -909,17 +909,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Stramik",
-          "builderId": "builder-uneed-86164d2393",
-          "builderName": "Stramik"
+          "title": "Bugstack",
+          "builderId": "builder-uneed-7c0b630334",
+          "builderName": "Bugstack"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "착샷 리뷰 영상에서 사이즈 팁과 실물 디테일 구간만 모아보는 쇼핑 노트",
-          "treatmentId": "tr-brand-co-stramik-9k33fx",
-          "builderId": "builder-uneed-86164d2393",
-          "builderName": "Stramik"
+          "treatmentId": "tr-brand-co-bugstack-12he4e",
+          "builderId": "builder-uneed-7c0b630334",
+          "builderName": "Bugstack"
         }
       ],
       "synthesisMode": "deterministic",
@@ -927,40 +927,40 @@
       "variantIndex": 12
     },
     {
-      "id": "tr-cinema-v-postiz-17rmod",
-      "slug": "tr-cinema-v-postiz-17rmod",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-plango-1kwnbu",
+      "slug": "tr-cinema-v-plango-1kwnbu",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "롱테이크·편집 리듬을 초 단위로 쪼개 배우는 영상 컷 분해 노트",
       "oneLineHook": "좋아하는 영화 예고편이나 숏폼의 컷 전환 호흡을 타임라인 메모로 분해해 내 다음 영상 편집 리듬을 설계합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 좋아하는 영화 예고편이나 숏폼의 컷 전환 호흡을 타임라인 메모로 분해해 내 다음 영상 편집 리듬을 설계합니다.",
-      "buildCadence": "1주 프로토타입",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-tmrr-f9df0c188c",
-        "name": "Postiz",
-        "url": "https://trustmrr.com/startup/postiz",
-        "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $458,757 (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $458,757",
-        "verifiedRevenue": true,
+        "builderId": "builder-ph-c2b44c28b0",
+        "name": "Plango",
+        "url": "https://www.producthunt.com/products/plango",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #3",
+        "shortMetricLabel": "Product Hunt 신상",
+        "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
-        "overseasProofKo": "Postiz은 검증 매출 $458,757 (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. 'Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David'라는 단순한 한 가지 문제에 집중해, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 유료 사용자를 빠르게 모았습니다."
+        "overseasProofKo": "Plango은 Product Hunt에서 PH 최신 런칭 #3의 호응을 얻은 해외 신상 프로덕트입니다. 'Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다.' 경험을 무거운 가입 절차 없이 열어주고, 긴 영상이나 글에서 꼭 필요한 핵심 구간만 초 단위 카드로 잘라 모아두는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-9fef9270cdd5",
-        "titleKo": "인류학 연구: 클로드 블랙홀 물리학",
-        "canonicalUrl": "https://anthropic.com/research/claude-black-hole-physics",
-        "platformId": "anthropic",
-        "signalType": "model_release",
-        "productDomain": "ai-research-model",
-        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
-        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('인류학 연구: 클로드 블랙홀 물리학')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Anthropic 공식 연구 보고서 'Claude Black Hole Physics' ( 공개됐습니다.)"
+        "radarId": "live-a4fd3b33d971",
+        "titleKo": "erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…",
+        "canonicalUrl": "https://github.com/erkamyaman/safe-anything",
+        "platformId": "github",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
+        "benchmarkPoint": "GitHub 급상승 317",
+        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (다른 사람보다 먼저 구멍을 찾아보세요. 빠른 100% Rust 취약점 스캐너: XSS, SQL 주입, 유출된 비밀, 종속성 CVE 및 AI 에이전트 설정. 공개 직후 스타 317개를 빠르게 넘겼어요.)"
       },
       "twistSummaryKo": "좋아하는 영화 예고편이나 숏폼의 컷 전환 호흡을 타임라인 메모로 분해해 내 다음 영상 편집 리듬을 설계합니다.",
       "mvpFeatures": [
@@ -980,17 +980,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Postiz",
-          "builderId": "builder-tmrr-f9df0c188c",
-          "builderName": "Postiz"
+          "title": "Plango",
+          "builderId": "builder-ph-c2b44c28b0",
+          "builderName": "Plango"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "롱테이크·편집 리듬을 초 단위로 쪼개 배우는 영상 컷 분해 노트",
-          "treatmentId": "tr-cinema-v-postiz-17rmod",
-          "builderId": "builder-tmrr-f9df0c188c",
-          "builderName": "Postiz"
+          "treatmentId": "tr-cinema-v-plango-1kwnbu",
+          "builderId": "builder-ph-c2b44c28b0",
+          "builderName": "Plango"
         }
       ],
       "synthesisMode": "deterministic",
@@ -998,29 +998,29 @@
       "variantIndex": 13
     },
     {
-      "id": "tr-photo-vi-journalistic-t-160uic",
-      "slug": "tr-photo-vi-journalistic-t-160uic",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-simcity-but-wi-a6qfyt",
+      "slug": "tr-photo-vi-simcity-but-wi-a6qfyt",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "자연광 시간대와 배경 질감으로 고르는 야외·스튜디오 촬영 스팟 노트",
       "oneLineHook": "오전 역광이 예쁜 골목이나 화이트 톤 렌탈 스튜디오를 채광 방향과 벽면 텍스처 기준으로 정리해 촬영 장소를 빠르게 정합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 오전 역광이 예쁜 골목이나 화이트 톤 렌탈 스튜디오를 채광 방향과 벽면 텍스처 기준으로 정리해 촬영 장소를 빠르게 정합니다.",
-      "buildCadence": "1주 프로토타입",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-7d1ea8febd",
-        "name": "Journalistic Tech",
-        "url": "https://www.producthunt.com/products/journalistic-tech",
-        "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #4",
-        "shortMetricLabel": "Product Hunt 신상",
+        "builderId": "builder-hn-50170593",
+        "name": "SimCity, but with Permits",
+        "url": "https://permit.petercai.com/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 941 pts · 댓글 428",
+        "shortMetricLabel": "Show HN 941점 인기",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "Journalistic Tech은 Product Hunt에서 PH 최신 런칭 #4의 호응을 얻은 해외 신상 프로덕트입니다. 'HackerNoon에 게시되는 비동기 인터뷰' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "SimCity, but with Permits은 Show HN에서 HN 941 pts · 댓글 428의 호응을 얻은 해외 신상 프로덕트입니다. 'SimCity, 하지만 허가가 있음' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1051,17 +1051,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Journalistic Tech",
-          "builderId": "builder-ph-7d1ea8febd",
-          "builderName": "Journalistic Tech"
+          "title": "SimCity, but with Permits",
+          "builderId": "builder-hn-50170593",
+          "builderName": "SimCity, but with Permits"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "자연광 시간대와 배경 질감으로 고르는 야외·스튜디오 촬영 스팟 노트",
-          "treatmentId": "tr-photo-vi-journalistic-t-160uic",
-          "builderId": "builder-ph-7d1ea8febd",
-          "builderName": "Journalistic Tech"
+          "treatmentId": "tr-photo-vi-simcity-but-wi-a6qfyt",
+          "builderId": "builder-hn-50170593",
+          "builderName": "SimCity, but with Permits"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1069,40 +1069,40 @@
       "variantIndex": 14
     },
     {
-      "id": "tr-music-au-simcity-but-wi-j1csi8",
-      "slug": "tr-music-au-simcity-but-wi-j1csi8",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-i-made-google--d7ycno",
+      "slug": "tr-music-au-i-made-google--d7ycno",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "독립 바이닐 숍과 리스닝 바의 장르·추천 음반을 모아보는 음악 디깅 지도",
       "oneLineHook": "도시 곳곳의 바이닐 숍, LP 바, 소규모 공연장을 취급 장르와 대표 추천 트랙과 함께 지도 아카이브로 정리합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 도시 곳곳의 바이닐 숍, LP 바, 소규모 공연장을 취급 장르와 대표 추천 트랙과 함께 지도 아카이브로 정리합니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-hn-50170593",
-        "name": "SimCity, but with Permits",
-        "url": "https://permit.petercai.com/",
+        "builderId": "builder-hn-48673671",
+        "name": "I made Google Trends",
+        "url": "https://hackernewstrends.com",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 941 pts · 댓글 428",
-        "shortMetricLabel": "Show HN 941점 인기",
+        "tractionLabel": "HN 822 pts · 댓글 156",
+        "shortMetricLabel": "Show HN 822점 인기",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "SimCity, but with Permits은 Show HN에서 HN 941 pts · 댓글 428의 호응을 얻은 해외 신상 프로덕트입니다. 'SimCity, 하지만 허가가 있음' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "I made Google Trends은 Show HN에서 HN 822 pts · 댓글 156의 호응을 얻은 해외 신상 프로덕트입니다. '18년간의 댓글을 색인화하여 Google Trends for Hacker News를 만들었습니다.' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-bf0fb1f9d854",
-        "titleKo": "EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…",
-        "canonicalUrl": "https://github.com/EL4CTEO/fast-anything",
+        "radarId": "live-a4fd3b33d971",
+        "titleKo": "erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…",
+        "canonicalUrl": "https://github.com/erkamyaman/safe-anything",
         "platformId": "github",
         "signalType": "open_source_trend",
         "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "GitHub 급상승 2550",
-        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Claude 개발 생태계에서 'EL4CTEO/fast-anything: Rust로 다시 작성하지 마세요. 느린 5%를 다시 작성하세요: Python, Node 또는…' 구현 방식과 실전 적용 사례가 공개됐어요. 특히)"
+        "benchmarkPoint": "GitHub 급상승 317",
+        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('erkamyaman/safe-anything: 다른 사람보다 먼저 구멍을 찾으세요. 빠른 100% Rust 취약점 스캐너: XSS…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (다른 사람보다 먼저 구멍을 찾아보세요. 빠른 100% Rust 취약점 스캐너: XSS, SQL 주입, 유출된 비밀, 종속성 CVE 및 AI 에이전트 설정. 공개 직후 스타 317개를 빠르게 넘겼어요.)"
       },
       "twistSummaryKo": "도시 곳곳의 바이닐 숍, LP 바, 소규모 공연장을 취급 장르와 대표 추천 트랙과 함께 지도 아카이브로 정리합니다.",
       "mvpFeatures": [
@@ -1122,17 +1122,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "SimCity, but with Permits",
-          "builderId": "builder-hn-50170593",
-          "builderName": "SimCity, but with Permits"
+          "title": "I made Google Trends",
+          "builderId": "builder-hn-48673671",
+          "builderName": "I made Google Trends"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "독립 바이닐 숍과 리스닝 바의 장르·추천 음반을 모아보는 음악 디깅 지도",
-          "treatmentId": "tr-music-au-simcity-but-wi-j1csi8",
-          "builderId": "builder-hn-50170593",
-          "builderName": "SimCity, but with Permits"
+          "treatmentId": "tr-music-au-i-made-google--d7ycno",
+          "builderId": "builder-hn-48673671",
+          "builderName": "I made Google Trends"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1140,40 +1140,40 @@
       "variantIndex": 15
     },
     {
-      "id": "tr-local-ar-i-made-google--1c7j2r",
-      "slug": "tr-local-ar-i-made-google--1c7j2r",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-feedsortr-hrrdpq",
+      "slug": "tr-local-ar-feedsortr-hrrdpq",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "독립 서점과 바이닐 샵의 이번 주 소식을 한눈에 모아보는 취향 지도",
       "oneLineHook": "성수·연남·서촌의 독립 서점, 전시 공간, 바이닐 바의 신간 입고와 팝업 일정을 걸어서 돌기 좋은 동선 카드로 엮어줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 성수·연남·서촌의 독립 서점, 전시 공간, 바이닐 바의 신간 입고와 팝업 일정을 걸어서 돌기 좋은 동선 카드로 엮어줍니다.",
       "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-48673671",
-        "name": "I made Google Trends",
-        "url": "https://hackernewstrends.com",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 822 pts · 댓글 156",
-        "shortMetricLabel": "Show HN 822점 인기",
+        "builderId": "builder-uneed-2fc264748e",
+        "name": "Feedsortr",
+        "url": "https://www.uneed.best/tool/feedsortr",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "I made Google Trends은 Show HN에서 HN 822 pts · 댓글 156의 호응을 얻은 해외 신상 프로덕트입니다. '18년간의 댓글을 색인화하여 Google Trends for Hacker News를 만들었습니다.' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Feedsortr은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-1455302e2aaa",
-        "titleKo": "GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해",
-        "canonicalUrl": "https://news.hada.io/topic?id=37712",
-        "platformId": "geeknews",
-        "signalType": "new_product",
+        "radarId": "live-c0de4f7aecd1",
+        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "platformId": "x",
+        "signalType": "builder_signal",
         "productDomain": "builder-community-signal",
-        "benchmarkPoint": "GeekNews — 750B 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 GeekNews 계열 소식('GLM-5.4: 첫 Loop Transformer로 범용 코딩을 향해')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (GLM-5.4는 공유 레이어를 반복 실행하는 첫 플래그십 Loop Transformer 모델로, Z.ai는 750B 규모에서 2T~3T 파라미터 모델에 견줄 지능 수준에 도달했다고 밝힘 반복 구조는 파라미터를 늘리지)"
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
       },
       "twistSummaryKo": "성수·연남·서촌의 독립 서점, 전시 공간, 바이닐 바의 신간 입고와 팝업 일정을 걸어서 돌기 좋은 동선 카드로 엮어줍니다.",
       "mvpFeatures": [
@@ -1193,17 +1193,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "I made Google Trends",
-          "builderId": "builder-hn-48673671",
-          "builderName": "I made Google Trends"
+          "title": "Feedsortr",
+          "builderId": "builder-uneed-2fc264748e",
+          "builderName": "Feedsortr"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "독립 서점과 바이닐 샵의 이번 주 소식을 한눈에 모아보는 취향 지도",
-          "treatmentId": "tr-local-ar-i-made-google--1c7j2r",
-          "builderId": "builder-hn-48673671",
-          "builderName": "I made Google Trends"
+          "treatmentId": "tr-local-ar-feedsortr-hrrdpq",
+          "builderId": "builder-uneed-2fc264748e",
+          "builderName": "Feedsortr"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1211,40 +1211,40 @@
       "variantIndex": 16
     },
     {
-      "id": "tr-creator--snowly-wupl45",
-      "slug": "tr-creator--snowly-wupl45",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--journalistic-t-3lq4bp",
+      "slug": "tr-creator--journalistic-t-3lq4bp",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "1인 메이커가 바로 써먹는 무료 API·오픈소스·디자인 리소스 디렉터리",
       "oneLineHook": "사이드 프로젝트를 시작할 때 매번 검색하던 0원 API, 아이콘, 배포 도구를 목적별 필터와 실사용 한 줄 평으로 모아둡니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 사이드 프로젝트를 시작할 때 매번 검색하던 0원 API, 아이콘, 배포 도구를 목적별 필터와 실사용 한 줄 평으로 모아둡니다.",
-      "buildCadence": "1주 프로토타입",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-98fe4249c3",
-        "name": "Snowly",
-        "url": "https://www.producthunt.com/products/snowly-2",
+        "builderId": "builder-ph-7d1ea8febd",
+        "name": "Journalistic Tech",
+        "url": "https://www.producthunt.com/products/journalistic-tech",
         "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #15",
+        "tractionLabel": "PH 최신 런칭 #4",
         "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "Snowly은 Product Hunt에서 PH 최신 런칭 #15의 호응을 얻은 해외 신상 프로덕트입니다. '친구들과 스키 여행을 계획해보세요. 모든 실행을 기억하십시오.' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Journalistic Tech은 Product Hunt에서 PH 최신 런칭 #4의 호응을 얻은 해외 신상 프로덕트입니다. 'HackerNoon에 게시되는 비동기 인터뷰' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-ba75ed69122b",
-        "titleKo": "AI Gateway는 이제 Canary ZDR 감사를 실행합니다.",
-        "canonicalUrl": "https://vercel.com/changelog/ai-gateway-now-runs-canary-zdr-audits",
-        "platformId": "vercel-v0",
-        "signalType": "dev_workflow",
+        "radarId": "live-cc536aa6d67a",
+        "titleKo": "qianyiai/kurocat: 투명한 데스크탑 타이핑 및 마우스 동반자(고양이 6마리 + BigFish 고래 소녀, 비밀번호 개인 정보…",
+        "canonicalUrl": "https://github.com/qianyiai/kurocat",
+        "platformId": "github",
+        "signalType": "open_source_trend",
         "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "최근 화제가 된 Vercel 계열 소식('AI Gateway는 이제 Canary ZDR 감사를 실행합니다.')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Vercel 개발 생태계에서 'AI Gateway는 이제 Canary ZDR 감사를 실행합니다.' 구현 방식과 실전 적용 사례가 공개됐어요.)"
+        "benchmarkPoint": "GitHub 급상승 272",
+        "bottleneckSolvedKo": "최근 화제가 된 GitHub 계열 소식('qianyiai/kurocat: 투명한 데스크탑 타이핑 및 마우스 동반자(고양이 6마리 + BigFish 고래 소녀, 비밀번호 개인 정보…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Windows 11/10/7, macOS 10.15+ 및 Linux/KylinOS GitHub 스타용 투명 데스크톱 타이핑 및 마우스 동반자(고양이 6마리 + BigFish 고래 소녀, 비밀번호 개인 정보 보호 가드)"
       },
       "twistSummaryKo": "사이드 프로젝트를 시작할 때 매번 검색하던 0원 API, 아이콘, 배포 도구를 목적별 필터와 실사용 한 줄 평으로 모아둡니다.",
       "mvpFeatures": [
@@ -1264,17 +1264,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Snowly",
-          "builderId": "builder-ph-98fe4249c3",
-          "builderName": "Snowly"
+          "title": "Journalistic Tech",
+          "builderId": "builder-ph-7d1ea8febd",
+          "builderName": "Journalistic Tech"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "1인 메이커가 바로 써먹는 무료 API·오픈소스·디자인 리소스 디렉터리",
-          "treatmentId": "tr-creator--snowly-wupl45",
-          "builderId": "builder-ph-98fe4249c3",
-          "builderName": "Snowly"
+          "treatmentId": "tr-creator--journalistic-t-3lq4bp",
+          "builderId": "builder-ph-7d1ea8febd",
+          "builderName": "Journalistic Tech"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1282,40 +1282,40 @@
       "variantIndex": 17
     },
     {
-      "id": "tr-brand-co-physically-acc-g3alot",
-      "slug": "tr-brand-co-physically-acc-g3alot",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-displaymath-14mmid",
+      "slug": "tr-brand-co-displaymath-14mmid",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "성수·한남·도쿄 빈티지 숍과 브랜드 팝업 일정을 묶어보는 쇼핑 동선 맵",
       "oneLineHook": "이번 주말 들를 브랜드 팝업과 빈티지 셀렉트숍을 취향 태그와 도보 거리 기준으로 묶어 반나절 쇼핑 코스를 만들어 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 이번 주말 들를 브랜드 팝업과 빈티지 셀렉트숍을 취향 태그와 도보 거리 기준으로 묶어 반나절 쇼핑 코스를 만들어 줍니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-49021270",
-        "name": "Physically accurate black hole",
-        "url": "https://blackhole.plav.in",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 477 pts · 댓글 193",
-        "shortMetricLabel": "Show HN 477점 인기",
+        "builderId": "builder-uneed-937ac12340",
+        "name": "Displaymath",
+        "url": "https://www.uneed.best/tool/displaymath",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "Physically accurate black hole은 Show HN에서 HN 477 pts · 댓글 193의 호응을 얻은 해외 신상 프로덕트입니다. '물리적으로 정확한 블랙홀을 방에 넣을 수 있다' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Displaymath은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-9e2e68ce49ae",
-        "titleKo": "Show GN: 나라니 - 계약서를 읽고 상대에게 보낼 조건 제안을 준비하는 도구",
-        "canonicalUrl": "https://news.hada.io/topic?id=37699",
-        "platformId": "geeknews",
-        "signalType": "new_product",
+        "radarId": "live-b99d5f09a022",
+        "titleKo": "지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…",
+        "canonicalUrl": "https://x.com/AnthropicAI/status/2123822989154369958",
+        "platformId": "x",
+        "signalType": "builder_signal",
         "productDomain": "builder-community-signal",
         "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "최근 화제가 된 GeekNews 계열 소식('Show GN: 나라니 - 계약서를 읽고 상대에게 보낼 조건 제안을 준비하는 도구')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (계약서를 올리면 내 AI가 먼저 읽고 확인할 조항과 빠진 조건을 찾아 줍니다. 말을 꺼내기 어려운 조건은 ‘납품 후 5일 안에 검수를 마치는 걸로 정해도 될까요?’처럼 상대에게 보낼 제안으로 다듬어 줍니다.)"
+        "bottleneckSolvedKo": "최근 화제가 된 Anthropic 계열 소식('지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@AnthropicAI가 X에서 직접 공유한 '지금까지의 이야기에 대해 Anthropic의 공동 창립자들이 설명했습니다. 다리오 아모데이(Dario Amodei), 다니엘라…' 업데이트예요. 실사용 데모와 빌더 스레)"
       },
       "twistSummaryKo": "이번 주말 들를 브랜드 팝업과 빈티지 셀렉트숍을 취향 태그와 도보 거리 기준으로 묶어 반나절 쇼핑 코스를 만들어 줍니다.",
       "mvpFeatures": [
@@ -1335,17 +1335,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Physically accurate black hole",
-          "builderId": "builder-hn-49021270",
-          "builderName": "Physically accurate black hole"
+          "title": "Displaymath",
+          "builderId": "builder-uneed-937ac12340",
+          "builderName": "Displaymath"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "성수·한남·도쿄 빈티지 숍과 브랜드 팝업 일정을 묶어보는 쇼핑 동선 맵",
-          "treatmentId": "tr-brand-co-physically-acc-g3alot",
-          "builderId": "builder-hn-49021270",
-          "builderName": "Physically accurate black hole"
+          "treatmentId": "tr-brand-co-displaymath-14mmid",
+          "builderId": "builder-uneed-937ac12340",
+          "builderName": "Displaymath"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1353,29 +1353,29 @@
       "variantIndex": 18
     },
     {
-      "id": "tr-cinema-v-i-made-a-fligh-1lenl0",
-      "slug": "tr-cinema-v-i-made-a-fligh-1lenl0",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-appzoku-ukk78s",
+      "slug": "tr-cinema-v-appzoku-ukk78s",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "장면 분위기에 맞는 촬영 로케이션과 자연광 시간대를 묶어보는 헌팅 지도",
       "oneLineHook": "비 오는 골목, 미니멀 콘크리트, 노을 지는 옥상 같은 씬 키워드로 촬영 스팟과 최적 채광 시간대를 한 번에 정리합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 비 오는 골목, 미니멀 콘크리트, 노을 지는 옥상 같은 씬 키워드로 촬영 스팟과 최적 채광 시간대를 한 번에 정리합니다.",
-      "buildCadence": "3~5일 MVP",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-hn-49693971",
-        "name": "I made a flight",
-        "url": "https://inflightsimulator.com",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 446 pts · 댓글 205",
-        "shortMetricLabel": "Show HN 446점 인기",
-        "verifiedRevenue": false,
+        "builderId": "builder-tmrr-505d4f892a",
+        "name": "AppZoku",
+        "url": "https://trustmrr.com/startup/appzoku",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $4.8k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $4.8k",
+        "verifiedRevenue": true,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "I made a flight은 Show HN에서 HN 446 pts · 댓글 205의 호응을 얻은 해외 신상 프로덕트입니다. '비행 시뮬레이터를 만들었는데 넌 그냥 승객일 뿐이야' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "AppZoku은 검증 매출 $4.8k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '인공지능'라는 단순한 한 가지 문제에 집중해, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1406,17 +1406,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "I made a flight",
-          "builderId": "builder-hn-49693971",
-          "builderName": "I made a flight"
+          "title": "AppZoku",
+          "builderId": "builder-tmrr-505d4f892a",
+          "builderName": "AppZoku"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "장면 분위기에 맞는 촬영 로케이션과 자연광 시간대를 묶어보는 헌팅 지도",
-          "treatmentId": "tr-cinema-v-i-made-a-fligh-1lenl0",
-          "builderId": "builder-hn-49693971",
-          "builderName": "I made a flight"
+          "treatmentId": "tr-cinema-v-appzoku-ukk78s",
+          "builderId": "builder-tmrr-505d4f892a",
+          "builderName": "AppZoku"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1424,40 +1424,40 @@
       "variantIndex": 19
     },
     {
-      "id": "tr-photo-vi-hackerbooks-r2his9",
-      "slug": "tr-photo-vi-hackerbooks-r2his9",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-my-300-embroid-nkp90e",
+      "slug": "tr-photo-vi-my-300-embroid-nkp90e",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "테스트 컷 A·B를 나란히 띄워 1분 만에 A컷을 고르는 온라인 컨택트 시트",
       "oneLineHook": "비슷한 사진 수십 장을 메신저로 주고받지 않고, 깔끔한 2분할 화면에서 표정·크롭·색감을 비교하며 최종 A컷을 바로 확정합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 비슷한 사진 수십 장을 메신저로 주고받지 않고, 깔끔한 2분할 화면에서 표정·크롭·색감을 비교하며 최종 A컷을 바로 확정합니다.",
       "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-50326821",
-        "name": "HackerBooks",
-        "url": "https://hackerbooks.org",
+        "builderId": "builder-hn-50470488",
+        "name": "My $300 embroidery machine",
+        "url": "https://github.com/simpsoka/zigzag",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 1870 pts · 댓글 308",
-        "shortMetricLabel": "Show HN 1870점 인기",
+        "tractionLabel": "HN 743 pts · 댓글 260",
+        "shortMetricLabel": "Show HN 743점 인기",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "HackerBooks은 Show HN에서 HN 1870 pts · 댓글 308의 호응을 얻은 해외 신상 프로덕트입니다. 'HackerTube, 하지만 HN에서 언급된 도서의 경우' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "My $300 embroidery machine은 Show HN에서 HN 743 pts · 댓글 260의 호응을 얻은 해외 신상 프로덕트입니다. '300달러짜리 자수 기계에 구독이 필요해서 나만의 앱을 만들었습니다.' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-dd5a2ef4d10f",
-        "titleKo": "ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory",
-        "canonicalUrl": "https://openai.com/ja-JP/index/how-openai-performance-factory-keeps-chatgpt-fast",
-        "platformId": "hatena-bookmark",
-        "signalType": "new_product",
+        "radarId": "live-e5712e69a009",
+        "titleKo": "Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인",
+        "canonicalUrl": "https://news.hada.io/topic?id=37703",
+        "platformId": "geeknews",
+        "signalType": "model_release",
         "productDomain": "builder-community-signal",
-        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (ChatGPT의 속도를 지원하는 OpenAI의 Performance Factory 에이전트를 활용한 개발의 놀라운 속도로 기존의 성능 엔지니어링 기술로는 대응할 수 없게 되었습니다. 이 속도에 대응하기 위해 우리는 )"
+        "benchmarkPoint": "오픈소스 공개 소식",
+        "bottleneckSolvedKo": "최근 화제가 된 Claude Code 계열 소식('Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (이 두 가지를 줄여 보려고 Claude Code와 Codex용 오픈소스 플러그인 Heirloom을 만들었습니다. 5만 원부터 무료 배송이 되도록 바꿨다면 Heirloom이 변경 전후 코드를 별도 Git worktre)"
       },
       "twistSummaryKo": "비슷한 사진 수십 장을 메신저로 주고받지 않고, 깔끔한 2분할 화면에서 표정·크롭·색감을 비교하며 최종 A컷을 바로 확정합니다.",
       "mvpFeatures": [
@@ -1477,17 +1477,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "HackerBooks",
-          "builderId": "builder-hn-50326821",
-          "builderName": "HackerBooks"
+          "title": "My $300 embroidery machine",
+          "builderId": "builder-hn-50470488",
+          "builderName": "My $300 embroidery machine"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "테스트 컷 A·B를 나란히 띄워 1분 만에 A컷을 고르는 온라인 컨택트 시트",
-          "treatmentId": "tr-photo-vi-hackerbooks-r2his9",
-          "builderId": "builder-hn-50326821",
-          "builderName": "HackerBooks"
+          "treatmentId": "tr-photo-vi-my-300-embroid-nkp90e",
+          "builderId": "builder-hn-50470488",
+          "builderName": "My $300 embroidery machine"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1495,29 +1495,29 @@
       "variantIndex": 20
     },
     {
-      "id": "tr-music-au-homebrew-6-0-0-14yws3",
-      "slug": "tr-music-au-homebrew-6-0-0-14yws3",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-guitoro-a-virt-w73ltk",
+      "slug": "tr-music-au-guitoro-a-virt-w73ltk",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "데모 비트 A·B 버전과 레퍼런스 트랙의 구간별 느낌을 비교하는 트랙 리뷰 시트",
       "oneLineHook": "편곡 방향이 헷갈릴 때 두 가지 데모 버전과 레퍼런스 곡의 인트로·드롭·아웃트로 메모를 한 화면에 나란히 비교합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 편곡 방향이 헷갈릴 때 두 가지 데모 버전과 레퍼런스 곡의 인트로·드롭·아웃트로 메모를 한 화면에 나란히 비교합니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-hn-48490024",
-        "name": "Homebrew 6.0.0",
-        "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
+        "builderId": "builder-hn-50077020",
+        "name": "Guitoro, a virtual guitar",
+        "url": "https://guitoro.com/",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 1481 pts · 댓글 363",
-        "shortMetricLabel": "Show HN 1481점 인기",
+        "tractionLabel": "HN 573 pts · 댓글 161",
+        "shortMetricLabel": "Show HN 573점 인기",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Homebrew 6.0.0은 Show HN에서 HN 1481 pts · 댓글 363의 호응을 얻은 해외 신상 프로덕트입니다. '홈브루 6.0.0' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Guitoro, a virtual guitar은 Show HN에서 HN 573 pts · 댓글 161의 호응을 얻은 해외 신상 프로덕트입니다. '키보드로 치는 가상 기타 Guitoro' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1548,17 +1548,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Homebrew 6.0.0",
-          "builderId": "builder-hn-48490024",
-          "builderName": "Homebrew 6.0.0"
+          "title": "Guitoro, a virtual guitar",
+          "builderId": "builder-hn-50077020",
+          "builderName": "Guitoro, a virtual guitar"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "데모 비트 A·B 버전과 레퍼런스 트랙의 구간별 느낌을 비교하는 트랙 리뷰 시트",
-          "treatmentId": "tr-music-au-homebrew-6-0-0-14yws3",
-          "builderId": "builder-hn-48490024",
-          "builderName": "Homebrew 6.0.0"
+          "treatmentId": "tr-music-au-guitoro-a-virt-w73ltk",
+          "builderId": "builder-hn-50077020",
+          "builderName": "Guitoro, a virtual guitar"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1566,29 +1566,29 @@
       "variantIndex": 21
     },
     {
-      "id": "tr-local-ar-hallucinate-osbm8k",
-      "slug": "tr-local-ar-hallucinate-osbm8k",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-18-words-1md26t",
+      "slug": "tr-local-ar-18-words-1md26t",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "이번 주말 종료되는 전시·팝업만 추려주는 마감 임박 컬처 캘린더",
       "oneLineHook": "가려다 놓치는 전시와 팝업이 없도록, 이번 주 안에 끝나는 공간들만 동네별·예약 여부별로 깔끔하게 보여줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 가려다 놓치는 전시와 팝업이 없도록, 이번 주 안에 끝나는 공간들만 동네별·예약 여부별로 깔끔하게 보여줍니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-48304260",
-        "name": "Hallucinate",
-        "url": "https://hallucinate.site",
+        "builderId": "builder-hn-48845049",
+        "name": "18 Words",
+        "url": "https://18words.com/",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 442 pts · 댓글 201",
-        "shortMetricLabel": "Show HN 442점 인기",
+        "tractionLabel": "HN 1160 pts · 댓글 366",
+        "shortMetricLabel": "Show HN 1160점 인기",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
-        "overseasProofKo": "Hallucinate은 Show HN에서 HN 442 pts · 댓글 201의 호응을 얻은 해외 신상 프로덕트입니다. 'Massively Multiplayer Online Rave' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "18 Words은 Show HN에서 HN 1160 pts · 댓글 366의 호응을 얻은 해외 신상 프로덕트입니다. '18개 단어' 경험을 무거운 가입 절차 없이 열어주고, 흩어진 장소·일정·리소스를 취향 태그와 마감일 기준으로 묶어 바로 쓰게 만드는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1619,17 +1619,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Hallucinate",
-          "builderId": "builder-hn-48304260",
-          "builderName": "Hallucinate"
+          "title": "18 Words",
+          "builderId": "builder-hn-48845049",
+          "builderName": "18 Words"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "이번 주말 종료되는 전시·팝업만 추려주는 마감 임박 컬처 캘린더",
-          "treatmentId": "tr-local-ar-hallucinate-osbm8k",
-          "builderId": "builder-hn-48304260",
-          "builderName": "Hallucinate"
+          "treatmentId": "tr-local-ar-18-words-1md26t",
+          "builderId": "builder-hn-48845049",
+          "builderName": "18 Words"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1637,40 +1637,40 @@
       "variantIndex": 22
     },
     {
-      "id": "tr-creator--letter-visitor-1bcut8",
-      "slug": "tr-creator--letter-visitor-1bcut8",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--fablepool-nb3o5c",
+      "slug": "tr-creator--fablepool-nb3o5c",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "랜딩 페이지 카피와 첫 화면 구성을 A·B 나란히 띄워 점검하는 런칭 체커",
       "oneLineHook": "서비스를 공개하기 전, 두 가지 헤드라인과 버튼 문구를 깔끔한 미리보기 카드에 나란히 띄워 첫인상 명확도를 점검합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 서비스를 공개하기 전, 두 가지 헤드라인과 버튼 문구를 깔끔한 미리보기 카드에 나란히 띄워 첫인상 명확도를 점검합니다.",
       "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-ph-5c55766292",
-        "name": "Letter Visitors",
-        "url": "https://www.producthunt.com/products/visitors",
-        "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #6",
-        "shortMetricLabel": "Product Hunt 신상",
+        "builderId": "builder-hn-48496539",
+        "name": "FablePool",
+        "url": "https://fablepool.com",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 526 pts · 댓글 276",
+        "shortMetricLabel": "Show HN 526점 인기",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Letter Visitors은 Product Hunt에서 PH 최신 런칭 #6의 호응을 얻은 해외 신상 프로덕트입니다. '웹사이트 자체에서 웹사이트 방문자를 확인하세요.' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "FablePool은 Show HN에서 HN 526 pts · 댓글 276의 호응을 얻은 해외 신상 프로덕트입니다. '메시지 뒤에 자금을 모으고 Fable은 이를 공개적으로 구축합니다.' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-349d39b9af2b",
-        "titleKo": "멈추는 것을 2일 눈치채지 못했다.",
-        "canonicalUrl": "https://qiita.com/KingHAL0/items/9f299bbf173631637a71",
+        "radarId": "live-63029250be2f",
+        "titleKo": "3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유",
+        "canonicalUrl": "https://qiita.com/Ethereal-Kardia/items/96ffe6b43c107b3094cc",
         "platformId": "qiita",
         "signalType": "dev_workflow",
         "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('멈추는 것을 2일 눈치채지 못했다.')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Claude 개발 생태계에서 '멈추는 것을 2일 눈치채지 못했다.' 구현 방식과 실전 적용 사례가 공개됐어요.)"
+        "benchmarkPoint": "NVIDIA — 3배 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "최근 화제가 된 NVIDIA 계열 소식('3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (NVIDIA 개발 생태계에서 '3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유' 구현 방식과 실전 적용 사례가 공개됐어요. 특히 3배 수치가 핵심 포인트로 꼽혀요.)"
       },
       "twistSummaryKo": "서비스를 공개하기 전, 두 가지 헤드라인과 버튼 문구를 깔끔한 미리보기 카드에 나란히 띄워 첫인상 명확도를 점검합니다.",
       "mvpFeatures": [
@@ -1690,17 +1690,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Letter Visitors",
-          "builderId": "builder-ph-5c55766292",
-          "builderName": "Letter Visitors"
+          "title": "FablePool",
+          "builderId": "builder-hn-48496539",
+          "builderName": "FablePool"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "랜딩 페이지 카피와 첫 화면 구성을 A·B 나란히 띄워 점검하는 런칭 체커",
-          "treatmentId": "tr-creator--letter-visitor-1bcut8",
-          "builderId": "builder-ph-5c55766292",
-          "builderName": "Letter Visitors"
+          "treatmentId": "tr-creator--fablepool-nb3o5c",
+          "builderId": "builder-hn-48496539",
+          "builderName": "FablePool"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1708,40 +1708,40 @@
       "variantIndex": 23
     },
     {
-      "id": "tr-brand-co-bento-lopryh",
-      "slug": "tr-brand-co-bento-lopryh",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-tikz-editor-1g4alq",
+      "slug": "tr-brand-co-tikz-editor-1g4alq",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "고민 중인 아우터·신발 4개를 한 화면에 띄워 비교하는 구매 결정 보드",
       "oneLineHook": "장바구니에 쌓아둔 후보 아이템들을 한 장의 깔끔한 비교 보드에 올려 가격·소재·활용도 점수를 정리하고 최종 1픽을 고릅니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 장바구니에 쌓아둔 후보 아이템들을 한 장의 깔끔한 비교 보드에 올려 가격·소재·활용도 점수를 정리하고 최종 1픽을 고릅니다.",
       "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-hn-49008211",
-        "name": "Bento",
-        "url": "https://bento.page/slides/",
+        "builderId": "builder-hn-48645437",
+        "name": "TikZ Editor",
+        "url": "https://tikz.dev/editor/",
         "sourceLabel": "Show HN",
-        "tractionLabel": "HN 1033 pts · 댓글 239",
-        "shortMetricLabel": "Show HN 1033점 인기",
+        "tractionLabel": "HN 451 pts · 댓글 74",
+        "shortMetricLabel": "Show HN 451점 인기",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Bento은 Show HN에서 HN 1033 pts · 댓글 239의 호응을 얻은 해외 신상 프로덕트입니다. '하나의 HTML 파일에 전체 PowerPoint(편집+보기+데이터+협업)' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "TikZ Editor은 Show HN에서 HN 451 pts · 댓글 74의 호응을 얻은 해외 신상 프로덕트입니다. 'LaTeX의 그림을 위한 WYSIWYG 편집기' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-6660e0f9fbe5",
-        "titleKo": "그렇다, Lean 코드 1,700만 줄은 정말 많다",
-        "canonicalUrl": "https://news.hada.io/topic?id=37710",
+        "radarId": "live-e5712e69a009",
+        "titleKo": "Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인",
+        "canonicalUrl": "https://news.hada.io/topic?id=37703",
         "platformId": "geeknews",
-        "signalType": "new_product",
+        "signalType": "model_release",
         "productDomain": "builder-community-signal",
-        "benchmarkPoint": "GeekNews — 1,700만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 GeekNews 계열 소식('그렇다, Lean 코드 1,700만 줄은 정말 많다')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (최근 리만 가설 증명에 붙은 Lean 코드 1,700만 줄이라는 수치가 얼마나 큰지 살펴보기 위해, 온라인의 두 Lean 코드 모음을 비교함 Mathlib의 유명 정리 모음에서 Lean 코드가 연결된 259개는 모두)"
+        "benchmarkPoint": "오픈소스 공개 소식",
+        "bottleneckSolvedKo": "최근 화제가 된 Claude Code 계열 소식('Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (이 두 가지를 줄여 보려고 Claude Code와 Codex용 오픈소스 플러그인 Heirloom을 만들었습니다. 5만 원부터 무료 배송이 되도록 바꿨다면 Heirloom이 변경 전후 코드를 별도 Git worktre)"
       },
       "twistSummaryKo": "장바구니에 쌓아둔 후보 아이템들을 한 장의 깔끔한 비교 보드에 올려 가격·소재·활용도 점수를 정리하고 최종 1픽을 고릅니다.",
       "mvpFeatures": [
@@ -1761,17 +1761,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Bento",
-          "builderId": "builder-hn-49008211",
-          "builderName": "Bento"
+          "title": "TikZ Editor",
+          "builderId": "builder-hn-48645437",
+          "builderName": "TikZ Editor"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "고민 중인 아우터·신발 4개를 한 화면에 띄워 비교하는 구매 결정 보드",
-          "treatmentId": "tr-brand-co-bento-lopryh",
-          "builderId": "builder-hn-49008211",
-          "builderName": "Bento"
+          "treatmentId": "tr-brand-co-tikz-editor-1g4alq",
+          "builderId": "builder-hn-48645437",
+          "builderName": "TikZ Editor"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1779,40 +1779,40 @@
       "variantIndex": 24
     },
     {
-      "id": "tr-cinema-v-modem-15a6an",
-      "slug": "tr-cinema-v-modem-15a6an",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-leantake-1ruhu7",
+      "slug": "tr-cinema-v-leantake-1ruhu7",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "시나리오 6장면을 한눈에 배치해 팀과 합의하는 미니 프리비즈 보드",
       "oneLineHook": "긴 기획서 대신 핵심 6개 씬의 레퍼런스 이미지, 대사 한 줄, 카메라 노트를 2열 보드에 나란히 띄워 연출 방향을 빠르게 맞춥니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 긴 기획서 대신 핵심 6개 씬의 레퍼런스 이미지, 대사 한 줄, 카메라 노트를 2열 보드에 나란히 띄워 연출 방향을 빠르게 맞춥니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-ph-5027604526",
-        "name": "Modem",
-        "url": "https://www.producthunt.com/products/modem",
+        "builderId": "builder-ph-17349a0e8c",
+        "name": "LeanTake",
+        "url": "https://www.producthunt.com/products/leantake",
         "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #7",
+        "tractionLabel": "PH 최신 런칭 #5",
         "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Modem은 Product Hunt에서 PH 최신 런칭 #7의 호응을 얻은 해외 신상 프로덕트입니다. '모든 고객 우려 사항을 찾아 수정하고 후속 조치를 취합니다.' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "LeanTake은 Product Hunt에서 PH 최신 런칭 #5의 호응을 얻은 해외 신상 프로덕트입니다. '4.1MB 기본 Mac 화면 레코더 — 내보내기 대기 시간 없음' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-4d0ef3e8835e",
-        "titleKo": "skill-distill: Claude Code와 Codex의 성공 세션을 오픈 웨이트 모델이 재현하도록 스킬로 다듬는 루프",
-        "canonicalUrl": "https://discuss.pytorch.kr/t/skill-distill-claude-code-codex/12609",
-        "platformId": "pytorch-kr",
+        "radarId": "live-9fef9270cdd5",
+        "titleKo": "인류학 연구: 클로드 블랙홀 물리학",
+        "canonicalUrl": "https://anthropic.com/research/claude-black-hole-physics",
+        "platformId": "anthropic",
         "signalType": "model_release",
         "productDomain": "ai-research-model",
         "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
-        "bottleneckSolvedKo": "최근 화제가 된 Claude Code 계열 소식('skill-distill: Claude Code와 Codex의 성공 세션을 오픈 웨이트 모델이 재현하도록 스킬로 다듬는 루프')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (핵심 요약 skill-distill은 Claude Code나 Codex가 잘 끝낸 세션을, 오픈 웨이트 모델이 같은 작업을 재현할 수 있는 스킬(SKILL.md)로 바꾸는 에이전트 스킬입니다. Distill a go)"
+        "bottleneckSolvedKo": "최근 화제가 된 Claude 계열 소식('인류학 연구: 클로드 블랙홀 물리학')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Anthropic 공식 연구 보고서 'Claude Black Hole Physics' ( 공개됐습니다.)"
       },
       "twistSummaryKo": "긴 기획서 대신 핵심 6개 씬의 레퍼런스 이미지, 대사 한 줄, 카메라 노트를 2열 보드에 나란히 띄워 연출 방향을 빠르게 맞춥니다.",
       "mvpFeatures": [
@@ -1832,17 +1832,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Modem",
-          "builderId": "builder-ph-5027604526",
-          "builderName": "Modem"
+          "title": "LeanTake",
+          "builderId": "builder-ph-17349a0e8c",
+          "builderName": "LeanTake"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "시나리오 6장면을 한눈에 배치해 팀과 합의하는 미니 프리비즈 보드",
-          "treatmentId": "tr-cinema-v-modem-15a6an",
-          "builderId": "builder-ph-5027604526",
-          "builderName": "Modem"
+          "treatmentId": "tr-cinema-v-leantake-1ruhu7",
+          "builderId": "builder-ph-17349a0e8c",
+          "builderName": "LeanTake"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1850,40 +1850,40 @@
       "variantIndex": 25
     },
     {
-      "id": "tr-photo-vi-kopyo-1keygm",
-      "slug": "tr-photo-vi-kopyo-1keygm",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-bragly-omgpvi",
+      "slug": "tr-photo-vi-bragly-omgpvi",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "브랜드 포트폴리오 시안 3가지 톤을 한 페이지에서 대조하는 비주얼 리뷰 보드",
       "oneLineHook": "클라이언트 미팅 전 세 가지 아트 디렉션 시안을 같은 프레임에 나란히 배치해 의사결정 속도를 높입니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 클라이언트 미팅 전 세 가지 아트 디렉션 시안을 같은 프레임에 나란히 배치해 의사결정 속도를 높입니다.",
       "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-70f5abd7ae",
-        "name": "Kopyo",
-        "url": "https://www.producthunt.com/products/kopyo",
-        "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #8",
-        "shortMetricLabel": "Product Hunt 신상",
+        "builderId": "builder-uneed-9c989f3752",
+        "name": "Bragly",
+        "url": "https://www.uneed.best/tool/bragly",
+        "sourceLabel": "Uneed",
+        "tractionLabel": "Uneed 데일리 런칭",
+        "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Kopyo은 Product Hunt에서 PH 최신 런칭 #8의 호응을 얻은 해외 신상 프로덕트입니다. '모든 것을 기억하는 Mac 클립보드 관리자' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Bragly은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-11552052f640",
-        "titleKo": "David Friedberg: 오픈 소스 AI를 제한하는 것은 폭정으로 가는 길입니다. “오픈 소스는 허용되어야 하며 솔직히…",
-        "canonicalUrl": "https://x.com/theallinpod/status/2123994998156722681",
-        "platformId": "x",
-        "signalType": "builder_signal",
-        "productDomain": "builder-community-signal",
-        "benchmarkPoint": "오픈소스 공개 소식",
-        "bottleneckSolvedKo": "최근 화제가 된 X 계열 소식('David Friedberg: 오픈 소스 AI를 제한하는 것은 폭정으로 가는 길입니다. “오픈 소스는 허용되어야 하며 솔직히…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@theallinpod가 X에서 직접 공유한 'David Friedberg: 오픈 소스 AI를 제한하는 것은 폭정으로 가는 길입니다. “오픈 소스는 허용되어야 하며 솔직히…' 업데이트예요. 실사용 데모와 빌더 스레드)"
+        "radarId": "live-76ab226fbd37",
+        "titleKo": "harness-hub/Qwen3.8-27B-pi-adapted 오픈 모델 공개",
+        "canonicalUrl": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+        "platformId": "huggingface",
+        "signalType": "model_release",
+        "productDomain": "chatbot-productivity",
+        "benchmarkPoint": "Qwen — 27B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "최근 화제가 된 Qwen 계열 소식('harness-hub/Qwen3.8-27B-pi-adapted 오픈 모델 공개')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Hugging Face가 'harness-hub/Qwen3.8-27B-pi-adapted 오픈 모델 공개'를 공개하며 대화형 AI의 실사용 품질과 작업 효율을 한 단계 끌어올렸어요. 특히 27B 수치가 핵심 포인트로)"
       },
       "twistSummaryKo": "클라이언트 미팅 전 세 가지 아트 디렉션 시안을 같은 프레임에 나란히 배치해 의사결정 속도를 높입니다.",
       "mvpFeatures": [
@@ -1903,17 +1903,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Kopyo",
-          "builderId": "builder-ph-70f5abd7ae",
-          "builderName": "Kopyo"
+          "title": "Bragly",
+          "builderId": "builder-uneed-9c989f3752",
+          "builderName": "Bragly"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "브랜드 포트폴리오 시안 3가지 톤을 한 페이지에서 대조하는 비주얼 리뷰 보드",
-          "treatmentId": "tr-photo-vi-kopyo-1keygm",
-          "builderId": "builder-ph-70f5abd7ae",
-          "builderName": "Kopyo"
+          "treatmentId": "tr-photo-vi-bragly-omgpvi",
+          "builderId": "builder-uneed-9c989f3752",
+          "builderName": "Bragly"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1921,40 +1921,40 @@
       "variantIndex": 26
     },
     {
-      "id": "tr-music-au-gauth-personal-9a6snk",
-      "slug": "tr-music-au-gauth-personal-9a6snk",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-dog-translator-1haw1r",
+      "slug": "tr-music-au-dog-translator-1haw1r",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "허밍·보이스메모를 넣으면 코드 분위기와 편곡 아이디어를 정리해 주는 스케치 노트",
       "oneLineHook": "갑자기 떠오른 멜로디 메모나 15초 루프를 올려두면 어울리는 템포, 장르 무드, 악기 레이어 3가지 조합안을 제안해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 갑자기 떠오른 멜로디 메모나 15초 루프를 올려두면 어울리는 템포, 장르 무드, 악기 레이어 3가지 조합안을 제안해 줍니다.",
       "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-8edf310cbf",
-        "name": "Gauth Personal Study Agent",
-        "url": "https://www.producthunt.com/products/gauth-ai-course",
+        "builderId": "builder-ph-051a990e3f",
+        "name": "Dog Translator SuperTranslator",
+        "url": "https://www.producthunt.com/products/dog-translator-supertranslator",
         "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #2",
+        "tractionLabel": "PH 최신 런칭 #12",
         "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Gauth Personal Study Agent은 Product Hunt에서 PH 최신 런칭 #2의 호응을 얻은 해외 신상 프로덕트입니다. '당신이 어디서 어려움을 겪었는지 기억하는 AI 학습 에이전트' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Dog Translator SuperTranslator은 Product Hunt에서 PH 최신 런칭 #12의 호응을 얻은 해외 신상 프로덕트입니다. '영어로 말하는 개들 (진짜)' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-a2aa301b862f",
-        "titleKo": "150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사",
-        "canonicalUrl": "https://zenn.dev/zeroos_fidwell/articles/740af3294b95a4",
+        "radarId": "live-b5a95b78ab61",
+        "titleKo": "약 20만 자의, 비교적 미스터리 소설의 형식에 따른 미스터리를 휴일 하루 만에 완성한 이야기",
+        "canonicalUrl": "https://zenn.dev/infra_ojisan/articles/ai-novel-studio-mystery-twin",
         "platformId": "zenn",
         "signalType": "dev_workflow",
         "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "Zenn — 150만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 Zenn 계열 소식('150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Zenn 개발 생태계에서 '150만 토큰 장기 기억(LongMemEval-M 90.0% / S 95.0%)의 검증 설계 및 1,000문항 0유출 감사' 구현 방식과 실전 적용 사례가 공개됐어요. 특히 150만 수치가)"
+        "benchmarkPoint": "Zenn — 20만 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "최근 화제가 된 Zenn 계열 소식('약 20만 자의, 비교적 미스터리 소설의 형식에 따른 미스터리를 휴일 하루 만에 완성한 이야기')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Zenn 개발 생태계에서 '약 20만 자의, 비교적 미스터리 소설의 형식에 따른 미스터리를 휴일 하루 만에 완성한 이야기' 구현 방식과 실전 적용 사례가 공개됐어요. 특히 20만 수치가 핵심 포인트로 꼽혀요.)"
       },
       "twistSummaryKo": "갑자기 떠오른 멜로디 메모나 15초 루프를 올려두면 어울리는 템포, 장르 무드, 악기 레이어 3가지 조합안을 제안해 줍니다.",
       "mvpFeatures": [
@@ -1974,17 +1974,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Gauth Personal Study Agent",
-          "builderId": "builder-ph-8edf310cbf",
-          "builderName": "Gauth Personal Study Agent"
+          "title": "Dog Translator SuperTranslator",
+          "builderId": "builder-ph-051a990e3f",
+          "builderName": "Dog Translator SuperTranslator"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "허밍·보이스메모를 넣으면 코드 분위기와 편곡 아이디어를 정리해 주는 스케치 노트",
-          "treatmentId": "tr-music-au-gauth-personal-9a6snk",
-          "builderId": "builder-ph-8edf310cbf",
-          "builderName": "Gauth Personal Study Agent"
+          "treatmentId": "tr-music-au-dog-translator-1haw1r",
+          "builderId": "builder-ph-051a990e3f",
+          "builderName": "Dog Translator SuperTranslator"
         }
       ],
       "synthesisMode": "deterministic",
@@ -1992,40 +1992,40 @@
       "variantIndex": 27
     },
     {
-      "id": "tr-local-ar-open-source-en-2hl1h5",
-      "slug": "tr-local-ar-open-source-en-2hl1h5",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-hidden-busines-rbibt5",
+      "slug": "tr-local-ar-hidden-busines-rbibt5",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "주말 후보 코스 A안·B안의 동선과 예산을 나란히 비교하는 나들이 보드",
       "oneLineHook": "성수 전시 코스와 서촌 서점 코스 중 고민될 때, 이동 거리·예상 지출·영업시간을 나란히 놓고 10초 만에 일정을 확정합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 성수 전시 코스와 서촌 서점 코스 중 고민될 때, 이동 거리·예상 지출·영업시간을 나란히 놓고 10초 만에 일정을 확정합니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-hn-49098510",
-        "name": "Open-source engine running Gemma",
-        "url": "https://github.com/drumih/turbo-fieldfare",
-        "sourceLabel": "Show HN",
-        "tractionLabel": "HN 919 pts · 댓글 342",
-        "shortMetricLabel": "Show HN 919점 인기",
-        "verifiedRevenue": false,
+        "builderId": "builder-tmrr-b6d8b471ab",
+        "name": "Hidden Business",
+        "url": "https://trustmrr.com/startup/hidden-business-90",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $4.5k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $4.5k",
+        "verifiedRevenue": true,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
-        "overseasProofKo": "Open-source engine running Gemma은 Show HN에서 HN 919 pts · 댓글 342의 호응을 얻은 해외 신상 프로덕트입니다. 'M 시리즈 Mac에서 2GB RAM으로 Gemma 4 26B를 실행하는 오픈 소스 엔진' 경험을 무거운 가입 절차 없이 열어주고, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Hidden Business은 검증 매출 $4.5k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '수익'라는 단순한 한 가지 문제에 집중해, 여러 후보 시안을 한 화면에 나란히 띄워 1분 만에 결정과 피드백을 끝내는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-c0de4f7aecd1",
-        "titleKo": "MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.",
-        "canonicalUrl": "https://x.com/OpenAI/status/2123856316187975756",
+        "radarId": "live-429df4a4cf4d",
+        "titleKo": "Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…",
+        "canonicalUrl": "https://x.com/OpenAI/status/2123862344422088794",
         "platformId": "x",
-        "signalType": "builder_signal",
+        "signalType": "new_product",
         "productDomain": "builder-community-signal",
         "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'MedChemBench는 의약화학 분야의 AI 추론을 위한 새로운 벤치마크입니다. 이는 우리 개척지의 발전을 보여줍니다.' 업데이트예요. 실사용 데모와 빌더 스레드 반응이 빠르게)"
+        "bottleneckSolvedKo": "최근 화제가 된 OpenAI 계열 소식('Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@OpenAI가 X에서 직접 공유한 'Distillation은 강력한 AI 기능을 기반으로 구축된 보호 장치 없이도 재현할 수 있습니다. 우리는 다른 것을 공유하고 있습니다…' 업데이트예요. 실사용 데모와 빌더 스레)"
       },
       "twistSummaryKo": "성수 전시 코스와 서촌 서점 코스 중 고민될 때, 이동 거리·예상 지출·영업시간을 나란히 놓고 10초 만에 일정을 확정합니다.",
       "mvpFeatures": [
@@ -2045,17 +2045,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Open-source engine running Gemma",
-          "builderId": "builder-hn-49098510",
-          "builderName": "Open-source engine running Gemma"
+          "title": "Hidden Business",
+          "builderId": "builder-tmrr-b6d8b471ab",
+          "builderName": "Hidden Business"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "주말 후보 코스 A안·B안의 동선과 예산을 나란히 비교하는 나들이 보드",
-          "treatmentId": "tr-local-ar-open-source-en-2hl1h5",
-          "builderId": "builder-hn-49098510",
-          "builderName": "Open-source engine running Gemma"
+          "treatmentId": "tr-local-ar-hidden-busines-rbibt5",
+          "builderId": "builder-tmrr-b6d8b471ab",
+          "builderName": "Hidden Business"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2063,40 +2063,40 @@
       "variantIndex": 28
     },
     {
-      "id": "tr-creator--bugstack-2vawq4",
-      "slug": "tr-creator--bugstack-2vawq4",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--physically-acc-5hrpaf",
+      "slug": "tr-creator--physically-acc-5hrpaf",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "회의·산책 중 떠오른 아이디어를 1장짜리 실행 기획서로 정리해 주는 보이스 메모",
       "oneLineHook": "두서없이 말로 풀어낸 서비스 아이디어를 문제 정의, 핵심 기능 3가지, 첫 주 할 일 목록으로 깔끔하게 구조화합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 두서없이 말로 풀어낸 서비스 아이디어를 문제 정의, 핵심 기능 3가지, 첫 주 할 일 목록으로 깔끔하게 구조화합니다.",
-      "buildCadence": "3~5일 MVP",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-uneed-7c0b630334",
-        "name": "Bugstack",
-        "url": "https://www.uneed.best/tool/bugstack",
-        "sourceLabel": "Uneed",
-        "tractionLabel": "Uneed 데일리 런칭",
-        "shortMetricLabel": "Uneed 오늘의 런칭",
+        "builderId": "builder-hn-49021270",
+        "name": "Physically accurate black hole",
+        "url": "https://blackhole.plav.in",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 477 pts · 댓글 193",
+        "shortMetricLabel": "Show HN 477점 인기",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Bugstack은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Bugstack — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Physically accurate black hole은 Show HN에서 HN 477 pts · 댓글 193의 호응을 얻은 해외 신상 프로덕트입니다. '물리적으로 정확한 블랙홀을 방에 넣을 수 있다' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-829dc8d5ecc7",
-        "titleKo": "GLM-5.4: 첫 번째 루프 변환기를 사용한 일반화된 코딩을 향하여",
-        "canonicalUrl": "https://z.ai/blog/glm-5.4",
-        "platformId": "hacker-news",
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "최근 화제가 된 Hacker News 계열 소식('GLM-5.4: 첫 번째 루프 변환기를 사용한 일반화된 코딩을 향하여')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (GLM-5.4가 나왔고 루프형 트랜스포머입니다. z.ai/blog/glm-5.4 링크된 페이지: 첫 번째 루프 변환기를 사용하여 일반화된 코딩을 향하여 — ()"
+        "radarId": "live-927a069d5f39",
+        "titleKo": "Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다",
+        "canonicalUrl": "https://theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+        "platformId": "the-verge-ai",
+        "signalType": "industry_shift",
+        "productDomain": "ai-business-infra",
+        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
+        "bottleneckSolvedKo": "최근 화제가 된 The Verge AI 계열 소식('Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (The Verge AI가 전한 'Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다' 이슈로 글로벌 AI 시장·서비스 전략의 방향 변화가 뚜렷해졌어요.)"
       },
       "twistSummaryKo": "두서없이 말로 풀어낸 서비스 아이디어를 문제 정의, 핵심 기능 3가지, 첫 주 할 일 목록으로 깔끔하게 구조화합니다.",
       "mvpFeatures": [
@@ -2116,17 +2116,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Bugstack",
-          "builderId": "builder-uneed-7c0b630334",
-          "builderName": "Bugstack"
+          "title": "Physically accurate black hole",
+          "builderId": "builder-hn-49021270",
+          "builderName": "Physically accurate black hole"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "회의·산책 중 떠오른 아이디어를 1장짜리 실행 기획서로 정리해 주는 보이스 메모",
-          "treatmentId": "tr-creator--bugstack-2vawq4",
-          "builderId": "builder-uneed-7c0b630334",
-          "builderName": "Bugstack"
+          "treatmentId": "tr-creator--physically-acc-5hrpaf",
+          "builderId": "builder-hn-49021270",
+          "builderName": "Physically accurate black hole"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2134,40 +2134,40 @@
       "variantIndex": 29
     },
     {
-      "id": "tr-brand-co-plango-11mvdk",
-      "slug": "tr-brand-co-plango-11mvdk",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-performative-u-lb9yqf",
+      "slug": "tr-brand-co-performative-u-lb9yqf",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "매장·브랜드 인터뷰 오디오에서 컬렉션 배경과 디자이너 의도를 뽑는 룩 노트",
       "oneLineHook": "긴 브랜드 인터뷰나 팟캐스트에서 이번 시즌 원단 이야기와 핵심 아이템 추천만 3분 읽기 카드로 정리해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 긴 브랜드 인터뷰나 팟캐스트에서 이번 시즌 원단 이야기와 핵심 아이템 추천만 3분 읽기 카드로 정리해 줍니다.",
       "buildCadence": "5~7일 MVP",
       "sampleA": {
-        "builderId": "builder-ph-c2b44c28b0",
-        "name": "Plango",
-        "url": "https://www.producthunt.com/products/plango",
-        "sourceLabel": "Product Hunt",
-        "tractionLabel": "PH 최신 런칭 #3",
-        "shortMetricLabel": "Product Hunt 신상",
+        "builderId": "builder-hn-48445554",
+        "name": "Performative-UI",
+        "url": "https://vorpus.github.io/performativeUI/",
+        "sourceLabel": "Show HN",
+        "tractionLabel": "HN 1181 pts · 댓글 213",
+        "shortMetricLabel": "Show HN 1181점 인기",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Plango은 Product Hunt에서 PH 최신 런칭 #3의 호응을 얻은 해외 신상 프로덕트입니다. 'Plango를 사용하면 AI 에이전트가 밤새도록 안전하게 작업할 수 있습니다.' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Performative-UI은 Show HN에서 HN 1181 pts · 댓글 213의 호응을 얻은 해외 신상 프로덕트입니다. '디자인 비유의 반응 구성 요소 라이브러리' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-927a069d5f39",
-        "titleKo": "Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다",
-        "canonicalUrl": "https://theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
-        "platformId": "the-verge-ai",
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
-        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
-        "bottleneckSolvedKo": "최근 화제가 된 The Verge AI 계열 소식('Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (The Verge AI가 전한 'Meta Muse는 이제 Walmart에서 블랙 프라이데이 쇼핑을 할 수 있습니다' 이슈로 글로벌 AI 시장·서비스 전략의 방향 변화가 뚜렷해졌어요.)"
+        "radarId": "live-1afd59f3ce5f",
+        "titleKo": "Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…",
+        "canonicalUrl": "https://x.com/GoogleDeepMind/status/2123826572385833119",
+        "platformId": "x",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "최근 화제가 된 Gemini 4 Neon 계열 소식('Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (@GoogleDeepMind가 X에서 직접 공유한 'Gemini 4 Neon은 실제 몽블랑 지형을 기반으로 스키 시뮬레이터를 코딩했습니다. 커스텀 셰이더가 포함된 @Antigravity 내장…' 업데이트예요. 실사용)"
       },
       "twistSummaryKo": "긴 브랜드 인터뷰나 팟캐스트에서 이번 시즌 원단 이야기와 핵심 아이템 추천만 3분 읽기 카드로 정리해 줍니다.",
       "mvpFeatures": [
@@ -2187,17 +2187,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Plango",
-          "builderId": "builder-ph-c2b44c28b0",
-          "builderName": "Plango"
+          "title": "Performative-UI",
+          "builderId": "builder-hn-48445554",
+          "builderName": "Performative-UI"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "매장·브랜드 인터뷰 오디오에서 컬렉션 배경과 디자이너 의도를 뽑는 룩 노트",
-          "treatmentId": "tr-brand-co-plango-11mvdk",
-          "builderId": "builder-ph-c2b44c28b0",
-          "builderName": "Plango"
+          "treatmentId": "tr-brand-co-performative-u-lb9yqf",
+          "builderId": "builder-hn-48445554",
+          "builderName": "Performative-UI"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2205,40 +2205,40 @@
       "variantIndex": 30
     },
     {
-      "id": "tr-cinema-v-feedsortr-v3zqsz",
-      "slug": "tr-cinema-v-feedsortr-v3zqsz",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-letter-visitor-1ey8lo",
+      "slug": "tr-cinema-v-letter-visitor-1ey8lo",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "머릿속 씬 구상을 말로 녹음하면 샷 리스트로 정리해 주는 보이스 프리비즈",
       "oneLineHook": "이동 중 떠오른 장면 아이디어를 30초 음성이나 짧은 메모로 남기면, 촬영용 샷 번호·배경음 무드·필요 소품표로 깔끔히 정리해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 이동 중 떠오른 장면 아이디어를 30초 음성이나 짧은 메모로 남기면, 촬영용 샷 번호·배경음 무드·필요 소품표로 깔끔히 정리해 줍니다.",
       "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-uneed-2fc264748e",
-        "name": "Feedsortr",
-        "url": "https://www.uneed.best/tool/feedsortr",
-        "sourceLabel": "Uneed",
-        "tractionLabel": "Uneed 데일리 런칭",
-        "shortMetricLabel": "Uneed 오늘의 런칭",
+        "builderId": "builder-ph-5c55766292",
+        "name": "Letter Visitors",
+        "url": "https://www.producthunt.com/products/visitors",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #6",
+        "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Feedsortr은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Letter Visitors은 Product Hunt에서 PH 최신 런칭 #6의 호응을 얻은 해외 신상 프로덕트입니다. '웹사이트 자체에서 웹사이트 방문자를 확인하세요.' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-f377c4ca71b9",
-        "titleKo": "한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향",
-        "canonicalUrl": "https://arxiv.org/abs/2611.26663",
-        "platformId": "arxiv",
-        "signalType": "research_breakthrough",
-        "productDomain": "ai-research-model",
-        "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
-        "bottleneckSolvedKo": "최근 화제가 된 arXiv 계열 소식('한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (arXiv가 '한 명의 에이전트 추가: AI 팀 규모 및 구성이 인간-AI 브레인스토밍 팀의 생산성과 다양성에 미치는 영향' 연구 결과를 발표해 차세대 모델 성능과 추론 효율의 새 기준을 제시했어요.)"
+        "radarId": "live-d8e3cc90b026",
+        "titleKo": "higurashi-ai/Haru-4B 오픈 모델 공개",
+        "canonicalUrl": "https://huggingface.co/higurashi-ai/Haru-4B",
+        "platformId": "huggingface",
+        "signalType": "new_product",
+        "productDomain": "video-audio-media",
+        "benchmarkPoint": "Hugging Face — 4B 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "최근 화제가 된 Hugging Face 계열 소식('higurashi-ai/Haru-4B 오픈 모델 공개')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (Hugging Face 모델 저장소 'higurashi-ai/Haru-4B'. 태그: safetensors, haru, 음성, 전이중, 음성-음성, 오디오-오디오, en, es, pt, de, fr, zh, ja, )"
       },
       "twistSummaryKo": "이동 중 떠오른 장면 아이디어를 30초 음성이나 짧은 메모로 남기면, 촬영용 샷 번호·배경음 무드·필요 소품표로 깔끔히 정리해 줍니다.",
       "mvpFeatures": [
@@ -2258,17 +2258,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Feedsortr",
-          "builderId": "builder-uneed-2fc264748e",
-          "builderName": "Feedsortr"
+          "title": "Letter Visitors",
+          "builderId": "builder-ph-5c55766292",
+          "builderName": "Letter Visitors"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "머릿속 씬 구상을 말로 녹음하면 샷 리스트로 정리해 주는 보이스 프리비즈",
-          "treatmentId": "tr-cinema-v-feedsortr-v3zqsz",
-          "builderId": "builder-uneed-2fc264748e",
-          "builderName": "Feedsortr"
+          "treatmentId": "tr-cinema-v-letter-visitor-1ey8lo",
+          "builderId": "builder-ph-5c55766292",
+          "builderName": "Letter Visitors"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2276,29 +2276,29 @@
       "variantIndex": 31
     },
     {
-      "id": "tr-photo-vi-displaymath-1r2tj2",
-      "slug": "tr-photo-vi-displaymath-1r2tj2",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-sniffpup-1lrlx4",
+      "slug": "tr-photo-vi-sniffpup-1lrlx4",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "촬영 현장에서 남긴 음성 메모를 컷별 리터칭 지시서로 바꿔주는 보이스 셀렉트",
       "oneLineHook": "촬영 직후 현장에서 말로 남긴 피드백을 컷 번호별 색감 보정·크롭 수정 체크리스트로 깔끔하게 정리해 줍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 촬영 직후 현장에서 말로 남긴 피드백을 컷 번호별 색감 보정·크롭 수정 체크리스트로 깔끔하게 정리해 줍니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "3~5일 MVP",
       "sampleA": {
-        "builderId": "builder-uneed-937ac12340",
-        "name": "Displaymath",
-        "url": "https://www.uneed.best/tool/displaymath",
+        "builderId": "builder-uneed-b73fcb9b06",
+        "name": "Sniffpup",
+        "url": "https://www.uneed.best/tool/sniffpup",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Displaymath은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Sniffpup은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2329,17 +2329,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Displaymath",
-          "builderId": "builder-uneed-937ac12340",
-          "builderName": "Displaymath"
+          "title": "Sniffpup",
+          "builderId": "builder-uneed-b73fcb9b06",
+          "builderName": "Sniffpup"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "촬영 현장에서 남긴 음성 메모를 컷별 리터칭 지시서로 바꿔주는 보이스 셀렉트",
-          "treatmentId": "tr-photo-vi-displaymath-1r2tj2",
-          "builderId": "builder-uneed-937ac12340",
-          "builderName": "Displaymath"
+          "treatmentId": "tr-photo-vi-sniffpup-1lrlx4",
+          "builderId": "builder-uneed-b73fcb9b06",
+          "builderName": "Sniffpup"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2347,29 +2347,29 @@
       "variantIndex": 32
     },
     {
-      "id": "tr-music-au-bragly-1fiz6l",
-      "slug": "tr-music-au-bragly-1fiz6l",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-music-au-plango-1gbcbx",
+      "slug": "tr-music-au-plango-1gbcbx",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
-      "domainColor": "#7C4D5B",
+      "domainColor": "#9333EA",
       "customTopic": null,
       "title": "미발매 15초 비트 스니펫을 들려주고 반응 좋은 루프만 고르는 리스너 보드",
       "oneLineHook": "완곡으로 만들기 전에 15초짜리 데모 4개를 가벼운 링크로 공유해 리스너와 아티스트의 저장·선호 반응을 먼저 확인합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 완곡으로 만들기 전에 15초짜리 데모 4개를 가벼운 링크로 공유해 리스너와 아티스트의 저장·선호 반응을 먼저 확인합니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-uneed-9c989f3752",
-        "name": "Bragly",
-        "url": "https://www.uneed.best/tool/bragly",
+        "builderId": "builder-uneed-646e667478",
+        "name": "Plango",
+        "url": "https://www.uneed.best/tool/plango",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Bragly은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Plango은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2400,17 +2400,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Bragly",
-          "builderId": "builder-uneed-9c989f3752",
-          "builderName": "Bragly"
+          "title": "Plango",
+          "builderId": "builder-uneed-646e667478",
+          "builderName": "Plango"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "미발매 15초 비트 스니펫을 들려주고 반응 좋은 루프만 고르는 리스너 보드",
-          "treatmentId": "tr-music-au-bragly-1fiz6l",
-          "builderId": "builder-uneed-9c989f3752",
-          "builderName": "Bragly"
+          "treatmentId": "tr-music-au-plango-1gbcbx",
+          "builderId": "builder-uneed-646e667478",
+          "builderName": "Plango"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2418,29 +2418,29 @@
       "variantIndex": 33
     },
     {
-      "id": "tr-local-ar-hidden-busines-aceu19",
-      "slug": "tr-local-ar-hidden-busines-aceu19",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-coralflavor-1mo7mq",
+      "slug": "tr-local-ar-coralflavor-1mo7mq",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "공간 방문 직후 30초 음성 감상을 깔끔한 아카이브 카드로 바꿔주는 로컬 로그",
       "oneLineHook": "멋진 카페나 전시를 보고 나온 직후 짧게 말로 남긴 감상을 분위기 키워드, 재방문 포인트, 지도 링크가 담긴 기록 카드로 정리합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 멋진 카페나 전시를 보고 나온 직후 짧게 말로 남긴 감상을 분위기 키워드, 재방문 포인트, 지도 링크가 담긴 기록 카드로 정리합니다.",
-      "buildCadence": "5~7일 MVP",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-tmrr-b6d8b471ab",
-        "name": "Hidden Business",
-        "url": "https://trustmrr.com/startup/hidden-business-90",
+        "builderId": "builder-tmrr-29c628905c",
+        "name": "Coralflavor",
+        "url": "https://trustmrr.com/startup/coralflavor",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $4.5k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $4.5k",
+        "tractionLabel": "검증 매출 $4.1k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $4.1k",
         "verifiedRevenue": true,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
-        "overseasProofKo": "Hidden Business은 검증 매출 $4.5k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '수익'라는 단순한 한 가지 문제에 집중해, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 유료 사용자를 빠르게 모았습니다."
+        "overseasProofKo": "Coralflavor은 검증 매출 $4.1k (TrustMRR)의 실제 결제 수익으로 수요가 입증된 해외 서비스입니다. '인공지능'라는 단순한 한 가지 문제에 집중해, 짧은 음성 메모나 오디오 클립을 읽기 쉬운 구조화 카드와 체크리스트로 바꿔주는 방식으로 유료 사용자를 빠르게 모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2471,17 +2471,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Hidden Business",
-          "builderId": "builder-tmrr-b6d8b471ab",
-          "builderName": "Hidden Business"
+          "title": "Coralflavor",
+          "builderId": "builder-tmrr-29c628905c",
+          "builderName": "Coralflavor"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "공간 방문 직후 30초 음성 감상을 깔끔한 아카이브 카드로 바꿔주는 로컬 로그",
-          "treatmentId": "tr-local-ar-hidden-busines-aceu19",
-          "builderId": "builder-tmrr-b6d8b471ab",
-          "builderName": "Hidden Business"
+          "treatmentId": "tr-local-ar-coralflavor-1mo7mq",
+          "builderId": "builder-tmrr-29c628905c",
+          "builderName": "Coralflavor"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2489,40 +2489,40 @@
       "variantIndex": 34
     },
     {
-      "id": "tr-creator--sniffpup-kdxak7",
-      "slug": "tr-creator--sniffpup-kdxak7",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-creator--kopyo-cx9k76",
+      "slug": "tr-creator--kopyo-cx9k76",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
-      "domainColor": "#525B76",
+      "domainColor": "#4F46E5",
       "customTopic": null,
       "title": "새 사이드 프로젝트 아이디어를 3분 만에 대기자 페이지로 검증하는 원페이지 빌더",
       "oneLineHook": "코드를 짜기 전에 핵심 화면 설명 3줄과 이메일 신청 폼만으로 가벼운 소개 페이지를 만들어 실제 관심도를 먼저 확인합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 코드를 짜기 전에 핵심 화면 설명 3줄과 이메일 신청 폼만으로 가벼운 소개 페이지를 만들어 실제 관심도를 먼저 확인합니다.",
-      "buildCadence": "주말 48시간 실험",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-uneed-b73fcb9b06",
-        "name": "Sniffpup",
-        "url": "https://www.uneed.best/tool/sniffpup",
-        "sourceLabel": "Uneed",
-        "tractionLabel": "Uneed 데일리 런칭",
-        "shortMetricLabel": "Uneed 오늘의 런칭",
+        "builderId": "builder-ph-70f5abd7ae",
+        "name": "Kopyo",
+        "url": "https://www.producthunt.com/products/kopyo",
+        "sourceLabel": "Product Hunt",
+        "tractionLabel": "PH 최신 런칭 #8",
+        "shortMetricLabel": "Product Hunt 신상",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Sniffpup은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Sniffpup — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Kopyo은 Product Hunt에서 PH 최신 런칭 #8의 호응을 얻은 해외 신상 프로덕트입니다. '모든 것을 기억하는 Mac 클립보드 관리자' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-63029250be2f",
-        "titleKo": "3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유",
-        "canonicalUrl": "https://qiita.com/Ethereal-Kardia/items/96ffe6b43c107b3094cc",
-        "platformId": "qiita",
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
-        "benchmarkPoint": "NVIDIA — 3배 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "최근 화제가 된 NVIDIA 계열 소식('3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (NVIDIA 개발 생태계에서 '3대 클러스터로 하면 메모리 대역은 3배가 되는데 추론 속도가 변하지 않는 이유' 구현 방식과 실전 적용 사례가 공개됐어요. 특히 3배 수치가 핵심 포인트로 꼽혀요.)"
+        "radarId": "live-d124c10f500b",
+        "titleKo": "전사적으로 작동할 수 있는 AI 구축",
+        "canonicalUrl": "https://technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise",
+        "platformId": "mit-tech-review",
+        "signalType": "industry_shift",
+        "productDomain": "ai-business-infra",
+        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
+        "bottleneckSolvedKo": "최근 화제가 된 MIT Technology Review 계열 소식('전사적으로 작동할 수 있는 AI 구축')의 아이디어나 공개 도구를 연결하면, 예전에는 사람이 일일이 분류·정리해야 했던 데이터 입력 단계를 몇 줄의 코드만으로 자동화할 수 있습니다. (이제 AI 에이전트가 비즈니스를 운영하는 워크플로로 이동하기 시작하면서 해당 모델이 부적절해 보이기 시작했습니다. 격리된 파일럿에서 AI 에이전트 및 자율 워크플로로 전환하는 조직은 데이터, 비즈니스 프로세스, 거버)"
       },
       "twistSummaryKo": "코드를 짜기 전에 핵심 화면 설명 3줄과 이메일 신청 폼만으로 가벼운 소개 페이지를 만들어 실제 관심도를 먼저 확인합니다.",
       "mvpFeatures": [
@@ -2542,17 +2542,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Sniffpup",
-          "builderId": "builder-uneed-b73fcb9b06",
-          "builderName": "Sniffpup"
+          "title": "Kopyo",
+          "builderId": "builder-ph-70f5abd7ae",
+          "builderName": "Kopyo"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "새 사이드 프로젝트 아이디어를 3분 만에 대기자 페이지로 검증하는 원페이지 빌더",
-          "treatmentId": "tr-creator--sniffpup-kdxak7",
-          "builderId": "builder-uneed-b73fcb9b06",
-          "builderName": "Sniffpup"
+          "treatmentId": "tr-creator--kopyo-cx9k76",
+          "builderId": "builder-ph-70f5abd7ae",
+          "builderName": "Kopyo"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2560,29 +2560,29 @@
       "variantIndex": 35
     },
     {
-      "id": "tr-brand-co-plango-1ya0jk",
-      "slug": "tr-brand-co-plango-1ya0jk",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-brand-co-werk-7yhhxa",
+      "slug": "tr-brand-co-werk-7yhhxa",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
-      "domainColor": "#C85A32",
+      "domainColor": "#EA580C",
       "customTopic": null,
       "title": "이번 주 브랜드 협업 드롭의 체감 인기와 발매 일정을 한눈에 보는 드롭 캘린더",
       "oneLineHook": "여러 브랜드 인스타그램에 흩어진 한정판 발매 시간과 응모 링크를 달력 하나로 모으고, 사람들의 실제 관심도를 바로 확인합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 여러 브랜드 인스타그램에 흩어진 한정판 발매 시간과 응모 링크를 달력 하나로 모으고, 사람들의 실제 관심도를 바로 확인합니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-uneed-646e667478",
-        "name": "Plango",
-        "url": "https://www.uneed.best/tool/plango",
+        "builderId": "builder-uneed-d41a9e8626",
+        "name": "Werk",
+        "url": "https://www.uneed.best/tool/werk",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Plango은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Werk은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2613,17 +2613,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Plango",
-          "builderId": "builder-uneed-646e667478",
-          "builderName": "Plango"
+          "title": "Werk",
+          "builderId": "builder-uneed-d41a9e8626",
+          "builderName": "Werk"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "이번 주 브랜드 협업 드롭의 체감 인기와 발매 일정을 한눈에 보는 드롭 캘린더",
-          "treatmentId": "tr-brand-co-plango-1ya0jk",
-          "builderId": "builder-uneed-646e667478",
-          "builderName": "Plango"
+          "treatmentId": "tr-brand-co-werk-7yhhxa",
+          "builderId": "builder-uneed-d41a9e8626",
+          "builderName": "Werk"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2631,29 +2631,29 @@
       "variantIndex": 36
     },
     {
-      "id": "tr-cinema-v-werk-zb3lzi",
-      "slug": "tr-cinema-v-werk-zb3lzi",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-cinema-v-easytools-14mh6e",
+      "slug": "tr-cinema-v-easytools-14mh6e",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
-      "domainColor": "#3B6380",
+      "domainColor": "#2563EB",
       "customTopic": null,
       "title": "단편·광고 시놉시스와 3컷 무드보드로 사전 반응을 받는 피드백 룸",
       "oneLineHook": "촬영에 들어가기 전 시놉시스와 핵심 컷 3장을 비공개 링크로 공유해 동료 제작자들의 몰입도·개선 의견을 빠르게 모읍니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 촬영에 들어가기 전 시놉시스와 핵심 컷 3장을 비공개 링크로 공유해 동료 제작자들의 몰입도·개선 의견을 빠르게 모읍니다.",
       "buildCadence": "주말 48시간 실험",
       "sampleA": {
-        "builderId": "builder-uneed-d41a9e8626",
-        "name": "Werk",
-        "url": "https://www.uneed.best/tool/werk",
+        "builderId": "builder-uneed-8db61818b5",
+        "name": "Easytools",
+        "url": "https://www.uneed.best/tool/easytools",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Werk은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Werk — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Easytools은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2684,17 +2684,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Werk",
-          "builderId": "builder-uneed-d41a9e8626",
-          "builderName": "Werk"
+          "title": "Easytools",
+          "builderId": "builder-uneed-8db61818b5",
+          "builderName": "Easytools"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "단편·광고 시놉시스와 3컷 무드보드로 사전 반응을 받는 피드백 룸",
-          "treatmentId": "tr-cinema-v-werk-zb3lzi",
-          "builderId": "builder-uneed-d41a9e8626",
-          "builderName": "Werk"
+          "treatmentId": "tr-cinema-v-easytools-14mh6e",
+          "builderId": "builder-uneed-8db61818b5",
+          "builderName": "Easytools"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2702,29 +2702,29 @@
       "variantIndex": 37
     },
     {
-      "id": "tr-photo-vi-easytools-afgz5q",
-      "slug": "tr-photo-vi-easytools-afgz5q",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-photo-vi-caroush-oo99ot",
+      "slug": "tr-photo-vi-caroush-oo99ot",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
-      "domainColor": "#B87D2B",
+      "domainColor": "#D97706",
       "customTopic": null,
       "title": "새 시즌 대표 컷과 썸네일 후보를 팬·팀원에게 미리 물어보는 룩북 투표 보드",
       "oneLineHook": "메인 배너나 인스타그램 첫 장에 올릴 사진이 고민될 때 후보 4장을 깔끔한 투표 링크로 공유해 실제 클릭 반응을 미리 확인합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 메인 배너나 인스타그램 첫 장에 올릴 사진이 고민될 때 후보 4장을 깔끔한 투표 링크로 공유해 실제 클릭 반응을 미리 확인합니다.",
-      "buildCadence": "1주 프로토타입",
+      "buildCadence": "1~2주 베타 런칭",
       "sampleA": {
-        "builderId": "builder-uneed-8db61818b5",
-        "name": "Easytools",
-        "url": "https://www.uneed.best/tool/easytools",
+        "builderId": "builder-uneed-01a62ab2da",
+        "name": "Caroush",
+        "url": "https://www.uneed.best/tool/caroush",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Easytools은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Caroush은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2755,17 +2755,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Easytools",
-          "builderId": "builder-uneed-8db61818b5",
-          "builderName": "Easytools"
+          "title": "Caroush",
+          "builderId": "builder-uneed-01a62ab2da",
+          "builderName": "Caroush"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "새 시즌 대표 컷과 썸네일 후보를 팬·팀원에게 미리 물어보는 룩북 투표 보드",
-          "treatmentId": "tr-photo-vi-easytools-afgz5q",
-          "builderId": "builder-uneed-8db61818b5",
-          "builderName": "Easytools"
+          "treatmentId": "tr-photo-vi-caroush-oo99ot",
+          "builderId": "builder-uneed-01a62ab2da",
+          "builderName": "Caroush"
         }
       ],
       "synthesisMode": "deterministic",
@@ -2773,29 +2773,29 @@
       "variantIndex": 38
     },
     {
-      "id": "tr-local-ar-caroush-n5w2lg",
-      "slug": "tr-local-ar-caroush-n5w2lg",
-      "createdAt": "2026-11-23T15:26:16.211Z",
-      "updatedAt": "2026-11-23T15:26:16.211Z",
+      "id": "tr-local-ar-botroost-1jetzv",
+      "slug": "tr-local-ar-botroost-1jetzv",
+      "createdAt": "2026-11-24T00:40:42.710Z",
+      "updatedAt": "2026-11-24T00:40:42.710Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
-      "domainColor": "#3F6A52",
+      "domainColor": "#059669",
       "customTopic": null,
       "title": "방금 다녀온 사람들의 실제 대기 시간과 현장 분위기를 공유하는 팝업 체감 피드",
       "oneLineHook": "홍보 글 대신 방금 팝업·전시에 다녀온 사람들이 남긴 실제 웨이팅 시간과 한 줄 현장감을 실시간으로 확인합니다.",
       "firstThreeSecondsUx": "회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. 홍보 글 대신 방금 팝업·전시에 다녀온 사람들이 남긴 실제 웨이팅 시간과 한 줄 현장감을 실시간으로 확인합니다.",
-      "buildCadence": "1~2주 베타 런칭",
+      "buildCadence": "1주 프로토타입",
       "sampleA": {
-        "builderId": "builder-uneed-01a62ab2da",
-        "name": "Caroush",
-        "url": "https://www.uneed.best/tool/caroush",
+        "builderId": "builder-uneed-58696c78c4",
+        "name": "Botroost",
+        "url": "https://www.uneed.best/tool/botroost",
         "sourceLabel": "Uneed",
         "tractionLabel": "Uneed 데일리 런칭",
         "shortMetricLabel": "Uneed 오늘의 런칭",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
-        "overseasProofKo": "Caroush은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Caroush — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
+        "overseasProofKo": "Botroost은 Uneed에서 Uneed 데일리 런칭의 호응을 얻은 해외 신상 프로덕트입니다. 'Botroost — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트' 경험을 무거운 가입 절차 없이 열어주고, 링크 하나로 사람들의 관심도와 투표를 먼저 모아 실패 없는 선택을 돕는 방식으로 초기 팬을 끌어모았습니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2826,17 +2826,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Caroush",
-          "builderId": "builder-uneed-01a62ab2da",
-          "builderName": "Caroush"
+          "title": "Botroost",
+          "builderId": "builder-uneed-58696c78c4",
+          "builderName": "Botroost"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "방금 다녀온 사람들의 실제 대기 시간과 현장 분위기를 공유하는 팝업 체감 피드",
-          "treatmentId": "tr-local-ar-caroush-n5w2lg",
-          "builderId": "builder-uneed-01a62ab2da",
-          "builderName": "Caroush"
+          "treatmentId": "tr-local-ar-botroost-1jetzv",
+          "builderId": "builder-uneed-58696c78c4",
+          "builderName": "Botroost"
         }
       ],
       "synthesisMode": "deterministic",

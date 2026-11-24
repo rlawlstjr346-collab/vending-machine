@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { DOMAIN_LIST, DOMAIN_MAP, isValidDomainSlug } from "@/lib/domains";
+import { DOMAIN_LIST, DOMAIN_MAP, MECHANISM_LIST, isValidDomainSlug } from "@/lib/domains";
 import {
   decodeSavedParam,
   encodeSavedParam,
@@ -21,6 +20,7 @@ import type {
   AiRadarSignal,
   BuilderSignal,
   DomainSlug,
+  MechanismId,
   SyncMeta,
   Treatment,
 } from "@/lib/types";
@@ -31,13 +31,13 @@ import {
   ChipIcon,
   RadarIcon,
   RefreshIcon,
-  ShuffleIcon,
-  WorkbenchIcon,
   XIcon,
 } from "./Icons";
 import { TreatmentModal, type ModalSelection } from "./TreatmentModal";
+import { VisualBlueprintCard } from "./VisualBlueprintCard";
 
-type ActiveView = "radar" | "builders" | "ai-radar" | "saved";
+type DrawerMode = "none" | "ingredients" | "saved";
+type IngredientTab = "builders" | "ai-radar";
 
 interface WorkbenchClientProps {
   initialTreatments: Treatment[];
@@ -46,24 +46,60 @@ interface WorkbenchClientProps {
   initialSyncMeta: SyncMeta;
 }
 
-const VIEW_META: Record<ActiveView, { title: string; subtitle: string }> = {
-  radar: {
-    title: "기획 레이더",
-    subtitle: "해외에서 반응이 검증된 서비스 아이디어와 최신 AI 기술을 엮은 실행 기획안입니다.",
-  },
-  builders: {
-    title: "해외 신상 원액",
-    subtitle: "Show HN, Product Hunt, TrustMRR, Uneed에서 수집한 실제 해외 런칭 사례입니다.",
-  },
-  "ai-radar": {
-    title: "AI 기술 재료",
-    subtitle: "AI Radar에서 실시간 연동된 최신 오픈소스·모델 시그널 100선입니다.",
-  },
-  saved: {
-    title: "내 보관함",
-    subtitle: "저장해 둔 기획안을 한곳에서 다시 읽고 링크로 팀과 공유할 수 있습니다.",
-  },
-};
+/**
+ * Deterministic smart interleave so adjacent cards never repeat the same
+ * domainSlug or sampleA.mechanism back-to-back (and SSR stays hydration-safe).
+ */
+function buildSmartDeck(
+  items: Treatment[],
+  domainFilter: DomainSlug | "all",
+  salt = 0
+): Treatment[] {
+  const filtered =
+    domainFilter === "all"
+      ? [...items]
+      : items.filter((t) => t.domainSlug === domainFilter);
+
+  if (filtered.length <= 1) return filtered;
+
+  // Deterministic rotation using salt so reset/filter gives fresh order
+  const offset = Math.abs(salt) % filtered.length;
+  const remaining = [...filtered.slice(offset), ...filtered.slice(0, offset)];
+  const ordered: Treatment[] = [];
+
+  while (remaining.length > 0) {
+    const prev = ordered[ordered.length - 1];
+    let pickIdx = 0;
+
+    if (prev) {
+      const idealIdx = remaining.findIndex(
+        (cand) =>
+          cand.domainSlug !== prev.domainSlug &&
+          cand.sampleA.mechanism !== prev.sampleA.mechanism
+      );
+      if (idealIdx >= 0) {
+        pickIdx = idealIdx;
+      } else {
+        const mechDiffIdx = remaining.findIndex(
+          (cand) => cand.sampleA.mechanism !== prev.sampleA.mechanism
+        );
+        if (mechDiffIdx >= 0) {
+          pickIdx = mechDiffIdx;
+        } else {
+          const domDiffIdx = remaining.findIndex(
+            (cand) => cand.domainSlug !== prev.domainSlug
+          );
+          if (domDiffIdx >= 0) pickIdx = domDiffIdx;
+        }
+      }
+    }
+
+    const [picked] = remaining.splice(pickIdx, 1);
+    ordered.push(picked);
+  }
+
+  return ordered;
+}
 
 export function WorkbenchClient({
   initialTreatments,
@@ -74,33 +110,57 @@ export function WorkbenchClient({
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const [activeView, setActiveView] = useState<ActiveView>(() => {
-    const t = searchParams.get("tab");
-    if (t === "builders" || t === "ai-radar" || t === "saved") return t;
-    return "radar";
-  });
-
-  const [domainFilter, setDomainFilter] = useState<DomainSlug | "all">(() => {
+  const initialDomain: DomainSlug | "all" = (() => {
     const d = searchParams.get("domain");
     return d && isValidDomainSlug(d) ? d : "all";
-  });
+  })();
 
+  const [domainFilter, setDomainFilter] = useState<DomainSlug | "all">(initialDomain);
   const [builders, setBuilders] = useState<BuilderSignal[]>(initialBuilders);
   const [radars, setRadars] = useState<AiRadarSignal[]>(initialRadars);
-  const [treatments, setTreatments] = useState<Treatment[]>(initialTreatments);
   const [topicInput, setTopicInput] = useState("");
   const [activeTopic, setActiveTopic] = useState("");
   const [sourceFilter, setSourceFilter] = useState<string>("all");
-  const [comboCounter, setComboCounter] = useState<number>(initialTreatments.length);
   const [syncNotice, setSyncNotice] = useState<string>("");
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const [lastSyncedAt, setLastSyncedAt] = useState<string>(initialSyncMeta.syncedAt);
+
+  const [drawerMode, setDrawerMode] = useState<DrawerMode>(() => {
+    const t = searchParams.get("tab");
+    if (t === "saved") return "saved";
+    if (t === "builders" || t === "ai-radar") return "ingredients";
+    return "none";
+  });
+
+  const [ingredientTab, setIngredientTab] = useState<IngredientTab>(() => {
+    return searchParams.get("tab") === "ai-radar" ? "ai-radar" : "builders";
+  });
 
   const [lineageMap, setLineageMap] = useState<Record<string, Treatment>>(() =>
     Object.fromEntries(initialTreatments.map((t) => [t.id, t]))
   );
 
-  // First entry shows clean centered feed; opens modal only on click or ?treatment= URL
+  // Deck Queue + Cursor Index (History Stack built-in via deck[0..deckIndex])
+  const [deck, setDeck] = useState<Treatment[]>(() => {
+    const base = buildSmartDeck(initialTreatments, initialDomain, 0);
+    const reqId = searchParams.get("treatment");
+    if (reqId) {
+      const found = initialTreatments.find((t) => t.id === reqId);
+      if (found) {
+        return [found, ...base.filter((item) => item.id !== found.id)];
+      }
+    }
+    return base;
+  });
+
+  const [deckIndex, setDeckIndex] = useState<number>(0);
+
+  // Synthesis counter ref so rapid next/wheel never produces duplicate seeds
+  const synthCursorRef = useRef<number>(initialTreatments.length + 1);
+  const lastWheelAtRef = useRef<number>(0);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+
+  // Open detail modal only when explicitly requested via button or ?treatment= URL
   const [modalSelection, setModalSelection] = useState<ModalSelection>(() => {
     const reqId = searchParams.get("treatment");
     if (reqId) {
@@ -131,44 +191,195 @@ export function WorkbenchClient({
     [savedTreatments]
   );
 
-  const domainCounts = useMemo(() => {
-    const map: Record<string, number> = { all: treatments.length };
-    for (const d of DOMAIN_LIST) {
-      map[d.slug] = treatments.filter((t) => t.domainSlug === d.slug).length;
-    }
-    return map;
-  }, [treatments]);
-
-  const displayedTreatments = useMemo(() => {
-    if (domainFilter === "all") return treatments;
-    return treatments.filter((t) => t.domainSlug === domainFilter);
-  }, [treatments, domainFilter]);
-
   const filteredBuilders = useMemo(() => {
     if (sourceFilter === "all") return builders;
     if (sourceFilter === "verified") return builders.filter((b) => b.verifiedRevenue);
     return builders.filter((b) => b.source === sourceFilter);
   }, [builders, sourceFilter]);
 
-  const openTreatmentModal = useCallback((tr: Treatment, prependToList = false) => {
+  const currentTreatment = deck[deckIndex] || deck[0] || initialTreatments[0];
+
+  /**
+   * Generates a guaranteed-fresh card cycling across all 6 MechanismIds and
+   * cross-combining 88 builders x 100 AI Radars x 6 domains with zero duplicates.
+   */
+  const synthesizeInfiniteCard = useCallback(
+    (
+      existingDeck: Treatment[],
+      targetFilter: DomainSlug | "all",
+      topic: string,
+      prevCard?: Treatment | null
+    ): Treatment => {
+      const seenIds = new Set(existingDeck.map((t) => t.id));
+      const prevDom = prevCard?.domainSlug;
+      const prevMech = prevCard?.sampleA.mechanism;
+
+      for (let attempt = 0; attempt < 24; attempt += 1) {
+        const step = synthCursorRef.current;
+        synthCursorRef.current += 1;
+
+        let domainSlug: DomainSlug;
+        if (targetFilter === "all") {
+          const domPool = DOMAIN_LIST.filter((d) => d.slug !== prevDom);
+          const pickedDom = domPool[step % domPool.length] || DOMAIN_LIST[step % DOMAIN_LIST.length];
+          domainSlug = pickedDom.slug;
+        } else {
+          domainSlug = targetFilter;
+        }
+
+        // Cycle evenly across all 6 MechanismIds so every wireframe archetype appears regularly
+        const mechPool = MECHANISM_LIST.filter((m) => m.id !== prevMech);
+        const targetMech: MechanismId =
+          mechPool[step % mechPool.length]?.id || MECHANISM_LIST[step % MECHANISM_LIST.length].id;
+
+        // Prefer a builder matching targetMech when available, otherwise cross-pollinate with override
+        const mechBuilders = builders.filter((b) => b.mechanism === targetMech);
+        const builderPool = mechBuilders.length > 0 ? mechBuilders : builders;
+        const builder = builderPool[(step * 7 + attempt * 3) % builderPool.length] || builders[0];
+
+        const radar = matchAiRadarFor(builder, domainSlug, radars, step + attempt);
+        const candidate = synthesizeTreatment({
+          builder,
+          radar,
+          domainSlug,
+          customTopic: topic || null,
+          variantIndex: step,
+          mechanismOverride: targetMech,
+        });
+
+        if (!seenIds.has(candidate.id)) {
+          return candidate;
+        }
+      }
+
+      // Fallback guaranteed unique
+      const step = synthCursorRef.current++;
+      const fallbackDomain =
+        targetFilter === "all" ? DOMAIN_LIST[step % DOMAIN_LIST.length].slug : targetFilter;
+      const builder = builders[step % builders.length];
+      const radar = matchAiRadarFor(builder, fallbackDomain, radars, step);
+      return synthesizeTreatment({
+        builder,
+        radar,
+        domainSlug: fallbackDomain,
+        customTopic: topic || null,
+        variantIndex: step,
+        mechanismOverride: MECHANISM_LIST[step % MECHANISM_LIST.length].id,
+      });
+    },
+    [builders, radars]
+  );
+
+  // Push a synthesized / selected treatment immediately as the active card right after current index
+  const jumpToCard = useCallback((tr: Treatment, openModalAfter = false) => {
     setLineageMap((prev) => ({ ...prev, [tr.id]: tr }));
-    if (prependToList) {
-      setTreatments((prev) => [tr, ...prev.filter((item) => item.id !== tr.id)]);
+    setDeck((prevDeck) => {
+      const existingIdx = prevDeck.findIndex((item) => item.id === tr.id);
+      if (existingIdx >= 0) {
+        setDeckIndex(existingIdx);
+        return prevDeck;
+      }
+      const nextIdx = Math.min(prevDeck.length, deckIndex + 1);
+      const nextDeck = [...prevDeck.slice(0, nextIdx), tr, ...prevDeck.slice(nextIdx)];
+      setDeckIndex(nextIdx);
+      return nextDeck;
+    });
+    setDrawerMode("none");
+    if (openModalAfter) {
+      setModalSelection({ type: "treatment", treatment: tr });
     }
-    setModalSelection({ type: "treatment", treatment: tr });
+  }, [deckIndex]);
+
+  const handleNextCard = useCallback(() => {
+    setDeck((prevDeck) => {
+      if (deckIndex + 1 < prevDeck.length) {
+        setDeckIndex(deckIndex + 1);
+        return prevDeck;
+      }
+      const fresh = synthesizeInfiniteCard(
+        prevDeck,
+        domainFilter,
+        activeTopic,
+        prevDeck[deckIndex]
+      );
+      setLineageMap((prev) => ({ ...prev, [fresh.id]: fresh }));
+      setDeckIndex(prevDeck.length);
+      return [...prevDeck, fresh];
+    });
+  }, [deckIndex, domainFilter, activeTopic, synthesizeInfiniteCard]);
+
+  const handlePrevCard = useCallback(() => {
+    setDeckIndex((idx) => (idx > 0 ? idx - 1 : 0));
   }, []);
 
-  const closeModal = useCallback(() => {
+  // Switch Domain Filter & rebuild smart deck immediately
+  const handleSelectDomain = useCallback(
+    (nextDomain: DomainSlug | "all") => {
+      setDomainFilter(nextDomain);
+      setDrawerMode("none");
+      setModalSelection(null);
+
+      if (activeTopic) {
+        const nextStep = synthCursorRef.current++;
+        const domSlug =
+          nextDomain === "all" ? DOMAIN_LIST[nextStep % DOMAIN_LIST.length].slug : nextDomain;
+        const builder = builders[(nextStep * 5) % builders.length];
+        const radar = matchAiRadarFor(builder, domSlug, radars, nextStep);
+        const fresh = synthesizeTreatment({
+          builder,
+          radar,
+          domainSlug: domSlug,
+          customTopic: activeTopic,
+          variantIndex: nextStep,
+          mechanismOverride: MECHANISM_LIST[nextStep % MECHANISM_LIST.length].id,
+        });
+        setLineageMap((prev) => ({ ...prev, [fresh.id]: fresh }));
+        setDeck([fresh]);
+        setDeckIndex(0);
+        return;
+      }
+
+      const freshDeck = buildSmartDeck(
+        initialTreatments,
+        nextDomain,
+        synthCursorRef.current++
+      );
+      setDeck(freshDeck);
+      setDeckIndex(0);
+    },
+    [activeTopic, builders, radars, initialTreatments]
+  );
+
+  // Reset to full random deck on BENCH. logo click
+  const handleResetAll = useCallback(() => {
+    setDomainFilter("all");
+    setTopicInput("");
+    setActiveTopic("");
+    setSyncNotice("");
+    setDrawerMode("none");
     setModalSelection(null);
-  }, []);
+    const freshDeck = buildSmartDeck(
+      initialTreatments,
+      "all",
+      synthCursorRef.current++
+    );
+    setDeck(freshDeck);
+    setDeckIndex(0);
+  }, [initialTreatments]);
 
-  // Generate ideas from user's custom topic (or X URL via oEmbed)
+  // Custom Topic or X Post URL Generation
   const handleGenerateTopic = async (rawTopic: string) => {
     const trimmed = rawTopic.trim();
     setActiveTopic(trimmed);
 
     if (!trimmed) {
-      setTreatments(initialTreatments);
+      const freshDeck = buildSmartDeck(
+        initialTreatments,
+        domainFilter,
+        synthCursorRef.current++
+      );
+      setDeck(freshDeck);
+      setDeckIndex(0);
       return;
     }
 
@@ -176,7 +387,7 @@ export function WorkbenchClient({
       domainFilter === "all" ? DOMAIN_LIST[0].slug : domainFilter;
 
     if (isXPostUrl(trimmed)) {
-      setSyncNotice("X 공개 포스트를 읽어 새 기획안을 만들고 있습니다.");
+      setSyncNotice("X 공개 포스트를 읽어 새 블루프린트 카드를 만들고 있습니다.");
       try {
         const res = await fetch("/api/synthesize", {
           method: "POST",
@@ -186,30 +397,32 @@ export function WorkbenchClient({
         if (res.ok) {
           const data = (await res.json()) as { treatment?: Treatment };
           if (data.treatment) {
-            openTreatmentModal(data.treatment, true);
-            setActiveView("radar");
-            setSyncNotice("X 포스트 기반 기획안이 완성되었습니다.");
+            jumpToCard(data.treatment, false);
+            setSyncNotice("X 포스트 기반 블루프린트 카드가 준비되었습니다.");
             return;
           }
         }
       } catch {
-        setSyncNotice("링크를 읽지 못해 일반 주제로 아이디어를 만들었습니다.");
+        setSyncNotice("링크를 읽지 못해 일반 주제로 블루프린트를 만들었습니다.");
       }
     }
 
-    const pickedBuilders = builders.slice(0, 6);
-    const regenerated = pickedBuilders.map((builder, idx) => {
+    // Generate 6 varied-mechanism cards for the custom topic
+    const regenerated = MECHANISM_LIST.map((mech, idx) => {
+      const step = synthCursorRef.current++;
       const domSlug: DomainSlug =
         domainFilter === "all"
           ? DOMAIN_LIST[idx % DOMAIN_LIST.length].slug
           : domainFilter;
-      const radar = matchAiRadarFor(builder, domSlug, radars, comboCounter + idx);
+      const builder = builders[(step * 3 + idx) % builders.length];
+      const radar = matchAiRadarFor(builder, domSlug, radars, step);
       return synthesizeTreatment({
         builder,
         radar,
         domainSlug: domSlug,
         customTopic: trimmed,
-        variantIndex: comboCounter + idx + 1,
+        variantIndex: step,
+        mechanismOverride: mech.id,
       });
     });
 
@@ -219,125 +432,114 @@ export function WorkbenchClient({
         for (const t of regenerated) next[t.id] = t;
         return next;
       });
-      setTreatments((prev) => [
-        ...regenerated,
-        ...prev.filter((p) => !regenerated.some((r) => r.id === p.id)),
-      ]);
-      setComboCounter((c) => c + regenerated.length);
-      setActiveView("radar");
-      setModalSelection({ type: "treatment", treatment: regenerated[0] });
+      setDeck(regenerated);
+      setDeckIndex(0);
+      setDrawerMode("none");
+      setModalSelection(null);
+      setSyncNotice(`"${trimmed}" 주제로 6종 화면 블루프린트를 생성했습니다.`);
     }
   };
 
-  // [새로 섞기] — fresh combination & opens immediately in modal
-  const handleShuffleIdea = () => {
-    const nextIdx = comboCounter + 1;
-    setComboCounter(nextIdx);
-    const domainSlug: DomainSlug =
-      domainFilter === "all"
-        ? DOMAIN_LIST[nextIdx % DOMAIN_LIST.length].slug
-        : domainFilter;
-    const builder = builders[(nextIdx * 7) % builders.length];
-    const radar = matchAiRadarFor(builder, domainSlug, radars, nextIdx);
-    const fresh = synthesizeTreatment({
-      builder,
-      radar,
-      domainSlug,
-      customTopic: activeTopic || null,
-      variantIndex: nextIdx,
-    });
-    setActiveView("radar");
-    openTreatmentModal(fresh, true);
-  };
+  // [다른 분야로 비틀기] (A -> Z)
+  const handleBranchDomain = useCallback(
+    (base: Treatment, explicitDomain?: DomainSlug) => {
+      const step = synthCursorRef.current++;
+      const currentIdx = DOMAIN_LIST.findIndex((d) => d.slug === base.domainSlug);
+      const nextDomain: DomainSlug =
+        explicitDomain || DOMAIN_LIST[(currentIdx + 1) % DOMAIN_LIST.length].slug;
 
-  // [같은 해외 사례로 다른 분야 아이디어 뽑기] (A -> Z)
-  const handleBranchDomain = (base: Treatment, explicitDomain?: DomainSlug) => {
-    const nextIdx = comboCounter + 1;
-    setComboCounter(nextIdx);
-    const currentIndex = DOMAIN_LIST.findIndex((d) => d.slug === base.domainSlug);
-    const nextDomain: DomainSlug =
-      explicitDomain || DOMAIN_LIST[(currentIndex + 1) % DOMAIN_LIST.length].slug;
+      const builder =
+        builders.find((b) => b.id === base.sampleA.builderId) || builders[0];
+      const radar = matchAiRadarFor(builder, nextDomain, radars, step);
+      const branched = synthesizeTreatment({
+        builder,
+        radar,
+        domainSlug: nextDomain,
+        customTopic: activeTopic || null,
+        variantIndex: step,
+        mechanismOverride: base.sampleA.mechanism,
+      });
 
-    const builder =
-      builders.find((b) => b.id === base.sampleA.builderId) || builders[0];
-    const radar = matchAiRadarFor(builder, nextDomain, radars, nextIdx);
-    const branched = synthesizeTreatment({
-      builder,
-      radar,
-      domainSlug: nextDomain,
-      customTopic: activeTopic || null,
-      variantIndex: nextIdx,
-    });
-    openTreatmentModal(branched, true);
-  };
+      const wasModalOpen = modalSelection?.type === "treatment";
+      jumpToCard(branched, wasModalOpen);
+    },
+    [builders, radars, activeTopic, modalSelection, jumpToCard]
+  );
 
-  // [여기에 다른 해외 인기 기능 하나 더 합치기] (B -> C)
-  const handleEvolveTreatment = (parent: Treatment) => {
-    const nextIdx = comboCounter + 1;
-    setComboCounter(nextIdx);
-    const baseBuilder =
-      builders.find((b) => b.id === parent.sampleA.builderId) || builders[0];
-    const candidates = builders.filter(
-      (b) =>
-        b.id !== baseBuilder.id &&
-        b.id !== parent.sampleA2?.builderId &&
-        b.mechanism !== baseBuilder.mechanism
-    );
-    const pool = candidates.length > 0 ? candidates : builders.filter((b) => b.id !== baseBuilder.id);
-    const addedBuilder = pool[nextIdx % pool.length] || builders[0];
-    const radar =
-      radars.find((r) => r.id === parent.sampleB.radarId) ||
-      matchAiRadarFor(baseBuilder, parent.domainSlug, radars, nextIdx);
+  // [인기 기능 더 섞기] (B -> C)
+  const handleEvolveTreatment = useCallback(
+    (parent: Treatment) => {
+      const step = synthCursorRef.current++;
+      const baseBuilder =
+        builders.find((b) => b.id === parent.sampleA.builderId) || builders[0];
+      const candidates = builders.filter(
+        (b) =>
+          b.id !== baseBuilder.id &&
+          b.id !== parent.sampleA2?.builderId &&
+          b.mechanism !== parent.sampleA.mechanism
+      );
+      const pool =
+        candidates.length > 0
+          ? candidates
+          : builders.filter((b) => b.id !== baseBuilder.id);
+      const addedBuilder = pool[step % pool.length] || builders[0];
+      const radar =
+        radars.find((r) => r.id === parent.sampleB.radarId) ||
+        matchAiRadarFor(baseBuilder, parent.domainSlug, radars, step);
 
-    setLineageMap((prev) => ({ ...prev, [parent.id]: parent }));
-    const evolved = synthesizeTreatment({
-      builder: baseBuilder,
-      radar,
-      domainSlug: parent.domainSlug,
-      customTopic: parent.customTopic || activeTopic || null,
-      variantIndex: nextIdx,
-      parentTreatment: parent,
-      addedBuilder,
-    });
-    openTreatmentModal(evolved, true);
-  };
+      setLineageMap((prev) => ({ ...prev, [parent.id]: parent }));
+      const evolved = synthesizeTreatment({
+        builder: baseBuilder,
+        radar,
+        domainSlug: parent.domainSlug,
+        customTopic: parent.customTopic || activeTopic || null,
+        variantIndex: step,
+        parentTreatment: parent,
+        addedBuilder,
+        mechanismOverride: parent.sampleA.mechanism,
+      });
+
+      const wasModalOpen = modalSelection?.type === "treatment";
+      jumpToCard(evolved, wasModalOpen);
+    },
+    [builders, radars, activeTopic, modalSelection, jumpToCard]
+  );
 
   const handleSynthesizeFromBuilder = (builder: BuilderSignal) => {
-    const nextIdx = comboCounter + 1;
-    setComboCounter(nextIdx);
+    const step = synthCursorRef.current++;
     const domainSlug: DomainSlug =
       domainFilter === "all"
-        ? DOMAIN_LIST[nextIdx % DOMAIN_LIST.length].slug
+        ? DOMAIN_LIST[step % DOMAIN_LIST.length].slug
         : domainFilter;
-    const radar = matchAiRadarFor(builder, domainSlug, radars, nextIdx);
+    const radar = matchAiRadarFor(builder, domainSlug, radars, step);
     const fresh = synthesizeTreatment({
       builder,
       radar,
       domainSlug,
       customTopic: activeTopic || null,
-      variantIndex: nextIdx,
+      variantIndex: step,
     });
-    setActiveView("radar");
-    openTreatmentModal(fresh, true);
+    setModalSelection(null);
+    jumpToCard(fresh, false);
   };
 
   const handleSynthesizeFromRadar = (radar: AiRadarSignal) => {
-    const nextIdx = comboCounter + 1;
-    setComboCounter(nextIdx);
+    const step = synthCursorRef.current++;
     const domainSlug: DomainSlug =
       domainFilter === "all"
-        ? DOMAIN_LIST[nextIdx % DOMAIN_LIST.length].slug
+        ? DOMAIN_LIST[step % DOMAIN_LIST.length].slug
         : domainFilter;
-    const builder = builders[nextIdx % builders.length];
+    const builder = builders[step % builders.length];
     const fresh = synthesizeTreatment({
       builder,
       radar,
       domainSlug,
       customTopic: activeTopic || null,
-      variantIndex: nextIdx,
+      variantIndex: step,
+      mechanismOverride: MECHANISM_LIST[step % MECHANISM_LIST.length].id,
     });
-    setActiveView("radar");
-    openTreatmentModal(fresh, true);
+    setModalSelection(null);
+    jumpToCard(fresh, false);
   };
 
   const handleToggleSave = (tr: Treatment) => {
@@ -357,7 +559,7 @@ export function WorkbenchClient({
     url.searchParams.set("saved", encoded);
     try {
       await navigator.clipboard.writeText(url.toString());
-      setSyncNotice("보관함 공유 링크를 복사했습니다.");
+      setSyncNotice("보관함 공유 링크를 클립보드에 복사했습니다.");
     } catch {}
     router.replace(`/?tab=saved&saved=${encodeURIComponent(encoded)}`, { scroll: false });
   };
@@ -377,13 +579,87 @@ export function WorkbenchClient({
         if (Array.isArray(data.builders) && data.builders.length > 0) setBuilders(data.builders);
         setLastSyncedAt(data.syncedAt);
         setSyncNotice(
-          `최신 데이터 반영 완료 · 해외 사례 ${data.builders.length}건, AI 재료 ${data.aiRadars.length}건`
+          `최신 시그널 반영 완료 · 해외 원액 ${data.builders.length}건, AI 재료 ${data.aiRadars.length}건`
         );
       }
     } catch {
       setSyncNotice("최신 스냅샷을 유지하고 있습니다.");
     } finally {
       setIsSyncing(false);
+    }
+  };
+
+  // Keyboard Navigation (Space / ArrowRight / ArrowDown -> Next, ArrowLeft / ArrowUp -> Prev)
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && drawerMode !== "none" && !modalSelection) {
+        setDrawerMode("none");
+        return;
+      }
+
+      if (modalSelection || drawerMode !== "none") return;
+
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName?.toUpperCase();
+      if (tag === "INPUT" || tag === "TEXTAREA" || target?.isContentEditable) return;
+
+      if (e.key === " " || e.key === "ArrowDown" || e.key === "ArrowRight") {
+        e.preventDefault();
+        handleNextCard();
+      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        handlePrevCard();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [modalSelection, drawerMode, handleNextCard, handlePrevCard]);
+
+  // Stage Wheel Handler (320ms debounce, disabled while modal/drawer open)
+  const handleStageWheel = (e: React.WheelEvent<HTMLElement>) => {
+    if (modalSelection || drawerMode !== "none") return;
+    if (Math.abs(e.deltaY) < 26) return;
+
+    const now = Date.now();
+    if (now - lastWheelAtRef.current < 320) return;
+    lastWheelAtRef.current = now;
+
+    if (e.deltaY > 0) {
+      handleNextCard();
+    } else {
+      handlePrevCard();
+    }
+  };
+
+  // Mobile Touch Swipe Handler (Left/Up -> Next, Right/Down -> Prev)
+  const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
+    if (modalSelection || drawerMode !== "none") return;
+    const t = e.touches[0];
+    if (!t) return;
+    touchStartRef.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLElement>) => {
+    if (modalSelection || drawerMode !== "none") return;
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    const t = e.changedTouches[0];
+    if (!start || !t) return;
+
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    const absX = Math.abs(dx);
+    const absY = Math.abs(dy);
+
+    if (Math.max(absX, absY) < 48) return;
+
+    if (absX >= absY) {
+      if (dx < 0) handleNextCard();
+      else handlePrevCard();
+    } else {
+      if (dy < 0) handleNextCard();
+      else handlePrevCard();
     }
   };
 
@@ -395,333 +671,77 @@ export function WorkbenchClient({
     ).padStart(2, "0")}`;
   };
 
-  const menuItems: Array<{
-    id: ActiveView;
-    label: string;
-    count: number;
-    Icon: typeof WorkbenchIcon;
-  }> = [
-    { id: "radar", label: "기획 레이더", count: displayedTreatments.length, Icon: WorkbenchIcon },
-    { id: "builders", label: "해외 신상 원액", count: builders.length, Icon: RadarIcon },
-    { id: "ai-radar", label: "AI 기술 재료", count: radars.length, Icon: ChipIcon },
-    { id: "saved", label: "내 보관함", count: savedTreatments.length, Icon: BookmarkIcon },
-  ];
-
-  // Editorial Rhythm for Planning Radar: #1 Lead, #2~3 2-column grid, #4+ 1-column stack
-  const leadTreatment = displayedTreatments[0] || null;
-  const featurePair = displayedTreatments.slice(1, 3);
-  const streamRest = displayedTreatments.slice(3);
-
-  const renderTreatmentCard = (item: Treatment, variant: "lead" | "feature" | "stream") => {
-    const domain = DOMAIN_MAP[item.domainSlug];
-    const isLead = variant === "lead";
-    return (
-      <article
-        key={item.id}
-        role="button"
-        tabIndex={0}
-        onClick={() => openTreatmentModal(item)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openTreatmentModal(item);
-          }
-        }}
-        className={`${
-          isLead ? "nordic-lead-card p-6 sm:p-7" : "nordic-card p-5 sm:p-6"
-        } flex h-full cursor-pointer flex-col justify-between gap-3.5 text-left`}
-      >
-        <div className="flex flex-col gap-2.5">
-          {/* 1-line micro-tag */}
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-medium">
-            <span
-              className="inline-flex items-center gap-1.5 font-semibold"
-              style={{ color: domain?.color || "#C85A32" }}
-            >
-              <span
-                className="h-2 w-2 rounded-full"
-                style={{ backgroundColor: domain?.color || "#C85A32" }}
-              />
-              {item.domainLabel}
-            </span>
-            <span className="text-[#C5BCA8]">·</span>
-            <span className="font-semibold text-[#1E1C19]">{item.sampleA.name}</span>
-            <span className="tnum text-[#6E675C]">{item.sampleA.shortMetricLabel}</span>
-          </div>
-
-          {/* Intuitive Korean Service Title */}
-          <h2
-            className={
-              isLead
-                ? "text-[21px] font-bold leading-[1.36] tracking-[-0.02em] text-[#1E1C19] sm:text-[23px]"
-                : "text-[18px] font-bold leading-[1.4] tracking-[-0.018em] text-[#1E1C19] sm:text-[19px]"
-            }
-          >
-            {item.title}
-          </h2>
-
-          {/* Clear 2~3 line summary */}
-          <p
-            className={`${
-              isLead ? "line-clamp-3 text-[15.5px]" : "line-clamp-2 text-[15px]"
-            } leading-[1.68] text-[#4A443C]`}
-          >
-            {item.oneLineHook}
-          </p>
-        </div>
-
-        {/* Bottom-right subtle action */}
-        <div className="flex items-center justify-end pt-1">
-          <span className="inline-flex items-center gap-1 text-[13.5px] font-semibold text-[#6E675C]">
-            <span>자세히 보기</span>
-            <ArrowRightIcon className="h-3.5 w-3.5" />
-          </span>
-        </div>
-      </article>
-    );
-  };
-
   return (
-    <div className="min-h-screen bg-[#F6F3EC] text-[#1E1C19]">
-      {/* ── MOBILE TOP BAR (<lg) ─────────────────────────────────────────── */}
-      <header className="sticky top-0 z-30 border-b border-[#E7E0D3] bg-[#F6F3EC]/95 px-5 py-4 lg:hidden">
-        <div className="flex items-center justify-between gap-3">
-          <Link href="/" aria-label="BENCH 홈">
-            <BenchLogo />
-          </Link>
+    <div className="flex min-h-screen flex-col bg-[#F7F8FA] text-[#0F172A]">
+      {/* ── 1) SLIM PURE-WHITE TOP HEADER (h-16 desktop) ───────────────────── */}
+      <header className="sticky top-0 z-30 border-b border-[#E5E7EB] bg-[#FFFFFF]">
+        <div className="mx-auto flex min-h-16 w-full max-w-[1360px] flex-wrap items-center justify-between gap-2.5 px-4 py-2 sm:px-6">
+          {/* Left: BENCH. Logo (resets to full random) */}
           <button
             type="button"
-            onClick={handleLiveSync}
-            disabled={isSyncing}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#E7E0D3] bg-[#FFFCF7] px-3 py-1 text-[12.5px] font-medium text-[#3D3831]"
+            onClick={handleResetAll}
+            aria-label="BENCH 전체 랜덤 초기화"
+            className="shrink-0 cursor-pointer"
           >
-            <RefreshIcon className="h-3.5 w-3.5" />
-            <span>{isSyncing ? "갱신 중" : formatTime(lastSyncedAt)}</span>
+            <BenchLogo />
           </button>
-        </div>
 
-        {/* Mobile Menu Chips */}
-        <div className="mt-3 flex items-center gap-1.5 overflow-x-auto pb-1">
-          {menuItems.map(({ id, label, count }) => {
-            const active = activeView === id;
-            return (
+          {/* Center: 1-Line Domain Filter Capsules + Short Inline Topic / X Input */}
+          <div className="order-3 flex w-full items-center gap-2 overflow-x-auto pb-1 xl:order-2 xl:w-auto xl:flex-1 xl:justify-center xl:pb-0">
+            <nav
+              aria-label="분야 필터"
+              className="flex shrink-0 items-center gap-1"
+            >
               <button
-                key={id}
                 type="button"
-                onClick={() => setActiveView(id)}
-                className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13.5px] ${
-                  active
-                    ? "bg-[#EBE5D8] font-bold text-[#1E1C19]"
-                    : "font-medium text-[#6E675C]"
+                onClick={() => handleSelectDomain("all")}
+                className={`shrink-0 rounded-full px-3 py-1.5 text-[12.5px] font-semibold transition-colors ${
+                  domainFilter === "all"
+                    ? "bg-[#0F172A] text-[#FFFFFF]"
+                    : "border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]"
                 }`}
               >
-                <span>{label}</span>
-                <span className="tnum text-[12px] text-[#6E675C]">{count}</span>
+                전체 랜덤
               </button>
-            );
-          })}
-        </div>
 
-        {/* Mobile Domain Chips */}
-        {activeView === "radar" && (
-          <div className="mt-2 flex items-center gap-1.5 overflow-x-auto pb-0.5">
-            <button
-              type="button"
-              onClick={() => setDomainFilter("all")}
-              className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-[13px] ${
-                domainFilter === "all"
-                  ? "bg-[#23201C] font-semibold text-[#FFFCF7]"
-                  : "border border-[#E7E0D3] bg-[#FFFCF7] font-medium text-[#3D3831]"
-              }`}
-            >
-              전체
-            </button>
-            {DOMAIN_LIST.map((d) => {
-              const active = domainFilter === d.slug;
-              return (
-                <button
-                  key={d.slug}
-                  type="button"
-                  onClick={() => setDomainFilter(d.slug)}
-                  className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-[13px] ${
-                    active
-                      ? "bg-[#23201C] font-semibold text-[#FFFCF7]"
-                      : "border border-[#E7E0D3] bg-[#FFFCF7] font-medium text-[#3D3831]"
-                  }`}
-                >
-                  <span
-                    className="h-2 w-2 rounded-full"
-                    style={{ backgroundColor: d.color }}
-                  />
-                  <span>{d.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </header>
-
-      {/* ── AI RADAR CENTERED 2-COLUMN CONTAINER (max-w-[1080px]) ─────────── */}
-      <div className="mx-auto flex w-full max-w-[1080px] items-start gap-12 px-5 py-8 sm:px-8 sm:py-10">
-        {/* LEFT SLIM SIDEBAR (w-[210px] shrink-0, desktop) */}
-        <aside className="sticky top-10 hidden w-[210px] shrink-0 flex-col justify-between gap-8 lg:flex">
-          <div className="flex flex-col gap-7">
-            <div className="px-2">
-              <Link href="/" aria-label="BENCH 홈">
-                <BenchLogo />
-              </Link>
-              <p className="mt-2 text-[12.5px] leading-snug text-[#6E675C]">
-                해외 신상 프로덕트 × AI 기술 기획 레이더
-              </p>
-            </div>
-
-            {/* 4 Primary Menus */}
-            <nav aria-label="주요 메뉴" className="flex flex-col gap-1">
-              {menuItems.map(({ id, label, count, Icon }) => {
-                const active = activeView === id;
+              {DOMAIN_LIST.map((d) => {
+                const active = domainFilter === d.slug;
                 return (
                   <button
-                    key={id}
+                    key={d.slug}
                     type="button"
-                    onClick={() => setActiveView(id)}
-                    className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-[15px] ${
+                    onClick={() => handleSelectDomain(d.slug)}
+                    className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[12.5px] font-semibold transition-colors ${
                       active
-                        ? "bg-[#EBE5D8] font-bold text-[#1E1C19]"
-                        : "font-medium text-[#3D3831] hover:bg-[#EBE5D8]/60 hover:text-[#1E1C19]"
+                        ? "bg-[#0F172A] text-[#FFFFFF]"
+                        : "border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]"
                     }`}
                   >
-                    <span className="inline-flex items-center gap-2.5">
-                      <Icon className="h-4 w-4 shrink-0" />
-                      <span>{label}</span>
-                    </span>
-                    <span className="tnum text-[13px] text-[#6E675C]">{count}</span>
+                    <span
+                      className="h-1.5 w-1.5 rounded-full"
+                      style={{ backgroundColor: d.color }}
+                    />
+                    <span>{d.shortLabel}</span>
                   </button>
                 );
               })}
             </nav>
 
-            {/* 6 Universal Domains */}
-            <section aria-label="분야 필터">
-              <div className="border-b-[1.5px] border-[#1E1C19] px-2 pb-2 text-[13.5px] font-bold text-[#1E1C19]">
-                분야
-              </div>
-              <div className="mt-2 flex flex-col gap-0.5">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setDomainFilter("all");
-                    setActiveView("radar");
-                  }}
-                  className={`flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-[14.5px] ${
-                    domainFilter === "all" && activeView === "radar"
-                      ? "bg-[#EBE5D8] font-bold text-[#1E1C19]"
-                      : "font-medium text-[#3D3831] hover:bg-[#EBE5D8]/60"
-                  }`}
-                >
-                  <span className="inline-flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-[#1E1C19]" />
-                    <span>전체</span>
-                  </span>
-                  <span className="tnum text-[13px] text-[#6E675C]">{domainCounts.all}</span>
-                </button>
-
-                {DOMAIN_LIST.map((domain) => {
-                  const active = domainFilter === domain.slug && activeView === "radar";
-                  return (
-                    <button
-                      key={domain.slug}
-                      type="button"
-                      onClick={() => {
-                        setDomainFilter(domain.slug);
-                        setActiveView("radar");
-                      }}
-                      className={`flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-[14.5px] ${
-                        active
-                          ? "bg-[#EBE5D8] font-bold text-[#1E1C19]"
-                          : "font-medium text-[#3D3831] hover:bg-[#EBE5D8]/60"
-                      }`}
-                    >
-                      <span className="inline-flex items-center gap-2.5 truncate">
-                        <span
-                          className="h-2 w-2 shrink-0 rounded-full"
-                          style={{ backgroundColor: domain.color }}
-                        />
-                        <span className="truncate">{domain.label}</span>
-                      </span>
-                      <span className="tnum text-[13px] text-[#6E675C]">
-                        {domainCounts[domain.slug] ?? 0}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </section>
-          </div>
-
-          {/* Quiet Footer */}
-          <div className="border-t border-[#E7E0D3] px-2 pt-4">
-            <button
-              type="button"
-              onClick={handleLiveSync}
-              disabled={isSyncing}
-              className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-[#6E675C] hover:text-[#1E1C19]"
-            >
-              <RefreshIcon className="h-3.5 w-3.5" />
-              <span>
-                {isSyncing ? "실데이터 갱신 중" : `최근 동기화 · ${formatTime(lastSyncedAt)}`}
-              </span>
-            </button>
-          </div>
-        </aside>
-
-        {/* ── CENTER FOCUSED FEED AREA (max-w-[760px]) ────────────────────── */}
-        <main className="min-w-0 flex-1 max-w-[760px]">
-          {/* Section Title & Subtitle */}
-          <header className="border-b border-[#E7E0D3] pb-5">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <div className="flex flex-wrap items-baseline gap-2.5">
-                <h1 className="text-[26px] font-bold leading-tight tracking-[-0.025em] text-[#1E1C19] sm:text-[30px]">
-                  {VIEW_META[activeView].title}
-                </h1>
-                {activeView === "radar" && domainFilter !== "all" && (
-                  <span
-                    className="text-[15px] font-semibold"
-                    style={{ color: DOMAIN_MAP[domainFilter].color }}
-                  >
-                    · {DOMAIN_MAP[domainFilter].label}
-                  </span>
-                )}
-              </div>
-              <span className="tnum text-[14px] font-medium text-[#6E675C]">
-                {activeView === "radar"
-                  ? `${displayedTreatments.length}건`
-                  : activeView === "builders"
-                  ? `${filteredBuilders.length}건`
-                  : activeView === "ai-radar"
-                  ? `${radars.length}건`
-                  : `${savedTreatments.length}건`}
-              </span>
-            </div>
-            <p className="mt-1.5 text-[15px] leading-relaxed text-[#6E675C]">
-              {VIEW_META[activeView].subtitle}
-            </p>
-
-            {/* Clean 1-Line Custom Topic Input Bar */}
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 handleGenerateTopic(topicInput);
               }}
-              className="mt-4 flex flex-col gap-2 sm:flex-row"
+              className="flex shrink-0 items-center gap-1.5"
             >
-              <div className="flex flex-1 items-center rounded-xl border border-[#E7E0D3] bg-[#FFFCF7] px-3.5 focus-within:border-[#23201C]">
+              <div className="flex w-[195px] items-center rounded-full border border-[#E5E7EB] bg-[#F8FAFC] px-3 py-1 focus-within:border-[#0F172A] focus-within:bg-[#FFFFFF] sm:w-[220px]">
                 <input
                   type="text"
                   value={topicInput}
                   onChange={(e) => setTopicInput(e.target.value)}
-                  placeholder="관심 있는 주제를 입력해 보세요 (예: 필름카메라, 독립출판, 빈티지 가구, 러닝)"
-                  aria-label="관심 있는 주제 입력"
-                  className="w-full bg-transparent py-2.5 text-[14.5px] text-[#1E1C19] placeholder:text-[#6E675C] focus:outline-none"
+                  placeholder="주제 키워드 또는 X 링크"
+                  aria-label="주제 키워드 또는 X 링크 입력"
+                  className="w-full bg-transparent text-[12.5px] text-[#0F172A] placeholder:text-[#64748B] focus:outline-none"
                 />
                 {topicInput && (
                   <button
@@ -731,257 +751,416 @@ export function WorkbenchClient({
                       handleGenerateTopic("");
                     }}
                     aria-label="입력 지우기"
-                    className="ml-1 text-[#6E675C] hover:text-[#1E1C19]"
+                    className="ml-1 text-[#64748B] hover:text-[#0F172A]"
                   >
-                    <XIcon className="h-4 w-4" />
+                    <XIcon className="h-3.5 w-3.5" />
                   </button>
                 )}
               </div>
-
-              <div className="flex shrink-0 gap-2">
-                <button
-                  type="submit"
-                  className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#23201C] px-4 py-2.5 text-[14px] font-semibold text-[#FFFCF7] hover:bg-[#36322C] sm:flex-initial"
-                >
-                  아이디어 뽑기
-                </button>
-                <button
-                  type="button"
-                  onClick={handleShuffleIdea}
-                  className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-[#E7E0D3] bg-[#FFFCF7] px-3.5 py-2.5 text-[14px] font-semibold text-[#3D3831] hover:border-[#23201C] hover:text-[#1E1C19]"
-                >
-                  <ShuffleIcon className="h-3.5 w-3.5" />
-                  <span>새로 섞기</span>
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="shrink-0 rounded-full bg-[#0F172A] px-3 py-1.5 text-[12.5px] font-bold text-[#FFFFFF] hover:bg-[#1E293B]"
+              >
+                뽑기
+              </button>
             </form>
+          </div>
 
-            {syncNotice && (
-              <div className="mt-3 flex items-center justify-between rounded-xl border border-[#E7E0D3] bg-[#F9F5EC] px-3.5 py-2 text-[13.5px] text-[#3D3831]">
-                <span>{syncNotice}</span>
-                <button
-                  type="button"
-                  onClick={() => setSyncNotice("")}
-                  className="font-semibold text-[#6E675C] hover:text-[#1E1C19]"
-                >
-                  닫기
-                </button>
-              </div>
-            )}
-          </header>
+          {/* Right: Overseas Ingredients Drawer + Saved Drawer */}
+          <div className="order-2 flex shrink-0 items-center gap-2 xl:order-3">
+            <button
+              type="button"
+              onClick={() => {
+                setIngredientTab("builders");
+                setDrawerMode((m) => (m === "ingredients" ? "none" : "ingredients"));
+              }}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors ${
+                drawerMode === "ingredients"
+                  ? "border-[#0F172A] bg-[#0F172A] text-[#FFFFFF]"
+                  : "border-[#E5E7EB] bg-[#FFFFFF] text-[#1E293B] hover:border-[#0F172A]"
+              }`}
+            >
+              <RadarIcon className="h-3.5 w-3.5" />
+              <span>해외 원액</span>
+              <span className="tnum opacity-75">({builders.length})</span>
+            </button>
 
-          {/* ── VIEW 1: 기획 레이더 (AI Radar 1:1 Card Rhythm) ─────────────── */}
-          {activeView === "radar" && (
-            <div className="mt-6 space-y-4">
-              {activeTopic && (
-                <div className="flex items-center justify-between rounded-xl border border-[#E7E0D3] bg-[#FBF7EE] px-4 py-2.5 text-[13.5px] text-[#3D3831]">
+            <button
+              type="button"
+              onClick={() => setDrawerMode((m) => (m === "saved" ? "none" : "saved"))}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors ${
+                drawerMode === "saved"
+                  ? "border-[#0F172A] bg-[#0F172A] text-[#FFFFFF]"
+                  : "border-[#E5E7EB] bg-[#FFFFFF] text-[#1E293B] hover:border-[#0F172A]"
+              }`}
+            >
+              <BookmarkIcon className="h-3.5 w-3.5" filled={savedTreatments.length > 0} />
+              <span>보관함</span>
+              <span className="tnum opacity-75">({savedTreatments.length})</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ── 2) 1-SCREEN 1-CARD TIKTOK-STYLE RANDOM BLUEPRINT STAGE ─────────── */}
+      <main
+        onWheel={handleStageWheel}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="flex flex-1 flex-col items-center justify-center px-4 py-5 sm:px-6 lg:px-8"
+      >
+        <div className="w-full max-w-[1080px]">
+          {/* Optional Compact Status / Topic Strip */}
+          {(syncNotice || activeTopic) && (
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] px-4 py-2 text-[13px] text-[#475569]">
+              <div className="flex flex-wrap items-center gap-2">
+                {activeTopic && (
                   <span>
-                    <strong className="text-[#1E1C19]">"{activeTopic}"</strong> 주제로 맞춤 기획안을 뽑았습니다.
+                    <strong className="text-[#0F172A]">"{activeTopic}"</strong> 맞춤 덱 탐색 중
                   </span>
+                )}
+                {syncNotice && <span>{syncNotice}</span>}
+              </div>
+              <div className="flex items-center gap-3">
+                {activeTopic && (
                   <button
                     type="button"
                     onClick={() => {
                       setTopicInput("");
                       handleGenerateTopic("");
                     }}
-                    className="font-semibold text-[#C85A32] hover:underline"
+                    className="font-bold text-[#2563EB] hover:underline"
                   >
-                    전체 보기로 돌아가기
+                    전체 랜덤으로 돌아가기
                   </button>
-                </div>
-              )}
-
-              {/* 1) Featured Lead Card */}
-              {leadTreatment && renderTreatmentCard(leadTreatment, "lead")}
-
-              {/* 2) 2-Column Balanced Pair (#2 & #3) */}
-              {featurePair.length > 0 && (
-                <div className="grid grid-cols-1 gap-3.5 md:grid-cols-2">
-                  {featurePair.map((item) => renderTreatmentCard(item, "feature"))}
-                </div>
-              )}
-
-              {/* 3) Airy 1-Column Card Stack (#4+) */}
-              {streamRest.length > 0 && (
-                <div className="space-y-3.5">
-                  {streamRest.map((item) => renderTreatmentCard(item, "stream"))}
-                </div>
-              )}
+                )}
+                {syncNotice && (
+                  <button
+                    type="button"
+                    onClick={() => setSyncNotice("")}
+                    className="font-semibold text-[#64748B] hover:text-[#0F172A]"
+                  >
+                    닫기
+                  </button>
+                )}
+              </div>
             </div>
           )}
 
-          {/* ── VIEW 2: 해외 신상 원액 ────────────────────────────────────── */}
-          {activeView === "builders" && (
-            <div className="mt-5 space-y-4">
-              <div className="flex flex-wrap items-center gap-1.5">
-                {[
-                  { id: "all", label: "전체" },
-                  { id: "verified", label: "검증 수익 (MRR)" },
-                  { id: "show_hn", label: "Show HN" },
-                  { id: "product_hunt", label: "Product Hunt" },
-                  { id: "uneed", label: "Uneed" },
-                ].map((tab) => (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setSourceFilter(tab.id)}
-                    className={`rounded-full px-3.5 py-1.5 text-[13.5px] font-medium ${
-                      sourceFilter === tab.id
-                        ? "bg-[#23201C] font-semibold text-[#FFFCF7]"
-                        : "border border-[#E7E0D3] bg-[#FFFCF7] text-[#3D3831] hover:border-[#23201C]"
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
+          {/* Single Focused Visual Blueprint Card */}
+          {currentTreatment && (
+            <VisualBlueprintCard
+              treatment={currentTreatment}
+              cardPosition={deckIndex + 1}
+              canGoPrev={deckIndex > 0}
+              isSaved={savedIdSet.has(currentTreatment.id)}
+              lineageMap={lineageMap}
+              onPrev={handlePrevCard}
+              onNext={handleNextCard}
+              onOpenDetail={() =>
+                setModalSelection({ type: "treatment", treatment: currentTreatment })
+              }
+              onToggleSave={handleToggleSave}
+              onBranchDomain={(t) => handleBranchDomain(t)}
+              onEvolveTreatment={(t) => handleEvolveTreatment(t)}
+              onSelectLineage={(tr) => jumpToCard(tr, false)}
+            />
+          )}
 
-              <div className="space-y-3.5">
-                {filteredBuilders.map((b) => (
-                  <article
-                    key={b.id}
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => setModalSelection({ type: "builder", builder: b })}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        setModalSelection({ type: "builder", builder: b });
-                      }
-                    }}
-                    className="nordic-card flex cursor-pointer flex-col gap-2.5 p-5 sm:p-6"
-                  >
-                    <div className="flex flex-wrap items-center gap-2 text-[13px]">
-                      <span
-                        className="inline-flex items-center gap-1.5 font-semibold"
-                        style={{ color: b.verifiedRevenue ? "#3F6A52" : "#C85A32" }}
+          {/* Subtle Bottom Gesture / Deck Status Bar */}
+          <div className="mt-3.5 flex flex-wrap items-center justify-between gap-2 px-1 text-[12px] text-[#64748B]">
+            <span>
+              Space · 방향키 · 마우스 휠 · 스와이프로 다음 아이디어를 즉시 넘겨보세요
+            </span>
+            <span className="tnum">
+              해외 검증 {builders.length} × AI Radar {radars.length} 실시간 교차 합성
+            </span>
+          </div>
+        </div>
+      </main>
+
+      {/* ── 3) RIGHT SLIDE-OVER DRAWER (INGREDIENTS / SAVED) ───────────────── */}
+      {drawerMode !== "none" && (
+        <div className="fixed inset-0 z-40 flex justify-end">
+          <button
+            type="button"
+            aria-label="드로어 닫기"
+            tabIndex={-1}
+            onClick={() => setDrawerMode("none")}
+            className="fixed inset-0 cursor-default bg-[#0F172A]/35 backdrop-blur-[2px]"
+          />
+
+          <aside
+            role="dialog"
+            aria-modal="true"
+            aria-label={drawerMode === "ingredients" ? "해외 원액 및 AI 기술 재료" : "내 보관함"}
+            className="relative z-10 flex h-full w-[min(94vw,460px)] flex-col border-l border-[#E5E7EB] bg-[#FFFFFF] shadow-[0_10px_40px_rgba(15,23,42,0.12)]"
+          >
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between gap-3 border-b border-[#E5E7EB] px-5 py-4">
+              <div>
+                <h2 className="text-[17px] font-bold text-[#0F172A]">
+                  {drawerMode === "ingredients" ? "원재료 탐색" : "내 보관함"}
+                </h2>
+                <p className="mt-0.5 text-[12.5px] text-[#64748B]">
+                  {drawerMode === "ingredients"
+                    ? "원하는 해외 서비스나 AI 기술을 눌러 즉시 블루프린트를 생성하세요."
+                    : "저장해 둔 카드를 다시 열거나 링크 하나로 팀과 공유하세요."}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setDrawerMode("none")}
+                aria-label="닫기"
+                className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]"
+              >
+                <XIcon className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* DRAWER BODY A: INGREDIENTS (BUILDERS + AI RADAR) */}
+            {drawerMode === "ingredients" && (
+              <>
+                <div className="border-b border-[#E5E7EB] px-5 py-3 space-y-2.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => setIngredientTab("builders")}
+                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-bold ${
+                          ingredientTab === "builders"
+                            ? "bg-[#0F172A] text-[#FFFFFF]"
+                            : "border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569]"
+                        }`}
                       >
-                        <span
-                          className="h-2 w-2 rounded-full"
-                          style={{ backgroundColor: b.verifiedRevenue ? "#3F6A52" : "#C85A32" }}
-                        />
-                        {b.sourceLabel}
-                      </span>
-                      <span className="text-[#C5BCA8]">·</span>
-                      <span className="tnum font-semibold text-[#1E1C19]">
-                        {formatShortMetric(b)}
-                      </span>
-                      <span className="text-[#C5BCA8]">·</span>
-                      <span className="text-[#6E675C]">{b.mechanismLabel}</span>
+                        <RadarIcon className="h-3.5 w-3.5" />
+                        <span>해외 성공 서비스 ({builders.length})</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setIngredientTab("ai-radar")}
+                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-bold ${
+                          ingredientTab === "ai-radar"
+                            ? "bg-[#0F172A] text-[#FFFFFF]"
+                            : "border border-[#E5E7EB] bg-[#FFFFFF] text-[#475569]"
+                        }`}
+                      >
+                        <ChipIcon className="h-3.5 w-3.5" />
+                        <span>AI 기술 ({radars.length})</span>
+                      </button>
                     </div>
 
-                    <h2 className="text-[18px] font-bold leading-snug text-[#1E1C19] sm:text-[19px]">
-                      {b.name}
-                    </h2>
-                    <p className="line-clamp-2 text-[15px] leading-[1.68] text-[#4A443C]">
-                      {b.taglineKo}
-                    </p>
+                    <button
+                      type="button"
+                      onClick={handleLiveSync}
+                      disabled={isSyncing}
+                      className="inline-flex items-center gap-1 rounded-full border border-[#E5E7EB] bg-[#F8FAFC] px-2.5 py-1 text-[11.5px] font-semibold text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]"
+                    >
+                      <RefreshIcon className="h-3 w-3" />
+                      <span>{isSyncing ? "갱신 중" : formatTime(lastSyncedAt)}</span>
+                    </button>
+                  </div>
 
-                    <div className="flex items-center justify-end pt-1">
-                      <span className="inline-flex items-center gap-1 text-[13.5px] font-semibold text-[#6E675C]">
-                        <span>자세히 보기</span>
-                        <ArrowRightIcon className="h-3.5 w-3.5" />
-                      </span>
+                  {ingredientTab === "builders" && (
+                    <div className="flex flex-wrap items-center gap-1">
+                      {[
+                        { id: "all", label: "전체" },
+                        { id: "verified", label: "수익 검증 (MRR)" },
+                        { id: "show_hn", label: "Show HN" },
+                        { id: "product_hunt", label: "Product Hunt" },
+                        { id: "uneed", label: "Uneed" },
+                      ].map((tab) => (
+                        <button
+                          key={tab.id}
+                          type="button"
+                          onClick={() => setSourceFilter(tab.id)}
+                          className={`rounded-full px-2.5 py-1 text-[11.5px] font-semibold ${
+                            sourceFilter === tab.id
+                              ? "bg-[#0F172A] text-[#FFFFFF]"
+                              : "border border-[#E2E8F0] bg-[#F8FAFC] text-[#475569] hover:border-[#0F172A]"
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
+                      ))}
                     </div>
-                  </article>
-                ))}
+                  )}
+                </div>
+
+                <div className="flex-1 space-y-2.5 overflow-y-auto p-5">
+                  {ingredientTab === "builders" &&
+                    filteredBuilders.map((b) => (
+                      <div
+                        key={b.id}
+                        className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4"
+                      >
+                        <div className="flex items-center justify-between gap-2 text-[11.5px]">
+                          <span
+                            className={`font-bold ${
+                              b.verifiedRevenue ? "text-[#059669]" : "text-[#EA580C]"
+                            }`}
+                          >
+                            {formatShortMetric(b)}
+                          </span>
+                          <span className="text-[#64748B]">{b.mechanismLabel}</span>
+                        </div>
+                        <div className="mt-1.5 text-[15px] font-bold text-[#0F172A]">
+                          {b.name}
+                        </div>
+                        <p className="mt-1 line-clamp-2 text-[13px] leading-[1.6] text-[#475569]">
+                          {b.taglineKo}
+                        </p>
+                        <div className="mt-3 flex items-center justify-between gap-2">
+                          <a
+                            href={b.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[12px] font-semibold text-[#64748B] hover:text-[#0F172A] hover:underline"
+                          >
+                            원본 사이트 ↗
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => handleSynthesizeFromBuilder(b)}
+                            className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-3 py-1.5 text-[12px] font-bold text-[#FFFFFF] hover:bg-[#1E293B]"
+                          >
+                            <span>아이디어 뽑기</span>
+                            <ArrowRightIcon className="h-3 w-3" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+
+                  {ingredientTab === "ai-radar" &&
+                    radars.map((r) => (
+                      <div
+                        key={r.id}
+                        className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4"
+                      >
+                        <div className="flex items-center justify-between gap-2 text-[11.5px]">
+                          <span className="font-bold text-[#2563EB]">{r.platformId}</span>
+                          <span className="text-[#64748B]">{r.planningMeta.signalType}</span>
+                        </div>
+                        <div className="mt-1.5 text-[14.5px] font-bold leading-snug text-[#0F172A]">
+                          {r.titleKo}
+                        </div>
+                        <p className="mt-1 line-clamp-2 text-[13px] leading-[1.6] text-[#475569]">
+                          {r.planningMeta.benchmarkPoint || r.whatKo}
+                        </p>
+                        <div className="mt-3 flex items-center justify-between gap-2">
+                          <a
+                            href={r.canonicalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[12px] font-semibold text-[#64748B] hover:text-[#0F172A] hover:underline"
+                          >
+                            기술 원문 ↗
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => handleSynthesizeFromRadar(r)}
+                            className="inline-flex items-center gap-1 rounded-full bg-[#0F172A] px-3 py-1.5 text-[12px] font-bold text-[#FFFFFF] hover:bg-[#1E293B]"
+                          >
+                            <span>아이디어 뽑기</span>
+                            <ArrowRightIcon className="h-3 w-3" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </>
+            )}
+
+            {/* DRAWER BODY B: SAVED BOOKMARKS */}
+            {drawerMode === "saved" && (
+              <div className="flex flex-1 flex-col overflow-hidden">
+                {savedTreatments.length > 0 && (
+                  <div className="flex items-center justify-between gap-2 border-b border-[#E5E7EB] bg-[#F8FAFC] px-5 py-3 text-[12.5px] text-[#475569]">
+                    <span>저장한 카드 {savedTreatments.length}장</span>
+                    <button
+                      type="button"
+                      onClick={handleCopySavedShareUrl}
+                      className="rounded-full bg-[#0F172A] px-3.5 py-1.5 text-[12px] font-bold text-[#FFFFFF] hover:bg-[#1E293B]"
+                    >
+                      보관함 공유 링크 복사
+                    </button>
+                  </div>
+                )}
+
+                <div className="flex-1 space-y-2.5 overflow-y-auto p-5">
+                  {savedTreatments.length === 0 ? (
+                    <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] px-5 py-12 text-center">
+                      <p className="text-[15px] font-bold text-[#0F172A]">
+                        아직 저장한 블루프린트가 없습니다.
+                      </p>
+                      <p className="mt-1.5 text-[13px] leading-[1.6] text-[#64748B]">
+                        카드 우측 상단 [저장] 버튼을 누르면 이곳에 차곡차곡 모입니다.
+                      </p>
+                    </div>
+                  ) : (
+                    savedTreatments.map((item) => {
+                      const d = DOMAIN_MAP[item.domainSlug];
+                      return (
+                        <div
+                          key={item.id}
+                          className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4"
+                        >
+                          <div className="flex items-center justify-between gap-2 text-[11.5px]">
+                            <span
+                              className="inline-flex items-center gap-1.5 font-bold"
+                              style={{ color: d?.color || "#2563EB" }}
+                            >
+                              <span
+                                className="h-1.5 w-1.5 rounded-full"
+                                style={{ backgroundColor: d?.color || "#2563EB" }}
+                              />
+                              {item.domainLabel}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => handleToggleSave(item)}
+                              className="font-semibold text-[#64748B] hover:text-[#0F172A]"
+                            >
+                              삭제
+                            </button>
+                          </div>
+                          <div className="mt-1.5 text-[15px] font-bold leading-snug text-[#0F172A]">
+                            {item.title}
+                          </div>
+                          <p className="mt-1 line-clamp-1 text-[13px] text-[#475569]">
+                            {item.oneLineHook}
+                          </p>
+                          <div className="mt-3 flex items-center justify-between">
+                            <span className="text-[12px] font-medium text-[#64748B]">
+                              {item.sampleA.name}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => jumpToCard(item, false)}
+                              className="inline-flex items-center gap-1 rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-[12px] font-bold text-[#0F172A] hover:border-[#0F172A]"
+                            >
+                              <span>카드로 보기</span>
+                              <ArrowRightIcon className="h-3 w-3" />
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </aside>
+        </div>
+      )}
 
-          {/* ── VIEW 3: AI 기술 재료 ──────────────────────────────────────── */}
-          {activeView === "ai-radar" && (
-            <div className="mt-5 space-y-3.5">
-              {radars.map((r) => (
-                <article
-                  key={r.id}
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => setModalSelection({ type: "radar", radar: r })}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setModalSelection({ type: "radar", radar: r });
-                    }
-                  }}
-                  className="nordic-card flex cursor-pointer flex-col gap-2.5 p-5 sm:p-6"
-                >
-                  <div className="flex flex-wrap items-center gap-2 text-[13px]">
-                    <span className="inline-flex items-center gap-1.5 font-semibold text-[#3B6380]">
-                      <span className="h-2 w-2 rounded-full bg-[#3B6380]" />
-                      {r.platformId}
-                    </span>
-                    <span className="text-[#C5BCA8]">·</span>
-                    <span className="text-[#6E675C]">{r.planningMeta.signalType}</span>
-                  </div>
-
-                  <h2 className="text-[18px] font-bold leading-snug text-[#1E1C19] sm:text-[19px]">
-                    {r.titleKo}
-                  </h2>
-                  <p className="line-clamp-2 text-[15px] leading-[1.68] text-[#4A443C]">
-                    {r.whatKo || r.highlightSummary}
-                  </p>
-
-                  <div className="flex items-center justify-end pt-1">
-                    <span className="inline-flex items-center gap-1 text-[13.5px] font-semibold text-[#6E675C]">
-                      <span>자세히 보기</span>
-                      <ArrowRightIcon className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
-
-          {/* ── VIEW 4: 내 보관함 ─────────────────────────────────────────── */}
-          {activeView === "saved" && (
-            <div className="mt-5 space-y-4">
-              {savedTreatments.length > 0 && (
-                <div className="flex items-center justify-between rounded-xl border border-[#E7E0D3] bg-[#FFFCF7] px-4 py-3 text-[13.5px] text-[#3D3831]">
-                  <span>저장한 기획안을 링크 하나로 공유할 수 있습니다.</span>
-                  <button
-                    type="button"
-                    onClick={handleCopySavedShareUrl}
-                    className="rounded-full bg-[#23201C] px-3.5 py-1.5 text-[13px] font-semibold text-[#FFFCF7]"
-                  >
-                    보관함 링크 복사
-                  </button>
-                </div>
-              )}
-
-              {savedTreatments.length === 0 ? (
-                <div className="nordic-card px-6 py-14 text-center">
-                  <p className="text-[16px] font-bold text-[#1E1C19]">
-                    아직 저장한 기획안이 없습니다.
-                  </p>
-                  <p className="mt-2 text-[14.5px] text-[#6E675C]">
-                    마음에 드는 기획 카드를 눌러 [보관함에 저장]을 누르면 이곳에 차곡차곡 모입니다.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => setActiveView("radar")}
-                    className="mt-5 rounded-full bg-[#23201C] px-5 py-2.5 text-[14px] font-semibold text-[#FFFCF7]"
-                  >
-                    기획 레이더 보러 가기
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-3.5">
-                  {savedTreatments.map((item) => renderTreatmentCard(item, "stream"))}
-                </div>
-              )}
-            </div>
-          )}
-        </main>
-      </div>
-
-      {/* ── AI RADAR STYLE CENTERED FOCUS MODAL ───────────────────────────── */}
+      {/* ── 4) PURE-WHITE DETAIL SPEC & PROMPT MODAL ──────────────────────── */}
       <TreatmentModal
         selection={modalSelection}
         savedIdSet={savedIdSet}
         lineageMap={lineageMap}
-        onClose={closeModal}
-        onSelectTreatment={(tr) => openTreatmentModal(tr, false)}
+        onClose={() => setModalSelection(null)}
+        onSelectTreatment={(tr) => jumpToCard(tr, true)}
         onBranchDomain={handleBranchDomain}
         onEvolveTreatment={handleEvolveTreatment}
         onToggleSave={handleToggleSave}

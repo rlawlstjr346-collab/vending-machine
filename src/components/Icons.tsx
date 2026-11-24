@@ -7,11 +7,11 @@ interface IconProps {
 export function BenchLogo({ className = "h-6 w-auto" }: IconProps) {
   return (
     <span className={`inline-flex items-baseline gap-1 select-none ${className}`}>
-      <span className="font-sans text-[22px] font-extrabold tracking-[-0.03em] text-[#1E1C19] leading-none">
+      <span className="font-sans text-[21px] font-extrabold tracking-[-0.03em] text-[#0F172A] leading-none">
         BENCH
       </span>
       <span
-        className="inline-block h-2 w-2 rounded-full bg-[#C85A32]"
+        className="inline-block h-2 w-2 rounded-full bg-[#2563EB]"
         aria-hidden="true"
       />
     </span>
@@ -110,6 +110,15 @@ export function ExternalLinkIcon({ className = "w-3.5 h-3.5" }: IconProps) {
       <path d="M6.5 3H3.5C3.22 3 3 3.22 3 3.5V12.5C3 12.78 3.22 13 3.5 13H12.5C12.78 13 13 12.78 13 12.5V9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       <path d="M9.5 2.5H13.5V6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       <line x1="7.5" y1="8.5" x2="13.25" y2="2.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon({ className = "w-3.5 h-3.5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
+      <line x1="13.5" y1="8" x2="3" y2="8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M7 4L3 8L7 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
