@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-24T01:39:24.895Z",
+  "syncedAt": "2026-11-24T02:04:16.233Z",
   "counts": {
     "aiRadar": 100,
     "builderTotal": 106,
@@ -29,7 +29,7 @@
       "status": 200,
       "count": 26,
       "cached304": false,
-      "note": "26 GitHub repos (23 with verified media)"
+      "note": "26 GitHub repos (22 with verified media)"
     },
     {
       "id": "reddit",
@@ -50,10 +50,10 @@
     {
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
-      "status": 200,
+      "status": 429,
       "count": 20,
       "cached304": false,
-      "note": "20 Product Hunt entries"
+      "note": "circuit-breaker cooldown until 2026-11-24T07:39:19.039Z"
     },
     {
       "id": "trustmrr",
@@ -76,7 +76,7 @@
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
       "count": 59,
-      "note": "13 newly enriched via OG/README"
+      "note": "0 newly enriched via OG/README"
     }
   ]
 }

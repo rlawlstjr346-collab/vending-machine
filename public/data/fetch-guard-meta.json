@@ -14,13 +14,13 @@
       "etag": "W/\"751c4e0689853cbb985a6e764c31fee9b44368f62f9dcc8e1d61f082c5ad0219\"",
       "lastModified": null,
       "lastStatus": 304,
-      "lastCheckedAt": "2026-11-24T01:37:54.279Z"
+      "lastCheckedAt": "2026-11-24T02:02:38.675Z"
     },
     "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json": {
       "etag": "W/\"a3d91b6e443717c4a9f8e206f5f88d9b394632c5cb60335d5618705413c74a37\"",
       "lastModified": null,
       "lastStatus": 304,
-      "lastCheckedAt": "2026-11-24T01:37:56.435Z"
+      "lastCheckedAt": "2026-11-24T02:02:40.969Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=40": {
       "etag": null,
@@ -41,16 +41,16 @@
       "lastCheckedAt": "2026-11-24T01:38:52.953Z"
     },
     "https://trustmrr.com": {
-      "etag": "W/\"hgge5uttry12kc5\"",
+      "etag": "W/\"9mo7lg9k6x12kk9\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:53.420Z"
+      "lastCheckedAt": "2026-11-24T02:03:36.234Z"
     },
     "https://www.uneed.best": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 01:36:08 GMT",
+      "lastModified": "Tue, 24 Nov 2026 01:58:15 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:54.184Z"
+      "lastCheckedAt": "2026-11-24T02:03:36.926Z"
     },
     "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24349)%0A%5B%231%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24406)%0A%5B%232%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%20A%20react%20component%20library%20of%20design%20tropes%0A%5B%235%5D%2018%20Words%0A%5B%236%5D%20An%20entire%20PowerPoint%20in%20one%20HTML%20file%20(edit%2Bview%2Bdata%2Bcollab)%0A%5B%237%5D%20SimCity%2C%20but%20with%20Permits": {
       "etag": null,
@@ -110,169 +110,169 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:37:57.158Z"
+      "lastCheckedAt": "2026-11-24T02:02:41.705Z"
     },
     "https://api.github.com/search/repositories?q=created%3A%3E2026-08-26%20stars%3A%3E60%20(agent%20OR%20video%20OR%20audio%20OR%20browser%20OR%20automation%20OR%20cli)&sort=stars&order=desc&per_page=18": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:37:58.957Z"
+      "lastCheckedAt": "2026-11-24T02:02:43.831Z"
     },
     "https://raw.githubusercontent.com/yetone/magpie/main/README.md": {
       "etag": "W/\"572dc6666eee2282e811e0b2f358f5399e313560ed83255fa46b0045f46fac83\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:37:59.133Z"
+      "lastCheckedAt": "2026-11-24T02:02:44.080Z"
     },
     "https://raw.githubusercontent.com/KnifeLemon/Filee/main/README.md": {
       "etag": "W/\"d6314208b6a140b0d6976e8931c509f4104cfb32ea111b203e7e0fbe0759ad69\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:01.197Z"
+      "lastCheckedAt": "2026-11-24T02:02:45.870Z"
     },
     "https://raw.githubusercontent.com/wheresryan22/anatomy/main/README.md": {
       "etag": "W/\"503c8620599d1de51d2f35b651a82fd71f887cdd7b11895fa475fc1b7c0cc140\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:03.190Z"
+      "lastCheckedAt": "2026-11-24T02:02:47.989Z"
     },
     "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/README.md": {
       "etag": "W/\"4c63b7bdea835fe5696be3c27d3d87c185b650d218debaeffc99393bc5311dca\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:04.755Z"
+      "lastCheckedAt": "2026-11-24T02:02:50.176Z"
     },
     "https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/README.md": {
       "etag": "W/\"1ab1b74a2fadcb6cabd31c08622924ec346542f6f09c337e5117b46f12f31287\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:54.211Z"
+      "lastCheckedAt": "2026-11-24T02:03:36.938Z"
     },
     "https://raw.githubusercontent.com/google/elephant-goldfish-model/main/README.md": {
       "etag": "W/\"8feb3e6b02bc7e45107b3059ecb26089c2986cc0b74abdc3fe0d76ae06a04f4d\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:08.391Z"
+      "lastCheckedAt": "2026-11-24T02:02:54.733Z"
     },
     "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/README.md": {
       "etag": "W/\"840af6c3c63d97881e734bcdfd61b339bab16311966a7e132f0ae54b18217732\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:10.767Z"
+      "lastCheckedAt": "2026-11-24T02:02:56.730Z"
     },
     "https://raw.githubusercontent.com/storytold/filmcraft/main/README.md": {
       "etag": "W/\"6f2bb63c2ac57f62f7054c0f3624fe0721fab6d7ed9916b9e633622a06fdbfde\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:12.809Z"
+      "lastCheckedAt": "2026-11-24T02:02:58.412Z"
     },
     "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/README.md": {
       "etag": "W/\"5f6977df6cfa2068dbab530a0e683cf51aeea13cb6da449cf53f1e8eb44469aa\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:15.311Z"
+      "lastCheckedAt": "2026-11-24T02:03:00.245Z"
     },
     "https://raw.githubusercontent.com/BaaRai/ARTEX/main/README.md": {
       "etag": "W/\"a548ecf9aee22f225743f3de53a1c96d5d90d2df01fb51b21daf3a214ae73313\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:17.594Z"
+      "lastCheckedAt": "2026-11-24T02:03:02.013Z"
     },
     "https://raw.githubusercontent.com/yihui-dev/awesome-opus5-5-videos/main/README.md": {
       "etag": "W/\"eba645592d82d98e1fa79111341c595032963fc7bebe0826af9468c2fc0ebffc\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:19.283Z"
+      "lastCheckedAt": "2026-11-24T02:03:04.532Z"
     },
     "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/README.md": {
       "etag": "W/\"187ee813bfdee49cd4a9721d8fac9934d5b40a040df96f6bf5da4996163796f3\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:21.400Z"
+      "lastCheckedAt": "2026-11-24T02:03:06.801Z"
     },
     "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/README.md": {
       "etag": "W/\"166d8f1c51d3f264b5142e8cfcde95d26db5ffd9ce84eb94dde3625b3a59cbd5\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:23.500Z"
+      "lastCheckedAt": "2026-11-24T02:03:08.791Z"
     },
     "https://raw.githubusercontent.com/janestreet/agent_skills/master/README.md": {
       "etag": "W/\"fb61852af2771411bec864707e7e7c679d0cbd974c65045d91902b8d65ddf863\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:58.197Z"
+      "lastCheckedAt": "2026-11-24T02:03:41.460Z"
     },
     "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/README.md": {
       "etag": "W/\"691e6aa7b9332b555d7639ca6e1833e87ccdb19aa1e6f00e1a6d03dd7d787286\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:27.338Z"
+      "lastCheckedAt": "2026-11-24T02:03:12.548Z"
     },
     "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/README.md": {
       "etag": "W/\"530b7d52d3ba381e25b9d81fd584b0821d2be0064ce05198b3e5780977975a4a\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:29.088Z"
+      "lastCheckedAt": "2026-11-24T02:03:14.985Z"
     },
     "https://raw.githubusercontent.com/crmne/spotifast/main/README.md": {
       "etag": "W/\"894c7b3e4dbca2ef359f2121a279cd4fddf1d2157e56b9d134dd90b9dd80904f\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:31.438Z"
+      "lastCheckedAt": "2026-11-24T02:03:16.823Z"
     },
     "https://raw.githubusercontent.com/kajisho5/ffmpeg-skill/main/README.md": {
       "etag": "W/\"038ff33c5284be4fe90161ae1318c8042b9e3295087aab2dddb372554b800141\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:33.802Z"
+      "lastCheckedAt": "2026-11-24T02:03:18.739Z"
     },
     "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/README.md": {
       "etag": "W/\"01d6dcd22c28054f5dd42cc04d55923dd45de8197f16406b16e94350e5440253\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:35.831Z"
+      "lastCheckedAt": "2026-11-24T02:03:20.682Z"
     },
     "https://raw.githubusercontent.com/wangzan101/Mika/main/README.md": {
       "etag": "W/\"b2d8a6d1d776bf3fc2359c5b531132d018001e128e1d83c911059b87d9bdab9e\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:37.796Z"
+      "lastCheckedAt": "2026-11-24T02:03:22.439Z"
     },
     "https://raw.githubusercontent.com/vercel-labs/ui/main/README.md": {
       "etag": "W/\"8e9ba737c07a33c46c841e7fa7a54c29fe4fd961fea411fa17289dab0d8f5e4c\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:00.177Z"
+      "lastCheckedAt": "2026-11-24T02:03:43.016Z"
     },
     "https://raw.githubusercontent.com/kuafuai/andee/main/README.md": {
       "etag": "W/\"bb53c42d032e49aa1c7b5013e26249040cd2e2ae3b9736629d2a1d4686caa97a\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:42.012Z"
+      "lastCheckedAt": "2026-11-24T02:03:25.779Z"
     },
     "https://raw.githubusercontent.com/XinaTian/MROffice/main/README.md": {
       "etag": "W/\"a1f8682a234f0f5a4e13484981d64b7550d62cb9f4eef8b8712d2207953b152e\"",
       "lastModified": null,
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:43.549Z"
+      "lastStatus": 503,
+      "lastCheckedAt": "2026-11-24T02:03:27.249Z"
     },
     "https://raw.githubusercontent.com/deeplethe/solid-glass/main/README.md": {
       "etag": "W/\"f35bff1d954ad0b6fe9d7b5bd39b72268fa5b810ac37b265c48754255cab9a0b\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:45.838Z"
+      "lastCheckedAt": "2026-11-24T02:03:29.756Z"
     },
     "https://raw.githubusercontent.com/zhuyansen/new-term-radar/main/README.md": {
       "etag": "W/\"d48fce0cb21fcc39486597ff461f10ff26b6ee80d119f3d14e324918ff7ff47d\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:47.872Z"
+      "lastCheckedAt": "2026-11-24T02:03:31.587Z"
     },
     "https://raw.githubusercontent.com/pallavi-shekhar/ai-engineering-interview-questions-company-wise/main/README.md": {
       "etag": "W/\"b69cdbd72c132aab2ac21c27757d014b91048c35108448635a63da42c7f9c20c\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:49.602Z"
+      "lastCheckedAt": "2026-11-24T02:03:33.556Z"
     },
     "https://www.reddit.com/r/SideProject/hot.json?limit=25": {
       "lastStatus": 403,
@@ -282,7 +282,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:38:50.152Z"
+      "lastCheckedAt": "2026-11-24T02:03:33.943Z"
     },
     "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>1779931130&hitsPerPage=35": {
       "etag": null,
@@ -292,7 +292,7 @@
     },
     "https://raw.githubusercontent.com/janestreet/agent_skills/main/README.md": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T01:38:56.248Z"
+      "lastCheckedAt": "2026-11-24T02:03:39.472Z"
     },
     "https://trustmrr.com/startup/storeradar": {
       "etag": "W/\"l86yxuvn3555xb\"",
@@ -400,7 +400,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:00.780Z"
+      "lastCheckedAt": "2026-11-24T02:03:43.178Z"
     },
     "https://john.fun/elevators": {
       "etag": "W/\"b16363f4ae6ffd1727ee4479d6d77cb5\"",
@@ -430,7 +430,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:01.983Z"
+      "lastCheckedAt": "2026-11-24T02:03:44.252Z"
     },
     "https://permit.petercai.com/": {
       "etag": null,
@@ -514,19 +514,19 @@
       "etag": "W/\"6b048674-16700\"",
       "lastModified": "Mon, 23 Nov 2026 18:31:16 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:08.643Z"
+      "lastCheckedAt": "2026-11-24T02:03:44.393Z"
     },
     "https://rivendell.dmitrybrant.com/relativity/": {
       "etag": "\"2c59-65c7c3231903e-gzip\"",
       "lastModified": "Sun, 27 Sep 2026 19:45:48 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:09.302Z"
+      "lastCheckedAt": "2026-11-24T02:03:44.617Z"
     },
     "https://stealmybitcoin.com/": {
-      "etag": "W/\"6ae6759c-ffd\"",
-      "lastModified": "Sat, 31 Oct 2026 23:11:24 GMT",
+      "etag": "W/\"6ae6759d-ffd\"",
+      "lastModified": "Sat, 31 Oct 2026 23:11:25 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:09.558Z"
+      "lastCheckedAt": "2026-11-24T02:03:44.817Z"
     },
     "https://toneyalexander.github.io/inclusive-color-space/": {
       "etag": "W/\"6a7e90b2-aad5\"",
@@ -568,19 +568,19 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:15.172Z"
+      "lastCheckedAt": "2026-11-24T02:03:45.007Z"
     },
     "https://blackhole.plav.in": {
       "etag": "W/\"6ac65ff0-1d92\"",
       "lastModified": "Wed, 07 Oct 2026 15:06:24 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:16.129Z"
+      "lastCheckedAt": "2026-11-24T02:03:45.527Z"
     },
     "https://hackertimes.ca/": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:17.917Z"
+      "lastCheckedAt": "2026-11-24T02:03:45.965Z"
     },
     "https://www.intheweights.com/": {
       "etag": null,
@@ -594,21 +594,21 @@
     },
     "https://www.uneed.best/tool/bugstack": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 00:58:48 GMT",
+      "lastModified": "Tue, 24 Nov 2026 01:39:20 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:19.589Z"
+      "lastCheckedAt": "2026-11-24T02:03:46.064Z"
     },
     "https://www.uneed.best/tool/stramik": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 01:04:34 GMT",
+      "lastModified": "Tue, 24 Nov 2026 01:39:22 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:21.328Z"
+      "lastCheckedAt": "2026-11-24T02:03:47.778Z"
     },
     "https://www.uneed.best/tool/feedsortr": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 00:58:47 GMT",
+      "lastModified": "Tue, 24 Nov 2026 01:39:23 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T01:39:22.900Z"
+      "lastCheckedAt": "2026-11-24T02:03:50.042Z"
     },
     "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20FilmCraft%3A%20An%20open-source%2C%20nonlinear%20video%20editor%20written%20from%20scratch%20in%20pure%20Rust%0A%5B%231%5D%20Agent%20harness%20for%20learning%20difficult%20things.%0A%5B%232%5D%20Spotify%2C%20native%20and%20fast.%20One%20lightweight%20Rust%20app%20for%20your%20whole%20library%2C%20local%20playback%2C%20and%20Spotify%20Connect%20on%20Linux%2C%20macOS%2C%20and%20Windows.%0A%5B%233%5D%20MR%20Office%20%E2%80%94%20the%20open-source%20editors%20of%20the%20AI%20office%20suite%20closest%20to%20Microsoft%20Office%3A%20documents%2C%20spreadsheets%2C%20presentations%2C%20PDF%20and%20code%20in%20the%20browser.%20Copilot%20in%20every%20editor%20edits%20real%20Word%2C%20Excel%20and%20PowerPoint%20f%0A%5B%234%5D%20A%20design%20system%20for%20AI%20applications.%20Material%2C%20physical%2C%20tactile%2C%20technical.%0A%5B%235%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%236%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%237%5D%20Turn%20any%20screen%20into%20a%20sign.%20The%20URL%20is%20the%20app": {
       "etag": null,
@@ -621,7 +621,97 @@
       "lastModified": null,
       "lastStatus": 200,
       "lastCheckedAt": "2026-11-24T01:39:24.892Z"
+    },
+    "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>15,created_at_i>1779933758&hitsPerPage=35": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:36.058Z"
+    },
+    "https://www.uneed.best/tool/displaymath": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 00:58:47 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:51.722Z"
+    },
+    "https://www.uneed.best/tool/easytools": {
+      "etag": null,
+      "lastModified": "Mon, 23 Nov 2026 08:06:48 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:53.875Z"
+    },
+    "https://www.uneed.best/tool/plango": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 02:03:56 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:57.123Z"
+    },
+    "https://www.uneed.best/tool/sniffpup": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 01:28:55 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:57.312Z"
+    },
+    "https://www.uneed.best/tool/dailytube": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 01:28:50 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:03:59.221Z"
+    },
+    "https://www.uneed.best/tool/orka-chat": {
+      "etag": null,
+      "lastModified": "Mon, 23 Nov 2026 07:55:26 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:01.580Z"
+    },
+    "https://www.uneed.best/tool/crawlbeast": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 01:28:49 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:03.501Z"
+    },
+    "https://www.uneed.best/tool/caroush": {
+      "etag": null,
+      "lastModified": "Mon, 23 Nov 2026 16:05:27 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:05.110Z"
+    },
+    "https://www.uneed.best/tool/werk": {
+      "etag": null,
+      "lastModified": "Mon, 23 Nov 2026 16:02:46 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:06.706Z"
+    },
+    "https://www.uneed.best/tool/screenkite": {
+      "etag": null,
+      "lastModified": "Mon, 23 Nov 2026 08:11:11 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:08.199Z"
+    },
+    "https://www.uneed.best/tool/flowhush": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 00:58:47 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:10.399Z"
+    },
+    "https://www.uneed.best/tool/wismo": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 01:29:01 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:12.879Z"
+    },
+    "https://www.uneed.best/tool/baypoint-ai-ebay-seller-tools": {
+      "etag": null,
+      "lastModified": "Tue, 24 Nov 2026 01:44:39 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:14.891Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20FilmCraft%3A%20An%20open-source%2C%20nonlinear%20video%20editor%20written%20from%20scratch%20in%20pure%20Rust%0A%5B%231%5D%20MR%20Office%20%E2%80%94%20the%20open-source%20editors%20of%20the%20AI%20office%20suite%20closest%20to%20Microsoft%20Office%3A%20documents%2C%20spreadsheets%2C%20presentations%2C%20PDF%20and%20code%20in%20the%20browser.%20Copilot%20in%20every%20editor%20edits%20real%20Word%2C%20Excel%20and%20PowerPoint%20f%0A%5B%232%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%20Turn%20any%20screen%20into%20a%20sign.%20The%20URL%20is%20the%20app": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-24T02:04:16.230Z"
     }
   },
-  "updatedAt": "2026-11-24T01:39:24.903Z"
+  "updatedAt": "2026-11-24T02:04:16.242Z"
 }
