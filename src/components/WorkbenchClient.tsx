@@ -274,10 +274,10 @@ export function WorkbenchClient({
         onWheel={handleStageWheel}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="flex flex-1 flex-col items-center justify-center px-4 py-6 sm:px-8 sm:py-8 lg:px-10"
+        className="flex flex-1 flex-col items-center justify-center px-3 py-[clamp(1.25rem,2vh,2.5rem)] sm:px-6"
       >
-        {/* Minimal Stage Top Corners: Left DISPENSER Wordmark / Right Live Status Caption */}
-        <div className="mx-auto mb-5 flex w-full max-w-[1340px] flex-wrap items-center justify-between gap-3 px-1">
+        {/* Minimal Stage Top Corners: Scales proportionally across FHD & 4K */}
+        <div className="mx-auto mb-[clamp(1rem,1.4vh,1.75rem)] flex w-[min(88vw,2040px)] flex-wrap items-center justify-between gap-3 px-1">
           <button
             type="button"
             onClick={handleShuffleDeck}
@@ -287,9 +287,9 @@ export function WorkbenchClient({
             <DispenserLogo />
           </button>
 
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] font-medium text-[#64748B]">
+          <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[clamp(0.82rem,0.72vw,1.02rem)] font-medium text-[#64748B]">
             <span className="tnum inline-flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#10B981]" aria-hidden="true" />
+              <span className="h-2 w-2 rounded-full bg-[#10B981]" aria-hidden="true" />
               <span>
                 실시간 동기화 · 기술 {builders.length} · 이슈 {radars.length}
                 {syncLabel ? ` (${syncLabel})` : ""}
@@ -302,7 +302,7 @@ export function WorkbenchClient({
           </div>
         </div>
 
-        {/* Single Large-Scale Editorial Card */}
+        {/* Single Large-Scale Fluid Editorial Card */}
         {currentTreatment && (
           <VisualBlueprintCard
             treatment={currentTreatment}
@@ -315,7 +315,7 @@ export function WorkbenchClient({
         )}
       </main>
 
-      {/* Centered Detail Spec & Coding Prompt Popup Modal */}
+      {/* Centered Proportional Detail Spec & Highlighted Coding Prompt Popup Modal */}
       <TreatmentModal
         treatment={modalTreatment}
         onClose={() => setModalTreatment(null)}

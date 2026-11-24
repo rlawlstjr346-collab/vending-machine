@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
+import {
+  buildFeatureHighlightRules,
+  buildHighlightSegments,
+  buildSynergyHighlightRules,
+} from "@/components/HighlightText";
 import { DOMAIN_LIST } from "@/lib/domains";
 import {
   decodeSavedParam,
@@ -72,7 +77,7 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     }
   });
 
-  it("2) guarantees zero fake ProductWireframePreview usage and clean DISPENSER main card", () => {
+  it("2) guarantees zero fake ProductWireframePreview usage, fluid FHD/4K scale-up, and AI Radar highlight renderer", () => {
     const fakePreviewPath = path.join(ROOT, "src/components/ProductWireframePreview.tsx");
     expect(fs.existsSync(fakePreviewPath)).toBe(false);
 
@@ -81,15 +86,25 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
       "utf-8"
     );
     expect(cardSrc).not.toContain("ProductWireframePreview");
-    expect(cardSrc).toContain("max-w-[1340px]");
+    expect(cardSrc).toContain("w-[min(88vw,2040px)]");
+    expect(cardSrc).toContain("HighlightText");
     expect(cardSrc).toContain("원본 기술 핵심 메커니즘 요약");
     expect(cardSrc).toContain("기술 × 이슈 시너지 인사이트");
+
+    const modalSrc = fs.readFileSync(
+      path.join(ROOT, "src/components/TreatmentModal.tsx"),
+      "utf-8"
+    );
+    expect(modalSrc).toContain("w-[min(88vw,1080px)]");
+    expect(modalSrc).toContain("구현 프롬프트 미리보기");
+    expect(modalSrc).toContain("HighlightText");
 
     const stageSrc = fs.readFileSync(
       path.join(ROOT, "src/components/WorkbenchClient.tsx"),
       "utf-8"
     );
     expect(stageSrc).toContain("DispenserLogo");
+    expect(stageSrc).toContain("w-[min(88vw,2040px)]");
     expect(stageSrc).not.toContain("전체 랜덤");
     expect(stageSrc).not.toContain("해외 원액");
     expect(stageSrc).not.toContain("보관함");
@@ -141,13 +156,39 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
       if (filePath.endsWith("text-clean.ts") || filePath.endsWith("translation-cache.json")) continue;
       const content = fs.readFileSync(filePath, "utf-8");
       expect(content, `Forbidden placeholder in ${filePath}`).not.toMatch(forbiddenTextRe);
+      expect(content, `Raw '==' marker leaked in ${filePath}`).not.toMatch(rawHighlightRe);
       expect(content, `Dead href="#" in ${filePath}`).not.toMatch(/href=["']#["']/);
       expect(content, `Forbidden animation class in ${filePath}`).not.toMatch(forbiddenAnimRe);
       expect(content, `Residual oatmeal/beige HEX found in ${filePath}`).not.toMatch(oatmealHexRe);
     }
   });
 
-  it("5) validates runtime synthesis produces natural question headlines, fusionStoryKo, techDigestKo, and clean coding prompts", () => {
+  it("5) validates HighlightText dual highlighter (<mark> amber/sky) without raw '==' and pure plain-text prompt copy", () => {
+    const sample = treatmentsPayload.items[0];
+    const synergySegs = buildHighlightSegments(sample.fusionStoryKo, {
+      rules: buildSynergyHighlightRules(sample),
+      autoVariant: "amber",
+      autoTechSky: true,
+      maxHighlights: 3,
+    });
+    expect(synergySegs.map((s) => s.text).join("")).toBe(sample.fusionStoryKo);
+    expect(synergySegs.some((s) => s.variant === "amber" || s.variant === "sky")).toBe(true);
+
+    const featSegs = buildHighlightSegments(sample.mvpFeatures[0], {
+      rules: buildFeatureHighlightRules(sample.mvpFeatures[0]),
+      autoVariant: "amber",
+      maxHighlights: 2,
+    });
+    expect(featSegs.map((s) => s.text).join("")).toBe(sample.mvpFeatures[0]);
+    expect(featSegs.some((s) => s.variant === "amber")).toBe(true);
+
+    const plainPrompt = treatmentToCodingPrompt(sample);
+    expect(plainPrompt).toContain("반드시 구현할 핵심 기능 3가지");
+    expect(plainPrompt).not.toMatch(/<\/?mark/i);
+    expect(plainPrompt).not.toMatch(/==[^=\s][^=]*==/);
+  });
+
+  it("6) validates runtime synthesis produces natural question headlines, fusionStoryKo, techDigestKo, and clean coding prompts", () => {
     const builderA = buildersPayload.items[0];
     const radarB = matchAiRadarFor(builderA, "creator-tool", radarPayload.items, 0);
 
@@ -168,10 +209,11 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     expect(prompt).not.toMatch(/\bagy\b/i);
   });
 
-  it("6) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
+  it("7) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
     const sampleIds = treatmentsPayload.items.slice(0, 3).map((t) => t.id);
     const encoded = encodeSavedParam(sampleIds);
-    expect(decodeSavedParam(encoded)).toEqual(sampleIds);
+    const decoded = decodeSavedParam(encoded);
+    expect(decoded).toEqual(sampleIds);
     expect(mergeSavedWithSeedIds([], sampleIds, treatmentsPayload.items).map((t) => t.id)).toEqual(
       sampleIds
     );
@@ -193,7 +235,6 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     expect(rssXml).not.toContain("BENCH.");
     expect(rssXml).toContain("<item>");
 
-    // Verify treatment static params route exists and loads all 50 IDs
     const treatmentPageSrc = fs.readFileSync(
       path.join(ROOT, "src/app/treatment/[id]/page.tsx"),
       "utf-8"

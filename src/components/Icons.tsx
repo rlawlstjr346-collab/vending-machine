@@ -7,7 +7,7 @@ interface IconProps {
 export function DispenserLogo({ className = "" }: IconProps) {
   return (
     <span className={`inline-flex items-center gap-2 select-none ${className}`}>
-      <span className="font-sans text-[19px] font-extrabold tracking-[0.06em] text-[#0F172A] leading-none sm:text-[21px]">
+      <span className="font-sans text-[clamp(1.05rem,0.95vw,1.4rem)] font-extrabold tracking-[0.06em] text-[#0F172A] leading-none">
         DISPENSER
       </span>
       <span
