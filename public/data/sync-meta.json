@@ -1,16 +1,16 @@
 {
-  "syncedAt": "2026-11-24T04:35:49.461Z",
+  "syncedAt": "2026-11-24T13:09:31.483Z",
   "counts": {
-    "aiRadar": 153,
+    "aiRadar": 185,
     "cultureTotal": 151,
     "cultureDomains": 19,
-    "builderTotal": 186,
+    "builderTotal": 240,
     "bySource": {
       "github_trending": 50,
-      "trustmrr": 22,
-      "show_hn": 72,
-      "product_hunt": 20,
-      "uneed": 22
+      "trustmrr": 24,
+      "show_hn": 94,
+      "product_hunt": 44,
+      "uneed": 28
     },
     "cultureBySource": {
       "Dazed Digital": 8,
@@ -33,9 +33,9 @@
       "Open Culture": 8,
       "Kottke.org": 8
     },
-    "verifiedRevenueCount": 22,
-    "verifiedMediaCount": 90,
-    "verifiedCultureMediaCount": 125,
+    "verifiedRevenueCount": 24,
+    "verifiedMediaCount": 93,
+    "verifiedCultureMediaCount": 124,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
       "tech": 30,
@@ -47,9 +47,9 @@
       "id": "ai_radar",
       "label": "AI Radar (GitHub Raw)",
       "status": 200,
-      "count": 153,
+      "count": 185,
       "cached304": false,
-      "note": "merged remote(100/100) + local(0/0) -> balanced 153/220, thumbs(7)"
+      "note": "merged remote(100/100) + local(0/0) -> balanced 185/220, thumbs(4)"
     },
     {
       "id": "github_trending",
@@ -71,23 +71,23 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 72,
+      "count": 94,
       "cached304": false,
       "note": "68 live Show HN items"
     },
     {
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
-      "status": 429,
-      "count": 20,
+      "status": 200,
+      "count": 44,
       "cached304": false,
-      "note": "circuit-breaker cooldown until 2026-11-24T07:39:19.039Z"
+      "note": "24 Product Hunt entries"
     },
     {
       "id": "trustmrr",
       "label": "TrustMRR SSR",
       "status": 200,
-      "count": 22,
+      "count": 24,
       "cached304": false,
       "note": "22 TrustMRR verified startups"
     },
@@ -95,7 +95,7 @@
       "id": "uneed",
       "label": "Uneed SSR",
       "status": 200,
-      "count": 22,
+      "count": 28,
       "cached304": false,
       "note": "22 Uneed daily launches"
     },
@@ -104,14 +104,14 @@
       "label": "Global Culture RSS (19 domains)",
       "status": 200,
       "count": 151,
-      "note": "125 verified editorial images"
+      "note": "124 verified editorial images"
     },
     {
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 90,
-      "note": "4 newly enriched via OG/README"
+      "count": 93,
+      "note": "3 newly enriched via OG/README"
     },
     {
       "id": "culture_dazed",
@@ -183,7 +183,7 @@
       "status": 200,
       "count": 8,
       "cached304": false,
-      "note": "8 items (8 img)"
+      "note": "8 items (7 img)"
     },
     {
       "id": "culture_booooooom",
@@ -196,10 +196,10 @@
     {
       "id": "culture_petapixel",
       "label": "PetaPixel (사진 · 카메라)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_colossal",
@@ -268,10 +268,10 @@
     {
       "id": "culture_pdr",
       "label": "The Public Domain Review (희귀 사료 · 아카이브)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_hyperallergic",
@@ -284,10 +284,10 @@
     {
       "id": "culture_openculture",
       "label": "Open Culture (문화 아카이브 · 지식)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_kottke",
