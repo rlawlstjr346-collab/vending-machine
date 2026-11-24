@@ -23,6 +23,16 @@ export type BuilderSourceId =
   | "uneed"
   | "x_oembed";
 
+export type CultureVertical =
+  | "fashion-youth"
+  | "cinema-directing"
+  | "photo-visual-art"
+  | "music-sound"
+  | "architecture-object"
+  | "archive-curation";
+
+export type TreatmentTrack = "tech" | "culture";
+
 export interface TechDigestKo {
   inputKo: string;
   coreEngineKo: string;
@@ -94,6 +104,26 @@ export interface AiRadarSignal {
   thumbnailUrl?: string | null;
 }
 
+export interface CultureSignal {
+  id: string;
+  titleEn: string;
+  titleKo: string;
+  sourceId: string;
+  sourceName: string;
+  sourceDomain: string;
+  cultureVertical: CultureVertical;
+  cultureVerticalLabel: string;
+  domainSlug: DomainSlug;
+  canonicalUrl: string;
+  publishedAt: string;
+  fetchedAt: string;
+  excerptEn: string;
+  phenomenonKo: string;
+  whyTrendingKo: string;
+  previewImageUrl?: string | null;
+  tags: string[];
+}
+
 export interface TreatmentLineageNode {
   step: "A" | "B" | "C";
   label: string;
@@ -133,6 +163,8 @@ export interface TreatmentSampleB {
   titleKo: string;
   canonicalUrl: string;
   platformId: string;
+  sourceType?: "ai_radar" | "culture";
+  cultureVerticalLabel?: string | null;
   signalType: string;
   productDomain: string;
   summaryKo: string;
@@ -143,6 +175,7 @@ export interface TreatmentSampleB {
 export interface Treatment {
   id: string;
   slug: string;
+  track: TreatmentTrack;
   createdAt: string;
   updatedAt: string;
   domainSlug: DomainSlug;
@@ -153,6 +186,7 @@ export interface Treatment {
   oneLineHook: string;
   firstThreeSecondsUx: string;
   fusionStoryKo: string;
+  highlightPhrases?: string[];
   buildCadence: string;
   demoVideoUrl?: string | null;
   previewImageUrl?: string | null;
@@ -175,11 +209,19 @@ export interface SyncMeta {
   syncedAt: string;
   counts: {
     aiRadar: number;
+    cultureTotal?: number;
+    cultureDomains?: number;
     builderTotal: number;
     bySource: Record<string, number>;
+    cultureBySource?: Record<string, number>;
     verifiedRevenueCount: number;
     verifiedMediaCount?: number;
+    verifiedCultureMediaCount?: number;
     treatmentsSeed: number;
+    treatmentsByTrack?: {
+      tech: number;
+      culture: number;
+    };
   };
   sources: Array<{
     id: string;

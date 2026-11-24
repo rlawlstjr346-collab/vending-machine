@@ -162,20 +162,31 @@ export function buildHighlightSegments(
 export function buildSynergyHighlightRules(treatment: Treatment): HighlightRule[] {
   const rules: HighlightRule[] = [];
 
-  // Core conclusion clause from the 3rd sentence (the payoff / UX sentence)
-  const sentences = treatment.fusionStoryKo
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  // 1) Explicit curated / Gemini highlight phrases first (amber conclusion highlight)
+  if (Array.isArray(treatment.highlightPhrases)) {
+    for (const phrase of treatment.highlightPhrases) {
+      const clean = phrase?.trim();
+      if (clean && clean.length >= 2) {
+        rules.push({ phrase: clean, variant: "amber" });
+      }
+    }
+  }
 
-  if (sentences.length >= 3) {
-    const payoffSentence = sentences[2];
-    // Pick a crisp 10~28 char core action phrase right before the verb ending
-    const clauseMatch = payoffSentence.match(
-      /([가-힣A-Za-z0-9·\- ]{10,30}(?:웹을|도구를|스튜디오를|엔진을|보드를|카드를|서비스를|자동화|생성|비교|확인|완성|제공|압축|추출))/
-    );
-    if (clauseMatch && clauseMatch[1]) {
-      rules.push({ phrase: clauseMatch[1].trim(), variant: "amber" });
+  // 2) Core conclusion clause from the 3rd sentence when explicit phrases are absent
+  if (rules.length === 0) {
+    const sentences = treatment.fusionStoryKo
+      .split(/(?<=[.!?])\s+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    if (sentences.length >= 3) {
+      const payoffSentence = sentences[2];
+      const clauseMatch = payoffSentence.match(
+        /([가-힣A-Za-z0-9·\- ]{10,30}(?:웹을|도구를|스튜디오를|엔진을|보드를|카드를|서비스를|자동화|생성|비교|확인|완성|제공|압축|추출))/
+      );
+      if (clauseMatch && clauseMatch[1]) {
+        rules.push({ phrase: clauseMatch[1].trim(), variant: "amber" });
+      }
     }
   }
 
@@ -183,7 +194,9 @@ export function buildSynergyHighlightRules(treatment: Treatment): HighlightRule[
     rules.push({ phrase: treatment.sampleA.name, variant: "sky" });
   }
 
-  if (treatment.sampleB.benchmarkPoint && treatment.sampleB.benchmarkPoint.length >= 4) {
+  if (treatment.sampleB.platformId && treatment.sampleB.sourceType === "culture") {
+    rules.push({ phrase: treatment.sampleB.platformId, variant: "sky" });
+  } else if (treatment.sampleB.benchmarkPoint && treatment.sampleB.benchmarkPoint.length >= 4) {
     rules.push({ phrase: treatment.sampleB.benchmarkPoint, variant: "sky" });
   }
 
@@ -197,10 +210,16 @@ export function buildSynergyHighlightRules(treatment: Treatment): HighlightRule[
 export function buildFeatureHighlightRules(feature: string): HighlightRule[] {
   const rules: HighlightRule[] = [];
   const coreMatch = feature.match(
-    /([가-힣A-Za-z0-9·\-+%/ ]{6,26}(?:자동\s*[가-힣]{2,4}|즉시\s*[가-힣]{2,4}|원클릭[가-힣 ]{0,8}|한눈에\s*[가-힣]{2,4}|실시간[가-힣 ]{0,8}|로컬\s*[가-힣]{2,4}|체크리스트|프롬프트|비교|다운로드|내보냅니다|생성합니다|추천합니다))/
+    /([가-힣A-Za-z0-9·\-+%/ ]{6,26}(?:자동\s*[가-힣]{2,4}|즉시\s*[가-힣]{2,4}|원클릭[가-힣 ]{0,8}|한눈에\s*[가-힣]{2,4}|실시간[가-힣 ]{0,8}|로컬\s*[가-힣]{2,4}|체크리스트|프롬프트|비교|다운로드|내보냅니다|생성합니다|추천합니다|보여줍니다|정리합니다|제공합니다|완성합니다|저장합니다|공유합니다|복사합니다|내려받습니다|조판합니다|변환합니다))/
   );
   if (coreMatch && coreMatch[1]) {
     rules.push({ phrase: coreMatch[1].trim(), variant: "amber" });
+    return rules;
+  }
+  // Fallback: highlight the concise core predicate phrase before sentence end
+  const fallbackMatch = feature.match(/([가-힣A-Za-z0-9·\-+%/]{2,}(?:\s+[가-힣A-Za-z0-9·\-+%/]{2,}){1,3})\.?\s*$/);
+  if (fallbackMatch && fallbackMatch[1]) {
+    rules.push({ phrase: fallbackMatch[1].trim(), variant: "amber" });
   }
   return rules;
 }

@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import {
   loadAiRadarSignals,
   loadBuilderSignals,
+  loadCultureSignals,
   loadSeedTreatments,
   loadSyncMeta,
 } from "@/lib/data-loader";
@@ -19,6 +20,7 @@ export default function HomePage() {
   const initialTreatments = loadSeedTreatments();
   const initialBuilders = loadBuilderSignals();
   const initialRadars = loadAiRadarSignals();
+  const initialCultures = loadCultureSignals();
   const initialSyncMeta = loadSyncMeta();
 
   return (
@@ -27,6 +29,7 @@ export default function HomePage() {
         initialTreatments={initialTreatments}
         initialBuilders={initialBuilders}
         initialRadars={initialRadars}
+        initialCultures={initialCultures}
         initialSyncMeta={initialSyncMeta}
       />
     </Suspense>

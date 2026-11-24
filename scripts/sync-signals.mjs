@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * DISPENSER Real-Data Signal & Demo Media Synchronization Pipeline
+ * DISPENSER Real-Data Signal, Global Culture RSS & Demo Media Synchronization Pipeline
  *
- * Sources:
+ * Tech & Builder Sources:
  *  1) AI Radar (planning-feed.json + live-feed.json joined by id, with thumbnail_url)
  *  2) GitHub Trending Recent Open-Source Repos (Search API + README demo video/GIF/image extraction)
  *  3) Reddit Public JSON Feeds (r/SideProject, r/LocalLLaMA)
@@ -11,13 +11,13 @@
  *  6) TrustMRR (SSR HTML verified revenue startups)
  *  7) Uneed (SSR HTML daily launches)
  *
- * Media & Pairing:
- *  - Extracts real .mp4 / .webm / .gif / high-res preview images from GitHub README,
- *    OpenGraph (og:video / og:image), Reddit previews, and AI Radar thumbnail_url
- *  - Verifies candidate URLs via HTTP HEAD/GET (200/206 + video/* or image/* content-type)
- *  - Generates 3-step Korean technical digest (techDigestKo) for every builder
- *  - When GEMINI_API_KEY is set, pairs live builders x AI Radar issues via Gemini 2.5 Flash
- *  - Otherwise hydrates curated 50 seeds (src/data/curated-seeds.json) with freshest live URLs & media
+ * Global High-Taste Culture Sources (6 verticals / 23 RSS-Atom feeds, max 8 per outlet -> 75+ items):
+ *  - Fashion/Archive/Youth: Dazed Digital, Hypebeast, Highsnobiety, Put This On
+ *  - Cinema/Directing: Letterboxd Journal, IndieWire, The Film Stage, MUBI Notebook
+ *  - Photo/Visual/Graphic: It's Nice That, Booooooom, PetaPixel, Colossal
+ *  - Music/Vinyl/Sound: Bandcamp Daily, CDM, Pitchfork, Stereogum
+ *  - Architecture/Space/Objects: Dezeen, designboom, Core77
+ *  - Rare Archives/Art/Curation: The Public Domain Review, Hyperallergic, Open Culture, Kottke.org
  */
 
 import fs from "node:fs";
@@ -65,6 +65,228 @@ const GITHUB_SEARCH_QUERIES = [
 const REDDIT_FEEDS = [
   { sub: "SideProject", url: "https://www.reddit.com/r/SideProject/hot.json?limit=25" },
   { sub: "LocalLLaMA", url: "https://www.reddit.com/r/LocalLLaMA/hot.json?limit=25" },
+];
+
+const CULTURE_FEEDS = [
+  // 1) 패션 · 아카이브 · 유스컬처
+  {
+    id: "dazed",
+    name: "Dazed Digital",
+    url: "https://www.dazeddigital.com/rss",
+    vertical: "fashion-youth",
+    verticalLabel: "패션 · 유스컬처",
+    domainSlug: "brand-commerce",
+    whyKo: "글로벌 유스컬처와 아방가르드 패션의 최신 미학·브랜드 흐름을 가장 먼저 포착하는 매체입니다.",
+  },
+  {
+    id: "hypebeast",
+    name: "Hypebeast",
+    url: "https://hypebeast.com/feed",
+    vertical: "fashion-youth",
+    verticalLabel: "패션 · 유스컬처",
+    domainSlug: "brand-commerce",
+    whyKo: "스트리트웨어·한정판 드롭·글로벌 브랜드 협업 수요가 실시간으로 집결되는 컬처 허브입니다.",
+  },
+  {
+    id: "highsnobiety",
+    name: "Highsnobiety",
+    url: "https://www.highsnobiety.com/feeds/rss",
+    vertical: "fashion-youth",
+    verticalLabel: "패션 · 유스컬처",
+    domainSlug: "brand-commerce",
+    whyKo: "럭셔리·아카이브 패션과 동시대 디자인 트렌드의 교차점을 선명하게 짚어내는 매거진입니다.",
+  },
+  {
+    id: "putthison",
+    name: "Put This On",
+    url: "https://putthison.com/feed/",
+    vertical: "fashion-youth",
+    verticalLabel: "패션 · 아카이브",
+    domainSlug: "brand-commerce",
+    whyKo: "빈티지 멘즈웨어와 장인정신 아카이브의 소재·실루엣 문법을 깊이 있게 다루는 전문 에디토리얼입니다.",
+  },
+
+  // 2) 시네마 · 연출
+  {
+    id: "letterboxd",
+    name: "Letterboxd Journal",
+    url: "https://letterboxd.com/journal/rss/",
+    vertical: "cinema-directing",
+    verticalLabel: "시네마 · 연출",
+    domainSlug: "cinema-video",
+    whyKo: "전 세계 시네필의 감상 취향, 감독 인터뷰, 큐레이션 리스트 문화가 가장 활발하게 움직이는 저널입니다.",
+  },
+  {
+    id: "indiewire",
+    name: "IndieWire",
+    url: "https://www.indiewire.com/feed/",
+    vertical: "cinema-directing",
+    verticalLabel: "시네마 · 연출",
+    domainSlug: "cinema-video",
+    whyKo: "독립영화 제작·촬영 기법·영화제 화제작과 차세대 영상 배급 흐름을 가장 빠르게 다루는 매체입니다.",
+  },
+  {
+    id: "filmstage",
+    name: "The Film Stage",
+    url: "https://thefilmstage.com/feed/",
+    vertical: "cinema-directing",
+    verticalLabel: "시네마 · 연출",
+    domainSlug: "cinema-video",
+    whyKo: "동시대 작가주의 영화의 미장센, 촬영 감독 노하우, 예고편·사운드트랙 큐레이션에 강점을 가진 매체입니다.",
+  },
+  {
+    id: "mubi",
+    name: "MUBI Notebook",
+    url: "https://mubi.com/en/notebook/posts.rss",
+    vertical: "cinema-directing",
+    verticalLabel: "시네마 · 연출",
+    domainSlug: "cinema-video",
+    whyKo: "영화 비평·포스터 디자인·복원 아카이브 등 고감도 시네마 비주얼 담론을 선도하는 저널입니다.",
+  },
+
+  // 3) 사진 · 시각예술 · 그래픽
+  {
+    id: "itsnicethat",
+    name: "It's Nice That",
+    url: "https://www.itsnicethat.com/rss",
+    fallbackUrl: "https://feeds2.feedburner.com/itsnicethat/SlXC",
+    vertical: "photo-visual-art",
+    verticalLabel: "사진 · 그래픽",
+    domainSlug: "photo-visual",
+    whyKo: "전 세계 그래픽 디자인·타이포그래피·일러스트레이션 신예 작가들의 감각적 작업이 모이는 대표 매체입니다.",
+  },
+  {
+    id: "booooooom",
+    name: "Boooooom",
+    url: "https://www.booooooom.com/feed/",
+    vertical: "photo-visual-art",
+    verticalLabel: "사진 · 시각예술",
+    domainSlug: "photo-visual",
+    whyKo: "동시대 사진·아트·숏필름 크리에이터들의 실험적 비주얼 포트폴리오를 엄선하는 큐레이션 플랫폼입니다.",
+  },
+  {
+    id: "petapixel",
+    name: "PetaPixel",
+    url: "https://petapixel.com/feed/",
+    vertical: "photo-visual-art",
+    verticalLabel: "사진 · 카메라",
+    domainSlug: "photo-visual",
+    whyKo: "필름·디지털 카메라 장비, 렌즈 광학, 사진 보정 워크플로의 실전 변화가 매일 쏟아지는 매체입니다.",
+  },
+  {
+    id: "colossal",
+    name: "Colossal",
+    url: "https://www.thisiscolossal.com/feed/",
+    vertical: "photo-visual-art",
+    verticalLabel: "시각예술 · 공예",
+    domainSlug: "photo-visual",
+    whyKo: "시각예술·설치미술·자연 영감 오브제 등 아날로그 물성과 시각적 경이로움을 소개하는 매거진입니다.",
+  },
+
+  // 4) 음악 · 바이닐 · 사운드테크
+  {
+    id: "bandcamp",
+    name: "Bandcamp Daily",
+    url: "https://daily.bandcamp.com/feed",
+    vertical: "music-sound",
+    verticalLabel: "음악 · 인디 씬",
+    domainSlug: "music-audio",
+    whyKo: "글로벌 인디 레이블·바이닐·로컬 서브컬처 음악 씬의 디깅 문화가 살아 숨 쉬는 음악 저널입니다.",
+  },
+  {
+    id: "cdm",
+    name: "CDM",
+    url: "https://cdm.link/feed/",
+    vertical: "music-sound",
+    verticalLabel: "사운드테크 · 신스",
+    domainSlug: "music-audio",
+    whyKo: "신시사이저·오디오 소프트웨어·오픈소스 악기와 라이브 비주얼 테크놀로지의 최전선을 다루는 매체입니다.",
+  },
+  {
+    id: "pitchfork",
+    name: "Pitchfork",
+    url: "https://pitchfork.com/feed/feed-news/rss",
+    vertical: "music-sound",
+    verticalLabel: "음악 · 앨범 문화",
+    domainSlug: "music-audio",
+    whyKo: "글로벌 인디·일렉트로닉·힙합 앨범 릴리스와 페스티벌·음악 팬덤의 핵심 이슈를 주도하는 매체입니다.",
+  },
+  {
+    id: "stereogum",
+    name: "Stereogum",
+    url: "https://www.stereogum.com/feed/",
+    vertical: "music-sound",
+    verticalLabel: "음악 · 인디 문화",
+    domainSlug: "music-audio",
+    whyKo: "신보 트랙·재발매 아카이브·라이브 공연 씬의 생생한 팬 반응을 빠르게 포착하는 음악 매거진입니다.",
+  },
+
+  // 5) 건축 · 공간 · 오브제
+  {
+    id: "dezeen",
+    name: "Dezeen",
+    url: "https://www.dezeen.com/feed/",
+    vertical: "architecture-object",
+    verticalLabel: "건축 · 공간",
+    domainSlug: "local-archive",
+    whyKo: "세계 최신 건축·인테리어·리테일 공간 디자인과 지속가능 자재 실험이 매일 공개되는 글로벌 디자인 미디어입니다.",
+  },
+  {
+    id: "designboom",
+    name: "designboom",
+    url: "https://www.designboom.com/feed/",
+    vertical: "architecture-object",
+    verticalLabel: "공간 · 오브제",
+    domainSlug: "photo-visual",
+    whyKo: "산업 디자인·전시 파빌리온·하드웨어 오브제의 독창적 형태 실험을 선명한 비주얼로 다루는 매거진입니다.",
+  },
+  {
+    id: "core77",
+    name: "Core77",
+    url: "https://www.core77.com/rss/object.xml",
+    vertical: "architecture-object",
+    verticalLabel: "산업디자인 · 오브제",
+    domainSlug: "brand-commerce",
+    whyKo: "생활 도구·산업 디자인 디테일·제조 공정과 디자이너 워크플로를 실용적 시선으로 해부하는 매체입니다.",
+  },
+
+  // 6) 희귀 사료 · 아트 · 크리에이티브 큐레이션
+  {
+    id: "pdr",
+    name: "The Public Domain Review",
+    url: "https://publicdomainreview.org/rss.xml",
+    vertical: "archive-curation",
+    verticalLabel: "희귀 사료 · 아카이브",
+    domainSlug: "local-archive",
+    whyKo: "저작권이 만료된 고서적·판화·희귀 도감·고전 필름 등 방대한 퍼블릭 도메인 사료를 발굴하는 저널입니다.",
+  },
+  {
+    id: "hyperallergic",
+    name: "Hyperallergic",
+    url: "https://hyperallergic.com/feed/",
+    vertical: "archive-curation",
+    verticalLabel: "아트 · 전시 비평",
+    domainSlug: "local-archive",
+    whyKo: "글로벌 미술관 전시·독립 아트 씬·문화 생태계의 날카로운 비평과 현장 이슈를 전하는 아트 매체입니다.",
+  },
+  {
+    id: "openculture",
+    name: "Open Culture",
+    url: "https://www.openculture.com/feed",
+    vertical: "archive-curation",
+    verticalLabel: "문화 아카이브 · 지식",
+    domainSlug: "local-archive",
+    whyKo: "전 세계 무료 고전 영화·강의·오디오북·박물관 디지털 아카이브를 엄선해 연결하는 큐레이션 매체입니다.",
+  },
+  {
+    id: "kottke",
+    name: "Kottke.org",
+    url: "https://feeds.kottke.org/main",
+    vertical: "archive-curation",
+    verticalLabel: "크리에이티브 큐레이션",
+    domainSlug: "local-archive",
+    whyKo: "예술·과학·웹 문화·디자인의 기발한 교차점을 20년 넘게 선별해 온 고감도 에디토리얼 큐레이션 블로그입니다.",
+  },
 ];
 
 const COOLDOWN_MS = 6 * 60 * 60 * 1000;
@@ -120,18 +342,28 @@ function stripHighlightMarkers(input) {
 function decodeHtml(str) {
   return String(str || "")
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&#(\d+);/g, (_, num) => String.fromCodePoint(Number(num)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&#x27;/g, "'")
-    .replace(/&#x2F;/g, "/")
-    .replace(/&nbsp;/g, " ");
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rdquo;/g, '"')
+    .replace(/&ldquo;/g, '"')
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–")
+    .replace(/&hellip;/g, "…");
 }
 
 function stripTags(html) {
-  return decodeHtml(String(html || "").replace(/<[^>]+>/g, " "))
+  const unwrapped = decodeHtml(String(html || "")).replace(/\]\]>/g, " ");
+  return decodeHtml(unwrapped.replace(/<[^>]+>/g, " "))
+    .replace(/\]\]>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -195,7 +427,10 @@ class FetchGuard {
     }
   }
 
-  async fetchText(url, { accept = "*/*", bypass304 = false, userAgent = USER_AGENT, extraHeaders = {} } = {}) {
+  async fetchText(
+    url,
+    { accept = "*/*", bypass304 = false, userAgent = USER_AGENT, extraHeaders = {}, timeoutMs = 13000 } = {}
+  ) {
     const host = new URL(url).hostname;
     const hostState = this.meta.hosts[host] || {};
     if (hostState.cooldownUntil && Date.now() < Date.parse(hostState.cooldownUntil)) {
@@ -220,7 +455,7 @@ class FetchGuard {
     if (!bypass304 && urlState.lastModified) headers["If-Modified-Since"] = urlState.lastModified;
 
     try {
-      const res = await fetch(url, { headers, signal: AbortSignal.timeout(15000) });
+      const res = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
       if (res.status === 304) {
         this.meta.urls[url] = { ...urlState, lastStatus: 304, lastCheckedAt: new Date().toISOString() };
         return { ok: true, status: 304, cached304: true, text: null };
@@ -449,9 +684,7 @@ function formatShortMetric(builder) {
     const m = builder.tractionLabel.match(/★\s*[\d,.]+[kKmM]?/);
     return m ? `GitHub ${m[0]}` : "GitHub 급상승";
   }
-  if (builder.source === "reddit") {
-    return builder.tractionLabel || "Reddit 화제";
-  }
+  if (builder.source === "reddit") return builder.tractionLabel || "Reddit 화제";
   if (builder.source === "trustmrr") {
     const m = builder.tractionLabel.match(/\$[\d.,]+[kKmM]?(?:\/mo)?/);
     return m ? `TrustMRR ${m[0]}` : "TrustMRR 검증 매출";
@@ -493,6 +726,11 @@ const BAD_MEDIA_PATTERNS = [
   /hits\.seeyoufarm/i,
   /komarev\.com/i,
   /visitor-badge/i,
+  /pixel\.wp\.com/i,
+  /stats\.wordpress\.com/i,
+  /doubleclick\.net/i,
+  /1x1\.(gif|png)/i,
+  /spacer\.(gif|png)/i,
 ];
 
 function isJunkMediaUrl(url) {
@@ -509,7 +747,6 @@ function resolveGithubAssetUrl(rawUrl, owner, repo, branch) {
     const rel = cleaned.replace(/^\.?\//, "");
     return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${rel}`;
   }
-  // Convert github.com/owner/repo/blob/branch/path -> raw.githubusercontent.com
   const blobM = cleaned.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+)$/i);
   if (blobM) {
     return `https://raw.githubusercontent.com/${blobM[1]}/${blobM[2]}/${blobM[3]}/${blobM[4]}`;
@@ -536,16 +773,13 @@ function extractMediaFromReadme(markdown, owner, repo, branch) {
     }
   };
 
-  // Direct GitHub video/attachment URLs on standalone lines or <video src>
   const videoRe = /(?:https?:\/\/[^\s"'<>)]+\.(?:mp4|webm)(?:\?[^\s"'<>)]*)?|https?:\/\/github\.com\/user-attachments\/assets\/[a-zA-Z0-9-]+)/gi;
   let m;
   while ((m = videoRe.exec(markdown)) !== null) pushCandidate(m[0]);
 
-  // HTML <video><source src=...> or <img src=...>
   const htmlSrcRe = /<(?:video|source|img)[^>]+src=["']([^"']+)["']/gi;
   while ((m = htmlSrcRe.exec(markdown)) !== null) pushCandidate(m[1]);
 
-  // Markdown images ![alt](url)
   const mdImgRe = /!\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
   while ((m = mdImgRe.exec(markdown)) !== null) pushCandidate(m[1]);
 
@@ -605,7 +839,6 @@ async function verifyMediaUrl(url, mediaCache) {
     const okStatus = res.status === 200 || res.status === 206;
     const ct = (res.headers.get("content-type") || "").toLowerCase();
     const cl = Number(res.headers.get("content-length") || 0);
-    // Cancel body stream quickly if GET
     try { await res.body?.cancel(); } catch {}
 
     let kind = null;
@@ -634,6 +867,20 @@ async function verifyMediaUrl(url, mediaCache) {
     };
     return null;
   }
+}
+
+async function runPool(items, concurrency, fn) {
+  const results = new Array(items.length);
+  let cursor = 0;
+  async function worker() {
+    while (cursor < items.length) {
+      const idx = cursor;
+      cursor += 1;
+      results[idx] = await fn(items[idx], idx);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, () => worker()));
+  return results;
 }
 
 // ── 1) AI Radar ──────────────────────────────────────────────────────────────
@@ -732,7 +979,262 @@ async function syncAiRadar(guard, existingItems, mediaCache) {
   };
 }
 
-// ── 2) GitHub Recent Trending Open-Source Repos + README Demo Media ──────────
+// ── 2) Global High-Taste Culture RSS / Atom Collector ────────────────────────
+
+function extractRssImageCandidates(block, baseUrl) {
+  const candidates = [];
+  const seen = new Set();
+  const push = (raw) => {
+    if (!raw) return;
+    try {
+      const resolved = new URL(decodeHtml(raw.trim()), baseUrl).toString();
+      if (!seen.has(resolved) && !isJunkMediaUrl(resolved)) {
+        seen.add(resolved);
+        candidates.push(resolved);
+      }
+    } catch {}
+  };
+
+  // <media:content url="..."> & <media:thumbnail url="...">
+  const mediaRe = /<media:(?:content|thumbnail)[^>]+url=["']([^"']+)["'][^>]*>/gi;
+  let m;
+  while ((m = mediaRe.exec(block)) !== null) push(m[1]);
+
+  // <enclosure url="..." type="image/...">
+  const encRe = /<enclosure[^>]+url=["']([^"']+)["'][^>]*>/gi;
+  while ((m = encRe.exec(block)) !== null) {
+    if (!/audio|video/i.test(m[0]) || /\.(jpe?g|png|webp|gif)/i.test(m[1])) push(m[1]);
+  }
+
+  // First <img> inside decoded content/description
+  const decoded = decodeHtml(block);
+  const imgRe = /<img[^>]+src=["']([^"']+)["']/gi;
+  while ((m = imgRe.exec(decoded)) !== null) {
+    push(m[1]);
+    if (candidates.length >= 4) break;
+  }
+
+  return candidates;
+}
+
+function parseCultureXml(xml, feed) {
+  const isAtom = /<entry[\s>]/i.test(xml) && !/<item[\s>]/i.test(xml);
+  const blocks = isAtom
+    ? xml.match(/<entry[\s>][\s\S]*?<\/entry>/gi) || []
+    : xml.match(/<item[\s>][\s\S]*?<\/item>/gi) || [];
+
+  const parsed = [];
+  const seen = new Set();
+  const nowIso = new Date().toISOString();
+
+  for (const block of blocks) {
+    if (parsed.length >= 8) break;
+    const titleM = block.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+    const titleEn = stripHighlightMarkers(stripTags(titleM ? titleM[1] : ""));
+    if (!titleEn || titleEn.length < 6) continue;
+
+    let link = "";
+    if (isAtom) {
+      const altLink = block.match(/<link[^>]+rel=["']alternate["'][^>]+href=["']([^"']+)["']/i)
+        || block.match(/<link[^>]+href=["']([^"']+)["']/i);
+      link = altLink ? decodeHtml(altLink[1]).trim() : "";
+    } else {
+      const linkM = block.match(/<link[^>]*>([\s\S]*?)<\/link>/i);
+      const guidM = block.match(/<guid[^>]*>([\s\S]*?)<\/guid>/i);
+      link = stripTags(linkM ? linkM[1] : "") || stripTags(guidM ? guidM[1] : "");
+    }
+    if (!isValidHttpUrl(link)) continue;
+    const normLink = link.toLowerCase().replace(/\/+$/, "");
+    if (seen.has(normLink)) continue;
+    seen.add(normLink);
+
+    const descM =
+      block.match(/<content:encoded[^>]*>([\s\S]*?)<\/content:encoded>/i) ||
+      block.match(/<description[^>]*>([\s\S]*?)<\/description>/i) ||
+      block.match(/<summary[^>]*>([\s\S]*?)<\/summary>/i) ||
+      block.match(/<content[^>]*>([\s\S]*?)<\/content>/i);
+    const rawExcerpt = stripHighlightMarkers(stripTags(descM ? descM[1] : ""));
+    const excerptEn = (rawExcerpt || titleEn).slice(0, 220);
+
+    const dateM =
+      block.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) ||
+      block.match(/<published[^>]*>([\s\S]*?)<\/published>/i) ||
+      block.match(/<updated[^>]*>([\s\S]*?)<\/updated>/i) ||
+      block.match(/<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i);
+    let publishedAt = nowIso;
+    if (dateM) {
+      const d = new Date(stripTags(dateM[1]));
+      if (!Number.isNaN(d.getTime())) publishedAt = d.toISOString();
+    }
+
+    const catMatches = [...block.matchAll(/<category[^>]*>([\s\S]*?)<\/category>/gi)]
+      .map((cm) => stripHighlightMarkers(stripTags(cm[1])))
+      .filter((t) => t.length >= 2 && t.length <= 28)
+      .slice(0, 4);
+
+    const imgCandidates = extractRssImageCandidates(block, link);
+    let sourceDomain = "";
+    try {
+      sourceDomain = new URL(link).hostname.replace(/^www\./, "");
+    } catch {
+      sourceDomain = new URL(feed.url).hostname.replace(/^www\./, "");
+    }
+
+    parsed.push({
+      id: `culture-${feed.id}-${shortHash(link)}`,
+      titleEn,
+      titleKo: titleEn,
+      sourceId: feed.id,
+      sourceName: feed.name,
+      sourceDomain,
+      cultureVertical: feed.vertical,
+      cultureVerticalLabel: feed.verticalLabel,
+      domainSlug: feed.domainSlug,
+      canonicalUrl: link,
+      publishedAt,
+      fetchedAt: nowIso,
+      excerptEn,
+      phenomenonKo: excerptEn,
+      whyTrendingKo: feed.whyKo,
+      previewImageUrl: null,
+      _imgCandidates: imgCandidates,
+      tags: Array.from(new Set([feed.vertical, feed.id, ...catMatches])).slice(0, 6),
+    });
+  }
+  return parsed;
+}
+
+async function syncCultureFeeds(guard, existingCultureItems, mediaCache) {
+  const existingBySource = new Map();
+  for (const it of existingCultureItems) {
+    const arr = existingBySource.get(it.sourceId) || [];
+    arr.push(it);
+    existingBySource.set(it.sourceId, arr);
+  }
+
+  const perFeedReports = [];
+
+  // Fetch distinct domains in parallel (concurrency 6) while keeping per-host jitter & circuit breaker
+  const results = await runPool(CULTURE_FEEDS, 6, async (feed) => {
+    const prevForFeed = existingBySource.get(feed.id) || [];
+    let res = await guard.fetchText(feed.url, {
+      accept: "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.5",
+      bypass304: prevForFeed.length === 0,
+      timeoutMs: 12000,
+    });
+
+    if ((!res.ok || (!res.cached304 && !res.text)) && feed.fallbackUrl) {
+      res = await guard.fetchText(feed.fallbackUrl, {
+        accept: "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.5",
+        bypass304: prevForFeed.length === 0,
+        timeoutMs: 12000,
+      });
+    }
+
+    if (res.cached304 && prevForFeed.length > 0) {
+      return {
+        feed,
+        status: 304,
+        cached304: true,
+        items: prevForFeed.slice(0, 8),
+        note: "304 cached",
+      };
+    }
+
+    if (!res.ok || !res.text) {
+      return {
+        feed,
+        status: res.status || 0,
+        cached304: false,
+        items: prevForFeed.slice(0, 8),
+        note: res.skippedReason || "skipped",
+      };
+    }
+
+    const parsed = parseCultureXml(res.text, feed);
+
+    // Verify editorial preview image for each item (RSS media first, then optional og:image for top 2 missing)
+    let ogFetched = 0;
+    for (const item of parsed) {
+      const cands = item._imgCandidates || [];
+      for (const imgUrl of cands.slice(0, 2)) {
+        const checked = await verifyMediaUrl(imgUrl, mediaCache);
+        if (checked && (checked.kind === "image" || checked.kind === "gif")) {
+          item.previewImageUrl = checked.url;
+          break;
+        }
+      }
+      if (!item.previewImageUrl && ogFetched < 2 && !guard.isCoolingDown(item.canonicalUrl)) {
+        ogFetched += 1;
+        const pageRes = await guard.fetchText(item.canonicalUrl, {
+          accept: "text/html,application/xhtml+xml",
+          bypass304: true,
+          timeoutMs: 8000,
+        });
+        if (pageRes.ok && pageRes.text) {
+          const { images } = extractOpenGraphMedia(pageRes.text.slice(0, 35000), item.canonicalUrl);
+          for (const ogImg of images.slice(0, 2)) {
+            const checked = await verifyMediaUrl(ogImg, mediaCache);
+            if (checked && (checked.kind === "image" || checked.kind === "gif")) {
+              item.previewImageUrl = checked.url;
+              break;
+            }
+          }
+        }
+      }
+      delete item._imgCandidates;
+    }
+
+    return {
+      feed,
+      status: res.status || 200,
+      cached304: false,
+      items: parsed.length > 0 ? parsed : prevForFeed.slice(0, 8),
+      note: `${parsed.length} items (${parsed.filter((x) => x.previewImageUrl).length} img)`,
+    };
+  });
+
+  // Deduplicate by canonicalUrl while preserving balanced round-robin diversity
+  const seenUrl = new Set();
+  const byFeedLists = [];
+  for (const r of results) {
+    perFeedReports.push({
+      id: `culture_${r.feed.id}`,
+      label: `${r.feed.name} (${r.feed.verticalLabel})`,
+      status: r.status,
+      count: r.items.length,
+      cached304: r.cached304,
+      note: r.note,
+    });
+    if (r.items.length > 0) {
+      byFeedLists.push([...r.items]);
+    }
+  }
+
+  const interleaved = [];
+  let more = true;
+  while (more) {
+    more = false;
+    for (const list of byFeedLists) {
+      if (list.length > 0) {
+        const it = list.shift();
+        const key = it.canonicalUrl.toLowerCase().replace(/\/+$/, "");
+        if (!seenUrl.has(key)) {
+          seenUrl.add(key);
+          interleaved.push(it);
+        }
+        more = true;
+      }
+    }
+  }
+
+  return {
+    items: interleaved,
+    reports: perFeedReports,
+  };
+}
+
+// ── 3) GitHub Recent Trending Open-Source Repos + README Demo Media ──────────
 
 async function syncGithubTrending(guard, existingBySource, mediaCache) {
   const repos = [];
@@ -782,7 +1284,6 @@ async function syncGithubTrending(guard, existingBySource, mediaCache) {
     let previewImageUrl = null;
     let mediaSourceLabel = null;
 
-    // Fetch raw README.md to extract real demo .mp4/.webm/.gif/screenshot
     const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repoName}/${branch}/README.md`;
     const readmeRes = await guard.fetchText(readmeUrl, { accept: "text/plain", bypass304: true });
     if (readmeRes.ok && readmeRes.text) {
@@ -865,7 +1366,7 @@ async function syncGithubTrending(guard, existingBySource, mediaCache) {
   };
 }
 
-// ── 3) Reddit (r/SideProject, r/LocalLLaMA) ──────────────────────────────────
+// ── 4) Reddit (r/SideProject, r/LocalLLaMA) ──────────────────────────────────
 
 async function syncReddit(guard, existingBySource, mediaCache) {
   const out = [];
@@ -977,7 +1478,7 @@ async function syncReddit(guard, existingBySource, mediaCache) {
   };
 }
 
-// ── 4) Show HN ───────────────────────────────────────────────────────────────
+// ── 5) Show HN ───────────────────────────────────────────────────────────────
 
 function parseShowHnTitle(rawTitle) {
   const cleaned = stripHighlightMarkers(rawTitle).replace(/^Show\s+HN\s*[:–—-]\s*/i, "").trim();
@@ -1069,7 +1570,7 @@ async function syncShowHn(guard, existingBySource) {
   };
 }
 
-// ── 5) Product Hunt ──────────────────────────────────────────────────────────
+// ── 6) Product Hunt ──────────────────────────────────────────────────────────
 
 async function syncProductHunt(guard, existingBySource) {
   const res = await guard.fetchText(PRODUCT_HUNT_FEED_URL, {
@@ -1146,7 +1647,7 @@ async function syncProductHunt(guard, existingBySource) {
   };
 }
 
-// ── 6) TrustMRR ──────────────────────────────────────────────────────────────
+// ── 7) TrustMRR ──────────────────────────────────────────────────────────────
 
 async function syncTrustMrr(guard, existingBySource) {
   const res = await guard.fetchText(TRUSTMRR_URL, {
@@ -1243,7 +1744,7 @@ async function syncTrustMrr(guard, existingBySource) {
   };
 }
 
-// ── 7) Uneed ─────────────────────────────────────────────────────────────────
+// ── 8) Uneed ─────────────────────────────────────────────────────────────────
 
 async function syncUneed(guard, existingBySource) {
   const res = await guard.fetchText(UNEED_URL, {
@@ -1337,14 +1838,13 @@ async function syncUneed(guard, existingBySource) {
 async function enrichBuilderOpenGraphMedia(builders, guard, mediaCache) {
   let inspected = 0;
   let foundCount = 0;
-  const MAX_INSPECT = 28;
+  const MAX_INSPECT = 24;
 
   for (const b of builders) {
     if (b.demoVideoUrl || b.previewImageUrl) continue;
     if (inspected >= MAX_INSPECT) break;
     if (!isValidHttpUrl(b.url)) continue;
 
-    // If a Show HN / Reddit item links directly to a GitHub repo, inspect its README!
     const ghMatch = b.url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/?#]+)/i);
     if (ghMatch) {
       inspected += 1;
@@ -1383,7 +1883,6 @@ async function enrichBuilderOpenGraphMedia(builders, guard, mediaCache) {
       continue;
     }
 
-    // Skip reddit self-links and producthunt redirect pages that block bots
     if (/reddit\.com|news\.ycombinator\.com/i.test(b.url)) continue;
     if (guard.isCoolingDown(b.url)) continue;
 
@@ -1418,7 +1917,7 @@ async function enrichBuilderOpenGraphMedia(builders, guard, mediaCache) {
   return foundCount;
 }
 
-// ── Seed Construction (Gemini Flash > Curated 50 Seeds > Deterministic) ──────
+// ── Seed Construction (Gemini 50:50 > Curated 60 1:1 > Deterministic) ────────
 
 const CADENCES = [
   "3~5일 MVP",
@@ -1441,27 +1940,39 @@ function hydratePairingToTreatment({
   pairing,
   builder,
   radar,
+  culture,
   domain,
   index,
   synthesisMode,
   nowIso,
 }) {
+  const track = pairing.track === "culture" && culture ? "culture" : "tech";
   const mechId = builder.mechanism || "drop-validation";
   const mech = MECHANISM_BY_ID[mechId] || MECHANISM_RULES[0];
-  const hash = fnv1a(`${domain.slug}|${builder.id}|${radar.id}|${pairing.title}|${index}`);
-  const id = `tr-${slugify(domain.slug).slice(0, 8)}-${slugify(builder.name).slice(0, 14)}-${hash.toString(36).slice(0, 6)}`;
+  const secondaryId = track === "culture" ? culture.id : radar.id;
+  const hash = fnv1a(`${track}|${domain.slug}|${builder.id}|${secondaryId}|${pairing.title}|${index}`);
+  const id = `tr-${track === "culture" ? "cul" : "tec"}-${slugify(builder.name).slice(0, 14)}-${hash.toString(36).slice(0, 6)}`;
   const cleanTitle = stripHighlightMarkers(pairing.title);
   const title = cleanTitle.endsWith("?") ? cleanTitle : `${cleanTitle}?`;
 
+  // Visual media priority: Builder demoVideo -> Builder previewImage -> Culture/Radar previewImage
   const demoVideoUrl = builder.demoVideoUrl || null;
-  const previewImageUrl = builder.previewImageUrl || radar.thumbnailUrl || null;
-  const mediaSourceLabel = demoVideoUrl
-    ? builder.mediaSourceLabel || "원본 기술 시연 영상"
-    : builder.previewImageUrl
-      ? builder.mediaSourceLabel || "프로덕트 실물 화면"
-      : radar.thumbnailUrl
-        ? "이슈 기사 이미지"
-        : null;
+  let previewImageUrl = null;
+  let mediaSourceLabel = null;
+
+  if (demoVideoUrl) {
+    mediaSourceLabel = builder.mediaSourceLabel || "원본 기술 시연 영상";
+    previewImageUrl = builder.previewImageUrl || (track === "culture" ? culture.previewImageUrl : radar.thumbnailUrl) || null;
+  } else if (builder.previewImageUrl) {
+    previewImageUrl = builder.previewImageUrl;
+    mediaSourceLabel = builder.mediaSourceLabel || "프로덕트 실물 화면";
+  } else if (track === "culture" && culture.previewImageUrl) {
+    previewImageUrl = culture.previewImageUrl;
+    mediaSourceLabel = `컬처 이슈 이미지 · ${culture.sourceName}`;
+  } else if (track === "tech" && radar.thumbnailUrl) {
+    previewImageUrl = radar.thumbnailUrl;
+    mediaSourceLabel = "이슈 기사 이미지";
+  }
 
   const techDigestKo = pairing.techDigestKo?.inputKo
     ? {
@@ -1475,13 +1986,46 @@ function hydratePairingToTreatment({
   const builderSummaryKo = stripHighlightMarkers(
     pairing.builderSummaryKo || builder.taglineKo || builder.summaryKo
   );
-  const radarSummaryKo = stripHighlightMarkers(
-    pairing.radarSummaryKo || radar.whatKo || radar.highlightSummary
-  );
+
+  const sampleB =
+    track === "culture"
+      ? {
+          radarId: culture.id,
+          titleKo: stripHighlightMarkers(pairing.cultureTitleKo || culture.titleKo),
+          canonicalUrl: culture.canonicalUrl,
+          platformId: culture.sourceName,
+          sourceType: "culture",
+          cultureVerticalLabel: culture.cultureVerticalLabel,
+          signalType: culture.cultureVertical,
+          productDomain: culture.domainSlug,
+          summaryKo: stripHighlightMarkers(pairing.radarSummaryKo || culture.phenomenonKo),
+          benchmarkPoint: stripHighlightMarkers(culture.cultureVerticalLabel),
+          bottleneckSolvedKo: stripHighlightMarkers(
+            `${culture.sourceName}에서 포착된 '${culture.titleKo}' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. ${pairing.radarSummaryKo || culture.phenomenonKo}`
+          ),
+        }
+      : {
+          radarId: radar.id,
+          titleKo: radar.titleKo,
+          canonicalUrl: radar.canonicalUrl,
+          platformId: radar.platformId,
+          sourceType: "ai_radar",
+          cultureVerticalLabel: null,
+          signalType: radar.planningMeta.signalType,
+          productDomain: radar.planningMeta.productDomain,
+          summaryKo: stripHighlightMarkers(
+            pairing.radarSummaryKo || radar.whatKo || radar.highlightSummary
+          ),
+          benchmarkPoint: radar.planningMeta.benchmarkPoint,
+          bottleneckSolvedKo: stripHighlightMarkers(
+            `${radar.titleKo} 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. ${pairing.radarSummaryKo || radar.whatKo}`
+          ),
+        };
 
   return {
     id,
     slug: id,
+    track,
     createdAt: nowIso,
     updatedAt: nowIso,
     domainSlug: domain.slug,
@@ -1494,6 +2038,9 @@ function hydratePairingToTreatment({
       pairing.firstThreeSecondsUx || `회원가입 없이 첫 화면에서 바로 체험할 수 있습니다. ${pairing.oneLineHook}`
     ),
     fusionStoryKo: stripHighlightMarkers(pairing.fusionStoryKo),
+    highlightPhrases: Array.isArray(pairing.highlightPhrases)
+      ? pairing.highlightPhrases.map(stripHighlightMarkers).filter(Boolean).slice(0, 3)
+      : [],
     buildCadence: stripHighlightMarkers(pairing.buildCadence) || CADENCES[hash % CADENCES.length],
     demoVideoUrl,
     previewImageUrl,
@@ -1516,19 +2063,7 @@ function hydratePairingToTreatment({
       ),
     },
     sampleA2: null,
-    sampleB: {
-      radarId: radar.id,
-      titleKo: radar.titleKo,
-      canonicalUrl: radar.canonicalUrl,
-      platformId: radar.platformId,
-      signalType: radar.planningMeta.signalType,
-      productDomain: radar.planningMeta.productDomain,
-      summaryKo: radarSummaryKo,
-      benchmarkPoint: radar.planningMeta.benchmarkPoint,
-      bottleneckSolvedKo: stripHighlightMarkers(
-        `${radar.titleKo} 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. ${radarSummaryKo}`
-      ),
-    },
+    sampleB,
     twistSummaryKo: stripHighlightMarkers(pairing.oneLineHook),
     mvpFeatures: pairing.mvpFeatures.slice(0, 3).map((f) => stripHighlightMarkers(f)),
     scopeCutoff: pairing.scopeCutoff
@@ -1558,7 +2093,7 @@ function hydratePairingToTreatment({
   };
 }
 
-function buildFallbackTreatments(builders, radars, domains) {
+function buildInterleavedFallback(builders, radars, cultures, domains, targetCount = 60) {
   const config = readJson(BLUEPRINTS_PATH, { domains: [], blueprints: {} });
   const blueprintsMap = config.blueprints || {};
   const nowIso = new Date().toISOString();
@@ -1566,38 +2101,52 @@ function buildFallbackTreatments(builders, radars, domains) {
   for (const domain of domains) {
     const mechMap = blueprintsMap[domain.slug] || {};
     for (const mechId of Object.keys(mechMap)) {
-      for (const bp of mechMap[mechId] || []) {
-        slots.push({ domain, mechId, bp });
-      }
+      for (const bp of mechMap[mechId] || []) slots.push({ domain, mechId, bp });
     }
   }
 
   const out = [];
-  for (let i = 0; i < Math.min(50, Math.max(slots.length, 50)); i += 1) {
+  for (let i = 0; i < targetCount; i += 1) {
+    const isCulture = i % 2 === 1 && cultures.length > 0;
     const slot = slots[i % slots.length];
     const builder = builders[i % builders.length];
     const radar = radars[(i * 3) % radars.length];
+    const culture = cultures.length > 0 ? cultures[Math.floor(i / 2) % cultures.length] : null;
+    const domain = isCulture && culture
+      ? domains.find((d) => d.slug === culture.domainSlug) || slot.domain
+      : slot.domain;
+
     const rawTitle = stripHighlightMarkers(slot.bp.title).replace(/[.!]+$/, "");
-    const qTitle = rawTitle.endsWith("?") ? rawTitle : `${rawTitle} 웹을 만들어본다면?`;
-    const story = `${builder.name}(${formatShortMetric(builder)})이 입증한 '${stripHighlightMarkers(builder.taglineKo || builder.summaryKo)}' 구조에 최근 AI Radar에서 화제인 '${radar.titleKo}' 흐름을 결합했습니다. 예전에는 수작업과 무거운 설정이 필요했던 작업을 최신 모델·오픈소스 파이프라인으로 덜어내어, 방문자가 로그인 없이 첫 화면에서 바로 결과를 확인할 수 있게 압축했습니다. 1차 버전은 핵심 워크플로 3가지만 빠르게 검증해 1주일 안에 배포합니다.`;
+    const qTitle = isCulture && culture
+      ? `${culture.sourceName} 감각의 ${rawTitle} 웹을 만들어본다면?`
+      : rawTitle.endsWith("?")
+        ? rawTitle
+        : `${rawTitle} 웹을 만들어본다면?`;
+
+    const story = isCulture && culture
+      ? `${builder.name}(${formatShortMetric(builder)})이 입증한 기술 구조에 ${culture.sourceName}에서 다룬 '${culture.titleKo}' 글로벌 컬처 흐름을 이종교배했습니다. ${culture.phenomenonKo} 이 문화적 취향과 디깅 욕구를 별도 로그인 없는 웹 경험으로 압축해, 방문자가 첫 화면에서 즉시 자신만의 아카이브나 창작 결과물을 얻도록 설계했습니다. 첫 버전은 핵심 인터랙션 3가지만 빠르게 검증해 1주일 안에 출시합니다.`
+      : `${builder.name}(${formatShortMetric(builder)})의 핵심 구조에 최근 AI Radar에서 화제인 '${radar.titleKo}' 흐름을 결합했습니다. 예전에는 수작업이 필요했던 구간을 최신 파이프라인으로 자동화해, 방문자가 로그인 없이 첫 화면에서 즉시 결과를 얻게 압축했습니다. 1차 버전은 핵심 워크플로 3가지만 담아 1주일 안에 배포합니다.`;
 
     out.push(
       hydratePairingToTreatment({
         pairing: {
+          track: isCulture ? "culture" : "tech",
           title: qTitle,
           oneLineHook: slot.bp.hook,
           firstThreeSecondsUx: `회원가입 없이 첫 화면에서 바로 써볼 수 있습니다. ${slot.bp.hook}`,
           fusionStoryKo: story,
+          highlightPhrases: [],
           builderSummaryKo: builder.taglineKo || builder.summaryKo,
-          radarSummaryKo: radar.whatKo || radar.highlightSummary,
+          radarSummaryKo: isCulture && culture ? culture.phenomenonKo : radar.whatKo || radar.highlightSummary,
           techDigestKo: builder.techDigestKo,
           mvpFeatures: slot.bp.features,
-          scopeCutoff: slot.domain.cutoffs?.[0] || "초기 버전에서는 회원가입과 복잡한 관리자 기능을 제외합니다.",
+          scopeCutoff: domain.cutoffs?.[0] || "초기 버전에서는 회원가입과 복잡한 관리자 기능을 제외합니다.",
           buildCadence: CADENCES[i % CADENCES.length],
         },
         builder,
         radar,
-        domain: slot.domain,
+        culture,
+        domain,
         index: i,
         synthesisMode: "deterministic",
         nowIso,
@@ -1617,30 +2166,34 @@ async function main() {
 
   const prevRadar = readJson(path.join(PUBLIC_DATA, "ai-radar-signals.json"), { items: [] }).items || [];
   const prevBuilders = readJson(path.join(PUBLIC_DATA, "builder-signals.json"), { items: [] }).items || [];
+  const prevCultures = readJson(path.join(PUBLIC_DATA, "culture-signals.json"), { items: [] }).items || [];
   const prevBySource = (src) => prevBuilders.filter((b) => b.source === src);
 
-  console.log("[DISPENSER sync] 1/7 Fetching AI Radar planning-feed + live-feed (with thumbnails)...");
+  console.log("[DISPENSER sync] 1/8 Fetching AI Radar planning-feed + live-feed (with thumbnails)...");
   const radarResult = await syncAiRadar(guard, prevRadar, mediaCache);
 
-  console.log("[DISPENSER sync] 2/7 Fetching GitHub recent trending open-source repos + README media...");
+  console.log("[DISPENSER sync] 2/8 Fetching Global High-Taste Culture RSS/Atom feeds (23 outlets, parallel)...");
+  const cultureResult = await syncCultureFeeds(guard, prevCultures, mediaCache);
+
+  console.log("[DISPENSER sync] 3/8 Fetching GitHub recent trending open-source repos + README media...");
   const githubResult = await syncGithubTrending(guard, prevBySource("github_trending"), mediaCache);
 
-  console.log("[DISPENSER sync] 3/7 Fetching Reddit r/SideProject + r/LocalLLaMA...");
+  console.log("[DISPENSER sync] 4/8 Fetching Reddit r/SideProject + r/LocalLLaMA...");
   const redditResult = await syncReddit(guard, prevBySource("reddit"), mediaCache);
 
-  console.log("[DISPENSER sync] 4/7 Fetching Show HN Algolia API...");
+  console.log("[DISPENSER sync] 5/8 Fetching Show HN Algolia API...");
   const showHnResult = await syncShowHn(guard, prevBySource("show_hn"));
 
-  console.log("[DISPENSER sync] 5/7 Fetching Product Hunt Atom feed...");
+  console.log("[DISPENSER sync] 6/8 Fetching Product Hunt Atom feed...");
   const phResult = await syncProductHunt(guard, prevBySource("product_hunt"));
 
-  console.log("[DISPENSER sync] 6/7 Fetching TrustMRR SSR HTML...");
+  console.log("[DISPENSER sync] 7/8 Fetching TrustMRR SSR HTML...");
   const trustResult = await syncTrustMrr(guard, prevBySource("trustmrr"));
 
-  console.log("[DISPENSER sync] 7/7 Fetching Uneed SSR HTML...");
+  console.log("[DISPENSER sync] 8/8 Fetching Uneed SSR HTML...");
   const uneedResult = await syncUneed(guard, prevBySource("uneed"));
 
-  // Preserve previously verified media URLs if URL matches
+  // Preserve previously verified builder media URLs if URL matches
   const prevMediaByUrl = new Map();
   for (const pb of prevBuilders) {
     if (pb.demoVideoUrl || pb.previewImageUrl) {
@@ -1675,13 +2228,18 @@ async function main() {
     }
   }
   const builders = Array.from(mergedMap.values());
+  const cultures = cultureResult.items;
 
   console.log("[DISPENSER sync] Enriching OpenGraph / README demo media for top builders...");
   const ogMediaFound = await enrichBuilderOpenGraphMedia(builders, guard, mediaCache);
 
-  console.log(`[DISPENSER sync] Translating ${builders.length} builder taglines (cached)...`);
+  console.log(`[DISPENSER sync] Translating ${builders.length} builders + ${cultures.length} global culture signals (cached)...`);
   await translateBatchToKo(
-    builders.map((b) => b.taglineEn),
+    [
+      ...builders.map((b) => b.taglineEn),
+      ...cultures.map((c) => c.titleEn),
+      ...cultures.map((c) => c.excerptEn),
+    ],
     translationCache,
     guard
   );
@@ -1700,28 +2258,39 @@ async function main() {
     b.techDigestKo = buildTechDigestForBuilder(b);
   }
 
+  for (const c of cultures) {
+    c.titleKo = getTranslated(c.titleEn, translationCache);
+    const exKo = getTranslated(c.excerptEn, translationCache);
+    c.phenomenonKo = stripHighlightMarkers(exKo || c.titleKo).slice(0, 220);
+  }
+
   const domains = readJson(BLUEPRINTS_PATH, { domains: [] }).domains || [];
   const domainBySlug = Object.fromEntries(domains.map((d) => [d.slug, d]));
   const builderById = new Map(builders.map((b) => [b.id, b]));
   const radarById = new Map(radarResult.items.map((r) => [r.id, r]));
+  const cultureById = new Map(cultures.map((c) => [c.id, c]));
   const nowIso = new Date().toISOString();
 
   let treatments = [];
 
-  // Mode 1: Gemini 2.5 Flash Smart Pairer when GEMINI_API_KEY is present
+  // Mode 1: Gemini 2.5 Flash 50:50 Dual-Track Smart Pairer when GEMINI_API_KEY is set
   const geminiPairings = await pairSignalsWithGemini({
     builders,
     radars: radarResult.items,
-    targetTotal: 50,
+    cultures,
+    targetTotal: 60,
   });
 
-  if (geminiPairings && geminiPairings.length >= 10) {
-    console.log(`[DISPENSER sync] Gemini Flash generated ${geminiPairings.length} smart pairings!`);
+  if (geminiPairings && geminiPairings.length >= 16) {
+    console.log(`[DISPENSER sync] Gemini Flash generated ${geminiPairings.length} dual-track pairings!`);
     treatments = geminiPairings.map((p, idx) =>
       hydratePairingToTreatment({
         pairing: p,
         builder: builderById.get(p.builderId) || builders[idx % builders.length],
         radar: radarById.get(p.radarId) || radarResult.items[idx % radarResult.items.length],
+        culture: p.cultureId
+          ? cultureById.get(p.cultureId) || cultures[idx % Math.max(1, cultures.length)]
+          : cultures[idx % Math.max(1, cultures.length)],
         domain: domainBySlug[p.domainSlug] || domains[idx % domains.length],
         index: idx,
         synthesisMode: "llm-gemini",
@@ -1730,16 +2299,17 @@ async function main() {
     );
   }
 
-  // Mode 2: Curated 50 human-planner seeds hydrated with freshest live signals & verified media
-  if (treatments.length < 50 && fs.existsSync(CURATED_SEEDS_PATH)) {
+  // Mode 2: Curated 60 seeds (30 Tech + 30 Culture interleaved 1:1)
+  if (treatments.length < 60 && fs.existsSync(CURATED_SEEDS_PATH)) {
     const curatedData = readJson(CURATED_SEEDS_PATH, { items: [] });
     const curatedItems = Array.isArray(curatedData.items) ? curatedData.items : [];
     const seenTitles = new Set(treatments.map((t) => t.title));
-    console.log(`[DISPENSER sync] Hydrating ${curatedItems.length} curated planner seeds with live media...`);
+    console.log(`[DISPENSER sync] Hydrating ${curatedItems.length} curated seeds with live signals & media...`);
 
-    for (let i = 0; i < curatedItems.length && treatments.length < 50; i += 1) {
+    for (let i = 0; i < curatedItems.length && treatments.length < 60; i += 1) {
       const c = curatedItems[i];
       if (!c?.title || seenTitles.has(c.title)) continue;
+      const track = c.track === "culture" ? "culture" : "tech";
       const builder =
         builderById.get(c.builderId) ||
         builders.find((b) => b.name.toLowerCase() === String(c.builderName || "").toLowerCase()) ||
@@ -1747,14 +2317,20 @@ async function main() {
       const radar =
         radarById.get(c.radarId) ||
         radarResult.items[i % radarResult.items.length];
+      const culture =
+        (c.cultureId ? cultureById.get(c.cultureId) : null) ||
+        (c.cultureSourceId ? cultures.find((cs) => cs.sourceId === c.cultureSourceId) : null) ||
+        cultures[i % Math.max(1, cultures.length)] ||
+        null;
       const domain = domainBySlug[c.domainSlug] || domains[i % domains.length];
 
       seenTitles.add(c.title);
       treatments.push(
         hydratePairingToTreatment({
-          pairing: c,
+          pairing: { ...c, track },
           builder,
           radar,
+          culture,
           domain,
           index: treatments.length,
           synthesisMode: "curated",
@@ -1764,12 +2340,12 @@ async function main() {
     }
   }
 
-  // Mode 3: Deterministic fallback if curated seeds don't exist yet
-  if (treatments.length < 50) {
-    const fallback = buildFallbackTreatments(builders, radarResult.items, domains);
+  // Mode 3: Interleaved 50:50 deterministic fill if needed
+  if (treatments.length < 60) {
+    const fallback = buildInterleavedFallback(builders, radarResult.items, cultures, domains, 60);
     const seenTitles = new Set(treatments.map((t) => t.title));
     for (const item of fallback) {
-      if (treatments.length >= 50) break;
+      if (treatments.length >= 60) break;
       if (seenTitles.has(item.title)) continue;
       seenTitles.add(item.title);
       treatments.push(item);
@@ -1778,18 +2354,35 @@ async function main() {
 
   const bySource = {};
   for (const b of builders) bySource[b.source] = (bySource[b.source] || 0) + 1;
+  const cultureBySource = {};
+  const cultureDomainSet = new Set();
+  for (const c of cultures) {
+    cultureBySource[c.sourceName] = (cultureBySource[c.sourceName] || 0) + 1;
+    if (c.sourceDomain) cultureDomainSet.add(c.sourceDomain);
+  }
   const verifiedMediaCount = builders.filter((b) => b.demoVideoUrl || b.previewImageUrl).length;
+  const verifiedCultureMediaCount = cultures.filter((c) => c.previewImageUrl).length;
+  const techSeedCount = treatments.filter((t) => t.track === "tech").length;
+  const cultureSeedCount = treatments.filter((t) => t.track === "culture").length;
 
   const syncedAt = nowIso;
   const syncMeta = {
     syncedAt,
     counts: {
       aiRadar: radarResult.items.length,
+      cultureTotal: cultures.length,
+      cultureDomains: cultureDomainSet.size,
       builderTotal: builders.length,
       bySource,
+      cultureBySource,
       verifiedRevenueCount: builders.filter((b) => b.verifiedRevenue).length,
       verifiedMediaCount,
+      verifiedCultureMediaCount,
       treatmentsSeed: treatments.length,
+      treatmentsByTrack: {
+        tech: techSeedCount,
+        culture: cultureSeedCount,
+      },
     },
     sources: [
       { id: "ai_radar", label: "AI Radar (GitHub Raw)", status: radarResult.status, count: radarResult.items.length, cached304: Boolean(radarResult.cached304), note: radarResult.note },
@@ -1799,19 +2392,31 @@ async function main() {
       { id: "product_hunt", label: "Product Hunt Atom Feed", status: phResult.status, count: bySource.product_hunt || 0, cached304: Boolean(phResult.cached304), note: phResult.note },
       { id: "trustmrr", label: "TrustMRR SSR", status: trustResult.status, count: bySource.trustmrr || 0, cached304: Boolean(trustResult.cached304), note: trustResult.note },
       { id: "uneed", label: "Uneed SSR", status: uneedResult.status, count: bySource.uneed || 0, cached304: Boolean(uneedResult.cached304), note: uneedResult.note },
+      { id: "culture_global", label: `Global Culture RSS (${cultureDomainSet.size} domains)`, status: 200, count: cultures.length, note: `${verifiedCultureMediaCount} verified editorial images` },
       { id: "media_verifier", label: "Demo Video & OG Media Verifier", status: 200, count: verifiedMediaCount, note: `${ogMediaFound} newly enriched via OG/README` },
+      ...cultureResult.reports,
     ],
   };
 
   writeJson(TRANSLATION_CACHE_PATH, translationCache);
   writeJson(MEDIA_CACHE_PATH, mediaCache);
   writeJson(path.join(PUBLIC_DATA, "ai-radar-signals.json"), { version: 2, syncedAt, count: radarResult.items.length, items: radarResult.items });
+  writeJson(path.join(PUBLIC_DATA, "culture-signals.json"), { version: 1, syncedAt, count: cultures.length, domains: cultureDomainSet.size, items: cultures });
   writeJson(path.join(PUBLIC_DATA, "builder-signals.json"), { version: 2, syncedAt, count: builders.length, items: builders });
-  writeJson(path.join(PUBLIC_DATA, "treatments-seed.json"), { version: 2, syncedAt, count: treatments.length, items: treatments });
+  writeJson(path.join(PUBLIC_DATA, "treatments-seed.json"), { version: 3, syncedAt, count: treatments.length, items: treatments });
   writeJson(path.join(PUBLIC_DATA, "sync-meta.json"), syncMeta);
   guard.save();
 
-  console.log("[DISPENSER sync] Done:", JSON.stringify(syncMeta.counts));
+  console.log("[DISPENSER sync] Done:", JSON.stringify({
+    aiRadar: syncMeta.counts.aiRadar,
+    cultureTotal: syncMeta.counts.cultureTotal,
+    cultureDomains: syncMeta.counts.cultureDomains,
+    builderTotal: syncMeta.counts.builderTotal,
+    verifiedMediaCount: syncMeta.counts.verifiedMediaCount,
+    verifiedCultureMediaCount: syncMeta.counts.verifiedCultureMediaCount,
+    treatmentsSeed: syncMeta.counts.treatmentsSeed,
+    treatmentsByTrack: syncMeta.counts.treatmentsByTrack,
+  }));
   if (builders.length < 45) process.exit(1);
   if (radarResult.items.length < 80) process.exit(1);
 }

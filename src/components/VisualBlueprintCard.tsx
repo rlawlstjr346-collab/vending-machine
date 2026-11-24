@@ -285,15 +285,19 @@ export function VisualBlueprintCard({
             <div className="h-px flex-1 bg-[#E2E8F0]" />
           </div>
 
-          {/* Ingredient 02: Live AI / Trend Issue (with soft sky highlighter) */}
+          {/* Ingredient 02: Live AI / Trend Issue OR Global Culture Signal (with soft sky highlighter) */}
           <section className="flex flex-col rounded-2xl bg-[#F8FAFC] p-[clamp(1.25rem,1.45vw,1.9rem)]">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-[clamp(0.78rem,0.74vw,0.94rem)] font-bold tracking-[0.02em] text-[#64748B]">
-                재료 02 · 실시간 AI / 트렌드 이슈
+                {treatment.track === "culture"
+                  ? `재료 02 · 글로벌 컬처 시그널 (${treatment.sampleB.platformId})`
+                  : "재료 02 · 실시간 AI / 트렌드 이슈"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF6FF] px-3 py-1 text-[clamp(0.75rem,0.72vw,0.9rem)] font-bold text-[#2563EB]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-                AI Radar 이슈 · {treatment.sampleB.platformId}
+                {treatment.track === "culture"
+                  ? `글로벌 컬처 · ${treatment.sampleB.cultureVerticalLabel || treatment.sampleB.platformId}`
+                  : `AI Radar 이슈 · ${treatment.sampleB.platformId}`}
               </span>
             </div>
 

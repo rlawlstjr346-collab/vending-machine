@@ -1,6 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { AiRadarSignal, BuilderSignal, SyncMeta, Treatment } from "./types";
+import type {
+  AiRadarSignal,
+  BuilderSignal,
+  CultureSignal,
+  SyncMeta,
+  Treatment,
+} from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 
@@ -25,6 +31,11 @@ export function loadAiRadarSignals(): AiRadarSignal[] {
   return Array.isArray(payload.items) ? payload.items : [];
 }
 
+export function loadCultureSignals(): CultureSignal[] {
+  const payload = readJsonSafe<{ items?: CultureSignal[] }>("culture-signals.json", {});
+  return Array.isArray(payload.items) ? payload.items : [];
+}
+
 export function loadSeedTreatments(): Treatment[] {
   const payload = readJsonSafe<{ items?: Treatment[] }>("treatments-seed.json", {});
   return Array.isArray(payload.items) ? payload.items : [];
@@ -35,11 +46,16 @@ export function loadSyncMeta(): SyncMeta {
     syncedAt: new Date().toISOString(),
     counts: {
       aiRadar: 0,
+      cultureTotal: 0,
+      cultureDomains: 0,
       builderTotal: 0,
       bySource: {},
+      cultureBySource: {},
       verifiedRevenueCount: 0,
       verifiedMediaCount: 0,
+      verifiedCultureMediaCount: 0,
       treatmentsSeed: 0,
+      treatmentsByTrack: { tech: 0, culture: 0 },
     },
     sources: [],
   });

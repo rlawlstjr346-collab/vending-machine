@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { loadAiRadarSignals, loadBuilderSignals, loadSyncMeta } from "@/lib/data-loader";
+import {
+  loadAiRadarSignals,
+  loadBuilderSignals,
+  loadCultureSignals,
+  loadSyncMeta,
+} from "@/lib/data-loader";
 import { MECHANISM_MAP } from "@/lib/domains";
 import { buildTechDigestKo, classifyMechanism } from "@/lib/synthesis-engine";
 import { isValidHttpUrl, sanitizeEditorialText, slugifyAscii } from "@/lib/text-clean";
@@ -19,6 +24,7 @@ const UA =
 export async function GET() {
   const localRadars = loadAiRadarSignals();
   const localBuilders = loadBuilderSignals();
+  const localCultures = loadCultureSignals();
   const syncMeta = loadSyncMeta();
 
   let mergedRadars: AiRadarSignal[] = [...localRadars];
@@ -179,10 +185,12 @@ export async function GET() {
     liveShowHnAdded,
     counts: {
       aiRadar: mergedRadars.length,
+      cultures: localCultures.length,
       builders: mergedBuilders.length,
       verifiedMedia: mergedBuilders.filter((b) => b.demoVideoUrl || b.previewImageUrl).length,
     },
     aiRadars: mergedRadars,
+    cultures: localCultures,
     builders: mergedBuilders,
   });
 }

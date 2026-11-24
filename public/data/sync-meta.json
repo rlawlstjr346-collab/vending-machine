@@ -1,7 +1,9 @@
 {
-  "syncedAt": "2026-11-24T02:04:16.233Z",
+  "syncedAt": "2026-11-24T02:44:34.324Z",
   "counts": {
     "aiRadar": 100,
+    "cultureTotal": 151,
+    "cultureDomains": 19,
     "builderTotal": 106,
     "bySource": {
       "github_trending": 26,
@@ -10,9 +12,35 @@
       "product_hunt": 20,
       "uneed": 16
     },
+    "cultureBySource": {
+      "Dazed Digital": 8,
+      "Hypebeast": 8,
+      "Highsnobiety": 8,
+      "Put This On": 8,
+      "Letterboxd Journal": 8,
+      "IndieWire": 8,
+      "The Film Stage": 8,
+      "It's Nice That": 8,
+      "Boooooom": 7,
+      "PetaPixel": 8,
+      "Colossal": 8,
+      "CDM": 8,
+      "Pitchfork": 8,
+      "Stereogum": 8,
+      "Dezeen": 8,
+      "designboom": 8,
+      "The Public Domain Review": 8,
+      "Open Culture": 8,
+      "Kottke.org": 8
+    },
     "verifiedRevenueCount": 16,
     "verifiedMediaCount": 59,
-    "treatmentsSeed": 50
+    "verifiedCultureMediaCount": 125,
+    "treatmentsSeed": 60,
+    "treatmentsByTrack": {
+      "tech": 30,
+      "culture": 30
+    }
   },
   "sources": [
     {
@@ -72,11 +100,202 @@
       "note": "16 Uneed daily launches"
     },
     {
+      "id": "culture_global",
+      "label": "Global Culture RSS (19 domains)",
+      "status": 200,
+      "count": 151,
+      "note": "125 verified editorial images"
+    },
+    {
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
       "count": 59,
       "note": "0 newly enriched via OG/README"
+    },
+    {
+      "id": "culture_dazed",
+      "label": "Dazed Digital (패션 · 유스컬처)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_hypebeast",
+      "label": "Hypebeast (패션 · 유스컬처)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_highsnobiety",
+      "label": "Highsnobiety (패션 · 유스컬처)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (2 img)"
+    },
+    {
+      "id": "culture_putthison",
+      "label": "Put This On (패션 · 아카이브)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_letterboxd",
+      "label": "Letterboxd Journal (시네마 · 연출)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_indiewire",
+      "label": "IndieWire (시네마 · 연출)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_filmstage",
+      "label": "The Film Stage (시네마 · 연출)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_mubi",
+      "label": "MUBI Notebook (시네마 · 연출)",
+      "status": 404,
+      "count": 0,
+      "cached304": false,
+      "note": "HTTP 404"
+    },
+    {
+      "id": "culture_itsnicethat",
+      "label": "It's Nice That (사진 · 그래픽)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_booooooom",
+      "label": "Boooooom (사진 · 시각예술)",
+      "status": 304,
+      "count": 7,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_petapixel",
+      "label": "PetaPixel (사진 · 카메라)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_colossal",
+      "label": "Colossal (시각예술 · 공예)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_bandcamp",
+      "label": "Bandcamp Daily (음악 · 인디 씬)",
+      "status": 200,
+      "count": 0,
+      "cached304": false,
+      "note": "0 items (0 img)"
+    },
+    {
+      "id": "culture_cdm",
+      "label": "CDM (사운드테크 · 신스)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_pitchfork",
+      "label": "Pitchfork (음악 · 앨범 문화)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_stereogum",
+      "label": "Stereogum (음악 · 인디 문화)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_dezeen",
+      "label": "Dezeen (건축 · 공간)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_designboom",
+      "label": "designboom (공간 · 오브제)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_core77",
+      "label": "Core77 (산업디자인 · 오브제)",
+      "status": 404,
+      "count": 0,
+      "cached304": false,
+      "note": "HTTP 404"
+    },
+    {
+      "id": "culture_pdr",
+      "label": "The Public Domain Review (희귀 사료 · 아카이브)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_hyperallergic",
+      "label": "Hyperallergic (아트 · 전시 비평)",
+      "status": 404,
+      "count": 0,
+      "cached304": false,
+      "note": "HTTP 404"
+    },
+    {
+      "id": "culture_openculture",
+      "label": "Open Culture (문화 아카이브 · 지식)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
+    },
+    {
+      "id": "culture_kottke",
+      "label": "Kottke.org (크리에이티브 큐레이션)",
+      "status": 200,
+      "count": 8,
+      "cached304": false,
+      "note": "8 items (2 img)"
     }
   ]
 }

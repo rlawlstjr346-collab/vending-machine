@@ -301,10 +301,12 @@ export function TreatmentModal({ treatment, onClose }: TreatmentModalProps) {
             </div>
           </section>
 
-          {/* 3) Core AI Issue & Original Tech Mechanism (sky highlights) */}
+          {/* 3) Core AI Issue or Global Culture Signal & Original Tech Mechanism (sky highlights) */}
           <section className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-[clamp(1.25rem,1.5vw,1.9rem)]">
             <h3 className="text-[clamp(0.84rem,0.78vw,0.98rem)] font-bold text-[#0369A1]">
-              핵심 AI 이슈 및 원본 기술 원리 ({treatment.sampleA.name})
+              {treatment.track === "culture"
+                ? `글로벌 컬처 시그널 (${treatment.sampleB.platformId}) 및 원본 기술 원리 (${treatment.sampleA.name})`
+                : `핵심 AI 이슈 및 원본 기술 원리 (${treatment.sampleA.name})`}
             </h3>
             <div className="mt-3.5 text-[clamp(0.98rem,0.92vw,1.18rem)] leading-[1.78] text-[#1E293B]">
               <div className="font-bold text-[#0F172A]">{treatment.sampleB.titleKo}</div>
@@ -393,7 +395,11 @@ export function TreatmentModal({ treatment, onClose }: TreatmentModalProps) {
               rel="noopener noreferrer"
               className="flex items-center justify-between gap-2 rounded-2xl border border-[#E2E8F0] bg-[#FFFFFF] px-5 py-4 text-[clamp(0.9rem,0.85vw,1.06rem)] font-bold text-[#0F172A] hover:border-[#0F172A] hover:bg-[#F8FAFC]"
             >
-              <span className="truncate">AI 이슈 원문 열기 ({treatment.sampleB.platformId})</span>
+              <span className="truncate">
+                {treatment.track === "culture"
+                  ? `컬처 기사 원문 열기 (${treatment.sampleB.platformId})`
+                  : `AI 이슈 원문 열기 (${treatment.sampleB.platformId})`}
+              </span>
               <ExternalLinkIcon className="h-4 w-4 shrink-0 text-[#2563EB]" />
             </a>
           </div>

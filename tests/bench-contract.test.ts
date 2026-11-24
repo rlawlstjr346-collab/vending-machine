@@ -14,6 +14,7 @@ import {
 } from "@/lib/saved-store";
 import {
   matchAiRadarFor,
+  matchCultureFor,
   synthesizeTreatment,
   treatmentToCodingPrompt,
   treatmentToMarkdown,
@@ -22,7 +23,12 @@ import { isValidHttpUrl } from "@/lib/text-clean";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 import { GET as getRss } from "@/app/rss.xml/route";
-import type { AiRadarSignal, BuilderSignal, Treatment } from "@/lib/types";
+import type {
+  AiRadarSignal,
+  BuilderSignal,
+  CultureSignal,
+  Treatment,
+} from "@/lib/types";
 
 const ROOT = process.cwd();
 const PUBLIC_DATA = path.join(ROOT, "public", "data");
@@ -44,12 +50,15 @@ function collectSourceFiles(dir: string): string[] {
   return files;
 }
 
-describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
+describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () => {
   const buildersPayload = readJson<{ count: number; items: BuilderSignal[] }>(
     path.join(PUBLIC_DATA, "builder-signals.json")
   );
   const radarPayload = readJson<{ count: number; items: AiRadarSignal[] }>(
     path.join(PUBLIC_DATA, "ai-radar-signals.json")
+  );
+  const culturePayload = readJson<{ count: number; items: CultureSignal[] }>(
+    path.join(PUBLIC_DATA, "culture-signals.json")
   );
   const treatmentsPayload = readJson<{ count: number; items: Treatment[] }>(
     path.join(PUBLIC_DATA, "treatments-seed.json")
@@ -64,9 +73,11 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     expect(layoutSrc).toContain("DISPENSER");
     expect(iconsSrc).toContain("DISPENSER");
 
-    const seedRaw = fs.readFileSync(path.join(PUBLIC_DATA, "treatments-seed.json"), "utf-8");
-    expect(seedRaw).not.toMatch(legacyBrandRe);
-    expect(seedRaw).not.toMatch(personalTermRe);
+    for (const dataFile of ["treatments-seed.json", "culture-signals.json"]) {
+      const raw = fs.readFileSync(path.join(PUBLIC_DATA, dataFile), "utf-8");
+      expect(raw, `Legacy BENCH. found in ${dataFile}`).not.toMatch(legacyBrandRe);
+      expect(raw, `Forbidden personal term found in ${dataFile}`).not.toMatch(personalTermRe);
+    }
 
     const srcFiles = collectSourceFiles(path.join(ROOT, "src"));
     for (const filePath of srcFiles) {
@@ -90,6 +101,7 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     expect(cardSrc).toContain("HighlightText");
     expect(cardSrc).toContain("원본 기술 핵심 메커니즘 요약");
     expect(cardSrc).toContain("기술 × 이슈 시너지 인사이트");
+    expect(cardSrc).toContain("글로벌 컬처 시그널");
 
     const modalSrc = fs.readFileSync(
       path.join(ROOT, "src/components/TreatmentModal.tsx"),
@@ -110,13 +122,52 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     expect(stageSrc).not.toContain("보관함");
   });
 
-  it("3) validates all 50 curated seed treatments have question headlines ('?'), fusionStoryKo, techDigestKo, and valid HTTP URLs", () => {
+  it("3) validates global culture-signals.json (>= 60 items, >= 10 distinct overseas domains, valid HTTP(S) URLs)", () => {
+    expect(culturePayload.items.length).toBeGreaterThanOrEqual(60);
+
+    const domains = new Set<string>();
+    for (const c of culturePayload.items) {
+      expect(isValidHttpUrl(c.canonicalUrl), `Invalid culture URL: ${c.canonicalUrl}`).toBe(true);
+      if (c.previewImageUrl) {
+        expect(isValidHttpUrl(c.previewImageUrl), `Invalid culture image: ${c.previewImageUrl}`).toBe(
+          true
+        );
+      }
+      expect(c.titleKo.length).toBeGreaterThan(3);
+      expect(c.sourceName.length).toBeGreaterThan(1);
+      domains.add(c.sourceDomain || new URL(c.canonicalUrl).hostname.replace(/^www\./, ""));
+    }
+
+    expect(domains.size).toBeGreaterThanOrEqual(10);
+  });
+
+  it("4) validates 60 curated seed treatments have 50:50 tech/culture balance (45%~55%), no 3+ consecutive same-track streak, question titles, and full specs", () => {
     expect(buildersPayload.items.length).toBeGreaterThanOrEqual(45);
     expect(radarPayload.items.length).toBeGreaterThanOrEqual(80);
-    expect(treatmentsPayload.items.length).toBe(50);
+    expect(treatmentsPayload.items.length).toBeGreaterThanOrEqual(56);
+
+    const total = treatmentsPayload.items.length;
+    const techCount = treatmentsPayload.items.filter((t) => t.track === "tech").length;
+    const cultureCount = treatmentsPayload.items.filter((t) => t.track === "culture").length;
+    expect(techCount + cultureCount).toBe(total);
+
+    const techRatio = techCount / total;
+    const cultureRatio = cultureCount / total;
+    expect(techRatio).toBeGreaterThanOrEqual(0.45);
+    expect(techRatio).toBeLessThanOrEqual(0.55);
+    expect(cultureRatio).toBeGreaterThanOrEqual(0.45);
+    expect(cultureRatio).toBeLessThanOrEqual(0.55);
+
+    // Ensure no 3 consecutive cards belong to the same track
+    for (let i = 2; i < treatmentsPayload.items.length; i += 1) {
+      const a = treatmentsPayload.items[i - 2].track;
+      const b = treatmentsPayload.items[i - 1].track;
+      const c = treatmentsPayload.items[i].track;
+      expect(a === b && b === c, `3 consecutive '${c}' cards at index ${i}`).toBe(false);
+    }
 
     const uniqueTitles = new Set(treatmentsPayload.items.map((t) => t.title));
-    expect(uniqueTitles.size).toBe(50);
+    expect(uniqueTitles.size).toBe(total);
 
     const roboticTitleRe = /×.*방식의|요소를 참고해|영역 서비스의 핵심 워크플로/;
     for (const t of treatmentsPayload.items) {
@@ -137,7 +188,7 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     }
   });
 
-  it("4) guarantees zero raw '==' markers, zero placeholders, zero dead '#' links, zero banned animations, and zero oatmeal/beige HEX", () => {
+  it("5) guarantees zero raw '==' markers, zero placeholders, zero dead '#' links, zero banned animations, and zero oatmeal/beige HEX", () => {
     const forbiddenTextRe = /(준비\s*중|coming\s+soon|샘플\s*데이터)/i;
     const rawHighlightRe = /==[^=\s][^=]*==/;
     const forbiddenAnimRe =
@@ -145,7 +196,12 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     const oatmealHexRe =
       /#(F6F3EC|FFFCF7|F9F5EC|FBF7EE|EBE5D8|E7E0D3|ECE5D8|C5BCA8|D8CEBC|E5DEC9|F5EFE4)\b/i;
 
-    for (const file of ["builder-signals.json", "ai-radar-signals.json", "treatments-seed.json"]) {
+    for (const file of [
+      "builder-signals.json",
+      "ai-radar-signals.json",
+      "culture-signals.json",
+      "treatments-seed.json",
+    ]) {
       const raw = fs.readFileSync(path.join(PUBLIC_DATA, file), "utf-8");
       expect(raw, `Forbidden placeholder in ${file}`).not.toMatch(forbiddenTextRe);
       expect(raw, `Raw '==' marker leaked in ${file}`).not.toMatch(rawHighlightRe);
@@ -163,53 +219,71 @@ describe("DISPENSER Editorial Signal Dispenser Contract Tests", () => {
     }
   });
 
-  it("5) validates HighlightText dual highlighter (<mark> amber/sky) without raw '==' and pure plain-text prompt copy", () => {
-    const sample = treatmentsPayload.items[0];
-    const synergySegs = buildHighlightSegments(sample.fusionStoryKo, {
-      rules: buildSynergyHighlightRules(sample),
-      autoVariant: "amber",
-      autoTechSky: true,
-      maxHighlights: 3,
-    });
-    expect(synergySegs.map((s) => s.text).join("")).toBe(sample.fusionStoryKo);
-    expect(synergySegs.some((s) => s.variant === "amber" || s.variant === "sky")).toBe(true);
+  it("6) validates HighlightText dual highlighter (<mark> amber/sky) without raw '==' and pure plain-text prompt copy", () => {
+    const techSample = treatmentsPayload.items.find((t) => t.track === "tech")!;
+    const cultureSample = treatmentsPayload.items.find((t) => t.track === "culture")!;
 
-    const featSegs = buildHighlightSegments(sample.mvpFeatures[0], {
-      rules: buildFeatureHighlightRules(sample.mvpFeatures[0]),
-      autoVariant: "amber",
-      maxHighlights: 2,
-    });
-    expect(featSegs.map((s) => s.text).join("")).toBe(sample.mvpFeatures[0]);
-    expect(featSegs.some((s) => s.variant === "amber")).toBe(true);
+    for (const sample of [techSample, cultureSample]) {
+      const synergySegs = buildHighlightSegments(sample.fusionStoryKo, {
+        rules: buildSynergyHighlightRules(sample),
+        autoVariant: "amber",
+        autoTechSky: true,
+        maxHighlights: 3,
+      });
+      expect(synergySegs.map((s) => s.text).join("")).toBe(sample.fusionStoryKo);
+      expect(synergySegs.some((s) => s.variant === "amber" || s.variant === "sky")).toBe(true);
 
-    const plainPrompt = treatmentToCodingPrompt(sample);
-    expect(plainPrompt).toContain("반드시 구현할 핵심 기능 3가지");
-    expect(plainPrompt).not.toMatch(/<\/?mark/i);
-    expect(plainPrompt).not.toMatch(/==[^=\s][^=]*==/);
+      const featSegs = buildHighlightSegments(sample.mvpFeatures[0], {
+        rules: buildFeatureHighlightRules(sample.mvpFeatures[0]),
+        autoVariant: "amber",
+        maxHighlights: 2,
+      });
+      expect(featSegs.map((s) => s.text).join("")).toBe(sample.mvpFeatures[0]);
+      expect(featSegs.some((s) => s.variant === "amber")).toBe(true);
+
+      const plainPrompt = treatmentToCodingPrompt(sample);
+      expect(plainPrompt).toContain("반드시 구현할 핵심 기능 3가지");
+      expect(plainPrompt).not.toMatch(/<\/?mark/i);
+      expect(plainPrompt).not.toMatch(/==[^=\s][^=]*==/);
+    }
   });
 
-  it("6) validates runtime synthesis produces natural question headlines, fusionStoryKo, techDigestKo, and clean coding prompts", () => {
+  it("7) validates runtime dual-track synthesis (tech + culture) produces question headlines and clean coding prompts", () => {
     const builderA = buildersPayload.items[0];
     const radarB = matchAiRadarFor(builderA, "creator-tool", radarPayload.items, 0);
+    const cultureC = matchCultureFor(builderA, "cinema-video", culturePayload.items, 0);
+    expect(cultureC).not.toBeNull();
 
-    const synthesized = synthesizeTreatment({
+    const techTr = synthesizeTreatment({
       builder: builderA,
       radar: radarB,
+      track: "tech",
       domainSlug: "creator-tool",
       variantIndex: 7,
     });
-    expect(synthesized.title.endsWith("?")).toBe(true);
-    expect(synthesized.fusionStoryKo.length).toBeGreaterThanOrEqual(60);
-    expect(synthesized.techDigestKo.inputKo.length).toBeGreaterThan(5);
-    expect(synthesized.mvpFeatures).toHaveLength(3);
-    expect(treatmentToMarkdown(synthesized)).toContain(synthesized.sampleA.url);
+    expect(techTr.track).toBe("tech");
+    expect(techTr.title.endsWith("?")).toBe(true);
 
-    const prompt = treatmentToCodingPrompt(synthesized);
+    const cultureTr = synthesizeTreatment({
+      builder: builderA,
+      radar: radarB,
+      culture: cultureC,
+      track: "culture",
+      domainSlug: "cinema-video",
+      variantIndex: 8,
+    });
+    expect(cultureTr.track).toBe("culture");
+    expect(cultureTr.sampleB.sourceType).toBe("culture");
+    expect(cultureTr.title.endsWith("?")).toBe(true);
+    expect(treatmentToMarkdown(cultureTr)).toContain(cultureTr.sampleB.canonicalUrl);
+
+    const prompt = treatmentToCodingPrompt(cultureTr);
     expect(prompt).toContain("반드시 구현할 핵심 기능 3가지");
+    expect(prompt).toContain("글로벌 컬처 시그널");
     expect(prompt).not.toMatch(/\bagy\b/i);
   });
 
-  it("7) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
+  it("8) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
     const sampleIds = treatmentsPayload.items.slice(0, 3).map((t) => t.id);
     const encoded = encodeSavedParam(sampleIds);
     const decoded = decodeSavedParam(encoded);

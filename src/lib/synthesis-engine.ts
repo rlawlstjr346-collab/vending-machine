@@ -9,11 +9,13 @@ import { sanitizeEditorialText, slugifyAscii } from "./text-clean";
 import type {
   AiRadarSignal,
   BuilderSignal,
+  CultureSignal,
   DomainSlug,
   MechanismId,
   TechDigestKo,
   Treatment,
   TreatmentLineageNode,
+  TreatmentTrack,
 } from "./types";
 
 const CADENCE_OPTIONS = [
@@ -201,6 +203,41 @@ export function matchAiRadarFor(
   return scored[idx].signal;
 }
 
+export function matchCultureFor(
+  builder: BuilderSignal,
+  domainSlug: DomainSlug,
+  cultureSignals: CultureSignal[],
+  offset = 0
+): CultureSignal | null {
+  if (!cultureSignals || cultureSignals.length === 0) return null;
+  const builderTokens = new Set(
+    `${builder.name} ${builder.taglineEn} ${builder.tags.join(" ")}`
+      .toLowerCase()
+      .split(/[^a-z0-9가-힣]+/)
+      .filter((t) => t.length >= 3)
+  );
+
+  const scored = cultureSignals.map((c, idx) => {
+    let score = 20;
+    if (c.domainSlug === domainSlug) score += 20;
+    if (c.previewImageUrl) score += 12;
+    const cText = `${c.titleEn} ${c.titleKo} ${c.tags.join(" ")} ${c.sourceName}`.toLowerCase();
+    let overlap = 0;
+    for (const tok of builderTokens) {
+      if (cText.includes(tok)) overlap += 1;
+    }
+    score += Math.min(18, overlap * 6);
+    // Spread across distinct sources
+    score += (idx % 7) * 0.25;
+    return { signal: c, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  const poolSize = Math.min(28, scored.length);
+  const idx = ((offset % poolSize) + poolSize) % poolSize;
+  return scored[idx].signal;
+}
+
 function buildOverseasProofKo(builder: BuilderSignal, mechanism: MechanismId): string {
   const mech = MECHANISM_MAP[mechanism];
   const cleanTagline = sanitizeEditorialText(builder.taglineKo || builder.summaryKo);
@@ -223,17 +260,31 @@ function buildFusionStoryKo(
   builder: BuilderSignal,
   radar: AiRadarSignal,
   hook: string,
-  cutoff: string,
-  mechanism: MechanismId
+  cutoff: string
 ): string {
   const cleanBuilderKo = sanitizeEditorialText(builder.taglineKo || builder.summaryKo).slice(0, 88);
-  const mech = MECHANISM_MAP[mechanism];
   const metric = formatShortMetric(builder);
   const cleanRadarTitle = sanitizeEditorialText(radar.titleKo);
   const cleanBenchmark = sanitizeEditorialText(radar.planningMeta.benchmarkPoint || "핵심 자동화 흐름");
 
   return sanitizeEditorialText(
     `${builder.sourceLabel}(${metric})에서 반응을 검증받은 ${builder.name}은 '${cleanBuilderKo}'라는 명쾌한 단일 기능으로 사용자의 마음을 사로잡았습니다. 여기에 최근 AI Radar에서 주목받는 '${cleanRadarTitle}' 이슈의 ${cleanBenchmark} 흐름을 얹으면, 1인 개발자가 가장 막히던 데이터 정리와 처리 병목을 깔끔하게 넘길 수 있습니다. 방문자는 가입 없이 첫 화면에 입력값 하나만 던져 ${hook} 첫 버전에서는 ${cutoff.replace(/\.$/, "")} 범위만 과감히 비워 1주일 안에 바로 반응 실험을 띄울 수 있습니다.`
+  );
+}
+
+function buildCultureFusionStoryKo(
+  builder: BuilderSignal,
+  culture: CultureSignal,
+  hook: string,
+  cutoff: string
+): string {
+  const cleanBuilderKo = sanitizeEditorialText(builder.taglineKo || builder.summaryKo).slice(0, 85);
+  const metric = formatShortMetric(builder);
+  const cleanCultureTitle = sanitizeEditorialText(culture.titleKo);
+  const cleanPhenomenon = sanitizeEditorialText(culture.phenomenonKo).slice(0, 110);
+
+  return sanitizeEditorialText(
+    `${builder.sourceLabel}(${metric})에서 주목받은 ${builder.name}의 '${cleanBuilderKo}' 구조에 ${culture.sourceName}이 조명한 '${cleanCultureTitle}' 글로벌 컬처 흐름을 이종교배했습니다. ${cleanPhenomenon} 취향과 미학이 까다로운 글로벌 ${culture.cultureVerticalLabel} 팬덤의 디깅·큐레이션 욕구를 가벼운 브라우저 인터랙션으로 풀어내어, 방문자가 첫 화면에서 즉시 ${hook} 첫 버전에서는 ${cutoff.replace(/\.$/, "")} 요소를 과감히 덜어내고 감도 높은 핵심 체험 3가지만 1주일 안에 완성합니다.`
   );
 }
 
@@ -300,6 +351,8 @@ function buildCustomTopicConcept(
 export interface SynthesizeOptions {
   builder: BuilderSignal;
   radar: AiRadarSignal;
+  culture?: CultureSignal | null;
+  track?: TreatmentTrack;
   domainSlug: DomainSlug;
   customTopic?: string | null;
   variantIndex?: number;
@@ -313,6 +366,8 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
   const {
     builder,
     radar,
+    culture = null,
+    track: explicitTrack,
     domainSlug,
     customTopic,
     variantIndex = 0,
@@ -322,23 +377,27 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
     nowIso = new Date().toISOString(),
   } = options;
 
-  const domain = DOMAIN_MAP[domainSlug];
+  const track: TreatmentTrack = explicitTrack === "culture" && culture ? "culture" : "tech";
+  const effectiveDomainSlug: DomainSlug =
+    track === "culture" && culture ? culture.domainSlug : domainSlug;
+  const domain = DOMAIN_MAP[effectiveDomainSlug];
   const effectiveMechanism: MechanismId = mechanismOverride || builder.mechanism;
   const mech = MECHANISM_MAP[effectiveMechanism];
   const cleanTopic = customTopic ? sanitizeEditorialText(customTopic) : null;
-  const seedKey = `${builder.id}|${radar.id}|${domainSlug}|${effectiveMechanism}|${cleanTopic || ""}|${addedBuilder?.id || ""}|${variantIndex}`;
+  const secondaryId = track === "culture" && culture ? culture.id : radar.id;
+  const seedKey = `${track}|${builder.id}|${secondaryId}|${effectiveDomainSlug}|${effectiveMechanism}|${cleanTopic || ""}|${addedBuilder?.id || ""}|${variantIndex}`;
   const hash = deterministicHash(seedKey);
 
   const isEvolution = Boolean(parentTreatment && addedBuilder);
   const shortId = hash.toString(36).slice(0, 6);
   const id = isEvolution
     ? `tr-c-${slugifyAscii(builder.name).slice(0, 14)}-${shortId}`
-    : `tr-${slugifyAscii(domainSlug).slice(0, 8)}-${slugifyAscii(builder.name).slice(0, 14)}-${shortId}`;
+    : `tr-${track === "culture" ? "cul" : "tec"}-${slugifyAscii(builder.name).slice(0, 14)}-${shortId}`;
 
   const cadence = CADENCE_OPTIONS[hash % CADENCE_OPTIONS.length];
   const pool =
-    CONCEPT_BLUEPRINTS[domainSlug][effectiveMechanism] ||
-    CONCEPT_BLUEPRINTS[domainSlug]["drop-validation"];
+    CONCEPT_BLUEPRINTS[effectiveDomainSlug][effectiveMechanism] ||
+    CONCEPT_BLUEPRINTS[effectiveDomainSlug]["drop-validation"];
   const blueprint = pool[Math.abs(variantIndex + hash) % pool.length];
 
   let title: string;
@@ -349,7 +408,7 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
 
   if (isEvolution && parentTreatment && addedBuilder) {
     const addedMech = MECHANISM_MAP[addedBuilder.mechanism];
-    const addedPool = CONCEPT_BLUEPRINTS[domainSlug][addedBuilder.mechanism] || pool;
+    const addedPool = CONCEPT_BLUEPRINTS[effectiveDomainSlug][addedBuilder.mechanism] || pool;
     const addedBlueprint = addedPool[hash % addedPool.length];
     const baseShortTitle = parentTreatment.title.replace(/\?+$/, "").replace(/\s*\(.+?\)\s*$/, "");
 
@@ -382,6 +441,19 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
     oneLineHook = custom.hook;
     firstThreeSecondsUx = custom.hook;
     mvpFeatures = custom.features;
+  } else if (track === "culture" && culture) {
+    const baseClean = sanitizeEditorialText(blueprint.title).replace(/\?+$/, "");
+    title = ensureQuestionHeadline(
+      `${culture.cultureVerticalLabel} 팬을 위해 ${baseClean}`,
+      variantIndex
+    );
+    oneLineHook = sanitizeEditorialText(
+      `${culture.sourceName} 감도의 ${culture.cultureVerticalLabel} 큐레이션을 첫 화면에서 바로 체험합니다. ${blueprint.hook}`
+    );
+    firstThreeSecondsUx = sanitizeEditorialText(
+      `회원가입 없이 첫 화면에서 바로 체험할 수 있습니다. ${blueprint.hook}`
+    );
+    mvpFeatures = blueprint.features.map((f) => sanitizeEditorialText(f)) as [string, string, string];
   } else {
     title = ensureQuestionHeadline(blueprint.title, variantIndex);
     oneLineHook = sanitizeEditorialText(blueprint.hook);
@@ -392,23 +464,73 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
   }
 
   const techDigestKo = buildTechDigestKo(builder, effectiveMechanism);
-  const fusionStoryKo = buildFusionStoryKo(
-    builder,
-    radar,
-    oneLineHook,
-    domain.cutoffs[0] || "회원가입과 복잡한 설정 화면",
-    effectiveMechanism
-  );
+  const fusionStoryKo =
+    track === "culture" && culture
+      ? buildCultureFusionStoryKo(
+          builder,
+          culture,
+          oneLineHook,
+          domain.cutoffs[0] || "회원가입과 복잡한 설정 화면"
+        )
+      : buildFusionStoryKo(
+          builder,
+          radar,
+          oneLineHook,
+          domain.cutoffs[0] || "회원가입과 복잡한 설정 화면"
+        );
 
+  // Media priority: Builder demoVideo -> Builder previewImage -> Culture/Radar previewImage
   const demoVideoUrl = builder.demoVideoUrl || null;
-  const previewImageUrl = builder.previewImageUrl || radar.thumbnailUrl || null;
-  const mediaSourceLabel = demoVideoUrl
-    ? builder.mediaSourceLabel || "원본 기술 시연 영상"
-    : builder.previewImageUrl
-      ? builder.mediaSourceLabel || "프로덕트 실물 화면"
-      : radar.thumbnailUrl
-        ? "이슈 기사 이미지"
-        : null;
+  let previewImageUrl: string | null = null;
+  let mediaSourceLabel: string | null = null;
+
+  if (demoVideoUrl) {
+    mediaSourceLabel = builder.mediaSourceLabel || "원본 기술 시연 영상";
+    previewImageUrl =
+      builder.previewImageUrl ||
+      (track === "culture" && culture ? culture.previewImageUrl : radar.thumbnailUrl) ||
+      null;
+  } else if (builder.previewImageUrl) {
+    previewImageUrl = builder.previewImageUrl;
+    mediaSourceLabel = builder.mediaSourceLabel || "프로덕트 실물 화면";
+  } else if (track === "culture" && culture?.previewImageUrl) {
+    previewImageUrl = culture.previewImageUrl;
+    mediaSourceLabel = `컬처 이슈 이미지 · ${culture.sourceName}`;
+  } else if (track === "tech" && radar.thumbnailUrl) {
+    previewImageUrl = radar.thumbnailUrl;
+    mediaSourceLabel = "이슈 기사 이미지";
+  }
+
+  const sampleB =
+    track === "culture" && culture
+      ? {
+          radarId: culture.id,
+          titleKo: sanitizeEditorialText(culture.titleKo),
+          canonicalUrl: culture.canonicalUrl,
+          platformId: culture.sourceName,
+          sourceType: "culture" as const,
+          cultureVerticalLabel: culture.cultureVerticalLabel,
+          signalType: culture.cultureVertical,
+          productDomain: culture.domainSlug,
+          summaryKo: sanitizeEditorialText(culture.phenomenonKo),
+          benchmarkPoint: sanitizeEditorialText(culture.cultureVerticalLabel),
+          bottleneckSolvedKo: sanitizeEditorialText(
+            `${culture.sourceName}의 '${culture.titleKo}' 글로벌 컬처 흐름을 브라우저 인터랙션으로 풀어냅니다. ${culture.phenomenonKo}`
+          ),
+        }
+      : {
+          radarId: radar.id,
+          titleKo: sanitizeEditorialText(radar.titleKo),
+          canonicalUrl: radar.canonicalUrl,
+          platformId: radar.platformId,
+          sourceType: "ai_radar" as const,
+          cultureVerticalLabel: null,
+          signalType: radar.planningMeta.signalType,
+          productDomain: radar.planningMeta.productDomain,
+          summaryKo: sanitizeEditorialText(radar.whatKo || radar.highlightSummary),
+          benchmarkPoint: sanitizeEditorialText(radar.planningMeta.benchmarkPoint),
+          bottleneckSolvedKo: buildBottleneckSolvedKo(radar),
+        };
 
   const lineage: TreatmentLineageNode[] =
     isEvolution && parentTreatment && addedBuilder
@@ -458,9 +580,10 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
   return {
     id,
     slug: id,
+    track,
     createdAt: nowIso,
     updatedAt: nowIso,
-    domainSlug,
+    domainSlug: effectiveDomainSlug,
     domainLabel: domain.label,
     domainColor: domain.color,
     customTopic: cleanTopic,
@@ -468,6 +591,7 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
     oneLineHook,
     firstThreeSecondsUx,
     fusionStoryKo,
+    highlightPhrases: [],
     buildCadence: cadence,
     demoVideoUrl,
     previewImageUrl,
@@ -488,17 +612,7 @@ export function synthesizeTreatment(options: SynthesizeOptions): Treatment {
       overseasProofKo: buildOverseasProofKo(builder, effectiveMechanism),
     },
     sampleA2,
-    sampleB: {
-      radarId: radar.id,
-      titleKo: sanitizeEditorialText(radar.titleKo),
-      canonicalUrl: radar.canonicalUrl,
-      platformId: radar.platformId,
-      signalType: radar.planningMeta.signalType,
-      productDomain: radar.planningMeta.productDomain,
-      summaryKo: sanitizeEditorialText(radar.whatKo || radar.highlightSummary),
-      benchmarkPoint: sanitizeEditorialText(radar.planningMeta.benchmarkPoint),
-      bottleneckSolvedKo: buildBottleneckSolvedKo(radar),
-    },
+    sampleB,
     twistSummaryKo: oneLineHook,
     mvpFeatures,
     scopeCutoff: domain.cutoffs,
@@ -514,9 +628,11 @@ export function treatmentToMarkdown(t: Treatment): string {
   const sampleA2Line = t.sampleA2
     ? `\n- 추가 결합 기능: [${t.sampleA2.name}](${t.sampleA2.url}) (${t.sampleA2.tractionLabel}) — ${t.sampleA2.addedFeatureKo}`
     : "";
+  const isCulture = t.track === "culture" || t.sampleB.sourceType === "culture";
 
   return `# ${t.title}
 
+- 트랙: ${isCulture ? "글로벌 컬처 × 기술 이종교배" : "테크 웨지 × 실시간 AI 이슈"}
 - 예상 구현 기간: ${t.buildCadence}
 
 ## 핵심 경험 요약
@@ -529,8 +645,8 @@ ${t.fusionStoryKo}
 - 서비스/레포: [${t.sampleA.name}](${t.sampleA.url}) (${t.sampleA.shortMetricLabel})
 - 핵심 요약: ${t.sampleA.summaryKo || t.sampleA.overseasProofKo}${sampleA2Line}
 
-## 재료 02 · 실시간 AI / 트렌드 이슈
-- 이슈 기사: [${t.sampleB.titleKo}](${t.sampleB.canonicalUrl}) (${t.sampleB.platformId})
+## 재료 02 · ${isCulture ? `글로벌 컬처 시그널 (${t.sampleB.platformId})` : `실시간 AI / 트렌드 이슈 (${t.sampleB.platformId})`}
+- 원문 기사: [${t.sampleB.titleKo}](${t.sampleB.canonicalUrl})
 - 핵심 요약: ${t.sampleB.summaryKo || t.sampleB.bottleneckSolvedKo}
 
 ## 이렇게 만듭니다 · MVP 핵심 기능 3가지
@@ -543,6 +659,7 @@ ${t.fusionStoryKo}
 }
 
 export function treatmentToCodingPrompt(t: Treatment): string {
+  const isCulture = t.track === "culture" || t.sampleB.sourceType === "culture";
   return `다음 웹 서비스 MVP의 첫 번째 프로토타입을 구현해 주세요.
 
 [서비스 개요]
@@ -560,7 +677,7 @@ ${t.fusionStoryKo}
 
 [참고 레퍼런스]
 - 원본 기술/프로덕트: ${t.sampleA.name} (${t.sampleA.url}) — ${t.sampleA.shortMetricLabel}
-- 실시간 AI 이슈: ${t.sampleB.titleKo} (${t.sampleB.canonicalUrl})
+- ${isCulture ? `글로벌 컬처 시그널 (${t.sampleB.platformId})` : "실시간 AI 이슈"}: ${t.sampleB.titleKo} (${t.sampleB.canonicalUrl})
 
 [반드시 구현할 핵심 기능 3가지]
 1. ${t.mvpFeatures[0]}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "syncedAt": "2026-11-24T02:04:16.233Z",
+  "syncedAt": "2026-11-24T02:44:34.324Z",
   "count": 106,
   "items": [
     {
@@ -14,8 +14,8 @@
       "taglineEn": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "taglineKo": "모든 에이전트의 모델입니다. 한 곳. 메뉴 표시줄에서 DeepSeek의 Codex, Kimi의 Claude Code.",
       "summaryKo": "magpie: 모든 에이전트의 모델입니다. 한 곳. 메뉴 표시줄에서 DeepSeek의 Codex, Kimi의 Claude Code.",
-      "painPointKo": "최근 GitHub에서 빠르게 ★40.5k 스타를 모으며 주목받는 오픈소스 프로젝트(yetone/magpie)입니다.",
-      "tractionLabel": "GitHub ★40.5k",
+      "painPointKo": "최근 GitHub에서 빠르게 ★40.6k 스타를 모으며 주목받는 오픈소스 프로젝트(yetone/magpie)입니다.",
+      "tractionLabel": "GitHub ★40.6k",
       "tractionValue": 40000,
       "tractionType": "stars",
       "mrrUsd": null,
@@ -30,7 +30,7 @@
         "gemini-cli"
       ],
       "publishedAt": "2026-09-23T16:22:35Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/yetone/magpie/main/site/public/img/icon-256.png",
@@ -69,7 +69,7 @@
         "converter"
       ],
       "publishedAt": "2026-09-29T20:05:15Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/KnifeLemon/Filee/main/docs/media/banner-en.jpg",
@@ -108,7 +108,7 @@
         "vizualization"
       ],
       "publishedAt": "2026-10-08T10:12:49Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/wheresryan22/anatomy/main/.github/assets/raptor-engine-firing.webp",
@@ -143,7 +143,7 @@
         "open-source"
       ],
       "publishedAt": "2026-09-16T21:30:12Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/docs/demo.gif",
@@ -178,7 +178,7 @@
         "open-source"
       ],
       "publishedAt": "2026-10-31T09:32:46Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -217,7 +217,7 @@
         "claude-code"
       ],
       "publishedAt": "2026-09-13T16:31:06Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/5912894/698718516-93c799a2-10a3-4266-af02-eb79dd33a9a2.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011908Z&X-Amz-Expires=300&X-Amz-Signature=2d647c039611d4dfa9a38702b748e88146ca86e8418011c581bf68253cc3f2a3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
       "previewImageUrl": null,
@@ -256,7 +256,7 @@
         "ai-video"
       ],
       "publishedAt": "2026-09-26T10:10:41Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cover-en.webp",
@@ -295,7 +295,7 @@
         "video-editing"
       ],
       "publishedAt": "2026-09-30T13:41:20Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.filmcraft.png",
@@ -334,7 +334,7 @@
         "egui"
       ],
       "publishedAt": "2026-10-07T18:57:48Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/docs/screenshots/demo.gif",
@@ -357,8 +357,8 @@
       "taglineEn": "ARTEX - AI autonomous penetration testing system (English translation; upstream: Autumn-27/ARTEX, AGPL-3.0)",
       "taglineKo": "ARTEX - AI 자율 침투 테스트 시스템(영어 번역, 업스트림: Autumn-27/ARTEX, AGPL-3.0)",
       "summaryKo": "ARTEX: ARTEX - AI 자율 침투 테스트 시스템(영어 번역, 업스트림: Autumn-27/ARTEX, AGPL-3.0)",
-      "painPointKo": "최근 GitHub에서 빠르게 ★17.8k 스타를 모으며 주목받는 오픈소스 프로젝트(BaaRai/ARTEX)입니다.",
-      "tractionLabel": "GitHub ★17.8k",
+      "painPointKo": "최근 GitHub에서 빠르게 ★17.9k 스타를 모으며 주목받는 오픈소스 프로젝트(BaaRai/ARTEX)입니다.",
+      "tractionLabel": "GitHub ★17.9k",
       "tractionValue": 40000,
       "tractionType": "stars",
       "mrrUsd": null,
@@ -373,7 +373,7 @@
         "bug-bounty"
       ],
       "publishedAt": "2026-10-08T21:14:39Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/BaaRai/ARTEX/main/screenshots/tasks.png",
@@ -412,7 +412,7 @@
         "claude"
       ],
       "publishedAt": "2026-09-27T06:19:36Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp",
@@ -451,7 +451,7 @@
         "claude-code"
       ],
       "publishedAt": "2026-10-29T16:15:01Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/docs/cases/demo.gif",
@@ -486,7 +486,7 @@
         "open-source"
       ],
       "publishedAt": "2026-10-16T19:35:33Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/docs/assets/lh_banner_light.png",
@@ -521,7 +521,7 @@
         "open-source"
       ],
       "publishedAt": "2026-11-03T16:50:21Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -560,7 +560,7 @@
         "daily-digest"
       ],
       "publishedAt": "2026-09-28T23:40:05Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/docs/assets/banner-light.png",
@@ -599,7 +599,7 @@
         "material3"
       ],
       "publishedAt": "2026-09-02T04:36:34Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/docs/readme/demo.gif",
@@ -638,7 +638,7 @@
         "egui"
       ],
       "publishedAt": "2026-08-27T12:46:32Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/106617/662354478-a5f669ce-b3b7-4f8e-9933-976a78876c7e.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011931Z&X-Amz-Expires=300&X-Amz-Signature=f6790818e318604316f854c836d659382d3d181cbac372f65880e5e09ce22bbf&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
       "previewImageUrl": "https://raw.githubusercontent.com/crmne/spotifast/main/docs/assets/images/winamp.png",
@@ -661,8 +661,8 @@
       "taglineEn": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
       "taglineKo": "코딩 에이전트를 위한 로컬 비디오 편집기: Claude Code, Cursor 및 Codex를 위한 기계 판독 가능 계약 및 MCP 서버가 포함된 42개의 FFmpeg 도구. 컷, 캡션, 리프레임, 음량, 플랫폼 내보내기. 클라우드도, API 키도 없습니다.",
       "summaryKo": "ffmpeg-skill: 코딩 에이전트를 위한 로컬 비디오 편집기: Claude Code, Cursor 및 Codex를 위한 기계 판독 가능 계약 및 MCP 서버가 포함된 42개의 FFmpeg 도구. 컷, 캡션, 리프레임, 음량, 플랫폼 내보내기. 클라우드도, API 키도 없습니다.",
-      "painPointKo": "최근 GitHub에서 빠르게 ★10.2k 스타를 모으며 주목받는 오픈소스 프로젝트(kajisho5/ffmpeg-skill)입니다.",
-      "tractionLabel": "GitHub ★10.2k",
+      "painPointKo": "최근 GitHub에서 빠르게 ★10.3k 스타를 모으며 주목받는 오픈소스 프로젝트(kajisho5/ffmpeg-skill)입니다.",
+      "tractionLabel": "GitHub ★10.3k",
       "tractionValue": 40000,
       "tractionType": "stars",
       "mrrUsd": null,
@@ -677,7 +677,7 @@
         "captions"
       ],
       "publishedAt": "2026-09-03T14:33:38Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/kajisho5/ffmpeg-skill/main/docs/demos/captions_pop_karaoke.gif",
@@ -716,7 +716,7 @@
         "fal"
       ],
       "publishedAt": "2026-09-30T05:00:35Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/docs/media/mods-teaser.gif",
@@ -755,7 +755,7 @@
         "automation"
       ],
       "publishedAt": "2026-10-29T14:34:07Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/wangzan101/Mika/main/docs/media/wechat-send-side.gif",
@@ -780,7 +780,7 @@
       "summaryKo": "ui: 차세대 사용자 인터페이스를 구축하기 위한 에이전트의 동작 라이브러리입니다.",
       "painPointKo": "최근 GitHub에서 빠르게 ★6.8k 스타를 모으며 주목받는 오픈소스 프로젝트(vercel-labs/ui)입니다.",
       "tractionLabel": "GitHub ★6.8k",
-      "tractionValue": 34200,
+      "tractionValue": 34250,
       "tractionType": "stars",
       "mrrUsd": null,
       "mechanism": "geo-curation",
@@ -794,7 +794,7 @@
         "ai"
       ],
       "publishedAt": "2026-10-26T17:39:27Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -819,7 +819,7 @@
       "summaryKo": "andee: Andee는 귀하의 휴대폰이나 Mac에서 생활하며 귀하와 마찬가지로 모든 앱을 사용합니다. 통합, 루트, 모델이 없습니다. 메모리와 비밀번호는 기기 외부로 유출되지 않습니다 | Andee는 Mac, image你一样操作任何 앱——无需集成, 无需 Root, 支持任意模型, 记忆 and 密码绝不离开设备。",
       "painPointKo": "최근 GitHub에서 빠르게 ★6.2k 스타를 모으며 주목받는 오픈소스 프로젝트(kuafuai/andee)입니다.",
       "tractionLabel": "GitHub ★6.2k",
-      "tractionValue": 30930,
+      "tractionValue": 30940,
       "tractionType": "stars",
       "mrrUsd": null,
       "mechanism": "timestamp-archive",
@@ -833,7 +833,7 @@
         "android-automation"
       ],
       "publishedAt": "2026-09-17T13:20:59Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/139328168/710340968-b092ec8d-d9ad-4f6b-9f5f-4312f5f1cedf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011942Z&X-Amz-Expires=300&X-Amz-Signature=1e38d043407454f10e8c25e15cf276ee82880dd221e0dfa7ac497e9973ada1c3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
       "previewImageUrl": "https://raw.githubusercontent.com/kuafuai/andee/main/images/cover.png",
@@ -858,7 +858,7 @@
       "summaryKo": "MROffice: MR Office — 브라우저의 문서, 스프레드시트, 프레젠테이션, PDF 및 코드 등 Microsoft Office에 가장 가까운 AI 오피스 제품군의 오픈 소스 편집기입니다. 모든 편집자의 Copilot은 실제 Word, Excel 및 PowerPoint를 편집합니다.",
       "painPointKo": "최근 GitHub에서 빠르게 ★2.9k 스타를 모으며 주목받는 오픈소스 프로젝트(XinaTian/MROffice)입니다.",
       "tractionLabel": "GitHub ★2.9k",
-      "tractionValue": 14360,
+      "tractionValue": 14480,
       "tractionType": "stars",
       "mrrUsd": null,
       "mechanism": "canvas-compare",
@@ -872,7 +872,7 @@
         "codex"
       ],
       "publishedAt": "2026-11-10T17:54:07Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": "https://demo.mroffice.ai/media/mr-office-demo.mp4",
       "previewImageUrl": "https://raw.githubusercontent.com/XinaTian/MROffice/main/docs/media/mr-office-demo.webp",
@@ -911,7 +911,7 @@
         "chat-ui"
       ],
       "publishedAt": "2026-10-12T09:19:02Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/deeplethe/solid-glass/main/docs/banner-5.webp",
@@ -950,7 +950,7 @@
         "claude-code"
       ],
       "publishedAt": "2026-10-12T07:11:01Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/zhuyansen/new-term-radar/main/docs/radar.en.gif",
@@ -989,7 +989,7 @@
         "ai-interview"
       ],
       "publishedAt": "2026-09-19T04:14:43Z",
-      "fetchedAt": "2026-11-24T02:02:43.831Z",
+      "fetchedAt": "2026-11-24T02:42:36.103Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/pallavi-shekhar/ai-engineering-interview-questions-company-wise/main/assets/banner.png",
@@ -1023,8 +1023,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/storeradar/opengraph-image?034a9e04a0b0b83d",
@@ -1058,8 +1058,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/docphoto/opengraph-image?034a9e04a0b0b83d",
@@ -1093,8 +1093,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/bankconv/opengraph-image?034a9e04a0b0b83d",
@@ -1128,8 +1128,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/transclipper/opengraph-image?034a9e04a0b0b83d",
@@ -1163,8 +1163,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/vidgens/opengraph-image?034a9e04a0b0b83d",
@@ -1198,8 +1198,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/blind-buzzer/opengraph-image?034a9e04a0b0b83d",
@@ -1233,8 +1233,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/landy/opengraph-image?034a9e04a0b0b83d",
@@ -1268,8 +1268,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/whispa/opengraph-image?034a9e04a0b0b83d",
@@ -1303,8 +1303,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/prepi/opengraph-image?034a9e04a0b0b83d",
@@ -1338,8 +1338,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/coralflavor/opengraph-image?034a9e04a0b0b83d",
@@ -1373,8 +1373,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/ace-pitcher/opengraph-image?034a9e04a0b0b83d",
@@ -1408,8 +1408,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/appzoku/opengraph-image?034a9e04a0b0b83d",
@@ -1443,8 +1443,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/stealth-venture-73/opengraph-image?034a9e04a0b0b83d",
@@ -1478,8 +1478,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/high-value-ios-app/opengraph-image?034a9e04a0b0b83d",
@@ -1499,9 +1499,9 @@
       "sourceLabel": "TrustMRR",
       "url": "https://trustmrr.com/startup/stan",
       "discussionUrl": "https://trustmrr.com/startup/stan",
-      "taglineEn": "Stan enables people to make living and work for themselves. Vitalii Dodonov",
-      "taglineKo": "Stan enables people to make living and work for themselves. Vitalii Dodonov",
-      "summaryKo": "Stan: Stan enables people to make living and work for themselves. Vitalii Dodonov (검증 매출 $3,569,654 (TrustMRR))",
+      "taglineEn": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Stan enables people to make living and work for themselves. [role=checkb",
+      "taglineKo": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Stan은 사람들이 스스로 생활하고 일할 수 있도록 지원합니다. [역할=체크b",
+      "summaryKo": "Stan: [role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Stan은 사람들이 스스로 생활하고 일할 수 있도록 지원합니다. [역할=체크b (검증 매출 $3,569,654 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
       "tractionLabel": "검증 매출 $3,569,654 (TrustMRR)",
       "tractionValue": 50000,
@@ -1513,8 +1513,8 @@
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/stan/opengraph-image?034a9e04a0b0b83d",
@@ -1523,7 +1523,7 @@
         "inputKo": "사용자가 올린 이미지, 상품 링크, 또는 비교 대상 URL",
         "coreEngineKo": "Stan의 핵심 탐색·매칭 로직으로 특징과 가격·스펙 데이터를 구조화해 유사 후보를 추출",
         "outputKo": "대안 리스트와 핵심 수치·가격 차이를 한눈에 대조하는 비교 결과 카드",
-        "summaryKo": "Stan enables people to make living and work for themselves. Vitalii Dodonov (시각·시세 비교 구조)"
+        "summaryKo": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Stan은 사람들이 스스로 생활하고 일할 수 있도록 지원합"
       }
     },
     {
@@ -1534,22 +1534,22 @@
       "sourceLabel": "TrustMRR",
       "url": "https://trustmrr.com/startup/postiz",
       "discussionUrl": "https://trustmrr.com/startup/postiz",
-      "taglineEn": "Postiz is the ultimate agentic social media scheduler tool Nevo David",
-      "taglineKo": "Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David",
-      "summaryKo": "Postiz: Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (검증 매출 $459,946 (TrustMRR))",
+      "taglineEn": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Postiz is the ultimate agentic social media scheduler tool [role=checkbo",
+      "taglineKo": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. [role=checkbo",
+      "summaryKo": "Postiz: [role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. [role=checkbo (검증 매출 $461,078 (TrustMRR))",
       "painPointKo": "실제 결제 데이터로 월 매출이 검증된 해외 마이크로 SaaS 사례입니다.",
-      "tractionLabel": "검증 매출 $459,946 (TrustMRR)",
+      "tractionLabel": "검증 매출 $461,078 (TrustMRR)",
       "tractionValue": 50000,
       "tractionType": "mrr",
-      "mrrUsd": 459946,
+      "mrrUsd": 461078,
       "mechanism": "drop-validation",
       "mechanismLabel": "공개 투표 · 수요 검증",
       "tags": [
         "trustmrr",
         "verified-revenue"
       ],
-      "publishedAt": "2026-11-24T02:03:36.234Z",
-      "fetchedAt": "2026-11-24T02:03:36.234Z",
+      "publishedAt": "2026-11-24T02:43:29.369Z",
+      "fetchedAt": "2026-11-24T02:43:29.369Z",
       "verifiedRevenue": true,
       "demoVideoUrl": null,
       "previewImageUrl": "https://trustmrr.com/startup/postiz/opengraph-image?034a9e04a0b0b83d",
@@ -1558,7 +1558,7 @@
         "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
         "coreEngineKo": "Postiz의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
         "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
-        "summaryKo": "Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입니다. Nevo David (반응·수요 검증 구조)"
+        "summaryKo": "[role=checkbox]]:translate-y-[2px] w-[50px] pr-2 text-center\"> [role=checkbox]]:translate-y-[2px] w-[30%]\"> Postiz는 최고의 에이전트 소셜 미디어 스케줄러 도구입"
       }
     },
     {
@@ -1584,7 +1584,7 @@
         "validated"
       ],
       "publishedAt": "2026-09-15T12:31:10Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/arnegiacomo/fugleramme/main/docs/assets/redraw.gif",
@@ -1619,7 +1619,7 @@
         "validated"
       ],
       "publishedAt": "2026-11-01T15:58:28Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -1654,7 +1654,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-31T15:17:28Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://john.fun/metadata/elevator/twitter-card.png",
@@ -1689,7 +1689,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-11T13:24:29Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://brew.sh/assets/img/homebrew-social-card.png",
@@ -1724,7 +1724,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-08T14:05:16Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://performative-ui.cncl.co/og.png",
@@ -1759,7 +1759,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-09T12:48:52Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://18words.com/og-image.png",
@@ -1794,7 +1794,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-22T15:19:23Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -1829,7 +1829,7 @@
         "validated"
       ],
       "publishedAt": "2026-10-20T18:29:09Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://permit.petercai.com/marketing/og.png",
@@ -1864,7 +1864,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-09T08:05:04Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/JustVugg/colibri/main/docs/media/sparse.png",
@@ -1899,7 +1899,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-29T15:05:43Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/drumih/turbo-fieldfare/main/docs/assets/turbofieldfare-logo-rounded.png",
@@ -1934,7 +1934,7 @@
         "validated"
       ],
       "publishedAt": "2026-09-23T22:53:28Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://bastardica.mitpit.com/scr2.png",
@@ -1969,7 +1969,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-25T14:08:55Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://hackernewstrends.com/opengraph-image",
@@ -2004,7 +2004,7 @@
         "validated"
       ],
       "publishedAt": "2026-11-12T17:02:42Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/simpsoka/zigzag/main/packaging/macos/AppIcon-dark.png",
@@ -2039,7 +2039,7 @@
         "validated"
       ],
       "publishedAt": "2026-10-07T15:44:21Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://bigwords.page/og.png",
@@ -2074,7 +2074,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-14T17:25:38Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://raw.githubusercontent.com/tamnd/kage/main/docs/static/demo.gif",
@@ -2109,7 +2109,7 @@
         "validated"
       ],
       "publishedAt": "2026-08-27T08:59:49Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2144,7 +2144,7 @@
         "validated"
       ],
       "publishedAt": "2026-09-10T01:58:00Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2179,7 +2179,7 @@
         "validated"
       ],
       "publishedAt": "2026-10-24T20:30:31Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2214,7 +2214,7 @@
         "validated"
       ],
       "publishedAt": "2026-08-04T15:16:22Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://toneyalexander.github.io/inclusive-color-space/img/preview.png",
@@ -2249,7 +2249,7 @@
         "validated"
       ],
       "publishedAt": "2026-08-20T12:04:38Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://simedw.com/2026/08/20/midi-autocomplete/images/rolltab_phone.jpg",
@@ -2284,7 +2284,7 @@
         "validated"
       ],
       "publishedAt": "2026-10-13T19:11:48Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://guitoro.com/brand/guitoro-social-acoustic.jpg",
@@ -2319,7 +2319,7 @@
         "validated"
       ],
       "publishedAt": "2026-08-10T17:22:07Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://cactuscompute.com/opengraph-image?9df76a35fe8276e2",
@@ -2354,7 +2354,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-11T21:17:30Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://fablepool.com/og.png",
@@ -2389,7 +2389,7 @@
         "validated"
       ],
       "publishedAt": "2026-11-09T17:51:31Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://www.watched.earth/og-default.png",
@@ -2424,7 +2424,7 @@
         "validated"
       ],
       "publishedAt": "2026-11-03T01:18:09Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2459,7 +2459,7 @@
         "validated"
       ],
       "publishedAt": "2026-07-23T13:29:24Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2494,7 +2494,7 @@
         "validated"
       ],
       "publishedAt": "2026-11-03T01:53:34Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -2529,7 +2529,7 @@
         "validated"
       ],
       "publishedAt": "2026-06-18T20:49:03Z",
-      "fetchedAt": "2026-11-24T02:03:36.059Z",
+      "fetchedAt": "2026-11-24T02:43:28.988Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": "https://intheweights.com/og-tappin.png",
@@ -3263,8 +3263,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3298,8 +3298,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3333,8 +3333,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3344,76 +3344,6 @@
         "coreEngineKo": "Feedsortr 계열의 음성 인식·사운드 분리 처리로 핵심 발화와 오디오 레이어를 정제",
         "outputKo": "바로 검색·편집·공유할 수 있는 텍스트 카드 및 정제된 오디오 클립",
         "summaryKo": "Feedsortr — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (음성·오디오 정리 구조)"
-      }
-    },
-    {
-      "id": "builder-uneed-937ac12340",
-      "name": "Displaymath",
-      "slug": "uneed-displaymath",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/displaymath",
-      "discussionUrl": "https://www.uneed.best/tool/displaymath",
-      "taglineEn": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Displaymath: Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 148,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
-      "verifiedRevenue": false,
-      "demoVideoUrl": null,
-      "previewImageUrl": null,
-      "mediaSourceLabel": null,
-      "techDigestKo": {
-        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
-        "coreEngineKo": "Displaymath의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
-        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
-        "summaryKo": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
-      }
-    },
-    {
-      "id": "builder-uneed-8db61818b5",
-      "name": "Easytools",
-      "slug": "uneed-easytools",
-      "source": "uneed",
-      "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/easytools",
-      "discussionUrl": "https://www.uneed.best/tool/easytools",
-      "taglineEn": "Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Easytools: Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
-      "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 140,
-      "tractionType": "rank",
-      "mrrUsd": null,
-      "mechanism": "drop-validation",
-      "mechanismLabel": "공개 투표 · 수요 검증",
-      "tags": [
-        "uneed",
-        "daily-launch"
-      ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
-      "verifiedRevenue": false,
-      "demoVideoUrl": null,
-      "previewImageUrl": null,
-      "mediaSourceLabel": null,
-      "techDigestKo": {
-        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
-        "coreEngineKo": "Easytools의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
-        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
-        "summaryKo": "Easytools — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
       }
     },
     {
@@ -3429,7 +3359,7 @@
       "summaryKo": "Plango: Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
-      "tractionValue": 132,
+      "tractionValue": 148,
       "tractionType": "rank",
       "mrrUsd": null,
       "mechanism": "drop-validation",
@@ -3438,8 +3368,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3449,6 +3379,76 @@
         "coreEngineKo": "Plango의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
         "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
         "summaryKo": "Plango — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-9c989f3752",
+      "name": "Bragly",
+      "slug": "uneed-bragly",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/bragly",
+      "discussionUrl": "https://www.uneed.best/tool/bragly",
+      "taglineEn": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Bragly: Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 140,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Bragly의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Bragly — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+      }
+    },
+    {
+      "id": "builder-uneed-937ac12340",
+      "name": "Displaymath",
+      "slug": "uneed-displaymath",
+      "source": "uneed",
+      "sourceLabel": "Uneed",
+      "url": "https://www.uneed.best/tool/displaymath",
+      "discussionUrl": "https://www.uneed.best/tool/displaymath",
+      "taglineEn": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Displaymath: Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
+      "tractionLabel": "Uneed 데일리 런칭",
+      "tractionValue": 132,
+      "tractionType": "rank",
+      "mrrUsd": null,
+      "mechanism": "drop-validation",
+      "mechanismLabel": "공개 투표 · 수요 검증",
+      "tags": [
+        "uneed",
+        "daily-launch"
+      ],
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
+      "verifiedRevenue": false,
+      "demoVideoUrl": null,
+      "previewImageUrl": null,
+      "mediaSourceLabel": null,
+      "techDigestKo": {
+        "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
+        "coreEngineKo": "Displaymath의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
+        "summaryKo": "Displaymath — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
       }
     },
     {
@@ -3473,8 +3473,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3508,8 +3508,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3522,16 +3522,16 @@
       }
     },
     {
-      "id": "builder-uneed-514b99ba9c",
-      "name": "Orka Chat",
-      "slug": "uneed-orka-chat",
+      "id": "builder-uneed-1b4c96efe2",
+      "name": "Screenkite",
+      "slug": "uneed-screenkite",
       "source": "uneed",
       "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/orka-chat",
-      "discussionUrl": "https://www.uneed.best/tool/orka-chat",
-      "taglineEn": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Orka Chat: Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "url": "https://www.uneed.best/tool/screenkite",
+      "discussionUrl": "https://www.uneed.best/tool/screenkite",
+      "taglineEn": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Screenkite: Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 108,
@@ -3543,17 +3543,17 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
       "mediaSourceLabel": null,
       "techDigestKo": {
         "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
-        "coreEngineKo": "Orka Chat의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "coreEngineKo": "Screenkite의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
         "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
-        "summaryKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+        "summaryKo": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
       }
     },
     {
@@ -3578,8 +3578,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3613,8 +3613,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3648,8 +3648,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3662,16 +3662,16 @@
       }
     },
     {
-      "id": "builder-uneed-1b4c96efe2",
-      "name": "Screenkite",
-      "slug": "uneed-screenkite",
+      "id": "builder-uneed-514b99ba9c",
+      "name": "Orka Chat",
+      "slug": "uneed-orka-chat",
       "source": "uneed",
       "sourceLabel": "Uneed",
-      "url": "https://www.uneed.best/tool/screenkite",
-      "discussionUrl": "https://www.uneed.best/tool/screenkite",
-      "taglineEn": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "taglineKo": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
-      "summaryKo": "Screenkite: Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "url": "https://www.uneed.best/tool/orka-chat",
+      "discussionUrl": "https://www.uneed.best/tool/orka-chat",
+      "taglineEn": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "taglineKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
+      "summaryKo": "Orka Chat: Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트",
       "painPointKo": "Uneed 데일리 런칭 보드에 오른 인디 프로덕트로, 한 가지 기능에 집중한 단순한 구조가 강점입니다.",
       "tractionLabel": "Uneed 데일리 런칭",
       "tractionValue": 76,
@@ -3683,17 +3683,17 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
       "mediaSourceLabel": null,
       "techDigestKo": {
         "inputKo": "초기 프로젝트 컨셉, 프롬프트 명령, 또는 공개 검증용 링크",
-        "coreEngineKo": "Screenkite의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
+        "coreEngineKo": "Orka Chat의 자동화 실행 및 실시간 반응 집계 파이프라인으로 핵심 워크플로를 구동",
         "outputKo": "별도 세팅 없이 즉시 결과를 확인하고 사용자 반응 데이터를 확보하는 실행 화면",
-        "summaryKo": "Screenkite — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
+        "summaryKo": "Orka Chat — Uneed 오늘의 런칭 선정 인디 웹·앱 프로덕트 (반응·수요 검증 구조)"
       }
     },
     {
@@ -3718,8 +3718,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3753,8 +3753,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
@@ -3788,8 +3788,8 @@
         "uneed",
         "daily-launch"
       ],
-      "publishedAt": "2026-11-24T02:03:36.926Z",
-      "fetchedAt": "2026-11-24T02:03:36.926Z",
+      "publishedAt": "2026-11-24T02:43:30.024Z",
+      "fetchedAt": "2026-11-24T02:43:30.024Z",
       "verifiedRevenue": false,
       "demoVideoUrl": null,
       "previewImageUrl": null,
