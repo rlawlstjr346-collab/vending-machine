@@ -1,14 +1,14 @@
 {
-  "syncedAt": "2026-11-24T04:25:28.338Z",
+  "syncedAt": "2026-11-24T04:35:49.461Z",
   "counts": {
     "aiRadar": 153,
     "cultureTotal": 151,
     "cultureDomains": 19,
-    "builderTotal": 185,
+    "builderTotal": 186,
     "bySource": {
       "github_trending": 50,
       "trustmrr": 22,
-      "show_hn": 71,
+      "show_hn": 72,
       "product_hunt": 20,
       "uneed": 22
     },
@@ -34,7 +34,7 @@
       "Kottke.org": 8
     },
     "verifiedRevenueCount": 22,
-    "verifiedMediaCount": 86,
+    "verifiedMediaCount": 90,
     "verifiedCultureMediaCount": 125,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
@@ -49,7 +49,7 @@
       "status": 200,
       "count": 153,
       "cached304": false,
-      "note": "merged remote(100/100) + local(100/100) -> balanced 153/220, thumbs(7)"
+      "note": "merged remote(100/100) + local(0/0) -> balanced 153/220, thumbs(7)"
     },
     {
       "id": "github_trending",
@@ -71,7 +71,7 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 71,
+      "count": 72,
       "cached304": false,
       "note": "68 live Show HN items"
     },
@@ -110,8 +110,8 @@
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 86,
-      "note": "6 newly enriched via OG/README"
+      "count": 90,
+      "note": "4 newly enriched via OG/README"
     },
     {
       "id": "culture_dazed",
@@ -188,10 +188,10 @@
     {
       "id": "culture_booooooom",
       "label": "Boooooom (사진 · 시각예술)",
-      "status": 304,
+      "status": 200,
       "count": 7,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "7 items (7 img)"
     },
     {
       "id": "culture_petapixel",
@@ -236,10 +236,10 @@
     {
       "id": "culture_stereogum",
       "label": "Stereogum (음악 · 인디 문화)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_dezeen",

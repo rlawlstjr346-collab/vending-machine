@@ -1966,5 +1966,45 @@
     "contentType": "image/png",
     "finalUrl": "https://princechazz.com/og-image.png",
     "checkedAt": "2026-11-24T04:25:03.904Z"
+  },
+  "https://github.com/user-attachments/assets/17f947d5-c66c-4dfb-84a7-ade01ecd3a74": {
+    "ok": false,
+    "kind": null,
+    "status": 206,
+    "contentType": "image/png",
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/17400377/668115960-17f947d5-c66c-4dfb-84a7-ade01ecd3a74.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T043525Z&X-Amz-Expires=300&X-Amz-Signature=c0a48365950e86bde18e672b07b5abc977c7c56b4061ad28425630720d7069c9&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng",
+    "checkedAt": "2026-11-24T04:35:26.337Z"
+  },
+  "https://raw.githubusercontent.com/twalichiewicz/HNewhere/main/site/src/shot-sidebar.webp": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/webp",
+    "finalUrl": "https://raw.githubusercontent.com/twalichiewicz/HNewhere/main/site/src/shot-sidebar.webp",
+    "checkedAt": "2026-11-24T04:35:26.496Z"
+  },
+  "https://raw.githubusercontent.com/devdotfast/whiteboard/main/.github/assets/whiteboard-demo.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/devdotfast/whiteboard/main/.github/assets/whiteboard-demo.gif",
+    "checkedAt": "2026-11-24T04:35:28.063Z"
+  },
+  "https://raw.githubusercontent.com/franzenzenhofer/big-arrow-on-the-screen/main/docs/images/demo.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://raw.githubusercontent.com/franzenzenhofer/big-arrow-on-the-screen/main/docs/images/demo.gif",
+    "checkedAt": "2026-11-24T04:35:29.817Z"
+  },
+  "https://raw.githubusercontent.com/reladraw/reladraw/main/examples/reference/arch.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://raw.githubusercontent.com/reladraw/reladraw/main/examples/reference/arch.png",
+    "checkedAt": "2026-11-24T04:35:32.117Z"
   }
 }
