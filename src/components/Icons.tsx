@@ -4,16 +4,32 @@ interface IconProps {
   className?: string;
 }
 
+/**
+ * Precision industrial-design DISPENSER. brand mark
+ * Inspired by Braun / Teenage Engineering / Linear:
+ * - Left micro symbol: solid #0F172A rounded square with two crisp white ingredient
+ *   layer slots and an International Orange (#FF4F00) dispensing point dot
+ * - Right wordmark: tight-tracked uppercase DISPENSER + baseline #FF4F00 precision dot
+ */
 export function DispenserLogo({ className = "" }: IconProps) {
   return (
-    <span className={`inline-flex items-center gap-2 select-none ${className}`}>
-      <span className="font-sans text-[clamp(1.05rem,0.95vw,1.4rem)] font-extrabold tracking-[0.06em] text-[#0F172A] leading-none">
-        DISPENSER
-      </span>
-      <span
-        className="inline-block h-2 w-2 rounded-full bg-[#2563EB]"
+    <span className={`inline-flex items-center gap-2.5 select-none ${className}`}>
+      <svg
+        viewBox="0 0 28 28"
+        fill="none"
+        className="h-[clamp(1.45rem,1.45vw,1.9rem)] w-[clamp(1.45rem,1.45vw,1.9rem)] shrink-0"
         aria-hidden="true"
-      />
+      >
+        <rect x="0.5" y="0.5" width="27" height="27" rx="6.5" fill="#0F172A" />
+        <rect x="6.5" y="7.5" width="15" height="2.4" rx="1.2" fill="#FFFFFF" />
+        <rect x="6.5" y="12.8" width="15" height="2.4" rx="1.2" fill="#FFFFFF" fillOpacity="0.82" />
+        <rect x="6.5" y="18.1" width="9.2" height="2.4" rx="1.2" fill="#FFFFFF" fillOpacity="0.52" />
+        <circle cx="19.6" cy="19.3" r="2.1" fill="#FF4F00" />
+      </svg>
+      <span className="inline-flex items-baseline font-sans text-[clamp(1.08rem,0.98vw,1.44rem)] font-extrabold leading-none tracking-[-0.04em] text-[#0F172A]">
+        <span>DISPENSER</span>
+        <span className="text-[#FF4F00]">.</span>
+      </span>
     </span>
   );
 }

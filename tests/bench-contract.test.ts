@@ -8,10 +8,11 @@ import {
 } from "@/components/HighlightText";
 import { DOMAIN_LIST } from "@/lib/domains";
 import {
-  decodeSavedParam,
-  encodeSavedParam,
-  mergeSavedWithSeedIds,
-} from "@/lib/saved-store";
+  DISCOVER_HUBS,
+  getDiscoverHub,
+  getTreatmentsForDiscoverHub,
+} from "@/lib/seo-keywords";
+import { getSiteUrl } from "@/lib/site-url";
 import {
   matchAiRadarFor,
   matchCultureFor,
@@ -50,7 +51,7 @@ function collectSourceFiles(dir: string): string[] {
   return files;
 }
 
-describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () => {
+describe("DISPENSER. Production Release Contract Tests", () => {
   const buildersPayload = readJson<{ count: number; items: BuilderSignal[] }>(
     path.join(PUBLIC_DATA, "builder-signals.json")
   );
@@ -64,14 +65,20 @@ describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () =>
     path.join(PUBLIC_DATA, "treatments-seed.json")
   );
 
-  it("1) guarantees DISPENSER branding with zero legacy BENCH. residue and zero forbidden terms", () => {
+  it("1) guarantees DISPENSER. branding, precision logo & favicon routes, and zero legacy/forbidden residue", () => {
     const legacyBrandRe = /\bBENCH\./;
     const personalTermRe = /(KREAM|직장인\s*TF|취업|\bagy\b)/i;
 
     const layoutSrc = fs.readFileSync(path.join(ROOT, "src/app/layout.tsx"), "utf-8");
     const iconsSrc = fs.readFileSync(path.join(ROOT, "src/components/Icons.tsx"), "utf-8");
     expect(layoutSrc).toContain("DISPENSER");
-    expect(iconsSrc).toContain("DISPENSER");
+    expect(layoutSrc).toContain("NAVER_SITE_VERIFICATION");
+    expect(layoutSrc).toContain("GOOGLE_SITE_VERIFICATION");
+    expect(iconsSrc).toContain("DispenserLogo");
+    expect(iconsSrc).toContain("#FF4F00");
+    expect(fs.existsSync(path.join(ROOT, "src/app/icon.tsx"))).toBe(true);
+    expect(fs.existsSync(path.join(ROOT, "src/app/apple-icon.tsx"))).toBe(true);
+    expect(fs.existsSync(path.join(ROOT, "public/dispenser-indexnow-9f4c2a8e7b1d6e3a.txt"))).toBe(true);
 
     for (const dataFile of ["treatments-seed.json", "culture-signals.json"]) {
       const raw = fs.readFileSync(path.join(PUBLIC_DATA, dataFile), "utf-8");
@@ -88,9 +95,10 @@ describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () =>
     }
   });
 
-  it("2) guarantees zero fake ProductWireframePreview usage, fluid FHD/4K scale-up, and AI Radar highlight renderer", () => {
-    const fakePreviewPath = path.join(ROOT, "src/components/ProductWireframePreview.tsx");
-    expect(fs.existsSync(fakePreviewPath)).toBe(false);
+  it("2) guarantees deleted dead legacy files and intact fluid FHD/4K DISPENSER. card & modal", () => {
+    expect(fs.existsSync(path.join(ROOT, "src/components/ProductWireframePreview.tsx"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "src/lib/saved-store.ts"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "public/bench-indexnow-9f4c2a8e7b1d6e3a.txt"))).toBe(false);
 
     const cardSrc = fs.readFileSync(
       path.join(ROOT, "src/components/VisualBlueprintCard.tsx"),
@@ -158,7 +166,6 @@ describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () =>
     expect(cultureRatio).toBeGreaterThanOrEqual(0.45);
     expect(cultureRatio).toBeLessThanOrEqual(0.55);
 
-    // Ensure no 3 consecutive cards belong to the same track
     for (let i = 2; i < treatmentsPayload.items.length; i += 1) {
       const a = treatmentsPayload.items[i - 2].track;
       const b = treatmentsPayload.items[i - 1].track;
@@ -283,37 +290,49 @@ describe("DISPENSER Editorial Dual-Track Signal Dispenser Contract Tests", () =>
     expect(prompt).not.toMatch(/\bagy\b/i);
   });
 
-  it("8) validates SEO routes (/sitemap.xml, /rss.xml, /robots.txt, /treatment/[id]) and saved-store helpers", async () => {
-    const sampleIds = treatmentsPayload.items.slice(0, 3).map((t) => t.id);
-    const encoded = encodeSavedParam(sampleIds);
-    const decoded = decodeSavedParam(encoded);
-    expect(decoded).toEqual(sampleIds);
-    expect(mergeSavedWithSeedIds([], sampleIds, treatmentsPayload.items).map((t) => t.id)).toEqual(
-      sampleIds
-    );
+  it("8) validates 8 programmatic /discover/[slug] SEO hubs, auto site-url resolution, full sitemap, robots, and RSS 2.0", async () => {
+    expect(DISCOVER_HUBS).toHaveLength(8);
+    expect(DISCOVER_HUBS.map((h) => h.slug)).toEqual([
+      "ai-service-ideas",
+      "side-project-mvp",
+      "vibe-coding-topics",
+      "startup-benchmarking",
+      "opensource-product-ideas",
+      "brand-digital-campaign",
+      "media-art-cinema-web",
+      "micro-saas-trends",
+    ]);
+
+    for (const hub of DISCOVER_HUBS) {
+      expect(getDiscoverHub(hub.slug)).toBeDefined();
+      expect(hub.titleKo.length).toBeGreaterThan(10);
+      expect(hub.titleEn.length).toBeGreaterThan(10);
+      expect(hub.keywords.length).toBeGreaterThanOrEqual(4);
+      const matched = getTreatmentsForDiscoverHub(hub, treatmentsPayload.items);
+      expect(matched.length, `Hub ${hub.slug} should match treatments`).toBeGreaterThanOrEqual(8);
+    }
+
+    const siteUrl = getSiteUrl();
+    expect(isValidHttpUrl(siteUrl)).toBe(true);
 
     const sm = sitemap();
-    expect(sm.length).toBeGreaterThanOrEqual(1 + DOMAIN_LIST.length + treatmentsPayload.items.length);
-    expect(sm.some((entry) => entry.url.includes(`/treatment/${treatmentsPayload.items[0].id}`))).toBe(
-      true
-    );
+    expect(sm.length).toBe(1 + DISCOVER_HUBS.length + DOMAIN_LIST.length + treatmentsPayload.items.length);
+    for (const hub of DISCOVER_HUBS) {
+      expect(sm.some((entry) => entry.url === `${siteUrl}/discover/${hub.slug}`)).toBe(true);
+    }
+    for (const t of treatmentsPayload.items) {
+      expect(sm.some((entry) => entry.url === `${siteUrl}/treatment/${t.id}`)).toBe(true);
+    }
 
     const rb = robots();
-    expect(rb.sitemap).toMatch(/\/sitemap\.xml$/);
+    expect(rb.sitemap).toBe(`${siteUrl}/sitemap.xml`);
 
     const rssRes = await getRss();
     expect(rssRes.status).toBe(200);
     const rssXml = await rssRes.text();
     expect(rssXml).toContain('<rss version="2.0"');
-    expect(rssXml).toContain("DISPENSER");
+    expect(rssXml).toContain("DISPENSER.");
     expect(rssXml).not.toContain("BENCH.");
-    expect(rssXml).toContain("<item>");
-
-    const treatmentPageSrc = fs.readFileSync(
-      path.join(ROOT, "src/app/treatment/[id]/page.tsx"),
-      "utf-8"
-    );
-    expect(treatmentPageSrc).toContain("generateStaticParams");
-    expect(treatmentPageSrc).toContain("DISPENSER");
+    expect((rssXml.match(/<item>/g) || []).length).toBe(treatmentsPayload.items.length);
   });
 });

@@ -8,6 +8,8 @@ import type {
   Treatment,
 } from "./types";
 
+export { getSiteUrl } from "./site-url";
+
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 
 function readJsonSafe<T>(filename: string, fallback: T): T {
@@ -59,9 +61,4 @@ export function loadSyncMeta(): SyncMeta {
     },
     sources: [],
   });
-}
-
-export function getSiteUrl(): string {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://dispenser-deck.vercel.app";
-  return raw.replace(/\/+$/, "");
 }

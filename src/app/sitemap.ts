@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
+import { loadSeedTreatments } from "@/lib/data-loader";
 import { DOMAIN_LIST } from "@/lib/domains";
-import { getSiteUrl, loadSeedTreatments } from "@/lib/data-loader";
+import { DISCOVER_HUBS } from "@/lib/seo-keywords";
+import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
@@ -14,11 +16,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "hourly",
       priority: 1.0,
     },
+    ...DISCOVER_HUBS.map((hub) => ({
+      url: `${siteUrl}/discover/${hub.slug}`,
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.92,
+    })),
     ...DOMAIN_LIST.map((d) => ({
       url: `${siteUrl}/domain/${d.slug}`,
       lastModified: now,
       changeFrequency: "daily" as const,
-      priority: 0.9,
+      priority: 0.85,
     })),
     ...treatments.map((t) => ({
       url: `${siteUrl}/treatment/${t.id}`,

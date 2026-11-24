@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Sync GitHub, Reddit, overseas builder signals, media, and AI Radar feed
+      - name: Sync GitHub, Reddit, global culture feeds, overseas builders, and AI Radar
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DISPENSER_GEMINI_MODEL: ${{ vars.DISPENSER_GEMINI_MODEL || 'gemini-2.5-flash' }}
@@ -55,9 +55,10 @@ jobs:
           git push origin main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Ping IndexNow when updated
-        if: steps.commit.outputs.changed == 'true' && vars.NEXT_PUBLIC_SITE_URL != ''
+      - name: Ping Naver Search Advisor & IndexNow
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://vending-machine.vercel.app' }}
           INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY || 'dispenser-indexnow-9f4c2a8e7b1d6e3a' }}
-        run: npm run ping:indexnow
+        run: node scripts/ping-indexnow.mjs || true

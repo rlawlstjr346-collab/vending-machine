@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Ping IndexNow (Global + Naver Search Advisor) with updated DISPENSER URLs.
+ * Ping IndexNow (Naver Search Advisor + Global IndexNow) with all DISPENSER. sitemap URLs.
+ * Supports CLI argument: `node scripts/ping-indexnow.mjs https://your-domain.com`
+ * or env vars: SITE_URL / NEXT_PUBLIC_SITE_URL / VERCEL_PROJECT_PRODUCTION_URL
  */
 
 import fs from "node:fs";
@@ -10,8 +12,35 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://dispenser-deck.vercel.app").replace(/\/+$/, "");
-const INDEXNOW_KEY = (process.env.INDEXNOW_KEY || "dispenser-indexnow-9f4c2a8e7b1d6e3a").trim();
+function resolveSiteUrl() {
+  const cliArg = process.argv[2]?.trim();
+  const raw =
+    cliArg ||
+    process.env.SITE_URL?.trim() ||
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim()
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.trim()}`
+      : "") ||
+    "https://vending-machine.vercel.app";
+  const withProto = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+  return withProto.replace(/\/+$/, "");
+}
+
+const SITE_URL = resolveSiteUrl();
+const INDEXNOW_KEY = (
+  process.env.INDEXNOW_KEY || "dispenser-indexnow-9f4c2a8e7b1d6e3a"
+).trim();
+
+const DISCOVER_SLUGS = [
+  "ai-service-ideas",
+  "side-project-mvp",
+  "vibe-coding-topics",
+  "startup-benchmarking",
+  "opensource-product-ideas",
+  "brand-digital-campaign",
+  "media-art-cinema-web",
+  "micro-saas-trends",
+];
 
 const DOMAINS = [
   "brand-commerce",
@@ -26,6 +55,7 @@ function collectUrls() {
   const urls = [
     `${SITE_URL}/`,
     `${SITE_URL}/rss.xml`,
+    ...DISCOVER_SLUGS.map((slug) => `${SITE_URL}/discover/${slug}`),
     ...DOMAINS.map((slug) => `${SITE_URL}/domain/${slug}`),
   ];
   const seedPath = path.join(ROOT, "public", "data", "treatments-seed.json");
@@ -35,7 +65,7 @@ function collectUrls() {
       if (item?.id) urls.push(`${SITE_URL}/treatment/${item.id}`);
     }
   }
-  return urls;
+  return Array.from(new Set(urls));
 }
 
 async function pingEndpoint(endpoint, payload) {
@@ -51,7 +81,7 @@ async function pingEndpoint(endpoint, payload) {
     });
     console.log(`[IndexNow] ${endpoint} -> HTTP ${res.status}`);
   } catch (err) {
-    console.warn(`[IndexNow] ${endpoint} failed:`, err?.message || err);
+    console.warn(`[IndexNow] ${endpoint} skipped:`, err?.message || err);
   }
 }
 
@@ -66,8 +96,13 @@ async function main() {
   };
 
   console.log(`[IndexNow] Submitting ${urlList.length} URLs for ${host}`);
-  await pingEndpoint("https://api.indexnow.org/indexnow", payload);
-  await pingEndpoint("https://searchadvisor.naver.com/indexnow", payload);
+  await Promise.all([
+    pingEndpoint("https://searchadvisor.naver.com/indexnow", payload),
+    pingEndpoint("https://api.indexnow.org/indexnow", payload),
+  ]);
 }
 
-main();
+main().catch((err) => {
+  console.warn("[IndexNow] Non-fatal error:", err?.message || err);
+  process.exit(0);
+});

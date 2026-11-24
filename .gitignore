@@ -1,5 +1,6 @@
 node_modules/
 .next/
+.vercel/
 out/
 coverage/
 .env
@@ -7,4 +8,12 @@ coverage/
 .env.*.local
 .DS_Store
 *.tsbuildinfo
+*.log
+output.txt
 next-env.d.ts
+
+# Workspace-isolated temporary local agent skills (replaceable via .skills-local.json)
+.gemini/skills/
+.agent/skills/
+.claude/skills/
+.skills-local.json
