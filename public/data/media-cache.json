@@ -2990,5 +2990,573 @@
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/devenjarvis/lathe/main/docs/img/read-tutorial.png",
     "checkedAt": "2026-11-25T06:15:01.388Z"
+  },
+  "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f48d19fc-105d-4811-b97f-a23043072a78/original=true/150161531.jpeg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://blobs-b2.civitai.com/file/blobs-managed-public/PKAQJSK51762BKZ7EF3SPJAE90",
+    "checkedAt": "2026-11-25T18:54:43.925Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_d5a7b8e6dedc44ecb6e736b897374dc4@5888275@ai_oswg975902oswg1053oswg495_img_png~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_d5a7b8e6dedc44ecb6e736b897374dc4@5888275@ai_oswg975902oswg1053oswg495_img_png~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:44.440Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_3ec3c34ee00049d3b0b4fd2f9b10a81c@5888275@ai_oswg905696oswg1053oswg495_img_png~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_3ec3c34ee00049d3b0b4fd2f9b10a81c@5888275@ai_oswg905696oswg1053oswg495_img_png~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:44.819Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_96dd2d4a6b944ad2a57107704307d968@000000@ai_oswg782196oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_96dd2d4a6b944ad2a57107704307d968@000000@ai_oswg782196oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:45.008Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_56050d6876484b349176a72f31524633@000000@ai_oswg683657oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_56050d6876484b349176a72f31524633@000000@ai_oswg683657oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:45.274Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_47e9095d6e7c453798a654c5c7168c91@000000@ai_oswg843405oswg2048oswg2048_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_47e9095d6e7c453798a654c5c7168c91@000000@ai_oswg843405oswg2048oswg2048_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:45.519Z"
+  },
+  "https://img.36krcdn.com/hsossms/20261125/v2_2981c3e2baf2437a8da9495f1eb39bac@000000@ai_oswg860246oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://img.36krcdn.com/hsossms/20261125/v2_2981c3e2baf2437a8da9495f1eb39bac@000000@ai_oswg860246oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+    "checkedAt": "2026-11-25T18:54:45.774Z"
+  },
+  "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.25403.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.25403.png",
+    "checkedAt": "2026-11-25T18:54:45.816Z"
+  },
+  "https://a.ltrbxd.com/resized/sm/upload/bz/qi/t2/d2/v9NtFbWXptTNjuISaIYObP6zc5H-0-960-0-540-crop-fill.jpg?k=c08dc9d360": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://a.ltrbxd.com/resized/sm/upload/bz/qi/t2/d2/v9NtFbWXptTNjuISaIYObP6zc5H-0-960-0-540-crop-fill.jpg?k=c08dc9d360",
+    "checkedAt": "2026-11-25T18:54:46.251Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460288.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460288.jpg",
+    "checkedAt": "2026-11-25T18:54:46.505Z"
+  },
+  "https://thefilmstage.com/wp-content/uploads/2026/11/All-of-a-Sudden-1-750x500.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://thefilmstage.com/wp-content/uploads/2026/11/All-of-a-Sudden-1-750x500.jpg",
+    "checkedAt": "2026-11-25T18:54:46.548Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2F24-hours-with-red-bull-during-latin-grammys-2026-hypebeast-latam-info-0.png?w=800&cbr=1&q=90&format=png&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2F24-hours-with-red-bull-during-latin-grammys-2026-hypebeast-latam-info-0.png?w=800&cbr=1&q=90&format=png&fit=max",
+    "checkedAt": "2026-11-25T18:54:46.568Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1450/9/1459748.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1450/9/1459748.jpg",
+    "checkedAt": "2026-11-25T18:54:46.569Z"
+  },
+  "https://thefilmstage.com/wp-content/uploads/2026/05/All-of-a-Sudden-750x564.jpeg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://thefilmstage.com/wp-content/uploads/2026/05/All-of-a-Sudden-750x564.jpeg",
+    "checkedAt": "2026-11-25T18:54:46.617Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460098.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460098.jpg",
+    "checkedAt": "2026-11-25T18:54:46.730Z"
+  },
+  "https://thefilmstage.com/wp-content/uploads/2026/11/TFSHolidayTitles_4096x2160-750x396.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://thefilmstage.com/wp-content/uploads/2026/11/TFSHolidayTitles_4096x2160-750x396.png",
+    "checkedAt": "2026-11-25T18:54:46.758Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460289.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460289.jpg",
+    "checkedAt": "2026-11-25T18:54:46.872Z"
+  },
+  "https://thefilmstage.com/wp-content/uploads/2026/11/Tender-Comrade-750x559.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://thefilmstage.com/wp-content/uploads/2026/11/Tender-Comrade-750x559.jpg",
+    "checkedAt": "2026-11-25T18:54:46.890Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2Fpop-up-store-banner-feature-image.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2Fpop-up-store-banner-feature-image.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:46.981Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F18%2Finfinix-zclip-2-pro-earbuds-snack-bag-000.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F18%2Finfinix-zclip-2-pro-earbuds-snack-bag-000.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.167Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460287.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460287.jpg",
+    "checkedAt": "2026-11-25T18:54:47.271Z"
+  },
+  "https://admin.itsnicethat.com/images/QYkHmeOAJwPlRPqtOL-4UIL12Is=/284437/width-1440%7Cformat-jpeg/yury-ostomentsky-graphic-design-itsnicethat-14.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://m.itsnicethat.com/images/yury-ostomentsky-graphic-design-i.width-1440.format-jpeg_zkbBtAYdZjuumcpG.jpg",
+    "checkedAt": "2026-11-25T18:54:47.281Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460290.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460290.jpg",
+    "checkedAt": "2026-11-25T18:54:47.373Z"
+  },
+  "https://admin.itsnicethat.com/images/RP-0pRY4k8LJypWPRjNZoMMyicU=/285184/width-1440/offcuts-magazine-creative-industry-sponsored-content-itsnicethat-2.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/webp",
+    "finalUrl": "https://m.itsnicethat.com/images/offcuts-magazine-creative-industry-sponsored-.width-1440_8DWnskj8kOJh6lla.jpg",
+    "checkedAt": "2026-11-25T18:54:47.421Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/best-black-friday-deals-now-featured.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/best-black-friday-deals-now-featured.jpg",
+    "checkedAt": "2026-11-25T18:54:47.509Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2Fzamna-10-anniversary-festival-event-info-0.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2Fzamna-10-anniversary-festival-event-info-0.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.547Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/YouTube-Is-Suddenly-Obsessed-With-Views.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/YouTube-Is-Suddenly-Obsessed-With-Views.jpg",
+    "checkedAt": "2026-11-25T18:54:47.557Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F19%2Faape-baby-baby-milo-fw26-collection-release-info-000.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F19%2Faape-baby-baby-milo-fw26-collection-release-info-000.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.582Z"
+  },
+  "https://admin.itsnicethat.com/images/GWk3gY6Lacjn5s_6S78ID_dA3Zc=/283743/width-1440/life_copy_2.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://m.itsnicethat.com/images/life_copy_2.width-1440_H6H5SPutCkiVs34y.jpg",
+    "checkedAt": "2026-11-25T18:54:47.589Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/The-New-York-Times-Cancels-Adobe-the-R8-II-is-a-Hit-and-Reto-Does-it-Again-1600x840.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/The-New-York-Times-Cancels-Adobe-the-R8-II-is-a-Hit-and-Reto-Does-it-Again-1600x840.jpg",
+    "checkedAt": "2026-11-25T18:54:47.625Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FLISA-Wears-Unreleased-Nike-Zoom-Streak-3-f1-Vegas-0.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FLISA-Wears-Unreleased-Nike-Zoom-Streak-3-f1-Vegas-0.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.625Z"
+  },
+  "https://www.highsnobiety.com/static-assets/dato/1795606469-030-1-derrick-adams.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/avif",
+    "finalUrl": "https://www.highsnobiety.com/static-assets/dato/1795606469-030-1-derrick-adams.jpg",
+    "checkedAt": "2026-11-25T18:54:47.664Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/kodak-film-header.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/kodak-film-header.jpg",
+    "checkedAt": "2026-11-25T18:54:47.675Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FCactus-Plant-Flea-Market-cpfm-Nike-Flea-1-Cave-Purple-IU5238-500-Official-Images-0.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FCactus-Plant-Flea-Market-cpfm-Nike-Flea-1-Cave-Purple-IU5238-500-Official-Images-0.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.676Z"
+  },
+  "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FFred-again-Monkey-Shoulder-Nike-Cricket-Jersey-Release-Info-0.jpg?w=800&cbr=1&q=90&fit=max": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F11%2F25%2FFred-again-Monkey-Shoulder-Nike-Cricket-Jersey-Release-Info-0.jpg?w=800&cbr=1&q=90&fit=max",
+    "checkedAt": "2026-11-25T18:54:47.691Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/family-photographer-arrest.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/family-photographer-arrest.jpg",
+    "checkedAt": "2026-11-25T18:54:47.725Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/AI-Character-Stealing-Content-Creators-Work-Reskinning.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/AI-Character-Stealing-Content-Creators-Work-Reskinning.jpg",
+    "checkedAt": "2026-11-25T18:54:47.794Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/brightin-star-35-released-featured.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/brightin-star-35-released-featured.jpg",
+    "checkedAt": "2026-11-25T18:54:47.845Z"
+  },
+  "https://petapixel.com/assets/uploads/2026/11/australia-camera.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://petapixel.com/assets/uploads/2026/11/australia-camera.jpg",
+    "checkedAt": "2026-11-25T18:54:47.892Z"
+  },
+  "https://www.thisiscolossal.com/wp-content/uploads/2026/11/pdia-d7c2c1d4-6b75-4428-bb4f-2a9c2716e5a3.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.thisiscolossal.com/wp-content/uploads/2026/11/pdia-d7c2c1d4-6b75-4428-bb4f-2a9c2716e5a3.jpg",
+    "checkedAt": "2026-11-25T18:54:48.055Z"
+  },
+  "https://www.thisiscolossal.com/wp-content/uploads/2026/11/yilki-4.jpeg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.thisiscolossal.com/wp-content/uploads/2026/11/yilki-4.jpeg",
+    "checkedAt": "2026-11-25T18:54:48.114Z"
+  },
+  "https://www.thisiscolossal.com/wp-content/uploads/2026/11/2026_WADEANDLETA_JISP_CATCHING-FEELINGS_2091-1.gif": {
+    "ok": true,
+    "kind": "gif",
+    "status": 200,
+    "contentType": "image/gif",
+    "finalUrl": "https://www.thisiscolossal.com/wp-content/uploads/2026/11/2026_WADEANDLETA_JISP_CATCHING-FEELINGS_2091-1.gif",
+    "checkedAt": "2026-11-25T18:54:48.168Z"
+  },
+  "https://media.pitchfork.com/photos/6b06deb5efeade4df721e4b2/master/pass/erykah-badu-fallon.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://media.pitchfork.com/photos/6b06deb5efeade4df721e4b2/master/pass/erykah-badu-fallon.jpg",
+    "checkedAt": "2026-11-25T18:54:48.314Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/10/Anna-Meredith.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/10/Anna-Meredith.jpg?w=564",
+    "checkedAt": "2026-11-25T18:54:48.845Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/toliver.jpeg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/toliver.jpeg?w=564",
+    "checkedAt": "2026-11-25T18:54:48.972Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Vince.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Vince.jpg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.037Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/bethesda-residence-desai-chia-maryland-sq_dezeen_2364_col_0-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/bethesda-residence-desai-chia-maryland-sq_dezeen_2364_col_0-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.054Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/bay-house-tuckey-design-studio-architecture-residential-yorkshire-england-uk_dezeen_2364_sq-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/bay-house-tuckey-design-studio-architecture-residential-yorkshire-england-uk_dezeen_2364_sq-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.105Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/laerke-ryom-20x20-portrait-sq_dezeen_2364_col_0-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/laerke-ryom-20x20-portrait-sq_dezeen_2364_col_0-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.152Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/simon-skinner-portrait_dezeen_2364_col_0-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/simon-skinner-portrait_dezeen_2364_col_0-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.200Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/badu.jpeg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/badu.jpeg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.235Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/bosco-verticale-stefano-boeri-milan_dezeen_1704_col_0-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/bosco-verticale-stefano-boeri-milan_dezeen_1704_col_0-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.277Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Ninajirachi.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Ninajirachi.jpg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.315Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/edinburgh-college-of-art-sq-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/edinburgh-college-of-art-sq-1024x1024.jpg",
+    "checkedAt": "2026-11-25T18:54:49.335Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Helena-Deland.jpeg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Helena-Deland.jpeg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.413Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Advance-BAse.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Advance-BAse.jpg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.511Z"
+  },
+  "https://www.highsnobiety.com/static-assets/dato/1794503544-feature2.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/avif",
+    "finalUrl": "https://www.highsnobiety.com/static-assets/dato/1794503544-feature2.jpg",
+    "checkedAt": "2026-11-25T18:54:49.566Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Clipse.jpeg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Clipse.jpeg?w=564",
+    "checkedAt": "2026-11-25T18:54:49.634Z"
+  },
+  "https://kottke.org/images/unfurls/thumb-50048-10e27cfa.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://kottke.org/images/unfurls/thumb-50048-10e27cfa.jpg",
+    "checkedAt": "2026-11-25T18:54:50.121Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/tafelberg-heath-blaricum-office-nature-timber-studio-massimo-designboom-700-500x400-22b08q85r716.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/tafelberg-heath-blaricum-office-nature-timber-studio-massimo-designboom-700-500x400-22b08q85r716.jpg",
+    "checkedAt": "2026-11-25T18:54:50.129Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/search-home-fixed-address-prefabricated-houses-floating-dwellings-designboom-700-500x400-22b08q85r938.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/search-home-fixed-address-prefabricated-houses-floating-dwellings-designboom-700-500x400-22b08q85r938.jpg",
+    "checkedAt": "2026-11-25T18:54:50.203Z"
+  },
+  "https://i.ytimg.com/vi/I0rkpF49Deo/maxresdefault.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://i.ytimg.com/vi/I0rkpF49Deo/maxresdefault.jpg",
+    "checkedAt": "2026-11-25T18:54:50.247Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/nick-cave-india-pavilion-visitors-lions-2026-venice-art-biennale-designboom-700-500x400-22b08q85r074.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/nick-cave-india-pavilion-visitors-lions-2026-venice-art-biennale-designboom-700-500x400-22b08q85r074.jpg",
+    "checkedAt": "2026-11-25T18:54:50.275Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/whispering-elia-mykonos_human-point_-designboom_700-500x400-22b08q85r800.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/whispering-elia-mykonos_human-point_-designboom_700-500x400-22b08q85r800.jpg",
+    "checkedAt": "2026-11-25T18:54:50.363Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/designboom-listens-yuri-suzuki-many-dimensions-sound-interview-designboom-700-500x400-22b08q85r175.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/designboom-listens-yuri-suzuki-many-dimensions-sound-interview-designboom-700-500x400-22b08q85r175.jpg",
+    "checkedAt": "2026-11-25T18:54:50.429Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/kanal-centre-pompidou-brussels-restored-1930s-citroen-garage-em2n-noaarchitecten-sergison-bates-designboom-700-500x400-22b08q85r450.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/kanal-centre-pompidou-brussels-restored-1930s-citroen-garage-em2n-noaarchitecten-sergison-bates-designboom-700-500x400-22b08q85r450.jpg",
+    "checkedAt": "2026-11-25T18:54:50.493Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/miami-art-week-basel-2026-designboom-700-500x400-22b08q85r320.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/miami-art-week-basel-2026-designboom-700-500x400-22b08q85r320.jpg",
+    "checkedAt": "2026-11-25T18:54:50.571Z"
+  },
+  "https://trustmrr.com/startup/blawgy-com/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/blawgy-com/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-25T18:56:21.598Z"
+  },
+  "https://trustmrr.com/startup/ai-video-generator-zynvixo/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/ai-video-generator-zynvixo/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-25T18:56:22.153Z"
+  },
+  "https://trustmrr.com/startup/screen-movie/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/screen-movie/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-25T18:56:24.350Z"
+  },
+  "https://trustmrr.com/startup/orixadesign-llc/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/orixadesign-llc/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-25T18:56:26.615Z"
   }
 }
