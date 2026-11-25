@@ -1,16 +1,16 @@
 {
-  "syncedAt": "2026-11-24T23:45:08.412Z",
+  "syncedAt": "2026-11-25T06:15:34.088Z",
   "counts": {
     "aiRadar": 220,
     "cultureTotal": 151,
     "cultureDomains": 19,
     "builderTotal": 240,
     "bySource": {
-      "github_trending": 51,
-      "trustmrr": 27,
-      "show_hn": 112,
-      "product_hunt": 27,
-      "uneed": 23
+      "github_trending": 52,
+      "trustmrr": 26,
+      "show_hn": 114,
+      "product_hunt": 26,
+      "uneed": 22
     },
     "cultureBySource": {
       "Dazed Digital": 8,
@@ -33,8 +33,8 @@
       "Open Culture": 8,
       "Kottke.org": 8
     },
-    "verifiedRevenueCount": 27,
-    "verifiedMediaCount": 97,
+    "verifiedRevenueCount": 26,
+    "verifiedMediaCount": 98,
     "verifiedCultureMediaCount": 124,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
@@ -49,13 +49,13 @@
       "status": 200,
       "count": 220,
       "cached304": false,
-      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(3)"
+      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(11)"
     },
     {
       "id": "github_trending",
       "label": "GitHub Trending Open Source",
-      "status": 403,
-      "count": 51,
+      "status": 200,
+      "count": 52,
       "cached304": false,
       "note": "50 GitHub repos (24 with verified media)"
     },
@@ -71,7 +71,7 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 112,
+      "count": 114,
       "cached304": false,
       "note": "68 live Show HN items"
     },
@@ -79,7 +79,7 @@
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
       "status": 200,
-      "count": 27,
+      "count": 26,
       "cached304": false,
       "note": "24 Product Hunt entries"
     },
@@ -87,7 +87,7 @@
       "id": "trustmrr",
       "label": "TrustMRR SSR",
       "status": 200,
-      "count": 27,
+      "count": 26,
       "cached304": false,
       "note": "22 TrustMRR verified startups"
     },
@@ -95,7 +95,7 @@
       "id": "uneed",
       "label": "Uneed SSR",
       "status": 200,
-      "count": 23,
+      "count": 22,
       "cached304": false,
       "note": "22 Uneed daily launches"
     },
@@ -110,7 +110,7 @@
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 97,
+      "count": 98,
       "note": "3 newly enriched via OG/README"
     },
     {
@@ -140,10 +140,10 @@
     {
       "id": "culture_putthison",
       "label": "Put This On (패션 · 아카이브)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_letterboxd",
@@ -164,10 +164,10 @@
     {
       "id": "culture_filmstage",
       "label": "The Film Stage (시네마 · 연출)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_mubi",
@@ -196,18 +196,18 @@
     {
       "id": "culture_petapixel",
       "label": "PetaPixel (사진 · 카메라)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_colossal",
       "label": "Colossal (시각예술 · 공예)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_bandcamp",
@@ -220,10 +220,10 @@
     {
       "id": "culture_cdm",
       "label": "CDM (사운드테크 · 신스)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (2 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_pitchfork",
@@ -236,10 +236,10 @@
     {
       "id": "culture_stereogum",
       "label": "Stereogum (음악 · 인디 문화)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_dezeen",

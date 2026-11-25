@@ -2,7 +2,7 @@
   "hosts": {
     "www.reddit.com": {
       "lastBlockedStatus": 403,
-      "cooldownUntil": "2026-11-25T05:43:40.737Z"
+      "cooldownUntil": "2026-11-25T12:14:27.866Z"
     },
     "www.producthunt.com": {
       "lastBlockedStatus": 403,
@@ -10,7 +10,7 @@
     },
     "carrierexplode.com": {
       "lastBlockedStatus": 403,
-      "cooldownUntil": "2026-11-25T05:44:16.278Z"
+      "cooldownUntil": "2026-11-25T12:14:58.945Z"
     },
     "api.github.com": {
       "lastBlockedStatus": 403,
@@ -19,16 +19,16 @@
   },
   "urls": {
     "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/data/planning-feed.json": {
-      "etag": "W/\"145d1f9c0593d673190414fc62e72f48dde2a371bf2034aae75eade116a4a6fb\"",
+      "etag": "W/\"3ec418f0cfc4b06781f7e435d4305129283365e9b5e2f4c7de5f883ff4d453a6\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:26.921Z"
+      "lastCheckedAt": "2026-11-25T06:13:18.702Z"
     },
     "https://raw.githubusercontent.com/rlawlstjr346-collab/ai-radar/main/web/public/live-feed.json": {
-      "etag": "W/\"71c58c1ac042c8efdecbe07d32e72fb80986afae447cb6fc8b066112040ea888\"",
+      "etag": "W/\"792d2fb6c48b5db3c7887660915dc7bba346e01869c67e766d78a439307240bd\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:28.669Z"
+      "lastCheckedAt": "2026-11-25T06:13:20.386Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=40": {
       "etag": null,
@@ -43,22 +43,22 @@
       "lastCheckedAt": "2026-11-23T14:54:04.664Z"
     },
     "https://www.producthunt.com/feed": {
-      "etag": "W/\"841fa60d312c50f964c8bb5a04cde7ca\"",
-      "lastModified": "Tue, 24 Nov 2026 23:42:57 GMT",
+      "etag": "W/\"1919bca31d286d4a851851b85dfc06f6\"",
+      "lastModified": "Wed, 25 Nov 2026 06:13:26 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:45.848Z"
+      "lastCheckedAt": "2026-11-25T06:14:32.310Z"
     },
     "https://trustmrr.com": {
-      "etag": "W/\"batvqlgmu612kof\"",
+      "etag": "W/\"2qmj3tcawm12jpn\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:46.001Z"
+      "lastCheckedAt": "2026-11-25T06:14:32.384Z"
     },
     "https://www.uneed.best": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 20:16:56 GMT",
+      "lastModified": "Wed, 25 Nov 2026 06:10:40 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:46.200Z"
+      "lastCheckedAt": "2026-11-25T06:14:32.483Z"
     },
     "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24349)%0A%5B%231%5D%20Verified%20revenue%20SaaS%20startup%20listed%20on%20TrustMRR%20(%24406)%0A%5B%232%5D%20Stan%20enables%20people%20to%20make%20living%20and%20work%20for%20themselves.%20Vitalii%20Dodonov%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%20A%20react%20component%20library%20of%20design%20tropes%0A%5B%235%5D%2018%20Words%0A%5B%236%5D%20An%20entire%20PowerPoint%20in%20one%20HTML%20file%20(edit%2Bview%2Bdata%2Bcollab)%0A%5B%237%5D%20SimCity%2C%20but%20with%20Permits": {
       "etag": null,
@@ -130,97 +130,97 @@
       "etag": "W/\"06148006281e6e3d6db30fbbf210ddb0bc4f96174e59b8d4290f6fc15642bf5f\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:45.147Z"
+      "lastCheckedAt": "2026-11-25T06:13:33.726Z"
     },
     "https://raw.githubusercontent.com/KnifeLemon/Filee/main/README.md": {
-      "etag": "W/\"d6c09af5e12f824b5ea5ac13a0e2c0433716d66c3898f645a7dafca677bd0d45\"",
+      "etag": "W/\"83c451a0492407990c132e0ea690307ef67508688cf0cae913eb1d35a39b71ce\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:46.846Z"
+      "lastCheckedAt": "2026-11-25T06:13:35.401Z"
     },
     "https://raw.githubusercontent.com/wheresryan22/anatomy/main/README.md": {
       "etag": "W/\"503c8620599d1de51d2f35b651a82fd71f887cdd7b11895fa475fc1b7c0cc140\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:48.752Z"
+      "lastCheckedAt": "2026-11-25T06:13:37.542Z"
     },
     "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/README.md": {
       "etag": "W/\"4c63b7bdea835fe5696be3c27d3d87c185b650d218debaeffc99393bc5311dca\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:50.339Z"
+      "lastCheckedAt": "2026-11-25T06:13:39.471Z"
     },
     "https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/README.md": {
       "etag": "W/\"1ab1b74a2fadcb6cabd31c08622924ec346542f6f09c337e5117b46f12f31287\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:46.252Z"
+      "lastCheckedAt": "2026-11-25T06:14:32.497Z"
     },
     "https://raw.githubusercontent.com/google/elephant-goldfish-model/main/README.md": {
       "etag": "W/\"8feb3e6b02bc7e45107b3059ecb26089c2986cc0b74abdc3fe0d76ae06a04f4d\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:53.897Z"
+      "lastCheckedAt": "2026-11-25T06:13:43.118Z"
     },
     "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/README.md": {
       "etag": "W/\"840af6c3c63d97881e734bcdfd61b339bab16311966a7e132f0ae54b18217732\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:55.875Z"
+      "lastCheckedAt": "2026-11-25T06:13:45.053Z"
     },
     "https://raw.githubusercontent.com/storytold/filmcraft/main/README.md": {
       "etag": "W/\"6f2bb63c2ac57f62f7054c0f3624fe0721fab6d7ed9916b9e633622a06fdbfde\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:00.259Z"
+      "lastCheckedAt": "2026-11-25T06:13:48.730Z"
     },
     "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/README.md": {
-      "etag": "W/\"5f6977df6cfa2068dbab530a0e683cf51aeea13cb6da449cf53f1e8eb44469aa\"",
+      "etag": "W/\"678ed06a8894e0e07b590ab90a8526055ceb45eae57bd10e0ae0c3d5705d2931\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:02.255Z"
+      "lastCheckedAt": "2026-11-25T06:13:50.827Z"
     },
     "https://raw.githubusercontent.com/BaaRai/ARTEX/main/README.md": {
       "etag": "W/\"eb248e846d6741fcfc6fd72995324e120a3711bea76a3c6a96a7b69bfc287e60\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:58.255Z"
+      "lastCheckedAt": "2026-11-25T06:13:46.871Z"
     },
     "https://raw.githubusercontent.com/yihui-dev/awesome-opus5-5-videos/main/README.md": {
       "etag": "W/\"eba645592d82d98e1fa79111341c595032963fc7bebe0826af9468c2fc0ebffc\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:04.665Z"
+      "lastCheckedAt": "2026-11-25T06:13:53.150Z"
     },
     "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/README.md": {
       "etag": "W/\"187ee813bfdee49cd4a9721d8fac9934d5b40a040df96f6bf5da4996163796f3\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:06.535Z"
+      "lastCheckedAt": "2026-11-25T06:13:55.562Z"
     },
     "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/README.md": {
       "etag": "W/\"166d8f1c51d3f264b5142e8cfcde95d26db5ffd9ce84eb94dde3625b3a59cbd5\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:08.945Z"
+      "lastCheckedAt": "2026-11-25T06:13:57.304Z"
     },
     "https://raw.githubusercontent.com/janestreet/agent_skills/master/README.md": {
       "etag": "W/\"fb61852af2771411bec864707e7e7c679d0cbd974c65045d91902b8d65ddf863\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:50.581Z"
+      "lastCheckedAt": "2026-11-25T06:14:37.200Z"
     },
     "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/README.md": {
       "etag": "W/\"691e6aa7b9332b555d7639ca6e1833e87ccdb19aa1e6f00e1a6d03dd7d787286\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:12.328Z"
+      "lastCheckedAt": "2026-11-25T06:14:01.332Z"
     },
     "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/README.md": {
-      "etag": "W/\"530b7d52d3ba381e25b9d81fd584b0821d2be0064ce05198b3e5780977975a4a\"",
+      "etag": "W/\"73459c9a5e1c46a7b04a69fdd968f486b068c9aece04ee927929ea622eb12ae5\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:14.615Z"
+      "lastCheckedAt": "2026-11-25T06:14:03.349Z"
     },
     "https://raw.githubusercontent.com/crmne/spotifast/main/README.md": {
       "etag": "W/\"894c7b3e4dbca2ef359f2121a279cd4fddf1d2157e56b9d134dd90b9dd80904f\"",
@@ -232,25 +232,25 @@
       "etag": "W/\"e6a02d28474ecdcade517fda98accf474cf93b38f3eb0e473e9d3e3b95ac4621\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:18.312Z"
+      "lastCheckedAt": "2026-11-25T06:14:05.259Z"
     },
     "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/README.md": {
       "etag": "W/\"01d6dcd22c28054f5dd42cc04d55923dd45de8197f16406b16e94350e5440253\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:20.156Z"
+      "lastCheckedAt": "2026-11-25T06:14:08.917Z"
     },
     "https://raw.githubusercontent.com/wangzan101/Mika/main/README.md": {
       "etag": "W/\"b2d8a6d1d776bf3fc2359c5b531132d018001e128e1d83c911059b87d9bdab9e\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:22.613Z"
+      "lastCheckedAt": "2026-11-25T06:14:07.138Z"
     },
     "https://raw.githubusercontent.com/vercel-labs/ui/main/README.md": {
       "etag": "W/\"8e9ba737c07a33c46c841e7fa7a54c29fe4fd961fea411fa17289dab0d8f5e4c\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:54.487Z"
+      "lastCheckedAt": "2026-11-25T06:14:41.054Z"
     },
     "https://raw.githubusercontent.com/kuafuai/andee/main/README.md": {
       "etag": "W/\"bb53c42d032e49aa1c7b5013e26249040cd2e2ae3b9736629d2a1d4686caa97a\"",
@@ -284,7 +284,7 @@
     },
     "https://www.reddit.com/r/SideProject/hot.json?limit=25": {
       "lastStatus": 403,
-      "lastCheckedAt": "2026-11-24T23:43:40.737Z"
+      "lastCheckedAt": "2026-11-25T06:14:27.867Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=35": {
       "etag": null,
@@ -300,7 +300,7 @@
     },
     "https://raw.githubusercontent.com/janestreet/agent_skills/main/README.md": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T23:43:48.410Z"
+      "lastCheckedAt": "2026-11-25T06:14:34.881Z"
     },
     "https://trustmrr.com/startup/storeradar": {
       "etag": "W/\"l86yxuvn3555xb\"",
@@ -408,7 +408,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:14.156Z"
+      "lastCheckedAt": "2026-11-25T06:14:57.191Z"
     },
     "https://john.fun/elevators": {
       "etag": "W/\"b16363f4ae6ffd1727ee4479d6d77cb5\"",
@@ -438,7 +438,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:14.359Z"
+      "lastCheckedAt": "2026-11-25T06:14:57.386Z"
     },
     "https://permit.petercai.com/": {
       "etag": null,
@@ -522,19 +522,19 @@
       "etag": "W/\"6b05d0cc-16700\"",
       "lastModified": "Tue, 24 Nov 2026 18:00:44 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:14.511Z"
+      "lastCheckedAt": "2026-11-25T06:14:57.510Z"
     },
     "https://rivendell.dmitrybrant.com/relativity/": {
       "etag": "\"2c59-65c7c3231903e-gzip\"",
       "lastModified": "Sun, 27 Sep 2026 19:45:48 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:14.745Z"
+      "lastCheckedAt": "2026-11-25T06:14:57.614Z"
     },
     "https://stealmybitcoin.com/": {
       "etag": "W/\"6ae6759c-ffd\"",
       "lastModified": "Sat, 31 Oct 2026 23:11:24 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:14.913Z"
+      "lastCheckedAt": "2026-11-25T06:14:57.840Z"
     },
     "https://toneyalexander.github.io/inclusive-color-space/": {
       "etag": "W/\"6a7e90b2-aad5\"",
@@ -576,19 +576,19 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:15.047Z"
+      "lastCheckedAt": "2026-11-25T06:14:58.038Z"
     },
     "https://blackhole.plav.in": {
       "etag": "W/\"6ac65ff0-1d92\"",
       "lastModified": "Wed, 07 Oct 2026 15:06:24 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:15.486Z"
+      "lastCheckedAt": "2026-11-25T06:14:58.569Z"
     },
     "https://hackertimes.ca/": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:16.054Z"
+      "lastCheckedAt": "2026-11-25T06:14:58.768Z"
     },
     "https://www.intheweights.com/": {
       "etag": null,
@@ -631,60 +631,60 @@
       "lastCheckedAt": "2026-11-24T01:39:24.892Z"
     },
     "https://www.indiewire.com/feed/": {
-      "etag": "W/\"212a7a68e9a5d40eb605ea7a4f7b6ffe\"",
-      "lastModified": "Tue, 24 Nov 2026 23:22:03 GMT",
+      "etag": "W/\"79d0d0b6e4a3ef1e2d5cec16bcc73a78\"",
+      "lastModified": "Wed, 25 Nov 2026 00:14:08 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:29.921Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.448Z"
     },
     "https://www.highsnobiety.com/feeds/rss": {
-      "etag": "\"71c60bacc94d2b43646808fec81ceb13\"",
-      "lastModified": "Tue, 24 Nov 2026 23:10:05 GMT",
+      "etag": "\"391df535f6664b1e0c5e464177bc86e2\"",
+      "lastModified": "Wed, 25 Nov 2026 00:00:11 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:29.894Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.396Z"
     },
     "https://letterboxd.com/journal/rss/": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:29.934Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.425Z"
     },
     "https://www.dazeddigital.com/rss": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 23:39:29 GMT",
+      "lastModified": "Wed, 25 Nov 2026 06:06:02 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:29.939Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.403Z"
     },
     "https://hypebeast.com/feed": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:29.914Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.430Z"
     },
     "https://thefilmstage.com/feed/": {
       "etag": "\"76822db94f80820ffcc0908434069467-gzip\"",
       "lastModified": "Tue, 24 Nov 2026 20:25:39 GMT",
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:30.155Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-25T06:13:22.488Z"
     },
     "https://putthison.com/feed/": {
-      "etag": "\"ad534f764194ac9464a2bc28b34b2093\"",
-      "lastModified": "Mon, 23 Nov 2026 21:21:40 GMT",
-      "lastStatus": 304,
-      "lastCheckedAt": "2026-11-24T23:42:30.333Z"
+      "etag": "\"5738e8615e857c86129dd21b16372801\"",
+      "lastModified": "Wed, 25 Nov 2026 01:18:15 GMT",
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:23.024Z"
     },
     "https://mubi.com/en/notebook/posts.rss": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T23:42:30.486Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.543Z"
     },
     "https://www.booooooom.com/feed/": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 15:28:19 GMT",
+      "lastModified": "Tue, 24 Nov 2026 21:01:58 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:30.585Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.660Z"
     },
     "https://www.itsnicethat.com/rss": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T23:42:30.606Z"
+      "lastCheckedAt": "2026-11-25T06:13:22.890Z"
     },
     "https://www.indiewire.com/news/general-news/bill-ray-joins-oscar-contender-magans-fare-ep-1235230395/": {
       "etag": "W/\"9bb2de4b4ff70c2f9456efe35ca1abe7\"",
@@ -695,32 +695,32 @@
     "https://petapixel.com/feed/": {
       "etag": "W/\"985b32b94d99a1f5a259ee8104cdc45b\"",
       "lastModified": "Tue, 24 Nov 2026 22:06:22 GMT",
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:30.808Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-25T06:13:23.176Z"
     },
     "https://www.thisiscolossal.com/feed/": {
       "etag": "W/\"eb06226827b4d1637db5c5d7bb87e0c1\"",
       "lastModified": "Tue, 24 Nov 2026 20:30:00 GMT",
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:31.395Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-25T06:13:23.433Z"
     },
     "https://feeds2.feedburner.com/itsnicethat/SlXC": {
       "etag": null,
-      "lastModified": "Tue, 24 Nov 2026 23:10:36 GMT",
+      "lastModified": "Wed, 25 Nov 2026 06:05:16 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:30.848Z"
+      "lastCheckedAt": "2026-11-25T06:13:23.093Z"
     },
     "https://daily.bandcamp.com/feed": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:31.263Z"
+      "lastCheckedAt": "2026-11-25T06:13:23.394Z"
     },
     "https://pitchfork.com/feed/feed-news/rss": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:31.620Z"
+      "lastCheckedAt": "2026-11-25T06:13:23.526Z"
     },
     "https://www.indiewire.com/news/trailers/avengers-doomsday-trailer-internet-fan-controversy-1235230219/": {
       "etag": "W/\"bba5d216c520098ee4d37ef22c33045a\"",
@@ -732,35 +732,35 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.816Z"
+      "lastCheckedAt": "2026-11-25T06:13:25.163Z"
     },
     "https://www.stereogum.com/feed/": {
       "etag": "W/\"n699crinml121s\"",
       "lastModified": null,
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.126Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-25T06:13:23.775Z"
     },
     "https://www.dezeen.com/feed/": {
-      "etag": "W/\"55647376ef63f909fe75955f70c8f853-gzip\"",
-      "lastModified": "Tue, 24 Nov 2026 19:54:30 GMT",
+      "etag": "W/\"c6e7c5eab01d1b06ef47379e0df67b2e-gzip\"",
+      "lastModified": "Wed, 25 Nov 2026 06:00:00 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.360Z"
+      "lastCheckedAt": "2026-11-25T06:13:23.968Z"
     },
     "https://cdm.link/feed/": {
       "etag": "\"f6f783c901947d8aba84b9073960301b\"",
       "lastModified": "Tue, 24 Nov 2026 18:41:44 GMT",
-      "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.093Z"
+      "lastStatus": 304,
+      "lastCheckedAt": "2026-11-25T06:13:24.100Z"
     },
     "https://www.designboom.com/feed/": {
-      "etag": "W/\"f62d0325a79825679401b5c80cf3b54a\"",
-      "lastModified": "Tue, 24 Nov 2026 23:25:39 GMT",
+      "etag": "W/\"76022ada78d63edfcbc77891735f24b8\"",
+      "lastModified": "Wed, 25 Nov 2026 04:05:56 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:33.269Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.921Z"
     },
     "https://www.core77.com/rss/object.xml": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T23:42:33.228Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.341Z"
     },
     "https://cdm.link/photophore-2-auv3/": {
       "etag": null,
@@ -769,26 +769,26 @@
       "lastCheckedAt": "2026-11-24T23:42:36.548Z"
     },
     "https://publicdomainreview.org/rss.xml": {
-      "etag": "W/\"23e4569448207d42cc8a2c9c367afc6d-ssl\"",
+      "etag": "W/\"8535e2dd3b9f711f1c96836e7f7a7c3c-ssl\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:33.850Z"
+      "lastCheckedAt": "2026-11-25T06:13:25.094Z"
     },
     "https://hyperallergic.com/feed/": {
       "lastStatus": 404,
-      "lastCheckedAt": "2026-11-24T23:42:33.506Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.599Z"
     },
     "https://www.openculture.com/feed": {
       "etag": "\"384091f2ccba3458f60ac544c6d40a5c-gzip\"",
       "lastModified": "Tue, 24 Nov 2026 10:02:28 GMT",
       "lastStatus": 304,
-      "lastCheckedAt": "2026-11-24T23:42:33.914Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.989Z"
     },
     "https://feeds.kottke.org/main": {
       "etag": null,
       "lastModified": "Tue, 24 Nov 2026 20:05:00 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:33.870Z"
+      "lastCheckedAt": "2026-11-25T06:13:25.320Z"
     },
     "https://cdm.link/nin-live-streaming/": {
       "etag": null,
@@ -1208,55 +1208,55 @@
       "etag": "W/\"544d37c9fd566bee9a4abc659f39b0db94fcb3be962174b32ac785f9aaca73bc\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:24.827Z"
+      "lastCheckedAt": "2026-11-25T06:14:11.162Z"
     },
     "https://raw.githubusercontent.com/zai-org/ZCode/main/README.md": {
       "etag": "W/\"7af317123a12e442a13c1f84dc2ad430561a5687a7e511d7bd48f88dc332b922\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:29.370Z"
+      "lastCheckedAt": "2026-11-25T06:14:15.655Z"
     },
     "https://raw.githubusercontent.com/erkamyaman/rust-anything/main/README.md": {
       "etag": "W/\"e1c6c3de07ee7187b0527215877133375f4c556bc34a4f2ea5fe39c40ad84244\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:27.030Z"
+      "lastCheckedAt": "2026-11-25T06:14:13.456Z"
     },
     "https://raw.githubusercontent.com/microsoft/TokenEconomizer/main/README.md": {
       "etag": "W/\"32e0ab370f64d0f53ce522f868b75fdae4d71b952726f72df84a38b3ebb501ae\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:31.554Z"
+      "lastCheckedAt": "2026-11-25T06:14:17.357Z"
     },
     "https://raw.githubusercontent.com/Human-Agent-Society/reef/main/README.md": {
       "etag": "W/\"4c72b61bf5d6b4b6f5d62a5f26e9861ed3627e50cd9244f8d33ae0002c9e5726\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:52.238Z"
+      "lastCheckedAt": "2026-11-25T06:14:39.031Z"
     },
     "https://raw.githubusercontent.com/kaankiziltug/logo-design-skill/main/README.md": {
       "etag": "W/\"72a60456f40bf67c4e1d867425162c2f1b5b43afe574a65b1756a56e3d6049ea\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:33.924Z"
+      "lastCheckedAt": "2026-11-25T06:14:22.085Z"
     },
     "https://raw.githubusercontent.com/alchaincyf/huashu-art-motion/main/README.md": {
       "etag": "W/\"1d0fd7fe9de5b9d9a7a430cd5e2b72eea97870afeed62d9ce9e99439f7286007\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T13:08:17.184Z"
+      "lastCheckedAt": "2026-11-25T06:14:25.645Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=45&page=0": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:41.090Z"
+      "lastCheckedAt": "2026-11-25T06:14:28.157Z"
     },
     "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=45&page=1": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:43.160Z"
+      "lastCheckedAt": "2026-11-25T06:14:30.425Z"
     },
     "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>12,created_at_i>1779938276&hitsPerPage=45": {
       "etag": null,
@@ -1280,13 +1280,13 @@
       "etag": "W/\"e103cecce831cd48e12ce3e5af7d2380339c8d80e0cb351b854dc096da0f25a8\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:56.762Z"
+      "lastCheckedAt": "2026-11-25T06:14:43.052Z"
     },
     "https://raw.githubusercontent.com/strands-labs/strands-decider/main/README.md": {
       "etag": "W/\"3a63e6b523cbd2859b22defc237be92804fa80e1a4befc11c1799c9c3a3f4ab0\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:59.101Z"
+      "lastCheckedAt": "2026-11-25T06:14:44.705Z"
     },
     "https://raw.githubusercontent.com/amitshekhariitbhu/ai-system-design/main/README.md": {
       "etag": "W/\"3d27f90014abc9485a041aa492dfc3980eb9d96b5d11cc500f06eec9ba61b226\"",
@@ -1316,13 +1316,13 @@
       "etag": "W/\"f159f7e796a65c07b413ce2dcd06ae194f95bdf9a30811350654211649312c8c\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:00.628Z"
+      "lastCheckedAt": "2026-11-25T06:14:46.581Z"
     },
     "https://raw.githubusercontent.com/interfere-inc/landmines/main/README.md": {
       "etag": "W/\"daa227bd6c651e8d54b6043997f49cfc98c28df38e4dca210ff291e0c1309cff\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:02.381Z"
+      "lastCheckedAt": "2026-11-25T06:14:49.044Z"
     },
     "https://raw.githubusercontent.com/hevnsnt/CVEngine/main/README.md": {
       "lastStatus": 404,
@@ -1362,7 +1362,7 @@
       "etag": "W/\"f172ecd9cf3d1645e90c6b2aa3fdd251ddfdb0f6879c3601355e9bb2785bda34\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:04.696Z"
+      "lastCheckedAt": "2026-11-25T06:14:51.178Z"
     },
     "https://raw.githubusercontent.com/abacusai/abacusai-bot/main/README.md": {
       "etag": "W/\"6ef9cf2629bea9bb2739c40cbb48c079deed476483cff532e2e1de6a9d5f5f67\"",
@@ -1530,7 +1530,7 @@
       "etag": "W/\"9a739f4d2f011e5cb44e11d3a82c5da506739bd32fa0f4334a7721e73d547f45\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:16.185Z"
+      "lastCheckedAt": "2026-11-25T06:14:58.888Z"
     },
     "https://inflightsimulator.com": {
       "etag": null,
@@ -1630,7 +1630,7 @@
     },
     "https://carrierexplode.com/": {
       "lastStatus": 403,
-      "lastCheckedAt": "2026-11-24T23:44:16.278Z"
+      "lastCheckedAt": "2026-11-25T06:14:58.945Z"
     },
     "https://raw.githubusercontent.com/devdotfast/whiteboard/main/README.md": {
       "etag": "W/\"f9cfe0f5813b38c77f0268ae2be863875eff62170d2caae6a99dfd40cdda6afd\"",
@@ -1640,9 +1640,9 @@
     },
     "https://opentrailpaper.com": {
       "etag": null,
-      "lastModified": "Thu, 12 Nov 2026 10:32:25 GMT",
+      "lastModified": "Thu, 12 Nov 2026 10:32:26 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:16.424Z"
+      "lastCheckedAt": "2026-11-25T06:14:59.155Z"
     },
     "https://raw.githubusercontent.com/franzenzenhofer/big-arrow-on-the-screen/main/README.md": {
       "etag": "W/\"dfed7d5356a2391ba7e5bef2d037074559e68837b5d706b0af51aadad417a4f2\"",
@@ -1720,7 +1720,7 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.097Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.535Z"
     },
     "https://www.openculture.com/2026/11/25-films-inspired-by-edgar-allan-poe-online.html": {
       "etag": null,
@@ -1753,10 +1753,10 @@
       "lastCheckedAt": "2026-11-24T13:08:47.899Z"
     },
     "https://space.bl2.net/": {
-      "etag": "\"6b0492ce-1256\"",
-      "lastModified": "Mon, 23 Nov 2026 19:23:58 GMT",
+      "etag": "\"6b062701-1259\"",
+      "lastModified": "Wed, 25 Nov 2026 00:08:33 GMT",
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:44:16.947Z"
+      "lastCheckedAt": "2026-11-25T06:14:59.750Z"
     },
     "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20FilmCraft%3A%20An%20open-source%2C%20nonlinear%20video%20editor%20written%20from%20scratch%20in%20pure%20Rust%0A%5B%231%5D%20A%20library%20of%20behaviors%20for%20agents%20to%20build%20and%20drive%20the%20next%20generation%20of%20user%20interfaces.%0A%5B%232%5D%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B50px%5D%20pr-2%20text-center%22%3E%205%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B30%25%5D%22%3E%20P%20Private%20Venture%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B25%25%5D%22%3E%0A%5B%233%5D%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B50px%5D%20pr-2%20text-center%22%3E%208%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B30%25%5D%22%3E%20S%20Stealth%20Venture%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B25%25%5D%22%3E%0A%5B%234%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%235%5D%20Turn%20any%20screen%20into%20a%20sign.%20The%20URL%20is%20the%20app%0A%5B%236%5D%20edit%20footage%20you%20shot%20from%20a%20text%20brief%2C%20via%20REST%20API%20or%20MCP%0A%5B%237%5D%20Endless%20ways%20to%20tie%20a%20gift%20ribbon": {
       "etag": null,
@@ -1885,16 +1885,16 @@
       "lastCheckedAt": "2026-11-24T13:09:31.473Z"
     },
     "https://www.highsnobiety.com/p/new-balance-991v1-made-in-japan/": {
-      "etag": "W/\"799c3-ClxfdMTIexsXDt6Ko8hG70lwFXY\"",
+      "etag": "W/\"79fd7-Uqt4XPoG7luYZNc5TIRAHI2SAOk\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:31.460Z"
+      "lastCheckedAt": "2026-11-25T06:13:26.923Z"
     },
     "https://www.indiewire.com/news/general-news/frederick-wiseman-complete-works-distributed-janus-films-1235230945/": {
-      "etag": "W/\"754057bfe49cdde62025cf55c19cd02a\"",
+      "etag": "W/\"5f938acbf289365d91127a663dcb81d0\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:32.179Z"
+      "lastCheckedAt": "2026-11-25T06:13:24.793Z"
     },
     "https://www.highsnobiety.com/p/seeking-summits-with-sorel-hightail-ranch-excursion/": {
       "etag": "W/\"6babe-v++Sx+7SQh714EaPdebPHU/70R4\"",
@@ -1912,25 +1912,25 @@
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:34.089Z"
+      "lastCheckedAt": "2026-11-25T06:13:25.631Z"
     },
     "https://www.indiewire.com/features/interviews/movie-theaters-2026-good-bad-changing-1235230816/": {
-      "etag": "W/\"28eb488fb7967b1a727e5725ef8adbf1\"",
+      "etag": "W/\"8de5d7e2dd921135b8c2a270172176b4\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:34.125Z"
+      "lastCheckedAt": "2026-11-25T06:13:26.324Z"
     },
     "https://kottke.org/26/11/0049982-how-to-make-a-bestseller-": {
       "etag": null,
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:42:36.175Z"
+      "lastCheckedAt": "2026-11-25T06:13:27.432Z"
     },
     "https://raw.githubusercontent.com/mdiri-ai/SoduWork/main/README.md": {
-      "etag": "W/\"e8b6e0c79f6f12e8dbbe566165d69787ff76436bcded413aac33904e0517774d\"",
+      "etag": "W/\"f72baf18c98ce1e2cdaea916d9f983f0b3e1bdc588831f8e57a8bf4e9ac1f748\"",
       "lastModified": null,
       "lastStatus": 200,
-      "lastCheckedAt": "2026-11-24T23:43:38.601Z"
+      "lastCheckedAt": "2026-11-25T06:14:19.718Z"
     },
     "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>12,created_at_i>1780011746&hitsPerPage=45": {
       "etag": null,
@@ -2111,7 +2111,163 @@
       "lastModified": null,
       "lastStatus": 200,
       "lastCheckedAt": "2026-11-24T23:45:08.400Z"
+    },
+    "https://www.highsnobiety.com/p/sneaker-heels-trend/": {
+      "etag": "W/\"7a7a5-o8gyZ51gkE6R0iTl5I6XM2xiT5o\"",
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:24.812Z"
+    },
+    "https://api.github.com/search/repositories?q=created%3A%3E2026-09-11%20stars%3A%3E70%20topic%3Aai&sort=stars&order=desc&per_page=25": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:28.283Z"
+    },
+    "https://api.github.com/search/repositories?q=created%3A%3E2026-08-27%20stars%3A%3E50%20(agent%20OR%20video%20OR%20audio%20OR%20browser%20OR%20automation%20OR%20cli)&sort=stars&order=desc&per_page=25": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:30.207Z"
+    },
+    "https://api.github.com/search/repositories?q=created%3A%3E2026-07-28%20stars%3A%3E50%20(topic%3Adeveloper-tools%20OR%20topic%3Adesign%20OR%20topic%3Acanvas%20OR%20topic%3Aself-hosted)&sort=stars&order=desc&per_page=25": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:31.128Z"
+    },
+    "https://api.github.com/search/repositories?q=created%3A%3E2026-06-28%20stars%3A%3E60%20(topic%3Alocal-first%20OR%20topic%3Acreative-coding%20OR%20topic%3Awebgl%20OR%20topic%3Amcp)&sort=stars&order=desc&per_page=25": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:13:33.635Z"
+    },
+    "https://hn.algolia.com/api/v1/search?tags=show_hn&numericFilters=points>12,created_at_i>1780035198&hitsPerPage=45": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:14:32.104Z"
+    },
+    "https://raw.githubusercontent.com/amitshekhariitbhu/forward-deployed-engineer-roadmap/main/README.md": {
+      "etag": "W/\"fc9b374b56fe9500e381a2c826ffd52cb0aac84819eb43261b787423b072f6c5\"",
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:14:53.282Z"
+    },
+    "https://trustmrr.com/startup/magic-marketer-app": {
+      "etag": "W/\"13npzpgejcg6fv3\"",
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:14:53.480Z"
+    },
+    "https://raw.githubusercontent.com/devenjarvis/lathe/main/README.md": {
+      "etag": "W/\"a7a11b2b735169c529957f4b0149e0641f3d7c5ff77fb80d52cb986709153a83\"",
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:01.237Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Forward%20Deployed%20Engineer%20Roadmap%20-%20A%20step-by-step%20roadmap%20to%20become%20a%20Forward%20Deployed%20Engineer%20(FDE)%20in%20AI%2C%20with%20a%20blog%20for%20every%20topic.%0A%5B%231%5D%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B50px%5D%20pr-2%20text-center%22%3E%205%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B30%25%5D%22%3E%20P%20Private%20Venture%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B25%25%5D%22%3E%0A%5B%232%5D%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B50px%5D%20pr-2%20text-center%22%3E%208%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B30%25%5D%22%3E%20S%20Stealth%20Venture%20%5Brole%3Dcheckbox%5D%5D%3Atranslate-y-%5B2px%5D%20w-%5B25%25%5D%22%3E%0A%5B%233%5D%20An%20e-ink%20frame%20that%20hears%20birds%20and%20draws%20them%20as%201800s%20illustrations%0A%5B%234%5D%20Turn%20any%20screen%20into%20a%20sign.%20The%20URL%20is%20the%20app%0A%5B%235%5D%20Windows%20CLI%20for%20AI%20agents%20to%20capture%20UI%20and%20map%20DPI%20coords%0A%5B%236%5D%20a%20lightweight%20Python%20tool%20for%20finding%20duplicate%20files%0A%5B%237%5D%20Expense%20Canary%2C%20catching%20duplicate%20charges%20and%20bank%20fees%20from%20Plaid": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:01.996Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Vibe%20Linux%0A%5B%231%5D%20Edit%20PDF%20text%20in%20browser%20RAM%20with%20zero%20uploads%20(PDFTransform)%0A%5B%232%5D%20I%20make%20open-source%20flight%20test%20stand%0A%5B%233%5D%20DreamerV3%2C%20IRIS%2C%20Genie%20and%20other%20world%20models%20in%20PyTorch%0A%5B%234%5D%20U.S.%20Interstate%20Weather%0A%5B%235%5D%20Old%20Nvidia%20and%20ATI%20tech%20demos%2C%20running%20again%20in%20the%20browser%0A%5B%236%5D%20Side-panel%20Chrome%20extension%20to%20match%20a%20resume%20against%20a%20job%20posting%0A%5B%237%5D%20Archiver%20that%20opens%20every%20format": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:04.282Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20multidimensional%20modeling%20engine%20in%20the%20browser%0A%5B%231%5D%20fast%2C%20free%20calculators%2C%20no%20sign-up%0A%5B%232%5D%20Save%20every%20AI%20conversations%20as%20Markdown%2C%20in%20a%20folder%20you%20Own%0A%5B%233%5D%20Sliding-panes%20React%20UI%20library%20(inspired%20by%20WebOS%20Enyo)%0A%5B%234%5D%20A%20native%20desktop%20Git%20client%20written%20in%20Rust%20with%20GPUI%0A%5B%235%5D%20AgentKey%2C%20open%20source%2C%20agents%20log%20in%20without%20seeing%20passwords%0A%5B%236%5D%20Coq%2C%20No_std%20Rust%20and%20ZK%20Benchmark%0A%5B%237%5D%20Client-side%20LLM%20API%20cost%20simulator%20and%20CSV%20bill%20auditor": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:06.159Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Reddit%20Alt%20with%20open%20moderation%20funded%20by%201-cent%20votes.%20AI%20filter%0A%5B%231%5D%20A%20Disk%20Based%20Hash%20Table%20with%20NoSQL%20ambitions%0A%5B%232%5D%20tiny%203D%20scene%20format%20made%20for%20LLMs%20to%20write%0A%5B%233%5D%20GeoGuessr%20for%20Celebrity%20Gossip%0A%5B%234%5D%20NYT%20style%20daily%20word%2Flogic%20puzzle%0A%5B%235%5D%20End%20User%2C%20a%20game%20about%20smuggling%20AI%20chips%20past%20export%20controls%0A%5B%236%5D%20UFO%20OPTIX%20Scanning%20satellite%20imagery%20for%20flying%20craft%20artifacts%0A%5B%237%5D%20A%201935%20film-slide%20E-Ink%20frame%20that%20tracks%20like%20an%20AirTag": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:08.657Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Type%20messy%2C%20send%20clean%3A%20an%20AI%20keyboard%20for%20iPhone%0A%5B%231%5D%20Harness%20for%20Robotics%2C%20Gemini%203.8%20Flash%20Matches%20GPT-6%20Astra%0A%5B%232%5D%20New%20York%20designer%20Briah%20Artemis%20is%20spilling%20her%20guts%0A%5B%233%5D%20lululemon%20Launches%20New%20Winter%20Apparel%20Collections%2C%20Featuring%20Oversized%20Silhouettes%20and%20Functional%20Fabrics%20for%20Winter%20Layering%0A%5B%234%5D%20Sole%20Food%3A%20We%20All%20Deserve%20a%20Whimsical%20Lil%E2%80%99%20Sneaker-Heel%0A%5B%235%5D%20Inside%20Track%3A%20November%2015th%20%E2%80%93%20November%2022nd%20Edition%0A%5B%236%5D%20Album%20Of%20The%20Week%3A%20Star%E2%80%99s%20Revenge%20Star%E2%80%99s%20Revenge%20II%0A%5B%237%5D%20Assemble%20covers%20miniature%20agricultural%20buildings%20in%20intense%20blue%20pigment%20for%20Building%20Blue%20exhibition%20in%20Tokyo": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:10.450Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20resembling%20a%20geometric%20flower%2C%2010-meter%20aluminum%20lookout%20frames%20views%20in%20australia%E2%80%99s%20victorian%20alps%0A%5B%231%5D%20Yvng%20Patra%20Releases%20New%20Album%20'Regalia'%20Featuring%20Kohjiya%2C%20Vingo%2C%20and%20More%0A%5B%232%5D%20A%20Long-Lost%20New%20Balance%20Dad%20Shoe%2C%20Reborn%20as%20a%20Japan-Made%20Masterpiece%0A%5B%233%5D%20Thermory%20Design%20Awards%202026%20recognises%20striking%20examples%20of%20architecture%20and%20design%20using%20thermowood%0A%5B%234%5D%20wade%20and%20leta%20shape%20human-powered%20kinetic%20landscape%20for%20play%20in%20shanghai%20sculpture%20park%0A%5B%235%5D%20Original%20HAFERL%20x%20nonnative%20Collaborate%20on%20New%20Richard%20Cow%20Leather%20Shoes%0A%5B%236%5D%20Jake%20Hollings%20had%20a%20hand%20operation%20that%20impeded%20his%20usual%20style%20%E2%80%93%20so%20he%20started%20%E2%80%9Cdrawing%20with%20scissors%E2%80%9D%0A%5B%237%5D%20Jorg%20Kuning%20Announces%20New%20Album%20Clun%20Pearls%3A%20Hear%20%E2%80%9CBitzer%E2%80%99s%20Cello%E2%80%9D": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:11.716Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Julien%20Offray%20de%20La%20Mettrie%E2%80%99s%20Man%20a%20Machine%20(1749%20edition)%0A%5B%231%5D%20Polykatamari%3A%20You%20start%20as%20a%20square%20pyramid.%20Rolling%20over...%0A%5B%232%5D%20CASETiFY%20Unveils%20a%20Pok%C3%A9mon%20Tech%20Accessory%20Collection%20Rendered%20in%20Pixel%20Art%0A%5B%233%5D%20Dezeen%20reports%20from%20New%20York's%20new%20November%20design%20week%0A%5B%234%5D%20Planet%20Wild%20on%20the%20100-year%20plan%20to%20restore%20the%20Scottish...%0A%5B%235%5D%20BIRKENSTOCK%20Celebrates%20the%2040th%20Anniversary%20of%20Its%20Iconic%20London%20Style%20with%20the%20%22Camden's%20Clubs%22%20Collection%0A%5B%236%5D%20F1%20Collabs%20Are%20Getting%20Good.%20You%20Just%20Have%20to%20Hunt%20for%20Them%0A%5B%237%5D%20New%20Arrivals%20From%20HBX%3A%20WTAPS": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:13.828Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20NYC%20Weekend%20Watch%3A%20Nikkatsu%20Roman%20Porno%2C%20New%20Beverly%201977%2C%20Roberto%20Rossellini%20%26%20More%0A%5B%231%5D%20Meet%20Courage%20Dzidula%20Kpodo%2C%20Lesley%20Lokko's%20pick%20for%20the%20most%20influential%20architect%20of%20the%20next%2020%20years%0A%5B%232%5D%20Ki%20One%20Becomes%20the%20First%20Korean%20Distillery%20to%20Win%20IWSC's%20Worldwide%20Whiskey%20Producer%20Trophy%0A%5B%233%5D%20John%20Turturro%2C%20Carrie%20Coon%2C%20Guitarricadelafuente%2C%20and%20Peter%20Gamble%20to%20Receive%20SFFILM%20Honors%0A%5B%234%5D%20Mia%20Joy%20%E2%80%93%20%E2%80%9CCircle%E2%80%9D%20(Feat.%20Midwife)%0A%5B%235%5D%20Biscuit-tin%20lids%2C%20horse%20brasses%20and%20scrap%20metal%20form%20sculptural%20V%26A%20Christmas%20tree%20by%20Burberry%0A%5B%236%5D%20Stanley%201913%20Brings%20Its%20Museum%20of%20Questionable%20Gifts%20Pop-Up%20to%20New%20York%0A%5B%237%5D%20A%20Ma%20Mani%C3%A9re%20Made%20Clean%20Nike%20Air%20Forces%20That%E2%80%99ll%20(Sorta)%20Never%20Drop": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:16.251Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20lululemon%20recently%20introduced%20a%20variety%20of%20winter%20apparel%2C%20covering%20the%20Big%20Cozy%2C%20Steady%20State%20SuperLoft%2C%20Tumbled%20Fleece%2C%20and%20the%20all-new%20High-Loft%20PrimaLoft%20UltraPeak%20collections.%20Through%20oversized%20silhouettes%2C%20rich%20fab%0A%5B%231%5D%20Sole%20Food%20is%20a%20weekly%20series%20built%20on%20sneaker%20editor%20Morgan%20Smith's%20takes%20on%20the%20biggest%20topics%20in%20sneaker%20culture.%20You%20may%20ask%3A%20why%20put%20a%20heel%20on%20a%20perfectly%20good%20sneaker%3F%20Fair.%20The%20idea%20of%20a%20sneaker-heel%20is%20just%20plain%0A%5B%232%5D%20With%20his%20luminous%20All%20of%20a%20Sudden%20opening%20in%20theaters%2C%20Ryusuke%20Hamaguchi%20reflects%20with%20Isaac%20Feldberg%20on%20the%20political%20power%20of%20open-hearted%20dialogue%20and%20the%20intense%2C%20tender%20chemistry%20between%20his%20lead%20actresses.%0A%5B%233%5D%20His%20films%20ranging%20from%20%22Titicut%20Follies%22%20in%201967%20through%20%22State%20Legislature%22%20in%202007%20have%20all%20been%20restored%20in%204K%20by%20Zipporah%20Films.%0A%5B%234%5D%20We%20lost%20Jamaica%20Suk%20yesterday%2C%20the%20singular%20musical%20force.%20To%20say%20this%20hits%20close%20to%20home%20is%20an%20understatement%3B%20few%20people%20have%20been%20a%20better%20friend%20or%20a%20greater%20inspiration.%20My%20thoughts%20are%20with%20her%20family%2C%20in%20particula%0A%5B%235%5D%20Wet%20Leg%2C%20Mallrat%2C%20Genesis%20Owusu%2C%20and%20more%20lend%20their%20hands%20to%20I%20Love%20My%20Computer%2C%20All%20My%20Friends%20Are%20Inside%20It%0A%5B%236%5D%20Architecture%20collective%20Assemble%20has%20created%20small%2C%20climbable%20cedar%20buildings%20that%20%22play%20with%20scale%22%20to%20showcase%20a%20new%20pigment%20made%20from%20industrial%20waste%20at%20Tokyo%20's%20SKAC%20gallery.%20With%20the%20exhibition%2C%20the%20UK-based%20collec%0A%5B%237%5D%20GIO%20VERONESI%20INSTALLS%20OCCUPIABLE%20LOOKOUT%20IN%20THE%20VICTORIAN%20ALPS%20Installed%20at%20an%20elevation%20of%201%2C750%20meters%20in%20Falls%20Creek%2C%20within%20Australia%E2%80%99s%20Victorian%20Alps%2C%20Flower%20of%20the%20Alpine%20Sun%20is%20a%2010-meter-diameter%20occupiable%20looko": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:18.633Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20The%20churches%20of%20Athens%20had%20much%20to%20say%20in%201854%2C%20when%20an%20anonymous%20author%20staged%20a%20squabble%20between%20them%20in%20newsprint.%20Nikos%20Magouliotis%20eavesdrops%20on%20this%20chatter%2C%20finding%20personified%20anxieties%20about%20Greek%20architectural%0A%5B%231%5D%20Rapper%20Yvng%20Patra%20has%20released%20his%20latest%20album%2C%20Regalia%20.%20The%2017-track%20release%20features%20appearances%20by%20Kohjiya%20%2C%20Vingo%20%2C%20D.O%20%2C%20DADA%20%2C%2027AM%20%2C%20and%20Pxrge%20Trxxxper%20.%20Welcoming%20a%20diverse%20array%20of%20producers%20and%20guest%20artists%2C%0A%5B%232%5D%20Spoiler%20alert%3A%20New%20Balance's%20next%20991v1%20sneaker%20won't%20be%20made%20in%20the%20U.K.%20Instead%2C%20the%20next%20pair%20will%20be%20straight%20from%20Japan.%20That's%20right.%20In%20honor%20of%20the%20991's%2025th%20birthday%2C%20New%20Balance%20is%20dropping%20a%20special%20%22Made%20in%0A%5B%233%5D%20Even%20before%20The%20Decemberists%20were%20formed%20in%202000%2C%20Colin%20Meloy%20and%20Carson%20Ellis%20were%20working%20on%20ideas%20for%20their%20epic%2C%20Portland-set%20fantasy%20novel%20Wildwood%20%2C%20which%20was%20finally%20completed%20and%20released%20in%202011%2C%20spanning%20more%20t%0A%5B%234%5D%20The%20agency%20has%20introduced%20a%20standalone%20V%20symbol%20and%20a%20bespoke%20typeface%2C%20Visa%20Sans%2C%20developed%20with%20Displaay%20Type%20Foundry.%0A%5B%235%5D%20A%20contemporary%20take%20on%20Ukrainian%20vernacular%20buildings%20and%20a%20preschool%20in%20Estonia%20are%20among%20the%20winners%20of%20the%20Thermory%20Design%20Awards%202026%2C%20which%20celebrate%20the%20versatility%20of%20thermally%20modified%20wood%20.%20Of%2078%20submissions%20fr%0A%5B%236%5D%20WADE%20AND%20LETA%20compose%20interactive%20PLAYSCAPE%20in%20Sculpture%20Park%20Installed%20in%20Shanghai%E2%80%99s%20Jing%E2%80%99an%20Sculpture%20Park%20for%20the%20ninth%20edition%20of%20the%20Jing%E2%80%99an%20International%20Sculpture%20Project%20(2026%20JISP)%2C%20Catching%20Feelings%20is%20an%20inter%0A%5B%237%5D%20A%20cartoon%20illustrating%20the%20supposedly%20devastating%20effects%20of%20introducing%20the%20metric%20system%20to%20the%20United%20States.": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:20.203Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20How%20to%20make%20a%20bestseller%3A%20insiders%20reveal%20the%20tricks%20of%20the%20book%20trade%20.%20%E2%80%9CThe%20reality%20is%20that%20our%20reading%20choices%20are%20directed%20and%20massaged%20at%20every%20turn.%E2%80%9D%0A%5B%231%5D%20A%20new%20collaboration%20shoe%2C%20the%20RICHARD%20COW%20LEATHER%2C%20is%20launching%20from%20Original%20HAFERL%20%2C%20a%20historic%20footwear%20manufacturer%20from%20the%20Allg%C3%A4u%20region%20in%20Bavaria%2C%20southern%20Germany%2C%20and%20nonnative.%20The%20base%20model%2C%20the%20RICHARD%2C%20is%0A%5B%232%5D%20Tucked%20away%20in%20the%20rolling%20terrain%20of%20the%20Salish%20Mountains%2C%20there%20lies%20a%20hidden%20escape.%20A%20respite%20from%20vibrant%20city%20life%20and%20a%20moment%20to%20soak%20in%20the%20sights%20and%20sounds%20that%20we%20often%20overlook%20on%20the%20daily.%20Though%20the%20only%0A%5B%233%5D%20In%20addition%20to%20being%20a%2025-year%20veteran%20of%20the%20festival%2C%20Plante%20was%20a%20director%20in%20his%20own%20right.%0A%5B%234%5D%20We%20know%20what%20forks%2C%20trees%20and%20horses%20look%20like%2C%20but%20Jake%20Hollings%20jagged%2C%20cut-out%20style%20just%20helps%20us%20realise%20how%20much%20you%20can%20simplify%20forms%20whilst%20retaining%20personality.%0A%5B%235%5D%20For%20most%20photographers%2C%20taking%20pictures%20is%20the%20fun%20part.%20But%20finding%20a%20particular%20image%20months%20later%2C%20organizing%20thousands%20of%20files%2C%20or%20selecting%20a%20handful%20of%20keepers%20from%20a%20long%20shoot%20can%20involve%20considerably%20more%20frust%0A%5B%236%5D%20From%20architecture%20to%20brooding%20skies%20to%20happenstance%2C%20the%20images%20of%20the%20finalists%20of%20the%20inaugural%20Australian%20Street%20Photography%20Awards%20highlight%20the%20humor%2C%20friction%2C%20and%20tenderness%20of%20everyday%20moments.%20The%20competition%20is%0A%5B%237%5D%20NIN%20fans%2C%20it's%20a%20momentous%20week.%20For%20nearly%2020%20years%2C%20the%20Nine%20Inch%20Nails%20archive%20has%20been%20compiling%20live%20shows%20from%201988%20to%20today%3B%20that's%20now%20nearly%202000%20recordings%20of%20over%201200%20concerts.%20The%20site%20is%20a%20pleasure%20to%20navig": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:22.542Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Architecture%20practice%20Studio%20Gang%20has%20completed%20a%20women's%20conference%20centre%20overlooking%20Geneva%20Lake%20in%20Wisconsin%20%2C%20with%20three%20irregularly%20shaped%20buildings%20informed%20by%20the%20site's%20oak%20forest.%20Located%20outside%20of%20Chicago%20on%0A%5B%231%5D%20A%20radical%20materialist%20vision%20from%20an%20exiled%20philosopher%20who%20is%20now%20considered%20the%20forefather%20of%20cognitive%20science.%0A%5B%232%5D%20Polykatamari%20%3A%20You%20start%20as%20a%20square%20pyramid.%20Rolling%20over%20things%20smaller%20than%20you%20adds%20vertices%20to%20your%20polyhedron%20until%20it%E2%80%99s%20a%20sphere.%20(It%E2%80%99s%20also%20Project%20Hail%20Mary%20cosplay.)%0A%5B%233%5D%20As%20the%20star%20of%20Coward%2C%20Lukas%20Dhont%E2%80%99s%20luminous%20romance%20set%20in%20the%20trenches%20of%20WWI%2C%20Valentin%20Campagne%E2%80%99s%20road%20to%20glory%20at%20this%20year%E2%80%99s%20Cannes%20film%20festival%20started%20with%20a%20lie%2C%20ended%20with%20a%20lie%20%E2%80%93%20and%20uncovered%20all%20kinds%20of%20tr%0A%5B%234%5D%20CASETiFY%20has%20announced%20a%20tech%20accessory%20collection%20that%20expresses%20the%20world%20of%20Pok%C3%A9mon%20through%20pixel%20art.%20Celebrating%20Pok%C3%A9mon's%2030-year%20journey%2C%20the%20collection%20fuses%20designs%20inspired%20by%20gaming%20culture%20with%20the%20brand's%20si%0A%5B%235%5D%20WTAPS'%20next%20HOKA%20collaboration%3F%20A%20super-sexy%20trail%20sneaker.%20No%20seriously.%20The%20Japanese%20streetwear%20brand%20has%20spun%20the%20HOKA%20Speedgoat%20into%20this%20super-stylish%20sneaker.%20It%20looks%20so%20good%2C%20you%20almost%20forget%20it's%20a%20hardcore%20tra%0A%5B%236%5D%20The%20first%20step%20is%20to%20get%20voters%20to%20see%20the%20one%20movie%20he%20might%20nab%20for%20Best%20Actor%3A%20%22Primetime.%22%0A%5B%237%5D%20NASA%E2%80%99s%20ESCAPADE%20spacecraft%20has%20captured%20an%20incredible%20photo%20of%20the%20Earth%20as%20it%20slingshotted%20past%20the%20planet%20on%20its%20way%20to%20Mars.%20%5B%20Read%20More%20%5D": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:24.863Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Korg's%20phase8%20remains%20an%20acoustic%2C%20resonating%20fascination%2C%20just%20at%20a%20time%20when%20everything%20seems%20lost%20in%20a%20sea%20of%20software.%20The%20companion%20app%20we%20saw%20first%20at%20Berlin's%20Superbooth%20is%20now%20public%20this%20week%2C%20expanding%20sequenci%0A%5B%231%5D%20The%20Wilcoworld%20Tour%20includes%20a%20five-night%20residency%20at%20the%20San%20Francisco%20Fillmore%0A%5B%232%5D%20The%20post%20Punchbag%20%E2%80%93%20%E2%80%9CFangirl%E2%80%9D%20appeared%20first%20on%20Stereogum%20.%0A%5B%233%5D%20A%20collection%20of%20showcases%2C%20old%20and%20new%2C%20took%20place%20in%20New%20York%20this%20November%2C%20effectively%20adding%20a%20second%20design%20week%20to%20a%20city%20already%20loaded%20with%20events.%20Dezeen's%20US%20editor%20Ben%20Dreith%20explores%20the%20offerings.%20The%20as-yet%0A%5B%234%5D%20The%20Aristotelian%20notion%20of%20%E2%80%9Cman%E2%80%9D%20as%20a%20%E2%80%9Crational%20animal%E2%80%9D%20has%20seen%20its%20share%20of%20detractors%2C%20from%20the%20Cynics%20to%20Bertrand%20Russell%20to%20nearly%20the%20whole%20of%20Poststructuralist%20thought.%20Leave%20it%20up%20to%20Oscar%20Wilde%20to%20compress%20the%20d%0A%5B%235%5D%20To%20escape%20hustle%20culture%20and%20endless%20doomscrolling%2C%20people%20have%20gamified%20the%20lost%20art%20of%20simply%20having%20a%20hobby%0A%5B%236%5D%20German%20footwear%20brand%20BIRKENSTOCK%20has%20unveiled%20%221774%20Camden's%20Clubs%2C%22%20a%20new%20collection%20inspired%20by%20London's%20music%2C%20fashion%2C%20and%20subcultures.%20Building%20on%20four%20of%20the%20brand's%20signature%20models%E2%80%94the%20Arizona%2C%20London%2C%20Boston%2C%20a%0A%5B%237%5D%20Hi%20all%2C%20it%E2%80%99s%20your%20Shopkeeper%20Brynna.%20As%20some%20of%20you%20may%20know%2C%20Jesse%20has%20decided%20to%20move%20into%20a%20cozier%20space.%20What%20does%20this%20mean%20for%20the%20Put%20This%20On%20Shop%20%2C%20you%20may%20ask%3F%20It%20means%20Jesse%20has%20had%20to%20downsize%20a%20little%20bit%2C%20wh": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:26.573Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20The%20dreamy%20Spanish%20pop%20star%20plays%20a%20closeted%20trumpet%20player%20forced%20to%20join%20the%20Nationalists%20to%20survive%20during%20the%20Spanish%20Civil%20War.%20He%20tells%20IndieWire%20about%20starring%20in%20his%20first%20film%2C%20witnessing%20Los%20Javis'%20breakup%20duri%0A%5B%231%5D%20The%20latest%20version%20of%20Adobe%20Photoshop%2C%20Photoshop%202027%20(28.0.0)%2C%20added%20many%20AI-powered%20photo-editing%20features.%20Not%20all%20photographers%20are%20thrilled%20about%20the%20increasingly%20heavy%20focus%20on%20generative%20AI%20inside%20Photoshop%2C%20and%20p%0A%5B%232%5D%20The%20post%20Sid%20The%20Cat%20%26%20Stereogum%20Present%20Ramones%20Night%20In%20LA%20Next%20Month%20appeared%20first%20on%20Stereogum%20.%0A%5B%233%5D%20Kaleidoscopic%20patterns%20adorn%20the%20exterior%20of%20this%20pavilion%20in%20Doha%2C%20Qatar%2C%20designed%20by%20artist%20Gerhard%20Richter%20with%20US%20studio%20Selldorf%20Architects%20as%20an%20art%20gallery.%20Simply%20called%20Doha%20Pavilion%2C%20the%20psychedelic%20structure%20w%0A%5B%234%5D%20CDs%20spin%20out%20in%20the%20open%20Swedish%20electronics%20company%20teenage%20engineering%20introduces%20its%20first-ever%20CD%20player%20%2C%20the%20EP%2FBC%E2%80%931%2C%20with%20a%20design%20that%20leaves%20the%20spinning%20compact%20disc%20entirely%20exposed.%20The%20device%20takes%20the%20form%0A%5B%235%5D%20A%20mercenary%20and%20miscreant%2C%20the%20Swiss%20Renaissance%20artist%20Urs%20Graf%20lived%20the%20violence%20and%20vice%20he%20summoned%20on%20his%20drafting%20table.%20Miya%20Tokumitsu%20introduces%20us%20to%20his%20astonishing%20drawings%20of%20soldiers%20and%20sex%20workers%2C%20and%20fi%0A%5B%236%5D%20Most%20of%20us%20remember%20where%20we%20were%20when%20we%20heard%20that%20Notre-Dame%20had%20burned%20down.%20And%20even%20upon%20learning%20that%20the%20most%20famous%20of%20all%20French%20cathedrals%20had%20been%20badly%20damaged%20rather%20than%20completely%20destroyed%2C%20it%20still%20felt%0A%5B%237%5D%20She%20made%20history%20as%20the%20first%20Indian%20model%20to%20open%20a%20Chanel%20show%20%E2%80%93%20but%20in%20truth%2C%20Bhavitha%20Mandava%20never%20dreamed%20of%20walking%20the%20runways.%20Here%2C%20she%20meets%20with%20viral%20designer%20and%20influencer%20Diya%20Joukani%20to%20work%20out%20what%20the": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:28.840Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Brand%20Information%3A%20Tetsu%20Nishiyama%20(Tet)%20began%20the%20project%20FORTY%20PERCENT%20AGAINST%20RIGHTS%20(FPAR)%20in%201993%2C%20then%20WTAPS%20was%20launched%20in%201996.%20WTAPS%20(pronounced%20%E2%80%98double%20taps%E2%80%99)%20is%20heavily%20inspired%20by%20the%20military%20and%20the%20outdoo%0A%5B%231%5D%20Not%20many%20will%20admit%20it%2C%20but%20the%20Air%20Jordan%201%20Mid%20has%20been%20looking%20pretty%20good%20here%20lately.%20And%20another%20impressive%20pair%20just%20hit%20Nike's%20website.%20The%20hated-on%20Jordan%20model%20has%20landed%20in%20this%20gorgeous%20%22Faded%20Spruce%22%20colorwa%0A%5B%232%5D%20Milton%20S.%20Hershey%20gets%20the%20Angel%20Studios%20treatment%20in%20a%20deranged%20and%20decidedly%20vanilla%20piece%20of%20%22values-based%20entertainment.%22%0A%5B%233%5D%20A%20rare%20cabinet%20photograph%20of%20the%20New%20York%20Giants%2C%20one%20of%20early%20professional%20baseball%E2%80%99s%20most%20significant%20teams%2C%20taken%20by%20renowned%20baseball%20photographer%20Joseph%20Hall%20in%201889%2C%20is%20up%20for%20auction.%20%5B%20Read%20More%20%5D%0A%5B%234%5D%20Ghanaian-Scottish%20architect%20Lesley%20Lokko%20has%20nominated%20Courage%20Dzidula%20Kpodo%20as%20a%20key%20name%20to%20watch%20over%20the%20next%20two%20decades%20for%20Dezeen%E2%80%99s%2020%C3%9720%20project%2C%20sponsored%20by%20Kohler%20.%20In%20this%20interview%20he%20explains%20why%20despite%20gr%0A%5B%235%5D%20Sometime%20in%20the%20fifth%20century%20B.C.%2C%20Greek%20sculptors%20worked%20out%20a%20way%20to%20put%20motion%20into%20something%20that%20could%20not%20move.%20Contrapposto%2C%20as%20Renaissance%20artists%20would%20later%20name%20it%2C%20describes%20a%20standing%20figure%20resting%20its%20wei%0A%5B%236%5D%20%E2%80%9CIt%E2%80%99s%20a%20sunny%20morning%20in%20ancient%20Greece.%20Students%20have%20started%20gathering%20in%20the%20Academy%2C%20but%20their%20famous%20teacher%20Plato%20is%20nowhere%20to%20be%20seen.%E2%80%9D%20The%20great%20philosopher%20has%2C%20it%20seems%2C%20%E2%80%9Coverslept%20and%20missed%20his%20own%20lecture.%E2%80%9D%0A%5B%237%5D%20From%20New%20York%20to%20London%2C%20young%20women%20are%20mastering%20the%20art%20of%20nunchaku.%20But%20why%20is%20the%20traditional%20martial%20arts%20weapon%20seeing%20such%20an%20uptick%20in%20interest%3F": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:30.196Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Summary%20Ki%20One%20Whisky%20Distillery%20won%20the%20IWSC%202026%20Worldwide%20Whiskey%20Producer%20Trophy%2C%20an%20award%20given%20to%20a%20distillery's%20whole%20range%20rather%20than%20a%20single%20bottleTo%20make%20the%20shortlist%2C%20a%20producer%20has%20to%20enter%20at%20least%20three%0A%5B%231%5D%20One%20word%20to%20describe%20Nike's%20newest%20Vomero%20Plus%20%22Light%20Armory%20Blue%22%20shoe%3F%20Icy.%20For%20the%20latest%20release%2C%20the%20stacked%20Swoosh%20running%20shoe%20appears%20in%20chill%20blue%20mesh%20uppers%20and%20white%20ZoomX%20soles%2C%20with%20a%20touch%20of%20dark%20grey%20in%0A%5B%232%5D%20Presenters%20at%20the%20December%207%20San%20Francisco%20event%20will%20include%20%22La%20Bola%20Negra%22%20directors%20Javier%20Calvo%20and%20Javier%20Ambrossi%2C%20and%20%22I%20Play%20Rocky%22%20star%20Anthony%20Ippolito.%0A%5B%233%5D%20Contrary%20to%20their%20condescending%20reputation%20for%20inducing%20boredom%2C%20the%20films%20of%20Lav%20Diaz%20are%20probably%20best%20described%20as%20a%20blunt-force%20shock%20to%20the%20nerves.%20Explorations%20of%20the%20violent%20effects%20of%20colonialism%20on%20Filipino%20soci%0A%5B%234%5D%20Ah%2C%20yes%2C%20%E2%80%9CAutobahn.%E2%80%9D%20From%20the%20moment%20the%20door%20slams%20and%20the%20ignition%20starts%2C%20prog%20rockers%20and%20pre-new%20wavers%20know%20a%20journey%20is%20afoot.%20Though%20Kraftwerk%20had%20already%20made%20three%20albums%2C%20and%20the%20band%20members%20still%20looked%20like%0A%5B%235%5D%20Stanley%201913%20is%20heading%20to%20SoHo%20this%20holiday%20season%20with%20the%20Museum%20of%20Questionable%20Gifts%2C%20a%20pop-up%20that%20pokes%20fun%20at%20the%20presents%20nobody%20asked%20for%20while%20making%20the%20case%20for%20one%20that%20never%20needs%20a%20second%20thought.%20Visitor%0A%5B%236%5D%20A%20Ma%20Mani%C3%A9re's%20newest%20Nike%20Air%20Force%201%20Low%20collaboration%20is%20genuinely%20an%20IYKYK%20kind%20of%20release.%20A%20Ma%20Mani%C3%A9re%20has%20designed%20six%20new%20Air%20Forces%20in%20six%20different%20flavors%2C%20including%20%22Canyon%20Purple%2C%22%20%22Diffused%20Blue%2C%22%20and%20%22Gree%0A%5B%237%5D%20From%20Cannes%20to%20Venice%20to%20Austin%2C%20our%20Future%20of%20Filmmaking%20Intensives%20offer%20something%20for%20everyone%20%E2%80%94%20and%20all%20have%20earlybird%20deadlines%20on%20Monday%2C%20November%2030.": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:32.543Z"
+    },
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=%5B%230%5D%20Somewhere%20in%20Eastern%20Montana%2C%20a%20small%20group%20of%20people%20are%20living%20lives%20that%20appear%20sealed%20in%20amber.%20Ranchers%2C%20horse%20trainers%2C%20bull%20riders%2C%20tribal%20elders%20existing%20in%20modern%20times%20with%20modern%20problems%2C%20comforted%20by%20the%20sim%0A%5B%231%5D%20From%20chicken%20shops%20to%20cafes%2C%20album%20covers%20to%20business%20cards%2C%20this%20graphic%20designer%20maintains%20a%20tasteful%20style%20that%20puts%20clients%20front%20and%20centre.%0A%5B%232%5D%20A%20forthcoming%20documentary%20spotlights%20the%20life%20and%20work%20of%20luminary%20artist%20Jean-Michel%20Basquiat%20(1960-1988).%20Directed%20by%20Quinn%20Whitney%20Wilson%20and%20Viridiana%20Lieberman%20for%20Netflix%2C%20the%20feature%20film%20is%20the%20first%20project%20auth%0A%5B%233%5D%20If%20you%20don't%20know%20her%20work%2C%20computer%20scientist%20Monique%20%22Evette%22%20Byars%20has%20built%20spectacular%2C%20animated%20instruments%2C%20merging%20digital%20modeling%20and%20fabrication%20techniques.%20Flowers%20bloom.%20Guitars%20are%20reimagined%20as%20koi%20ponds.%0A%5B%234%5D%20The%20post%20Peter%20Gabriel%20%E2%80%93%20%E2%80%9CYes%2C%20It%20Will%20Go%E2%80%9D%20appeared%20first%20on%20Stereogum%20.%0A%5B%235%5D%20%E2%80%9C%20Reading%20the%20air%20%E2%80%94%20kuuki%20o%20yomu%20in%20Japanese%20%E2%80%94%20is%20a%20constant%20exercise%2C%20and%20misreading%20the%20air%20can%20blow%20business%20deals%20or%20ruin%20relationships.%E2%80%9D": {
+      "etag": null,
+      "lastModified": null,
+      "lastStatus": 200,
+      "lastCheckedAt": "2026-11-25T06:15:34.075Z"
     }
   },
-  "updatedAt": "2026-11-24T23:45:08.435Z"
+  "updatedAt": "2026-11-25T06:15:34.109Z"
 }
