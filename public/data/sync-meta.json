@@ -1,15 +1,15 @@
 {
-  "syncedAt": "2026-11-25T18:57:29.588Z",
+  "syncedAt": "2026-11-26T03:21:23.979Z",
   "counts": {
     "aiRadar": 220,
     "cultureTotal": 151,
     "cultureDomains": 19,
     "builderTotal": 240,
     "bySource": {
-      "github_trending": 50,
+      "github_trending": 51,
       "trustmrr": 26,
-      "show_hn": 94,
-      "product_hunt": 48,
+      "show_hn": 113,
+      "product_hunt": 28,
       "uneed": 22
     },
     "cultureBySource": {
@@ -34,8 +34,8 @@
       "Kottke.org": 8
     },
     "verifiedRevenueCount": 26,
-    "verifiedMediaCount": 96,
-    "verifiedCultureMediaCount": 122,
+    "verifiedMediaCount": 99,
+    "verifiedCultureMediaCount": 123,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
       "tech": 30,
@@ -49,13 +49,13 @@
       "status": 200,
       "count": 220,
       "cached304": false,
-      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(14)"
+      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(9)"
     },
     {
       "id": "github_trending",
       "label": "GitHub Trending Open Source",
       "status": 200,
-      "count": 50,
+      "count": 51,
       "cached304": false,
       "note": "50 GitHub repos (24 with verified media)"
     },
@@ -71,7 +71,7 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 94,
+      "count": 113,
       "cached304": false,
       "note": "68 live Show HN items"
     },
@@ -79,7 +79,7 @@
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
       "status": 200,
-      "count": 48,
+      "count": 28,
       "cached304": false,
       "note": "24 Product Hunt entries"
     },
@@ -104,14 +104,14 @@
       "label": "Global Culture RSS (19 domains)",
       "status": 200,
       "count": 151,
-      "note": "122 verified editorial images"
+      "note": "123 verified editorial images"
     },
     {
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 96,
-      "note": "4 newly enriched via OG/README"
+      "count": 99,
+      "note": "3 newly enriched via OG/README"
     },
     {
       "id": "culture_dazed",
@@ -164,10 +164,10 @@
     {
       "id": "culture_filmstage",
       "label": "The Film Stage (시네마 · 연출)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_mubi",
@@ -196,10 +196,10 @@
     {
       "id": "culture_petapixel",
       "label": "PetaPixel (사진 · 카메라)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_colossal",
@@ -220,10 +220,10 @@
     {
       "id": "culture_cdm",
       "label": "CDM (사운드테크 · 신스)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (2 img)"
     },
     {
       "id": "culture_pitchfork",
@@ -284,10 +284,10 @@
     {
       "id": "culture_openculture",
       "label": "Open Culture (문화 아카이브 · 지식)",
-      "status": 200,
+      "status": 304,
       "count": 8,
-      "cached304": false,
-      "note": "8 items (8 img)"
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_kottke",
@@ -295,7 +295,7 @@
       "status": 200,
       "count": 8,
       "cached304": false,
-      "note": "8 items (1 img)"
+      "note": "8 items (2 img)"
     }
   ]
 }
