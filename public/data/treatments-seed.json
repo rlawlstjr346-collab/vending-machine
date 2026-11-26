@@ -1,14 +1,14 @@
 {
   "version": 3,
-  "syncedAt": "2026-11-26T03:21:23.979Z",
+  "syncedAt": "2026-11-26T16:06:54.513Z",
   "count": 60,
   "items": [
     {
-      "id": "tr-tec-elephant-goldf-8abyoe",
-      "slug": "tr-tec-elephant-goldf-8abyoe",
+      "id": "tr-tec-elephant-goldf-cnre5x",
+      "slug": "tr-tec-elephant-goldf-cnre5x",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -34,28 +34,28 @@
         "url": "https://github.com/google/elephant-goldfish-model",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★23.0k",
-        "shortMetricLabel": "GitHub ★23.0k",
+        "tractionLabel": "GitHub ★23.2k",
+        "shortMetricLabel": "GitHub ★23.2k",
         "verifiedRevenue": false,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "장기 설계 기억과 단기 변경 맥락을 분리해 AI 에이전트가 소프트웨어 설계를 스스로 검토·비평하는 오픈소스 플러그인입니다.",
-        "overseasProofKo": "elephant-goldfish-model은 GitHub(GitHub 23.0k)에서 주목받은 프로젝트입니다. 장기 설계 기억과 단기 변경 맥락을 분리해 AI 에이전트가 소프트웨어 설계를 스스로 검토·비평하는 오픈소스 플러그인입니다."
+        "overseasProofKo": "elephant-goldfish-model은 GitHub(GitHub 23.2k)에서 주목받은 프로젝트입니다. 장기 설계 기억과 단기 변경 맥락을 분리해 AI 에이전트가 소프트웨어 설계를 스스로 검토·비평하는 오픈소스 플러그인입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-f704d2a591fd",
-        "titleKo": "@ai-sdk/hume@2.0.74 새 정식 버전 릴리즈",
-        "canonicalUrl": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/hume%402.0.74",
-        "platformId": "github",
-        "platformLabel": "GitHub",
+        "radarId": "live-94fb830c5d24",
+        "titleKo": "Ollama란? AI를 자신의 PC로 움직일 수 있는 오픈 소스 도구를 부드럽게 해설",
+        "canonicalUrl": "https://qiita.com/kirancom1011/items/971095c2f6b757b61304",
+        "platformId": "qiita",
+        "platformLabel": "Qiita",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "open_source_trend",
+        "signalType": "model_release",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "Anthropic이 AI 에이전트가 풀 리퀘스트를 검토·수정·승인하는 Claude Ship을 출시하며 코드 리뷰 자동화가 핵심 화두가 됐습니다.",
-        "benchmarkPoint": "새 정식 버전 릴리스",
-        "bottleneckSolvedKo": "@ai-sdk/hume@2.0.74 새 정식 버전 릴리즈 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Anthropic이 AI 에이전트가 풀 리퀘스트를 검토·수정·승인하는 Claude Ship을 출시하며 코드 리뷰 자동화가 핵심 화두가 됐습니다."
+        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
+        "bottleneckSolvedKo": "Ollama란? AI를 자신의 PC로 움직일 수 있는 오픈 소스 도구를 부드럽게 해설 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Anthropic이 AI 에이전트가 풀 리퀘스트를 검토·수정·승인하는 Claude Ship을 출시하며 코드 리뷰 자동화가 핵심 화두가 됐습니다."
       },
       "twistSummaryKo": "GitHub PR 링크만 붙여 넣으면 아키텍처 충돌과 놓친 예외 케이스 3가지만 붉은 카드로 짚어주는 경량 리뷰 웹입니다.",
       "mvpFeatures": [
@@ -83,7 +83,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "AI가 짜준 코드를 배포 전에 설계 결함만 짚어주는 1인 코드 리뷰어를 띄워본다면?",
-          "treatmentId": "tr-tec-elephant-goldf-8abyoe",
+          "treatmentId": "tr-tec-elephant-goldf-cnre5x",
           "builderId": "builder-gh-47441e46b9",
           "builderName": "elephant-goldfish-model"
         }
@@ -93,11 +93,11 @@
       "variantIndex": 0
     },
     {
-      "id": "tr-cul-storeradar-2z3d63",
-      "slug": "tr-cul-storeradar-2z3d63",
+      "id": "tr-cul-storeradar-q830i4",
+      "slug": "tr-cul-storeradar-q830i4",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -126,19 +126,19 @@
         "url": "https://trustmrr.com/startup/storeradar",
         "source": "trustmrr",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $4.1k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $4.1k",
+        "tractionLabel": "검증 매출 $4k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $4k",
         "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "온라인 스토어의 신상 등록·재고·가격 변화를 실시간 감지해 월 $3.6k 매출을 검증받은 이커머스 모니터링 SaaS입니다.",
-        "overseasProofKo": "StoreRadar은 TrustMRR(TrustMRR $4.1k)에서 주목받은 프로젝트입니다. 온라인 스토어의 신상 등록·재고·가격 변화를 실시간 감지해 월 $3.6k 매출을 검증받은 이커머스 모니터링 SaaS입니다."
+        "overseasProofKo": "StoreRadar은 TrustMRR(TrustMRR $4k)에서 주목받은 프로젝트입니다. 온라인 스토어의 신상 등록·재고·가격 변화를 실시간 감지해 월 $3.6k 매출을 검증받은 이커머스 모니터링 SaaS입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-hypebeast-90b53c5beb",
-        "titleKo": "Lids의 명절 선물 쟁탈전을 정복하세요",
-        "canonicalUrl": "https://hypebeast.com/2026/11/conquering-the-holiday-gift-scramble-at-lids",
+        "radarId": "culture-hypebeast-601e9ebfb3",
+        "titleKo": "나이키 마인드 001, '팔로미노'에 초콜릿 브라운 색상의 무빙 노드 설정",
+        "canonicalUrl": "https://hypebeast.com/2026/11/nike-mind-001-palomino-hq4307-201-official-images",
         "platformId": "Hypebeast",
         "sourceType": "culture",
         "cultureVerticalLabel": "패션 · 유스컬처",
@@ -146,7 +146,7 @@
         "productDomain": "brand-commerce",
         "summaryKo": "CASIO G-SHOCK과 라이프스타일 브랜드 HIDDEN의 한정판 2110HDN-8A 협업 출시가 글로벌 스트리트 컬렉터들의 이목을 집중시켰습니다.",
         "benchmarkPoint": "패션 · 유스컬처",
-        "bottleneckSolvedKo": "Hypebeast에서 포착된 'Lids의 명절 선물 쟁탈전을 정복하세요' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. CASIO G-SHOCK과 라이프스타일 브랜드 HIDDEN의 한정판 2110HDN-8A 협업 출시가 글로벌 스트리트 컬렉터들의 이목을 집중시켰습니다."
+        "bottleneckSolvedKo": "Hypebeast에서 포착된 '나이키 마인드 001, '팔로미노'에 초콜릿 브라운 색상의 무빙 노드 설정' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. CASIO G-SHOCK과 라이프스타일 브랜드 HIDDEN의 한정판 2110HDN-8A 협업 출시가 글로벌 스트리트 컬렉터들의 이목을 집중시켰습니다."
       },
       "twistSummaryKo": "관심 브랜드 협업명만 검색하면 공식 발매 카운트다운, 이전 협업 시세 추이, 비슷한 감성의 아카이브 대안 3종을 한 화면에 비교합니다.",
       "mvpFeatures": [
@@ -174,7 +174,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "지샥 × 히든 같은 글로벌 한정판 협업 드롭의 발매 일정·리셀 시세·대체 빈티지 모델까지 한 장으로 묶어주는 웹을 만든다면?",
-          "treatmentId": "tr-cul-storeradar-2z3d63",
+          "treatmentId": "tr-cul-storeradar-q830i4",
           "builderId": "builder-tmrr-24e93bd162",
           "builderName": "StoreRadar"
         }
@@ -184,11 +184,11 @@
       "variantIndex": 1
     },
     {
-      "id": "tr-tec-anatomy-69tqc1",
-      "slug": "tr-tec-anatomy-69tqc1",
+      "id": "tr-tec-anatomy-v93lp5",
+      "slug": "tr-tec-anatomy-v93lp5",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -214,28 +214,28 @@
         "url": "https://github.com/wheresryan22/anatomy",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★29.2k",
-        "shortMetricLabel": "GitHub ★29.2k",
+        "tractionLabel": "GitHub ★29.3k",
+        "shortMetricLabel": "GitHub ★29.3k",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "무거운 공식 클라이언트를 대체해 전체 음악 라이브러리를 지연 없이 탐색·재생하는 초경량 Rust 네이티브 플레이어입니다.",
-        "overseasProofKo": "anatomy은 GitHub(GitHub 29.2k)에서 주목받은 프로젝트입니다. 무거운 공식 클라이언트를 대체해 전체 음악 라이브러리를 지연 없이 탐색·재생하는 초경량 Rust 네이티브 플레이어입니다."
+        "overseasProofKo": "anatomy은 GitHub(GitHub 29.3k)에서 주목받은 프로젝트입니다. 무거운 공식 클라이언트를 대체해 전체 음악 라이브러리를 지연 없이 탐색·재생하는 초경량 Rust 네이티브 플레이어입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-5b4e06ad2632",
-        "titleKo": "Gemini 4 Neon의 조언에 말문이 막혔습니다. pic.twitter.com/oOLeIayb6v",
-        "canonicalUrl": "https://x.com/Voxyz_ai/status/2125591320341229890",
-        "platformId": "x",
-        "platformLabel": "X",
+        "radarId": "live-7efba709768d",
+        "titleKo": "구체화된 지능은 2027년에 개편될 수 있습니다",
+        "canonicalUrl": "https://36kr.com/p/4086453904091784",
+        "platformId": "36kr-ai",
+        "platformLabel": "36Kr AI",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "builder_signal",
-        "productDomain": "builder-community-signal",
+        "signalType": "industry_shift",
+        "productDomain": "ai-business-infra",
         "summaryKo": "Hugging Face에 공개된 4B 파라미터 경량 모델 Haru-4B가 오디오·음성 맥락 이해 비용을 크게 낮췄습니다.",
-        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
-        "bottleneckSolvedKo": "Gemini 4 Neon의 조언에 말문이 막혔습니다. pic.twitter.com/oOLeIayb6v 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Hugging Face에 공개된 4B 파라미터 경량 모델 Haru-4B가 오디오·음성 맥락 이해 비용을 크게 낮췄습니다."
+        "benchmarkPoint": "36Kr AI 포착 — 36Kr AI 중국 AI 생태계 최신 기술·제품 시그널",
+        "bottleneckSolvedKo": "구체화된 지능은 2027년에 개편될 수 있습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Hugging Face에 공개된 4B 파라미터 경량 모델 Haru-4B가 오디오·음성 맥락 이해 비용을 크게 낮췄습니다."
       },
       "twistSummaryKo": "'비 오는 새벽 코딩용 로파이'처럼 한 줄만 입력하면 대기 시간 없이 가벼운 오디오 큐를 생성해 바로 재생합니다.",
       "mvpFeatures": [
@@ -263,7 +263,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "무거운 스트리밍 앱 대신 말 한마디로 작업용 플레이리스트를 즉시 틀어주는 초경량 웹 플레이어를 만들어본다면?",
-          "treatmentId": "tr-tec-anatomy-69tqc1",
+          "treatmentId": "tr-tec-anatomy-v93lp5",
           "builderId": "builder-gh-0909693c33",
           "builderName": "anatomy"
         }
@@ -276,8 +276,8 @@
       "id": "tr-cul-rea-video-18d00c",
       "slug": "tr-cul-rea-video-18d00c",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -306,13 +306,13 @@
         "url": "https://github.com/JuneYaooo/rea-video",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★13.4k",
-        "shortMetricLabel": "GitHub ★13.4k",
+        "tractionLabel": "GitHub ★13.6k",
+        "shortMetricLabel": "GitHub ★13.6k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "실사·애니메이션 모든 영상을 장면별로 역설계해 공개 VIDEO.md 설계서로 정리·리메이크하는 GitHub 12.7k 오픈소스입니다.",
-        "overseasProofKo": "rea-video은 GitHub(GitHub 13.4k)에서 주목받은 프로젝트입니다. 실사·애니메이션 모든 영상을 장면별로 역설계해 공개 VIDEO.md 설계서로 정리·리메이크하는 GitHub 12.7k 오픈소스입니다."
+        "overseasProofKo": "rea-video은 GitHub(GitHub 13.6k)에서 주목받은 프로젝트입니다. 실사·애니메이션 모든 영상을 장면별로 역설계해 공개 VIDEO.md 설계서로 정리·리메이크하는 GitHub 12.7k 오픈소스입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -364,11 +364,11 @@
       "variantIndex": 3
     },
     {
-      "id": "tr-tec-andee-71wafi",
-      "slug": "tr-tec-andee-71wafi",
+      "id": "tr-tec-andee-1ly8dd",
+      "slug": "tr-tec-andee-1ly8dd",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -394,28 +394,28 @@
         "url": "https://github.com/kuafuai/andee",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★6.2k",
-        "shortMetricLabel": "GitHub ★6.2k",
+        "tractionLabel": "GitHub ★5.5k",
+        "shortMetricLabel": "GitHub ★5.5k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "별도 API 통합이나 루팅 없이 시각 인식과 메모리만으로 맥·모바일 앱을 사람처럼 조작하는 온디바이스 에이전트입니다.",
-        "overseasProofKo": "andee은 GitHub(GitHub 6.2k)에서 주목받은 프로젝트입니다. 별도 API 통합이나 루팅 없이 시각 인식과 메모리만으로 맥·모바일 앱을 사람처럼 조작하는 온디바이스 에이전트입니다."
+        "overseasProofKo": "andee은 GitHub(GitHub 5.5k)에서 주목받은 프로젝트입니다. 별도 API 통합이나 루팅 없이 시각 인식과 메모리만으로 맥·모바일 앱을 사람처럼 조작하는 온디바이스 에이전트입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-a86a27e07c21",
-        "titleKo": "음악 전달의 Tidal, AI만으로 만들어진 곡의 접수를 그만두고, 약 2,700만곡을 삭제에",
-        "canonicalUrl": "https://qiita.com/quotidia/items/9ede1aeece4418220723",
+        "radarId": "live-9070401b5e80",
+        "titleKo": "Claude Code + OpenClaw 2도류: 코딩과 24시간 집사의 양립",
+        "canonicalUrl": "https://qiita.com/fukukei23/items/268483aea15655819236",
         "platformId": "qiita",
         "platformLabel": "Qiita",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
+        "signalType": "model_release",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "프롬프트로 금지하는 대신 MCP 서버와 권한 레이어에서 공개·삭제 버튼 자체를 제거하는 안전 설계 사례가 주목받았습니다.",
-        "benchmarkPoint": "Qiita — 2,700만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "음악 전달의 Tidal, AI만으로 만들어진 곡의 접수를 그만두고, 약 2,700만곡을 삭제에 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 프롬프트로 금지하는 대신 MCP 서버와 권한 레이어에서 공개·삭제 버튼 자체를 제거하는 안전 설계 사례가 주목받았습니다."
+        "benchmarkPoint": "Claude Code — 24시간 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "Claude Code + OpenClaw 2도류: 코딩과 24시간 집사의 양립 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 프롬프트로 금지하는 대신 MCP 서버와 권한 레이어에서 공개·삭제 버튼 자체를 제거하는 안전 설계 사례가 주목받았습니다."
       },
       "twistSummaryKo": "브라우저 반복 클릭 루틴을 녹화해 에이전트에게 맡기되, 삭제·결제·외부 공개 버튼 앞에서는 반드시 멈춰 승인을 받습니다.",
       "mvpFeatures": [
@@ -443,7 +443,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "내 화면에서 반복 작업을 대신 누르되 위험한 결제·공개 버튼만 원천 차단하는 안전 자동화 비서를 만들어본다면?",
-          "treatmentId": "tr-tec-andee-71wafi",
+          "treatmentId": "tr-tec-andee-1ly8dd",
           "builderId": "builder-gh-1de3ad8191",
           "builderName": "andee"
         }
@@ -456,8 +456,8 @@
       "id": "tr-cul-aihot-1dx32d",
       "slug": "tr-cul-aihot-1dx32d",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -486,13 +486,13 @@
         "url": "https://github.com/KKKKhazix/AIHOT",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★11.4k",
-        "shortMetricLabel": "GitHub ★11.4k",
+        "tractionLabel": "GitHub ★11.5k",
+        "shortMetricLabel": "GitHub ★11.5k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "정보원과 선별 기준만 바꾸면 자동으로 핵심 이슈를 수집하고 일일 리포트를 발행하는 GitHub 11.3k 큐레이션 프레임워크입니다.",
-        "overseasProofKo": "AIHOT은 GitHub(GitHub 11.4k)에서 주목받은 프로젝트입니다. 정보원과 선별 기준만 바꾸면 자동으로 핵심 이슈를 수집하고 일일 리포트를 발행하는 GitHub 11.3k 큐레이션 프레임워크입니다."
+        "overseasProofKo": "AIHOT은 GitHub(GitHub 11.5k)에서 주목받은 프로젝트입니다. 정보원과 선별 기준만 바꾸면 자동으로 핵심 이슈를 수집하고 일일 리포트를 발행하는 GitHub 11.3k 큐레이션 프레임워크입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -544,11 +544,11 @@
       "variantIndex": 5
     },
     {
-      "id": "tr-tec-mroffice-1pyqik",
-      "slug": "tr-tec-mroffice-1pyqik",
+      "id": "tr-tec-mroffice-p8am5m",
+      "slug": "tr-tec-mroffice-p8am5m",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -574,28 +574,28 @@
         "url": "https://github.com/XinaTian/MROffice",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★4.8k",
-        "shortMetricLabel": "GitHub ★4.8k",
+        "tractionLabel": "GitHub ★4.4k",
+        "shortMetricLabel": "GitHub ★4.4k",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
         "summaryKo": "마이크로소프트 오피스에 가까운 편집 경험과 AI 보조 기능을 오픈소스로 구현한 웹 기반 오피스 문서 에디터입니다.",
-        "overseasProofKo": "MROffice은 GitHub(GitHub 4.8k)에서 주목받은 프로젝트입니다. 마이크로소프트 오피스에 가까운 편집 경험과 AI 보조 기능을 오픈소스로 구현한 웹 기반 오피스 문서 에디터입니다."
+        "overseasProofKo": "MROffice은 GitHub(GitHub 4.4k)에서 주목받은 프로젝트입니다. 마이크로소프트 오피스에 가까운 편집 경험과 AI 보조 기능을 오픈소스로 구현한 웹 기반 오피스 문서 에디터입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-bc16a3fadd47",
-        "titleKo": "[인터뷰] AI 시대의 미래 전력, 핵융합 상용화는 민간이 이끈다",
-        "canonicalUrl": "https://technologyreview.kr/%ec%9d%b8%ed%84%b0%eb%b7%b0-ai-%ec%8b%9c%eb%8c%80%ec%9d%98-%eb%af%b8%eb%9e%98-%ec%a0%84%eb%a0%a5-%ed%95%b5%ec%9c%b5%ed%95%a9-%ec%83%81%ec%9a%a9%ed%99%94%eb%8a%94-%eb%af%bc%ea%b0%84%ec%9d%b4",
-        "platformId": "mit-tr-korea",
-        "platformLabel": "MIT TR Korea",
+        "radarId": "live-af05860e2fc8",
+        "titleKo": "RSA가 OpenAI와 Anthropic에 의해 깨졌다는 소문이 있습니다. 인터넷 암호화가 변경되나요?",
+        "canonicalUrl": "https://36kr.com/p/4086518226925440",
+        "platformId": "36kr-ai",
+        "platformLabel": "36Kr AI",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
         "signalType": "industry_shift",
         "productDomain": "ai-business-infra",
         "summaryKo": "OpenAI가 기업 법무팀의 계약·문서 검토를 자동화하는 연결 인텔리전스 활용 사례를 공개하며 리걸 문서 AI가 확산 중입니다.",
-        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
-        "bottleneckSolvedKo": "[인터뷰] AI 시대의 미래 전력, 핵융합 상용화는 민간이 이끈다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. OpenAI가 기업 법무팀의 계약·문서 검토를 자동화하는 연결 인텔리전스 활용 사례를 공개하며 리걸 문서 AI가 확산 중입니다."
+        "benchmarkPoint": "36Kr AI 포착 — OpenAI 중국 AI 생태계 최신 기술·제품 시그널",
+        "bottleneckSolvedKo": "RSA가 OpenAI와 Anthropic에 의해 깨졌다는 소문이 있습니다. 인터넷 암호화가 변경되나요? 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. OpenAI가 기업 법무팀의 계약·문서 검토를 자동화하는 연결 인텔리전스 활용 사례를 공개하며 리걸 문서 AI가 확산 중입니다."
       },
       "twistSummaryKo": "DOCX·PDF 계약서를 드래그해 올리면 불리한 조항을 빨간 주석으로 띄우고 클릭 한 번으로 안전한 대체 문구로 바꿔줍니다.",
       "mvpFeatures": [
@@ -623,7 +623,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "계약서나 제안서 초안을 올리면 독소 조항만 형광펜으로 짚고 바로 수정해 주는 브라우저 문서 편집기를 만들어본다면?",
-          "treatmentId": "tr-tec-mroffice-1pyqik",
+          "treatmentId": "tr-tec-mroffice-p8am5m",
           "builderId": "builder-gh-4219bb7710",
           "builderName": "MROffice"
         }
@@ -633,11 +633,11 @@
       "variantIndex": 6
     },
     {
-      "id": "tr-cul-artex-tgn8sx",
-      "slug": "tr-cul-artex-tgn8sx",
+      "id": "tr-cul-lemo-opuscar-1gmfnp",
+      "slug": "tr-cul-lemo-opuscar-1gmfnp",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -652,7 +652,7 @@
       ],
       "buildCadence": "5~7일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://raw.githubusercontent.com/BaaRai/ARTEX/main/screenshots/tasks.png",
+      "previewImageUrl": "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cover-en.webp",
       "mediaSourceLabel": "오픈소스 실물 화면",
       "techDigestKo": {
         "inputKo": "공개 라이브 아카이브(Internet Archive 등)의 공연 연도·도시·셋리스트 메타데이터",
@@ -661,18 +661,18 @@
         "summaryKo": "수천 건의 희귀 라이브 공연 녹음을 연도·곡별 편곡 차이로 1초 만에 디깅하는 초고속 음악 아카이브"
       },
       "sampleA": {
-        "builderId": "builder-gh-dc3ddfe730",
-        "name": "ARTEX",
-        "url": "https://github.com/BaaRai/ARTEX",
+        "builderId": "builder-gh-c8a902128b",
+        "name": "lemo-opuscar",
+        "url": "https://github.com/lemomo-ai/lemo-opuscar",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★20.9k",
-        "shortMetricLabel": "GitHub ★20.9k",
+        "tractionLabel": "GitHub ★21.5k",
+        "shortMetricLabel": "GitHub ★21.5k",
         "verifiedRevenue": false,
-        "mechanism": "drop-validation",
-        "mechanismLabel": "공개 투표 · 수요 검증",
+        "mechanism": "timestamp-archive",
+        "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "무거운 공식 앱을 대체해 초대형 음악 라이브러리를 지연 없이 탐색·재생하는 GitHub 10.7k 초경량 Rust 플레이어입니다.",
-        "overseasProofKo": "ARTEX은 GitHub(GitHub 20.9k)에서 주목받은 프로젝트입니다. 무거운 공식 앱을 대체해 초대형 음악 라이브러리를 지연 없이 탐색·재생하는 GitHub 10.7k 초경량 Rust 플레이어입니다."
+        "overseasProofKo": "lemo-opuscar은 GitHub(GitHub 21.5k)에서 주목받은 프로젝트입니다. 무거운 공식 앱을 대체해 초대형 음악 라이브러리를 지연 없이 탐색·재생하는 GitHub 10.7k 초경량 Rust 플레이어입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -706,17 +706,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "ARTEX",
-          "builderId": "builder-gh-dc3ddfe730",
-          "builderName": "ARTEX"
+          "title": "lemo-opuscar",
+          "builderId": "builder-gh-c8a902128b",
+          "builderName": "lemo-opuscar"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "2,000개 라이브 부틀렉 녹음처럼 흩어진 아티스트의 희귀 공연 아카이브를 시대·도시·셋리스트별로 1초 탐색하는 플레이어를 만든다면?",
-          "treatmentId": "tr-cul-artex-tgn8sx",
-          "builderId": "builder-gh-dc3ddfe730",
-          "builderName": "ARTEX"
+          "treatmentId": "tr-cul-lemo-opuscar-1gmfnp",
+          "builderId": "builder-gh-c8a902128b",
+          "builderName": "lemo-opuscar"
         }
       ],
       "synthesisMode": "curated",
@@ -727,8 +727,8 @@
       "id": "tr-tec-magpie-1nx889",
       "slug": "tr-tec-magpie-1nx889",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -754,13 +754,13 @@
         "url": "https://github.com/yetone/magpie",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★41.6k",
-        "shortMetricLabel": "GitHub ★41.6k",
+        "tractionLabel": "GitHub ★42.0k",
+        "shortMetricLabel": "GitHub ★42.0k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "DeepSeek, Kimi, Codex, Claude Code 등 여러 AI 모델과 에이전트를 메뉴 표시줄 한곳에서 통합 실행하는 오픈소스 도구입니다.",
-        "overseasProofKo": "magpie은 GitHub(GitHub 41.6k)에서 주목받은 프로젝트입니다. DeepSeek, Kimi, Codex, Claude Code 등 여러 AI 모델과 에이전트를 메뉴 표시줄 한곳에서 통합 실행하는 오픈소스 도구입니다."
+        "overseasProofKo": "magpie은 GitHub(GitHub 42.0k)에서 주목받은 프로젝트입니다. DeepSeek, Kimi, Codex, Claude Code 등 여러 AI 모델과 에이전트를 메뉴 표시줄 한곳에서 통합 실행하는 오픈소스 도구입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -813,11 +813,11 @@
       "variantIndex": 8
     },
     {
-      "id": "tr-cul-simple-algorit-1cxoqa",
-      "slug": "tr-cul-simple-algorit-1cxoqa",
+      "id": "tr-cul-simple-algorit-18iyto",
+      "slug": "tr-cul-simple-algorit-18iyto",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -856,9 +856,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-petapixel-7cfb79ed58",
-        "titleKo": "지금 이용 가능한 최고의 블랙 프라이데이 초기 사진 및 카메라 할인",
-        "canonicalUrl": "https://petapixel.com/2026/11/25/the-best-early-black-friday-photo-and-camera-deals-available-now/",
+        "radarId": "culture-petapixel-ee19618080",
+        "titleKo": "라이카, Billingham이 제작한 두 가지 새로운 카메라 가방 출시",
+        "canonicalUrl": "https://petapixel.com/2026/11/26/leica-introduces-two-new-camera-bags-made-by-billingham/",
         "platformId": "PetaPixel",
         "sourceType": "culture",
         "cultureVerticalLabel": "사진 · 카메라",
@@ -866,7 +866,7 @@
         "productDomain": "photo-visual",
         "summaryKo": "Adobe 구독 피로감 속에서 과거 Apple Aperture와 Lightroom Classic의 쾌적한 감성을 계승한 무료 오픈소스 사진 앱 PixelLoupe가 화제입니다.",
         "benchmarkPoint": "사진 · 카메라",
-        "bottleneckSolvedKo": "PetaPixel에서 포착된 '지금 이용 가능한 최고의 블랙 프라이데이 초기 사진 및 카메라 할인' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. Adobe 구독 피로감 속에서 과거 Apple Aperture와 Lightroom Classic의 쾌적한 감성을 계승한 무료 오픈소스 사진 앱 PixelLoupe가 화제입니다."
+        "bottleneckSolvedKo": "PetaPixel에서 포착된 '라이카, Billingham이 제작한 두 가지 새로운 카메라 가방 출시' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. Adobe 구독 피로감 속에서 과거 Apple Aperture와 Lightroom Classic의 쾌적한 감성을 계승한 무료 오픈소스 사진 앱 PixelLoupe가 화제입니다."
       },
       "twistSummaryKo": "구독형 무거운 보정 툴 대신 사진 10장을 브라우저에 던져 피부톤 보호 색보정과 베스트 컷 별점 셀렉트를 오프라인으로 끝냅니다.",
       "mvpFeatures": [
@@ -894,7 +894,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "월 구독료에 지친 사진가들이 애퍼처(Aperture) 감성으로 브라우저에서 가볍게 필름 색보정과 셀렉트를 끝내는 웹 암실을 만든다면?",
-          "treatmentId": "tr-cul-simple-algorit-1cxoqa",
+          "treatmentId": "tr-cul-simple-algorit-18iyto",
           "builderId": "builder-hn-49170165",
           "builderName": "Simple algorithm and color"
         }
@@ -904,11 +904,11 @@
       "variantIndex": 9
     },
     {
-      "id": "tr-tec-filee-msj1g6",
-      "slug": "tr-tec-filee-msj1g6",
+      "id": "tr-tec-filee-1pn4bk",
+      "slug": "tr-tec-filee-1pn4bk",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -934,28 +934,28 @@
         "url": "https://github.com/KnifeLemon/Filee",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★31.3k",
-        "shortMetricLabel": "GitHub ★31.3k",
+        "tractionLabel": "GitHub ★31.5k",
+        "shortMetricLabel": "GitHub ★31.5k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "이미지, PDF, 오피스 문서, HWP/HWPX, 오디오·비디오, 전자책까지 폭넓게 지원하는 무료 오픈소스 통합 파일 변환기입니다.",
-        "overseasProofKo": "Filee은 GitHub(GitHub 31.3k)에서 주목받은 프로젝트입니다. 이미지, PDF, 오피스 문서, HWP/HWPX, 오디오·비디오, 전자책까지 폭넓게 지원하는 무료 오픈소스 통합 파일 변환기입니다."
+        "overseasProofKo": "Filee은 GitHub(GitHub 31.5k)에서 주목받은 프로젝트입니다. 이미지, PDF, 오피스 문서, HWP/HWPX, 오디오·비디오, 전자책까지 폭넓게 지원하는 무료 오픈소스 통합 파일 변환기입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-98cabbebf9bd",
-        "titleKo": "AI 에이전트는 왜 싸울 때 규칙을 알려주지 않습니까?",
-        "canonicalUrl": "https://juejin.cn/post/7712014425431293979",
-        "platformId": "juejin",
-        "platformLabel": "Juejin · 굴진",
+        "radarId": "live-87a7119d5738",
+        "titleKo": "AI는 이론 물리학의 속도를 극적으로 향상시킬 수 있습니다",
+        "canonicalUrl": "https://bsky.app/profile/timkellogg.me/post/3n37ouhsiys2k",
+        "platformId": "bluesky",
+        "platformLabel": "Bluesky",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
         "summaryKo": "AI 도구로 프로덕션 릴리스를 진행할 때 데이터 유출 없이 안전하게 검증·처리하는 로컬 우선 워크플로가 주목받고 있습니다.",
-        "benchmarkPoint": "Juejin · 굴진 포착 — Juejin · 굴진 중국 AI 생태계 최신 기술·제품 시그널",
-        "bottleneckSolvedKo": "AI 에이전트는 왜 싸울 때 규칙을 알려주지 않습니까? 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 도구로 프로덕션 릴리스를 진행할 때 데이터 유출 없이 안전하게 검증·처리하는 로컬 우선 워크플로가 주목받고 있습니다."
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "AI는 이론 물리학의 속도를 극적으로 향상시킬 수 있습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 도구로 프로덕션 릴리스를 진행할 때 데이터 유출 없이 안전하게 검증·처리하는 로컬 우선 워크플로가 주목받고 있습니다."
       },
       "twistSummaryKo": "민감한 사내 HWP나 PDF 문서를 외부 서버에 보내지 않고 브라우저 안에서 즉시 마크다운·텍스트로 변환하고 핵심만 뽑아줍니다.",
       "mvpFeatures": [
@@ -983,7 +983,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "HWP·PDF·영상 파일을 서버 업로드 없이 내 브라우저 안에서 3초 만에 변환하고 바로 요약해 주는 도구를 만들어본다면?",
-          "treatmentId": "tr-tec-filee-msj1g6",
+          "treatmentId": "tr-tec-filee-1pn4bk",
           "builderId": "builder-gh-48ab9530b4",
           "builderName": "Filee"
         }
@@ -993,11 +993,11 @@
       "variantIndex": 10
     },
     {
-      "id": "tr-cul-m3e-canvas-uhyvhm",
-      "slug": "tr-cul-m3e-canvas-uhyvhm",
+      "id": "tr-cul-m3e-canvas-1rrwru",
+      "slug": "tr-cul-m3e-canvas-1rrwru",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -1036,9 +1036,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-dezeen-20c64b1e0f",
-        "titleKo": "Adobe의 Creative Agent는 Creative Cloud 도구와 Firefly 워크플로우를 혁신합니다.",
-        "canonicalUrl": "https://www.dezeen.com/2026/11/25/adobes-creative-agent-now-in-creative-cloud-tools-and-firefly/",
+        "radarId": "culture-dezeen-9aa698daef",
+        "titleKo": "\"유럽 최대 규모의 박물관 개발\"이 1930년대 브뤼셀 시트로엥 차고에 개장했습니다.",
+        "canonicalUrl": "https://www.dezeen.com/2026/11/26/kanal-museum-brussels-renovation-atelier-kanal/",
         "platformId": "Dezeen",
         "sourceType": "culture",
         "cultureVerticalLabel": "건축 · 공간",
@@ -1046,7 +1046,7 @@
         "productDomain": "local-archive",
         "summaryKo": "스튜디오 Estudio A-G가 멕시코시티의 1960년대 서재 주택에 조각적 목재 구조와 과감한 색채를 더해 공간의 표정을 바꾼 작업이 Dezeen에서 주목받았습니다.",
         "benchmarkPoint": "건축 · 공간",
-        "bottleneckSolvedKo": "Dezeen에서 포착된 'Adobe의 Creative Agent는 Creative Cloud 도구와 Firefly 워크플로우를 혁신합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 스튜디오 Estudio A-G가 멕시코시티의 1960년대 서재 주택에 조각적 목재 구조와 과감한 색채를 더해 공간의 표정을 바꾼 작업이 Dezeen에서 주목받았습니다."
+        "bottleneckSolvedKo": "Dezeen에서 포착된 '\"유럽 최대 규모의 박물관 개발\"이 1930년대 브뤼셀 시트로엥 차고에 개장했습니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 스튜디오 Estudio A-G가 멕시코시티의 1960년대 서재 주택에 조각적 목재 구조와 과감한 색채를 더해 공간의 표정을 바꾼 작업이 Dezeen에서 주목받았습니다."
       },
       "twistSummaryKo": "내 방 벽면 사진 위에 건축 매거진 스타일의 목재 선반·포인트 컬러·조명 블록을 직접 얹어보고 시공·쇼핑용 무드보드를 뽑아줍니다.",
       "mvpFeatures": [
@@ -1074,7 +1074,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "1960년대 멕시코시티 책장 주택처럼 내 방 사진 한 장에 목재·색채·서재 레이아웃 무드보드를 배치해 보는 인테리어 스케치 웹을 만든다면?",
-          "treatmentId": "tr-cul-m3e-canvas-uhyvhm",
+          "treatmentId": "tr-cul-m3e-canvas-1rrwru",
           "builderId": "builder-gh-6b247360c3",
           "builderName": "m3e-canvas"
         }
@@ -1084,11 +1084,11 @@
       "variantIndex": 11
     },
     {
-      "id": "tr-tec-anatomy-42wf23",
-      "slug": "tr-tec-anatomy-42wf23",
+      "id": "tr-tec-anatomy-sdph4v",
+      "slug": "tr-tec-anatomy-sdph4v",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -1114,28 +1114,28 @@
         "url": "https://github.com/wheresryan22/anatomy",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★29.2k",
-        "shortMetricLabel": "GitHub ★29.2k",
+        "tractionLabel": "GitHub ★29.3k",
+        "shortMetricLabel": "GitHub ★29.3k",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "실제 기계와 복잡한 시스템의 내부 구조를 대화형 등각 투영 일러스트와 WebGL 셰이더로 자동 생성하는 에이전트 기술입니다.",
-        "overseasProofKo": "anatomy은 GitHub(GitHub 29.2k)에서 주목받은 프로젝트입니다. 실제 기계와 복잡한 시스템의 내부 구조를 대화형 등각 투영 일러스트와 WebGL 셰이더로 자동 생성하는 에이전트 기술입니다."
+        "overseasProofKo": "anatomy은 GitHub(GitHub 29.3k)에서 주목받은 프로젝트입니다. 실제 기계와 복잡한 시스템의 내부 구조를 대화형 등각 투영 일러스트와 WebGL 셰이더로 자동 생성하는 에이전트 기술입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-55349f742953",
-        "titleKo": "Jensen Huang은 Nvidia의 행동 강령을 어겼고 그의 직원들은 이를 잊지 않을 것입니다",
-        "canonicalUrl": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it",
-        "platformId": "techcrunch-ai",
-        "platformLabel": "TechCrunch AI",
+        "radarId": "live-f952b29fe400",
+        "titleKo": "작은 도구 작성: 세션을 도구로 변경할 때 처음부터 다시 시작할 필요가 없으며 하나의 코딩 보조 세션을 다른 세션으로 이동하고 계속할…",
+        "canonicalUrl": "https://v2ex.com/t/1260113",
+        "platformId": "v2ex",
+        "platformLabel": "V2EX · 인디빌더",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
+        "signalType": "new_product",
+        "productDomain": "coding-agent-devtool",
         "summaryKo": "Gemini 4 Neon이 앨런 튜링의 1936년 논문을 대화형 3D 시각화로 재현하며 인터랙티브 교육 콘텐츠 가능성이 입증됐습니다.",
-        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
-        "bottleneckSolvedKo": "Jensen Huang은 Nvidia의 행동 강령을 어겼고 그의 직원들은 이를 잊지 않을 것입니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Gemini 4 Neon이 앨런 튜링의 1936년 논문을 대화형 3D 시각화로 재현하며 인터랙티브 교육 콘텐츠 가능성이 입증됐습니다."
+        "benchmarkPoint": "중국 인디빌더 신규 AI 웹/앱·툴 런칭 (댓글 1개 반응)",
+        "bottleneckSolvedKo": "작은 도구 작성: 세션을 도구로 변경할 때 처음부터 다시 시작할 필요가 없으며 하나의 코딩 보조 세션을 다른 세션으로 이동하고 계속할… 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Gemini 4 Neon이 앨런 튜링의 1936년 논문을 대화형 3D 시각화로 재현하며 인터랙티브 교육 콘텐츠 가능성이 입증됐습니다."
       },
       "twistSummaryKo": "'에스프레소 머신 내부 원리'처럼 주제를 입력하면 부품별 라벨을 클릭해 뜯어볼 수 있는 인터랙티브 일러스트를 생성합니다.",
       "mvpFeatures": [
@@ -1163,7 +1163,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "복잡한 기계나 서비스 구조를 한 줄만 적으면 돌려볼 수 있는 3D 등각 단면도로 그려주는 웹을 만들어본다면?",
-          "treatmentId": "tr-tec-anatomy-42wf23",
+          "treatmentId": "tr-tec-anatomy-sdph4v",
           "builderId": "builder-gh-0909693c33",
           "builderName": "anatomy"
         }
@@ -1176,8 +1176,8 @@
       "id": "tr-cul-an-e-ink-frame-1xmk5r",
       "slug": "tr-cul-an-e-ink-frame-1xmk5r",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -1264,11 +1264,11 @@
       "variantIndex": 13
     },
     {
-      "id": "tr-tec-jev-ultrafast-1cgdi1",
-      "slug": "tr-tec-jev-ultrafast-1cgdi1",
+      "id": "tr-tec-jev-ultrafast-c77l00",
+      "slug": "tr-tec-jev-ultrafast-c77l00",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -1304,18 +1304,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-3c0f07a92497",
-        "titleKo": "과학자들이 AI 에이전트에 선을 긋는 곳",
-        "canonicalUrl": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+        "radarId": "live-7a18f58b54b8",
+        "titleKo": "AMD Ryzen 및 Radeon용 llama.cpp 벤치마크 대시보드 소개",
+        "canonicalUrl": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
         "platformId": "huggingface",
         "platformLabel": "Hugging Face",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "research_breakthrough",
+        "signalType": "model_release",
         "productDomain": "ai-research-model",
         "summaryKo": "월마트 등 글로벌 유통 공룡들이 에이전틱 커머스 대응에 나서면서 AI 기반 자동 상품 탐색과 구매 비교 흐름이 가속화되고 있습니다.",
         "benchmarkPoint": "모델 효율·추론 성능·오픈 벤치마크 진전",
-        "bottleneckSolvedKo": "과학자들이 AI 에이전트에 선을 긋는 곳 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 월마트 등 글로벌 유통 공룡들이 에이전틱 커머스 대응에 나서면서 AI 기반 자동 상품 탐색과 구매 비교 흐름이 가속화되고 있습니다."
+        "bottleneckSolvedKo": "AMD Ryzen 및 Radeon용 llama.cpp 벤치마크 대시보드 소개 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 월마트 등 글로벌 유통 공룡들이 에이전틱 커머스 대응에 나서면서 AI 기반 자동 상품 탐색과 구매 비교 흐름이 가속화되고 있습니다."
       },
       "twistSummaryKo": "상품 URL을 붙여 넣으면 경량 웹 에이전트가 쿠폰·배송비·품절 여부까지 실시간 확인해 가장 싼 구매처를 10초 만에 찾아줍니다.",
       "mvpFeatures": [
@@ -1343,7 +1343,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "사고 싶은 제품 링크 하나만 넣으면 초고속 웹 에이전트가 5개 쇼핑몰 실구매가와 배송비까지 비교해 준다면?",
-          "treatmentId": "tr-tec-jev-ultrafast-1cgdi1",
+          "treatmentId": "tr-tec-jev-ultrafast-c77l00",
           "builderId": "builder-gh-c8a932cf77",
           "builderName": "jev-ultrafast"
         }
@@ -1356,8 +1356,8 @@
       "id": "tr-cul-my-300-embroid-h6poi",
       "slug": "tr-cul-my-300-embroid-h6poi",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -1444,11 +1444,11 @@
       "variantIndex": 15
     },
     {
-      "id": "tr-tec-lemo-opuscar-1r7yml",
-      "slug": "tr-tec-lemo-opuscar-1r7yml",
+      "id": "tr-tec-lemo-opuscar-1kpael",
+      "slug": "tr-tec-lemo-opuscar-1kpael",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -1474,28 +1474,28 @@
         "url": "https://github.com/lemomo-ai/lemo-opuscar",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★21.2k",
-        "shortMetricLabel": "GitHub ★21.2k",
+        "tractionLabel": "GitHub ★21.5k",
+        "shortMetricLabel": "GitHub ★21.5k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "생성형 비디오 모델 없이 순수 코드와 스타일 프리셋만으로 영화 같은 모션 그래픽과 타이틀 시퀀스를 만드는 오픈소스 툴킷입니다.",
-        "overseasProofKo": "lemo-opuscar은 GitHub(GitHub 21.2k)에서 주목받은 프로젝트입니다. 생성형 비디오 모델 없이 순수 코드와 스타일 프리셋만으로 영화 같은 모션 그래픽과 타이틀 시퀀스를 만드는 오픈소스 툴킷입니다."
+        "overseasProofKo": "lemo-opuscar은 GitHub(GitHub 21.5k)에서 주목받은 프로젝트입니다. 생성형 비디오 모델 없이 순수 코드와 스타일 프리셋만으로 영화 같은 모션 그래픽과 타이틀 시퀀스를 만드는 오픈소스 툴킷입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-67da052d3278",
-        "titleKo": "이번 크리스마스에 아이에게 AI 장난감을 사주고 싶으신가요? 뉴욕에는 없어요",
-        "canonicalUrl": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york",
-        "platformId": "techcrunch-ai",
-        "platformLabel": "TechCrunch AI",
+        "radarId": "live-38acea3a1125",
+        "titleKo": "[공유생성] 한문글쓰기 검사기를 작성하고, 어휘목록이 어떻게 정리되는지 이야기를 나눴습니다",
+        "canonicalUrl": "https://v2ex.com/t/1260105",
+        "platformId": "v2ex",
+        "platformLabel": "V2EX · 인디빌더",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
+        "signalType": "new_product",
+        "productDomain": "coding-agent-devtool",
         "summaryKo": "LongCat-Video-Avatar 등 AI 영상 생성 모델이 빠르게 늘어나면서, 글자 깨짐 없는 선명한 인트로·자막 보완 도구의 가치도 함께 커지고 있습니다.",
-        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
-        "bottleneckSolvedKo": "이번 크리스마스에 아이에게 AI 장난감을 사주고 싶으신가요? 뉴욕에는 없어요 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. LongCat-Video-Avatar 등 AI 영상 생성 모델이 빠르게 늘어나면서, 글자 깨짐 없는 선명한 인트로·자막 보완 도구의 가치도 함께 커지고 있습니다."
+        "benchmarkPoint": "중국 인디빌더 오픈소스·GitHub 공개",
+        "bottleneckSolvedKo": "[공유생성] 한문글쓰기 검사기를 작성하고, 어휘목록이 어떻게 정리되는지 이야기를 나눴습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. LongCat-Video-Avatar 등 AI 영상 생성 모델이 빠르게 늘어나면서, 글자 깨짐 없는 선명한 인트로·자막 보완 도구의 가치도 함께 커지고 있습니다."
       },
       "twistSummaryKo": "문구와 분위기 프리셋만 고르면 생성형 영상 모델 대기 시간 없이 브라우저 코드로 선명한 시네마틱 타이틀 영상을 렌더링합니다.",
       "mvpFeatures": [
@@ -1523,7 +1523,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "비싼 AI 영상 크레딧 없이 코드 기반으로 영화 오프닝 타이틀과 모션 자막을 1분 만에 뽑아주는 웹을 만들어본다면?",
-          "treatmentId": "tr-tec-lemo-opuscar-1r7yml",
+          "treatmentId": "tr-tec-lemo-opuscar-1kpael",
           "builderId": "builder-gh-c8a902128b",
           "builderName": "lemo-opuscar"
         }
@@ -1536,8 +1536,8 @@
       "id": "tr-cul-lemo-opuscar-1n5fnq",
       "slug": "tr-cul-lemo-opuscar-1n5fnq",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -1566,13 +1566,13 @@
         "url": "https://github.com/lemomo-ai/lemo-opuscar",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★21.2k",
-        "shortMetricLabel": "GitHub ★21.2k",
+        "tractionLabel": "GitHub ★21.5k",
+        "shortMetricLabel": "GitHub ★21.5k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "비디오 생성 모델 없이 순수 코드와 프리셋만으로 영화 스타일 모션과 타이틀을 제작하는 GitHub 20.3k 도구 상자입니다.",
-        "overseasProofKo": "lemo-opuscar은 GitHub(GitHub 21.2k)에서 주목받은 프로젝트입니다. 비디오 생성 모델 없이 순수 코드와 프리셋만으로 영화 스타일 모션과 타이틀을 제작하는 GitHub 20.3k 도구 상자입니다."
+        "overseasProofKo": "lemo-opuscar은 GitHub(GitHub 21.5k)에서 주목받은 프로젝트입니다. 비디오 생성 모델 없이 순수 코드와 프리셋만으로 영화 스타일 모션과 타이틀을 제작하는 GitHub 20.3k 도구 상자입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1624,11 +1624,11 @@
       "variantIndex": 17
     },
     {
-      "id": "tr-tec-filmcraft-uo6omt",
-      "slug": "tr-tec-filmcraft-uo6omt",
+      "id": "tr-tec-filmcraft-y1hjav",
+      "slug": "tr-tec-filmcraft-y1hjav",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -1654,28 +1654,28 @@
         "url": "https://github.com/storytold/filmcraft",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★19.0k",
-        "shortMetricLabel": "GitHub ★19.0k",
+        "tractionLabel": "GitHub ★19.1k",
+        "shortMetricLabel": "GitHub ★19.1k",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
         "summaryKo": "순수 Rust로 처음부터 구축해 가볍고 빠른 타임라인 편집 성능을 보여주는 오픈소스 비선형 비디오 편집기입니다.",
-        "overseasProofKo": "filmcraft은 GitHub(GitHub 19.0k)에서 주목받은 프로젝트입니다. 순수 Rust로 처음부터 구축해 가볍고 빠른 타임라인 편집 성능을 보여주는 오픈소스 비선형 비디오 편집기입니다."
+        "overseasProofKo": "filmcraft은 GitHub(GitHub 19.1k)에서 주목받은 프로젝트입니다. 순수 Rust로 처음부터 구축해 가볍고 빠른 타임라인 편집 성능을 보여주는 오픈소스 비선형 비디오 편집기입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-6023f1418044",
-        "titleKo": "국가 AG가 이의를 제기한 사용자의 비공개 채팅을 경매하려는 Character.AI의 계획",
-        "canonicalUrl": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats",
-        "platformId": "techcrunch-ai",
-        "platformLabel": "TechCrunch AI",
+        "radarId": "live-4dc6219ffe05",
+        "titleKo": "macOS 스크린샷 및 화면 녹화 도구인 OhMyShot을 오픈 소스로 제공합니다. 로컬 OCR, 자동 확대/축소 화면 녹화, 공식…",
+        "canonicalUrl": "https://v2ex.com/t/1260100",
+        "platformId": "v2ex",
+        "platformLabel": "V2EX · 인디빌더",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
         "summaryKo": "Apple이 단일 이미지·프레임에서 정밀한 거리와 깊이 맵을 추정하는 오픈 모델 DepthPro2를 공개해 영상 후반 작업 자동화가 열렸습니다.",
-        "benchmarkPoint": "TechCrunch AI — 210만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "국가 AG가 이의를 제기한 사용자의 비공개 채팅을 경매하려는 Character.AI의 계획 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Apple이 단일 이미지·프레임에서 정밀한 거리와 깊이 맵을 추정하는 오픈 모델 DepthPro2를 공개해 영상 후반 작업 자동화가 열렸습니다."
+        "benchmarkPoint": "중국 인디빌더 오픈소스·GitHub 공개",
+        "bottleneckSolvedKo": "macOS 스크린샷 및 화면 녹화 도구인 OhMyShot을 오픈 소스로 제공합니다. 로컬 OCR, 자동 확대/축소 화면 녹화, 공식… 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Apple이 단일 이미지·프레임에서 정밀한 거리와 깊이 맵을 추정하는 오픈 모델 DepthPro2를 공개해 영상 후반 작업 자동화가 열렸습니다."
       },
       "twistSummaryKo": "짧은 클립을 올리면 피사체와 배경 거리를 자동 분리해 배경 블러·색보정·컷 편집을 브라우저에서 한 번에 끝냅니다.",
       "mvpFeatures": [
@@ -1703,7 +1703,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "스마트폰으로 찍은 영상에 피사체 깊이 정보를 씌워 배경만 영화처럼 흐리게 자르고 편집하는 웹을 만들어본다면?",
-          "treatmentId": "tr-tec-filmcraft-uo6omt",
+          "treatmentId": "tr-tec-filmcraft-y1hjav",
           "builderId": "builder-gh-1f7cf4e8bc",
           "builderName": "filmcraft"
         }
@@ -1716,8 +1716,8 @@
       "id": "tr-cul-i-trained-a-12-ull6c5",
       "slug": "tr-cul-i-trained-a-12-ull6c5",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -1807,8 +1807,8 @@
       "id": "tr-tec-solidcraft-1cno68",
       "slug": "tr-tec-solidcraft-1cno68",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -1834,13 +1834,13 @@
         "url": "https://github.com/tangency-labs/solidcraft",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★18.3k",
-        "shortMetricLabel": "GitHub ★18.3k",
+        "tractionLabel": "GitHub ★18.5k",
+        "shortMetricLabel": "GitHub ★18.5k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "순수 Rust로 제작되어 웹·데스크톱과 MCP 자동화를 모두 지원하는 오픈소스 파라메트릭 3D CAD 애플리케이션입니다.",
-        "overseasProofKo": "solidcraft은 GitHub(GitHub 18.3k)에서 주목받은 프로젝트입니다. 순수 Rust로 제작되어 웹·데스크톱과 MCP 자동화를 모두 지원하는 오픈소스 파라메트릭 3D CAD 애플리케이션입니다."
+        "overseasProofKo": "solidcraft은 GitHub(GitHub 18.5k)에서 주목받은 프로젝트입니다. 순수 Rust로 제작되어 웹·데스크톱과 MCP 자동화를 모두 지원하는 오픈소스 파라메트릭 3D CAD 애플리케이션입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1896,8 +1896,8 @@
       "id": "tr-cul-anatomy-91kn9f",
       "slug": "tr-cul-anatomy-91kn9f",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -1926,13 +1926,13 @@
         "url": "https://github.com/wheresryan22/anatomy",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★29.2k",
-        "shortMetricLabel": "GitHub ★29.2k",
+        "tractionLabel": "GitHub ★29.3k",
+        "shortMetricLabel": "GitHub ★29.3k",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "복잡한 구조물의 세부 요소를 클릭해 뜯어보는 대화형 등각·줌 시각화 에이전트 GitHub 28.9k 오픈소스입니다.",
-        "overseasProofKo": "anatomy은 GitHub(GitHub 29.2k)에서 주목받은 프로젝트입니다. 복잡한 구조물의 세부 요소를 클릭해 뜯어보는 대화형 등각·줌 시각화 에이전트 GitHub 28.9k 오픈소스입니다."
+        "overseasProofKo": "anatomy은 GitHub(GitHub 29.3k)에서 주목받은 프로젝트입니다. 복잡한 구조물의 세부 요소를 클릭해 뜯어보는 대화형 등각·줌 시각화 에이전트 GitHub 28.9k 오픈소스입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -1984,11 +1984,11 @@
       "variantIndex": 21
     },
     {
-      "id": "tr-tec-artex-1u5gul",
-      "slug": "tr-tec-artex-1u5gul",
+      "id": "tr-tec-artex-15508l",
+      "slug": "tr-tec-artex-15508l",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -2014,28 +2014,28 @@
         "url": "https://github.com/BaaRai/ARTEX",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★20.9k",
-        "shortMetricLabel": "GitHub ★20.9k",
+        "tractionLabel": "GitHub ★21.8k",
+        "shortMetricLabel": "GitHub ★21.8k",
         "verifiedRevenue": false,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
         "summaryKo": "AI 에이전트가 시스템의 취약점과 설정 오류를 자율적으로 점검하고 보고서를 작성하는 오픈소스 보안 테스트 시스템입니다.",
-        "overseasProofKo": "ARTEX은 GitHub(GitHub 20.9k)에서 주목받은 프로젝트입니다. AI 에이전트가 시스템의 취약점과 설정 오류를 자율적으로 점검하고 보고서를 작성하는 오픈소스 보안 테스트 시스템입니다."
+        "overseasProofKo": "ARTEX은 GitHub(GitHub 21.8k)에서 주목받은 프로젝트입니다. AI 에이전트가 시스템의 취약점과 설정 오류를 자율적으로 점검하고 보고서를 작성하는 오픈소스 보안 테스트 시스템입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-2b103011d29e",
-        "titleKo": "음악 플랫폼 타이달, AI 생성곡 전면 금지…연말까지 2900만곡 삭제",
-        "canonicalUrl": "https://aitimes.com/news/articleView.html?idxno=217782",
-        "platformId": "aitimes",
-        "platformLabel": "AI타임스",
+        "radarId": "live-ce77f076e6a6",
+        "titleKo": "자동갱신으로 여러번 백스탭을 당해서 Node+GitHub Actions를 이용해 데이터베이스 제로 회원가 비교 사이트를 구축했습니다.…",
+        "canonicalUrl": "https://v2ex.com/t/1260099",
+        "platformId": "v2ex",
+        "platformLabel": "V2EX · 인디빌더",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
+        "signalType": "new_product",
+        "productDomain": "builder-community-signal",
         "summaryKo": "AI 코딩으로 만든 소규모 프로젝트를 매일 자동으로 보안 점검해 주는 무료 에이전트 도구 OccupAI가 메이커들 사이에서 화제입니다.",
-        "benchmarkPoint": "AI타임스 — 2900만 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "음악 플랫폼 타이달, AI 생성곡 전면 금지…연말까지 2900만곡 삭제 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 코딩으로 만든 소규모 프로젝트를 매일 자동으로 보안 점검해 주는 무료 에이전트 도구 OccupAI가 메이커들 사이에서 화제입니다."
+        "benchmarkPoint": "중국 인디빌더 신규 AI 웹/앱·툴 런칭",
+        "bottleneckSolvedKo": "자동갱신으로 여러번 백스탭을 당해서 Node+GitHub Actions를 이용해 데이터베이스 제로 회원가 비교 사이트를 구축했습니다.… 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 코딩으로 만든 소규모 프로젝트를 매일 자동으로 보안 점검해 주는 무료 에이전트 도구 OccupAI가 메이커들 사이에서 화제입니다."
       },
       "twistSummaryKo": "배포한 사이드 프로젝트 주소를 넣으면 노출된 API 키, CORS 구멍, 인증 누락을 1분 안에 진단해 쉬운 한국어 체크리스트로 알려줍니다.",
       "mvpFeatures": [
@@ -2063,7 +2063,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "바이브 코딩으로 급하게 만든 내 웹 서비스 URL을 넣으면 해킹 취약점 5가지만 먼저 점검해 주는 방패 웹을 만들어본다면?",
-          "treatmentId": "tr-tec-artex-1u5gul",
+          "treatmentId": "tr-tec-artex-15508l",
           "builderId": "builder-gh-dc3ddfe730",
           "builderName": "ARTEX"
         }
@@ -2073,11 +2073,11 @@
       "variantIndex": 22
     },
     {
-      "id": "tr-cul-solidcraft-124t4t",
-      "slug": "tr-cul-solidcraft-124t4t",
+      "id": "tr-cul-solidcraft-p3rn2o",
+      "slug": "tr-cul-solidcraft-p3rn2o",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -2106,19 +2106,19 @@
         "url": "https://github.com/tangency-labs/solidcraft",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★18.3k",
-        "shortMetricLabel": "GitHub ★18.3k",
+        "tractionLabel": "GitHub ★18.5k",
+        "shortMetricLabel": "GitHub ★18.5k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "순수 Rust로 구축되어 웹·MCP 자동화로 정밀한 파라메트릭 3D 도면을 생성하는 GitHub 17.9k 오픈소스 CAD입니다.",
-        "overseasProofKo": "solidcraft은 GitHub(GitHub 18.3k)에서 주목받은 프로젝트입니다. 순수 Rust로 구축되어 웹·MCP 자동화로 정밀한 파라메트릭 3D 도면을 생성하는 GitHub 17.9k 오픈소스 CAD입니다."
+        "overseasProofKo": "solidcraft은 GitHub(GitHub 18.5k)에서 주목받은 프로젝트입니다. 순수 Rust로 구축되어 웹·MCP 자동화로 정밀한 파라메트릭 3D 도면을 생성하는 GitHub 17.9k 오픈소스 CAD입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-petapixel-7cfb79ed58",
-        "titleKo": "지금 이용 가능한 최고의 블랙 프라이데이 초기 사진 및 카메라 할인",
-        "canonicalUrl": "https://petapixel.com/2026/11/25/the-best-early-black-friday-photo-and-camera-deals-available-now/",
+        "radarId": "culture-petapixel-ee19618080",
+        "titleKo": "라이카, Billingham이 제작한 두 가지 새로운 카메라 가방 출시",
+        "canonicalUrl": "https://petapixel.com/2026/11/26/leica-introduces-two-new-camera-bags-made-by-billingham/",
         "platformId": "PetaPixel",
         "sourceType": "culture",
         "cultureVerticalLabel": "사진 · 카메라",
@@ -2126,7 +2126,7 @@
         "productDomain": "photo-visual",
         "summaryKo": "휴대성과 원클릭 편의성을 극대화한 Coman T1 Mini 탄소섬유 삼각대가 킥스타터에서 37만 5천 달러 이상을 모으며 경량 촬영 장비 수요를 입증했습니다.",
         "benchmarkPoint": "사진 · 카메라",
-        "bottleneckSolvedKo": "PetaPixel에서 포착된 '지금 이용 가능한 최고의 블랙 프라이데이 초기 사진 및 카메라 할인' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 휴대성과 원클릭 편의성을 극대화한 Coman T1 Mini 탄소섬유 삼각대가 킥스타터에서 37만 5천 달러 이상을 모으며 경량 촬영 장비 수요를 입증했습니다."
+        "bottleneckSolvedKo": "PetaPixel에서 포착된 '라이카, Billingham이 제작한 두 가지 새로운 카메라 가방 출시' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 휴대성과 원클릭 편의성을 극대화한 Coman T1 Mini 탄소섬유 삼각대가 킥스타터에서 37만 5천 달러 이상을 모으며 경량 촬영 장비 수요를 입증했습니다."
       },
       "twistSummaryKo": "내 카메라 바디·액션캠·조명 모델과 마운트 나사 규격만 고르면 흔들림 없는 맞춤형 3D 프린팅 액세서리 STL 도면을 즉시 생성합니다.",
       "mvpFeatures": [
@@ -2154,7 +2154,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "킥스타터 37만 달러 탄소섬유 미니 삼각대처럼 내 카메라·렌즈 무게에 딱 맞는 3D 프린팅 커스텀 마운트·리그 도면을 뽑아준다면?",
-          "treatmentId": "tr-cul-solidcraft-124t4t",
+          "treatmentId": "tr-cul-solidcraft-p3rn2o",
           "builderId": "builder-gh-14b42e6496",
           "builderName": "solidcraft"
         }
@@ -2164,11 +2164,11 @@
       "variantIndex": 23
     },
     {
-      "id": "tr-tec-rea-video-sjkg16",
-      "slug": "tr-tec-rea-video-sjkg16",
+      "id": "tr-tec-rea-video-1x9jub",
+      "slug": "tr-tec-rea-video-1x9jub",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -2194,28 +2194,28 @@
         "url": "https://github.com/JuneYaooo/rea-video",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★13.4k",
-        "shortMetricLabel": "GitHub ★13.4k",
+        "tractionLabel": "GitHub ★13.6k",
+        "shortMetricLabel": "GitHub ★13.6k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "실사·AI·코드 기반 모든 영상을 장면별로 역설계해 표준 VIDEO.md 문서로 정리하고 리메이크하는 오픈소스 도구입니다.",
-        "overseasProofKo": "rea-video은 GitHub(GitHub 13.4k)에서 주목받은 프로젝트입니다. 실사·AI·코드 기반 모든 영상을 장면별로 역설계해 표준 VIDEO.md 문서로 정리하고 리메이크하는 오픈소스 도구입니다."
+        "overseasProofKo": "rea-video은 GitHub(GitHub 13.6k)에서 주목받은 프로젝트입니다. 실사·AI·코드 기반 모든 영상을 장면별로 역설계해 표준 VIDEO.md 문서로 정리하고 리메이크하는 오픈소스 도구입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-e88838f6f7d9",
-        "titleKo": "코딩 에이전트의 키 유출은 금지 규칙으로 막을 수 없습니다. 지능과 권한을 분리하는 3 원칙",
-        "canonicalUrl": "https://zenn.dev/nalt/articles/agentic-harness-security-architecture",
+        "radarId": "live-2b28c9793bff",
+        "titleKo": "AI의 방들의 질문을 1권의 대장에 모았는데, 오너에게 같은 것을 다시 들었다",
+        "canonicalUrl": "https://zenn.dev/azarashi_ora/articles/ora-fail-02-daichou",
         "platformId": "zenn",
         "platformLabel": "Zenn",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "model_release",
+        "signalType": "dev_workflow",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "MiniMax H3 Turbo 워크플로 등 차세대 AI 영상 제작 도구가 고도화되며 정밀한 장면별 프롬프트 설계가 핵심 경쟁력이 됐습니다.",
-        "benchmarkPoint": "Claude Code — 3 원 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "코딩 에이전트의 키 유출은 금지 규칙으로 막을 수 없습니다. 지능과 권한을 분리하는 3 원칙 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. MiniMax H3 Turbo 워크플로 등 차세대 AI 영상 제작 도구가 고도화되며 정밀한 장면별 프롬프트 설계가 핵심 경쟁력이 됐습니다."
+        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
+        "bottleneckSolvedKo": "AI의 방들의 질문을 1권의 대장에 모았는데, 오너에게 같은 것을 다시 들었다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. MiniMax H3 Turbo 워크플로 등 차세대 AI 영상 제작 도구가 고도화되며 정밀한 장면별 프롬프트 설계가 핵심 경쟁력이 됐습니다."
       },
       "twistSummaryKo": "레퍼런스 영상을 넣으면 초 단위 컷 리스트와 촬영·프롬프트 설계서(VIDEO.md)를 뽑아 내 제품 촬영 콘티로 바로 리메이크합니다.",
       "mvpFeatures": [
@@ -2243,7 +2243,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "마음에 드는 광고나 릴스 영상을 올리면 컷별 카메라 구도와 조명 공식을 분해해 내 브랜드 콘티로 바꿔준다면?",
-          "treatmentId": "tr-tec-rea-video-sjkg16",
+          "treatmentId": "tr-tec-rea-video-1x9jub",
           "builderId": "builder-gh-450f908fd9",
           "builderName": "rea-video"
         }
@@ -2253,11 +2253,11 @@
       "variantIndex": 24
     },
     {
-      "id": "tr-cul-huashu-art-mot-hzkiku",
-      "slug": "tr-cul-huashu-art-mot-hzkiku",
+      "id": "tr-cul-reef-3q7ns0",
+      "slug": "tr-cul-reef-3q7ns0",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -2272,8 +2272,8 @@
       ],
       "buildCadence": "5~7일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://raw.githubusercontent.com/alchaincyf/huashu-art-motion/main/assets/showcase/mario-claude.gif",
-      "mediaSourceLabel": "원본 기술 시연 GIF",
+      "previewImageUrl": "https://www.thisiscolossal.com/wp-content/uploads/2026/11/blackwell-10.jpg",
+      "mediaSourceLabel": "컬처 이슈 이미지 · Colossal",
       "techDigestKo": {
         "inputKo": "기억에 남는 책 제목, 저자, 인상 깊은 인용 문장 1~2줄 및 종이 톤 선택",
         "coreEngineKo": "심상 추출기가 문장의 핵심 상징(숲·등대·고래·창문 등)을 페이퍼 컷 3D 레이어 씬으로 배치하고 따뜻한 스튜디오 조명을 렌더링",
@@ -2281,18 +2281,18 @@
         "summaryKo": "좋아하는 책 한 구절을 펼친 고서적 위의 입체 페이퍼 컷 3D 오브제 카드로 빚어주는 독서 아트 웹"
       },
       "sampleA": {
-        "builderId": "builder-gh-65426dbbb6",
-        "name": "huashu-art-motion",
-        "url": "https://github.com/alchaincyf/huashu-art-motion",
+        "builderId": "builder-gh-4c04c5f53d",
+        "name": "reef",
+        "url": "https://github.com/Human-Agent-Society/reef",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★7.7k",
-        "shortMetricLabel": "GitHub ★7.7k",
+        "tractionLabel": "GitHub ★7.6k",
+        "shortMetricLabel": "GitHub ★7.6k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "AI로 실제 제작에 바로 투입할 수 있는 고품질 3D 에셋을 생성하는 Product Hunt 최신 1위 런칭 도구입니다.",
-        "overseasProofKo": "huashu-art-motion은 GitHub(GitHub 7.7k)에서 주목받은 프로젝트입니다. AI로 실제 제작에 바로 투입할 수 있는 고품질 3D 에셋을 생성하는 Product Hunt 최신 1위 런칭 도구입니다."
+        "overseasProofKo": "reef은 GitHub(GitHub 7.6k)에서 주목받은 프로젝트입니다. AI로 실제 제작에 바로 투입할 수 있는 고품질 3D 에셋을 생성하는 Product Hunt 최신 1위 런칭 도구입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2326,17 +2326,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "huashu-art-motion",
-          "builderId": "builder-gh-65426dbbb6",
-          "builderName": "huashu-art-motion"
+          "title": "reef",
+          "builderId": "builder-gh-4c04c5f53d",
+          "builderName": "reef"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "수 블랙웰의 빈티지 책 입체 조각처럼 좋아하는 소설 한 구절을 넣으면 페이퍼 팝업 3D 북 아트 카드로 빚어준다면?",
-          "treatmentId": "tr-cul-huashu-art-mot-hzkiku",
-          "builderId": "builder-gh-65426dbbb6",
-          "builderName": "huashu-art-motion"
+          "treatmentId": "tr-cul-reef-3q7ns0",
+          "builderId": "builder-gh-4c04c5f53d",
+          "builderName": "reef"
         }
       ],
       "synthesisMode": "curated",
@@ -2344,11 +2344,11 @@
       "variantIndex": 25
     },
     {
-      "id": "tr-tec-learnharness-e6fxpm",
-      "slug": "tr-tec-learnharness-e6fxpm",
+      "id": "tr-tec-learnharness-1lpdcz",
+      "slug": "tr-tec-learnharness-1lpdcz",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -2374,28 +2374,28 @@
         "url": "https://github.com/amosblomqvist/learnharness",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★12.5k",
-        "shortMetricLabel": "GitHub ★12.5k",
+        "tractionLabel": "GitHub ★12.6k",
+        "shortMetricLabel": "GitHub ★12.6k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "복잡하고 난이도 높은 기술·학문 주제를 단계별 질문과 실습으로 체화하도록 설계된 오픈소스 학습 에이전트 하네스입니다.",
-        "overseasProofKo": "learnharness은 GitHub(GitHub 12.5k)에서 주목받은 프로젝트입니다. 복잡하고 난이도 높은 기술·학문 주제를 단계별 질문과 실습으로 체화하도록 설계된 오픈소스 학습 에이전트 하네스입니다."
+        "overseasProofKo": "learnharness은 GitHub(GitHub 12.6k)에서 주목받은 프로젝트입니다. 복잡하고 난이도 높은 기술·학문 주제를 단계별 질문과 실습으로 체화하도록 설계된 오픈소스 학습 에이전트 하네스입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-4816824f16a9",
-        "titleKo": "브릴스, 디와이에이에 로봇 솔루션 공급...AI 고속 비전 로봇으로 공정 고도화",
-        "canonicalUrl": "https://aitimes.com/news/articleView.html?idxno=217780",
-        "platformId": "aitimes",
-        "platformLabel": "AI타임스",
+        "radarId": "live-d7b6cb311610",
+        "titleKo": "Show GN: sol-astrizer: 모든 LLM이 GPT 6.2처럼 말하게 된다면",
+        "canonicalUrl": "https://news.hada.io/topic?id=37893",
+        "platformId": "geeknews",
+        "platformLabel": "GeekNews",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "industry_shift",
-        "productDomain": "ai-business-infra",
+        "signalType": "model_release",
+        "productDomain": "builder-community-signal",
         "summaryKo": "초고속 추론 엔진을 결합해 어떤 주제든 실시간으로 가르쳐 주는 AI 튜터 Godwin이 공개되며 능동형 학습 UX가 주목받고 있습니다.",
-        "benchmarkPoint": "AI타임스 — 46억 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "브릴스, 디와이에이에 로봇 솔루션 공급...AI 고속 비전 로봇으로 공정 고도화 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 초고속 추론 엔진을 결합해 어떤 주제든 실시간으로 가르쳐 주는 AI 튜터 Godwin이 공개되며 능동형 학습 UX가 주목받고 있습니다."
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "Show GN: sol-astrizer: 모든 LLM이 GPT 6.2처럼 말하게 된다면 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 초고속 추론 엔진을 결합해 어떤 주제든 실시간으로 가르쳐 주는 AI 튜터 Godwin이 공개되며 능동형 학습 UX가 주목받고 있습니다."
       },
       "twistSummaryKo": "어려운 원문 링크나 PDF를 넣으면 5분 단위 개념 카드와 즉석 확인 퀴즈를 생성해 완전히 이해할 때까지 단계별로 이끌어 줍니다.",
       "mvpFeatures": [
@@ -2423,7 +2423,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "이해 안 되는 논문이나 기술 문서를 넣으면 내 수준에 맞춰 퀴즈와 실습 예제로 쪼개 가르쳐 주는 개인 튜터를 만든다면?",
-          "treatmentId": "tr-tec-learnharness-e6fxpm",
+          "treatmentId": "tr-tec-learnharness-1lpdcz",
           "builderId": "builder-gh-68aabaadec",
           "builderName": "learnharness"
         }
@@ -2433,11 +2433,11 @@
       "variantIndex": 26
     },
     {
-      "id": "tr-cul-physically-acc-13tjvc",
-      "slug": "tr-cul-physically-acc-13tjvc",
+      "id": "tr-cul-physically-acc-1nbzr1",
+      "slug": "tr-cul-physically-acc-1nbzr1",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -2452,7 +2452,7 @@
       ],
       "buildCadence": "1주 프로토타입",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://www.designboom.com/wp-content/uploads/2026/11/lorenzo-rimini-moove-on-rolling-suitcase-mobility-aid-designboom-700-1-500x400-22b08q85r579.jpg",
+      "previewImageUrl": "https://www.designboom.com/wp-content/uploads/2026/11/nendo-river-inspired-design-france-tgv-inoui-motion-interview-designboom-700-500x400-22b08q85r843.jpg",
       "mediaSourceLabel": "컬처 이슈 이미지 · designboom",
       "techDigestKo": {
         "inputKo": "건축·전시 공간 3D 모델(GLB) 또는 내장 곡면 파빌리온 씬과 시간대·조명 색온도 슬라이더",
@@ -2476,9 +2476,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-designboom-b2d81f21a4",
-        "titleKo": "75세 이상의 여행자를 위해 개발된 move on은 눈에 띄지 않는 이동 보조 장치로 수하물을 재해석합니다.",
-        "canonicalUrl": "https://www.designboom.com/design/older-travelers-moove-on-luggage-discreet-mobility-aid-lorenzo-rimini/",
+        "radarId": "culture-designboom-056fb29467",
+        "titleKo": "강에서 영감을 받은 프랑스 TGV INOUI 디자인을 구현한 nendo",
+        "canonicalUrl": "https://www.designboom.com/design/nendo-river-inspired-design-france-tgv-inoui-motion-interview/",
         "platformId": "designboom",
         "sourceType": "culture",
         "cultureVerticalLabel": "공간 · 오브제",
@@ -2486,7 +2486,7 @@
         "productDomain": "photo-visual",
         "summaryKo": "자하 하디드 아키텍츠가 공개한 모로코 라바트 왕립극장의 유려한 백색 곡선과 수정 동굴 같은 내부 공간이 designboom에서 큰 화제를 모았습니다.",
         "benchmarkPoint": "공간 · 오브제",
-        "bottleneckSolvedKo": "designboom에서 포착된 '75세 이상의 여행자를 위해 개발된 move on은 눈에 띄지 않는 이동 보조 장치로 수하물을 재해석합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 자하 하디드 아키텍츠가 공개한 모로코 라바트 왕립극장의 유려한 백색 곡선과 수정 동굴 같은 내부 공간이 designboom에서 큰 화제를 모았습니다."
+        "bottleneckSolvedKo": "designboom에서 포착된 '강에서 영감을 받은 프랑스 TGV INOUI 디자인을 구현한 nendo' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 자하 하디드 아키텍츠가 공개한 모로코 라바트 왕립극장의 유려한 백색 곡선과 수정 동굴 같은 내부 공간이 designboom에서 큰 화제를 모았습니다."
       },
       "twistSummaryKo": "건축 사진 몇 장으로 끝나는 포트폴리오 대신, 태양 각도와 조명 시간대를 움직이며 공간 곡선과 그림자를 직접 느껴보는 웹 쇼케이스입니다.",
       "mvpFeatures": [
@@ -2514,7 +2514,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "자하 하디드 모로코 왕립극장의 하얀 곡선과 수정 동굴처럼 빛의 반사와 공간 곡선을 브라우저에서 체험하는 가상 건축 갤러리를 만든다면?",
-          "treatmentId": "tr-cul-physically-acc-13tjvc",
+          "treatmentId": "tr-cul-physically-acc-1nbzr1",
           "builderId": "builder-hn-49021270",
           "builderName": "Physically accurate black hole"
         }
@@ -2527,8 +2527,8 @@
       "id": "tr-tec-aihot-n9vfw0",
       "slug": "tr-tec-aihot-n9vfw0",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -2554,13 +2554,13 @@
         "url": "https://github.com/KKKKhazix/AIHOT",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★11.4k",
-        "shortMetricLabel": "GitHub ★11.4k",
+        "tractionLabel": "GitHub ★11.5k",
+        "shortMetricLabel": "GitHub ★11.5k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "정보원과 선별 기준만 교체하면 자동으로 트렌드 이슈를 수집하고 일일 브리핑 사이트를 발행해 주는 오픈소스 프레임워크입니다.",
-        "overseasProofKo": "AIHOT은 GitHub(GitHub 11.4k)에서 주목받은 프로젝트입니다. 정보원과 선별 기준만 교체하면 자동으로 트렌드 이슈를 수집하고 일일 브리핑 사이트를 발행해 주는 오픈소스 프레임워크입니다."
+        "overseasProofKo": "AIHOT은 GitHub(GitHub 11.5k)에서 주목받은 프로젝트입니다. 정보원과 선별 기준만 교체하면 자동으로 트렌드 이슈를 수집하고 일일 브리핑 사이트를 발행해 주는 오픈소스 프레임워크입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -2616,8 +2616,8 @@
       "id": "tr-cul-hackertv-q2zxjw",
       "slug": "tr-cul-hackertv-q2zxjw",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -2704,11 +2704,11 @@
       "variantIndex": 29
     },
     {
-      "id": "tr-tec-m3e-canvas-6eicx9",
-      "slug": "tr-tec-m3e-canvas-6eicx9",
+      "id": "tr-tec-m3e-canvas-17dstf",
+      "slug": "tr-tec-m3e-canvas-17dstf",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -2744,18 +2744,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-fb92d70d8bfd",
-        "titleKo": "AI 데이터센터 구축이 점점 더 어려워지고 있으며, 네오클라우드도 이를 느끼고 있습니다",
-        "canonicalUrl": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it",
-        "platformId": "techcrunch-ai",
-        "platformLabel": "TechCrunch AI",
+        "radarId": "live-1f8e8a69368a",
+        "titleKo": "42개 주정부 AG는 Character.AI가 사용자 채팅을 판매하는 것을 막으려고 노력하고 있습니다",
+        "canonicalUrl": "https://theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+        "platformId": "the-verge-ai",
+        "platformLabel": "The Verge AI",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
         "signalType": "industry_shift",
         "productDomain": "ai-business-infra",
         "summaryKo": "비개발 직군도 AI 도구로 직접 프로토타입을 구현하기 시작하면서, 모호한 기획을 명확한 구조 명세로 전달하는 도구가 필요해졌습니다.",
-        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
-        "bottleneckSolvedKo": "AI 데이터센터 구축이 점점 더 어려워지고 있으며, 네오클라우드도 이를 느끼고 있습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 비개발 직군도 AI 도구로 직접 프로토타입을 구현하기 시작하면서, 모호한 기획을 명확한 구조 명세로 전달하는 도구가 필요해졌습니다."
+        "benchmarkPoint": "The Verge AI — 2,100만 기반 성능·효율 지표",
+        "bottleneckSolvedKo": "42개 주정부 AG는 Character.AI가 사용자 채팅을 판매하는 것을 막으려고 노력하고 있습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 비개발 직군도 AI 도구로 직접 프로토타입을 구현하기 시작하면서, 모호한 기획을 명확한 구조 명세로 전달하는 도구가 필요해졌습니다."
       },
       "twistSummaryKo": "캔버스에 버튼·카드·입력창 블록을 대충 배치하면 구조화된 UI 명세서와 바로 붙여 넣어 빌드할 코딩 프롬프트를 뽑아줍니다.",
       "mvpFeatures": [
@@ -2783,7 +2783,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "비개발자 기획자가 손으로 네모만 그려 넣으면 그대로 실행되는 코딩 프롬프트와 화면 초안으로 바꿔준다면?",
-          "treatmentId": "tr-tec-m3e-canvas-6eicx9",
+          "treatmentId": "tr-tec-m3e-canvas-17dstf",
           "builderId": "builder-gh-6b247360c3",
           "builderName": "m3e-canvas"
         }
@@ -2793,11 +2793,11 @@
       "variantIndex": 30
     },
     {
-      "id": "tr-cul-docphoto-passp-1g5axj",
-      "slug": "tr-cul-docphoto-passp-1g5axj",
+      "id": "tr-cul-docphoto-passp-1cngya",
+      "slug": "tr-cul-docphoto-passp-1cngya",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -2836,9 +2836,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-dazed-3bf0a7d7fc",
-        "titleKo": "Esmé Creed-Miles: 오스틴의 여주인공이 뱀파이어 유혹자로 변신했습니다.",
-        "canonicalUrl": "https://www.dazeddigital.com/film-tv/article/71366/1/esme-creed-miles-winter-issue-2026-cover-sense-sensability-flesh-gods?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=esme-creed-miles-the-austen-heroine-turned-vampire-seductress",
+        "radarId": "culture-dazed-a73891f16c",
+        "titleKo": "겨울 우울증을 치료해 줄 Thaiboy Digital과 Eurohead의 믹스를 들어보세요",
+        "canonicalUrl": "https://www.dazeddigital.com/music/article/71419/1/listen-to-thaiboy-digital-and-eurohead-s-mix-to-cure-the-winter-blues?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=listen-to-thaiboy-digital-and-eurohead-s-mix-to-cure-your-winter-blues",
         "platformId": "Dazed Digital",
         "sourceType": "culture",
         "cultureVerticalLabel": "패션 · 유스컬처",
@@ -2846,7 +2846,7 @@
         "productDomain": "brand-commerce",
         "summaryKo": "Dazed Digital이 런던 라이브 공연장 현장의 개성 강한 팬 스트리트 스타일을 집중 조명하며 액세서리·포인트 스타일링 감각이 주목받고 있습니다.",
         "benchmarkPoint": "패션 · 유스컬처",
-        "bottleneckSolvedKo": "Dazed Digital에서 포착된 'Esmé Creed-Miles: 오스틴의 여주인공이 뱀파이어 유혹자로 변신했습니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. Dazed Digital이 런던 라이브 공연장 현장의 개성 강한 팬 스트리트 스타일을 집중 조명하며 액세서리·포인트 스타일링 감각이 주목받고 있습니다."
+        "bottleneckSolvedKo": "Dazed Digital에서 포착된 '겨울 우울증을 치료해 줄 Thaiboy Digital과 Eurohead의 믹스를 들어보세요' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. Dazed Digital이 런던 라이브 공연장 현장의 개성 강한 팬 스트리트 스타일을 집중 조명하며 액세서리·포인트 스타일링 감각이 주목받고 있습니다."
       },
       "twistSummaryKo": "전신 착장 사진 1장에서 신발이나 가방 영역만 브러시로 쓱 칠해 다른 컬러·실루엣으로 바꿔보고 전후 밸런스를 5초 만에 대조합니다.",
       "mvpFeatures": [
@@ -2874,7 +2874,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "런던 공연장 스트리트 스타일 스냅처럼 내 데일리 착장 사진에서 모자·신발·가방 포인트만 바꿔 시뮬레이션해 보는 룩북 캔버스를 만든다면?",
-          "treatmentId": "tr-cul-docphoto-passp-1g5axj",
+          "treatmentId": "tr-cul-docphoto-passp-1cngya",
           "builderId": "builder-tmrr-3918c2422e",
           "builderName": "DocPhoto: passport photo maker"
         }
@@ -2884,11 +2884,11 @@
       "variantIndex": 31
     },
     {
-      "id": "tr-tec-ffmpeg-skill-xi465r",
-      "slug": "tr-tec-ffmpeg-skill-xi465r",
+      "id": "tr-tec-ffmpeg-skill-p8wq4l",
+      "slug": "tr-tec-ffmpeg-skill-p8wq4l",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -2914,28 +2914,28 @@
         "url": "https://github.com/kajisho5/ffmpeg-skill",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★11.2k",
-        "shortMetricLabel": "GitHub ★11.2k",
+        "tractionLabel": "GitHub ★11.4k",
+        "shortMetricLabel": "GitHub ★11.4k",
         "verifiedRevenue": false,
         "mechanism": "timestamp-archive",
         "mechanismLabel": "구간 채집 · 아카이빙",
         "summaryKo": "코딩 에이전트가 로컬 영상을 안전하고 정확하게 편집할 수 있도록 기계 판독 가능 규격과 MCP를 제공하는 FFmpeg 도구입니다.",
-        "overseasProofKo": "ffmpeg-skill은 GitHub(GitHub 11.2k)에서 주목받은 프로젝트입니다. 코딩 에이전트가 로컬 영상을 안전하고 정확하게 편집할 수 있도록 기계 판독 가능 규격과 MCP를 제공하는 FFmpeg 도구입니다."
+        "overseasProofKo": "ffmpeg-skill은 GitHub(GitHub 11.4k)에서 주목받은 프로젝트입니다. 코딩 에이전트가 로컬 영상을 안전하고 정확하게 편집할 수 있도록 기계 판독 가능 규격과 MCP를 제공하는 FFmpeg 도구입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-464558e980ab",
-        "titleKo": "저는 일하는 동안 전화를 걸고 채팅할 수 있는 개인 에이전트를 오픈소스로 공개했습니다. 휴대폰에서 독립적으로 실행할 수 있습니다.…",
-        "canonicalUrl": "https://v2ex.com/t/1259844",
-        "platformId": "v2ex",
-        "platformLabel": "V2EX · 인디빌더",
+        "radarId": "live-637f4a523019",
+        "titleKo": "X-Lab 연례 컨퍼런스 온라인 동기 이벤트 | AI 작품을 가져와 X-Lab 연례 컨퍼런스에 오셔서 새로운 AI 사업에 대해…",
+        "canonicalUrl": "https://juejin.cn/post/7712326912941096987",
+        "platformId": "juejin",
+        "platformLabel": "Juejin · 굴진",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "open_source_trend",
+        "signalType": "dev_workflow",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "n8n 등 자동화 플랫폼의 진화로 영상 자르기·압축·자막 합성을 노코드·에이전트 워크플로로 연결하는 수요가 급증하고 있습니다.",
-        "benchmarkPoint": "중국 인디빌더 오픈소스·GitHub 공개",
-        "bottleneckSolvedKo": "저는 일하는 동안 전화를 걸고 채팅할 수 있는 개인 에이전트를 오픈소스로 공개했습니다. 휴대폰에서 독립적으로 실행할 수 있습니다.… 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. n8n 등 자동화 플랫폼의 진화로 영상 자르기·압축·자막 합성을 노코드·에이전트 워크플로로 연결하는 수요가 급증하고 있습니다."
+        "benchmarkPoint": "Juejin · 굴진 포착 — Juejin · 굴진 중국 AI 생태계 최신 기술·제품 시그널",
+        "bottleneckSolvedKo": "X-Lab 연례 컨퍼런스 온라인 동기 이벤트 | AI 작품을 가져와 X-Lab 연례 컨퍼런스에 오셔서 새로운 AI 사업에 대해… 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. n8n 등 자동화 플랫폼의 진화로 영상 자르기·압축·자막 합성을 노코드·에이전트 워크플로로 연결하는 수요가 급증하고 있습니다."
       },
       "twistSummaryKo": "원하는 영상 편집 작업을 일상 한국어로 적으면 오류 없는 FFmpeg 명령어와 브라우저 내 즉석 미리보기 변환을 제공합니다.",
       "mvpFeatures": [
@@ -2963,7 +2963,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "복잡한 FFmpeg 명령어 대신 '무음 구간 자르고 세로 쇼츠로 변환해 줘'라고 치면 즉시 실행 스크립트를 만들어준다면?",
-          "treatmentId": "tr-tec-ffmpeg-skill-xi465r",
+          "treatmentId": "tr-tec-ffmpeg-skill-p8wq4l",
           "builderId": "builder-gh-2f88b9b56c",
           "builderName": "ffmpeg-skill"
         }
@@ -2976,8 +2976,8 @@
       "id": "tr-cul-kage-1hea1k",
       "slug": "tr-cul-kage-1hea1k",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -3064,11 +3064,11 @@
       "variantIndex": 33
     },
     {
-      "id": "tr-tec-universal-modd-em2zuo",
-      "slug": "tr-tec-universal-modd-em2zuo",
+      "id": "tr-tec-universal-modd-a1r6uc",
+      "slug": "tr-tec-universal-modd-a1r6uc",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -3104,18 +3104,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-25c1b6892b10",
-        "titleKo": "전부 클라우드의 AI 운용에 '수중'을 더하면 무엇이 바뀌는지, 시산해 보았다",
-        "canonicalUrl": "https://zenn.dev/kirbykaito/articles/2b89a9a4a71df1",
-        "platformId": "zenn",
-        "platformLabel": "Zenn",
+        "radarId": "live-534f4ea10f0f",
+        "titleKo": "Spawn·브릿지웍스 방식 3주 써 보고, 계속 쓸 것과 그만둘 것",
+        "canonicalUrl": "https://gpters.org/ai-agent/post/spawn브릿지웍스-방식-3주-써-보고-계속-쓸-것과-그만둘-것-mwxbw99t",
+        "platformId": "gpters",
+        "platformLabel": "GPTers",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
+        "signalType": "new_product",
+        "productDomain": "chatbot-productivity",
         "summaryKo": "GTA 6의 플레이어 행동 프로필 수집 의혹이 화제가 되며, 게이머 행동 로그에서 성향과 패턴을 읽어내는 분석에 관심이 쏠렸습니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "전부 클라우드의 AI 운용에 '수중'을 더하면 무엇이 바뀌는지, 시산해 보았다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. GTA 6의 플레이어 행동 프로필 수집 의혹이 화제가 되며, 게이머 행동 로그에서 성향과 패턴을 읽어내는 분석에 관심이 쏠렸습니다."
+        "benchmarkPoint": "대화형 UX·응답 정확도·토큰 단가 개선 포인트",
+        "bottleneckSolvedKo": "Spawn·브릿지웍스 방식 3주 써 보고, 계속 쓸 것과 그만둘 것 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. GTA 6의 플레이어 행동 프로필 수집 의혹이 화제가 되며, 게이머 행동 로그에서 성향과 패턴을 읽어내는 분석에 관심이 쏠렸습니다."
       },
       "twistSummaryKo": "인디 게임 세이브 파일이나 리플레이 기록을 올리면 나의 공략 습관, 최다 실패 구간, 맞춤 밸런스 모드 아이디어를 정리해 줍니다.",
       "mvpFeatures": [
@@ -3143,7 +3143,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "내 게임 플레이 로그나 세이브 파일을 올리면 플레이 성향과 숨겨진 패턴을 리포트로 분석해 주는 웹을 만들어본다면?",
-          "treatmentId": "tr-tec-universal-modd-em2zuo",
+          "treatmentId": "tr-tec-universal-modd-a1r6uc",
           "builderId": "builder-gh-0eb455e03a",
           "builderName": "universal-modder"
         }
@@ -3153,11 +3153,11 @@
       "variantIndex": 34
     },
     {
-      "id": "tr-cul-filmcraft-1ibhu5",
-      "slug": "tr-cul-filmcraft-1ibhu5",
+      "id": "tr-cul-filmcraft-14aa4t",
+      "slug": "tr-cul-filmcraft-14aa4t",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -3186,19 +3186,19 @@
         "url": "https://github.com/storytold/filmcraft",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★19.0k",
-        "shortMetricLabel": "GitHub ★19.0k",
+        "tractionLabel": "GitHub ★19.1k",
+        "shortMetricLabel": "GitHub ★19.1k",
         "verifiedRevenue": false,
         "mechanism": "canvas-compare",
         "mechanismLabel": "나란히 비교 보드",
         "summaryKo": "순수 Rust로 처음부터 구축해 투명하고 빠른 타임라인 구조를 갖춘 GitHub 18.9k 오픈소스 비선형 비디오 편집기입니다.",
-        "overseasProofKo": "filmcraft은 GitHub(GitHub 19.0k)에서 주목받은 프로젝트입니다. 순수 Rust로 처음부터 구축해 투명하고 빠른 타임라인 구조를 갖춘 GitHub 18.9k 오픈소스 비선형 비디오 편집기입니다."
+        "overseasProofKo": "filmcraft은 GitHub(GitHub 19.1k)에서 주목받은 프로젝트입니다. 순수 Rust로 처음부터 구축해 투명하고 빠른 타임라인 구조를 갖춘 GitHub 18.9k 오픈소스 비선형 비디오 편집기입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-indiewire-042b404fc4",
-        "titleKo": "다니엘 브룩스(Danielle Brooks)가 'If I Go Will They Miss Me'의 인디 성공에 대한 통찰력을 공유합니다.",
-        "canonicalUrl": "https://www.indiewire.com/awards/consider-this/danielle-brooks-if-i-go-will-they-miss-me-indie-success-1235231263/",
+        "radarId": "culture-indiewire-895c32e066",
+        "titleKo": "로버트 아라마요(Robert Aramayo)의 'I Swear' 스타 메이킹 변신은 이미 수상 경력이 있으며 이제 그는 사람들이 그것을 보길 원합니다.",
+        "canonicalUrl": "https://www.indiewire.com/features/interviews/robert-aramayo-i-swear-baftas-john-davidson-tourettes-1235190387/",
         "platformId": "IndieWire",
         "sourceType": "culture",
         "cultureVerticalLabel": "시네마 · 연출",
@@ -3206,7 +3206,7 @@
         "productDomain": "cinema-video",
         "summaryKo": "AI 활용 영화가 아카데미 장편 애니메이션상 출품 부적격 판정을 받으며 영화제와 콘텐츠 업계에서 인간 창작 비중 증명이 핵심 쟁점이 됐습니다.",
         "benchmarkPoint": "시네마 · 연출",
-        "bottleneckSolvedKo": "IndieWire에서 포착된 '다니엘 브룩스(Danielle Brooks)가 'If I Go Will They Miss Me'의 인디 성공에 대한 통찰력을 공유합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. AI 활용 영화가 아카데미 장편 애니메이션상 출품 부적격 판정을 받으며 영화제와 콘텐츠 업계에서 인간 창작 비중 증명이 핵심 쟁점이 됐습니다."
+        "bottleneckSolvedKo": "IndieWire에서 포착된 '로버트 아라마요(Robert Aramayo)의 'I Swear' 스타 메이킹 변신은 이미 수상 경력이 있으며 이제 그는 사람들이 그것을 보길 원합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. AI 활용 영화가 아카데미 장편 애니메이션상 출품 부적격 판정을 받으며 영화제와 콘텐츠 업계에서 인간 창작 비중 증명이 핵심 쟁점이 됐습니다."
       },
       "twistSummaryKo": "영상 프로젝트의 편집 타임라인과 원본 소스 비중을 로컬에서 분석해 영화제·클라이언트 제출용 '인간 창작 투명성 명세서'를 발급합니다.",
       "mvpFeatures": [
@@ -3234,7 +3234,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "AI 애니메이션 아카데미 부적격 논란 시대에, 내 영상의 실제 촬영·편집 히스토리와 '인간 제작 비율'을 투명하게 증명해 주는 배지를 만든다면?",
-          "treatmentId": "tr-cul-filmcraft-1ibhu5",
+          "treatmentId": "tr-cul-filmcraft-14aa4t",
           "builderId": "builder-gh-1f7cf4e8bc",
           "builderName": "filmcraft"
         }
@@ -3244,11 +3244,11 @@
       "variantIndex": 35
     },
     {
-      "id": "tr-tec-mika-jzifif",
-      "slug": "tr-tec-mika-jzifif",
+      "id": "tr-tec-mika-mhhi0u",
+      "slug": "tr-tec-mika-mhhi0u",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -3274,28 +3274,28 @@
         "url": "https://github.com/wangzan101/Mika",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★10.0k",
-        "shortMetricLabel": "GitHub ★10.0k",
+        "tractionLabel": "GitHub ★10.1k",
+        "shortMetricLabel": "GitHub ★10.1k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "모바일 앱과 웹 인터페이스를 직접 탐색하며 작업을 수행하는 온디바이스 AI 에이전트 오픈소스입니다.",
-        "overseasProofKo": "Mika은 GitHub(GitHub 10.0k)에서 주목받은 프로젝트입니다. 모바일 앱과 웹 인터페이스를 직접 탐색하며 작업을 수행하는 온디바이스 AI 에이전트 오픈소스입니다."
+        "overseasProofKo": "Mika은 GitHub(GitHub 10.1k)에서 주목받은 프로젝트입니다. 모바일 앱과 웹 인터페이스를 직접 탐색하며 작업을 수행하는 온디바이스 AI 에이전트 오픈소스입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-7dbf0151e03a",
-        "titleKo": "일본어 PDF의 무너진 테이블을 로컬 VLM×텍스트층 돌합으로 고치는 실장 패턴",
-        "canonicalUrl": "https://qiita.com/4q_user_name/items/c19b61ac5e0ba0facb20",
-        "platformId": "qiita",
-        "platformLabel": "Qiita",
+        "radarId": "live-e3571aaa0705",
+        "titleKo": "AI가 작성한 코드, 같은 AI가 검토...개발 조직 절반 가까이 활용",
+        "canonicalUrl": "https://aitimes.com/news/articleView.html?idxno=217834",
+        "platformId": "aitimes",
+        "platformLabel": "AI타임스",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
+        "signalType": "industry_shift",
+        "productDomain": "ai-business-infra",
         "summaryKo": "AI 에이전트로 앱 스크린샷을 자동 촬영하고 App Store Connect에 등록하는 출시 자동화 노하우가 인디 개발자 사이에서 화제입니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "일본어 PDF의 무너진 테이블을 로컬 VLM×텍스트층 돌합으로 고치는 실장 패턴 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 에이전트로 앱 스크린샷을 자동 촬영하고 App Store Connect에 등록하는 출시 자동화 노하우가 인디 개발자 사이에서 화제입니다."
+        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
+        "bottleneckSolvedKo": "AI가 작성한 코드, 같은 AI가 검토...개발 조직 절반 가까이 활용 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 에이전트로 앱 스크린샷을 자동 촬영하고 App Store Connect에 등록하는 출시 자동화 노하우가 인디 개발자 사이에서 화제입니다."
       },
       "twistSummaryKo": "웹앱이나 모바일 프로토타입 링크를 넣으면 핵심 화면을 자동 캡처해 디바이스 프레임과 후킹 카피가 얹힌 스토어 이미지를 뽑아줍니다.",
       "mvpFeatures": [
@@ -3323,7 +3323,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "내 모바일 앱 화면 URL만 넣으면 앱스토어 등록용 고품질 스크린샷 5장과 카피를 자동 촬영해 주는 웹을 만든다면?",
-          "treatmentId": "tr-tec-mika-jzifif",
+          "treatmentId": "tr-tec-mika-mhhi0u",
           "builderId": "builder-gh-03eaf9e920",
           "builderName": "Mika"
         }
@@ -3333,11 +3333,11 @@
       "variantIndex": 36
     },
     {
-      "id": "tr-cul-vidgens-1ibe96",
-      "slug": "tr-cul-vidgens-1ibe96",
+      "id": "tr-cul-ai-system-desi-1i6gfy",
+      "slug": "tr-cul-ai-system-desi-1i6gfy",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -3352,8 +3352,8 @@
       ],
       "buildCadence": "5~7일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://trustmrr.com/startup/vidgens/opengraph-image?034a9e04a0b0b83d",
-      "mediaSourceLabel": "프로덕트 실물 화면",
+      "previewImageUrl": "https://raw.githubusercontent.com/amitshekhariitbhu/ai-system-design/main/assets/banner.png",
+      "mediaSourceLabel": "오픈소스 실물 화면",
       "techDigestKo": {
         "inputKo": "사용자가 올린 손그림·아이패드 스케치 1~6장과 프레임 속도(6fps/8fps/12fps) 설정",
         "coreEngineKo": "아날로그 라인 보일 셰이더가 미세한 선 변위와 크라프트·수채화 종이 텍스처를 3프레임 주기로 합성",
@@ -3361,18 +3361,18 @@
         "summaryKo": "정적인 일러스트 1장을 살아 숨 쉬는 8fps 아날로그 손그림 루프 애니메이션으로 바꾸는 모션 엔진"
       },
       "sampleA": {
-        "builderId": "builder-tmrr-b7a201e715",
-        "name": "VIDGENS",
-        "url": "https://trustmrr.com/startup/vidgens",
-        "source": "trustmrr",
-        "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $120 (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $120",
-        "verifiedRevenue": true,
-        "mechanism": "visual-price-match",
-        "mechanismLabel": "시각 탐색 · 가격 매칭",
+        "builderId": "builder-gh-3d54321fc6",
+        "name": "ai-system-design",
+        "url": "https://github.com/amitshekhariitbhu/ai-system-design",
+        "source": "github_trending",
+        "sourceLabel": "GitHub",
+        "tractionLabel": "GitHub ★1.1k",
+        "shortMetricLabel": "GitHub ★1.1k",
+        "verifiedRevenue": false,
+        "mechanism": "audio-stem",
+        "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "정적인 화면과 그래픽을 몇 분 만에 생동감 있는 홍보 모션 비디오로 바꿔주는 Product Hunt 런칭 서비스입니다.",
-        "overseasProofKo": "VIDGENS은 TrustMRR(TrustMRR $120)에서 주목받은 프로젝트입니다. 정적인 화면과 그래픽을 몇 분 만에 생동감 있는 홍보 모션 비디오로 바꿔주는 Product Hunt 런칭 서비스입니다."
+        "overseasProofKo": "ai-system-design은 GitHub(GitHub 1.1k)에서 주목받은 프로젝트입니다. 정적인 화면과 그래픽을 몇 분 만에 생동감 있는 홍보 모션 비디오로 바꿔주는 Product Hunt 런칭 서비스입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -3406,17 +3406,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "VIDGENS",
-          "builderId": "builder-tmrr-b7a201e715",
-          "builderName": "VIDGENS"
+          "title": "ai-system-design",
+          "builderId": "builder-gh-3d54321fc6",
+          "builderName": "ai-system-design"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "손으로 한 프레임씩 그린 오시즈(Osees) 뮤비처럼 내 스케치 4장만 올리면 지글거리는 아날로그 루프 애니메이션으로 만들어준다면?",
-          "treatmentId": "tr-cul-vidgens-1ibe96",
-          "builderId": "builder-tmrr-b7a201e715",
-          "builderName": "VIDGENS"
+          "treatmentId": "tr-cul-ai-system-desi-1i6gfy",
+          "builderId": "builder-gh-3d54321fc6",
+          "builderName": "ai-system-design"
         }
       ],
       "synthesisMode": "curated",
@@ -3424,11 +3424,11 @@
       "variantIndex": 37
     },
     {
-      "id": "tr-tec-solid-glass-1d9wbr",
-      "slug": "tr-tec-solid-glass-1d9wbr",
+      "id": "tr-tec-solid-glass-169cj8",
+      "slug": "tr-tec-solid-glass-169cj8",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -3454,28 +3454,28 @@
         "url": "https://github.com/deeplethe/solid-glass",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★2.4k",
-        "shortMetricLabel": "GitHub ★2.4k",
+        "tractionLabel": "GitHub ★2.2k",
+        "shortMetricLabel": "GitHub ★2.2k",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "AI 웹 서비스에 어울리는 정제된 물성과 기술적 디테일을 담은 오픈소스 디자인 시스템입니다.",
-        "overseasProofKo": "solid-glass은 GitHub(GitHub 2.4k)에서 주목받은 프로젝트입니다. AI 웹 서비스에 어울리는 정제된 물성과 기술적 디테일을 담은 오픈소스 디자인 시스템입니다."
+        "overseasProofKo": "solid-glass은 GitHub(GitHub 2.2k)에서 주목받은 프로젝트입니다. AI 웹 서비스에 어울리는 정제된 물성과 기술적 디테일을 담은 오픈소스 디자인 시스템입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-31499ea4a0ea",
-        "titleKo": "만들고 나서 알릴 곳이 없어서 서비스 소개 마켓을 직접 만들었습니다 (카탈로그 619개·1기 무료)",
-        "canonicalUrl": "https://gpters.org/vibe-coding/post/만들고-나서-알릴-곳이-없어서-서비스-소개-마켓을-직접-만들었습니다-카탈로그-619개1기-무료-mwtjn54b",
+        "radarId": "live-12576c180f7f",
+        "titleKo": "AI 면접 질문 자동화 만드는 중: 사람이 볼 질문만 골라내는 기준까지 했어요",
+        "canonicalUrl": "https://gpters.org/ax-education/post/ai-면접-질문-자동화-만드는-중-사람이-볼-질문만-골라내는-기준까지-했어요-mwxar4xu",
         "platformId": "gpters",
         "platformLabel": "GPTers",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "new_product",
+        "signalType": "model_release",
         "productDomain": "chatbot-productivity",
         "summaryKo": "AI로 만든 수많은 사이드 프로젝트들이 홍보 창구와 매력적인 소개 화면을 필요로 하며 인디 쇼케이스 마켓 수요가 급증했습니다.",
         "benchmarkPoint": "대화형 UX·응답 정확도·토큰 단가 개선 포인트",
-        "bottleneckSolvedKo": "만들고 나서 알릴 곳이 없어서 서비스 소개 마켓을 직접 만들었습니다 (카탈로그 619개·1기 무료) 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI로 만든 수많은 사이드 프로젝트들이 홍보 창구와 매력적인 소개 화면을 필요로 하며 인디 쇼케이스 마켓 수요가 급증했습니다."
+        "bottleneckSolvedKo": "AI 면접 질문 자동화 만드는 중: 사람이 볼 질문만 골라내는 기준까지 했어요 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI로 만든 수많은 사이드 프로젝트들이 홍보 창구와 매력적인 소개 화면을 필요로 하며 인디 쇼케이스 마켓 수요가 급증했습니다."
       },
       "twistSummaryKo": "사이드 프로젝트 주소를 입력하면 촌스러운 기본 미리보기 대신 촉각적 질감의 에디토리얼 쇼케이스 카드와 OG 이미지를 생성합니다.",
       "mvpFeatures": [
@@ -3503,7 +3503,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "만들어둔 내 AI 사이드 프로젝트 URL을 넣으면 1분 만에 세련된 런칭 쇼케이스 카드와 배지를 뽑아주는 웹을 만든다면?",
-          "treatmentId": "tr-tec-solid-glass-1d9wbr",
+          "treatmentId": "tr-tec-solid-glass-169cj8",
           "builderId": "builder-gh-b868c4a944",
           "builderName": "solid-glass"
         }
@@ -3513,11 +3513,11 @@
       "variantIndex": 38
     },
     {
-      "id": "tr-cul-make-cursed-fo-n1ip9i",
-      "slug": "tr-cul-make-cursed-fo-n1ip9i",
+      "id": "tr-cul-make-cursed-fo-qzqxzo",
+      "slug": "tr-cul-make-cursed-fo-qzqxzo",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -3556,9 +3556,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-designboom-b2d81f21a4",
-        "titleKo": "75세 이상의 여행자를 위해 개발된 move on은 눈에 띄지 않는 이동 보조 장치로 수하물을 재해석합니다.",
-        "canonicalUrl": "https://www.designboom.com/design/older-travelers-moove-on-luggage-discreet-mobility-aid-lorenzo-rimini/",
+        "radarId": "culture-designboom-056fb29467",
+        "titleKo": "강에서 영감을 받은 프랑스 TGV INOUI 디자인을 구현한 nendo",
+        "canonicalUrl": "https://www.designboom.com/design/nendo-river-inspired-design-france-tgv-inoui-motion-interview/",
         "platformId": "designboom",
         "sourceType": "culture",
         "cultureVerticalLabel": "공간 · 오브제",
@@ -3566,7 +3566,7 @@
         "productDomain": "photo-visual",
         "summaryKo": "카타르 도하에 개장한 게르하르트 리히터의 영구 파빌리온이 이슬람 기하학 패턴과 현대 회화의 조화로 designboom에서 화제가 됐습니다.",
         "benchmarkPoint": "공간 · 오브제",
-        "bottleneckSolvedKo": "designboom에서 포착된 '75세 이상의 여행자를 위해 개발된 move on은 눈에 띄지 않는 이동 보조 장치로 수하물을 재해석합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 카타르 도하에 개장한 게르하르트 리히터의 영구 파빌리온이 이슬람 기하학 패턴과 현대 회화의 조화로 designboom에서 화제가 됐습니다."
+        "bottleneckSolvedKo": "designboom에서 포착된 '강에서 영감을 받은 프랑스 TGV INOUI 디자인을 구현한 nendo' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 카타르 도하에 개장한 게르하르트 리히터의 영구 파빌리온이 이슬람 기하학 패턴과 현대 회화의 조화로 designboom에서 화제가 됐습니다."
       },
       "twistSummaryKo": "브랜드 알파벳 2~3글자와 대칭 규칙만 고르면 건축 파빌리온·패키징·스카프에 바로 쓰는 기하학 모노그램 패턴 SVG를 생성합니다.",
       "mvpFeatures": [
@@ -3594,7 +3594,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "도하 게르하르트 리히터 파빌리온의 기하학 패턴처럼 내 브랜드 이니셜로 무한 타일링 패턴과 포스터 그래픽을 뽑아준다면?",
-          "treatmentId": "tr-cul-make-cursed-fo-n1ip9i",
+          "treatmentId": "tr-cul-make-cursed-fo-qzqxzo",
           "builderId": "builder-hn-49823738",
           "builderName": "Make cursed fonts like"
         }
@@ -3604,11 +3604,11 @@
       "variantIndex": 39
     },
     {
-      "id": "tr-tec-storeradar-1imabs",
-      "slug": "tr-tec-storeradar-1imabs",
+      "id": "tr-tec-storeradar-5107fl",
+      "slug": "tr-tec-storeradar-5107fl",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -3634,28 +3634,28 @@
         "url": "https://trustmrr.com/startup/storeradar",
         "source": "trustmrr",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $4.1k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $4.1k",
+        "tractionLabel": "검증 매출 $4k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $4k",
         "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "TrustMRR에서 월 $3.6k 실제 결제 매출이 검증된 이커머스 스토어 모니터링·마케팅 인사이트 마이크로 SaaS입니다.",
-        "overseasProofKo": "StoreRadar은 TrustMRR(TrustMRR $4.1k)에서 주목받은 프로젝트입니다. TrustMRR에서 월 $3.6k 실제 결제 매출이 검증된 이커머스 스토어 모니터링·마케팅 인사이트 마이크로 SaaS입니다."
+        "overseasProofKo": "StoreRadar은 TrustMRR(TrustMRR $4k)에서 주목받은 프로젝트입니다. TrustMRR에서 월 $3.6k 실제 결제 매출이 검증된 이커머스 스토어 모니터링·마케팅 인사이트 마이크로 SaaS입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-05cbaefa74a0",
-        "titleKo": "Muse의 주간 토큰 사용률을 시각화하는 \"Muse 이용 상황\"공간을 만드는 프롬프트",
-        "canonicalUrl": "https://qiita.com/d_yan/items/e5fc8ebee3bba4df6123",
-        "platformId": "qiita",
-        "platformLabel": "Qiita",
+        "radarId": "live-c92d0ab5bf6c",
+        "titleKo": "qwen-code v0.28.6 새 버전 공개",
+        "canonicalUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.6",
+        "platformId": "qwen",
+        "platformLabel": "Qwen",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
+        "signalType": "open_source_trend",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "에이전틱 커머스 경쟁이 본격화되며 브랜드 스토어의 가격·재고·신상 변화를 빠르게 포착하는 실시간 시장 감지가 핵심이 됐습니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "Muse의 주간 토큰 사용률을 시각화하는 \"Muse 이용 상황\"공간을 만드는 프롬프트 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 에이전틱 커머스 경쟁이 본격화되며 브랜드 스토어의 가격·재고·신상 변화를 빠르게 포착하는 실시간 시장 감지가 핵심이 됐습니다."
+        "benchmarkPoint": "새 정식 버전 릴리스",
+        "bottleneckSolvedKo": "qwen-code v0.28.6 새 버전 공개 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 에이전틱 커머스 경쟁이 본격화되며 브랜드 스토어의 가격·재고·신상 변화를 빠르게 포착하는 실시간 시장 감지가 핵심이 됐습니다."
       },
       "twistSummaryKo": "관심 브랜드 스토어 주소 3개만 등록하면 신상품 등록, 품절 전환, 가격 인하 변동 내역만 깔끔한 타임라인으로 정리해 줍니다.",
       "mvpFeatures": [
@@ -3683,7 +3683,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "경쟁 브랜드 온라인 스토어에 신상이 뜨거나 가격이 바뀔 때마다 변화 스냅샷만 모아 보여주는 레이더를 만든다면?",
-          "treatmentId": "tr-tec-storeradar-1imabs",
+          "treatmentId": "tr-tec-storeradar-5107fl",
           "builderId": "builder-tmrr-24e93bd162",
           "builderName": "StoreRadar"
         }
@@ -3696,8 +3696,8 @@
       "id": "tr-cul-guitoro-a-virt-6bzsg",
       "slug": "tr-cul-guitoro-a-virt-6bzsg",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -3787,8 +3787,8 @@
       "id": "tr-tec-docphoto-passp-1v96wp",
       "slug": "tr-tec-docphoto-passp-1v96wp",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -3876,8 +3876,8 @@
       "id": "tr-cul-bigwords-page-70qbeg",
       "slug": "tr-cul-bigwords-page-70qbeg",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -3967,8 +3967,8 @@
       "id": "tr-tec-bankconv-hhka65",
       "slug": "tr-tec-bankconv-hhka65",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "creator-tool",
       "domainLabel": "생산성 · 웹툴",
       "domainColor": "#4F46E5",
@@ -3994,13 +3994,13 @@
         "url": "https://trustmrr.com/startup/bankconv",
         "source": "trustmrr",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $1k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $1k",
+        "tractionLabel": "검증 매출 $1.1k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $1.1k",
         "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "은행·카드 PDF 명세서를 깔끔한 엑셀·CSV 데이터로 변환해 TrustMRR 월 $1.1k 매출을 검증받은 핀테크 유틸리티입니다.",
-        "overseasProofKo": "BankConv은 TrustMRR(TrustMRR $1k)에서 주목받은 프로젝트입니다. 은행·카드 PDF 명세서를 깔끔한 엑셀·CSV 데이터로 변환해 TrustMRR 월 $1.1k 매출을 검증받은 핀테크 유틸리티입니다."
+        "overseasProofKo": "BankConv은 TrustMRR(TrustMRR $1.1k)에서 주목받은 프로젝트입니다. 은행·카드 PDF 명세서를 깔끔한 엑셀·CSV 데이터로 변환해 TrustMRR 월 $1.1k 매출을 검증받은 핀테크 유틸리티입니다."
       },
       "sampleA2": null,
       "sampleB": {
@@ -4056,8 +4056,8 @@
       "id": "tr-cul-every-satellit-1er7jb",
       "slug": "tr-cul-every-satellit-1er7jb",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -4147,8 +4147,8 @@
       "id": "tr-tec-transclipper-jk9ozx",
       "slug": "tr-tec-transclipper-jk9ozx",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -4233,11 +4233,11 @@
       "variantIndex": 46
     },
     {
-      "id": "tr-cul-needle2-yj90cl",
-      "slug": "tr-cul-needle2-yj90cl",
+      "id": "tr-cul-needle2-no6k3h",
+      "slug": "tr-cul-needle2-no6k3h",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -4276,9 +4276,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-stereogum-971b793f04",
-        "titleKo": "다리 – “Angels Hide (그들의 얼굴)”",
-        "canonicalUrl": "https://stereogum.com/2521577/legss-angels-hide-their-faces/music/",
+        "radarId": "culture-stereogum-2234448353",
+        "titleKo": "U2가 사상 최초의 추수감사절 NFL 경기에서 돌리 파튼(Dolly Parton) 콜라보레이션을 선보였습니다.",
+        "canonicalUrl": "https://stereogum.com/2521986/u2-perform-their-dolly-parton-collaboration-at-first-ever-thanksgiving-eve-nfl-game/news/",
         "platformId": "Stereogum",
         "sourceType": "culture",
         "cultureVerticalLabel": "음악 · 인디 문화",
@@ -4286,7 +4286,7 @@
         "productDomain": "music-audio",
         "summaryKo": "시인·뮤지션 패티 스미스와 Soundwalk Collective가 공간의 소리와 낭독을 결합한 신작을 발표하며 사운드워크 아트가 Stereogum에서 주목받았습니다.",
         "benchmarkPoint": "음악 · 인디 문화",
-        "bottleneckSolvedKo": "Stereogum에서 포착된 '다리 – “Angels Hide (그들의 얼굴)”' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 시인·뮤지션 패티 스미스와 Soundwalk Collective가 공간의 소리와 낭독을 결합한 신작을 발표하며 사운드워크 아트가 Stereogum에서 주목받았습니다."
+        "bottleneckSolvedKo": "Stereogum에서 포착된 'U2가 사상 최초의 추수감사절 NFL 경기에서 돌리 파튼(Dolly Parton) 콜라보레이션을 선보였습니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 시인·뮤지션 패티 스미스와 Soundwalk Collective가 공간의 소리와 낭독을 결합한 신작을 발표하며 사운드워크 아트가 Stereogum에서 주목받았습니다."
       },
       "twistSummaryKo": "길거리·카페·바닷가에서 녹음한 20초 환경음 위에 내 목소리 메모나 시 한 구절을 겹쳐 감각적인 사운드 엽서 링크로 선물합니다.",
       "mvpFeatures": [
@@ -4314,7 +4314,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "패티 스미스 × 사운드워크 콜렉티브처럼 내가 걷는 공간의 현장음과 짧은 낭독 시를 겹쳐 나만의 오디오 사운드워크를 만든다면?",
-          "treatmentId": "tr-cul-needle2-yj90cl",
+          "treatmentId": "tr-cul-needle2-no6k3h",
           "builderId": "builder-hn-49246804",
           "builderName": "Needle2"
         }
@@ -4324,11 +4324,11 @@
       "variantIndex": 47
     },
     {
-      "id": "tr-tec-landy-ai-16nlk8",
-      "slug": "tr-tec-landy-ai-16nlk8",
+      "id": "tr-tec-landy-ai-sa45qy",
+      "slug": "tr-tec-landy-ai-sa45qy",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -4364,18 +4364,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-a2153f1cdda4",
-        "titleKo": "리더보드는 귀하의 평가가 아닙니다",
-        "canonicalUrl": "https://qiita.com/nrouter_ai1991/items/7266e6b555f917c3df91",
-        "platformId": "qiita",
-        "platformLabel": "Qiita",
+        "radarId": "live-6670c00831dd",
+        "titleKo": "@ai-sdk/zai@2.0.23 새 정식 버전 릴리즈",
+        "canonicalUrl": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/zai%402.0.23",
+        "platformId": "github",
+        "platformLabel": "GitHub",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
+        "signalType": "open_source_trend",
         "productDomain": "coding-agent-devtool",
         "summaryKo": "AI 생성 문구의 과장과 신뢰 한계에 대한 논의가 커지며, 진정성 있고 군더더기 없는 에디토리얼 카피의 가치가 높아졌습니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "리더보드는 귀하의 평가가 아닙니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 생성 문구의 과장과 신뢰 한계에 대한 논의가 커지며, 진정성 있고 군더더기 없는 에디토리얼 카피의 가치가 높아졌습니다."
+        "benchmarkPoint": "새 정식 버전 릴리스",
+        "bottleneckSolvedKo": "@ai-sdk/zai@2.0.23 새 정식 버전 릴리즈 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. AI 생성 문구의 과장과 신뢰 한계에 대한 논의가 커지며, 진정성 있고 군더더기 없는 에디토리얼 카피의 가치가 높아졌습니다."
       },
       "twistSummaryKo": "만들고 싶은 서비스 한 줄을 적으면 뻔한 AI 수식어를 뺀 직관적 랜딩 페이지 초안과 방문자 관심 투표 버튼까지 바로 생성합니다.",
       "mvpFeatures": [
@@ -4403,7 +4403,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "아이디어 한 줄만 적으면 과장 없는 담백한 카피로 수요 검증용 랜딩 페이지 1장을 60초 만에 띄워준다면?",
-          "treatmentId": "tr-tec-landy-ai-16nlk8",
+          "treatmentId": "tr-tec-landy-ai-sa45qy",
           "builderId": "builder-tmrr-a38c926745",
           "builderName": "Landy AI"
         }
@@ -4413,11 +4413,11 @@
       "variantIndex": 48
     },
     {
-      "id": "tr-cul-jev-review-18ytez",
-      "slug": "tr-cul-jev-review-18ytez",
+      "id": "tr-cul-vruum-gpnu7h",
+      "slug": "tr-cul-vruum-gpnu7h",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -4432,8 +4432,8 @@
       ],
       "buildCadence": "3~5일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://raw.githubusercontent.com/devagrawal09/jev-review/main/docs/dashboard.png",
-      "mediaSourceLabel": "오픈소스 실물 화면",
+      "previewImageUrl": "https://static-2026.dezeen.com/uploads/2026/11/kanal-museum-brussels-renovation-atelier-kanal-sq2_dezeen_2364_col_0-1024x1024.jpg",
+      "mediaSourceLabel": "컬처 이슈 이미지 · Dezeen",
       "techDigestKo": {
         "inputKo": "매거진·사진에서 추출한 과감한 포인트 컬러 HEX 1개(또는 올해의 컬러 프리셋)",
         "coreEngineKo": "OKLCH 색공간 대비 계산기가 명도·채도를 자동 보정해 WCAG AA(4.5:1) 이상을 보장하는 8단계 UI 토큰을 산출",
@@ -4441,24 +4441,24 @@
         "summaryKo": "과감한 건축·패션 컬러를 눈이 편안한 웹 UI 안전 토큰으로 자동 번역하는 OKLCH 배색 엔진"
       },
       "sampleA": {
-        "builderId": "builder-gh-19ab799c7c",
-        "name": "jev-review",
-        "url": "https://github.com/devagrawal09/jev-review",
-        "source": "github_trending",
-        "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★707",
-        "shortMetricLabel": "GitHub ★707",
-        "verifiedRevenue": false,
-        "mechanism": "canvas-compare",
-        "mechanismLabel": "나란히 비교 보드",
+        "builderId": "builder-tmrr-2771b7e0b9",
+        "name": "Vruum",
+        "url": "https://trustmrr.com/startup/vruum",
+        "source": "trustmrr",
+        "sourceLabel": "TrustMRR",
+        "tractionLabel": "검증 매출 $1.2k (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $1.2k",
+        "verifiedRevenue": true,
+        "mechanism": "visual-price-match",
+        "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "AI 코딩 에이전트가 디자인 파일과 토큰을 직접 읽고 코드로 연결하게 돕는 Product Hunt 런칭 FigmaMCP입니다.",
-        "overseasProofKo": "jev-review은 GitHub(GitHub 707)에서 주목받은 프로젝트입니다. AI 코딩 에이전트가 디자인 파일과 토큰을 직접 읽고 코드로 연결하게 돕는 Product Hunt 런칭 FigmaMCP입니다."
+        "overseasProofKo": "Vruum은 TrustMRR(TrustMRR $1.2k)에서 주목받은 프로젝트입니다. AI 코딩 에이전트가 디자인 파일과 토큰을 직접 읽고 코드로 연결하게 돕는 Product Hunt 런칭 FigmaMCP입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-dezeen-20c64b1e0f",
-        "titleKo": "Adobe의 Creative Agent는 Creative Cloud 도구와 Firefly 워크플로우를 혁신합니다.",
-        "canonicalUrl": "https://www.dezeen.com/2026/11/25/adobes-creative-agent-now-in-creative-cloud-tools-and-firefly/",
+        "radarId": "culture-dezeen-9aa698daef",
+        "titleKo": "\"유럽 최대 규모의 박물관 개발\"이 1930년대 브뤼셀 시트로엥 차고에 개장했습니다.",
+        "canonicalUrl": "https://www.dezeen.com/2026/11/26/kanal-museum-brussels-renovation-atelier-kanal/",
         "platformId": "Dezeen",
         "sourceType": "culture",
         "cultureVerticalLabel": "건축 · 공간",
@@ -4466,7 +4466,7 @@
         "productDomain": "local-archive",
         "summaryKo": "IKEA가 발표한 대담한 올해의 컬러가 의외의 조화로움을 보여주며 공간·제품 배색을 둘러싼 디자인 담론이 Dezeen에서 화제입니다.",
         "benchmarkPoint": "건축 · 공간",
-        "bottleneckSolvedKo": "Dezeen에서 포착된 'Adobe의 Creative Agent는 Creative Cloud 도구와 Firefly 워크플로우를 혁신합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. IKEA가 발표한 대담한 올해의 컬러가 의외의 조화로움을 보여주며 공간·제품 배색을 둘러싼 디자인 담론이 Dezeen에서 화제입니다."
+        "bottleneckSolvedKo": "Dezeen에서 포착된 '\"유럽 최대 규모의 박물관 개발\"이 1930년대 브뤼셀 시트로엥 차고에 개장했습니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. IKEA가 발표한 대담한 올해의 컬러가 의외의 조화로움을 보여주며 공간·제품 배색을 둘러싼 디자인 담론이 Dezeen에서 화제입니다."
       },
       "twistSummaryKo": "건축·리빙 매거진에서 본 매력적인 포인트 컬러 1개만 찍으면 웹 접근성(WCAG)을 깨지 않는 UI 팔레트와 CSS 토큰으로 번역해 줍니다.",
       "mvpFeatures": [
@@ -4486,17 +4486,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "jev-review",
-          "builderId": "builder-gh-19ab799c7c",
-          "builderName": "jev-review"
+          "title": "Vruum",
+          "builderId": "builder-tmrr-2771b7e0b9",
+          "builderName": "Vruum"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "이케아 올해의 컬러처럼 대담한 공간·브랜드 배색을 내 웹사이트 UI와 패키지 시안에 안전하게 이식해 주는 컬러 번역기를 만든다면?",
-          "treatmentId": "tr-cul-jev-review-18ytez",
-          "builderId": "builder-gh-19ab799c7c",
-          "builderName": "jev-review"
+          "treatmentId": "tr-cul-vruum-gpnu7h",
+          "builderId": "builder-tmrr-2771b7e0b9",
+          "builderName": "Vruum"
         }
       ],
       "synthesisMode": "curated",
@@ -4504,11 +4504,11 @@
       "variantIndex": 49
     },
     {
-      "id": "tr-tec-blawgy-com-19a2mf",
-      "slug": "tr-tec-blawgy-com-19a2mf",
+      "id": "tr-tec-kabo-ai-3h6sce",
+      "slug": "tr-tec-kabo-ai-3h6sce",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "music-audio",
       "domainLabel": "음악 · 오디오",
       "domainColor": "#9333EA",
@@ -4520,7 +4520,7 @@
       "highlightPhrases": [],
       "buildCadence": "3~5일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://trustmrr.com/startup/blawgy-com/opengraph-image?034a9e04a0b0b83d",
+      "previewImageUrl": "https://trustmrr.com/startup/kabo-ai/opengraph-image?034a9e04a0b0b83d",
       "mediaSourceLabel": "프로덕트 실물 화면",
       "techDigestKo": {
         "inputKo": "사용자가 브라우저 마이크에 10~60초간 자유롭게 말한 음성 메모",
@@ -4529,33 +4529,33 @@
         "summaryKo": "두서없는 음성 메모를 개인정보 노출 없이 실행 가능한 체크리스트와 메일 초안으로 바꾸는 엔진"
       },
       "sampleA": {
-        "builderId": "builder-tmrr-b5e7995d46",
-        "name": "Blawgy.com",
-        "url": "https://trustmrr.com/startup/blawgy-com",
+        "builderId": "builder-tmrr-ae383c5f6d",
+        "name": "Kabo AI",
+        "url": "https://trustmrr.com/startup/kabo-ai",
         "source": "trustmrr",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $4.7k (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $4.7k",
+        "tractionLabel": "검증 매출 $208 (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $208",
         "verifiedRevenue": true,
         "mechanism": "visual-price-match",
         "mechanismLabel": "시각 탐색 · 가격 매칭",
         "summaryKo": "짧은 음성 발화를 깔끔한 텍스트 메모로 즉시 정제해 TrustMRR 월 $1.2k 매출을 검증받은 음성 생산성 앱입니다.",
-        "overseasProofKo": "Blawgy.com은 TrustMRR(TrustMRR $4.7k)에서 주목받은 프로젝트입니다. 짧은 음성 발화를 깔끔한 텍스트 메모로 즉시 정제해 TrustMRR 월 $1.2k 매출을 검증받은 음성 생산성 앱입니다."
+        "overseasProofKo": "Kabo AI은 TrustMRR(TrustMRR $208)에서 주목받은 프로젝트입니다. 짧은 음성 발화를 깔끔한 텍스트 메모로 즉시 정제해 TrustMRR 월 $1.2k 매출을 검증받은 음성 생산성 앱입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-776174438bc6",
-        "titleKo": "에이전트 시대에는 당신의 정체성이 당신에 의해 정의됩니다",
-        "canonicalUrl": "https://juejin.cn/post/7711983826453168154",
-        "platformId": "juejin",
-        "platformLabel": "Juejin · 굴진",
+        "radarId": "live-21bb4fe2ae65",
+        "titleKo": "아니요, 저는 우리가 AI 시스템에 \"인간의 자유 의지를 항복\"해야 한다고 생각하지 않습니다",
+        "canonicalUrl": "https://x.com/DarioAmodei/status/2125656399392690605",
+        "platformId": "x",
+        "platformLabel": "X",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "dev_workflow",
-        "productDomain": "coding-agent-devtool",
+        "signalType": "builder_signal",
+        "productDomain": "builder-community-signal",
         "summaryKo": "개인정보 보호 중심 이메일·캘린더 Kagi Mail 공개 베타가 주목받으며 프라이버시 우선 생산성 도구 선호가 강해졌습니다.",
-        "benchmarkPoint": "Juejin · 굴진 포착 — Juejin · 굴진 중국 AI 생태계 최신 기술·제품 시그널",
-        "bottleneckSolvedKo": "에이전트 시대에는 당신의 정체성이 당신에 의해 정의됩니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 개인정보 보호 중심 이메일·캘린더 Kagi Mail 공개 베타가 주목받으며 프라이버시 우선 생산성 도구 선호가 강해졌습니다."
+        "benchmarkPoint": "글로벌 빌더의 실시간 런칭·커뮤니티 초기 반응",
+        "bottleneckSolvedKo": "아니요, 저는 우리가 AI 시스템에 \"인간의 자유 의지를 항복\"해야 한다고 생각하지 않습니다 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 개인정보 보호 중심 이메일·캘린더 Kagi Mail 공개 베타가 주목받으며 프라이버시 우선 생산성 도구 선호가 강해졌습니다."
       },
       "twistSummaryKo": "마이크 버튼을 눌러 떠오른 생각을 말하면 서버에 음성을 남기지 않고 구조화된 할 일 3개와 정중한 메일 초안으로 즉시 변환합니다.",
       "mvpFeatures": [
@@ -4575,17 +4575,17 @@
         {
           "step": "A",
           "label": "원본",
-          "title": "Blawgy.com",
-          "builderId": "builder-tmrr-b5e7995d46",
-          "builderName": "Blawgy.com"
+          "title": "Kabo AI",
+          "builderId": "builder-tmrr-ae383c5f6d",
+          "builderName": "Kabo AI"
         },
         {
           "step": "B",
           "label": "1차 기획",
           "title": "산책하며 중얼거린 30초 음성 메모를 내 기기 안에서만 정리해 오늘 할 일과 이메일 초안으로 바꿔준다면?",
-          "treatmentId": "tr-tec-blawgy-com-19a2mf",
-          "builderId": "builder-tmrr-b5e7995d46",
-          "builderName": "Blawgy.com"
+          "treatmentId": "tr-tec-kabo-ai-3h6sce",
+          "builderId": "builder-tmrr-ae383c5f6d",
+          "builderName": "Kabo AI"
         }
       ],
       "synthesisMode": "curated",
@@ -4593,11 +4593,11 @@
       "variantIndex": 50
     },
     {
-      "id": "tr-cul-transclipper-8rxvzv",
-      "slug": "tr-cul-transclipper-8rxvzv",
+      "id": "tr-cul-transclipper-wbcgjp",
+      "slug": "tr-cul-transclipper-wbcgjp",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -4636,9 +4636,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-indiewire-042b404fc4",
-        "titleKo": "다니엘 브룩스(Danielle Brooks)가 'If I Go Will They Miss Me'의 인디 성공에 대한 통찰력을 공유합니다.",
-        "canonicalUrl": "https://www.indiewire.com/awards/consider-this/danielle-brooks-if-i-go-will-they-miss-me-indie-success-1235231263/",
+        "radarId": "culture-indiewire-895c32e066",
+        "titleKo": "로버트 아라마요(Robert Aramayo)의 'I Swear' 스타 메이킹 변신은 이미 수상 경력이 있으며 이제 그는 사람들이 그것을 보길 원합니다.",
+        "canonicalUrl": "https://www.indiewire.com/features/interviews/robert-aramayo-i-swear-baftas-john-davidson-tourettes-1235190387/",
         "platformId": "IndieWire",
         "sourceType": "culture",
         "cultureVerticalLabel": "시네마 · 연출",
@@ -4646,7 +4646,7 @@
         "productDomain": "cinema-video",
         "summaryKo": "배우 에밀리 블런트가 자신의 필모그래피와 애정작 속 최고의 순간 10선을 짚은 특집처럼 구체적 장면 큐레이션 포맷이 IndieWire에서 큰 호응을 얻었습니다.",
         "benchmarkPoint": "시네마 · 연출",
-        "bottleneckSolvedKo": "IndieWire에서 포착된 '다니엘 브룩스(Danielle Brooks)가 'If I Go Will They Miss Me'의 인디 성공에 대한 통찰력을 공유합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 배우 에밀리 블런트가 자신의 필모그래피와 애정작 속 최고의 순간 10선을 짚은 특집처럼 구체적 장면 큐레이션 포맷이 IndieWire에서 큰 호응을 얻었습니다."
+        "bottleneckSolvedKo": "IndieWire에서 포착된 '로버트 아라마요(Robert Aramayo)의 'I Swear' 스타 메이킹 변신은 이미 수상 경력이 있으며 이제 그는 사람들이 그것을 보길 원합니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 배우 에밀리 블런트가 자신의 필모그래피와 애정작 속 최고의 순간 10선을 짚은 특집처럼 구체적 장면 큐레이션 포맷이 IndieWire에서 큰 호응을 얻었습니다."
       },
       "twistSummaryKo": "기억에 남는 영화 장면의 타임스탬프, 핵심 대사 1줄, 내 감상 메모만 넣으면 시네필 매거진 특집 같은 '나의 명장면 10선' 페이지가 완성됩니다.",
       "mvpFeatures": [
@@ -4674,7 +4674,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "에밀리 블런트가 꼽은 영화 속 최고의 순간 10선처럼 내가 사랑하는 영화·드라마 명장면 타임스탬프와 대사만 모아 1페이지 컬렉션으로 만든다면?",
-          "treatmentId": "tr-cul-transclipper-8rxvzv",
+          "treatmentId": "tr-cul-transclipper-wbcgjp",
           "builderId": "builder-tmrr-d92d991a05",
           "builderName": "TransClipper"
         }
@@ -4684,11 +4684,11 @@
       "variantIndex": 51
     },
     {
-      "id": "tr-tec-postiz-1a66gj",
-      "slug": "tr-tec-postiz-1a66gj",
+      "id": "tr-tec-postiz-1arn7e",
+      "slug": "tr-tec-postiz-1arn7e",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -4714,28 +4714,28 @@
         "url": "https://trustmrr.com/startup/postiz",
         "source": "trustmrr",
         "sourceLabel": "TrustMRR",
-        "tractionLabel": "검증 매출 $472,868 (TrustMRR)",
-        "shortMetricLabel": "TrustMRR $472,868",
+        "tractionLabel": "검증 매출 $475,772 (TrustMRR)",
+        "shortMetricLabel": "TrustMRR $475,772",
         "verifiedRevenue": true,
         "mechanism": "drop-validation",
         "mechanismLabel": "공개 투표 · 수요 검증",
         "summaryKo": "TrustMRR에서 $459k 이상의 검증 매출을 달성한 오픈소스·에이전트 기반 소셜 미디어 스케줄러 및 콘텐츠 배포 플랫폼입니다.",
-        "overseasProofKo": "Postiz은 TrustMRR(TrustMRR $472,868)에서 주목받은 프로젝트입니다. TrustMRR에서 $459k 이상의 검증 매출을 달성한 오픈소스·에이전트 기반 소셜 미디어 스케줄러 및 콘텐츠 배포 플랫폼입니다."
+        "overseasProofKo": "Postiz은 TrustMRR(TrustMRR $475,772)에서 주목받은 프로젝트입니다. TrustMRR에서 $459k 이상의 검증 매출을 달성한 오픈소스·에이전트 기반 소셜 미디어 스케줄러 및 콘텐츠 배포 플랫폼입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-35af66458665",
-        "titleKo": "재부팅 전에 발견된 일일 편차와 수동 재부팅을 없애는 디자인",
-        "canonicalUrl": "https://qiita.com/KingHAL0/items/bd719ecca2545f025336",
-        "platformId": "qiita",
-        "platformLabel": "Qiita",
+        "radarId": "live-e091553d8a17",
+        "titleKo": "앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원",
+        "canonicalUrl": "https://aitimes.com/news/articleView.html?idxno=217786",
+        "platformId": "aitimes",
+        "platformLabel": "AI타임스",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
         "signalType": "model_release",
-        "productDomain": "coding-agent-devtool",
+        "productDomain": "ai-business-infra",
         "summaryKo": "OpenAI가 소개한 Richpanel 사례처럼 AI를 활용해 고객 문의와 반복 커뮤니케이션의 절반 이상을 자동화하는 실전 운영이 확산 중입니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "재부팅 전에 발견된 일일 편차와 수동 재부팅을 없애는 디자인 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. OpenAI가 소개한 Richpanel 사례처럼 AI를 활용해 고객 문의와 반복 커뮤니케이션의 절반 이상을 자동화하는 실전 운영이 확산 중입니다."
+        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
+        "bottleneckSolvedKo": "앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. OpenAI가 소개한 Richpanel 사례처럼 AI를 활용해 고객 문의와 반복 커뮤니케이션의 절반 이상을 자동화하는 실전 운영이 확산 중입니다."
       },
       "twistSummaryKo": "긴 글 링크 하나를 넣으면 플랫폼별 호흡에 맞는 홍보 포스트 3종과 고객이 자주 물을 질문 답변 초안을 한 화면에 정리해 줍니다.",
       "mvpFeatures": [
@@ -4763,7 +4763,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "내 블로그 글이나 제품 업데이트 1개를 넣으면 X·링크드인·인스타 톤에 맞춰 3종 스레드와 예상 댓글 답변까지 뽑아준다면?",
-          "treatmentId": "tr-tec-postiz-1a66gj",
+          "treatmentId": "tr-tec-postiz-1arn7e",
           "builderId": "builder-tmrr-f9df0c188c",
           "builderName": "Postiz"
         }
@@ -4773,11 +4773,11 @@
       "variantIndex": 52
     },
     {
-      "id": "tr-cul-bento-1un24n",
-      "slug": "tr-cul-bento-1un24n",
+      "id": "tr-cul-bento-u0olzy",
+      "slug": "tr-cul-bento-u0olzy",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -4792,7 +4792,7 @@
       ],
       "buildCadence": "5~7일 MVP",
       "demoVideoUrl": null,
-      "previewImageUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460288.jpg",
+      "previewImageUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460319.png",
       "mediaSourceLabel": "컬처 이슈 이미지 · Dazed Digital",
       "techDigestKo": {
         "inputKo": "전시 제목, 일정·장소, 작가 노트, 대표 작품 이미지 6~12점과 작품별 재료·크기 캡션",
@@ -4816,9 +4816,9 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-dazed-3bf0a7d7fc",
-        "titleKo": "Esmé Creed-Miles: 오스틴의 여주인공이 뱀파이어 유혹자로 변신했습니다.",
-        "canonicalUrl": "https://www.dazeddigital.com/film-tv/article/71366/1/esme-creed-miles-winter-issue-2026-cover-sense-sensability-flesh-gods?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=esme-creed-miles-the-austen-heroine-turned-vampire-seductress",
+        "radarId": "culture-dazed-a73891f16c",
+        "titleKo": "겨울 우울증을 치료해 줄 Thaiboy Digital과 Eurohead의 믹스를 들어보세요",
+        "canonicalUrl": "https://www.dazeddigital.com/music/article/71419/1/listen-to-thaiboy-digital-and-eurohead-s-mix-to-cure-the-winter-blues?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=listen-to-thaiboy-digital-and-eurohead-s-mix-to-cure-your-winter-blues",
         "platformId": "Dazed Digital",
         "sourceType": "culture",
         "cultureVerticalLabel": "패션 · 유스컬처",
@@ -4826,7 +4826,7 @@
         "productDomain": "brand-commerce",
         "summaryKo": "소피야 로리아슈빌리의 다큐멘터리 사진전이 동시대 청춘의 생생한 기록을 전하며 Dazed Digital에서 깊은 울림을 주었습니다.",
         "benchmarkPoint": "패션 · 유스컬처",
-        "bottleneckSolvedKo": "Dazed Digital에서 포착된 'Esmé Creed-Miles: 오스틴의 여주인공이 뱀파이어 유혹자로 변신했습니다.' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 소피야 로리아슈빌리의 다큐멘터리 사진전이 동시대 청춘의 생생한 기록을 전하며 Dazed Digital에서 깊은 울림을 주었습니다."
+        "bottleneckSolvedKo": "Dazed Digital에서 포착된 '겨울 우울증을 치료해 줄 Thaiboy Digital과 Eurohead의 믹스를 들어보세요' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 소피야 로리아슈빌리의 다큐멘터리 사진전이 동시대 청춘의 생생한 기록을 전하며 Dazed Digital에서 깊은 울림을 주었습니다."
       },
       "twistSummaryKo": "작품 사진, 작가 노트, 전시장 오시는 길만 채우면 오프라인에서도 열리고 QR 하나로 배포하는 미니멀 전시 디지털 도록을 생성합니다.",
       "mvpFeatures": [
@@ -4854,7 +4854,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "소피야 로리아슈빌리의 청춘 다큐 사진전처럼 전시·졸업전·독립 매거진 소개 팸플릿을 앱 설치 없는 단일 HTML 디지털 도록으로 배포한다면?",
-          "treatmentId": "tr-cul-bento-1un24n",
+          "treatmentId": "tr-cul-bento-u0olzy",
           "builderId": "builder-hn-49008211",
           "builderName": "Bento"
         }
@@ -4864,11 +4864,11 @@
       "variantIndex": 53
     },
     {
-      "id": "tr-tec-stan-1m0pok",
-      "slug": "tr-tec-stan-1m0pok",
+      "id": "tr-tec-stan-1fc36i",
+      "slug": "tr-tec-stan-1fc36i",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -4904,18 +4904,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-a4682f035ad9",
-        "titleKo": "ZCode에 자체 API 연결: GLM-5.4를 사용자 지정 공급자로 이동하기 전의 모든 단계",
-        "canonicalUrl": "https://qiita.com/whitemarshall/items/1a043cc9235ad25e72f8",
-        "platformId": "qiita",
-        "platformLabel": "Qiita",
+        "radarId": "live-cd050eca78c0",
+        "titleKo": "‘AI 의식’ 논쟁 불붙인 앤트로픽…철학계는 갑론을박",
+        "canonicalUrl": "https://technologyreview.kr/ai-%ec%9d%98%ec%8b%9d-%eb%85%bc%ec%9f%81-%eb%b6%88%eb%b6%99%ec%9d%b8-%ec%95%a4%ed%8a%b8%eb%a1%9c%ed%94%bd%ec%b2%a0%ed%95%99%ea%b3%84%eb%8a%94-%ea%b0%91%eb%a1%a0%ec%9d%84%eb%b0%95",
+        "platformId": "mit-tr-korea",
+        "platformLabel": "MIT TR Korea",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "model_release",
-        "productDomain": "coding-agent-devtool",
+        "signalType": "industry_shift",
+        "productDomain": "ai-business-infra",
         "summaryKo": "지역 중소기업과 소상공인이 AI 도구로 자체 비즈니스를 디지털화하도록 돕는 OpenWorks 같은 로컬 지원 흐름이 확산되고 있습니다.",
-        "benchmarkPoint": "개발자 워크플로 자동화·에이전트 통합 생산성",
-        "bottleneckSolvedKo": "ZCode에 자체 API 연결: GLM-5.4를 사용자 지정 공급자로 이동하기 전의 모든 단계 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 지역 중소기업과 소상공인이 AI 도구로 자체 비즈니스를 디지털화하도록 돕는 OpenWorks 같은 로컬 지원 흐름이 확산되고 있습니다."
+        "benchmarkPoint": "AI 생태계 가격·정책·시장 재편 시그널",
+        "bottleneckSolvedKo": "‘AI 의식’ 논쟁 불붙인 앤트로픽…철학계는 갑론을박 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. 지역 중소기업과 소상공인이 AI 도구로 자체 비즈니스를 디지털화하도록 돕는 OpenWorks 같은 로컬 지원 흐름이 확산되고 있습니다."
       },
       "twistSummaryKo": "인스타 프로필 링크 하나에 내 디지털 PDF, 1:1 커피챗 예약, 대표 포트폴리오를 군더더기 없는 1페이지 명함 스토어로 띄워줍니다.",
       "mvpFeatures": [
@@ -4943,7 +4943,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "지역 소상공인이나 1인 크리에이터가 3분 만에 디지털 가이드·예약·링크를 한 장에 묶어 파는 미니 스토어를 만든다면?",
-          "treatmentId": "tr-tec-stan-1m0pok",
+          "treatmentId": "tr-tec-stan-1fc36i",
           "builderId": "builder-tmrr-ea18d005ac",
           "builderName": "Stan"
         }
@@ -4953,11 +4953,11 @@
       "variantIndex": 54
     },
     {
-      "id": "tr-cul-solid-glass-wskgkm",
-      "slug": "tr-cul-solid-glass-wskgkm",
+      "id": "tr-cul-solid-glass-1n0u9l",
+      "slug": "tr-cul-solid-glass-1n0u9l",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "brand-commerce",
       "domainLabel": "브랜드 · 커머스",
       "domainColor": "#EA580C",
@@ -4986,19 +4986,19 @@
         "url": "https://github.com/deeplethe/solid-glass",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★2.4k",
-        "shortMetricLabel": "GitHub ★2.4k",
+        "tractionLabel": "GitHub ★2.2k",
+        "shortMetricLabel": "GitHub ★2.2k",
         "verifiedRevenue": false,
         "mechanism": "audio-stem",
         "mechanismLabel": "음성 · 사운드 정리",
         "summaryKo": "물리적이고 촉각적인 질감과 정교한 기술적 디테일을 담은 GitHub 2.4k 오픈소스 디자인 시스템입니다.",
-        "overseasProofKo": "solid-glass은 GitHub(GitHub 2.4k)에서 주목받은 프로젝트입니다. 물리적이고 촉각적인 질감과 정교한 기술적 디테일을 담은 GitHub 2.4k 오픈소스 디자인 시스템입니다."
+        "overseasProofKo": "solid-glass은 GitHub(GitHub 2.2k)에서 주목받은 프로젝트입니다. 물리적이고 촉각적인 질감과 정교한 기술적 디테일을 담은 GitHub 2.4k 오픈소스 디자인 시스템입니다."
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "culture-hypebeast-90b53c5beb",
-        "titleKo": "Lids의 명절 선물 쟁탈전을 정복하세요",
-        "canonicalUrl": "https://hypebeast.com/2026/11/conquering-the-holiday-gift-scramble-at-lids",
+        "radarId": "culture-hypebeast-601e9ebfb3",
+        "titleKo": "나이키 마인드 001, '팔로미노'에 초콜릿 브라운 색상의 무빙 노드 설정",
+        "canonicalUrl": "https://hypebeast.com/2026/11/nike-mind-001-palomino-hq4307-201-official-images",
         "platformId": "Hypebeast",
         "sourceType": "culture",
         "cultureVerticalLabel": "패션 · 유스컬처",
@@ -5006,7 +5006,7 @@
         "productDomain": "brand-commerce",
         "summaryKo": "오카야마 장인정신과 빈티지 워싱 미학으로 20년 넘게 사랑받는 데님 브랜드 ANACHRONORM의 신작 아카이브가 Hypebeast에서 조명됐습니다.",
         "benchmarkPoint": "패션 · 유스컬처",
-        "bottleneckSolvedKo": "Hypebeast에서 포착된 'Lids의 명절 선물 쟁탈전을 정복하세요' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 오카야마 장인정신과 빈티지 워싱 미학으로 20년 넘게 사랑받는 데님 브랜드 ANACHRONORM의 신작 아카이브가 Hypebeast에서 조명됐습니다."
+        "bottleneckSolvedKo": "Hypebeast에서 포착된 '나이키 마인드 001, '팔로미노'에 초콜릿 브라운 색상의 무빙 노드 설정' 컬처 흐름을 디지털 인터랙션으로 풀어냅니다. 오카야마 장인정신과 빈티지 워싱 미학으로 20년 넘게 사랑받는 데님 브랜드 ANACHRONORM의 신작 아카이브가 Hypebeast에서 조명됐습니다."
       },
       "twistSummaryKo": "평범한 쇼핑몰 상세페이지 대신 데님 조직·봉제 스티치·원단 스토리를 마우스 확대 루페와 촉각 카드로 보여주는 브랜드 아카이브 웹입니다.",
       "mvpFeatures": [
@@ -5034,7 +5034,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "오카야마 데님 아카이브 ANACHRONORM처럼 옷의 원단·워싱·봉제 디테일을 확대 돋보기로 탐험하는 스몰 브랜드 디지털 룩북을 만든다면?",
-          "treatmentId": "tr-cul-solid-glass-wskgkm",
+          "treatmentId": "tr-cul-solid-glass-1n0u9l",
           "builderId": "builder-gh-b868c4a944",
           "builderName": "solid-glass"
         }
@@ -5044,11 +5044,11 @@
       "variantIndex": 55
     },
     {
-      "id": "tr-tec-an-e-ink-frame-5ww896",
-      "slug": "tr-tec-an-e-ink-frame-5ww896",
+      "id": "tr-tec-an-e-ink-frame-1jx3dd",
+      "slug": "tr-tec-an-e-ink-frame-1jx3dd",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "photo-visual",
       "domainLabel": "사진 · 비주얼",
       "domainColor": "#D97706",
@@ -5084,18 +5084,18 @@
       },
       "sampleA2": null,
       "sampleB": {
-        "radarId": "live-fb927d8f5070",
-        "titleKo": "[아니마&일러스트리어스XL] [플라이엑스3] 12 in 1, CLAMP 시리즈 웍스 슈퍼 믹스 앤 매치 로라 -아티스트 스타일(LORA)",
-        "canonicalUrl": "https://civitai.com/models/916102",
-        "platformId": "civitai",
-        "platformLabel": "Civitai",
+        "radarId": "live-5600150f6d44",
+        "titleKo": "랭그래프-cli0.4.44",
+        "canonicalUrl": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.44",
+        "platformId": "langchain",
+        "platformLabel": "Langchain",
         "sourceType": "ai_radar",
         "cultureVerticalLabel": null,
-        "signalType": "new_product",
-        "productDomain": "image-design-studio",
+        "signalType": "open_source_trend",
+        "productDomain": "coding-agent-devtool",
         "summaryKo": "Haru-4B 같은 경량 음성·멀티모달 오픈 모델이 확산되며 주변 환경 소리와 분위기 맥락을 가볍게 해석하는 감성 웹앱이 쉬워졌습니다.",
-        "benchmarkPoint": "Civitai — 12스타 기반 성능·효율 지표",
-        "bottleneckSolvedKo": "[아니마&일러스트리어스XL] [플라이엑스3] 12 in 1, CLAMP 시리즈 웍스 슈퍼 믹스 앤 매치 로라 -아티스트 스타일(LORA) 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Haru-4B 같은 경량 음성·멀티모달 오픈 모델이 확산되며 주변 환경 소리와 분위기 맥락을 가볍게 해석하는 감성 웹앱이 쉬워졌습니다."
+        "benchmarkPoint": "새 정식 버전 릴리스",
+        "bottleneckSolvedKo": "랭그래프-cli0.4.44 이슈를 연결해 기존에 수작업이 필요했던 구간을 자동화합니다. Haru-4B 같은 경량 음성·멀티모달 오픈 모델이 확산되며 주변 환경 소리와 분위기 맥락을 가볍게 해석하는 감성 웹앱이 쉬워졌습니다."
       },
       "twistSummaryKo": "현재 위치 날씨나 짧은 주변 소리·기분 한 줄을 입력하면 태블릿·구형 아이패드를 고풍스러운 일러스트 디지털 액자로 바꿔줍니다.",
       "mvpFeatures": [
@@ -5123,7 +5123,7 @@
           "step": "B",
           "label": "1차 기획",
           "title": "창밖 소리나 오늘 날씨·음악을 들으면 1800년대 보태니컬 삽화 스타일의 일일 포스터를 그려주는 디지털 액자 웹을 만든다면?",
-          "treatmentId": "tr-tec-an-e-ink-frame-5ww896",
+          "treatmentId": "tr-tec-an-e-ink-frame-1jx3dd",
           "builderId": "builder-hn-49711544",
           "builderName": "An e-ink frame that"
         }
@@ -5136,8 +5136,8 @@
       "id": "tr-cul-fablepool-14vxk3",
       "slug": "tr-cul-fablepool-14vxk3",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "cinema-video",
       "domainLabel": "영상 · 시네마",
       "domainColor": "#2563EB",
@@ -5227,8 +5227,8 @@
       "id": "tr-tec-hackerbooks-1qt8my",
       "slug": "tr-tec-hackerbooks-1qt8my",
       "track": "tech",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -5316,8 +5316,8 @@
       "id": "tr-cul-mika-14714z",
       "slug": "tr-cul-mika-14714z",
       "track": "culture",
-      "createdAt": "2026-11-26T03:21:23.979Z",
-      "updatedAt": "2026-11-26T03:21:23.979Z",
+      "createdAt": "2026-11-26T16:06:54.513Z",
+      "updatedAt": "2026-11-26T16:06:54.513Z",
       "domainSlug": "local-archive",
       "domainLabel": "로컬 · 아카이브",
       "domainColor": "#059669",
@@ -5346,13 +5346,13 @@
         "url": "https://github.com/wangzan101/Mika",
         "source": "github_trending",
         "sourceLabel": "GitHub",
-        "tractionLabel": "GitHub ★10.0k",
-        "shortMetricLabel": "GitHub ★10.0k",
+        "tractionLabel": "GitHub ★10.1k",
+        "shortMetricLabel": "GitHub ★10.1k",
         "verifiedRevenue": false,
         "mechanism": "geo-curation",
         "mechanismLabel": "취향 지도 · 큐레이션",
         "summaryKo": "모바일 환경에서 사용자 맥락에 맞춰 화면과 정보를 즉각 탐색하는 GitHub 9.8k 온디바이스 에이전트입니다.",
-        "overseasProofKo": "Mika은 GitHub(GitHub 10.0k)에서 주목받은 프로젝트입니다. 모바일 환경에서 사용자 맥락에 맞춰 화면과 정보를 즉각 탐색하는 GitHub 9.8k 온디바이스 에이전트입니다."
+        "overseasProofKo": "Mika은 GitHub(GitHub 10.1k)에서 주목받은 프로젝트입니다. 모바일 환경에서 사용자 맥락에 맞춰 화면과 정보를 즉각 탐색하는 GitHub 9.8k 온디바이스 에이전트입니다."
       },
       "sampleA2": null,
       "sampleB": {

@@ -1,15 +1,15 @@
 {
-  "syncedAt": "2026-11-26T03:21:23.979Z",
+  "syncedAt": "2026-11-26T16:06:54.513Z",
   "counts": {
     "aiRadar": 220,
     "cultureTotal": 151,
     "cultureDomains": 19,
     "builderTotal": 240,
     "bySource": {
-      "github_trending": 51,
+      "github_trending": 50,
       "trustmrr": 26,
-      "show_hn": 113,
-      "product_hunt": 28,
+      "show_hn": 94,
+      "product_hunt": 48,
       "uneed": 22
     },
     "cultureBySource": {
@@ -34,7 +34,7 @@
       "Kottke.org": 8
     },
     "verifiedRevenueCount": 26,
-    "verifiedMediaCount": 99,
+    "verifiedMediaCount": 97,
     "verifiedCultureMediaCount": 123,
     "treatmentsSeed": 60,
     "treatmentsByTrack": {
@@ -49,15 +49,15 @@
       "status": 200,
       "count": 220,
       "cached304": false,
-      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(9)"
+      "note": "merged remote(100/100) + local(0/0) -> balanced 220/220, thumbs(11)"
     },
     {
       "id": "github_trending",
       "label": "GitHub Trending Open Source",
       "status": 200,
-      "count": 51,
+      "count": 50,
       "cached304": false,
-      "note": "50 GitHub repos (24 with verified media)"
+      "note": "49 GitHub repos (24 with verified media)"
     },
     {
       "id": "reddit",
@@ -71,7 +71,7 @@
       "id": "show_hn",
       "label": "Show HN Algolia API",
       "status": 200,
-      "count": 113,
+      "count": 94,
       "cached304": false,
       "note": "68 live Show HN items"
     },
@@ -79,7 +79,7 @@
       "id": "product_hunt",
       "label": "Product Hunt Atom Feed",
       "status": 200,
-      "count": 28,
+      "count": 48,
       "cached304": false,
       "note": "24 Product Hunt entries"
     },
@@ -110,7 +110,7 @@
       "id": "media_verifier",
       "label": "Demo Video & OG Media Verifier",
       "status": 200,
-      "count": 99,
+      "count": 97,
       "note": "3 newly enriched via OG/README"
     },
     {
@@ -164,10 +164,10 @@
     {
       "id": "culture_filmstage",
       "label": "The Film Stage (시네마 · 연출)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_mubi",
@@ -196,18 +196,18 @@
     {
       "id": "culture_petapixel",
       "label": "PetaPixel (사진 · 카메라)",
-      "status": 304,
-      "count": 8,
-      "cached304": true,
-      "note": "304 cached"
-    },
-    {
-      "id": "culture_colossal",
-      "label": "Colossal (시각예술 · 공예)",
       "status": 200,
       "count": 8,
       "cached304": false,
       "note": "8 items (8 img)"
+    },
+    {
+      "id": "culture_colossal",
+      "label": "Colossal (시각예술 · 공예)",
+      "status": 304,
+      "count": 8,
+      "cached304": true,
+      "note": "304 cached"
     },
     {
       "id": "culture_bandcamp",
@@ -284,10 +284,10 @@
     {
       "id": "culture_openculture",
       "label": "Open Culture (문화 아카이브 · 지식)",
-      "status": 304,
+      "status": 200,
       "count": 8,
-      "cached304": true,
-      "note": "304 cached"
+      "cached304": false,
+      "note": "8 items (8 img)"
     },
     {
       "id": "culture_kottke",
