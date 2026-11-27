@@ -1,41 +1,15 @@
-import React, { Suspense } from "react";
 import Link from "next/link";
-import {
-  loadAiRadarSignals,
-  loadBuilderSignals,
-  loadCultureSignals,
-  loadSeedTreatments,
-  loadSyncMeta,
-} from "@/lib/data-loader";
+import { loadSeedTreatments } from "@/lib/data-loader";
 import { DISCOVER_HUBS } from "@/lib/seo-keywords";
-import { WorkbenchClient } from "@/components/WorkbenchClient";
+import { WorkbenchLoader } from "@/components/WorkbenchLoader";
 
-function DispenserFallback() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F7F8FA] text-[15px] font-medium text-[#64748B]">
-      DISPENSER. 기획 카드를 불러오는 중입니다.
-    </div>
-  );
-}
-
-export default function HomePage() {
-  const initialTreatments = loadSeedTreatments();
-  const initialBuilders = loadBuilderSignals();
-  const initialRadars = loadAiRadarSignals();
-  const initialCultures = loadCultureSignals();
-  const initialSyncMeta = loadSyncMeta();
+export default async function HomePage() {
+  // Only the crawler link graph is server-rendered; the workbench loads its data in the browser.
+  const initialTreatments = await loadSeedTreatments();
 
   return (
     <>
-      <Suspense fallback={<DispenserFallback />}>
-        <WorkbenchClient
-          initialTreatments={initialTreatments}
-          initialBuilders={initialBuilders}
-          initialRadars={initialRadars}
-          initialCultures={initialCultures}
-          initialSyncMeta={initialSyncMeta}
-        />
-      </Suspense>
+      <WorkbenchLoader />
 
       {/* Crawler-only semantic internal link graph (zero visible pixels on main UI) */}
       <nav aria-label="관련 기획 주제 및 아카이브" className="sr-only">

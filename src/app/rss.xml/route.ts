@@ -13,7 +13,7 @@ function escapeXml(str: string): string {
 
 export async function GET() {
   const siteUrl = getSiteUrl();
-  const treatments = loadSeedTreatments();
+  const treatments = await loadSeedTreatments();
   const buildDate = new Date().toUTCString();
 
   const itemsXml = treatments

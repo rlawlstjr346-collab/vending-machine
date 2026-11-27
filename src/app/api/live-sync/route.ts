@@ -28,10 +28,10 @@ const UA =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
 export async function GET() {
-  const localRadars = loadAiRadarSignals();
-  const localBuilders = loadBuilderSignals();
-  const localCultures = loadCultureSignals();
-  const syncMeta = loadSyncMeta();
+  const localRadars = await loadAiRadarSignals();
+  const localBuilders = await loadBuilderSignals();
+  const localCultures = await loadCultureSignals();
+  const syncMeta = await loadSyncMeta();
 
   let mergedRadars: AiRadarSignal[] = mergeAndBalanceRadarSignals(
     localRadars,

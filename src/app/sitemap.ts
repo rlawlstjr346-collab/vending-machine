@@ -4,9 +4,9 @@ import { DOMAIN_LIST } from "@/lib/domains";
 import { DISCOVER_HUBS } from "@/lib/seo-keywords";
 import { getSiteUrl } from "@/lib/site-url";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
-  const treatments = loadSeedTreatments();
+  const treatments = await loadSeedTreatments();
   const now = new Date();
 
   return [

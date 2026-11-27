@@ -17,3 +17,8 @@ next-env.d.ts
 .agent/skills/
 .claude/skills/
 .skills-local.json
+
+# cloudflare (opennext)
+.open-next
+.wrangler
+.dev.vars*

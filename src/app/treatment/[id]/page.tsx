@@ -10,12 +10,12 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return loadSeedTreatments().map((t) => ({ id: t.id }));
+  return (await loadSeedTreatments()).map((t) => ({ id: t.id }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
-  const treatment = loadSeedTreatments().find((t) => t.id === id);
+  const treatment = (await loadSeedTreatments()).find((t) => t.id === id);
   if (!treatment) return { title: "기획안을 찾을 수 없습니다" };
 
   const siteUrl = getSiteUrl();
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function TreatmentPage({ params }: PageProps) {
   const { id } = await params;
-  const all = loadSeedTreatments();
+  const all = await loadSeedTreatments();
   const treatment = all.find((t) => t.id === id);
   if (!treatment) notFound();
 

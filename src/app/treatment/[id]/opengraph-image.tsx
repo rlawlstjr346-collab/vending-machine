@@ -1,9 +1,13 @@
 import { ImageResponse } from "next/og";
 import { loadSeedTreatments } from "@/lib/data-loader";
 
-export const dynamic = "force-dynamic";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+// Pre-rendered at build for every seed treatment (same params as the page) — no runtime WASM render.
+export async function generateStaticParams() {
+  return (await loadSeedTreatments()).map((t) => ({ id: t.id }));
+}
 
 export default async function TreatmentOpenGraphImage({
   params,
@@ -11,7 +15,7 @@ export default async function TreatmentOpenGraphImage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const treatment = loadSeedTreatments().find((t) => t.id === id);
+  const treatment = (await loadSeedTreatments()).find((t) => t.id === id);
 
   const title = treatment?.title || "DISPENSER. Product Idea";
   const trackBadge =

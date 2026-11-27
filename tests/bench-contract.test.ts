@@ -327,7 +327,7 @@ describe("DISPENSER. Production Release Contract Tests", () => {
     const siteUrl = getSiteUrl();
     expect(isValidHttpUrl(siteUrl)).toBe(true);
 
-    const sm = sitemap();
+    const sm = await sitemap();
     expect(sm.length).toBe(1 + DISCOVER_HUBS.length + DOMAIN_LIST.length + treatmentsPayload.items.length);
     for (const hub of DISCOVER_HUBS) {
       expect(sm.some((entry) => entry.url === `${siteUrl}/discover/${hub.slug}`)).toBe(true);

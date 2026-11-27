@@ -131,8 +131,8 @@ async function tryLlmUpgrade(base: Treatment): Promise<Treatment> {
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as SynthesizeRequest;
-    const builders = loadBuilderSignals();
-    const radars = loadAiRadarSignals();
+    const builders = await loadBuilderSignals();
+    const radars = await loadAiRadarSignals();
 
     if (builders.length === 0 || radars.length === 0) {
       return NextResponse.json(

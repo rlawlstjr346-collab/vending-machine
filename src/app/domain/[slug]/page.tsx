@@ -55,9 +55,9 @@ export default async function DomainHubPage({ params }: PageProps) {
   if (!isValidDomainSlug(slug)) notFound();
 
   const domain = DOMAIN_MAP[slug];
-  const treatments = loadSeedTreatments().filter((t) => t.domainSlug === slug);
-  const builders = loadBuilderSignals().slice(0, 6);
-  const radars = loadAiRadarSignals()
+  const treatments = (await loadSeedTreatments()).filter((t) => t.domainSlug === slug);
+  const builders = (await loadBuilderSignals()).slice(0, 6);
+  const radars = (await loadAiRadarSignals())
     .filter(
       (r) =>
         domain.affinityCategories.includes(r.category) ||

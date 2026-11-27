@@ -1,5 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
+import { readPublicJson } from "./publicFile";
+import { emptySyncMeta, itemsOf } from "./data-payload";
 import type {
   AiRadarSignal,
   BuilderSignal,
@@ -10,55 +10,30 @@ import type {
 
 export { getSiteUrl } from "./site-url";
 
-const DATA_DIR = path.join(process.cwd(), "public", "data");
-
-function readJsonSafe<T>(filename: string, fallback: T): T {
-  const fullPath = path.join(DATA_DIR, filename);
+async function readJsonSafe<T>(filename: string, fallback: T): Promise<T> {
   try {
-    if (!fs.existsSync(fullPath)) return fallback;
-    const raw = fs.readFileSync(fullPath, "utf-8");
-    return JSON.parse(raw) as T;
+    return (await readPublicJson<T>(`data/${filename}`)) ?? fallback;
   } catch {
     return fallback;
   }
 }
 
-export function loadBuilderSignals(): BuilderSignal[] {
-  const payload = readJsonSafe<{ items?: BuilderSignal[] }>("builder-signals.json", {});
-  return Array.isArray(payload.items) ? payload.items : [];
+export async function loadBuilderSignals(): Promise<BuilderSignal[]> {
+  return itemsOf(await readJsonSafe<{ items?: BuilderSignal[] }>("builder-signals.json", {}));
 }
 
-export function loadAiRadarSignals(): AiRadarSignal[] {
-  const payload = readJsonSafe<{ items?: AiRadarSignal[] }>("ai-radar-signals.json", {});
-  return Array.isArray(payload.items) ? payload.items : [];
+export async function loadAiRadarSignals(): Promise<AiRadarSignal[]> {
+  return itemsOf(await readJsonSafe<{ items?: AiRadarSignal[] }>("ai-radar-signals.json", {}));
 }
 
-export function loadCultureSignals(): CultureSignal[] {
-  const payload = readJsonSafe<{ items?: CultureSignal[] }>("culture-signals.json", {});
-  return Array.isArray(payload.items) ? payload.items : [];
+export async function loadCultureSignals(): Promise<CultureSignal[]> {
+  return itemsOf(await readJsonSafe<{ items?: CultureSignal[] }>("culture-signals.json", {}));
 }
 
-export function loadSeedTreatments(): Treatment[] {
-  const payload = readJsonSafe<{ items?: Treatment[] }>("treatments-seed.json", {});
-  return Array.isArray(payload.items) ? payload.items : [];
+export async function loadSeedTreatments(): Promise<Treatment[]> {
+  return itemsOf(await readJsonSafe<{ items?: Treatment[] }>("treatments-seed.json", {}));
 }
 
-export function loadSyncMeta(): SyncMeta {
-  return readJsonSafe<SyncMeta>("sync-meta.json", {
-    syncedAt: new Date().toISOString(),
-    counts: {
-      aiRadar: 0,
-      cultureTotal: 0,
-      cultureDomains: 0,
-      builderTotal: 0,
-      bySource: {},
-      cultureBySource: {},
-      verifiedRevenueCount: 0,
-      verifiedMediaCount: 0,
-      verifiedCultureMediaCount: 0,
-      treatmentsSeed: 0,
-      treatmentsByTrack: { tech: 0, culture: 0 },
-    },
-    sources: [],
-  });
+export async function loadSyncMeta(): Promise<SyncMeta> {
+  return readJsonSafe<SyncMeta>("sync-meta.json", emptySyncMeta());
 }

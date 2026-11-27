@@ -52,7 +52,7 @@ export default async function DiscoverHubPage({ params }: PageProps) {
   const hub = getDiscoverHub(slug);
   if (!hub) notFound();
 
-  const allTreatments = loadSeedTreatments();
+  const allTreatments = await loadSeedTreatments();
   const matched = getTreatmentsForDiscoverHub(hub, allTreatments, 18);
   const siteUrl = getSiteUrl();
   const canonical = `${siteUrl}/discover/${hub.slug}`;
