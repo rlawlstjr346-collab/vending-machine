@@ -37,7 +37,7 @@
     "status": 200,
     "contentType": "image/webp",
     "finalUrl": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ckaz32jwl6t2cno6fmuw2nhn/bafkreid7xoaprwtbrmcys6hkpyoeajb5vtxs5qyrvc4favfet4zodgpiuq",
-    "checkedAt": "2026-11-24T01:18:54.887Z"
+    "checkedAt": "2026-11-27T01:19:55.005Z"
   },
   "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b6f560cd-a37a-4d62-8d6b-da5b59cf4790/formal-verification-feature.png?t=1795207886": {
     "ok": true,
@@ -69,7 +69,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/yetone/magpie/main/site/public/img/icon-256.png",
-    "checkedAt": "2026-11-24T01:18:59.027Z"
+    "checkedAt": "2026-11-27T01:20:06.825Z"
   },
   "https://raw.githubusercontent.com/KnifeLemon/Filee/main/docs/media/banner-en.jpg": {
     "ok": true,
@@ -77,7 +77,7 @@
     "status": 200,
     "contentType": "image/jpeg",
     "finalUrl": "https://raw.githubusercontent.com/KnifeLemon/Filee/main/docs/media/banner-en.jpg",
-    "checkedAt": "2026-11-24T01:19:00.845Z"
+    "checkedAt": "2026-11-27T01:20:09.055Z"
   },
   "https://raw.githubusercontent.com/wheresryan22/anatomy/main/.github/assets/raptor-engine-firing.webp": {
     "ok": true,
@@ -85,7 +85,7 @@
     "status": 200,
     "contentType": "image/webp",
     "finalUrl": "https://raw.githubusercontent.com/wheresryan22/anatomy/main/.github/assets/raptor-engine-firing.webp",
-    "checkedAt": "2026-11-24T01:19:02.888Z"
+    "checkedAt": "2026-11-27T01:20:11.221Z"
   },
   "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/docs/demo.gif": {
     "ok": true,
@@ -93,39 +93,39 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/browser-use/jev-ultrafast/main/docs/demo.gif",
-    "checkedAt": "2026-11-24T01:19:04.991Z"
+    "checkedAt": "2026-11-27T01:20:13.305Z"
   },
   "https://github.com/user-attachments/assets/93c799a2-10a3-4266-af02-eb79dd33a9a2": {
     "ok": true,
     "kind": "video",
     "status": 206,
     "contentType": "video/mp4",
-    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/5912894/698718516-93c799a2-10a3-4266-af02-eb79dd33a9a2.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011908Z&X-Amz-Expires=300&X-Amz-Signature=2d647c039611d4dfa9a38702b748e88146ca86e8418011c581bf68253cc3f2a3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
-    "checkedAt": "2026-11-24T01:19:09.912Z"
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/5912894/698718516-93c799a2-10a3-4266-af02-eb79dd33a9a2.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261127%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261127T012016Z&X-Amz-Expires=300&X-Amz-Signature=61e3878dce21b3fcc968952a84f910d481cfe7711ed12e2db7abae94af3dc3f8&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+    "checkedAt": "2026-11-27T01:20:17.432Z"
   },
   "https://github.com/lemomo-ai/lemo-opuscar/releases/download/films/swiss-motion.mp4": {
     "ok": false,
     "kind": null,
     "status": 200,
     "contentType": "application/octet-stream",
-    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/399a7602-db45-4952-9681-f3ad3dd5702d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-24T01%3A57%3A45Z&rscd=attachment%3B+filename%3Dswiss-motion.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-24T00%3A57%3A44Z&ske=2026-11-24T01%3A57%3A45Z&sks=b&skv=2018-11-09&sig=%2Fiufqh1LpTt7uJiZ%2F6HI4%2BgeLCFAYEHVmdGqSPWlTdE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTQ4MzQ1MCwibmJmIjoxNzk1NDgzMTUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sChSkd5snX6JMy9QlZGu07DW38pomIm4dbMdV1-Fc1I&response-content-disposition=attachment%3B%20filename%3Dswiss-motion.mp4&response-content-type=application%2Foctet-stream",
-    "checkedAt": "2026-11-24T01:19:11.100Z"
+    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/399a7602-db45-4952-9681-f3ad3dd5702d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-27T02%3A15%3A06Z&rscd=attachment%3B+filename%3Dswiss-motion.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-27T01%3A14%3A11Z&ske=2026-11-27T02%3A15%3A06Z&sks=b&skv=2018-11-09&sig=Ci%2BJuVVK0vP2dam3n2cfsQefFTRzukLGdkSM8gpeJl8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTc0MjcyMSwibmJmIjoxNzk1NzQyNDIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fg7wa3nVbjgAOIOFkqXr7rs1lV-moOEqAjI7iga5vqs&response-content-disposition=attachment%3B%20filename%3Dswiss-motion.mp4&response-content-type=application%2Foctet-stream",
+    "checkedAt": "2026-11-27T01:20:21.423Z"
   },
   "https://github.com/lemomo-ai/lemo-opuscar/releases/download/films/my-style-material-grid.mp4": {
     "ok": false,
     "kind": null,
     "status": 200,
     "contentType": "application/octet-stream",
-    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/dfdde48a-8c19-4daf-9ca6-286871e7ab96?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-24T01%3A59%3A30Z&rscd=attachment%3B+filename%3Dmy-style-material-grid.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-24T00%3A58%3A35Z&ske=2026-11-24T01%3A59%3A30Z&sks=b&skv=2018-11-09&sig=5lVRyUiYRUJuPIFJA%2F2PxaYGhnWSCbbEWLaOaI1UOo0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTQ4NDk1MSwibmJmIjoxNzk1NDgzMTUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.eLf7xnaRBcioEb_Y04RjxtrAdVBYknX-kO_u3egPwN0&response-content-disposition=attachment%3B%20filename%3Dmy-style-material-grid.mp4&response-content-type=application%2Foctet-stream",
-    "checkedAt": "2026-11-24T01:19:11.557Z"
+    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/dfdde48a-8c19-4daf-9ca6-286871e7ab96?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-27T02%3A14%3A46Z&rscd=attachment%3B+filename%3Dmy-style-material-grid.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-27T01%3A14%3A33Z&ske=2026-11-27T02%3A14%3A46Z&sks=b&skv=2018-11-09&sig=jZTnrTZxSrjBrHSBtHR8Fl6a%2Bxq55obFXurTERgA2T8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTc0NDIyMSwibmJmIjoxNzk1NzQyNDIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WNPH05fIKOi2rQleEMu_O7mCEH_houSHpS0Zx8KJcy4&response-content-disposition=attachment%3B%20filename%3Dmy-style-material-grid.mp4&response-content-type=application%2Foctet-stream",
+    "checkedAt": "2026-11-27T01:20:21.658Z"
   },
   "https://github.com/lemomo-ai/lemo-opuscar/releases/download/films/opuscar98.mp4": {
     "ok": false,
     "kind": null,
     "status": 200,
     "contentType": "application/octet-stream",
-    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/293fe6c5-d2fb-4b0b-b86d-69b915923d2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-24T02%3A00%3A02Z&rscd=attachment%3B+filename%3Dopuscar98.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-24T00%3A59%3A55Z&ske=2026-11-24T02%3A00%3A02Z&sks=b&skv=2018-11-09&sig=e%2FLYA02Ic8qj2UTetcoYV4%2B1ACVQvedHUnlOSh1%2Fcxo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTQ4Njc1MSwibmJmIjoxNzk1NDgzMTUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.H5Kice29-_Tl0y57RB2iXFQVG3J3q6luhfhr6Vve5Gk&response-content-disposition=attachment%3B%20filename%3Dopuscar98.mp4&response-content-type=application%2Foctet-stream",
-    "checkedAt": "2026-11-24T01:19:12.402Z"
+    "finalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1389011744/293fe6c5-d2fb-4b0b-b86d-69b915923d2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-27T02%3A02%3A50Z&rscd=attachment%3B+filename%3Dopuscar98.mp4&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-27T01%3A02%3A46Z&ske=2026-11-27T02%3A02%3A50Z&sks=b&skv=2018-11-09&sig=k7QrN41RtP0ZkDzfVCPAj5cSJyjtT5lWwRwsnAOSE%2B8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTc0NjAyMSwibmJmIjoxNzk1NzQyNDIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xXoWUPgx7BpITLC6vhdFZhnnlzWkIWBCFpJvpVALD8Q&response-content-disposition=attachment%3B%20filename%3Dopuscar98.mp4&response-content-type=application%2Foctet-stream",
+    "checkedAt": "2026-11-27T01:20:21.920Z"
   },
   "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cover-en.webp": {
     "ok": true,
@@ -133,7 +133,7 @@
     "status": 200,
     "contentType": "image/webp",
     "finalUrl": "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cover-en.webp",
-    "checkedAt": "2026-11-24T01:19:12.594Z"
+    "checkedAt": "2026-11-27T01:20:22.016Z"
   },
   "https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.filmcraft.png": {
     "ok": true,
@@ -141,7 +141,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.filmcraft.png",
-    "checkedAt": "2026-11-24T01:19:13.002Z"
+    "checkedAt": "2026-11-27T01:20:23.428Z"
   },
   "https://github.com/tangency-labs/solidcraft/raw/refs/heads/main/docs/screenshots/demo.mp4": {
     "ok": false,
@@ -149,7 +149,7 @@
     "status": 200,
     "contentType": "application/octet-stream",
     "finalUrl": "https://raw.githubusercontent.com/tangency-labs/solidcraft/refs/heads/main/docs/screenshots/demo.mp4",
-    "checkedAt": "2026-11-24T01:19:15.593Z"
+    "checkedAt": "2026-11-27T01:20:26.068Z"
   },
   "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/docs/screenshots/demo.gif": {
     "ok": true,
@@ -157,7 +157,7 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/tangency-labs/solidcraft/main/docs/screenshots/demo.gif",
-    "checkedAt": "2026-11-24T01:19:15.601Z"
+    "checkedAt": "2026-11-27T01:20:26.119Z"
   },
   "https://raw.githubusercontent.com/BaaRai/ARTEX/main/screenshots/tasks.png": {
     "ok": true,
@@ -165,7 +165,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/BaaRai/ARTEX/main/screenshots/tasks.png",
-    "checkedAt": "2026-11-24T01:19:16.328Z"
+    "checkedAt": "2026-11-27T01:20:19.108Z"
   },
   "https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp": {
     "ok": true,
@@ -173,7 +173,7 @@
     "status": 200,
     "contentType": "image/webp",
     "finalUrl": "https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp",
-    "checkedAt": "2026-11-24T01:19:19.339Z"
+    "checkedAt": "2026-11-27T01:20:27.998Z"
   },
   "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/docs/cases/demo.gif": {
     "ok": true,
@@ -181,7 +181,7 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/JuneYaooo/rea-video/main/docs/cases/demo.gif",
-    "checkedAt": "2026-11-24T01:19:21.972Z"
+    "checkedAt": "2026-11-27T01:20:29.943Z"
   },
   "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/docs/assets/lh_banner_light.png": {
     "ok": true,
@@ -189,7 +189,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/amosblomqvist/learnharness/main/docs/assets/lh_banner_light.png",
-    "checkedAt": "2026-11-24T01:19:22.873Z"
+    "checkedAt": "2026-11-27T01:20:32.219Z"
   },
   "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/docs/assets/banner-light.png": {
     "ok": true,
@@ -197,7 +197,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/KKKKhazix/AIHOT/main/docs/assets/banner-light.png",
-    "checkedAt": "2026-11-24T01:19:27.017Z"
+    "checkedAt": "2026-11-27T01:20:37.666Z"
   },
   "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/docs/readme/demo.gif": {
     "ok": true,
@@ -205,7 +205,7 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/lnkiai/m3e-canvas/main/docs/readme/demo.gif",
-    "checkedAt": "2026-11-24T01:19:29.596Z"
+    "checkedAt": "2026-11-27T01:20:39.541Z"
   },
   "https://github.com/user-attachments/assets/a5f669ce-b3b7-4f8e-9933-976a78876c7e": {
     "ok": true,
@@ -229,7 +229,7 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/kajisho5/ffmpeg-skill/main/docs/demos/captions_pop_karaoke.gif",
-    "checkedAt": "2026-11-24T01:19:33.696Z"
+    "checkedAt": "2026-11-27T01:20:36.283Z"
   },
   "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/docs/media/mods-teaser.gif": {
     "ok": true,
@@ -237,7 +237,7 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/rehan-remade/universal-modder/main/docs/media/mods-teaser.gif",
-    "checkedAt": "2026-11-24T01:19:36.279Z"
+    "checkedAt": "2026-11-27T01:20:43.664Z"
   },
   "https://raw.githubusercontent.com/wangzan101/Mika/main/docs/media/wechat-send-side.gif": {
     "ok": true,
@@ -245,15 +245,15 @@
     "status": 200,
     "contentType": "image/gif",
     "finalUrl": "https://raw.githubusercontent.com/wangzan101/Mika/main/docs/media/wechat-send-side.gif",
-    "checkedAt": "2026-11-24T01:19:38.443Z"
+    "checkedAt": "2026-11-27T01:20:41.305Z"
   },
   "https://github.com/user-attachments/assets/b092ec8d-d9ad-4f6b-9f5f-4312f5f1cedf": {
     "ok": true,
     "kind": "video",
     "status": 206,
     "contentType": "video/mp4",
-    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/139328168/710340968-b092ec8d-d9ad-4f6b-9f5f-4312f5f1cedf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261124T011942Z&X-Amz-Expires=300&X-Amz-Signature=1e38d043407454f10e8c25e15cf276ee82880dd221e0dfa7ac497e9973ada1c3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
-    "checkedAt": "2026-11-24T01:19:43.596Z"
+    "finalUrl": "https://github-production-user-asset-6210df.s3.amazonaws.com/139328168/710340968-b092ec8d-d9ad-4f6b-9f5f-4312f5f1cedf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261127%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261127T012101Z&X-Amz-Expires=300&X-Amz-Signature=3d68b3f98250e20c92926807de70724abbe32c3b228b0f12fdc8dfff5f44abd7&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+    "checkedAt": "2026-11-27T01:21:02.459Z"
   },
   "https://raw.githubusercontent.com/kuafuai/andee/main/images/cover.png": {
     "ok": true,
@@ -261,7 +261,7 @@
     "status": 200,
     "contentType": "image/png",
     "finalUrl": "https://raw.githubusercontent.com/kuafuai/andee/main/images/cover.png",
-    "checkedAt": "2026-11-24T01:19:43.838Z"
+    "checkedAt": "2026-11-27T01:21:02.571Z"
   },
   "https://demo.mroffice.ai/media/mr-office-demo.mp4": {
     "ok": true,
@@ -4126,5 +4126,189 @@
     "contentType": "image/png",
     "finalUrl": "https://trustmrr.com/startup/slidecast/opengraph-image?034a9e04a0b0b83d",
     "checkedAt": "2026-11-26T16:06:05.286Z"
+  },
+  "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d4e14e1d-e03e-4f67-94c1-2f65a40228ee/original=true/150314865.jpeg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://blobs-b2.civitai.com/file/blobs-managed-public/NRV6QTJE7EG14FA8HMYQ9JM1Y0",
+    "checkedAt": "2026-11-27T01:19:54.484Z"
+  },
+  "https://i.ytimg.com/vi/qjPcaZf_plo/maxresdefault.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://i.ytimg.com/vi/qjPcaZf_plo/maxresdefault.jpg",
+    "checkedAt": "2026-11-27T01:19:54.544Z"
+  },
+  "https://storage.ghost.io/c/e1/33/e133371d-f862-4a59-b7a9-037bf2e0322c/content/images/2026/11/echo-gpt-62-usage-cover.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://storage.ghost.io/c/e1/33/e133371d-f862-4a59-b7a9-037bf2e0322c/content/images/2026/11/echo-gpt-62-usage-cover.png",
+    "checkedAt": "2026-11-27T01:19:54.747Z"
+  },
+  "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ckaz32jwl6t2cno6fmuw2nhn/bafkreier3goag26afyncyp5qsbjx3ezjng35rwjbaewi25ms62l2dpv55i": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/webp",
+    "finalUrl": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ckaz32jwl6t2cno6fmuw2nhn/bafkreier3goag26afyncyp5qsbjx3ezjng35rwjbaewi25ms62l2dpv55i",
+    "checkedAt": "2026-11-27T01:19:54.895Z"
+  },
+  "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460298.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://images-prod.dazeddigital.com/786/azure/dazed-prod/1460/0/1460298.jpg",
+    "checkedAt": "2026-11-27T01:19:55.405Z"
+  },
+  "https://cdn.booooooom.com/wp-content/uploads/2026/11/Bruck1.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://cdn.booooooom.com/wp-content/uploads/2026/11/Bruck1.jpg",
+    "checkedAt": "2026-11-27T01:19:55.598Z"
+  },
+  "https://media.pitchfork.com/photos/6b0893231870e4024bc0d352/master/pass/GettyImages-2307026484.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://media.pitchfork.com/photos/6b0893231870e4024bc0d352/master/pass/GettyImages-2307026484.jpg",
+    "checkedAt": "2026-11-27T01:19:56.064Z"
+  },
+  "https://media.pitchfork.com/photos/6b0871b197681df23b6bd690/master/pass/pup-sample-pack.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://media.pitchfork.com/photos/6b0871b197681df23b6bd690/master/pass/pup-sample-pack.jpg",
+    "checkedAt": "2026-11-27T01:19:56.099Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/bennetts-associates-edinburgh-futures-institute-rias-doolan-award-sq_dezeen_2364_col_1-1-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/bennetts-associates-edinburgh-futures-institute-rias-doolan-award-sq_dezeen_2364_col_1-1-1024x1024.jpg",
+    "checkedAt": "2026-11-27T01:19:56.365Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/03/gambosa-lamp-mathias-hahn-marset-design_dezeen_2364_sq2-411x411.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/03/gambosa-lamp-mathias-hahn-marset-design_dezeen_2364_sq2-411x411.jpg",
+    "checkedAt": "2026-11-27T01:19:56.395Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/royal-scoiety-arts-royal-designers-for-industry_dezeen_2364_col_sq-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/royal-scoiety-arts-royal-designers-for-industry_dezeen_2364_col_sq-1024x1024.jpg",
+    "checkedAt": "2026-11-27T01:19:56.426Z"
+  },
+  "https://static-2026.dezeen.com/uploads/2026/11/visa-base-design-brand-identity_dezeen_2364_sq-1-1024x1024.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://static-2026.dezeen.com/uploads/2026/11/visa-base-design-brand-identity_dezeen_2364_sq-1-1024x1024.jpg",
+    "checkedAt": "2026-11-27T01:19:56.466Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/michael-eckert.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/michael-eckert.jpg?w=564",
+    "checkedAt": "2026-11-27T01:19:56.784Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Screenshot-2026-11-26-at-5.28.01-PM.png?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/Screenshot-2026-11-26-at-5.28.01-PM.png?w=564",
+    "checkedAt": "2026-11-27T01:19:57.220Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/alchemy-interactive-free-play-installation-exhibition-space-florian-lopez-designboom-700-500x400-22b08q85r122.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/alchemy-interactive-free-play-installation-exhibition-space-florian-lopez-designboom-700-500x400-22b08q85r122.jpg",
+    "checkedAt": "2026-11-27T01:19:57.254Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/huangguoshu-waterfall-tianxingqiao-scenic-area-china-designboom-700-500x400-22b08q85r823.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/huangguoshu-waterfall-tianxingqiao-scenic-area-china-designboom-700-500x400-22b08q85r823.jpg",
+    "checkedAt": "2026-11-27T01:19:57.311Z"
+  },
+  "https://www.designboom.com/wp-content/uploads/2026/11/movebon-boutique-training-studio-jotajotamas-madrid-designboom-700-500x400-22b08q85r890.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.designboom.com/wp-content/uploads/2026/11/movebon-boutique-training-studio-jotajotamas-madrid-designboom-700-500x400-22b08q85r890.jpg",
+    "checkedAt": "2026-11-27T01:19:57.351Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/unnamed-33.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/unnamed-33.jpg?w=564",
+    "checkedAt": "2026-11-27T01:19:57.362Z"
+  },
+  "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/GettyImages-2273632284.jpg?w=564": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/11/GettyImages-2273632284.jpg?w=564",
+    "checkedAt": "2026-11-27T01:19:57.550Z"
+  },
+  "https://www.highsnobiety.com/static-assets/dato/1795529778-one-good-claire.png": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://www.highsnobiety.com/static-assets/dato/1795529778-one-good-claire.png",
+    "checkedAt": "2026-11-27T01:19:57.607Z"
+  },
+  "https://www.highsnobiety.com/static-assets/dato/1795608192-01.jpg": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/jpeg",
+    "finalUrl": "https://www.highsnobiety.com/static-assets/dato/1795608192-01.jpg",
+    "checkedAt": "2026-11-27T01:19:59.729Z"
+  },
+  "https://trustmrr.com/startup/roamer-1/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/roamer-1/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-27T01:21:25.998Z"
+  },
+  "https://trustmrr.com/startup/vruum/opengraph-image?034a9e04a0b0b83d": {
+    "ok": true,
+    "kind": "image",
+    "status": 200,
+    "contentType": "image/png",
+    "finalUrl": "https://trustmrr.com/startup/vruum/opengraph-image?034a9e04a0b0b83d",
+    "checkedAt": "2026-11-27T01:21:28.179Z"
   }
 }
